@@ -1,0 +1,776 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>IMU and sensor fusion - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html" class="active"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="imu-and-sensor-fusion"><a class="header" href="#imu-and-sensor-fusion">IMU and Sensor Fusion</a></h1>
+<p>Updated 19.03.2024</p>
+<hr />
+<h2 id="sensor-fusion-and-use-cases"><a class="header" href="#sensor-fusion-and-use-cases">Sensor Fusion and Use Cases</a></h2>
+<p>Sensor fusion is a localization method that localizes the AGV with combined measurements from different sensors. The current implementation supports using laser scanners, encoders (odometry), external localization and IMU data (accelerometer and gyroscope). An Extended Kalman Filter is used as the sensor fusion method, which activates after
+position is initialized.</p>
+<p>Using sensor fusion is beneficial for the following use cases:</p>
+<ul>
+<li>
+<p>Heading estimation will be improved, as the IMU can provide more accurate angular velocity than encoders. This is especially beneficial if you are experiencing a lot of heading corrections and oscillations.</p>
+</li>
+<li>
+<p>It will be possible to navigate outside of the static environment for short distances with fused location estimates from odometry and IMU.</p>
+</li>
+<li>
+<p>Navigation performance will be improved in worse environments with small amount of environment points. This is because the initial estimate of heading will be better, so that smaller corrections will be sufficient.</p>
+</li>
+<li>
+<p>If the environment consists of inclined surfaces or ramps, the tilt angle will be estimated and compensated.</p>
+</li>
+<li>
+<p>An online bias compensation for IMUs that does not depend on magnetic conditions is included, which provides more reliable estimation than using IMU without sensor fusion.</p>
+</li>
+</ul>
+<p>Sensor fusion does NOT help with the following:</p>
+<ul>
+<li>
+<p>Position initialization.</p>
+</li>
+<li>
+<p>Calibration of encoders or scanners.</p>
+</li>
+<li>
+<p>Any errors coming from incorrect calibration, such as driving axle being off or scaling errors.</p>
+</li>
+</ul>
+<p>Instructions on how to configure and use sensor fusion with a supported IMU model are presented in Chapter 3. It is also possible to use the IMU as a standalone device without enabling sensor fusion, for which instructions are available in Chapter 4.</p>
+<h2 id="supported-imu-models"><a class="header" href="#supported-imu-models">Supported IMU Models</a></h2>
+<p>Please see the following table for supported IMU models and
+corresponding interfaces for each model.</p>
+<table><thead><tr><th>IMU Model</th><th>USB Interface</th><th>CAN Interface</th><th>Serial (RS232) Interface</th></tr></thead><tbody>
+<tr><td>LPMS-CU2</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>No</td></tr>
+<tr><td>LPMS-URS2</td><td><strong>Yes</strong></td><td>No</td><td><strong>Yes</strong></td></tr>
+<tr><td>LPMS-IG1</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>No</td></tr>
+<tr><td>LPMS-CU3</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>No</td></tr>
+<tr><td>LPMS-URS3</td><td><strong>Yes</strong></td><td>No</td><td><strong>Yes</strong></td></tr>
+</tbody></table>
+<h2 id="using-imu-with-sensor-fusion"><a class="header" href="#using-imu-with-sensor-fusion">Using IMU With Sensor Fusion</a></h2>
+<p>To use sensor fusion, the first step is to configure the IMU. If you have received a pre-configured IMU from Navitec Systems, please skip Chapter 3.1 and start from Chapter 3.2.</p>
+<h3 id="configuring-the-imu"><a class="header" href="#configuring-the-imu">Configuring the IMU</a></h3>
+<p>Please follow the instructions in this chapter depending on the IMU model you have.</p>
+<h3 id="lpms-cu2-and-urs2-models"><a class="header" href="#lpms-cu2-and-urs2-models">LPMS-CU2 and URS2 Models</a></h3>
+<p>Download and install OpenMAT software from the manufacturer's website, from the following link: <a href="https://lp-research.atlassian.net/wiki/spaces/LKB/pages/1138294814/LPMS+Data+Acquisition+Software">lp-research.atlassian.net/LPMS-Data-Acquisition-Software</a></p>
+<p>Upon installation, launch the LpmsControl software on your computer, then follow these steps:</p>
+<ol>
+<li>
+<p>Connect the LPMS device using USB interface to your PC</p>
+</li>
+<li>
+<p>In LpmsControl, add new device to device list by following these steps:</p>
+<p>a. Click the plus icon</p>
+<p>b. Click &quot;Scan Devices&quot;. If nothing is found select &quot;Scan system serial ports (only for LPMS-UART)&quot; and try &quot;Scan Devices&quot; again.</p>
+<p>c. Click &quot;Add Device&quot; after a device has been found</p>
+<p>d. Click &quot;Save Devices&quot;, your device should be visible now in the Preferred Devices section.</p>
+<p>e. On the main menu, click the lightning symbol to connect to IMU</p>
+<p><img src="./media-en/image3.PNG" alt="" /></p>
+</li>
+<li>
+<p>Change all parameters according to screenshots (see next pages for basic settings)</p>
+</li>
+</ol>
+<p><strong>Basic settings for both serial LPMS-URS2 and CAN device LPMS-CU2</strong></p>
+<p><img src="./media-en/image4.PNG" alt="" /></p>
+<p><strong>Additional settings for CAN device LPMS-CU2 (when using CAN
+interface)</strong></p>
+<p><img src="./media-en/image5.png" alt="Table Description automatically generated" /></p>
+<ol start="4">
+<li>Select &quot;Save parameters to sensor&quot; in Calibration menu (see picture below)</li>
+</ol>
+<p><img src="./media-en/image6.png" alt="" /></p>
+<ol start="5">
+<li>
+<p>Perform a manual calibration of the sensor. To do this, make sure the IMU is not moving, is on a horizontal surface, and is not tilted. From the same &quot;Calibration&quot; tab as the screenshot above, click &quot;Calibrate gyroscope&quot;.</p>
+</li>
+<li>
+<p>Disconnect the IMU by clicking the cross button.</p>
+</li>
+</ol>
+<p>After these steps are completed, you can disconnect the IMU from the computer, and it is ready to be mounted on the AGV.</p>
+<h3 id="lpms-ig1-model"><a class="header" href="#lpms-ig1-model">LPMS-IG1 Model</a></h3>
+<p>Download and install IG1-Control software from the manufacturer's website, from the following link: <a href="https://lp-research.com/support/">lp-research.com/support</a></p>
+<p>Upon installation, launch the IG1Control software on your computer, then follow these steps:</p>
+<ul>
+<li>
+<p>Connect the device to your computer to a free USB port.</p>
+</li>
+<li>
+<p>Locate the COM port number of the device. This can be done by going to Device Manager in Windows and choosing &quot;Ports&quot;. In the list, look for the &quot;USB to UART Bridge&quot; port, for example in the screenshot below, it is COM8.</p>
+</li>
+</ul>
+<p><img src="./media-en/image7.PNG" alt="" /></p>
+<ul>
+<li>In IG1 Control, click the refresh button next to the sensor list so the connected sensor appears in the list. Then, choose the correct COM port and click &quot;connect&quot;.</li>
+</ul>
+<p><img src="./media-en/image8.PNG" alt="" /></p>
+<ul>
+<li>Once connected, you should see some data coming from the sensor on the right side. From the bottom tabs, click &quot;Sensor&quot; and set the settings as shown in the following two screenshots:</li>
+</ul>
+<p><img src="./media-en/image9.PNG" alt="" /></p>
+<p><img src="./media-en/image10.PNG" alt="" /></p>
+<ul>
+<li>After all settings are set, click &quot;Save&quot;. Then, from the top tabs click &quot;Settings&quot; and choose &quot;Save parameters to sensor&quot;.</li>
+</ul>
+<p><img src="./media-en/image11.PNG" alt="" /></p>
+<ul>
+<li>Finally, choose the &quot;Calibration&quot; tab, and click &quot;Calibrate Gyro&quot;.
+Make sure the IMU is stationary at this point and is on a horizontal and stationary surface.</li>
+</ul>
+<p><img src="./media-en/image12.PNG" alt="" /></p>
+<ul>
+<li>After gyroscope calibration is finished, disconnect the IMU in the IG1 control software. Then, you can disconnect it from the USB port and the gyroscope is ready to be mounted on an AGV.</li>
+</ul>
+<h3 id="lpms-cu3urs3"><a class="header" href="#lpms-cu3urs3">LPMS-CU3/URS3</a></h3>
+<p>Download the LPMSControl2 from the following link: <a href="https://lp-research.atlassian.net/wiki/spaces/LKB/pages/1138294814/LPMS+Data+Acquisition+Software">lp-research.atlassian.net/LPMS-Data-Acquisition-Software</a>.
+Select the self-contained zip-file. Run LpmsControl2.exe.</p>
+<p>The general options to be selected for the LPMS CU3 and LPMS URS3 are visible in the figure below. The Sensor parameters section is accessible from the bottom left by going to the Sensor-tab. </p>
+<p><img src="./media-en/general_CU3_options.png" alt="" /></p>
+<ul>
+<li>Set the baudrate to 921600 bps for USB</li>
+<li>Set the baudrate to 115200 bps for Serial (only URS3) </li>
+</ul>
+<p><img src="./media-en/CU3_USB.png" alt="" /></p>
+<ul>
+<li>The CANOpen options are shown in the figure below (only CU3)</li>
+</ul>
+<p><img src="./media-en/CU3_CANOpen.png" alt="" /></p>
+<ul>
+<li>Click Apply and Settings→Save parameters to sensor</li>
+</ul>
+<h3 id="installing-imu-on-the-agv"><a class="header" href="#installing-imu-on-the-agv">Installing IMU on the AGV</a></h3>
+<p>Once the IMU is configured, it should be mounted rigidly on the AGV. It can be mounted as desired, but the recommendation is to align the IMU with the vehicle so that there is no tilt with respect to vehicle, i.e. no roll and pitch deviation. The IMU turning rate is used for heading estimation. In the context of 2D estimation, the yaw angle, i.e. the rotation around the Z-axis, does not affect estimation, as the turn rate is the same regardless. For the optimal performance, try to find a spot with a good suspension in order to minimize shaking while navigating. Finally, add the IMU
+installation parameters to the params.txt, according to how the IMU is mounted with respect to the AGV navigation point. Two examples of such parameters are explained below.</p>
+<p><img src="./media-en/image13.png" alt="" /></p>
+<blockquote>
+<p>An example IMU mounting.</p>
+</blockquote>
+<p>In the above Figure, the AGV navigation point is in the middle. The x-axis points to the vehicle's forward direction and the y-axis points to the vehicle's left direction by default. In this case, the IMU is mounted on the place indicated by a blue box, 42 cm in the positive x direction and 25 cm in negative y direction. It is aligned with the vehicle, so that the positive x direction of the IMU also points to the vehicle's forward direction. In this case, the IMU mounting parameters should be entered as below:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>F,sf_imu_mounting_x_angle_deg, 0.000</td><td>IMU installation angle around vehicle x axis in degrees</td></tr>
+<tr><td>F,sf_imu_mounting_y_angle_deg, 0.000</td><td>IMU installation angle around vehicle y axis in degrees</td></tr>
+<tr><td>F,sf_imu_mounting_z_angle_deg, 0.000</td><td>IMU installation angle around vehicle z axis in degrees</td></tr>
+<tr><td>F,sf_imu_mounting_x_pos, 0.420</td><td>IMU installation position in x axis</td></tr>
+<tr><td>F,sf_imu_mounting_y_pos, -0.250</td><td>IMU installation position in y axis</td></tr>
+<tr><td>F,sf_imu_mounting_z_pos, 0.000</td><td>IMU installation position in z axis</td></tr>
+</tbody></table>
+<p><img src="./media-en/image14.png" alt="" /></p>
+<blockquote>
+<p>An alternative IMU mounting example.</p>
+</blockquote>
+<p>In the example above, the IMU is instead placed 15 cm in positive x direction and 8 cm in positive y direction. Also, the IMU is flipped 180 degrees around vehicle's z axis, so that the x axis of the IMU is pointing towards the back of the vehicle. In this case, the correct parameters would be as follows:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>F,sf_imu_mounting_x_angle_deg, 0.000</td><td>IMU installation angle around vehicle x axis in degrees</td></tr>
+<tr><td>F,sf_imu_mounting_y_angle_deg, 0.000</td><td>IMU installation angle around vehicle y axis in degrees</td></tr>
+<tr><td>F,sf_imu_mounting_z_angle_deg, 180.000</td><td>IMU installation angle around vehicle z axis in degrees</td></tr>
+<tr><td>F,sf_imu_mounting_x_pos, 0.150</td><td>IMU installation position in x axis</td></tr>
+<tr><td>F,sf_imu_mounting_y_pos, 0.080</td><td>IMU installation position in y axis</td></tr>
+<tr><td>F,sf_imu_mounting_z_pos, 0.000</td><td>IMU installation position in z axis</td></tr>
+</tbody></table>
+<p>If the IMU is mounted such that there is a tilt, please see Appendix 1 for an explanation of how to determine the correct parameters.</p>
+<h3 id="sensor-fusion-charts"><a class="header" href="#sensor-fusion-charts">Sensor fusion charts</a></h3>
+<p>This sections describes how to interpret sensor fusion charts, and how to perform any required troubleshooting. The charts are visible from Charts → Sensor Fusion Orientations and Charts → Sensor Fusion Corrections in Navitrol Monitor.</p>
+<h4 id="orientation"><a class="header" href="#orientation">Orientation</a></h4>
+<p>If <strong>sf_imu_mode</strong> is set to 1, the most important charts are the yaw and yaw rate. The yaw describes the heading, and yaw rate the angular velocity for the heading. It has to be noted that odometry and IMU do not need to match perfectly, depending on how noisy the odometry data is.</p>
+<p><img src="./media-en/sensor_fusion_orientations_driving.png" alt="" /></p>
+<blockquote>
+<p>Correct sensor fusion orientations</p>
+</blockquote>
+<p>In the above Figure, the IMU, Fusion and odometry curves are matching for the yaw rate chart.</p>
+<p><img src="./media-en/sensor_fusion_orientations_imu_upside_down.png" alt="" /></p>
+<blockquote>
+<p>Incorrect sensor fusion orientations - mounted upside-down</p>
+</blockquote>
+<p>In the above Figure, the IMU is mounted upside-down resulting in opposite signs for the IMU and odometry. </p>
+<h4 id="corrections"><a class="header" href="#corrections">Corrections</a></h4>
+<p><img src="./media-en/sensor_fusion_corrections.png" alt="" /></p>
+<blockquote>
+<p>Correct sensor fusion corrections</p>
+</blockquote>
+<p>The applied corrections are not limited by much for the laser, meaning the red and blue curves more or less coincide, in the above Figure. The corrections are small and are not cumulating only in one direction.</p>
+<p><img src="./media-en/sensor_fusion_corrections_imu_upside_down.png" alt="" /></p>
+<blockquote>
+<p>Incorrect sensor fusion corrections - mounted upside-down</p>
+</blockquote>
+<p>The applied corrections are substantially smaller than the laser corrections, in the above Figure. The X and Y corrections are almost constantly deviating from zero. The AGV loses position and such the individual scan quality decreases significantly as time progresses.</p>
+<h3 id="setting-up-imu-parameters-in-navitrol"><a class="header" href="#setting-up-imu-parameters-in-navitrol">Setting Up IMU Parameters in Navitrol</a></h3>
+<p>In Navitrol parameters file, please set the following parameters:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>I,imu_type, X</td><td>0 - no IMU<br>1 - LPMS-CU2/URS2 USB<br>2 - LPMS-URS2 serial<br>3 - LPMS-CU2 CANOpen<br>4 - LPMS-IG1 USB <br>5 - LPMS-IG1 CANOpen<br>6 - LPMS-CU3/URS3 USB<br>7 - LPMS-CU3 CANOpen<br>8 - LPMS-URS3 serial<br>Replace X with correct model.</td></tr>
+<tr><td>I,imu_id, 1</td><td>In case of CAN IMU, this is CAN node id (LPMS settings IMU ID)</td></tr>
+<tr><td>S,imu_serial_port, /dev/ttyUSB0</td><td>Serial port to be used for IMU communication.<br>This might be different if more USB devices are connected.</td></tr>
+<tr><td>I,imu_lpms_data_size, 1</td><td>LPMS USB/serial data element size:<br>0 - 16 bit data<br>1 - 32 bit data</td></tr>
+</tbody></table>
+<h3 id="setting-up-sensor-fusion-parameters"><a class="header" href="#setting-up-sensor-fusion-parameters">Setting Up Sensor Fusion Parameters</a></h3>
+<p>There are many additional parameters that are used with sensor fusion, which can be fine-tuned for maximum performance. Depending on how you want to use the IMU, below are 3 parameter set options that have been tested to perform well. If you are experiencing unexpected behavior or low localization performance, please contact Navitec Systems for advice on how to tune the parameters for your use case.</p>
+<p><strong>Option 1: Gyroscope only</strong></p>
+<p>Use the following parameter set if you would like to use only the gyroscope from the IMU and perform only a 2D orientation estimation. This is the recommended sensor fusion setup for non-GPS applications.
+This is for instance beneficial if the odometry heading is not reliable.</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>I,sf_use_sensor_fusion, 1</td><td>Use sensor fusion instead of only laser localization.<br>0 = NO<br>1 = YES</td></tr>
+<tr><td>I,sf_imu_mode, 1</td><td>IMU usage mode:<br>0 - Don't use<br>1 - Only gyro<br>2 - 2D gyro and acc<br>3 - 3D gyro and acc<br>4 - Full 3D estimation</td></tr>
+<tr><td>I,sf_laser_quality_mode, 2</td><td>Choose mode of laser quality:<br>0 - Disregard laser quality<br>1 - Apply quality scale to x and y<br>2 - Apply quality scale to x, y heading</td></tr>
+<tr><td>I,sf_laser_quality_scale, 10</td><td>How much quality should affect the filtering.<br>Between 10 and 100, higher number means scan quality affects the corrections more.</td></tr>
+<tr><td>F,sf_odom_wz_std_deg, 100.0000</td><td>Standard deviation of Wh of odom R matrix</td></tr>
+</tbody></table>
+<p><strong>Option 2: 3D estimation</strong></p>
+<p>Use the following parameter set if you would like to use a 3D orientation estimation with a combination of gyroscope and accelerometers. This is beneficial if the operating environment includes slopes or tilted surfaces, or in applications where AGV tilt is important, such as GPS positioning.</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>I,sf_use_sensor_fusion, 1</td><td>Use sensor fusion instead of only laser localization. 0 = NO, 1 = YES</td></tr>
+<tr><td>I,sf_imu_mode, 3</td><td>IMU usage mode<br>0 - Dont use<br>1 - Only gyro<br>2 - 2D gyro and acc<br>3 - 3D gyro and acc<br>4 - Full 3D estimation</td></tr>
+<tr><td>I,sf_laser_quality_mode, 2</td><td>Choose mode of laser quality<br>0 - Disregard laser quality<br>1- Apply quality scale to x and y<br>2 - Apply quality scale to x, y heading</td></tr>
+<tr><td>I,sf_laser_quality_scale, 10</td><td>How much quality should affect the filtering. Between 10 and 100, higher number means scan quality affects the corrections more.</td></tr>
+<tr><td>F,sf_odom_wz_std_deg, 100.0000</td><td>Standard deviation of Wh of odom R matrix</td></tr>
+<tr><td>I,sf_linear_acc_comp_for_tilt, 0</td><td>Whether IMU mode 3 should compensate for linear accelerations when calculating tilt. 0 is better for inclined environments, 1 is better for high accel drives. 0 = No, 1 = Yes</td></tr>
+<tr><td>F,sf_imu_roll_deg, 10.000</td><td>Standard deviation of roll measurement of imu R matrix</td></tr>
+<tr><td>F,sf_imu_pitch_deg, 10.000</td><td>Standard deviation of pitch measurement of imu R matrix</td></tr>
+</tbody></table>
+<p><strong>Option 3: 3D estimation alternative</strong></p>
+<p>If you are expecting drives with very high accelerations, the following parameter set compensates better for it, in the expense of slower reaction speed on ramps.</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>I,sf_use_sensor_fusion, 1</td><td>Use sensor fusion instead of only laser localization.<br>0 = NO<br>1 = YES</td></tr>
+<tr><td>I,sf_imu_mode, 3</td><td>IMU usage mode:<br>0 - Dont use<br>1 - Only gyro<br>2 - 2D gyro and acc<br>3 - 3D gyro and acc<br>4 - Full 3D estimation</td></tr>
+<tr><td>I,sf_laser_quality_mode, 2</td><td>Choose mode of laser quality:<br>0 - Disregard laser quality<br>1- Apply quality scale to x and y<br>2 - Apply quality scale to x, y heading</td></tr>
+<tr><td>I,sf_laser_quality_scale, 10</td><td>How much quality should affect the filtering. Between 10 and 100, higher number means scan quality affects the corrections more.</td></tr>
+<tr><td>F,sf_odom_wz_std_deg, 100.0000</td><td>Standard deviation of Wh of odom R matrix</td></tr>
+<tr><td>I,sf_linear_acc_comp_for_tilt 1</td><td>Whether IMU mode 3 should compensate for linear accelerations when calculating tilt. 0 is better for inclined environments, 1 is better for high accel drives.<br>0 = No<br>1 = Yes</td></tr>
+<tr><td>F,sf_imu_roll_deg, 2.000</td><td>Standard deviation of roll measurement of imu R matrix</td></tr>
+<tr><td>F,sf_imu_pitch_deg, 2.000</td><td>Standard deviation of pitch measurement of imu R matrix</td></tr>
+</tbody></table>
+<p><strong>Additional Option: Noisy gyroscope data</strong></p>
+<p>Uneven terrain or similar reasons may cause the IMU data to be exceptionally noisy. This can be alleviated by adding the following parameters.</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>F,sf_imu_wx_std_deg, 1.3300</td><td>Standard deviation of wx of imu R matrix</td></tr>
+<tr><td>F,sf_imu_wy_std_deg, 1.3300</td><td>Standard deviation of wy of imu R matrix</td></tr>
+<tr><td>F,sf_imu_wz_std_deg, 0.3300</td><td>Standard deviation of wz of imu R matrix</td></tr>
+</tbody></table>
+<p>Please note that this is not a comprehensive list of possible parameters for tuning sensor fusion, but instead a recommended starting point for a functional system. Many additional parameters can be tuned and changed in the final navigation environment for maximum performance. In case of any performance issues, please contact Navitec Systems so these parameters can be fine-tuned.</p>
+<h3 id="bias-calibration"><a class="header" href="#bias-calibration">Bias calibration</a></h3>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>I,sf_gyro_bias_mode, 1</td><td>Mode of estimating gyroscope bias:<br>0 = With filter<br>1 = With filter and recalibrate when stationary<br>2 = Only recalibration when stationary</td></tr>
+<tr><td>F,sf_gyro_max_turnrate_recalib_deg_per_s, 0.5</td><td>The maximum gyroscope turnrate degrees per second to recalibrate bias. Should be a bit higher than the turnrates when AGV is standing still.</td></tr>
+</tbody></table>
+<h3 id="agv-stationary"><a class="header" href="#agv-stationary">AGV stationary</a></h3>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>F,sf_stationary_max_speed_m_per_s, 0.01</td><td>The maximum odometry speed m/s to define AGV being stationary.</td></tr>
+<tr><td>F,sf_stationary_max_turnrate_deg_per_s, 0.5</td><td>The maximum odometry turnrate degrees/s to define AGV being stationary.</td></tr>
+</tbody></table>
+<h3 id="disabling-incompatible-features"><a class="header" href="#disabling-incompatible-features">Disabling Incompatible Features</a></h3>
+<p>Some optional features are incompatible with sensor fusion and should be set as below. These parameters should already exist in the parameter file, and can simply be changed as described:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>I,imu_dh_use, 0</td><td>Use IMU for dead reckoning:<br>0 - never use imu<br>1 - use imu dh as is<br>2 - use combination</td></tr>
+<tr><td>I,loc_corr_when_stationary, 1</td><td>0 to disable position correction when odometry data indicates the vehicle isn't moving. Must be enabled with sensor fusion; min 0, max 1</td></tr>
+</tbody></table>
+<p>If the parameters do not exist yet, it is recommended to add them.</p>
+<h3 id="position-confidence-with-sensor-fusion"><a class="header" href="#position-confidence-with-sensor-fusion">Position Confidence with Sensor Fusion</a></h3>
+<p>When sensor fusion is in use, the position confidence of the AGV is calculated differently, as is allowed to drive for a time without any matching static environment.
+Below are two figures illustrating the position confidence of the AGV when no static environment is seen.</p>
+<p><img src="./media-en/image19.PNG" alt="" /></p>
+<blockquote>
+<p>Position confidence when going outside of the static map without sensor fusion.</p>
+</blockquote>
+<p>In the figure above, sensor fusion was turned off. The AGV was matching with the static environment up to 12 second mark, and then lost the sight of it.
+The position confidence therefore decreased rapidly and went down to zero.</p>
+<p><img src="./media-en/image20.PNG" alt="" /></p>
+<blockquote>
+<p>Position confidence when going outside of the static map with sensor fusion.</p>
+</blockquote>
+<p>By contrast, in the above figure sensor fusion feature is turned on.
+When the AGV is out of the static environment, position confidence is decreased with a slope instead of immediately. How fast the confidence should drop in such a situation can be adjusted with the <strong>sf_conf_max_dist</strong> parameter.
+The value describes approximately for how many meters the otherwise immediate loss of confidence is divided.
+When this parameter is set to higher values, the confidence will decrease more slowly.
+It can be set, for example, to 10 meters by defining it in the parameter file as below:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>F, sf_conf_max_dist, 10.0</td><td>The maximum travelled distance where xy pos conf drop will be fully reported</td></tr>
+</tbody></table>
+<p>For most use cases, the recommended value is between 5 to 10 meters. It can be lowered down as much as desired if a sharper response to matching environment is desired. Conversely, it can go up to 100 meters if such long distances are sensible. Such high values could be used for example for very large outdoor environments.</p>
+<p>It should be noted that sensor fusion itself can never increase the confidence. It only prevents confidence from decreasing.
+This means that if the AGV was never in a place with a good static environment, the confidence will stay low regardless of having sensor fusion on.</p>
+<h2 id="using-imu-without-sensor-fusion"><a class="header" href="#using-imu-without-sensor-fusion">Using IMU Without Sensor Fusion</a></h2>
+<p>It is also possible to use the CU2 and URS2 IMU models without enabling sensor fusion. In this mode, the values from the IMU will be used as dead reckoning values, either together with the wheel encoders or completely replacing them.</p>
+<p>In this case, both IMU configuration and Navitrol parameters are different from the sensor fusion case, so please follow instructions in this chapter instead of the previous one.</p>
+<h3 id="configuring-the-imu-1"><a class="header" href="#configuring-the-imu-1">Configuring the IMU</a></h3>
+<p>Download and install OpenMAT software from the manufacturer's website, from the following link: <a href="https://lp-research.com/support/">lp-research.com/support</a></p>
+<p>Upon installation, launch the LpmsControl software on your computer, then follow these steps:</p>
+<ol>
+<li>
+<p>Connect LPMS device using USB interface to your PC</p>
+</li>
+<li>
+<p>In LpmsControl, add new device to device list by following these steps:</p>
+<p>a.  Click the plus icon</p>
+<p>b.  Click &quot;Scan Devices&quot;</p>
+<p>c.  Click &quot;Add Device&quot; after a device has been found</p>
+<p>d.  Click &quot;Save Devices&quot;, your device should be visible now in the Preferred Devices section.</p>
+<p>e.  On the main menu, click the lightning symbol to connect to IMU</p>
+<p><img src="./media-en/image3.PNG" alt="" /></p>
+</li>
+<li>
+<p>Change all parameters according to screenshots (see next pages for basic settings)</p>
+</li>
+</ol>
+<p><strong>Basic settings for both serial LPMS-URS2 and CAN device LPMS-CU2</strong></p>
+<p><img src="./media-en/image21.png" alt="" /></p>
+<p><strong>Additional settings for CAN device LPMS-CU2 (when using CAN interface)</strong></p>
+<p><img src="./media-en/image5.png" alt="" /></p>
+<ol start="4">
+<li>Select &quot;Save parameters to sensor&quot; in Calibration menu (see pic below)</li>
+</ol>
+<p><img src="./media-en/image6.png" alt="" /></p>
+<ol start="5">
+<li>
+<p>Perform a manual calibration on the sensor. To do this, make sure the IMU is not moving, is on a horizontal surface, and is not tilted. From the sane &quot;Calibration&quot; tab as the screenshot above, click &quot;Calibrate gyroscope&quot;.</p>
+</li>
+<li>
+<p>Disconnect the IMU by clicking the cross button.</p>
+</li>
+</ol>
+<h4 id="notes-on-settings"><a class="header" href="#notes-on-settings">Notes on settings:</a></h4>
+<p>In case of CAN sensor using CAN bus interface</p>
+<ul>
+<li>
+<p>IMU ID is the CAN node id. It is most important that you pick &quot;free&quot; node ID for the sensor.</p>
+</li>
+<li>
+<p>Settings in section &quot;Data&quot; are not relevant. (*)</p>
+</li>
+</ul>
+<p>*<em>It is important to understand that if CAN device is connected using USB interface, then it is configured just like the serial interface device.</em></p>
+<h4 id="connecting-the-lp-research-imu-to-navitrol-ipc"><a class="header" href="#connecting-the-lp-research-imu-to-navitrol-ipc">Connecting the LP research IMU to Navitrol IPC</a></h4>
+<p>Connecting the IMU to IPC involves two things -- power supply and communication interface. There are several options for the supported models (LPMS-URS2, LPMS-CU2, LPMS-CU3).</p>
+<h4 id="automatic-bias-calibration"><a class="header" href="#automatic-bias-calibration">Automatic bias calibration</a></h4>
+<p>Estimates the gyroscope bias by calculating the average angular displacement at standstill. See section Bias calibration.</p>
+<p>The bias is estimated at standstill to isolate the drift of the IMU. A reported turning rate of 0.1 degrees per second at standstill gives the bias. In the same scenario, a reported turning rate of 1 degree per second when the AGV is in motion, would mean the IMU is actually turning at 0.9 degrees per second. The bias is not a static value, and thus the bias must be continuously estimated.</p>
+<h4 id="manual-calibration"><a class="header" href="#manual-calibration">Manual calibration</a></h4>
+<p><em><strong>Gyroscope bias calibration</strong></em></p>
+<p>To determine the bias value manually the following calibration procedure needs to be applied.</p>
+<ol>
+<li>
+<p>Sensor shall be non-moving (preferably mounted on AGV and AGV not moving)</p>
+</li>
+<li>
+<p>Use the &quot;Calibrate gyroscope&quot; function in LpmsControl software</p>
+</li>
+<li>
+<p>The gyroscope calibration will take around 30s. After that the gyroscope is calibrated, normal operation can be resumed.</p>
+</li>
+</ol>
+<p><em><strong>Magnetometer calibration</strong></em></p>
+<p>See &quot;LPMS Reference Manual&quot; for the procedure.</p>
+<h4 id="powering-the-lpms"><a class="header" href="#powering-the-lpms">Powering the LPMS</a></h4>
+<p>Both models have two options</p>
+<ul>
+<li>
+<p>Powering using the USB interface</p>
+</li>
+<li>
+<p>Powering through D9 connector (see the LPMS quick start quide for detailed infromation)</p>
+</li>
+</ul>
+<h4 id="communication-connection-to-lpms"><a class="header" href="#communication-connection-to-lpms">Communication connection to LPMS</a></h4>
+<p>Both models can be connected to Navitrol IPC using USB for communication and that is the easiest way for a serial model (URS2) -- having both powering and communication over USB.</p>
+<p>Serial/USB communication does however have issues not affecting CAN.
+Therefore CAN model should be connected to CAN bus for communication whenever possible even if the power would be supplied over USB.</p>
+<h3 id="setting-up-imu-parameters-in-navitrol-1"><a class="header" href="#setting-up-imu-parameters-in-navitrol-1">Setting Up IMU Parameters in Navitrol</a></h3>
+<p>Navitrol uses the following parameters to set the IMU:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>I,imu_type, 0</td><td>0 - no IMU<br>1 - LPMS-CU2/URS2 USB<br>2 - LPMS-URS2 serial<br>3 - LPMS-CU2 CANOpen<br>4 - LPMS-IG1 USB <br>5 - LPMS-IG1 CANOpen<br>6 - LPMS-CU3 USB<br>7 -LPMS-CU3 CANOpen.</td></tr>
+</tbody></table>
+<ul>
+<li>
+<p>In order to disable IMU interface completely, set to 0</p>
+</li>
+<li>
+<p>Specific IMU type and interface used</p>
+</li>
+</ul>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>I,imu_id, 1</td><td>In case of CAN IMU, this is CAN node id (LPMS settings IMU ID)</td></tr>
+</tbody></table>
+<ul>
+<li>
+<p>Numeric ID of the IMU (not relevant in all cases)</p>
+</li>
+<li>
+<p>In case of CAN device, this is the node ID of IMU</p>
+</li>
+</ul>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>S,imu_serial_port, /dev/ttyS0</td><td>Serial port to be used for IMU communication</td></tr>
+</tbody></table>
+<ul>
+<li>Serial port in case of device using serial or USB interface</li>
+</ul>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>I,imu_dh_use, 0</td><td>Use IMU for dead reckoning:<br>0 - never use imu<br>1 - use imu dh as is<br>2 - use combination</td></tr>
+</tbody></table>
+<ul>
+<li>
+<p>In order to disable use of IMU data in positioning set to 0</p>
+</li>
+<li>
+<p>Set to 1 for trusting IMU only in all cases</p>
+</li>
+<li>
+<p>Set to 2 for using IMU data conditionally (see parameters below)</p>
+</li>
+</ul>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>I,imu_disable_after_in_standstill_ms, 0</td><td>Disable IMU usage after given time (ms) standing still, 0 = never disable based on movement</td></tr>
+<tr><td>I,log_imu, 0</td><td>enable detailed logging for IMU<br>0 - disable<br>1 - log details &amp; parsed data<br>2 - log details, parsed &amp; raw data</td></tr>
+</tbody></table>
+<ul>
+<li>As the comment says, this is used to enable detailed logging for IMU
+interface (use for troubleshooting only)</li>
+</ul>
+<table><thead><tr><th>Parameter</th></tr></thead><tbody>
+<tr><td>F,imu_deg_p_sec_diff_max, 1000.0</td></tr>
+</tbody></table>
+<ul>
+<li>
+<p>Effective only if imu_dh_use == 2</p>
+</li>
+<li>
+<p>If angular rate from two sources (odometry &amp; IMU) differ more than
+this limit, then IMU is used</p>
+</li>
+</ul>
+<table><thead><tr><th>Parameter</th></tr></thead><tbody>
+<tr><td>F,imu_deg_p_sec_lo, 1000.0</td></tr>
+</tbody></table>
+<ul>
+<li>
+<p>Effective only if imu_dh_use == 2</p>
+</li>
+<li>
+<p>See graph below for details</p>
+</li>
+</ul>
+<table><thead><tr><th>Parameter</th></tr></thead><tbody>
+<tr><td>F,imu_deg_p_sec_hi, 1000.0</td></tr>
+</tbody></table>
+<ul>
+<li>
+<p>Effective only if imu_dh_use == 2</p>
+</li>
+<li>
+<p>See graph below for details</p>
+</li>
+</ul>
+<table><thead><tr><th>Parameter</th></tr></thead><tbody>
+<tr><td>F,imu_gain_lo, 0.0</td></tr>
+</tbody></table>
+<ul>
+<li>
+<p>Effective only if imu_dh_use == 2</p>
+</li>
+<li>
+<p>See graph below for details</p>
+</li>
+</ul>
+<table><thead><tr><th>Parameter</th></tr></thead><tbody>
+<tr><td>F,imu_gain_hi, 0.0</td></tr>
+</tbody></table>
+<ul>
+<li>
+<p>Effective only if imu_dh_use == 2</p>
+</li>
+<li>
+<p>See graph below for details</p>
+</li>
+</ul>
+<p><img src="./media-en/image22.png" alt="" /></p>
+<p>IMU_GAIN in the figure has a value in range of 0.0 -- 1.0, 1.0 meaning that for turning we trust IMU alone.</p>
+<ul>
+<li>
+<p>Red curve shows this gain using the four lo/hi parameters.</p>
+</li>
+<li>
+<p>Green curve shows the gain using imu_deg_p_sec_diff_max</p>
+</li>
+</ul>
+<p>IMU_GAIN related parameters should be evaluated case by case, both the IMU model and the application having an effect on them. All, especially low cost, gyros and IMU's have some noise/drift, that introduces some heading change even if the AGV is not moving. The localization can be disabled at standstill by parameter sf_loc_at_standstill_enabled. This heading change is corrected using laser measurements, but still it might be advisable in such cases to &quot;disable&quot; use of IMU/gyro, when it sees no movement. A starting point for these parameters could be for example:</p>
+<table><thead><tr><th>Parameter</th></tr></thead><tbody>
+<tr><td>F,imu_deg_p_sec_diff_max, 3.0</td></tr>
+<tr><td>F,imu_deg_p_sec_lo, 2.0</td></tr>
+<tr><td>F,imu_deg_p_sec_hi, 5.0</td></tr>
+<tr><td>F,imu_gain_lo, 0.0</td></tr>
+<tr><td>F,imu_gain_hi, 1.0</td></tr>
+<tr><td>I,sf_loc_at_standstill_enabled, 0</td></tr>
+</tbody></table>
+<h2 id="navitrol-errors"><a class="header" href="#navitrol-errors">Navitrol Errors</a></h2>
+<p>Navitrol can generate an ERROR or a WARNING if there is a problem with IMU:</p>
+<ul>
+<li>
+<p>If either sensor fusion is in use with the IMU, or the parameter imu_dh_use has value 1, <strong>Error 825 ERROR_IMU_FAILURE is set</strong></p>
+</li>
+<li>
+<p>Otherwise, <strong>warning 924 WARNING_IMU_FAILURE is set</strong></p>
+</li>
+</ul>
+<p>This error/warning indicates that IMU interface does not get acceptable data from IMU, possible reasons being</p>
+<ul>
+<li>
+<p>No communication at all</p>
+</li>
+<li>
+<p>Communication timeout</p>
+</li>
+<li>
+<p>Data received is not acceptable (serial interface devices)</p>
+</li>
+</ul>
+<p>Things to check in general</p>
+<ul>
+<li>
+<p>Check IMU configuration</p>
+</li>
+<li>
+<p>Check that IMU is powered and connected properly</p>
+</li>
+</ul>
+<p>Things to check if you use serial/USB interface</p>
+<ul>
+<li>
+<p>Check Navitrol communication parameters</p>
+</li>
+<li>
+<p>Check serial port used (in case of USB, this may change from restart to restart if there are multiple USB devices with same kind of profiles attached)</p>
+</li>
+</ul>
+<p>Things to check if you use CAN interface</p>
+<ul>
+<li>
+<p>Check Navitrol communication parameters</p>
+</li>
+<li>
+<p>Check IMU CAN settings (bitrate, id)</p>
+</li>
+<li>
+<p>Check that CAN communication works otherwise</p>
+</li>
+<li>
+<p>Check the CAN bus status with CAN Analyzer.</p>
+</li>
+<li>
+<p>Check for bus issues: CAN bus topology and termination, CAN wiring (HI/LO), grounding</p>
+</li>
+<li>
+<p>Check for duplicate Node id's, nodes with different speeds, multiple masters, non CANOpen devices messing on bus.</p>
+</li>
+</ul>
+<p>If you are experiencing issues and cannot find the reason, please take a log and contact Navitec Systems.</p>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="position-shifts-after-agv-standing-still-for-a-long-time"><a class="header" href="#position-shifts-after-agv-standing-still-for-a-long-time">Position shifts after AGV standing still for a long time</a></h3>
+<p>In such a case, it is recommended to put parameter <strong>sf_gyro_bias_mode</strong> to 1. It will enable filtering gyroscope bias and recalibrate it when AGV is stationary. </p>
+<h2 id="agv-rotates-when-standing-still"><a class="header" href="#agv-rotates-when-standing-still">AGV rotates when standing still</a></h2>
+<p>The bias could have been calibrated to wrong value. Try to set <strong>sf_gyro_max_turnrate_recalib_deg_per_s</strong> to smaller value.</p>
+<h2 id="appendix-1-mounting-the-imu-tilted"><a class="header" href="#appendix-1-mounting-the-imu-tilted">Appendix 1: Mounting the IMU Tilted</a></h2>
+<p>A tilted IMU causes issues as the gravitational factor applied to the Z-axis, is partly also applied to either X- or Y-axes, which affects the motion estimation. The correct way to align the coordinate frames of IMU and the vehicle is to go from vehicle frame to AGV frame in Z-Y-X order. Here is an example:</p>
+<p><img src="./media-en/image23.png" alt="" /></p>
+<p>In the picture, AGV axes is red while IMU axes are blue. The first step
+is to rotate the AGV around its z axis. In this example, rotation of -90
+degrees would align the x axis of both, so it becomes like below:</p>
+<p><img src="./media-en/image24.png" alt="" /></p>
+<p>Now if we rotate around the new x axis for 90 degrees, they align as below:</p>
+<p><img src="./media-en/image25.png" alt="" /></p>
+<p>Since we made a rotation around z by -90 and then around x by 90, the correct parameters in this case are:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>F,sf_imu_mounting_x_angle_deg, 90.000000</td><td>IMU installation angle around vehicle x axis</td></tr>
+<tr><td>F,sf_imu_mounting_y_angle_deg, 0.000000</td><td>IMU installation angle around vehicle y axis</td></tr>
+<tr><td>F,sf_imu_mounting_z_angle_deg, -90.000000</td><td>IMU installation angle around vehicle z axis</td></tr>
+</tbody></table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../Localization/GpsPositioning/GpsPositioning-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../Localization/ExternalLocalization/ExternalLocalization-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../Localization/GpsPositioning/GpsPositioning-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../Localization/ExternalLocalization/ExternalLocalization-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

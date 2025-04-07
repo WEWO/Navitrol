@@ -1,0 +1,512 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Data Matrix Code Docking V2 - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html" class="active"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="data-matrix-code-dmc-docking-v2"><a class="header" href="#data-matrix-code-dmc-docking-v2">Data Matrix Code (DMC) Docking V2</a></h1>
+<p>Updated 29.04.2024</p>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
+<p>In context of External localization, Data matrix docking is a separate feature that requires its own license. The idea is to use the data matrix tape for line following only.
+This means that data matrices are not taught to the environment nor will their exact position on the map be known. Instead, symbolic points on the route network will hold the needed information about the data matrix lines.</p>
+<p>In short, the AGV is given a drive order to a destination symbolic point which has data matrix information defined. When the AGV is close enough to the symbolic point and receives a valid measurement from the PGV camera, it goes to a docking state and uses from here on the data matrix code / QR code line as a reference for the drive. This means that the AGV will correct its position to the center of data matrix line and simultaneously correct it's heading to be aligned with the line.</p>
+<p>The AGV will stop based on a predefined stopping values on the data matrix tape. After it gets a drive order to leave the location, it will follow the data matrix tape until the primary sensor is far enough from the symbolic point (configurable). The feature provides accurate docking since the cameras can provide sub millimeter X,Y position on the data matrix.</p>
+<p>The DMC Docking V2 is an improved version of the old Data Matrix docking. The improved version provides the means for:</p>
+<ul>
+<li>Docking to a same symbolic point forward and backward</li>
+<li>Docking to a symbolic point that is middle of the route</li>
+<li>Docking to a symbolic point from all directions</li>
+<li>Docking with DMC line ascending and descending values</li>
+<li>Choosing active PGV cameras to be used when docking</li>
+<li>Possibility to use 4 PGV cameras</li>
+</ul>
+<p><strong>DMC Docking V2 is available in Navitrol 6.48 Official Release</strong></p>
+<h3 id="requirements"><a class="header" href="#requirements">Requirements</a></h3>
+<p>Hardware requirements for the feature include Position Guided Vision sensor(s) and Data matrix code tape from Pepperl+Fuchs. Navitrol can read data directly from sensors using CAN Open. For other type of sensors, the customer is required to read the data from the sensors and send the data to Navitrol via Ethernet TCP/IP connection (see Appendix).</p>
+<p><strong>Note: From Navitrol 6.32 onwards, two cameras can be mounted also to the left and right side of navigation point.</strong></p>
+<h3 id="limitations"><a class="header" href="#limitations">Limitations</a></h3>
+<p>The DMC docking has following limitations for its configuration:</p>
+<ul>
+<li>The Data matrix tapes cannot cross each others.</li>
+<li>AGV can follow only one QR-code line at a time.</li>
+<li>The route should be straight and without branches whenever the AGV is following the data matrix tape.</li>
+<li>Symbolic point must have DMC docking enabled. In addition, symbolic point must be placed so that it is close to the location that the AGV is needed to be stopped. Maximum allowed distance is 0.1 meters.</li>
+<li>If AGV has restarted or driven manually closer than &quot;Check path ready&quot; distance from the symbolic point, The DMC docking does not activate in following situations:
+<ul>
+<li>If route is forward or reverse only</li>
+<li>Data matrix docking stop point is defined only to be approached from one direction and starting to drive to the other side of the symbolic point</li>
+</ul>
+</li>
+<li>Drive order to the same symbolic point where AGV already docked not possible if AGV would approach the same segment (i.e. a loop). AGV should be given drive order to somewhere else first.</li>
+<li>When testing with Navitrol Monitor, disable fleet control since it can cause problems (I, fleet_control_type, 0)</li>
+</ul>
+<p>AGV can follow only one data matrix line at a time, but there can be one or two PGV cameras used for driving. 
+However, only the PGV camera that is configured as primary camera will be used for stopping the AGV. The other (secondary camera) is used only for alignment with respect to data matrix line.</p>
+<h3 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h3>
+<ul>
+<li><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html">External localization</a></li>
+</ul>
+<h2 id="setup"><a class="header" href="#setup">Setup</a></h2>
+<h3 id="quick-start"><a class="header" href="#quick-start">Quick start</a></h3>
+<ul>
+<li>Configure and calibrate the PGV cameras 
+<ul>
+<li><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html#calibration-of-camera-positions">External localization - Calibration of camera positions</a></li>
+<li><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html#calibrating-the-agv-position-relative-to-the-data-matrix-line">External localization - Calibration of the AGV position relatvie to the Data matrix line</a></li>
+<li><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html#proposed-calibration-method-for-vehicle-with-two-pgvs">External localization - Calibration setup for vehicle with two PGV:s</a></li>
+</ul>
+</li>
+<li>Create straight routes and symbolic points along the DMC lines</li>
+<li>Define stopping points for these symbolic points (<a href="#configuration">Configuration</a>)</li>
+<li>Give a drive order to the symbolic point along the route DMC docking was configured</li>
+</ul>
+<p><strong>Required parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ext_loc_docking_enabled</td><td>Int</td><td>1</td><td>Enable docking<br>0 = Disabled<br>1 = Enabled</td></tr>
+<tr><td>ext_loc_docking_version</td><td>Int</td><td>2</td><td>Data matrix code (DMC) Docking version. <br> 1 = Version 1 (V1) <br> 2 = Version 2 (V2)</td></tr>
+<tr><td>ext_loc_stop_point_enabled</td><td>Int</td><td>1</td><td>Stop point is given in data matrix coordinates for sensor (X-position) instead of driving to route end position. Needs to be enabled with DMC docking. <br>0 = Disabled<br>1 = Enabled</td></tr>
+<tr><td>ext_loc_for_pos_ctrl_mode</td><td>Int</td><td>1-3</td><td>External localization used directly for position control (e.g. in case of line following)<br>0 = disabled<br>1 = using only one sensor<br>2 = using two sensors when applicable<br>3 = require always two sensors (Navitrol 6.32 onwards)</td></tr>
+<tr><td>ext_loc_max_dist_since_last_meas</td><td>Float</td><td>0.01 - 1.0</td><td>Maximum travelled distance since last valid measurement when inside external localization area</td></tr>
+<tr><td>ext_loc_check_path_ready_dist</td><td>Float</td><td>0.01 - 0.2</td><td>Distance from stop point inside of which the stopping check starts. After drive is ready and before next stop can be checked, a measurement must be outside of this distance from stop value.</td></tr>
+<tr><td>ext_loc_strict_max_dist_since_last_meas</td><td>Float</td><td>0.01 - 0.5</td><td>Maximum distance in meters since last valid measurement when data matrix following is active and the AGV inside &quot;Check path ready dist&quot;</td></tr>
+<tr><td>ext_loc_path_ready_max_dist_err</td><td>Float</td><td>0.0001 - 0.2</td><td>Max distance between PGV measurement and stop point to determine drive to be instantly ready at the start of new drive order.</td></tr>
+<tr><td>ext_loc_docking_max_h_err_deg</td><td>Float</td><td>0.5 - 180.0</td><td>Maximum heading error in degrees to the target heading when data matrix line follow is active</td></tr>
+<tr><td><strong>CANOpen Communication parameters</strong></td><td></td><td></td><td></td></tr>
+<tr><td>pgv_enabled</td><td>Uint</td><td>1</td><td>PGV sensor enabled (CAN only)</td></tr>
+<tr><td>pgv_can_node_id[0...3]</td><td>Int</td><td>1-127</td><td>CAN node ID of camera</td></tr>
+<tr><td>pgv_model[0...3]</td><td>Int</td><td>0</td><td>0 = default<br>1 = safePGV</td></tr>
+</tbody></table>
+<p><strong>Optional parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ext_loc_x_offset[0...3]</td><td>Float</td><td>0.0</td><td>Nominal X offset from the navigation point to sensor in machine coordinate system, positive forwards</td></tr>
+<tr><td>ext_loc_y_offset[0...3]</td><td>Float</td><td>0.0</td><td>Nominal Y offset from the navigation point to sensor in machine coordinate system, positive to the left</td></tr>
+<tr><td>ext_loc_h_offset_deg[0...3]</td><td>Float</td><td>0.0</td><td>Nominal heading offset between machine coordinate system and sensor coordinate system, positive CCW</td></tr>
+<tr><td>pgv_x_offset[0...3]</td><td>Float</td><td>0.0</td><td>X-offset in meters from nominal position, only small correction values</td></tr>
+<tr><td>pgv_y_offset[0...3]</td><td>Float</td><td>0.0</td><td>Y-offset in meters from nominal position, only small correction values</td></tr>
+<tr><td>pgv_angle_offset_deg[0...3]</td><td>Float</td><td>0.0</td><td>Angle offset in degrees from nominal heading</td></tr>
+<tr><td>ext_loc_pos_ctrl_dist_err_only</td><td>Int</td><td>0</td><td>Position control option to use only distance error from line, when just one sensor is reading the data matrix. Intended for non-omni type vehicles that have sensor(s) outside of navigation point (Navitrol 6.32 onwards).</td></tr>
+<tr><td>ext_loc_heading_filt_alpha</td><td>Float</td><td>1.0</td><td>Filtering gain for heading measurement from sensor (0.1 -- 1.0)</td></tr>
+<tr><td>ext_loc_pid_heading_p</td><td>Float</td><td>0.0</td><td>Position control gain for heading when external localization is active<br>&lt;= 0.1 use normal pc_pid values&lt;br&gt;&gt; 0.1 use this parameter</td></tr>
+<tr><td>ext_loc_pid_dist_p</td><td>Float</td><td>0.0</td><td>Position control gain for distance when external localization is active<br>&lt;= 0.1 use normal pc_pid values&lt;br&gt;&gt; 0.1 use this parameter</td></tr>
+<tr><td>ext_loc_stop_distance_offset</td><td>Float</td><td>0.0</td><td>Additional offset for stopping (pc_stop_distance_offset in general use) on data matrix. Positive value if the AGV stops too early.</td></tr>
+<tr><td>ext_loc_stop_point_min_agv_dist_from_sp</td><td>Float</td><td>0.5</td><td>AGV needs to be within this distance from the target symbolic point to start checking for the stop point</td></tr>
+<tr><td>pgv_max_missing_msg</td><td>Int</td><td>5</td><td>Number of missing messages for error to be triggered (Ethernet only)</td></tr>
+<tr><td>pgv_cam_res_x</td><td>Float</td><td>0.0001</td><td>The x-axis resolution of the PGV cameras in meters</td></tr>
+<tr><td>pgv_cam_res_y</td><td>Float</td><td>0.0001</td><td>The y-axis resolution of the PGV cameras in meters</td></tr>
+<tr><td>pgv_cam_res_h</td><td>Float</td><td>0.1</td><td>The heading resolution (deg) of the PGV cameras</td></tr>
+<tr><td><strong>Ethernet Communication parameters if CanOpen not used</strong></td><td></td><td></td><td></td></tr>
+<tr><td>ext_loc_eth_model[0...3]</td><td>Int</td><td>-1</td><td>Linefollowing config for ethernet comms<br>-1 = disabled<br>0 = PGV</td></tr>
+<tr><td>ext_loc_eth_protocol[0...3]</td><td>Int</td><td>2</td><td>1 = Stream<br>2 = DGRAM</td></tr>
+<tr><td>ext_loc_eth_port[0...3]</td><td>Int</td><td>5333</td><td>Linefollowing port</td></tr>
+<tr><td>ext_loc_eth_swap_bytes</td><td>Int</td><td>0</td><td>0 = little endian<br>1 = big endian</td></tr>
+</tbody></table>
+<p><strong>Example parameters to get started for two PGV (CAN Open) cameras</strong></p>
+<table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>
+<tr><td>I,ext_loc_docking_enabled,</td><td>1 # Data matrix docking enabled</td></tr>
+<tr><td>I,ext_loc_docking_version,</td><td>2 # Data matrix docking V2 active</td></tr>
+<tr><td>I,ext_loc_stop_point_enabled</td><td>1</td></tr>
+<tr><td>F,ext_loc_x_offset[0],</td><td>0.5</td></tr>
+<tr><td>F,ext_loc_y_offset[0],</td><td>0.0</td></tr>
+<tr><td>F,ext_loc_h_offset_deg[0],</td><td>0.0</td></tr>
+<tr><td>F,ext_loc_x_offset[1],</td><td>-0.5</td></tr>
+<tr><td>F,ext_loc_y_offset[1],</td><td>0.0</td></tr>
+<tr><td>F,ext_loc_h_offset_deg[1],</td><td>0.0</td></tr>
+<tr><td>I,ext_loc_for_pos_ctrl_mode,</td><td>2</td></tr>
+<tr><td>F,ext_loc_heading_filt_alpha,</td><td>0.3</td></tr>
+<tr><td>U, pgv_enabled,</td><td>1</td></tr>
+<tr><td>I,pgv_can_node_id[0],</td><td>3</td></tr>
+<tr><td>I,pgv_can_node_id[1],</td><td>4</td></tr>
+<tr><td>F, pgv_x_offset[0],</td><td>0.0</td></tr>
+<tr><td>F,pgv_y_offset[0],</td><td>0.0</td></tr>
+<tr><td>F,pgv_x_offset[1],</td><td>0.0</td></tr>
+<tr><td>F,pgv_y_offset[1],</td><td>0.0</td></tr>
+<tr><td>F,pgv_angle_offset_deg[0],</td><td>90.0</td></tr>
+<tr><td>F,pgv_angle_offset_deg[1],</td><td>-90.0</td></tr>
+</tbody></table>
+<h2 id="how-to-use"><a class="header" href="#how-to-use">How to use</a></h2>
+<h3 id="configuration"><a class="header" href="#configuration">Configuration</a></h3>
+<p>In Navithor Tools, symbolic point should be filled with the data matrix tape information. These include</p>
+<ul>
+<li>
+<p>Selected symbolic point and approaching segment: The approaching segment needs to be selected for each docking direction separately</p>
+<ul>
+<li>If you want to dock from different directions relative to symbolic point you must define all these cases separately</li>
+</ul>
+</li>
+<li>
+<p>Docking direction: Forward or Backward. This defines the direction with which the AGV docks the symbolic point.</p>
+</li>
+<li>
+<p>Start point: Starting value defines</p>
+<ul>
+<li>The first value read from the DMC tape when approaching docking location</li>
+<li>The last value when leaving docking location the same route.</li>
+</ul>
+</li>
+<li>
+<p>End point: Defines the last value read from the DMC tape when leaving docking location over the docking symbolic point.</p>
+</li>
+<li>
+<p>Stop point (X-coordinate): Stop point will trigger stopping of the AGV. It is incorporated with stopping offsets (pc_stop_distance_offset &amp; ext_loc_stop_distance_offset) for targeting that PGV reading would be close to the stop point value at the end.</p>
+</li>
+<li>
+<p>Sideway offset: The offset in Y direction wrt the AGV forward driving direction. If AGV drives forward normally, the sideway offset is positive to the left. This will offset the center of the camera by this value from the tape. Thus, a positive sideway offset will drive the AGV to the left side from the route heading.</p>
+</li>
+<li>
+<p>Heading offset: Defines the heading offset with which to drive the DMC tape. Allowed range [-10, 10] degrees. Positive heading offset will drive the AGV rotated to counter-clockwise direction. Offsets should be kept small.</p>
+</li>
+<li>
+<p>Primary Camera: The index of the primary camera used for DMC position control and for stopping to the defined X-coordinate Stop-point. <strong>Primary camera index needs to be always defined as the AGV is stopped based on the primary camera to the defined stopping point.</strong></p>
+<ul>
+<li>Indexes match to parameters:
+<ul>
+<li>PGV:s defined with CanOpen: pgv_can_node_id[<strong>index</strong>]</li>
+<li>PGV:s defined with Ethernet communication: ext_loc_eth_model[<strong>index</strong>]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li>Secondary Camera: Defines the index of the secondary camera used for DMC position control. Only used for Y-directional (perpendicular direction with respect to the DMC line) and heading corrections.</li>
+</ul>
+<br>
+<p><img src="./media-en/image16.PNG" alt="" /></p>
+<blockquote>
+<p>Docking configuration</p>
+</blockquote>
+<p><img src="./media-en/ToolsDockingConfiguration.png" alt="" /></p>
+<blockquote>
+<p>DMC line configuration for symbolic point on Navithor Tools</p>
+</blockquote>
+<h3 id="logic-and-error-detection"><a class="header" href="#logic-and-error-detection">Logic and error detection</a></h3>
+<h4 id="main-logic"><a class="header" href="#main-logic">Main logic</a></h4>
+<p>When the AGV is approaching the symbolic point that has data matrix values defined, it will change the driving reference point from route to data matrix line as soon as following conditions are met:</p>
+<ul>
+<li>
+<p>PGV:s primary X-measurement is between defined start and end point.</p>
+<ul>
+<li>If parameter ext_loc_for_pos_ctrl_mode is set to 3, then both primary and secondary camera X-measurements need to be between start and end point.</li>
+</ul>
+</li>
+<li>
+<p>Distance along the route between the AGV and symbolic point is less than data matrix length + small tolerance (0.4m)</p>
+</li>
+<li>
+<p>Heading of the AGV relative to the tape is close enough to the target heading (parameter ext_loc_docking_max_h_err_deg).</p>
+</li>
+</ul>
+<p>Once the AGV changes to follow data matrix line, it will not switch to follow route in the same drive order anymore.</p>
+<p>The AGV starts to calculate when to stop after the primary PGV X-measurement is closer than &quot;Check path ready dist&quot; from the stop point value. Trigger to stop, as mentioned, is determined by the primary PGV X-measurement and stopping offsets.</p>
+<p>After finishing the stop and executing possible tasks at the location, the AGV will be given a drive order away from the symbolic point. The AGV will be following the data matrix line until primary camera measurements are between start and end point (If both PGV cameras required, then data matrix line following is stopped when either of the cameras are outside start or end point values).</p>
+<p>Navitrol Monitor can visualize the active data matrix line by opening a form <em>Navitrol</em> &gt;&gt; <em>Data Matrix Docking V2</em>. In addition, when DMC docking is activated, the primary PGV camera measurements are shown in green and secondary camera measurements in orange.</p>
+<p><img src="./media-en/dataMatrixDockingBackward.png" alt="" /></p>
+<blockquote>
+<p>Docking to symbolic point 2 backwards using camera indices 0 and 1</p>
+</blockquote>
+<p><img src="./media-en/dataMatrixDockingForward.png" alt="" /></p>
+<blockquote>
+<p>Docking to symbolic point 2 forwards using camera indices 2 and 3</p>
+</blockquote>
+<h4 id="error-detection"><a class="header" href="#error-detection">Error detection</a></h4>
+<p>As it is desired to drive to the data matrix stop point accurately, it will be constantly supervised that the AGV is receiving valid PGV measurements while approaching or leaving the symbolic points.</p>
+<ol>
+<li><strong>Approaching the symbolic point</strong></li>
+</ol>
+<ul>
+<li>
+<p>The AGV must get at least one valid PGV measurement before it is closer than &quot;Check path ready dist&quot; from symbolic point, otherwise error ERROR_EXT_LOC_NOT_SAFE_TO_DRIVE is triggered.</p>
+</li>
+<li>
+<p>After getting first valid measurement and changing to data matrix line follow, it is checked that the AGV does not travel without valid measurement for more than ext_loc_max_dist_since_last_meas while outside &quot;Check path ready dist&quot; from the symbolic point. Otherwise error EXT_LOC_TOO_LONG_SINCE_VALID_MEASUREMENT is triggered.
+<strong>Note:</strong> If AGV stops to this error at very start of data matrix line, it is likely that the heading validation has failed.</p>
+</li>
+<li>
+<p>While inside &quot;Check path ready dist&quot; from symbolic point, a stricter limit is used ext_loc_strict_max_dist_since_last_meas.</p>
+</li>
+</ul>
+<ol>
+<li><strong>Leaving the symbolic point</strong></li>
+</ol>
+<ul>
+<li>
+<p>The AGV must get valid PGV measurements also when leaving the symbolic point while inside active DMC line start and end value. Otherwise error ERROR_EXT_LOC_TOO_LONG_SINCE_MEASUREMENT is triggered.</p>
+<ul>
+<li>Parameter ext_loc_strict_max_dist_since_last_meas will be used for error detection within &quot;Check path ready dist&quot; from the symbolic point.</li>
+<li>After that parameter ext_loc_max_dist_since_last_meas is used for measurement validation</li>
+</ul>
+</li>
+<li>
+<p>After the primary camera PGV X-measurements are outside of start and end values of active DMC line, the AGV will change to route following.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p><strong>After software reboot</strong></p>
+<ul>
+<li>
+<p>If the AGV is closer than &quot;Check path ready dist&quot; from the symbolic point that is target for a new drive order (or there is some other ambiguity from which direction the AGV is approaching the stop point), it will be checked whether the drive is ok to be ready.</p>
+<p>i.  Drive is ready if PGV X-measurement is closer than ext_loc_path_ready_max_dist_err from the stop point.</p>
+<p>ii. Error ERROR_EXT_LOC_NOT_SAFE_TO_DRIVE will be triggered if the first condition is not true</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h3>
+<ul>
+<li>
+<p><em>Data matrix Docking does not start even though PGV gets readings from the tape when close to symbolic point</em></p>
+<ul>
+<li>
+<p>Check that your camera parameters are correct. Typical issue is that heading of the camera is wrong and a sanity check rejects the measurement (ext_loc_docking_max_h_err_deg).</p>
+</li>
+<li>
+<p>From Navitrol 6.48 onwards there is a possibility to show the PGV positions in Navitrol Monitor.</p>
+</li>
+<li>
+<p>Check that the camera parameters for the position and for the connection have the same index. In other words, the measurements come from the correct camera.</p>
+</li>
+<li>
+<p>Check that the Data matrix docking has been configured to the symbolic point and for the correct driving direction.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>ERROR_EXT_LOC_TOO_LONG_SINCE_MEASUREMENT is shown</em></p>
+<ul>
+<li>
+<p>The data matrix docking is active and PGV camera should be able to read the QR code but PGV has not received any valid measurements. The Error is triggered after the AGV has travelled distance longer than ext_loc_max_dist_since_last_meas without valid measurements (when close to symbolic point using the ext_loc_strict_max_dist_since_last_meas value when defined).</p>
+</li>
+<li>
+<p>Check what is the reason for not receiving measurements from the PGV. For example, is the tape damaged or is the PGV camera too far away from the tape.</p>
+</li>
+<li>
+<p>To get AGV out of the error situation, move the AGV manually to route point that is out of the the data matrix.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>AGV does not drive accurately enough on the data matrix tape</em></p>
+<ul>
+<li>
+<p>View the performance of the AGV by opening the graphs from the upper left corner 'Show Graphs' of the Data Matrix Code Docking V2 window.</p>
+</li>
+<li>
+<p>Verify that the target offsets are set correctly.</p>
+</li>
+<li>
+<p>Check the calibration of the PGV camera pose.</p>
+</li>
+<li>
+<p>Tune the position control gains (pc_pid_dist_p, pc_pid_heading_p / ext_loc_pid_heading_p, ext_loc_pid_dist_p).</p>
+</li>
+<li>
+<p>Slow down the AGV's speed if possible.</p>
+</li>
+<li>
+<p>Correct the stop position with stop offset (pc_stop_distance_offset / ext_loc_stop_distance_offset).</p>
+</li>
+</ul>
+<p><img src="./media-en/dataMatrixDockingGraphs.PNG" alt="" /></p>
+<blockquote>
+<p>Graphs show the lateral position and heading of the AGV on the data matrix line.</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>Note!</strong>
+Some of the errors are persistent. Put the AGV to Manual state and possibly drive away from the error location. Turn off the Manual state and wait for the error to be cleared.</p>
+<h2 id="appendix"><a class="header" href="#appendix">Appendix</a></h2>
+<h3 id="ethernet-communication-protocol"><a class="header" href="#ethernet-communication-protocol">Ethernet communication protocol</a></h3>
+<p>Please refer to External localization document for configuring PGV cameras for Etherner communication protocol</p>
+<p><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html#ethernet-communication-protocol">External localization - ethernet communication protocol</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../PositionControl/BarrierStop/BarrierStop-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../PositionControl/Docking/Docking-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../PositionControl/BarrierStop/BarrierStop-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../PositionControl/Docking/Docking-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

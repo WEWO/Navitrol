@@ -1,0 +1,540 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Buffer lanes - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html" class="active"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="buffer-lanes"><a class="header" href="#buffer-lanes">Buffer Lanes</a></h1>
+<p>Updated 23.02.2024</p>
+<hr />
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>Buffer lanes are a feature that allows unloading resources one after another and similarly loading first resource from a line of resources.
+Normally there can be only one resource per symbolic point but with this feature it is possible to add a buffer area, that can fit multiple resources. Figure 1 shows example of the unload buffer. On that Figure, the object is detected with scanner and then the AGV does the unload in specified distance from that detected object.</p>
+<p><img src="./media-en/figure1.png" alt="" /></p>
+<blockquote>
+<p>Figure 1: Example picture of unload buffer.</p>
+</blockquote>
+<h3 id="unload-buffer"><a class="header" href="#unload-buffer">Unload buffer</a></h3>
+<p>Unload buffer is a feature that allows AGV to unload resources in a line. When AGV is inside the buffer area, it uses laser scanner to detect where the last unloaded resource is and calculates the unload location for the carried resource. Then AGV drives to that calculated unload location, performs unload and continues driving to next mission.</p>
+<h3 id="load-buffer"><a class="header" href="#load-buffer">Load buffer</a></h3>
+<p>Load buffer is a feature that allows AGV to load the last resource from a line of resources. When AGV is inside the buffer area, it uses sensor information to detect where the last resource is on the line and calculates load location to be able to pick the resource. There are two sensor options: 1. Laser scanner to detect where the last resource is on
+the buffer area or 2. Load sensor information to know when the forks are under a resource to pick it up. Then AGV drives to the calculated load location, performs load and continues to unload location.</p>
+<h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
+<ul>
+<li>
+<p>Pallet detection license</p>
+</li>
+<li>
+<p>Navitrol 6.28 (6.32 for docking)</p>
+</li>
+<li>
+<p>Laser scanner to detect the object on the buffer area.</p>
+</li>
+<li>
+<p>Navithor 2.3.0.2</p>
+</li>
+</ul>
+<h2 id="buffer-lane-feature"><a class="header" href="#buffer-lane-feature">Buffer lane feature</a></h2>
+<p>This Chapter explains buffer lane load and unload features with more detail and Navitrol parameters that affects to the performance.</p>
+<h3 id="unload-buffer-1"><a class="header" href="#unload-buffer-1">Unload buffer</a></h3>
+<p>Laser scanner for object detection:</p>
+<ul>
+<li>
+<p>Must see the resource when AGV is driving on buffer area</p>
+</li>
+<li>
+<p>Must see a cluster of scanner measurement points</p>
+</li>
+<li>
+<p>Full pallet detection is not needed</p>
+</li>
+</ul>
+<p>Cluster parameters:</p>
+<ul>
+<li>
+<p><strong>pallet_det_min_points_close_to_first_point</strong> defines how many scanner points are required for cluster</p>
+</li>
+<li>
+<p><strong>pallet_det_2_max_dist_to_first_point</strong> defines distance between consecutive cluster points.</p>
+</li>
+</ul>
+<p><strong>AGV distance to detected object:</strong></p>
+<ul>
+<li><strong>buffer_stop_dist_from_object_when_unloading parameter defines the distance from detected object where to perform the unload.</strong></li>
+</ul>
+<p><strong>Search area:</strong></p>
+<ul>
+<li><strong>pallet_model_width_y[0] parameter defines the search area, where the scanner points are searched for. See</strong> Figure 2 <strong>below.</strong></li>
+</ul>
+<p><img src="./media-en/image3.png" alt="" /></p>
+<blockquote>
+<p>Figure 2: Unload search area</p>
+</blockquote>
+<h3 id="load-buffer-1"><a class="header" href="#load-buffer-1">Load buffer</a></h3>
+<p>Load buffer has three different modes:</p>
+<ol>
+<li>
+<p>Object detected with scanner</p>
+</li>
+<li>
+<p>Pallet detected with scanner</p>
+</li>
+<li>
+<p>Load sensor is triggered.</p>
+</li>
+</ol>
+<p><img src="./media-en/image4.png" alt="" /></p>
+<blockquote>
+<p>Figure 3: Load buffer search area</p>
+</blockquote>
+<h4 id="mode-1-object-detection-with-scanner"><a class="header" href="#mode-1-object-detection-with-scanner">Mode 1: Object detection with scanner</a></h4>
+<p>This is the same functionality as on the unload. This means that the scanner needs only few scanner points close to each other to detect an object on the route buffer (See above what parameters affects to the clusters).</p>
+<ul>
+<li><strong>buffer_stop_dist_from_object_when_loading</strong> defines the stopping point from the detected object and the distance is calculated from navigation point to the object.</li>
+</ul>
+<p>The downside with this mode is that it might detect anything on the route, so the accuracy might vary.</p>
+<h4 id="mode-2-pallet-detection-with-scanner"><a class="header" href="#mode-2-pallet-detection-with-scanner">Mode 2: Pallet detection with scanner</a></h4>
+<p>This mode uses full pallet detection and also has this object detection feature (same as mode 1) as a safety.</p>
+<ul>
+<li>
+<p><strong>buffer_stop_dist_from_object_when_loading</strong> defines the stopping point and the distance is calculated from navigation point to the pallet's front line.</p>
+</li>
+<li>
+<p><strong>buffer_stop_distance_from_unwanted_object</strong> defines the distance from detected object to stop the AGV if pallet is not detected.</p>
+</li>
+<li>
+<p><strong>buffer_max_dist_from_route_to_target</strong> defines maximum allowed sideways distance that the pallet can have from the route. Error is set if the pallet is further.</p>
+</li>
+</ul>
+<h4 id="mode-3-load-sensor"><a class="header" href="#mode-3-load-sensor">Mode 3: Load sensor</a></h4>
+<p>Load sensor needs to give Navitrol information when the AGV has driven under the pallet and is ready for performing the load. The AGV is driving on the route and waiting this load sensor to trigger, otherwise it will just drive to the end symbolic point.</p>
+<ul>
+<li><strong>buffer_stop_dist_from_object_when_loading</strong> defines the distance how far the AGV can still drive after the load sensor is triggered. In many cases, this can be small number e.g., 0.05, the sign depends on the driving direction.</li>
+</ul>
+<h4 id="docking"><a class="header" href="#docking">Docking</a></h4>
+<p>Docking is released on 6.32 release. It means that AGV can correct its position sideways on the buffer area. This Chapter explains only the basic idea of Docking. More info can be found from <em>Navitrol Pallet Detection Instructions</em> document</p>
+<p>These parameters have to be set to enable docking:</p>
+<ul>
+<li>
+<p><strong>docking_to_target_enabled</strong> 1 (omni or mechanum) or 2 (steer or differential drive AGV)</p>
+</li>
+<li>
+<p><strong>Load_buffer_mode</strong> 2</p>
+</li>
+<li>
+<p><strong>Docking_stop_distance</strong> replaces the <strong>buffer_stop_dist_from_object_when_loading</strong> when docking is used.</p>
+</li>
+</ul>
+<p>NOTE! The <strong>buffer_check_start_dist_offset_m</strong> should have large enough value to allow some space for the docking. If this parameter is zero or too small, the pallet detection starts when the AGV is inside the buffer area. This can be too late to start docking if the buffer is full and the pallet is very close to the buffer start.</p>
+<p>Docking requires pallet detection tag to be enabled on Tools, otherwise the AGV will drive only on the route as in normal buffer lane.</p>
+<p><img src="./media-en/image5.png" alt="" /></p>
+<blockquote>
+<p>Figure 4: Docking requires pallet detection tag for the Symbolic point on Tools.</p>
+</blockquote>
+<p>The docking has two extra start conditions for load buffer. See Figure 5 and Figure 6.</p>
+<ul>
+<li>
+<p>The calculated stop point has to be closer to the route than the <strong>buffer_max_dist_from_route_to_target</strong> parameter.</p>
+</li>
+<li>
+<p>The calculated stop point cannot be further away from the Symbolic point (behind the SP) than the <strong>docking_max_dist_error_from_end_point</strong> parameter. This replaces the normal docking start condition that check only the target distance to the SP.</p>
+</li>
+</ul>
+<p><img src="./media-en/image6.png" alt="" /></p>
+<blockquote>
+<p>Figure 5: First start condition: Distance to route cannot be too high. It is calculated sideways (see the red arrow).</p>
+</blockquote>
+<p><img src="./media-en/image7.png" alt="" /></p>
+<blockquote>
+<p>Figure 6: Second start condition: Stop point cannot be too far behind the Symbolic point.</p>
+</blockquote>
+<p>Other start conditions and more information about the docking can be found from the Navitrol Pallet Detection Instructions document.</p>
+<h2 id="creating-buffer-lanes"><a class="header" href="#creating-buffer-lanes">Creating Buffer Lanes</a></h2>
+<p>Creating a buffer lane for a Load or Unload point is done by setting a buffer distance and enabling the buffer. This can only be done for symbolic points with the type Load or Unload. The size of the lane is visualized in magenta. The UI is displayed in Figure 5.</p>
+<p>As a limitation buffer lane cannot currently span across multiple links. Additionally, the load or unload point must only have a single link connected thus it needs to be at the end of a link.</p>
+<p>NOTE: <strong>buffer_check_start_dist_offset_m,</strong> 2.0 by default**,** parameter is offset value that is added to the buffer lane start point.
+If the buffer lane is 10m on the Tools and this parameter is 1.0 m, it means that the buffer is actually 11.0 m long.</p>
+<p><img src="./media-en/image8.png" alt="" /></p>
+<blockquote>
+<p>Figure 7. Creating Buffer Lanes. 1: Symbolic point type has to be Load or Unload or both. 2: Enable Buffer Lane feature. 3: Set Buffer area distance, illustrated in magenta on the route.</p>
+</blockquote>
+<h2 id="fleet-control-settings"><a class="header" href="#fleet-control-settings">Fleet control settings</a></h2>
+<p>Using buffer buffer lanes in production requires following TCPara­meters to be set:</p>
+<ul>
+<li>
+<p>ResourceManager_ResourceContainerType -- Single</p>
+</li>
+<li>
+<p>ResourceManager_ConstainerStackType -- CombineSameType</p>
+</li>
+</ul>
+<p>Optionally:</p>
+<ul>
+<li>
+<p>ProductionManager_UnloadLocationAssignMode -- buffer_balance</p>
+</li>
+<li>
+<p>SymbolicPoint_BUFFER_FULL_DISTANCE_REMAINING -- any value</p>
+</li>
+</ul>
+<p>Unload location assign mode <strong>buffer_balance</strong> prioritizes unload point with most space left in the buffer. Navithor updates the space remaining in a buffer every time a resource is unloaded to it. The buffer is full if the symbolic point resource count is full or if there is no space on the buffer area to unload anymore pallets. The resource length is taken from the machine type parameter xml file. If the point is set empty, the space left in buffer is also reset.</p>
+<p>Buffer full distance remaining sets when we consider the buffer to be full. The buffer is considered full when Navithor believes that the space left in buffer is lower than this value.</p>
+<h3 id="grouping-symbolic-points"><a class="header" href="#grouping-symbolic-points">Grouping symbolic points</a></h3>
+<p>If there are multiple buffer lanes on the production area, the symbolic points can be grouped. Then the production orders can be set to the whole group and Navithor chooses the target buffer based on the <strong>UnloadLocationAssignMode</strong> parameter. When one buffer becomes full, the order is automatically switched to the next buffer area on that group.</p>
+<p><strong>Example edge cases:</strong></p>
+<ul>
+<li>
+<p>You have a buffer that can fit 4 resources and 3 resources are already unloaded to the buffer. 1 resource is taken manually away from the buffer. Now Navithor still has info that there are 3 resources, even though 1 is carried away. Then Navithor will only deliver one resource to the buffer and set the buffer as full, even though in reality there would be space for another resource.</p>
+</li>
+<li>
+<p>Resources are cleared on the buffer symbolic point, even though the area is actually full. Navithor creates order to take pallet to the buffer. When AGV comes to the beginning of the buffer it detects that the area is actually full and send the status to Navithor. Then Navithor changes the status to full, abort the drive to this buffer     and select another available buffer if it is allowed. If selecting another buffer is not possible for example if the symbolic points are not Grouped, the AGV will just wait on that location until the buffer is cleared manually.</p>
+</li>
+</ul>
+<h2 id="navitrol-monitor-buffer-visualization"><a class="header" href="#navitrol-monitor-buffer-visualization">Navitrol Monitor buffer visualization</a></h2>
+<p>The load buffer with pallet detection (mode 2) draws normal pallet based on the pallet model parameters to the location where the pallet is found.</p>
+<p><img src="./media-en/image9.png" alt="" /></p>
+<blockquote>
+<p>Figure 8: Normal pallet with load buffer mode 2.</p>
+</blockquote>
+<p>The unload buffer and load buffer mode 1 doesn't use full pallet detection so they don't provide enough data to draw the full pallet.
+Instead, they will draw a green circle to the location, where the closest cluster is found, see Figure 9. This green circle is also used on the load buffer mode 2 if there is some object ahead and the pallet is not detected. The green circle is added to the 6.30.00 release, but versions before that draws the pallet to the location where the object is found. In some cases, with the old versions, the pallet might be drawn with weird angle, because of the missing data.</p>
+<p><img src="./media-en/image10.png" alt="" /></p>
+<blockquote>
+<p>Figure 9: The green object detection circle.</p>
+</blockquote>
+<h2 id="instructions-how-to-set-navitrol-parameters"><a class="header" href="#instructions-how-to-set-navitrol-parameters">Instructions how to set Navitrol parameters</a></h2>
+<h3 id="required-parameters"><a class="header" href="#required-parameters">Required parameters</a></h3>
+<p><strong>I,target_detection_type_selection,</strong> <strong>3</strong> # Enables ref docking or pallet detection, 0 = disabled, 1 = refl docking, 2 = pallet detection, 3 = pallet detection ver 2 (allows buffer detection)</p>
+<p><strong>I,target_detection_scan_selection, 3</strong> # Defines which scanners are used for target detection: 1 = rear scanner only, 2 = front scanner only, 3 = both scanners (supported only in refl docking and pallet detection ver 2)</p>
+<p>Pallet model should be set into the parameters with array index of 0.
+Important parameters for buffers are:</p>
+<p><strong>I,pallet_model_enabled[0], 1</strong> # 1 = pallet model enabled</p>
+<p><strong>F,pallet_model_width_y[0], 0.80</strong> # Used for determining width of the buffer to check if it is free or not Parameters that can be added to params.txt to enable this buffer feature, change how close to the object the AGV stops in the buffer zone and how early it starts checking, if the buffer is free or not:</p>
+<p><strong>I,buffer_lanes_enabled, 1</strong> # 0 = disable buffer lane feature, 1 = enable.</p>
+<p><strong>F,buffer_stop_dist_from_object_when_unloading, -2.0</strong> # Stopping distance (m) from the closest object, when unloading in a buffer. Calculated from navigation point to the first scanner measurements seen on the buffer zone.</p>
+<p><strong>F,buffer_check_start_dist_offset_m, 1.0</strong> # The minimum distance from navigation point to the buffer zone, when the AGV starts checking if the unload buffer is free or not</p>
+<p><strong>F,</strong> <strong>buffer_stop_dist_from_object_when_loading, -0.05</strong> # Stopping offset (m) for load buffer. Calculated from navigation point. Depends on the sensor, if this parameter needs to be set. If pallet is detected really early it might be useful to have some value to make sure that the pallet is actually loaded.</p>
+<p><strong>I, load_buffer_mode,</strong> <strong>2</strong> # 0 = none, 1 = detect any objects based on scanner measurements, 2 = detect a pallet, 3 = external sensor (Load Detected bit on Supervisor status or CAN)</p>
+<p><strong>I, unload_buffer_mode, 1</strong> # 0 = none, 1 = detect any objects based on scanner measurements</p>
+<h3 id="increasing-speed-on-buffer-lanes"><a class="header" href="#increasing-speed-on-buffer-lanes">Increasing speed on buffer lanes</a></h3>
+<p>Navitrol has implementation, that disables the safety scanner field based on distance from a detected object. This is useful if the AGV has safety scanner installed statically to the body of the AGV, so the scanner doesn't move with the fork.</p>
+<p>The main goal for this implementation is to drive faster out from an unload buffer and faster in to a load buffer. If the scanner is safety scanner and its safety has to be disabled when the fork is down, because otherwise it will trigger safety stop. On the buffer lanes, the safety is disabled only when the AGV is close to the load or unload, so the AGV can drive faster and safer further away on the buffer lane.</p>
+<p>Driving faster on buffer lanes with this kind of fork setup, requires Navitrol to handle the disable safety message more efficiently based on the distance to the pallet. This means:</p>
+<p><strong>On load buffer:</strong></p>
+<ul>
+<li>
+<p>The route has a fork height above scanner, so the scanner can see where the pallet is on the buffer.</p>
+</li>
+<li>
+<p>The route speed can be set to normal driving speed.</p>
+</li>
+<li>
+<p>First, the scanner detects the pallet on the route.</p>
+</li>
+<li>
+<p>The AGV starts slowing down to <strong>disable_safety_limit_speed</strong> when it reaches the <strong>load_buffer_slow_down_distance</strong> from the detected pallet.</p>
+</li>
+<li>
+<p>When AGV reaches the distance of <strong>disable_safety_distance_on_buffer</strong> to the pallet, the safety is requested to be disabled (supervisor status section 11 Disable     safety) and the fork is decreased to <strong>actuator_min_val</strong>.</p>
+<ul>
+<li>Note! If pallet detection scanner can continue detecting pallet when the fork is on the floor, set this parameter to 1: <strong>buffer_allow_drive_end_update_when_safety_is_disabled</strong></li>
+</ul>
+</li>
+<li>
+<p>AGV drives under the pallet and picks it up.</p>
+</li>
+<li>
+<p>Continues to unload location.</p>
+</li>
+</ul>
+<p><strong>On Unload buffer:</strong></p>
+<ul>
+<li>
+<p>The route has a fork height above scanner, so the scanner can see where the last unloaded pallet is on the buffer.</p>
+</li>
+<li>
+<p>The route speed can be set to normal driving speed.</p>
+</li>
+<li>
+<p>First, the scanner detects the pallet on the route.</p>
+</li>
+<li>
+<p>The AGV starts slowing down to <strong>disable_safety_limit_speed</strong> when it reaches the <strong>unload_buffer_slow_down_distance</strong> from the detected pallet.</p>
+</li>
+<li>
+<p>When AGV reaches the distance of <strong>disable_safety_distance_on_buffer</strong> to the pallet, the safety is requested to be disabled (supervisor status section 11 Disable     safety).</p>
+</li>
+<li>
+<p>The AGV drives to Unload location and unloads the pallet.</p>
+</li>
+<li>
+<p>When AGV start driving to next location, it keeps the fork at <strong>actuator_min_val</strong> for the <strong>docking_limit_leave_speed_and_actuator_height_dist</strong> distance from the last unload location.</p>
+</li>
+<li>
+<p>The speed is limited to <strong>docking_limit_leave_speed</strong> until the AGV is further away than this distance parameter or until the fork is above the <strong>actuator_disable_safety_max_value_mm</strong>.</p>
+</li>
+<li>
+<p>The safety is requested to be disabled until the AGV reaches the <strong>disable_safety_distance_on_buffer</strong> distance from the last unload location.</p>
+</li>
+<li>
+<p>When AGV is not anymore on this docking_limit distance, the speed and actuator height is taken from the route.</p>
+</li>
+</ul>
+<p>There is new supervisor section message to send the PLC information when Navitrol want to disable the safety on the scanner that is below the fork. The cases when Navitrol will send this message are:</p>
+<ul>
+<li>
+<p>When fork is decreased too low (the height can be set with parameter)</p>
+</li>
+<li>
+<p>When the AGV is close to the load or unload location (the distance can be set with parameter). Note: the distance is calculated between the AGV and the detected pallet on buffer lane, not the symbolic point.</p>
+</li>
+</ul>
+<h3 id="setting-up-disable-safety-feature"><a class="header" href="#setting-up-disable-safety-feature">Setting up disable safety feature</a></h3>
+<ul>
+<li>
+<p>When setting up the disable safety feature, the <strong>disable_safety</strong> parameter needs to be set to 1. If this parameter is 0, the supervisor message is not sent.</p>
+</li>
+<li>
+<p>Then the <strong>disable_safety_distance_on_buffer</strong> parameter needs to be set to value, where the safety is disabled. This distance is calculated from AGV navigation point to the unload or load location (location where the navigation point is when the load or unload is done). This parameter should be larger than the safety fields on the safety scanner and it is used to disable the safety just before we arrive to load or unload point.</p>
+</li>
+<li>
+<p>The <strong>actuator_disable_safety_max_value_mm</strong> parameter should have a value where the fork is just above the safety field and does not trigger the warning zones.</p>
+</li>
+<li>
+<p>If the AGV has some limited speed when the safety is disabled, <strong>disable_safety_limit_speed</strong> parameter can be set to make sure that the AGV doesn't drive too fast during the limited safety.</p>
+</li>
+</ul>
+<h3 id="disable-safety-supervisor-message"><a class="header" href="#disable-safety-supervisor-message">Disable safety supervisor message</a></h3>
+<p>This message is sent from Navitrol to supervisor on the supervisor status field. This section (ID 11) needs to be requested by the supervisor. See <em>Ethernet Communication specification between Navitrol and AGV supervisor_v4</em> document, how to request a message from Navitrol.</p>
+<p><strong>Disable safety section</strong></p>
+<table><thead><tr><th>Data field</th><th>Type</th><th>Length (bytes)</th><th>Comment</th></tr></thead><tbody>
+<tr><td>Section ID = 11</td><td>Unsigned Short</td><td>2</td><td></td></tr>
+<tr><td>Section length</td><td>Unsigned Integer</td><td>4</td><td>Length of the section <br>including all data fields of the section</td></tr>
+<tr><td>Disable safety</td><td>Byte</td><td>1</td><td>0 = Enable safety <br>1 = Disable safety</td></tr>
+</tbody></table>
+<h2 id="full-parameter-list"><a class="header" href="#full-parameter-list">Full parameter list</a></h2>
+<h3 id="target-detection-parameters"><a class="header" href="#target-detection-parameters">Target detection parameters</a></h3>
+<table><thead><tr><th>Type</th><th>Name</th><th>Min</th><th>Default</th><th>Max</th><th>Description</th></tr></thead><tbody>
+<tr><td>Int</td><td>target_detection_type_selection</td><td>0</td><td>3</td><td>3</td><td>Enables ref docking or pallet detection, 0 = disabled, 1 = refl docking, 2 = pallet detection, 3 = pallet detection ver 2 (allows buffer detection)</td></tr>
+<tr><td>Int</td><td>target_detection_scan_selection</td><td>0</td><td>3</td><td>3</td><td>Defines which scanners are used for target detection: 1 = rear scanner only, 2 = front scanner only, 3 = both scanners (supported only in refl docking and pallet detection ver 2)</td></tr>
+<tr><td>Int</td><td>target_max_n_times_missing</td><td></td><td>300</td><td></td><td>Defines when the last target is reset. If the target is not found for this amount, the target data is cleared. Recommended value is 300 or smaller on buffer lanes.</td></tr>
+</tbody></table>
+<h3 id="pallet-model-parameters"><a class="header" href="#pallet-model-parameters">Pallet model parameters</a></h3>
+<table><thead><tr><th>Type</th><th>Name</th><th>Min</th><th>Default</th><th>Max</th><th>Description</th></tr></thead><tbody>
+<tr><td>Int</td><td>pallet_model_enabled[0]</td><td></td><td>1</td><td></td><td>1 = pallet model enabled, 0 = disabled</td></tr>
+<tr><td>Float</td><td>pallet_model_width[0]</td><td></td><td>0.8</td><td></td><td>Used for determining width of the buffer to check if it is free or not</td></tr>
+</tbody></table>
+<h3 id="buffer-lane-parameters"><a class="header" href="#buffer-lane-parameters">Buffer lane parameters</a></h3>
+<table><thead><tr><th>Type</th><th>Name</th><th>Min</th><th>Default</th><th>Max</th><th>Description</th></tr></thead><tbody>
+<tr><td>Float</td><td>buffer_stop_dist_from_object_when_unloading</td><td></td><td>-2.0</td><td></td><td>Stopping distance (m) from the closest object, when unloading in a buffer. Calculated from navigation point to the scanner measurements seen on the buffer zone.</td></tr>
+<tr><td>Int</td><td>buffer_lanes_enabled</td><td>0</td><td>0</td><td>1</td><td>0 = disable buffer lane feature, 1 = enable.</td></tr>
+<tr><td>Int</td><td>load_buffer_mode</td><td>0</td><td>2</td><td>3</td><td>0 = none, 1 = detect any objects based on scanner measurements, 2 = detect a pallet, 3 = external sensor (Load Detected bit on Supervisor status or CAN)</td></tr>
+<tr><td>Int</td><td>unload_buffer_mode</td><td>0</td><td>1</td><td>1</td><td>0 = none, 1 = detect any objects based on scanner measurements</td></tr>
+<tr><td>Float</td><td>buffer_check_start_dist_offset_m</td><td>-5.0</td><td>2.0</td><td>5.0</td><td>Higher the value, earlier the machine starts checking, if the buffer is free for unloading</td></tr>
+<tr><td>Float</td><td>buffer_stop_dist_from_object_when_loading</td><td>-5.0</td><td>0.0</td><td>5.0</td><td>Stopping offset (m) for load buffer. Calculated from navigation point to the target. If load sensor is used, this is just offset for the load sensor.</td></tr>
+<tr><td>Float</td><td>buffer_max_dist_from_route_to_target</td><td>0.0</td><td>0.2</td><td>2.0</td><td>Maximum transverse distance where the target can be from the route. If target is further away than this parameter, AGV is stopped. Also used as docking start condition (if it is enabled)</td></tr>
+<tr><td>Int</td><td>buffer_stop_AGV_when_decreasing_fork_before_load</td><td>0</td><td>1</td><td>1</td><td>0 = Allow AGV drive while decreasing the fork, 1 = stop the AGV until the fork is decreased to the floor level. Used only if disable_safety_distance_on_buffer is used.</td></tr>
+<tr><td>Float</td><td>buffer_stop_distance_from_unwanted_object</td><td>-1.0</td><td>1.0</td><td>5.0</td><td>Distance to stop the AGV in front of object if using pallet detection. The distance is calculated from AGV frame. The AGV should continue driving when object is removed. Negative value stops the AGV immediately.</td></tr>
+<tr><td>Float</td><td>load_buffer_slow_down_distance</td><td>-1.0</td><td>-1.0</td><td>20.0</td><td>Distance to start slow down before target in m. Uses the disable_safety_limit_speed. Negative not used</td></tr>
+<tr><td>Float</td><td>unload_buffer_slow_down_distance</td><td>-1.0</td><td>-1.0</td><td>20.0</td><td>Distance to start slow down before target in m. Uses the disable_safety_limit_speed. Negative not used</td></tr>
+<tr><td>Int</td><td>unload_buffer_error_when_lane_full</td><td>0</td><td>0</td><td>1</td><td>Trigger fatal error if unload buffer lane is detected to be full when bringing a load.</td></tr>
+</tbody></table>
+<h3 id="disable-safety-parameters"><a class="header" href="#disable-safety-parameters">Disable safety parameters</a></h3>
+<table><thead><tr><th>Type</th><th>Name</th><th>Min</th><th>Default</th><th>Max</th><th>Description</th></tr></thead><tbody>
+<tr><td>Int</td><td>disable_safety</td><td>0</td><td>0</td><td>1</td><td>Disable safety message is send to supervisor. 0 = not used, 1 = used</td></tr>
+<tr><td>Int</td><td>actuator_disable_safety_max_value_mm</td><td>0</td><td>0</td><td>3000</td><td>Disable safety if actuator is lower than this value, 0 = not used</td></tr>
+<tr><td>Float</td><td>disable_safety_distance_on_buffer</td><td>-1.0</td><td>-1.0</td><td>20.0</td><td>Disable safety if driving closer than this distance to target in load or unload buffer, Negative or zero not used</td></tr>
+<tr><td>Float</td><td>disable_safety_limit_speed</td><td>0.0</td><td>0.2</td><td>1.0</td><td>Limit speed when safety is disabled, if disable_safety_distance_to_load_or_unload &gt; 0. If it is 0, speed is not limited.</td></tr>
+<tr><td>Float</td><td>docking_limit_leave_speed_and_actuator_height_dist</td><td>-2.0</td><td>-1.0</td><td>20.0</td><td>Distance from the unload location, where the speed and fork height is limited to the actuator_min_val. If negative, they are not limited. If enabled, had to be smaller than docking_mode_to_fleet_control_dist parameter.</td></tr>
+<tr><td>Float</td><td>docking_limit_leave_speed</td><td>0.0</td><td>0.2</td><td>1.0</td><td>Limit speed while driving out from unload location, if docking_limit_leave_speed_and_actuator_height_dist &gt; 0. If it is below 0, speed is not limited.</td></tr>
+<tr><td>Int</td><td>buffer_allow_drive_end_update_when_safety_is_disabled</td><td>0</td><td>0</td><td>1</td><td>If new drive order is received to the same destination when fork is set to floor level: 0 = keep the previous drive end, 1 = allows to update drive end point. Related to parameter <strong>disable_safety_distance_on_buffer</strong>. If AGV has pallet detection scanner that can be used when fork is at floor level, set this to 1, otherwise 0</td></tr>
+</tbody></table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../LoadHandling/Racking/Racking-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../LoadHandling/StackLoading/StackLoading-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../LoadHandling/Racking/Racking-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../LoadHandling/StackLoading/StackLoading-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Distance to target estimation - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html" class="active"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="distance-to-target"><a class="header" href="#distance-to-target">Distance to target</a></h1>
+<p>Updated 26.01.2024</p>
+<hr />
+<h2 id="glossary"><a class="header" href="#glossary">Glossary</a></h2>
+<table><thead><tr><th>Term</th><th>Description</th></tr></thead><tbody>
+<tr><td>Navitrol</td><td>Navigation software for an individual vehicle.</td></tr>
+<tr><td>NavitrolMonitor</td><td>Monitoring software for the Navitrol positioning software running on the individual vehicle.</td></tr>
+<tr><td>Navigation point</td><td>Centre point of the vehicle's coordinate system which is used as a reference for all other dimensions.</td></tr>
+<tr><td>Fork point</td><td>Centre point of the fork which is used for distance calculation.<br>Look section 2.2 to see how the fork point is defined.</td></tr>
+<tr><td>Unload pallet point</td><td>Predicted position of the pallet after unload<br>Look section 5.2 to see how the unload point is defined</td></tr>
+</tbody></table>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p><strong>Distance to target</strong> is a Navitrol feature unlockable by parameters.
+Distance to target contains two following features:</p>
+<ol>
+<li>Distance from AGV to the pallet.</li>
+</ol>
+<p>When AGV is docking to a pallet, Navitrol calculates the perpendicular distance between the fork point and the closest corner of the pallet.
+The calculation is performed only when the pallet is not turned too much in respect to the AGV.</p>
+<ol start="2">
+<li>Distance from AGV to unload point.</li>
+</ol>
+<p>When AGV is going to unload the pallet, Navitrol calculates the perpendicular distance between the fork point and predicted unload point. The calculation is performed only when the AGV is not turned too much and not too far away from the unload point.</p>
+<h3 id="requirements"><a class="header" href="#requirements">Requirements</a></h3>
+<p>To use this feature AGV should be the forklift type. Additionally, the pallet model should be specified in parameters and the pallet detection feature should be enabled in parameters. Please, see the pallet detection feature instructions for additional description.</p>
+<h3 id="sequence-of-operation"><a class="header" href="#sequence-of-operation">Sequence of operation</a></h3>
+<p>Distance from AGV to the pallet:</p>
+<ul>
+<li>
+<p>AGV is approaching the load symbolic point without any resource on board.</p>
+</li>
+<li>
+<p>AGV detects the pallet (using pallet detection feature).</p>
+</li>
+<li>
+<p>AGV checks if the pallet is not turned too much i.e. AGV is almost perpendicular to the pallet.</p>
+</li>
+<li>
+<p>Calculation activates. Navitrol calculates the perpendicular distance between the fork point and the closest corner of the pallet.</p>
+</li>
+<li>
+<p>Navitrol starts sending data to the CAN and to the NavitrolMonitor.</p>
+</li>
+<li>
+<p>Calculation ends when AGV is loaded or AGV cannot find the pallet for 1.5 seconds.</p>
+</li>
+</ul>
+<p>Distance from AGV to unload point:</p>
+<ul>
+<li>
+<p>AGV is approaching the unload point with a resource on board.</p>
+</li>
+<li>
+<p>AGV checks if it is not turned too much from the unload point (i.e. it is really going to unload the resource).</p>
+</li>
+<li>
+<p>Navitrol checks if AGV is close enough to the unload point to start the calculation.</p>
+</li>
+<li>
+<p>Navitrol calculates the perpendicular distance between the fork point and predicted unload point (taking into account the offset between the fork and the pallet).</p>
+</li>
+<li>
+<p>Navitrol starts sending to the CAN and to the NavitrolMonitor.</p>
+</li>
+<li>
+<p>Calculation ends when AGV is unloaded.</p>
+</li>
+</ul>
+<h2 id="setting-up"><a class="header" href="#setting-up">Setting up</a></h2>
+<p>Required software:</p>
+<ul>
+<li>
+<p>Official release version 6.30.00 or later</p>
+</li>
+<li>
+<p>Navithor Tools 3.03.05 or later</p>
+</li>
+</ul>
+<h3 id="navithor-tools"><a class="header" href="#navithor-tools">Navithor Tools</a></h3>
+<p>Pallet detection needs to be enabled on each symbolic point, where distance to pallet feature is used. It can be done in the following way:</p>
+<ul>
+<li>
+<p>Create an environment and a route</p>
+</li>
+<li>
+<p>Create a symbolic point and change it to load type</p>
+</li>
+<li>
+<p>Enable pallet detection</p>
+</li>
+</ul>
+<p><img src="./media-en/image3.png" alt="" /></p>
+<ul>
+<li>
+<p>Limit the resources of the current symbolic point (if needed).</p>
+</li>
+<li>
+<p>Create a symbolic point and change it to unload type.</p>
+</li>
+<li>
+<p>Upload the project to Navitrol and to the Database.</p>
+</li>
+</ul>
+<h3 id="notes-of-navitrol-parameters"><a class="header" href="#notes-of-navitrol-parameters">Notes of Navitrol parameters</a></h3>
+<ul>
+<li>
+<p>First, enable the calculation. Parameter <strong>dist_to_target_enabled</strong> should be set to <strong>1</strong> in order to perform the calculation.</p>
+</li>
+<li>
+<p>The calculation is not performed when the pallet is turned too much.
+Parameter <strong>dist_to_target_angle_tolerance_deg</strong> should be set to the maximum allowed angle.</p>
+</li>
+<li>
+<p>The distance is calculated from the fork point. The fork point should be defined in parameters. There are two parameters:
+<strong>fork_pos_x</strong> and <strong>fork_pos_y</strong> that describes fork position with respect to the AGV navigation point shown in Figure 1.</p>
+</li>
+</ul>
+<p><em>Note:</em> Parameters can be either positive or negative. Sign is explained in Paragraph 5.2.</p>
+<ul>
+<li>The distance calculation to the unload point should be started only when AGV is close enough to the unload point. The maximum distance when calculation should start is defined by the parameter <strong>dist_to_target_max_calc_dist</strong>.</li>
+</ul>
+<h3 id="using-the-feature-in-navitrolmonitor"><a class="header" href="#using-the-feature-in-navitrolmonitor">Using the feature in NavitrolMonitor</a></h3>
+<p>After connecting to the AGV in NavitrolMonitor, the feature can be enabled as it is shown in Figure 2.
+<img src="./media-en/image4.png" alt="" /></p>
+<blockquote>
+<p>Figure 2. Distance To Target in NavitrolMonitor</p>
+</blockquote>
+<p>When AGV is approaching the target, the results of distance calculation are shown by the line drawn from the fork point to the target position as shown in the picture below.
+<img src="./media-en/image5.png" alt="" />
+<img src="./media-en/image6.png" alt="" /></p>
+<blockquote>
+<p>Figure 3. Examples of distance calculation from AGV to the pallet</p>
+</blockquote>
+<p>Additionally to the graphic representation, in the left top corner of NavitrolMonitor distance is shown in text format:
+<img src="./media-en/image7.png" alt="" /></p>
+<blockquote>
+<p>Figure 4. Distance displaying</p>
+</blockquote>
+<h2 id="list-of-navitrol-parameters"><a class="header" href="#list-of-navitrol-parameters">List of Navitrol Parameters</a></h2>
+<table><thead><tr><th>Type</th><th>Name</th><th>Min</th><th>Default</th><th>Max</th><th>Information</th></tr></thead><tbody>
+<tr><td>Int</td><td>dist_to_target_enabled</td><td>0</td><td>0</td><td>1</td><td>Distance calculation from AGV to target.<br>Calculates distance from AGV to pallet when AGV is docking, and distance from AGV to unload point when AGV is driving to unload point with a pallet</td></tr>
+<tr><td>Float</td><td>dist_to_target_angle_tolerance_deg</td><td>0.0</td><td>30.00</td><td>45.00</td><td>Allowed rotation angle of the pallet with respect to the AGV when distance calculation is enabled</td></tr>
+<tr><td>Float</td><td>fork_pos_x</td><td>-</td><td>0.0</td><td>-</td><td>Fork coordinate X with respect to the AGV navigation point.</td></tr>
+<tr><td>Float</td><td>fork_pos_y</td><td>-</td><td>0.0</td><td>-</td><td>Fork coordinate Y with respect to the AGV navigation point.</td></tr>
+<tr><td>Float</td><td>dist_to_target_max_calc_dist</td><td>0.0</td><td>4.0</td><td>15.0</td><td>Maximum distance from agv to unloading point when calculation starts</td></tr>
+</tbody></table>
+<h2 id="example-set-of-navitrol-parameters"><a class="header" href="#example-set-of-navitrol-parameters">Example set of Navitrol parameters</a></h2>
+<h2 id="illustration-of-operation"><a class="header" href="#illustration-of-operation">Illustration of operation</a></h2>
+<h3 id="distance-from-agv-to-pallet"><a class="header" href="#distance-from-agv-to-pallet">Distance from AGV to pallet</a></h3>
+<p>Navitrol performs perpendicular distance calculation between the <strong>fork point</strong> and <strong>closest pallet corner.</strong></p>
+<p><img src="./media-en/figure5.png" alt="" /></p>
+<blockquote>
+<p>Figure 5: Illustration to distance to pallet feature</p>
+</blockquote>
+<p><strong>Note!</strong> The calculation is performed only when the pallet is close to the perpendicular to AGV. The maximum allowed angle between AGV and pallet is defined by the parameter
+<strong>dist_to_target_angle_tolerance_deg</strong> and cannot exceed 45.0 degrees. The parameter is defined as follows:</p>
+<p><img src="./media-en/figure6.png" alt="" /></p>
+<blockquote>
+<p>Figure 6: Angle calculation</p>
+</blockquote>
+<p><strong>The fork point</strong> position is continuously calculated in relation to the AGV position, i.e. navigation point position. Parameters <strong>fork_pos_y</strong> and <strong>fork_pos_x</strong> should be correctly measured and set to Navitrol parameter file in order to have an accurate fork point position.</p>
+<p><strong>The closest pallet corner</strong> position is calculated in relation to the AGV position and the pallet position, which is received from the pallet detection feature.</p>
+<p><strong>Note!</strong> The calculation is performed only when the pallet has been recognized, and it is dependent on the pallet detection feature.</p>
+<h3 id="distance-from-agv-to-unload-point"><a class="header" href="#distance-from-agv-to-unload-point">Distance from AGV to unload point</a></h3>
+<p>Navitrol performs calculation of the perpendicular distance between the <strong>fork point</strong> and the <strong>unload pallet point</strong>.</p>
+<p><img src="./media-en/figure7.png" alt="" /></p>
+<blockquote>
+<p>Figure 7: Illustration of distance to unload point feature</p>
+</blockquote>
+<p><strong>The fork point</strong> position is continuously calculated in relation to the AGV position, i.e. navigation point position. Parameters <strong>fork_pos_y</strong> and <strong>fork_pos_x</strong> should be correctly measured and set to Navitrol in order to have an accurate fork point position.</p>
+<p><strong>The unload pallet point</strong> is the predicted position of the end of the pallet after unloading. When calculating the unload pallet point Navitrol takes into account:</p>
+<ul>
+<li>
+<p><em>Position of unload symbolic point</em> (Which was set in NavithorTools)</p>
+</li>
+<li>
+<p><em>Length of the pallet</em>. During docking, when the pallet is recognized, the pallet length is stored in memory. This pallet length cannot be measured by scanners and it is taken from the parameters. Thus, for the correct operation of the feature, pallet dimensions should be correctly defined in parameters.</p>
+</li>
+<li>
+<p>Correction for <em>fork position</em> (for the cases where fork point differs from navigation point)</p>
+</li>
+<li>
+<p>Correction for an <em>offset between pallet and fork</em>. This offset happens when there is some gap between the pallet and fork as it is shown in Figure 8. This gap is measured by Navitrol during docking.</p>
+</li>
+</ul>
+<p><img src="./media-en/figure8.png" alt="" /></p>
+<blockquote>
+<p>Figure 8: Offset between fork and pallet</p>
+</blockquote>
+<p>The following example is provided in order to illustrate how the unload pallet point is defined by Navitrol. In this example:</p>
+<ul>
+<li>
+<p>Fork parameters:</p>
+<ul>
+<li>fork_pos_ x -0.20
+(negative sign signals that fork is closer to the back of the AGV then navigation point) as shown in the illustration.</li>
+</ul>
+</li>
+</ul>
+<p><img src="./media-en/figure9.png" alt="" /></p>
+<blockquote>
+<p>Figure 9: Sign of fork parameters</p>
+</blockquote>
+<ul>
+<li>
+<p>fork_pos_ y 0.00</p>
+</li>
+<li>
+<p>Pallet parameters:</p>
+<ul>
+<li>pallet_model_length_x[0] 0.45</li>
+</ul>
+</li>
+<li>
+<p>Offset between the pallet and the fork: 0.10 (measured during docking)</p>
+</li>
+</ul>
+<p>The unload pallet point is calculated as it is shown on the figure:
+<img src="./media-en/figure10.png" alt="" /></p>
+<blockquote>
+<p>Figure 10: Illustration of unload pallet point calculation</p>
+</blockquote>
+<h2 id="can-message-description"><a class="header" href="#can-message-description">CAN message description</a></h2>
+<p>The results of distance calculation are sent through CAN interface.
+Information about the CAN customer specific message is shown in the table below.</p>
+<p>Table 1. CAN message description</p>
+<p><strong>CAN Message 0x60B: Navitrol -&gt; PLC: 20ms.<br>Information for Proximity Based Safety - 20 ms cycle</strong></p>
+<table><thead><tr><th>Name</th><th>Byte</th><th>Bit</th><th>Type</th><th>Calibration</th><th>Description</th></tr></thead><tbody>
+<tr><td>Distance To Target</td><td>0</td><td>-</td><td>Real</td><td>-</td><td>Distance to target in meters</td></tr>
+<tr><td>Distance To Target</td><td>1</td><td>-</td><td>Real</td><td>-</td><td>Distance to target in meters</td></tr>
+<tr><td>Distance To Target</td><td>2</td><td>-</td><td>Real</td><td>-</td><td>Distance to target in meters</td></tr>
+<tr><td>Distance To Target</td><td>3</td><td>-</td><td>Real</td><td>-</td><td>Distance to target in meters</td></tr>
+<tr><td>-</td><td>4</td><td>0</td><td>-</td><td>-</td><td></td></tr>
+<tr><td>-</td><td>4</td><td>1</td><td>-</td><td>-</td><td></td></tr>
+<tr><td>-</td><td>4</td><td>2</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>Pick Active</td><td>4</td><td>3</td><td>Bit</td><td>-</td><td>1 for when Pick is active</td></tr>
+<tr><td>Place Active</td><td>4</td><td>4</td><td>Bit</td><td>-</td><td>1 for when Place is active</td></tr>
+<tr><td>-</td><td>4</td><td>5</td><td>-</td><td>-</td><td></td></tr>
+<tr><td>Calculation activated</td><td>4</td><td>6</td><td>Bit</td><td>-</td><td>1 for when the calculation is activated</td></tr>
+<tr><td>Toggle Bit</td><td>4</td><td>7</td><td>Bit</td><td>-</td><td>Toggle for every message sent</td></tr>
+</tbody></table>
+<h2 id="advice-for-user"><a class="header" href="#advice-for-user">Advice for user</a></h2>
+<ul>
+<li>
+<p>Pallet dimensions cannot be measured by Navitrol, but those data are used in distance calculation. So, it is recommended to set the pallet parameters as accurately as possible.</p>
+</li>
+<li>
+<p>Distance calculation highly depends on pallet detection. For best results pallet detection should be properly tuned.</p>
+</li>
+<li>
+<p>In the calculations, it is assumed that AGV stops on the symbolic point. In case if AGV constantly does not stop on the symbolic point, please, contact the Navitec support team. Support team will help you to tune the parameters.</p>
+</li>
+<li>
+<p>In some situations (e.g. in case of wheel slipping) it may occur that AGV is crossing the unload point i.e. distance to the unload point calculated according to the above-mentioned methods is less than the minimum distance. In such unpredictable cases, Navitrol will send (through the CAN and to the NavitrolMonitor) minimal possible distance. Minimal possible distance is the sum of <em>offset between pallet and fork</em> + <em>pallet length</em>.</p>
+</li>
+<li>
+<p>In cases when AGV drives over the symbolic point too much (more, than it is defined in parameter <strong>pc_max_dist_err</strong>), Navitrol detects some unpredicted behavior of the AGV (which can be caused by brake failure, for instance). In such cases, the distance calculation is impossible to perform, so the calculation is deactivated and the minimum distance will be sent to the CAN interface.</p>
+</li>
+<li>
+<p>If you feel that the calculation is not working or working incorrectly, please, set the parameter <strong>log_pallet_detection</strong> to value <strong>1</strong> and take logs from the NavitrolMonitor. Please, sent those logs to the Navitec support team for further instructions.</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../LoadHandling/BlockStacking/BlockStacking-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../LoadHandling/BlockStacking/BlockStacking-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

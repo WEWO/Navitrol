@@ -1,0 +1,480 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>EtherCAT Communication - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../../favicon.svg">
+                        <link rel="shortcut icon" href="../../../favicon.png">
+                <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+                <link rel="stylesheet" href="../../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html" class="active"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="ethercat-communication"><a class="header" href="#ethercat-communication">EtherCAT Communication</a></h1>
+<p>Updated 15.03.2024</p>
+<hr />
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
+<p>EtherCAT is one of the control interfaces supported by Navitrol. It can be used for controlling different devices e.g. motor controllers, encoders, etc.</p>
+<p>EtherCAT is a high-performance, low-cost, easy to use Industrial Ethernet communication technology with flexible topology.
+It is used for real-time master-slave communication between controllers and field devices.</p>
+<p>For the AGV system an IPC with Navitrol is the master of the bus and all the field devices (motor controllers, encoders e.g.) are slaves.</p>
+<h3 id="requirements"><a class="header" href="#requirements">Requirements</a></h3>
+<ul>
+<li>Not all the EtherCAT devices are supported by Navitrol. <a href="../../SupportedDevices/SupportedDevices-en.html">Supported devices</a> list should be consulted to check if some specific device is supported.</li>
+<li>At least one of the Ethernet port of the IPC should be reserved for EtherCAT communication</li>
+<li>EtherCAT interface is supported by the Navitrol starting from version 6.40.00</li>
+</ul>
+<h3 id="limitations"><a class="header" href="#limitations">Limitations</a></h3>
+<ul>
+<li>At the moment, it is not possible to use CAN and EtherCAT together.</li>
+<li>The feature is available only for position control systems.</li>
+</ul>
+<h2 id="operational-principles"><a class="header" href="#operational-principles">Operational principles</a></h2>
+<h3 id="ethercat-bus-topology"><a class="header" href="#ethercat-bus-topology">EtherCAT bus topology</a></h3>
+<p>A Typical EtherCAT device has two or more communication ports.
+This allows to combine devices on a bus into different topologies.</p>
+<p>EtherCAT provides great flexibility in terms of topologies. At least, these are supported:</p>
+<ul>
+<li>Line</li>
+<li>Tree</li>
+<li>Star</li>
+<li>Drop line</li>
+<li>Ring</li>
+</ul>
+<p>Also, a combination of different topologies (e.g. line + drop line) is supported, as it shown on the figure bellow.</p>
+<p><img src="./media-en/Topologies.png" alt="" /></p>
+<blockquote>
+<p>Available topologies in EtherCAT.</p>
+</blockquote>
+<p>From the reliability point of view it is recommended to use a ring topology since it allows cable redundancy.
+For instance, if some cable between two slaves is broken or cut, communication with all the devices would be still possible.
+Note that in such a case, two Ethernet ports of the master device will be used.</p>
+<p><img src="./media-en/Redundancy.png" alt="" /></p>
+<blockquote>
+<p>Cable redundancy in EtherCAT.</p>
+</blockquote>
+<h3 id="cable-selection"><a class="header" href="#cable-selection">Cable selection</a></h3>
+<p>EtherCAT supports standard cables used for Ethernet connections.
+The following cable types are supported:</p>
+<ul>
+<li>100 BASE-TX (copper cable up to 100 m between 2 nodes). In practice, it is typically a standard patch-cord.</li>
+<li>100 BASE-FX (fiber optics).</li>
+</ul>
+<p>Typically, EtherCAT devices are having RJ45 8p8c connector. However, some of the devices can have some alternative connectors (e.g. M12 or some proprietary connector. This should be noted when ordering cables for the EtherCAT bus.</p>
+<h3 id="connection-to-the-ipc"><a class="header" href="#connection-to-the-ipc">Connection to the IPC</a></h3>
+<p>Standard IPC for Navitrol has two Ethernet ports (RJ45, 8p8c). Both of them can be used for EtherCAT communication.</p>
+<p>Note that it is not recommended to connect  EtherCAT bus through the switch (to bridge master and bus segment). It can cause issues and extra delays not only with EtherCAT communication, but also with Ethernet communication through this port.
+Therefore, it is recommended to connect EtherCAT devices directly to the IPC Ethernet port.</p>
+<h3 id="addressing"><a class="header" href="#addressing">Addressing</a></h3>
+<p>In EtherCAT network, master automatically assign addresses. Therefore, there is no need for manual address configuration.</p>
+<p>Navitrol (inside IPC) assign addresses the following rules:</p>
+<ul>
+<li>Slave address starts from 1.</li>
+<li>Slave address of a field device is done by <em>physical position</em> in the network</li>
+<li>Slave address is auto-incremented.</li>
+</ul>
+<p><strong>Note: all slaves on the bus should have unique slave addresses.</strong></p>
+<p>In practice, it means that all EtherCAT slaves are addressed starting from master using the auto-increment procedure in ongoing direction. So the closest device on the bus to master will have address 1, the next device will have address 2 and so on.</p>
+<p><img src="./media-en/Simple_addressing_example.png" alt="" /></p>
+<blockquote>
+<p>Simple addressing example.</p>
+</blockquote>
+<h4 id="advanced-addressing"><a class="header" href="#advanced-addressing">Advanced addressing</a></h4>
+<p>Addressing should be straight-forward in case if devices have only two Ethernet ports.
+In some cases, it might be hard to define ongoing direction where address will be auto-incremented. For instance, if several different topologies are mixed together.</p>
+<p>In such a case, it can be done in two ways:</p>
+<ol>
+<li>
+<p>Theoretical way.</p>
+<p>Every EtherCAT devices have up to 4 communication ports. Data in every device is processed in the following way: it is received from the previous device to the input port (port 0). After that, data for the device itself is inserted and the address is incremented. Then, if exists, data goes to the port 3 and all the devices connected to port 3 will be addresses. The same happens after that with the port 1 if exists. Finally, data goes to the output port and devices connected to it will be addressed.</p>
+<p><img src="./media-en/Advanced_addressing_example.png" alt="" /></p>
+<blockquote>
+<p>Advanced addressing example.</p>
+</blockquote>
+</li>
+<li>
+<p>Practical way</p>
+<p>This option will show position and the device type in the bus. The only limitation is that it will not distinguish two devices of the same type between each other.</p>
+<p>2.1 Power the devices and set up basic EtherCAT communication parameters.</p>
+<p>2.2 Connect EtherCAT bus to Navitrol and start Navitrol</p>
+<p>2.3 Wait for 20 seconds and take log</p>
+<p>2.4 Open the log and search &quot;slave(s) found on the bus&quot;.</p>
+<p>It will list all the device types on the bus and print addresses.</p>
+</li>
+</ol>
+<h2 id="set-up"><a class="header" href="#set-up">Set up</a></h2>
+<p>The following steps should be done in process of commissioning:</p>
+<ol>
+<li>
+<p>Physical connection</p>
+</li>
+<li>
+<p>Setting up the device</p>
+</li>
+<li>
+<p>Changing parameters</p>
+</li>
+</ol>
+<h3 id="physical-connection"><a class="header" href="#physical-connection">Physical connection</a></h3>
+<p>Wiring is the first step in establishing the EtherCAT bus. All devices are connected together with a standard Ethernet cables.
+Wiring is recommended to start from the IPC. Slave devices should be connected directly to those ports.</p>
+<p>Additionally, make sure that devices on the bus are powered prior to the operation and wired according to the manufacturer's instructions.</p>
+<h3 id="setting-up-the-device"><a class="header" href="#setting-up-the-device">Setting up the device</a></h3>
+<p>Some devices might require additional settings before start operating with Navitrol. For instance, motor controllers typically require some additional setting, such as PID controller tuning. For setting up such devices, refer to the device-specific document.</p>
+<p>However, some of the devices are configured automatically by Navitrol when connected.</p>
+<h3 id="basic-setup-of-navitrol"><a class="header" href="#basic-setup-of-navitrol">Basic setup of Navitrol</a></h3>
+<p>Parameter set depends on the project. Therefore, in this document, only generic parameters for establishing the communication will be described.</p>
+<p>Depending on the topology, <strong>ethercat_mode</strong> parameter should be set.
+In case of ring topology when both ports of the IPC are utilized, master redundant mode should be selected. Additionally, <strong>ethercat_inte_redundant</strong> interface should be set in addition to <strong>ethercat_inte_primary</strong>.
+In other topologies (when only one port of the IPC is used), master single mode should be selected. Additionally, <strong>ethercat_inte_primary</strong> should be set.</p>
+<p>The other parameters (e.g. slave addresses) can be found in the device-specific documents. For instance, kinematic type related parameters (specifying slave addresses of motor controllers) can be found in motor controller specific document (e.g. for <a href="../../MotorControllers/Synapticon/SynapticonMotorController-en.html">Synapticon motor controller</a>).</p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Information</th></tr></thead><tbody>
+<tr><td>ethercat_enabled</td><td>Int</td><td>0</td><td>Enables EtherCAT communication</td></tr>
+<tr><td>ethercat_mode</td><td>Int</td><td>0</td><td>EtherCAT mode, 0 - Master single, 1 - Master redundant</td></tr>
+<tr><td>ethercat_inte_primary</td><td>String</td><td></td><td>Name of primary Ethernet interface used for EtherCAT communication</td></tr>
+<tr><td>ethercat_inte_redundant</td><td>String</td><td></td><td>Name of redundant Ethernet interface used for EtherCAT communication</td></tr>
+</tbody></table>
+<pre><code># Example parameters for ring topology
+
+I,ethercat_enabled,                1 #
+I,ethercat_mode,                   1 #
+S,ethercat_inte_primary,        eth0 #
+S,ethercat_inte_redundant,      eth1 #
+
+</code></pre>
+<pre><code># Example parameters for other topologies
+
+I,ethercat_enabled,                1 #
+I,ethercat_mode,                   0 #
+S,ethercat_inte_primary,        eth0 #
+</code></pre>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<p>Navitrol itself can detect most of the issues, such as:</p>
+<ul>
+<li>some EtherCAT related configuration issues (e.g. parameter issue)</li>
+<li>some device missing from the bus</li>
+<li>a device is located on the wrong place on the bus.</li>
+</ul>
+<p>It is advised in all the cases to check not only active errors, but also terminal. Typically, some important additional information is printed to the terminal in case of error.</p>
+<h3 id="most-common-mistakes"><a class="header" href="#most-common-mistakes">Most common mistakes</a></h3>
+<h4 id="ethercat-start-up-fails"><a class="header" href="#ethercat-start-up-fails">EtherCAT start up fails</a></h4>
+<p>Typically, it can be explained by one of the following reasons:</p>
+<ul>
+<li>Device is defined in parameter file but not connected to the bus</li>
+<li>Device address defined in parameters is not correct. If some wrong device type is located in a position specified in the parameter file, it will also prevent EtherCAT from starting up</li>
+<li>Device address is duplicated in the parameters.</li>
+</ul>
+<p>In all the above-mentioned cases, it is recommended to open Linux terminal and check Navitrol prints from there. Bellow, there are the instructions on how to detect the problem and recover from it.</p>
+<h5 id="device-not-connected-to-the-bus"><a class="header" href="#device-not-connected-to-the-bus">Device not connected to the bus</a></h5>
+<p><em>Active errors</em>: ERROR_ETHERCAT_NO_COMMS, ERROR_ETHERCAT_HIGH_DT and ERROR_ETHERCAT_DEVICE_NOT_FOUND</p>
+<p><em>Terminal error logging example</em>:</p>
+<pre><code>EC: 1 Ethercat slave(s) not found. Registered slaves 2, devices on the bus 1. Not enough devices on the bus
+EC: Slave 2 name SOMANET registered but not found on the bus
+</code></pre>
+<p><em>How to recover</em>: Check if missing device is powered and connected to the bus</p>
+<h5 id="incorrect-device-address"><a class="header" href="#incorrect-device-address">Incorrect device address</a></h5>
+<p><em>Active errors</em>: ERROR_ETHERCAT_NO_COMMS, ERROR_ETHERCAT_HIGH_DT and ERROR_ETHERCAT_DEVICE_NOT_FOUND</p>
+<p><em>Terminal error logging example</em>:</p>
+<pre><code>EC: 1 Ethercat slave(s) not found. Registered slaves 2, devices on the bus 2.
+EC: Slave 3 name SOMANET registered but not found on the bus
+</code></pre>
+<p><em>How to recover</em>: Check parameters related to the EtherCAT address for mentioned device. Calculate its position on the bus (see &quot;Addressing&quot; chapter) and correct the parameter or position.</p>
+<h4 id="wrong-device-at-some-address"><a class="header" href="#wrong-device-at-some-address">Wrong device at some address</a></h4>
+<p><em>Active errors</em>: ERROR_ETHERCAT_NO_COMMS, ERROR_ETHERCAT_HIGH_DT and ERROR_ETHERCAT_DEVICE_NOT_FOUND</p>
+<p><em>Terminal error logging example</em>:</p>
+<pre><code>EC: CheckSlaves - slave 1 name mismatch, on the bus EK1100, registered SOMANET
+EC: 1 Ethercat slave(s) not found. Registered slaves 2, devices on the bus 10.
+EC: Slave 1 name SOMANET registered but not found on the bus
+</code></pre>
+<p><em>How to recover</em>:  Check parameters related to the EtherCAT address for mentioned devices. Calculate it's position on the bus  (see &quot;Addressing&quot; chapter) and correct the parameter or position.</p>
+<h4 id="slave-address-duplication"><a class="header" href="#slave-address-duplication">Slave address duplication</a></h4>
+<p><em>Active errors</em>: ERROR_ETHERCAT_NO_COMMS, ERROR_ETHERCAT_HIGH_DT and ERROR_ETHERCAT_CONFIG</p>
+<p><em>Terminal error logging example</em>:</p>
+<pre><code>EC: Ethercat_RegisterSlaveInfo - attempt to double register slave address 1. Check parameters
+</code></pre>
+<p><em>How to recover</em>: Check parameters related to the EtherCAT address. Several devices have the same address on the bus. Correct parameters.</p>
+<h3 id="errors-and-warnings"><a class="header" href="#errors-and-warnings">Errors and warnings</a></h3>
+<p>Navitrol communication related errors are listed below, with additional troubleshooting information.</p>
+<p>Note that ERROR_ETHERCAT_HIGH_DT and ERROR_ETHERCAT_NO_COMMS might be a cause of ERROR_ETHERCAT_CONFIG or ERROR_ETHERCAT_DEVICE_NOT_FOUND.</p>
+<h4 id="840-error_ethercat_no_comms"><a class="header" href="#840-error_ethercat_no_comms">840 ERROR_ETHERCAT_NO_COMMS</a></h4>
+<p>Description: Navitrol has no connection to at least one EtherCAT slave (or no valid data has been received) for 100 ms.</p>
+<p>Error level: Error</p>
+<p>Error reason: Navitrol has not been able to initialize/configure EtherCAT properly, or slaves at run time are not working as expected.</p>
+<p>How to recover:</p>
+<ul>
+<li>
+<p>Check that EtherCAT parameters (ethercat_mode, ethercat_inte_primary, ethercat_inte_redundant) are defined correctly in params.txt</p>
+</li>
+<li>
+<p>Check that EtherCAT bus is physically connected to defined interface(s)</p>
+</li>
+<li>
+<p>Check that all EtherCAT hardware and slaves are properly connected and powered</p>
+</li>
+</ul>
+<h4 id="843-error_ethercat_config"><a class="header" href="#843-error_ethercat_config">843 ERROR_ETHERCAT_CONFIG</a></h4>
+<p>Description: Error during Ethercat slave configuration.</p>
+<p>Error level: Error</p>
+<p>Error reason: Ethercat slave configuration failed. Ethercat HW and slaves might not be properly connected or powered.</p>
+<p>How to recover: Check the log for more details. Contact Navitec support.</p>
+<h4 id="844-error_ethercat_high_dt"><a class="header" href="#844-error_ethercat_high_dt">844 ERROR_ETHERCAT_HIGH_DT</a></h4>
+<p>Description: Update interval from vehicle interface to EtherCAT is too high (over <strong>control_interval_us</strong> * <strong>control_interval_error_ratio</strong>)</p>
+<p>Error level: Error</p>
+<p>Error reason: Vehicle interface is not responding to EtherCAT. In most cases, this error is caused by some other Ethercat error or issue with initialization of AGV. Might be caused by CPU overload of the IPC.</p>
+<p>How to recover: Check the log or terminal for more details. Contact Navitec support.</p>
+<h4 id="847-error_ethercat_device_not_found"><a class="header" href="#847-error_ethercat_device_not_found">847 ERROR_ETHERCAT_DEVICE_NOT_FOUND</a></h4>
+<p>Description: At least one EtherCAT slave device is not found on the bus</p>
+<p>Error level: Error</p>
+<p>Error reason: Some of the devices expected by Navitrol are missing from the bus.</p>
+<p>How to recover: Check the log or terminal for more details. Check that all devices are powered and connected to the bus. Check Navitrol parameters. Contact Navitec support.</p>
+<h3 id="advanced-troubleshooting"><a class="header" href="#advanced-troubleshooting">Advanced troubleshooting</a></h3>
+<p>Navitrol always logs some amount of events related to EtherCAT communication and EtherCAT related issues. Additional information logging might be enabled by the parameters mentioned below. These settings increase the amount of logged data and should not be used without a reason. Increased logging level might be needed only in cases when some issues with communication are present.</p>
+<p><strong>EtherCAT advanced parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Information</th></tr></thead><tbody>
+<tr><td>log_ethercat</td><td>Int</td><td>0</td><td>Log EtherCAT communication details, 0 - min level ... 3 - max amount of details</td></tr>
+</tbody></table>
+<p>All the EtherCAT related logging can be found by searching &quot;EC:&quot; in the Navitrol text log.</p>
+<p><strong>The sequence for establishing communication with the EtherCAT devices is described below:</strong></p>
+<ol>
+<li>Registration of the devices
+Navitrol reads parameter file and checks machine type to determine EtherCAT devices expected to be on the bus (device name, address, configurations etc.).</li>
+</ol>
+<p><em>Logging example</em>:</p>
+<pre><code>EC: Ethercat_RegisterSlave - slave 2 successfully registered, nbrODO 33, parseFuncExist 1, buildFuncExist 1
+EC: Ethercat_RegisterSlave - slave 1 successfully registered, nbrODO 33, parseFuncExist 1, buildFuncExist 1
+EC: Object registration finished
+</code></pre>
+<ol start="2">
+<li>Initialization of the interface (opening socket)</li>
+</ol>
+<p>Navitrol reads basic EtherCAT parameters and initializes the communication on specified interfaces.</p>
+<p><em>Logging example</em>:</p>
+<pre><code>EC: ec_init on eth0 eth1 succeeded
+</code></pre>
+<ol start="3">
+<li>Slave checks:</li>
+</ol>
+<p>Navitrol reads information from the bus and checks if bus configuration matches to the list of registered devices.</p>
+<p>At least, the following checks are performed:</p>
+<ul>
+<li>What number of devices is on the bus?</li>
+<li>Is the number of registered devices corresponds to the number of devices on the bus?</li>
+<li>Is registered device types are on correct positions?</li>
+</ul>
+<p><em>Note that Navitrol is able to perform checks only for device types. It cannot distinguish two devices of the same type switched together on the bus. For instance, from the bus configuration, it cannot indicate that left and right motor controllers in diff drives are swapped together. It is only possible to detect that devices of the same type swapped together during the further steps in commissioning of the AGV (e.g. by test-driving)</em></p>
+<p><em>Logging example</em>:</p>
+<pre><code>EC: 2 slave(s) found on the bus
+EC: On the bus - slave 1, name SOMANET, Vendor:product 22d2h:201h
+EC: On the bus - slave 2, name SOMANET, Vendor:product 22d2h:201h
+EC: Registered - slave 1, name SOMANET
+EC: Registered - slave 2, name SOMANET
+EC: CheckSlaves - slave 1 found, name SOMANET
+EC: CheckSlaves - slave 2 found, name SOMANET
+EC: All registered Ethercat slaves found successfully
+</code></pre>
+<ol start="4">
+<li>Configuring slave devices</li>
+</ol>
+<p>Navitrol configures found devices (if needed) by sending SDOs to them.</p>
+<p><em>Logging example</em>:</p>
+<pre><code>EC: PRE_OP state reached for all slaves.
+EC: SDO wr OK. Slave 2 idx 0x1016, subIdx 0x1, size 4, data 8C 00 00 00, dataOk 1, wkc 1
+.....
+EC: Slave configuration success
+</code></pre>
+<ol start="5">
+<li>Putting devices to operational state</li>
+</ol>
+<p>Navitrol switches all the devices to the operational state prior to communication</p>
+<p><em>Logging example</em>:</p>
+<pre><code>EC: Request operational state for all slaves
+OPERATIONAL state reached for all slaves
+</code></pre>
+<ol start="6">
+<li>Start communication</li>
+</ol>
+<p>After successful start-up, Navitrol starts communication. Short after that, ERROR_ETHERCAT_NO_COMMS and ERROR_ETHERCAT_HIGH_DT should be reset.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

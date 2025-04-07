@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>GPS Positioning - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html" class="active"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="gps-positioning"><a class="header" href="#gps-positioning">GPS Positioning</a></h1>
+<p>Updated 11.06.2024</p>
+<hr />
+<h2 id="introduction-and-prerequisites"><a class="header" href="#introduction-and-prerequisites">Introduction and Prerequisites</a></h2>
+<p>In outdoor environments where there is no environment for reliable positioning with laser scanners, Navitrol can localize by using GPS signals instead. GPS units are able to provide a cm-accuracy position and a sub-degree accuracy heading if RTK fix is provided by a nearby base station.</p>
+<p>The following requirements must be fulfilled to use GPS localization with Navitrol.</p>
+<h3 id="hardware-requirements"><a class="header" href="#hardware-requirements">Hardware Requirements</a></h3>
+<p>Navitrol requires the following hardware for GPS positioning:</p>
+<ul>
+<li>Septentrio AsteRx SB ProDirect as GPS receiver or suitable replacement.</li>
+</ul>
+<p><strong>Note:</strong> It is required to have both main and auxiliary antennas.</p>
+<ul>
+<li>
+<p>Septentrio AsteRx SB ProConnect as the base station. Details can be found in supplier webpage:
+<a href="https://www.septentrio.com/en/products/gps/gnss-rugged-boxes">link</a></p>
+</li>
+<li>
+<p>An external IMU supported by Navitrol. Please refer to &quot;Navitrol-IMU Support&quot; document for details.</p>
+</li>
+</ul>
+<h3 id="physical-requirements"><a class="header" href="#physical-requirements">Physical Requirements</a></h3>
+<p>To get an accurate heading from GPS receivers, the main and auxiliary antennas need to be as far away from each other as possible.
+Furthermore, they need to be installed to the vehicle such that the line between them is either parallel or perpendicular to the driving direction of the vehicle. See Section 2 for a graphical representation.</p>
+<p>For this reason, it is required to have sufficient space on the AGV to mount the antennas. Recommended distance is 1 meter, and the minimum distance is 70 cm. Please note that heading estimation performance will be worse as the distance gets shorter.</p>
+<h3 id="software-requirements"><a class="header" href="#software-requirements">Software Requirements</a></h3>
+<p>GPS positioning is built on the sensor fusion algorithm. Therefore, sensor fusion should be enabled and running for it to work. Please refer to following two documents for instructions:</p>
+<ul>
+<li>
+<p>Navitrol - Sensor Fusion</p>
+</li>
+<li>
+<p>Navitrol - IMU Support</p>
+</li>
+</ul>
+<p>Furthermore, for environment generation when using GPS positioning, NavithorTools version 4.07.00 or higher needs to be used.</p>
+<h2 id="configuring-the-gps-receiver"><a class="header" href="#configuring-the-gps-receiver">Configuring the GPS Receiver</a></h2>
+<p>Follow the instructions in this section to configure the GPS receiver.
+Most of the section contains references directly to Septentrio material.</p>
+<p><strong>Step 1:</strong> Define static IP addresses for both the base station and rover unit. Instructions are available here:
+<a href="https://customersupport.septentrio.com/s/article/How-to-configure-a-static-IP-address-on-my-receiver">link</a></p>
+<p>Note down the address of the receiver, as it is needed in Navitrol parameters later.</p>
+<p><strong>Step 2:</strong> Define the RTK correction stream from base station to rover. Instructions are available here:
+<a href="https://youtu.be/UVUVXpA8rB4">link</a></p>
+<p><strong>Step 3:</strong> Define an NMEA output stream from the rover.
+The stream should contain RBP and HRP messages and have 50 milliseconds sending interval. Instructions are available here (video title is mosaic receiver, but configuration is the same): <a href="https://youtu.be/ArtePkC58-o">youtu.be/ArtePkC58-o</a></p>
+<p>Note down the port number of the stream, which will be needed in Navitrol parameters later on.</p>
+<p><strong>Step 4:</strong> After installing the two antennas on the AGV, define the heading offset according to antenna position. To do this, go to GNSS -&gt; Attitude -&gt; Heading offset in the web interface.</p>
+<p>In the Figure below, graphical examples can be found. In all figures, the top side is the front of the AGV.</p>
+<p><img src="./media-en/image3.png" alt="" /></p>
+<h2 id="configuring-the-navitrol-parameters"><a class="header" href="#configuring-the-navitrol-parameters">Configuring the Navitrol Parameters</a></h2>
+<p>Navitrol parameters related to GPS navigation are presented in this section, with recommended values.</p>
+<h3 id="agv-specific-gps-parameters"><a class="header" href="#agv-specific-gps-parameters">AGV Specific GPS Parameters</a></h3>
+<p>These parameters will have different values according to configuration.
+Therefore, they should be set separately for each AGV.</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>S,gps_receiver_ip, 192.168.0.0</td><td>IP address of the gps receiver</td></tr>
+<tr><td>I,gps_receiver_port, 0</td><td>Ethernet port number of the NMEA stream</td></tr>
+</tbody></table>
+<p>Set the above two parameters according to IP address and port number defined in Section 2.</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>F,gps_main_antenna_offset_x, 0.000</td><td>X position of main antenna in the vehicle frame</td></tr>
+<tr><td>F,gps_main_antenna_offset_y, 0.000</td><td>Y position of main antenna in the vehicle frame</td></tr>
+<tr><td>F,gps_main_antenna_offset_z, 0.000</td><td>Z position of main antenna in the vehicle frame</td></tr>
+</tbody></table>
+<p>For the offset parameters above, x and y axes are defined in the vehicle frame. For example, please see the figure below:</p>
+<p><img src="./media-en/image4.PNG" alt="" /></p>
+<p>In such a configuration, the y offset parameter would be positive, and x offset parameter would be negative. The offset in z direction is equal to the vertical distance between the antenna and the vehicle axis.</p>
+<h3 id="generic-gps-parameters"><a class="header" href="#generic-gps-parameters">Generic GPS Parameters</a></h3>
+<p>These parameters should be configured only once. Ideally, same set of parameters will work in all situations, but they might be tuned for better performance.</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>I, gps_receiver_type, 1</td><td>GPS receiver to be used in localization:<br>0 - Disable GPS based localization<br>1 - Septentrio AsteRxProDirect.</td></tr>
+<tr><td>I, gps_teach_enabled, 1</td><td>Use the GPS data for teach files:<br>0 - No<br>1 - Yes.</td></tr>
+<tr><td>I, gps_teach_interval_ms, 5000</td><td>Save GPS poses with this interval when teaching.</td></tr>
+<tr><td>I, gps_initialize_posion, 1</td><td>Enable position initialization from GPS:<br>0 - No<br>1- Yes.</td></tr>
+<tr><td>I, gps_disable_laser_corr, 1</td><td>Disable laser updates in sensor fusion when gps fix is available:<br>0 - Apply laser corrections<br>1 - Prevent laser corrections.</td></tr>
+<tr><td>I, gps_disabled_area_mode, 0</td><td>How GPS behaves in the GPS disabled areas:<br>0 - Completely disable GPS<br>1 - Use GPS position but not heading.</td></tr>
+<tr><td>I, sf_gps_limit_corr, 1</td><td>Filter the maximum gps correction in each cycle:<br>0 - Don't limit<br>1 - Limit.</td></tr>
+<tr><td>F sf_gps_h_max_corr_deg, 0.3</td><td>Maximum heading correction per cycle by gps in degrees.<br>Recommended to have same value as loc_h_max_corr_deg.<br>Only used if sf_gps_limit_corr is 1.</td></tr>
+<tr><td>F, sf_gps_xy_max_corr, 0.01</td><td>Maximum xy correction per cycle by gps in meters.<br>Recommended to have same value as loc_xy_max_corr.<br>Only used if sf_gps_limit_corr is 1</td></tr>
+</tbody></table>
+<p><strong>Note:</strong> If the gps_teach_enabled parameter is set to 1 as above, the AGV will initialize the position when the following conditions are all set:</p>
+<ul>
+<li>
+<p>Position is not already initialized.</p>
+</li>
+<li>
+<p>Position is not being actively requested to initialize, such as setting the position from Navitrol Monitor.</p>
+</li>
+<li>
+<p>RTK fix is available from the GPS receiver.</p>
+</li>
+</ul>
+<p>It is recommended to set this parameter to 1, so that position initialization is possible outside of the laser navigation area as well.</p>
+<h3 id="other-navitrol-parameters"><a class="header" href="#other-navitrol-parameters">Other Navitrol Parameters</a></h3>
+<p>Parameters in this group are not directly related to GPS and in many cases already exist in your parameters file. They should be verified to have the correct settings before GPS navigation is used.</p>
+<ul>
+<li>
+<p>All parameters related to sensor fusion and IMU. Please see the relevant documents for more details.</p>
+</li>
+<li>
+<p>I, teach_file_format, 5 # Format of the saved teach files. GPS navigation only works with format 5 and higher.</p>
+</li>
+</ul>
+<h2 id="using-gps-positioning"><a class="header" href="#using-gps-positioning">Using GPS Positioning</a></h2>
+<p>Once the parameters are correctly set, using GPS positioning is very similar to laser scanner-based navigation with Navitrol. The AGV will localize with GPS signals whenever an RTK fix is available, and automatically switch to scanner, IMU and odometry based localization when it is not. Follow the steps below to localize with the GPS positioning.</p>
+<h3 id="teaching-the-environment"><a class="header" href="#teaching-the-environment">Teaching the Environment</a></h3>
+<p>Teaching with GPS works the same as teaching with laser scanners. Start Navitrol, ensure that WARNING_NO_GPS_FIX warning is not set, and teach the environment as usual.</p>
+<h3 id="matching-environment-to-gps-coordinates"><a class="header" href="#matching-environment-to-gps-coordinates">Matching Environment to GPS coordinates</a></h3>
+<p>The GPS coordinates will be automatically included in the teach file.
+Import the teach file to NavithorTools as usual. In the matching phase, recorded GPS points should be matched to the laser scanner points, such that they give the same position and heading output when the AGV is at the same location. Detailed instructions can be found in the &quot;Navithor Tools User Instructions&quot; document's &quot;Correct Global Coordinates&quot; chapter. For most of the cases, clicking the &quot;Correct Global Coordinates&quot; button is enough to do the matching. The matching can be verified by checking that the base station is approximately at the origin of the resulting map, and the top side of the map corresponds to North.</p>
+<h3 id="environment-and-route-generation"><a class="header" href="#environment-and-route-generation">Environment and Route Generation</a></h3>
+<p>Generating routes and environment points with GPS navigation has no difference from usual.</p>
+<h3 id="defining-gps-disabled-zones"><a class="header" href="#defining-gps-disabled-zones">Defining GPS Disabled Zones</a></h3>
+<p>If desired, it is possible to define zones in Navithor Tools where GPS is disabled. In such zones, GPS signals will not be used even if high quality RTK fix is available. This is mostly beneficial for cases where there is a stable environment around the AGV such that laser scanner can provide a reliable navigation, such as for docking. Please refer to
+Navithor Tools User Instructions for defining them.</p>
+<h3 id="localization-in-the-environment"><a class="header" href="#localization-in-the-environment">Localization in the Environment</a></h3>
+<p>Once the environment is uploaded to Navitrol, the following data will be utilized for localization.</p>
+<p><strong>AGV within GPS Disabled Zone:</strong></p>
+<ul>
+<li>
+<p>GPS data will always be ignored by default. It is possible to change this behavior so that the position from gps will still be utilized but the heading will be ignored by changing &quot;gps_disabled_area_mode&quot; parameter to 1.</p>
+</li>
+<li>
+<p>If laser scanner is matching an environment, it will be used to position the AGV.</p>
+</li>
+<li>
+<p>If there is no stable environment, localization will be performed by fusion of IMU and odometry for some distance (defined by sf_conf_max_dist parameter) before AGV stops.</p>
+</li>
+</ul>
+<p><strong>AGV outside of GPS Disabled Zone:</strong></p>
+<ul>
+<li>
+<p>If GPS data is available with RTK fix, it will be used for localization.</p>
+</li>
+<li>
+<p>Positioning from the laser scanner will be ignored when GPS with RTK fix is available.</p>
+</li>
+<li>
+<p>If GPS with RTK fix is not available, but the laser scanner is matching an environment, it will be used to position the AGV.</p>
+</li>
+<li>
+<p>If there is neither GPS signal nor stable environment available, localization will be performed by fusion of IMU and odometry for some distance (defined by sf_conf_max_dist parameter) before AGV stops.</p>
+</li>
+</ul>
+<h2 id="errors-and-troubleshooting"><a class="header" href="#errors-and-troubleshooting">Errors and Troubleshooting</a></h2>
+<p>Navitrol has two possible errors that are raised when using GPS positioning, to indicate there are unexpected problems. This section explains possible causes and instructions to fix them.</p>
+<p><strong>ERROR_GPS_NO_CONNECTION</strong></p>
+<p>This error is raised when there is no connection between Navitrol and GPS receiver. Possible causes include:</p>
+<ul>
+<li>
+<p>IP address or port number of the GPS receiver does not match the one in parameters.</p>
+</li>
+<li>
+<p>Ethernet cable between Navitrol IPC and receiver is not properly connected.</p>
+</li>
+</ul>
+<p><strong>WARNING_NO_GPS_FIX</strong></p>
+<p>This warning is raised when there is no RTK fix received by the GPS receiver. Possible causes are below:</p>
+<ul>
+<li>
+<p>RTK fix is not available in the receiver side. Make sure the web interface of the receiver indicates the positioning mode is &quot;RTK fixed&quot;. If it is anything else (RTK Float, differential, standalone), this indicates the problem is not related to Navitrol, but RTK fix is not available in the first place. Here are possible fixes:</p>
+<ul>
+<li>
+<p>First, please check that &quot;corrections&quot; icon is indicating the corrections are correctly being sent from base station and received by the receiver. This video shows it in more detail <a href="https://youtu.be/UVUVXpA8rB4">youtu.be/UVUVXpA8rB4</a>. If the corrections are not available, try moving the AGV into a more open position and make sure the signal quality indicated on the front page are high.</p>
+</li>
+<li>
+<p>If the GPS signal quality indicator is high, corrections are being received, there is no interference, but the mode is still not RTK fixed, one solution is to wait for a while. The very first time may take up to 15 minutes until RTK fixes become available (only once, not on subsequent startups).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If RTK fix is available on the receiver side but Navitrol is still raising this warning, these are the possible causes:</p>
+<ul>
+<li>
+<p>Main antenna has high quality signals but the auxiliary antenna does not, so only position corrections are received but not heading ones. This can be verified by checking that both antennas have high signal quality from the main page of the receiver web interface.</p>
+</li>
+<li>
+<p>NMEA stream is not properly defined, so Navitrol is not receiving the stream. Check the stream includes both RBP and HRP messages. Also, make sure that no other stream is defined using the same port number. In addition, make sure that the stream is visible when Navitrol is running on the front page of the web interface, in the &quot;Data Streams&quot; section.</p>
+</li>
+<li>
+<p>Sometimes a power cycle is needed to restore the stream. So try restarting the receiver and Navitrol if the above does not work.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>If you encounter an issue not listed here or the above solutions did not solve your problem, please take a log and contact Navitec Systems.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../Localization/RampZones/RampZones-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../Localization/RampZones/RampZones-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

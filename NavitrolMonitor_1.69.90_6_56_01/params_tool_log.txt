@@ -1,0 +1,24 @@
+[04/04/2025 07:08:13] (Error)                                       : Could not get the location of the executing assembly, returning empty instead.   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.InternalGetDirectoryName(String path)
+   at ParamsTool.Common.GetCurrentDirectoryName()
+[04/04/2025 07:08:13] (Info) ParamsTool.ParameterToolForm           : Program started
+[04/04/2025 07:08:13] (Info) ParamsTool.VersionControl              : Building DLL version list...
+[04/04/2025 07:08:13] (Error)                                       : Could not get the location of the executing assembly, returning empty instead.   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.InternalGetDirectoryName(String path)
+   at ParamsTool.Common.GetCurrentDirectoryName()
+[04/04/2025 07:08:13] (Info) ParamsTool.VersionControl              : Trying to add DLL version from: .\navigation-software64.dll.
+[04/04/2025 07:08:13] (Info) ParamsTool.VersionControl              : Added missing library entry key to DLL 6_56_1
+[04/04/2025 07:08:13] (Info) ParamsTool.VersionControl              : DLL version 6_56_1 added successfully.
+[04/04/2025 07:08:13] (Info) ParamsTool.ParameterToolForm           : DLLs found: 1
+[04/04/2025 07:08:13] (Info) ParamsTool.ParameterToolForm           : Found DLL 1: 6_56_1
+[04/04/2025 07:08:13] (Info) ParamsTool.DLL                         : Reloading DLL from: C:\Navitec\NavitrolMonitor_1.69.90_6_56_01\navigation-software64.dll
+[04/04/2025 07:08:13] (Info) ParamsTool.DLL                         : DLL: 65601 Reloaded successfully from: C:\Navitec\NavitrolMonitor_1.69.90_6_56_01\navigation-software64.dll
+[04/04/2025 07:08:13] (Info) ParamsTool.ParameterToolForm           : Single DLL found. Version:6_56_1
+[04/04/2025 07:08:13] (Info) ParamsTool.ParameterToolForm           : Building version library...
+[04/04/2025 07:08:13] (Error)                                       : Could not get the location of the executing assembly, returning empty instead.   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.InternalGetDirectoryName(String path)
+   at ParamsTool.Common.GetCurrentDirectoryName()
+[04/04/2025 07:08:13] (Info) ParamsTool.ParameterToolForm           : Initializing data viewer...
+[04/04/2025 07:08:13] (Info) ParamsTool.ParameterToolForm           : Initializing filters...
+[04/04/2025 07:08:13] (Info) ParamsTool.ParameterToolForm           : Boot completed
+[04/04/2025 07:08:13] (Info) ParamsTool.ParameterToolForm           : DLL in use: 6_56_1

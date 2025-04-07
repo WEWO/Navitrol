@@ -1,0 +1,568 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Docking - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html" class="active"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="docking"><a class="header" href="#docking">Docking</a></h1>
+<p>Updated 25.06.2024</p>
+<hr />
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>Docking allows for deviating from the nominal route to align the AGV to the target by creating a new route. If docking is not enabled, then the AGV will only drive on the route until it reaches the Symbolic point. </p>
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
+<p>Docking can be for example used with a forklift AGV to align the fork tips with the pockets of a EUR-pallet for more precise pick-up, allowing the position and heading of the pallet to deviate from the symbolic point. </p>
+<h3 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h3>
+<p>The source for the docking pose can be any of the following.</p>
+<ul>
+<li>Target detection:
+<ul>
+<li>Pallet detection</li>
+<li>Pattern detection</li>
+<li>3D load detection</li>
+<li>Table detection</li>
+<li>External target detection</li>
+</ul>
+</li>
+</ul>
+<h2 id="setup"><a class="header" href="#setup">Setup</a></h2>
+<h3 id="quick-start"><a class="header" href="#quick-start">Quick start</a></h3>
+<p><strong>Required parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>docking_to_target_enabled</td><td>Int</td><td>0</td><td>1 = Enables docking to target. 2 = docking with custom route. If target_detection_type_selection = 0, won't do anything.</td></tr>
+<tr><td>docking_stop_distance</td><td>Float</td><td>0.5</td><td>Defines how close to the target vehicle tries to drive (calculated from navigation point to target).</td></tr>
+<tr><td>docking_approach_dist</td><td>Float</td><td>1.25</td><td>After this distance vehicle stops, if the approach error is too big.</td></tr>
+</tbody></table>
+<h3 id="fine-tuning"><a class="header" href="#fine-tuning">Fine-tuning</a></h3>
+<p><strong>Optional parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>docking_max_start_distance</td><td>Float</td><td>3.5</td><td>Beyond maximum distance docking won't be triggered.</td></tr>
+<tr><td>docking_max_start_angle</td><td>Float</td><td>15.0</td><td>Maximum angle difference from navigation point to the target compared to tarjectory's end point's heading, when starting to dock [+-degrees fov].</td></tr>
+<tr><td>docking_max_start_heading</td><td>Float</td><td>5.0</td><td>Maximum angle diff for vehicle heading and trajectory's end point heading, when starting to dock [+-degrees fov].</td></tr>
+<tr><td>docking_max_dist_error_from_end_point</td><td>Float</td><td>0.5</td><td>Maximum distance difference for the stopping point compared to the symbolic point.</td></tr>
+<tr><td>docking_max_target_angle</td><td>Float</td><td>15.0</td><td>Maximum difference between target and end point's headings.</td></tr>
+<tr><td>docking_y_offset</td><td>Float</td><td>0.0</td><td>Offset in y-coordinate for docking (in machine coordinates).</td></tr>
+<tr><td>docking_approach_max_dist_err</td><td>Float</td><td>0.1</td><td>If distance error is bigger than this in approach area, vehicle stops.</td></tr>
+<tr><td>docking_approach_max_h_err_deg</td><td>Float</td><td>5.0</td><td>If heading error is bigger than this [deg] in approach area, vehicle stops.</td></tr>
+<tr><td>docking_allow_maneuver</td><td>Int</td><td>0</td><td>If errors are too high on approach, 0 = stop the machine, 1 = try to maneuver back and forward.</td></tr>
+<tr><td>docking_small_gains_dist</td><td>Float</td><td>0.5</td><td>The distance before stopping where curvature is limited with docking_limit_curv_on_approach.</td></tr>
+<tr><td>docking_limit_corr_dist</td><td>Float</td><td>0.5</td><td>The distance before stopping which is driven only with odometry. Location correction disabled or limited with docking_max_xy_corr and docking_max_h_corr.</td></tr>
+<tr><td>docking_small_gains</td><td>Int</td><td>1</td><td>Enables curvature limit that uses docking_limit_curv_on_approach and docking_limit_curv_on_approach_dist.</td></tr>
+<tr><td>docking_max_xy_corr</td><td>Float</td><td>0.0001</td><td>Maximum XY-corrections while approaching target.</td></tr>
+<tr><td>docking_max_h_corr</td><td>Float</td><td>0.003</td><td>Maximum heading corrections [deg] while approaching target.</td></tr>
+<tr><td>docking_limit_curv_on_approach</td><td>Float</td><td>0.1</td><td>Fraction to limit the calculated curvature. For example, 0.1 means that the curvature is 10% from the calculated value.</td></tr>
+<tr><td>docking_limit_curv_on_leave</td><td>Float</td><td>0.05</td><td>Fraction to limit the calculated curvature. For example, 0.05 means that the curvature is 5% from the calculated value. Used only when docking_leave_unload_loc_straight is set to 1.</td></tr>
+<tr><td>docking_limit_drive_vector_angle_change_on_leave</td><td>Float</td><td>0.01</td><td>Fraction to limit the drive vector angle change when leaving a docking situation. For example, 0.05 means that the drive vector change is 5% from the calculated value. Used only when docking_leave_unload_loc_straight is set to 1.</td></tr>
+<tr><td>docking_dist_gain</td><td>Float</td><td>1.0</td><td>Factor for the position control distance gain when docking. 0 = use pc_pid_dist_p.</td></tr>
+<tr><td>docking_heading_gain</td><td>Float</td><td>1.0</td><td>Factor for the position control heading gain when docking. 0 = use pc_pid_heading_p.</td></tr>
+<tr><td>docking_ref_v_source</td><td>Int</td><td>0</td><td>Speed source when doing docking: 0 = calculated from distance to target, 1 = using route velocity value, 2 = use fixed parameter docking_speed.</td></tr>
+<tr><td>docking_speed</td><td>Float</td><td>0.3</td><td>Speed while docking, if docking_ref_v_source == 2. If it is 0, this is minimum starting speed for the docking drive.</td></tr>
+<tr><td>docking_limit_leave_speed</td><td>Float</td><td>0.2</td><td>Limit speed while driving out from docking location, if docking_limit_leave_speed_and_actuator_height_dist &gt; 0. If it is below 0, speed is not limited.</td></tr>
+<tr><td>docking_limit_leave_speed_and_actuator_height_dist</td><td>Float</td><td>-1.0</td><td>Distance from the unload location, where the speed is limited to docking_limit_leave_speed and fork height kept at the measured value. If negative, they are not limited. If enabled, must be smaller than docking_mode_to_fleet_control_dist parameter.</td></tr>
+<tr><td>docking_leave_unload_loc_straight</td><td>Int</td><td>0</td><td>Enables limit curvature when leaving unload or docking location.</td></tr>
+<tr><td>docking_leave_unload_loc_straight_dist</td><td>Float</td><td>1.0</td><td>Limit curvature until this distance from load or unload.</td></tr>
+<tr><td>docking_mode_to_fleet_control_dist</td><td>Float</td><td>2.5</td><td>Keep the reported docking mode for fleet control active for this distance after leaving the docking location. The distance is measured from the navigation point position at the end of previous docking to its current position.</td></tr>
+<tr><td>docking_notify_approach_dist</td><td>Float</td><td>0.5</td><td>Distance from docking target when a notification is sent to the AGV control.</td></tr>
+<tr><td>docking_stopping_point_offset_mode</td><td>Int</td><td>0</td><td>0 = Use general stopping offsets, 1 = offsets are defined individually for each pallet model with parameters.</td></tr>
+<tr><td>docking_follow_route_properties</td><td>Int</td><td>1</td><td>Use defined properties on the route while creating custom route for docking.</td></tr>
+<tr><td>docking_refpoint_max_err</td><td>Float</td><td>-0.5</td><td>Maximum error [m] for the docking point after started docking. Indicate pushing pallet. If negative, not used.</td></tr>
+<tr><td>docking_actuator_height_control_mode</td><td>Int</td><td>0</td><td>Defines how lift / fork actuator is controlled in relation to the detected target height during docking. 0 = Disabled, 1 = Direct control. Detected target height is given directly as actuator height reference. 2 = Relative control. Actuator is controlled so that detected height matches value defined by docking_actuator_target_height.</td></tr>
+<tr><td>docking_actuator_target_height</td><td>Float</td><td>0.0</td><td>Defines the desired target height [m] during docking. Actuator is controlled so that height of the detected target matches this value. Only used when docking_actuator_height_control_mode is set to 2.</td></tr>
+<tr><td>docking_actuator_height_strict_dist</td><td>Float</td><td>0.0</td><td>Defines a distance [m] from the docking target point within which actuator height must be on the reference or the drive is stopped.</td></tr>
+<tr><td>docking_actuator_height_start_dist</td><td>Float</td><td>20.0</td><td>Defines a distance [m] from the docking target point within which the actuator height control is allowed.</td></tr>
+<tr><td>docking_control_point_1_dist_from_machine</td><td>Float</td><td>0.2</td><td>Minimum required distance for the node straight to the AGV heading. The start node is calculated automatically, but if it is closer to the AGV than this parameter, an error is set. Used to avoid driving too sharp curves.</td></tr>
+<tr><td>docking_control_point_2_dist_from_target</td><td>Float</td><td>0.8</td><td>Distance for the node to create straight route before target.</td></tr>
+<tr><td>docking_allow_custom_route_update</td><td>Int</td><td>0</td><td>0 = custom route is locked after it is created, 1 = custom route is updated if the target changes.</td></tr>
+<tr><td>docking_custom_route_min_xy_diff</td><td>Float</td><td>0.02</td><td>Minimum distance difference [m] between the old pallet and the new to update the last part of the custom route. If set to positive, custom route is updated. Also uses target_detection_max_diff_in_xy_results to check that the difference is not too large.</td></tr>
+<tr><td>docking_custom_route_min_angle_diff</td><td>Float</td><td>2.0</td><td>Minimum angle difference [deg] between the old pallet and the new to update the last part of the custom route. If set to positive, custom route is updated. Also uses target_detection_max_diff_in_angle_results to check that the difference is not too large.</td></tr>
+<tr><td>docking_custom_route_max_allowed_xy_diff_for_target</td><td>Float</td><td>0.2</td><td>Maximum limit [m] for the custom route update related to the initial target. The custom route is not updated if the new target is further away than this parameter from the initial target (target location when the custom route is created for the first time).</td></tr>
+<tr><td>docking_use_route_heading</td><td>int</td><td>0</td><td>Defines how the docking end heading is selected. 0 = Detected heading of the target is used requiring more space for manouvering. 1 = Route heading is used allowing a heading offset to the target. Only used when docking_to_target_enabled = 1.<br/>Designed to be used in narrow corridors with large AGV:s.<br/>When the route heading is used the nominal route from the docking start point forwards must be exactly straight.<br/>Note: Replaces detected target heading with current trajectory point heading.<br/>Supported only when docking_to_target_enabled = 1.</td></tr>
+<tr><td>docking_approach_warning_to_error_timeout_s</td><td>int</td><td>-1</td><td>Defines a time [s] after which the WARNING_TARGET_APPROACH_ERROR activates ERROR_DOCKING_FAILED. <br/>-1 = Never. <br/>It is recommended to set this to suitable value so that failed docking attempt becomes clearly visible as an error.</td></tr>
+<tr><td>docking_with_only_distance_control_enabled</td><td>int</td><td>0</td><td>Enables docking to target with only distance control. docking_to_target_enabled must be 1 for this parameter to have effect.</td></tr>
+</tbody></table>
+<p>The docking is started when:</p>
+<ul>
+<li>
+<p>AGV is within the <strong>docking_max_start_distance</strong> to Symbolic point the target is found</p>
+</li>
+<li>
+<p>Pallet heading is inside <strong>docking_max_start_angle</strong> (related to symbolic point)</p>
+</li>
+<li>
+<p>AGV heading is inside <strong>docking_max_start_heading</strong> (related to symbolic point)</p>
+</li>
+<li>
+<p>AGV is driving to same direction as the trajectory end.</p>
+</li>
+<li>
+<p>Target is within <strong>docking_max_dist_error_from_end_point</strong> distance from symbolic point</p>
+</li>
+<li>
+<p>There are no pivot points or direction changes on the active path between AGV and the target symbolic point</p>
+</li>
+</ul>
+<p>These start condition parameters are explained with pictures down below.</p>
+<p>The docking target points is calculated from the middle point from the front line. It can be changed with these parameters:</p>
+<p>F,docking_stop_distance, 0.50 # Defines how close to the target vehicle tries to drive (calculated from navigation point to target)</p>
+<p>F,docking_y_offset, 0.0 # Offset in y-coordinate for docking (in machine coordinates)</p>
+<p>NOTE! The y-offset is not needed in normal use if the scanner is calibrated correctly. It is useful for example for AGV that has to always drive to the side. For example, if the pallet is weighted or the forks are on the side of the AGV.</p>
+<p><img src="./media-en/image17.png" alt="" /></p>
+<blockquote>
+<p>Offsets. The small red circle is the middle of the target. The docking_stop_distance and docking_y_offset is calculated from that location to get the target where the AGV will drive (blue dot). The coordinate shows what direction the offsets are calculated related to the small red circle.</p>
+</blockquote>
+<p>If both parameters are zero, the target will be on the middle of the front line (the small red circle on the picture above). This red circle is not normally drawn on Monitor, but used here only for explanation.
+The offsets are calculated always related to the navigation point and its coordinates. The positive x is forward to the forward driving direction and positive y is left-hand side (see the coordinates on the picture). On this picture, the AGV is driving backwards, that's why the offsets are calculated on this direction.</p>
+<p>These two parameters are general for all models. If there is a need to define different offsets for certain model, they can be set with these model-based parameters. These model-based parameters are used instead if parameter <strong>docking_stopping_point_offset_mode</strong> is set to 1.</p>
+<p>F,pallet_model_y_offset[0], 0.0 # Offset in y-coordinate for docking (in machine coordinates)</p>
+<p>F,pallet_model_stop_distance[0], 0.0 # Defines how close to the target vehicle tries to drive (calculated from navigation point to target)</p>
+<p><img src="./media-en/image18.png" alt="" /></p>
+<blockquote>
+<p>Docking_max_start_distance is calculated as linear distance.</p>
+</blockquote>
+<p><img src="./media-en/image19.png" alt="" /></p>
+<blockquote>
+<p>Angle difference between symbolic point heading and angle from a line calculated from navigation point to the symbolic point has to be within limit of docking_max_start_angle.</p>
+</blockquote>
+<p><img src="./media-en/image20.png" alt="" /></p>
+<blockquote>
+<p>Angle difference between symbolic point's and AGV's headings has to be withing limits of docking_max_start_heading.</p>
+</blockquote>
+<p><img src="./media-en/image21.png" alt="" /></p>
+<blockquote>
+<p>Angle difference between target angle and symbolic point's heading has to be within limits of docking_max_target_angle.</p>
+</blockquote>
+<p><img src="./media-en/image22.png" alt="" /></p>
+<blockquote>
+<p>Distance error between symbolic point and the calculated stopping point has to be inside limit of docking_max_dist_error_from_end_point.</p>
+</blockquote>
+<h3 id="recommended-docking-mode-for-kinematic-type"><a class="header" href="#recommended-docking-mode-for-kinematic-type">Recommended docking mode for kinematic type</a></h3>
+<p>With non-omnidirectional AGVs, such as <strong>steer and diff</strong> drives, <strong>custom route</strong> docking should be preferred.</p>
+<ul>
+<li>
+<p>If the error to the path is large when the docking starts, the position controller might start oscillating, which would decrease docking accuracy.</p>
+</li>
+<li>
+<p>Custom routes are smoother to drive.</p>
+</li>
+</ul>
+<p>With <strong>omni drive</strong> <strong>both modes work well</strong>, so it is a preference question</p>
+<ul>
+<li>
+<p>Driving the straight path allows correcting the position faster and position can be still corrected while driving.</p>
+</li>
+<li>
+<p>Custom route is smoother but requires more space.</p>
+</li>
+</ul>
+<h3 id="normal-docking"><a class="header" href="#normal-docking">Normal docking</a></h3>
+<p>Normal docking (<strong>docking_to_target_enabled</strong> = 1) updates the reference point (green point on the pictures below) to the straight line from the target and to AGV navigation point. Recommended to be used with omni.</p>
+<p>The target is locked when the AGV is at the distance of <strong>pallet_det_2_min_dist_from_nav_point_to_traj_end</strong> from the end point. After that distance, the reference point is not updated.</p>
+<h4 id="normal-docking-with-steer-or-diff"><a class="header" href="#normal-docking-with-steer-or-diff">Normal docking with steer or diff</a></h4>
+<p>One downside with normal docking with steer or differential is that the position correction is done based on heading and distance gains (<strong>pc_pid_dist_p</strong> and <strong>pc_pid_heading</strong> or <strong>docking_dist_gain</strong> and <strong>docking_heading_gain</strong>). This might cause issues, because these kinematic types can't follow large changes on reference point very fast.</p>
+<p><img src="./media-en/image23.png" alt="" /></p>
+<blockquote>
+<p>The green reference point is created to straight line from the target. The blue point is the target.</p>
+</blockquote>
+<p><img src="./media-en/image24.png" alt="" /></p>
+<blockquote>
+<p>The AGV starts to control itself to the reference point based on pid heading and distance gains. With steer type AGV, the heading correction cannot be done very fast.</p>
+</blockquote>
+<p><img src="./media-en/image25.png" alt="" /></p>
+<blockquote>
+<p>There might be some error at the end with steer type AGV, because it requires much space to get the heading correct.</p>
+</blockquote>
+<h4 id="normal-docking-with-mechanum-or-omni"><a class="header" href="#normal-docking-with-mechanum-or-omni">Normal docking with mechanum or omni</a></h4>
+<p>With omni or mechanum kinematic types, the normal docking is recommended, because these types allow the AGV to correct its position quickly to the reference point. The next four Figures shows one example where the mechanum is driven under table. Then the next four Figures shows more extreme example drive with mechanum. This is quite extreme case, but the idea is just to show the difference related to the steer type AGV and how fast the position can be corrected. This kind of situation would even not be possible in every location, because the angle difference is so high and it makes the AGV to drive quite far from the route.</p>
+<p><img src="./media-en/image26.png" alt="" /></p>
+<blockquote>
+<p>Normal example with mechanum.</p>
+</blockquote>
+<p><img src="./media-en/image27.png" alt="" /></p>
+<blockquote>
+<p>Now the AGV has driven close to the reference point.</p>
+</blockquote>
+<p><img src="./media-en/image28.png" alt="" /></p>
+<blockquote>
+<p>AGV will drive closer to the pallet.</p>
+</blockquote>
+<p><img src="./media-en/image29.png" alt="" /></p>
+<blockquote>
+<p>AGV arrives at target.</p>
+</blockquote>
+<p><img src="./media-en/image30.png" alt="" /></p>
+<blockquote>
+<p>This is extreme example with mechanum AGV. This shows where the reference point can go if the pallet angle is not ideal.</p>
+</blockquote>
+<p><img src="./media-en/image31.png" alt="" /></p>
+<blockquote>
+<p>The mechanum and omni AGVs can start driving immediately to the reference point.</p>
+</blockquote>
+<p><img src="./media-en/image32.png" alt="" /></p>
+<blockquote>
+<p>Then the AGV can just drive straight to the target.</p>
+</blockquote>
+<p><img src="./media-en/image33.png" alt="" /></p>
+<h3 id="docking-with-custom-route"><a class="header" href="#docking-with-custom-route">Docking with custom route</a></h3>
+<p>In this mode (<strong>docking_to_target_enabled</strong> == 2), the custom route is created from the AGV position to target. It is created based on five nodes. The nodes are created to these locations.</p>
+<ol>
+<li>
+<p>AGV navigation point.</p>
+</li>
+<li>
+<p>AGV heading direction to line that goes through target and node 3. See Figure down below.</p>
+</li>
+<li>
+<p>Straight to the target angle (see black dashed line on Figure down below) and <strong>docking_control_point_2_dist_from_target</strong> distance.</p>
+</li>
+<li>
+<p>Same as 3, but to the half distance from target.</p>
+</li>
+<li>
+<p>Target x + <strong>docking_stop_distance</strong> and target y + <strong>docking_y_offset</strong>.</p>
+</li>
+</ol>
+<p><img src="./media-en/image34.png" alt="" /></p>
+<blockquote>
+<p>The 2nd node distance (blue arrow) is the smallest distance from the line that goes to target heading to navigation point (black arrow). Here the black and blue arrow has the same length, but blue just indicates the direction where the node is created. The node is created to AGV heading direction depending on driving direction.</p>
+</blockquote>
+<p>The main advantage for the normal docking is that the straight part to the target can be modified with parameter. That is really useful for steer and differential kinematic types.</p>
+<p>By default, the custom route is created only once and it is not updated after that. Even if the target location changes. However, the custom route can be updated during the drive if this parameter is set:</p>
+<p><strong>I,docking_allow_custom_route_update, 1</strong></p>
+<p>Then the target is locked when the AGV is at the distance of <strong>pallet_det_2_min_dist_from_nav_point_to_traj_end</strong> from the end point.</p>
+<p>NOTE! Custom route cannot be created if the AGV is closer to the target than <strong>docking_control_point_1_dist_from_machine</strong> + <strong>docking_control_point_2_dist_from_target</strong>. Otherwise the route would be impossible to create. The control_point_1 parameter is used only to check the minimum distance from the AGV to the 2^nd^ node, but it's not used for calculating the route.</p>
+<p><img src="./media-en/image35.png" alt="" /></p>
+<blockquote>
+<p>Start of the custom route docking. If the custom route is not allowed to update, this would be the route to the target.</p>
+</blockquote>
+<p><img src="./media-en/image36.png" alt="" /></p>
+<blockquote>
+<p>Here the update is allowed, so the last three nodes are moved based on the updated target location. The first two are keep as static, so the AGV would be close to the route.</p>
+</blockquote>
+<p><img src="./media-en/image37.png" alt="" /></p>
+<blockquote>
+<p>AGV will continue driving the custom route and updating the target position.</p>
+</blockquote>
+<p><img src="./media-en/image38.png" alt="" /></p>
+<blockquote>
+<p>The lock distance is roughly 0.5m, so the target is still update quite late.</p>
+</blockquote>
+<p><img src="./media-en/image39.png" alt="" /></p>
+<blockquote>
+<p>AGV at the target.</p>
+</blockquote>
+<h3 id="docking-with-only-distance-control"><a class="header" href="#docking-with-only-distance-control">Docking with only distance control</a></h3>
+<p>Docking with only distance control is a docking method in which the angle and sideways offset of a detected target are ignored and the docking is performed by stopping at <strong>docking_stop_distance</strong> from the target. </p>
+<p>Docking with only distance control works similarly to setting a longitudinal offset to a drive order but instead of using constant offset from the original target location, the offset is calculated based on the detected target location.</p>
+<p>The feature was designed for docking to a target in narrow spaces where angle and sideways corrections in relation to the target are either not desired or are otherwise not feasible.</p>
+<p>Docking with only distance control is a sub feature of docking without a custom route.<br />
+As a sub feature of docking without custom route the same parameters can be used with the sub feature as well.</p>
+<p>The feature can be enabled with <strong>docking_with_only_distance_control_enabled</strong>.</p>
+<p>Related parameters that can be adjusted:</p>
+<ul>
+<li><strong>docking_to_target_enabled</strong> </li>
+<li><strong>docking_stop_distance</strong></li>
+<li><strong>docking_max_dist_error_from_end_point</strong></li>
+<li><strong>docking_max_start_distance</strong></li>
+</ul>
+<h3 id="docking-speed"><a class="header" href="#docking-speed">Docking speed</a></h3>
+<p>Adjusting driving speed while docking:</p>
+<p><strong>F,docking_ref_v_source, 0</strong></p>
+<p>Speed source when doing docking, 0 = calculated from distance to target and linearly decreased (starting speed is current driving speed when docking starts), 1 = using route velocity value, 2 = use fixed parameter docking_speed.</p>
+<p><strong>NOTE!</strong> With speed source parameter 0, the start speed is quite critical. If for example the docking starts on the curve, the initial start speed can be quite slow already and then the speed is just linearly decreased from that value based on distance.</p>
+<p><strong>F,docking_speed, 0.30 (m/s)</strong></p>
+<p>Speed while docking, if docking_ref_v_source == 2. If docking_ref_v_source is 0, this defines the minimum start speed for the docking drive.</p>
+<p><strong>F, docking_limit_leave_speed, 0.20 (m/s)</strong></p>
+<p>Limit speed while driving out from docking location, if docking_limit_leave_speed_and_actuator_height_dist &gt; 0. If it is below 0, speed is not limited.</p>
+<p><strong>F, docking_limit_leave_speed_and_actuator_height_dist, -1.0</strong></p>
+<p>Distance from the unload location, where the speed is limited to <strong>docking_limit_leave_speed</strong> and fork height is limited to the measured value. If negative, they are not limited. If enabled, has to be smaller than docking_mode_to_fleet_control_dist parameter.</p>
+<h3 id="actuator-height-control"><a class="header" href="#actuator-height-control">Actuator height control</a></h3>
+<p>Fork and lift actuators can be controlled based on the height measurement from target detection algorithm when approaching the docking position. This requires using target detection method, such as reflector height detection, that provides z coordinate of the target in addition to x and y coordinates.</p>
+<p>Feature requires height measurements from the controlled actuator and that the target detection gives height / z coordinate in meters and actuator operation unit is millimeters.</p>
+<p>Typically target height based height control is only needed when docking is done while driving on uneven floor or when the target height can vary. On even floor constant approach height defined as route property is typically sufficient.</p>
+<p><strong>I,docking_actuator_height_control_mode, 0</strong><br />
+Defines how lift / fork actuator is controlled in relation to the detected target height during docking.<br />
+0 = Disabled, height actuator is not controlled based on target detection.<br />
+1 = Direct control. Detected target height is given directly as actuator height reference. Makes it possible to detect different targets as long as the target detection gives the correct docking height. Requires that detected target height is independent from actuator height control.<br />
+2 = Relative control. Actuator is controlled so that detected height matches value defined by <strong>docking_actuator_target_height</strong>. Makes it possible to dock relatively to target without knowing its exact height and in cases where the target detection measurement changes in relation to the actuator height. </p>
+<p><strong>F,docking_actuator_target_height, 0.0</strong><br />
+Defines the desired target height [m] during docking. Actuator is controlled so that height of the detected target matches this value. For example if detected target height is 1.5m and the parameter value is set to 1m actuator is lowered 0.5m.<br />
+Only used when <strong>docking_actuator_height_control_mode</strong> is set to 2.<br />
+To define correct value for this parameter, first dock manually to desired height, then check the height received from the target detection and set the value to this parameter.</p>
+<p><strong>F,docking_actuator_height_start_dist, 20.0</strong><br />
+Defines a distance in meters from the docking target point within which the actuator height control is allowed. Should be adjusted if it is not desired to start controlling the actuator height instantly when the docking is started. Must be larger than <strong>docking_actuator_height_strict_dist</strong>.</p>
+<p><strong>F,docking_actuator_height_strict_dist, 0.0</strong><br />
+Defines a distance in meters from the docking target point within which the actuator height must be on the reference value or the drive is stopped until measured value reaches the reference. Must be smaller than <strong>docking_actuator_height_start_dist</strong>.</p>
+<p>In case the the actuator control must be limited when leaving the docking location (undocking) use <strong>docking_limit_leave_speed_and_actuator_height_dist</strong> parameter as described in &quot;Docking speed&quot; chapter.</p>
+<h3 id="limit-curvature-on-approach"><a class="header" href="#limit-curvature-on-approach">Limit curvature on approach</a></h3>
+<p>Curvature can be limited also when approaching a target in order to prevent any unnecessary heading corrections in the end of the docking.</p>
+<p>If the docking to target goes fine, these do not need to be changed from their default values.</p>
+<p><strong>I,docking_small_gains, 1</strong></p>
+<p>If set to 1, the curvature is limited with <strong>docking_limit_curv_on_approach</strong> gain within <strong>docking_small_gains_dist</strong> distance.</p>
+<p><strong>F,docking_small_gains_dist, 0.50 (meters)</strong></p>
+<p>When AGV is closer than this distance to the target, the curvature is limited.</p>
+<p><strong>F,docking_limit_curv_on_approach, 0.1</strong></p>
+<p>Limiting gain parameter for maximum curvature, while approaching target.
+Setting this to 0.0 would mean no curvature is allowed at all. 0.50 would mean half of the normal curvature calculated is still applied.</p>
+<h3 id="limit-curvature-on-leave"><a class="header" href="#limit-curvature-on-leave">Limit curvature on leave</a></h3>
+<p>In some situations, the AGV should not be allowed to make any heading corrections, after a pallet has been picked up to avoid collisions with pallets or other obstacles nearby the loading location.</p>
+<ul>
+<li>
+<p>When the AGV starts driving away, it has to return to the nominal route, which often causes the AGV to turn.</p>
+</li>
+<li>
+<p>This is not a problem, if the pallets are always very close to the expected location, or if there is enough space between the pallets.</p>
+</li>
+</ul>
+<p>While driving away from the load location after using target detection (or after unloading), curvature change can be limited with parameters:</p>
+<p><strong>F,docking_limit_curv_on_leave, 0.05</strong></p>
+<p>Limiting gain parameter for maximum curvature, while leaving the location. Setting this to 0.0 would mean no curvature is allowed at all.
+0.50 would mean half of the normal curvature calculated is still applied.</p>
+<p><strong>F,docking_leave_unload_loc_straight_dist, 1.0 (meters)</strong></p>
+<p>Curvature is limited until the AGV has driven further away from the target detection location than the distance defined by this parameter.
+(Even though it says unload_loc, the parameter has multiple uses).</p>
+<p><strong>I,docking_leave_unload_loc_straight, 0</strong></p>
+<p>Limit curvature after unloading, if set to 1. Parameters above are
+applied also for this case.</p>
+<p>This feature works even without pallet detection being enabled.</p>
+<p><img src="./media-en/image40.png" alt="" /></p>
+<blockquote>
+<p>Without limiting the curvature, AGV just drives straight back to the route.</p>
+</blockquote>
+<p><img src="./media-en/image41.png" alt="" /></p>
+<blockquote>
+<p>AGV is back on the route.</p>
+</blockquote>
+<p><img src="./media-en/image42.png" alt="" /></p>
+<blockquote>
+<p>When limiting curvature, AGV will drive straight for certain distance before returning back to route.</p>
+</blockquote>
+<h3 id="adjusting-position-correction"><a class="header" href="#adjusting-position-correction">Adjusting position correction</a></h3>
+<p>In some cases, driving under target blocks the sight of the scanner or scanners in a way that it affects the localization causing unnecessary peaks in the scanner corrections. This can be limited by applying more strict maximum values for corrections, while close to the target:</p>
+<p><strong>F,docking_limit_corr_dist, 0.50</strong></p>
+<p>When AGV is closer to the target than the distance defined by this parameter, docking_max_xy and h_corr are used.</p>
+<p><strong>F, docking_max_xy_corr, 0.0001</strong></p>
+<p>Max loc xy corr while approaching target.</p>
+<p><strong>F, docking_max_h_corr, 0.003</strong></p>
+<p>Max loc h corr while approaching target.</p>
+<p>If both parameters are set to 0, scanner correction is disabled and the AGV drives this distance based on odometry alone.</p>
+<p>Parameters described down below have more effect when using normal docking, as custom route should usually work with the normal PID values.
+Use different position controller values while docking:</p>
+<p><strong>F,docking_dist_gain, 1.0</strong></p>
+<p>Dist gain while docking, 0 = use standard pc_pid_dist_p</p>
+<p><strong>F,docking_heading_gain, 1.0</strong></p>
+<p>Heading gain while docking, 0 = use standard pc_pid_heading_p</p>
+<p>These are gain parameters, that scale the standard position controller values, so using value 1.0 mean that normal correction values are used.</p>
+<p>Values over 1.0 strengthen the distance or heading correction and lower value lessens the correction.</p>
+<p><strong>Distance gain</strong></p>
+<p>If the AGV does not correct the position to the path fast enough, dist gain should be increased - Increasing too much causes oscillation.</p>
+<p>If position controller is unstable, dist gain should be lowered.</p>
+<p><strong>Heading gain</strong></p>
+<p>If the AGV does not keep the correct heading when under the pallet, heading gain should be increased.</p>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="errors-and-warnings"><a class="header" href="#errors-and-warnings">Errors and warnings</a></h3>
+<h4 id="569-error_docking_failed"><a class="header" href="#569-error_docking_failed">569 ERROR_DOCKING_FAILED</a></h4>
+<p>This error indicates that the docking has failed in a way that a manual intervention is required.</p>
+<p>For example this error is set after the WARNING_TARGET_APPROACH_ERROR has been active for longer than <strong>docking_approach_warning_to_error_timeout_s</strong>. </p>
+<p><strong>How to recover:</strong><br />
+See the automatically taken log for more details and resolve the docking situation and the error reason manually. Release the fatal error and retry docking from the beginning.</p>
+<h4 id="613-warning_target_approach_error"><a class="header" href="#613-warning_target_approach_error">613 WARNING_TARGET_APPROACH_ERROR</a></h4>
+<p>This warning is given in various situations:</p>
+<p>When AGV is within <strong>docking_max_start_distance</strong> from the target but  the distance or angle error between the detected target and the expected target location exceeds the limits defined by  <strong>docking_max_dist_error_from_end_point</strong> or  <strong>docking_max_target_angle</strong>.</p>
+<p>When AGV is within <strong>docking_approach_dist</strong> from the target and either the target is not found, is lost or the heading or distance of the calculated docking position compared to the original drive end position would exceed the limits defined by  <strong>docking_approach_max_h_err</strong> or <strong>docking_approach_max_dist_err</strong>.</p>
+<p>This warning always pauses the docking but if the issue causing it is resolved, the docking continues.</p>
+<p>By default the docking can be paused indefinitely with only the warning being visible. To set an error to notify the operator for the need of manual intervention see <strong>docking_approach_warning_to_error_timeout_s</strong>.</p>
+<p><strong>How to recover:</strong><br />
+Check the reason for the warning from the log, adjust the target location or parameters accordingly and try again.</p>
+<h4 id="612-warning_target_not_detected"><a class="header" href="#612-warning_target_not_detected">612 WARNING_TARGET_NOT_DETECTED</a></h4>
+<p>This warning is set if the target is lost when the AGV is within <strong>docking_max_start_distance</strong> from the target.
+If the target is detected again, the warning disappears and the docking process continues.</p>
+<p><strong>How to recover:</strong><br />
+Check that the correct target is placed into a correct location and that the target detection parameters are calibrated correctly.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../DriveControl/DrivingOptions/DrivingOptions-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../DriveControl/DrivingOptions/DrivingOptions-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

@@ -1,0 +1,1623 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Actuator control - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html" class="active"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="actuator-control"><a class="header" href="#actuator-control">Actuator control</a></h1>
+<p>Updated 17.06.2024</p>
+<hr />
+<h2 id="glossary"><a class="header" href="#glossary">Glossary</a></h2>
+<table><thead><tr><th>Term</th><th>Description</th></tr></thead><tbody>
+<tr><td>Navitrol</td><td>Software that corrects the position of the AGV</td></tr>
+<tr><td>Navithor Server</td><td>Fleet control software</td></tr>
+<tr><td>Navithor Client</td><td>Client monitoring software for Fleet control</td></tr>
+<tr><td>Navithor Machine Tools</td><td>Machine creator tool</td></tr>
+<tr><td>Navithor Tools</td><td>Software to create environments and routes</td></tr>
+<tr><td>Navitrol Monitor</td><td>Software to monitor and diagnose AGV</td></tr>
+<tr><td>Lift</td><td>Device above the AGV moving up and down.</td></tr>
+<tr><td>Forklift</td><td>Fork device for moving pallets</td></tr>
+<tr><td>VNA</td><td>Very Narrow Aisle AGV</td></tr>
+</tbody></table>
+<hr />
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
+<p>This document describes how to control different actuators with Navitrol
+software. In a typical case actuator is used to for example picking up or dropping off pallets. </p>
+<ul>
+<li>Description of the actuator control
+<ul>
+<li>Control methods</li>
+<li>Parameters in Navitrol and Navithor Machine tool</li>
+<li>Different actuator types</li>
+<li>Load and unload sequences</li>
+</ul>
+</li>
+<li>Sensors
+<ul>
+<li>Load sensor handling</li>
+<li>Errors</li>
+</ul>
+</li>
+<li>Interface to Navithor</li>
+<li>Route properties for the actuator in Navithor Tool</li>
+<li>Test and monitor actuator control with Navitrol Monitor</li>
+<li>Control interfaces
+<ul>
+<li>CAN Open
+<ul>
+<li>Schwarzmueller</li>
+<li>Curtis</li>
+<li>Custom specific CAN interfaces</li>
+</ul>
+</li>
+<li>Ethernet
+<ul>
+<li>Supervisor status actuator section</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>If you are looking for document about scanner lift actuator, that can be found here: <a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html">Scanner lift actuator</a>.</p>
+<h3 id="requirements"><a class="header" href="#requirements">Requirements</a></h3>
+<ul>
+<li>Control interface
+<ul>
+<li>Encoder or similar sensor for measuring actuator position</li>
+<li>Sensors to tell actuator to stop (e.g. low and high limit sensors for lifting table)</li>
+<li>Possibility to control actuator to given reference or direction</li>
+</ul>
+</li>
+<li>Fork height should be in mm and relative to the floor level</li>
+<li>Position control system required
+<ul>
+<li>Actuator control logic uses trajectory and symbolic points</li>
+</ul>
+</li>
+</ul>
+<h3 id="limitations"><a class="header" href="#limitations">Limitations</a></h3>
+<ul>
+<li>Works only on position control systems</li>
+</ul>
+<h3 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h3>
+<ul>
+<li>Interface to control the actuator. </li>
+</ul>
+<hr />
+<h2 id="setup"><a class="header" href="#setup">Setup</a></h2>
+<h3 id="quick-start"><a class="header" href="#quick-start">Quick start</a></h3>
+<h4 id="example-parameter-setup-for-reference-controlled-fork"><a class="header" href="#example-parameter-setup-for-reference-controlled-fork">Example parameter setup for reference controlled fork</a></h4>
+<p><strong>Navitrol params.txt</strong></p>
+<pre><code class="language-bash">I,actuator_type, 2 #Reference controlled actuator
+
+I,actuator_outer_tolerance_mm, 10 # Outer tolerance
+
+I,actuator_inner_tolerance_mm, 3 # Inner tolerance
+
+I,actuator_load_aboard_offset_mm, 150 # Load offset
+
+I,actuator_only_on_sp, 0 # Allow actuator to move also when AGV is not at symbolic point
+
+I,actuator_allow_activation_mode, 1 # 0 = allow actuator &gt; activation only in load state, 1 = to move actuator in auto, 2 = &gt; enable protection zone override in standby&amp;auto&quot;
+
+I,actuator_trust_io_load_status, 0 # Use Navithor load status or load sensor
+
+I,actuator_val_io, -1 # &quot;Int io num to fleet control, -1 = disabled&quot;
+
+I,actuator_load_det_io, -1 # &quot;Bin io num to fleet control, -1 = disabled&quot;
+
+I,actuator_load_status_io, -1 # &quot;Load status to fleet control, -1 = disabled&quot;
+
+I,actuator_min_val, 0 # Minimum value in [mm]
+
+I,actuator_load_min_val, 0 # Minimum value with load in [mm]
+
+I,actuator_max_val, 1000 # Maximum value in [mm]
+
+I,actuator_timer_s, 20 # Watchdog timer
+</code></pre>
+<p><strong>Machine Tool parameter file</strong></p>
+<pre><code class="language-bash">Required parameters:
+
+ACTUATOR_TYPE = 1 (Fork)
+
+ACTUATOR_MIN_VAL = 0 # Should be same as the actuator_min_val
+
+ACTUATOR_LOAD_MIN_VAL = 0 # Should be same as the actuator_load_min_val
+</code></pre>
+<p><strong>Reference controlled actuator</strong></p>
+<ul>
+<li>Set parameters
+<ul>
+<li><strong>actuator_type</strong> should be 2</li>
+</ul>
+</li>
+<li>Open Monitor and connect it to the AGV
+<ul>
+<li>Open &quot;Actuator Control&quot; form from the &quot;Navitrol&quot; tab</li>
+<li>Press &quot;Take Control&quot; button</li>
+<li>Set Reference value to 200 and press &quot;Send&quot; button</li>
+<li>Actuator should move to 200</li>
+</ul>
+</li>
+</ul>
+<p><img src="./media-en/Actuator_control_form_reference.png" alt="" /></p>
+<blockquote>
+<p>Actuator Control form with reference controlled actuator</p>
+</blockquote>
+<p><strong>Binary controlled actuator</strong></p>
+<ul>
+<li>Set parameters
+<ul>
+<li><strong>actuator_type</strong> should be 3</li>
+</ul>
+</li>
+<li>Open Monitor and connect it to the AGV
+<ul>
+<li>Open &quot;Actuator Control&quot; form from the &quot;Navitrol&quot; tab</li>
+<li>Press &quot;Take Control&quot; button</li>
+<li>Press &quot;Increase&quot; button</li>
+<li>Actuator should move to up position</li>
+</ul>
+</li>
+</ul>
+<p><img src="./media-en/Actuator_control_form_binary.png" alt="" /></p>
+<blockquote>
+<p>Actuator Control form with binary controlled actuator</p>
+</blockquote>
+<p><strong>Required parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required value</th><th>Description</th></tr></thead><tbody>
+<tr><td>actuator_type</td><td>Int</td><td>2 or 3</td><td>0 = disabled, 1 = manual control, 2 = reference value controlled actuator, 3 = binary controlled actuator (low/high pos only). Navitrol can control the actuator either based on the reference height [mm] or only based on the high and low limit switches. Actuator can also be set to manual control when Navitrol is not giving commands but only listens the incoming measurements.</td></tr>
+<tr><td>actuator_outer_tolerance_mm</td><td>Int</td><td>5</td><td>Navitrol activates control when measured value differs more than outer tolerance value from the reference. Used only with reference value controlled actuators.</td></tr>
+</tbody></table>
+<h3 id="fine-tuning"><a class="header" href="#fine-tuning">Fine-tuning</a></h3>
+<p><strong>Reference controlled fork parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>actuator_inner_tolerance_mm</td><td>Int</td><td>-1</td><td>Navitrol stops to control the fork/lift when measured value is within (inner) tolerance compared to requested reference value. Can be used if actuator is required to be more accurately on the reference</td></tr>
+<tr><td>actuator_inner_tolerance_timer_ms</td><td>Int</td><td>0</td><td>Time that measured value has to be inside inner tolerance value until actuator control is stopped</td></tr>
+<tr><td>actuator_min_val</td><td>Int</td><td>0</td><td>Minimum value where the actuator can be controlled</td></tr>
+<tr><td>actuator_max_val</td><td>Int</td><td>800</td><td>Maximum value where the actuator can be controlled</td></tr>
+<tr><td>actuator_load_min_val</td><td>Int</td><td>200</td><td>Minimum height where the actuator is controlled when AGV has load.</td></tr>
+<tr><td>actuator_load_aboard_offset_mm</td><td>Int</td><td>0</td><td>Offset that is added to reference height when AGV has load</td></tr>
+<tr><td>actuator_home_val_mm</td><td>Int</td><td>0</td><td>Height where the actuator is controlled when AGV is inside ActuatorInHomePositionZone. Limits AGV speed to <strong>actuator_not_in_home_position_agv_speed_loaded_m_per_s</strong> or <strong>actuator_not_in_home_position_agv_speed_unloaded_m_per_s</strong> if actuator is not at correct height when AGV comes inside the zone. Takes <strong>actuator_load_min_val</strong> and <strong>actuator_load_aboard_offset_mm</strong> into account.</td></tr>
+<tr><td>actuator_eth_ctrl_scale</td><td>Int</td><td>10</td><td>Scale for ethernet supervisor actuator (e.g. lift height) control. Used in Supervisor message ID 6001 or Supervisor status message ID 3002 section 6</td></tr>
+<tr><td>actuator_disable_safety_max_value_mm</td><td>Int</td><td>0</td><td>Disable safety if actuator is lower than this value, 0 = not used</td></tr>
+<tr><td>docking_limit_leave_speed_and_actuator_height_dist</td><td>Float</td><td>-1.0</td><td>Distance from the drop-off location, where the fork height is limited to the current height. If negative, they are not limited. If enabled, had to be smaller than <strong>docking_mode_to_fleet_control_dist</strong> parameter.</td></tr>
+<tr><td>disable_safety_distance_on_buffer</td><td>Float</td><td>-1.0</td><td>Set actuator target val to <strong>actuator_min_val</strong> if driving closer than this distance to detected target in pickup buffer, Negative or zero not used. Used only if <strong>load_buffer_mode</strong> is 1 or 2</td></tr>
+<tr><td>buffer_stop_AGV_when_decreasing_fork_before_load</td><td>Int</td><td>1</td><td>0 = Allow AGV drive while decreasing the fork, 1 = stop the AGV until the fork is decreased to the floor level. Used only if <strong>disable_safety_distance_on_buffer</strong> is used.</td></tr>
+<tr><td>actuator_filter_single_zeros</td><td>Int</td><td>0</td><td>Filter a single zero from actuator measurements. 0 = Disabled, 1 = Enabled. Can be used to filter out single fork height measurements that are zero.</td></tr>
+<tr><td>actuator_not_in_home_position_limit_agv_speed</td><td>Int</td><td>0</td><td>Limit AGV speed if actuator is not in home position: 0 = Speed not limited, 1 = Speed limited</td></tr>
+<tr><td>actuator_not_in_home_position_agv_speed_loaded_m_per_s</td><td>Float</td><td>1.0</td><td>AGV speed when actuator is not in home position and actuator is loaded. Meters per second</td></tr>
+<tr><td>actuator_not_in_home_position_agv_speed_unloaded_m_per_s</td><td>Float</td><td>1.0</td><td>AGV speed when actuator is not in home position and actuator is not loaded. Meters per second</td></tr>
+<tr><td>actuator_home_pos_safety_margin_meters</td><td>Float</td><td>0.5</td><td>Safe area around AGV to keep the actuator at the home position</td></tr>
+<tr><td>actuator_strict_for_home_pos_zone</td><td>Int</td><td>1</td><td>Use strict property for actuator when AGV is inside ActuatorInHomePositionZone. 1 = enabled, 0 = disabled</td></tr>
+<tr><td>actuator_keep_height_after_dropoff_aborted_distance_m</td><td>Float</td><td>2.0</td><td>Distance from aborted dropoff location in meters to keep the actuator at current height.</td></tr>
+</tbody></table>
+<p><strong>General parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>actuator_simulate</td><td>Int</td><td>1</td><td>0 = don't change actuator measurements when in sim mode, 1 = calculate simulated actuator measurement values when Navitrol is running in Navitrol sim mode</td></tr>
+<tr><td>actuator_timer_s</td><td>Int</td><td>20</td><td>ERROR_POS_CONT_FORK_TIME_ERR error is set if actuator control is not stopped within this time limit</td></tr>
+<tr><td>actuator_only_on_sp</td><td>Int</td><td>0</td><td>0 = normal control, 1 = allow (un)load only on top of (un)load symbolic point.</td></tr>
+<tr><td>actuator_max_dist_err_from_sp</td><td>Float</td><td>0.0</td><td>0 = not used, otherwise if dist err from (un)load point over this (in meters), block actuator control and sets an error</td></tr>
+<tr><td>actuator_allow_activation_mode</td><td>Int</td><td>1</td><td>0 = allow actuator activation only in load state, 1 = to move actuator in auto, 2 = enable protection zone override in standby&amp;auto. Mode 2 only set activate actuator bit to 1, so the protection zone is just customer interface specific feature</td></tr>
+<tr><td>actuator_val_io</td><td>Int</td><td>-1</td><td>Actuator measured value to fleet control. Overrides one physical Integer input value, -1 = disabled. Not recommended to use.</td></tr>
+<tr><td>actuator_load_det_io</td><td>Int</td><td>-1</td><td>If load sensor is used or parameter actuator_trust_io_load_status activated, sends the load status to the fleet control as a Physical Binary Input, -1 = disabled. Not recommended to use.</td></tr>
+<tr><td>actuator_load_det_io_type</td><td>Int</td><td>-1</td><td>Define what load status type is sent to fleet control via binary input. 0 = load sensor raw data, 1 = AGV load status. Not recommended to use.</td></tr>
+<tr><td>actuator_load_status_io</td><td>Int</td><td>-1</td><td>Load status to fleet control as a Physical Binary Input, -1 = disabled. Not recommended to use.</td></tr>
+<tr><td>actuator_load_sequence[10]</td><td>Int</td><td>0</td><td>Loading sequence: 0=none, 1=load, 2=unload, 3=reachFw, 4=reachHome, 5=tiltDn, 6=tiltHome, 7=tiltUp, 8=sideLeft, 9=sideHome, 10=sideRight, 11=notUsed, 12=auxLiftUp, 13=auxLiftDown. Used to define what actuators have to be moved in which sequence when picking up something</td></tr>
+<tr><td>actuator_unload_sequence[10]</td><td>Int</td><td>0</td><td>Unloading sequence: 0=none, 1=load, 2=unload, 3=reachFw, 4=reachHome, 5=tiltDn, 6=tiltHome, 7=tiltUp, 8=sideLeft, 9=sideHome, 10=sideRight, 11=notUsed, 12=auxLiftUp, 13=auxLiftDown. Used to define what actuators have to be moved in which sequence when dropping off something</td></tr>
+<tr><td>actuator_move_allowed_while_driving_loaded</td><td>Int</td><td>1</td><td>0 = AGV may not move the actuator while driving and loaded, 1 = AGV may move the actuator while driving and loaded</td></tr>
+<tr><td>actuator_move_allowed_while_driving_not_loaded</td><td>Int</td><td>1</td><td>0 = AGV may not move the actuator while driving and not loaded, 1 = AGV may move the actuator while driving and not loaded</td></tr>
+<tr><td>actuator_safety_zone_margin_meters</td><td>Float</td><td>0.5</td><td>Safe area around AGV to prevent moving fork near racks</td></tr>
+<tr><td>trigger_load_unload_sequence_from_poscont</td><td>Int</td><td>0</td><td>0 = no effect, 1 = trigger pickup/drop-off sequence, when AGV arrives at pickup/drop-off symbolic point. Pickup or drop-off is decided based on Navitrol load status. Should be used only if there is no fleet control.</td></tr>
+<tr><td>fork_pos_x</td><td>Float</td><td>0.0</td><td>Actuator longitudinal offset relative to the navigation point. Used to stop AGV with this offset when driving to the Pickup or Dropoff points. See Chapter <em>AGV stop offset based on actuator position</em> for more info.</td></tr>
+<tr><td>apply_actuator_offset_dist</td><td>Float</td><td>0.5</td><td>Distance in meters from end symbolic point to start applying actuator stop offset. If AGV is going to stop before symbolic point, fork_pos_x is added to this distance. If AGV is going to stop after, custom route is created when AGV is within this distance. Not used if <strong>fork_pos_x</strong> is 0.0</td></tr>
+<tr><td>actuator_input_source_arr[20]</td><td>Int</td><td>0</td><td>Defines from which source actuator input is read: 0 = System selects, 1 = CAN Actuator/Encoder, 2 = Supervisor status section, 3 = Supervisor msg 1031, 4 = ROS, 10 = Custom CAN, 11 = Custom Modbus, 12 = Custom Supervisor</td></tr>
+<tr><td>actuator_input_type_arr[20]</td><td>Int</td><td>0</td><td>Defines the actuator input source for specific actuator type: 0 = All types, 1 = Lift, 2 = Secondary Lift, 3 = Reach, 4 = Tilt up/down, 5 = Turn fork, 6 = Side shift, 7 = Sensor lift</td></tr>
+<tr><td>actuator_periodic_status_update_interval_ms</td><td>Int</td><td>0</td><td>Time interval [ms] for sending actuator status to fleet control. 0 = Periodic update disabled. <br/>Recommended for projects in which Navithor requires periodic actuator status such as fork height. When periodic sending is disabled, the actuator status is updated to Navithor only when an (un)load action is performed.</td></tr>
+</tbody></table>
+<p><strong>CAN actuator parameters</strong></p>
+<p>These parameters are used if Navitrol calculates output value for the controller. For example schwarzmueller, curtis or custom CAN interface. The array index is the index of the actuator controller. There can be in total of 5 actuator controllers at the same time.</p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>can_actuator_ctrl_model[5]</td><td>Int</td><td>0</td><td>Can actuator controller, 0 = None, 1 = Schwarzmueller (reference). 2 = Curtis (reference/binary)</td></tr>
+<tr><td>can_actuator_ctrl_node_id[5]</td><td>Int</td><td>1.0</td><td>Can actuator controller node id, 0 = disabled</td></tr>
+<tr><td>can_actuator_ctrl_torque[5]</td><td>Int</td><td>0</td><td>Motor control torque</td></tr>
+<tr><td>can_actuator_ctrl_rpm_to_m_per_s[5]</td><td>Float</td><td>1.0</td><td>Motor control convert rpm to m/s. For Curtis, should be set between to actuator max speed / 32767</td></tr>
+<tr><td>can_actuator_ctrl_prop_valve_idx[5]</td><td>Int</td><td>0</td><td>Proportional valve index. For Schwarzmueller - 1 (pin27) or 2 (pin16). For Curtis F2-T - 0 (pin 2) or 1 (pin 19)</td></tr>
+<tr><td>can_actuator_ctrl_prop_valve_max[5]</td><td>Int</td><td>200</td><td>Proportional valve max output. For Curtis, should be set between 0-32767</td></tr>
+<tr><td>can_actuator_ctrl_prop_valve_min[5]</td><td>Int</td><td>0</td><td>Proportional valve min output</td></tr>
+</tbody></table>
+<p><strong>CAN encoder parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>can_enc_actuator_node_id[5]</td><td>Int</td><td>0</td><td>0 = disabled, 1...127</td></tr>
+<tr><td>can_enc_actuator_coeff[5]</td><td>Float</td><td>1.0</td><td>Convert pulses to meters/radians</td></tr>
+<tr><td>can_enc_actuator_calib_val_enc[5]</td><td>Int</td><td>0</td><td>encoder value that matches actuator calibration value</td></tr>
+<tr><td>can_enc_actuator_calib_val_act[5]</td><td>Float</td><td>0.0</td><td>actuator value that matches encoder calibration value</td></tr>
+<tr><td>can_enc_actuator_pulses_overflow[5]</td><td>Uint</td><td>0xFFFFFFFU</td><td>maximum encoder value</td></tr>
+<tr><td>can_enc_actuator_pulses_per_rev[5]</td><td>Int</td><td>1000</td><td>encoder pulses per revolution</td></tr>
+<tr><td>can_enc_actuator_inv[5]</td><td>Uint</td><td>0</td><td>inverse the value from encoder</td></tr>
+<tr><td>can_enc_actuator_model[5]</td><td>Int</td><td>0</td><td>0 = generic (no config), 1 = Leine&amp;Linde (RSA608), 2 = Sick (AHS/AHM36)</td></tr>
+</tbody></table>
+<p><strong>Low-level control parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>actuator_ctrl_i[5]</td><td>Float</td><td>1.0</td><td>I control value</td></tr>
+<tr><td>actuator_ctrl_p[5]</td><td>Float</td><td>1.0</td><td>P control value for direct actuator control</td></tr>
+<tr><td>actuator_ctrl_speed[5]</td><td>Float</td><td>0.2</td><td>Speed target for the actuator</td></tr>
+<tr><td>actuator_ctrl_max_acc[5]</td><td>Float</td><td>1.0</td><td>Acceleration ramps for control</td></tr>
+<tr><td>actuator_ctrl_min_output[5]</td><td>Float</td><td>30.0</td><td>Minimum output for actuator control</td></tr>
+<tr><td>actuator_ctrl_max_output[5]</td><td>Float</td><td>5000.0</td><td>Maximum output for actuator control. For curtis, should be typically set to 32767</td></tr>
+<tr><td>actuator_ctrl_slow_fraction[5]</td><td>Float</td><td>0.5</td><td>Limits the maximum output by the percentage value 0-1 (0-100%) when soft stop is active. 1 means no limitation.</td></tr>
+<tr><td>actuator_ctrl_pos_multi[5]</td><td>Float</td><td>1.0</td><td>Control output multiplier for positive control direction</td></tr>
+<tr><td>actuator_ctrl_inv_out[5]</td><td>Int</td><td>0</td><td>Inverse output</td></tr>
+<tr><td>actuator_crawl_speed</td><td>Float</td><td>0.01</td><td>Actuator speed when close to target</td></tr>
+<tr><td>actuator_crawl_dist</td><td>Float</td><td>0.05</td><td>Distance (m) from stopping point to move actuator with a slower speed</td></tr>
+<tr><td>actuator_speed_lowpass_alpha</td><td>Float</td><td>0.25</td><td>Low-pass filter coefficient</td></tr>
+</tbody></table>
+<p><strong>Load sensor parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>actuator_trust_io_load_status</td><td>Int</td><td>0</td><td>0 = Load status is decided based on load sensor or based on pickup or drop-off action if there is no sensor. 1 = load status is decided based on low limit and high limit bits (binary actuator), 2 = AGV has a load if lift actuator measured height is higher than <strong>actuator_load_min_val</strong>, otherwise AGV load status will be set empty.</td></tr>
+<tr><td>actuator_disable_load_sensor_distance</td><td>Float</td><td>0.8</td><td>Within the distance, in meters, from pickup/drop-off point, load sensor is not used when driving. Used to avoid load sensor to detect the load too early if for example the sensor is able to detect the load before AGV has driven all the way under the pallet</td></tr>
+<tr><td>actuator_check_load_sensor_status_before_loading</td><td>Int</td><td>0</td><td>1 = check that load sensor shows a load detected, before performing pickup action. This check is also done during the pickup action. 0 = load sensor is not checked before pickup.</td></tr>
+<tr><td>actuator_check_load_sensor_status_after_loading</td><td>Int</td><td>1</td><td>1 = check that load sensor shows a load detected, after performing pickup action. 0 = load sensor is not checked after pickup.</td></tr>
+<tr><td>actuator_check_load_sensor_status_after_unloading</td><td>Int</td><td>0</td><td>1 = check that load sensor shows empty, after performing drop-off action. 0 = load sensor is not checked after drop-off.</td></tr>
+<tr><td>change_load_status_only_on_load_state</td><td>Int</td><td>0</td><td>0 = Change load status based on load sensor in every state, 1 = Change load status based on sensor only on Load state, 2 = Similar as mode 1, but also changes load status if Navithor and load sensor says empty, but Navigation SW status is full</td></tr>
+<tr><td>min_distance_to_check_the_load_sensor</td><td>Float</td><td>0.3</td><td>Minimum distance to check the load sensor. Used to avoid false checks if sensor gives bad data. The check starts at <strong>actuator_disable_load_sensor_distance</strong>. If set to -1.0, check is not used.</td></tr>
+<tr><td>load_sensor_conflict_goes_to_manual</td><td>Int</td><td>0</td><td>0 = Load sensor conflict raises error. 1 = Conflict changes the state to Manual. <strong>load_sensor_conflict_manual_reset_source</strong> parameter tells the source to release the Manual state after the load sensor is okay.</td></tr>
+<tr><td>load_sensor_conflict_manual_reset_source</td><td>Int</td><td>1</td><td>0 = none, 1 = Manual state is released from supervisor, 2 = Manual state is released using UI</td></tr>
+<tr><td>load_sensor_conflict_mode</td><td>Int</td><td>2</td><td>0 = disable, 1 = Trigger error if sensor does not match with the Navithor load status. Check is done at <strong>actuator_disable_load_sensor_distance</strong> from symbolic point, at the beginning of the buffer lanes and when state is changed from Manual. 2 = Trigger error if sensor does not match with the Navithor load status in Auto state.</td></tr>
+<tr><td>load_sensor_status_change_timer_ms</td><td>Int</td><td>2000</td><td>Error is set if load sensor status changes in Auto state and stays in new value for this amount of time (ms)</td></tr>
+<tr><td>navithor_load_status_reset_on_pickup_dropoff_abort</td><td>Int</td><td>0</td><td>0 = navithor load status is not changed on aborted pickup/dropoff, 1 = navithor load status is reset to value it was before pickup/dropoff if pickup/dropoff is aborted</td></tr>
+</tbody></table>
+<p><strong>Reach actuator parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>actuator_reach_enabled</td><td>Int</td><td>0</td><td>Enable reach actuator. Used for example on sideloaders and VNA trucks</td></tr>
+<tr><td>actuator_tolerance_reach_mm</td><td>Int</td><td>0</td><td>Tolerance for reach actuator. Similar as <strong>actuator_outer_tolerance_mm</strong></td></tr>
+<tr><td>actuator_reach_home_val</td><td>Int</td><td>0</td><td>Home value for reach to be controlled inside the AGV body. In mm.</td></tr>
+<tr><td>actuator_reach_load_val</td><td>Int</td><td>0</td><td>Target value where the reach is controlled when AGV is picking up a load and reach is extended.</td></tr>
+<tr><td>actuator_reach_unload_val</td><td>Int</td><td>0</td><td>Target value where the reach is controlled when AGV is dropping off a load and reach is extended.</td></tr>
+</tbody></table>
+<p><strong>Fork tilt actuator parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>actuator_tilt_enabled</td><td>Int</td><td>0</td><td>Enable fork tilt actuator, to move the fork down and up relative to the fork base.</td></tr>
+<tr><td>actuator_tolerance_tilt_deg</td><td>Float</td><td>0.0</td><td>Tolerance for fork tilt actuator. Similar as <strong>actuator_outer_tolerance_mm</strong></td></tr>
+<tr><td>actuator_tilt_home_val_deg</td><td>Float</td><td>0.0</td><td>Target value for tilt when it is controlled to home</td></tr>
+<tr><td>actuator_tilt_dn_val_deg</td><td>Float</td><td>0.0</td><td>Target value for tilt when it is controlled to down position</td></tr>
+<tr><td>actuator_tilt_up_val_deg</td><td>Float</td><td>0.0</td><td>Target value for tilt when it is controlled to up position</td></tr>
+</tbody></table>
+<p><strong>Fork side shift actuator parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>actuator_side_shift_enabled</td><td>Int</td><td>0</td><td>Enable fork side shift, to move the fork sideways</td></tr>
+<tr><td>actuator_tolerance_side_mm</td><td>Int</td><td>0</td><td>Tolerance for fork sideshift actuator. Similar as <strong>actuator_outer_tolerance_mm</strong></td></tr>
+<tr><td>actuator_side_shift_home_val</td><td>Int</td><td>0</td><td>Target value for side shift when it is controlled to middle position. Used if <strong>actuator_load_sequence</strong> or <strong>actuator_unload_sequence</strong> is set to 9 or if racking is active and actuator is controlled to normal driving level</td></tr>
+<tr><td>actuator_side_shift_left_val</td><td>Int</td><td>0</td><td>Target value for side shift when it is controlled to left position. Used only if <strong>actuator_load_sequence</strong> or <strong>actuator_unload_sequence</strong> is set to 8</td></tr>
+<tr><td>actuator_side_shift_right_val</td><td>Int</td><td>0</td><td>Target value for side shift when it is controlled to right position. Used only if <strong>actuator_load_sequence</strong> or <strong>actuator_unload_sequence</strong> is set to 10</td></tr>
+</tbody></table>
+<p><strong>Secondary lift actuator parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>actuator_auxiliary_lift_enabled</td><td>Int</td><td>0</td><td>Enable secondary lift. Two use-cases: On a two-masted fork, where the main mast is controlled as main fork and smaller mast is this secondary lift and used as pickup and dropoff actuator. Second lifting table on AGV that has two lifting tables.</td></tr>
+<tr><td>actuator_auxiliary_lift_type</td><td>Int</td><td>2</td><td>Min 1, max 3. 1 = manual control, 2 = reference value controlled actuator, 3 = binary controlled actuator (low/high pos only)</td></tr>
+<tr><td>actuator_auxiliary_lift_tolerance_mm</td><td>Int</td><td>2</td><td>Tolerance for secondary lift actuator. Similar as <strong>actuator_outer_tolerance_mm</strong></td></tr>
+<tr><td>actuator_auxiliary_lift_min_val_mm</td><td>Int</td><td>0</td><td>Minimum value where the lift can be controlled. Used as a target value when AGV is empty and as a dropoff target if <strong>actuator_unload_sequence</strong> is 13</td></tr>
+<tr><td>actuator_auxiliary_lift_max_val_mm</td><td>Int</td><td>3000</td><td>Maximum value where the lift can be controlled</td></tr>
+<tr><td>actuator_auxiliary_lift_load_val_mm</td><td>Int</td><td>100</td><td>Value where the lift is controlled when AGV has load. Used as pickup target if <strong>actuator_load_sequence</strong> is 12</td></tr>
+<tr><td>actuator_auxiliary_lift_as_secondary_lifting_device</td><td>Int</td><td>0</td><td>Auxiliary lift is used as secondary lifting device meaning that both main lift and secondary lift can have load separately. For example AGV with two lifting tables</td></tr>
+</tbody></table>
+<p><strong>Fork rotate actuator parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>actuator_rotate_enabled</td><td>Int</td><td>0</td><td>Enable fork rotate. Used to rotate fork relative to the AGV body. For example VNA truck that can rotate the fork from left side to right side</td></tr>
+<tr><td>actuator_rotate_tolerance_deg</td><td>Float</td><td>1.0</td><td>Tolerance for rotate actuator. Similar as <strong>actuator_outer_tolerance_mm</strong></td></tr>
+<tr><td>actuator_rotate_min_val_deg</td><td>Float</td><td>0.0</td><td>Minimum value where the rotate fork can be controlled</td></tr>
+<tr><td>actuator_rotate_max_val_deg</td><td>Float</td><td>180.0</td><td>Maximum value where the rotate fork can be controlled</td></tr>
+</tbody></table>
+<!-- These parameters are not used yet, but they are added to the code for later use. When the functionality will be added, uncomment these lines.
+| actuator_rotate_middle_val_deg | Float | 0.0   | Rotate middle value in degrees. Relative to the AGV frame. Used as a target when this actuator is controlled to the middle position |
+| actuator_rotate_right_val_deg  | Float | 0.0   | Rotate right value in degrees. Relative to the AGV frame. Used as a target when this actuator is controlled to the right position |
+| actuator_rotate_left_val_deg   | Float | 0.0   | Rotate left value in degrees. Relative to the AGV frame. Used as a target when this actuator is controlled to the left position |
+-->
+<p><strong>Scanner lift actuator parameters</strong></p>
+<p>See <a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html">Scanner lift document</a></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>actuator_scanner_lift_enabled</td><td>Int</td><td>0</td><td>Enable scanner lift that is attached to the fork. This actuator will move relative to the fork</td></tr>
+<tr><td>actuator_scanner_lift_type</td><td>Int</td><td>2</td><td>1 = manual control, 2 = reference value controlled actuator, 3 = binary controlled actuator (low/high pos only)</td></tr>
+<tr><td>actuator_tolerance_scanner_lift_mm</td><td>Int</td><td>2</td><td>Tolerance for scanner lift actuator. Similar as <strong>actuator_outer_tolerance_mm</strong></td></tr>
+<tr><td>actuator_scanner_lift_home_val_mm</td><td>Int</td><td>0</td><td>Home value for scanner. Should be safe with any fork height and a bit above the fork level if used for load detection</td></tr>
+<tr><td>actuator_scanner_lift_detection_level_val_mm</td><td>Int</td><td>-150</td><td>Scanner height value in witch the scanner can see past a loaded resource.</td></tr>
+<tr><td>actuator_scanner_lift_min_safe_val_mm</td><td>Int</td><td>100</td><td>Minimum allowed difference from the fork's zero level to scanner val</td></tr>
+<tr><td>actuator_lower_scanner_before_unload_buffer_dist</td><td>Float</td><td>0.6</td><td>Distance from unload buffer when scanner is lowered (in meters). Takes <strong>buffer_check_start_dist_offset_m</strong> into account.</td></tr>
+</tbody></table>
+<!-- This parameter is not used for anything, but it is added to the code if that load detection feature would be done in the future 
+| actuator_scanner_lift_used_for_load_det          | Int   | 0    | Scanner in lift is used for load detection. 0 = No, 1 = Yes | 
+-->
+<hr />
+<h2 id="how-to-use"><a class="header" href="#how-to-use">How to use</a></h2>
+<h3 id="actuator-height-while-agv-is-loaded-with-a-resource"><a class="header" href="#actuator-height-while-agv-is-loaded-with-a-resource">Actuator height while AGV is loaded with a resource</a></h3>
+<p>Normally Route property &quot;Actuator height&quot; (defined in Navithor Tools ) defines the reference height for the actuator. 
+However, it is possible to have <em>absolute minimum</em> height position for the actuator while AGV has load ON.</p>
+<ul>
+<li>
+<p>I, actuator_load_min_val, 200</p>
+<ul>
+<li>Example: If Actuator height in the route property is set to 0 mm and <strong>actuator_load_min_val</strong> is set to 200 mm:
+AGV is loaded -&gt; Actuator is lifted to <strong>actuator_load_min_val</strong> since the route value is less than <strong>actuator_load_min_val</strong></li>
+</ul>
+</li>
+</ul>
+<p><em>Additional offset</em> height for the actuator while AGV has load ON. This shall be an additional height increase to Route property &quot;Actuator height&quot;.</p>
+<ul>
+<li>
+<p>I, actuator_load_aboard_offset_mm, 0</p>
+<ul>
+<li>Example: If Actuator height in the route property is set to 100 mm and <strong>actuator_load_aboard_offset_mm</strong> is set to 250 mm: AGV is loaded -&gt; Actuator is lifted to  &quot;Actuator height&quot; + <strong>actuator_load_aboard_offset_mm</strong> = 350 mm</li>
+</ul>
+</li>
+</ul>
+<h3 id="actuator-control-timeout"><a class="header" href="#actuator-control-timeout">Actuator control timeout</a></h3>
+<p>Actuator control is stopped if reference value or limit switches are not reached within the timer value since the control sequence is started.</p>
+<ul>
+<li>I, actuator_timer_s, 20</li>
+</ul>
+<h3 id="actuator-usage"><a class="header" href="#actuator-usage">Actuator usage</a></h3>
+<p>User can define when the actuator is used. Options are to use actuator only in Load state, Move actuator in auto mode OR enable protection zone override.</p>
+<ul>
+<li>I, actuator_allow_activation_mode, 1 # 0 = allow actuator activation only in load state, 1 = to move actuator in auto, 2 = enable protection zone override in standby&amp;auto</li>
+</ul>
+<p>User can define, if the actuator is only used on the Load/unload symbolic point</p>
+<ul>
+<li>I, actuator_only_on_sp, 0 # 0 = normal control, 1 = allow (un)load only on top of (un)load symbolic point</li>
+</ul>
+<h3 id="tolerances-and-basic-control"><a class="header" href="#tolerances-and-basic-control">Tolerances and basic control</a></h3>
+<p>With reference controlled actuator, the control is stopped based on two methods. These two methods are outer and inner tolerances and they are explained down below. The binary actuators are controlled until the low/high limits are reached/triggered. </p>
+<h4 id="outer-tolerance"><a class="header" href="#outer-tolerance">Outer tolerance</a></h4>
+<p>Outer tolerance for fork is set with <strong>actuator_outer_tolerance_mm</strong> parameter. Other actuator types has their own parameters for tolerances, but they are used in similar way. Actuator control is stopped as soon as the actuator measurement is inside the outer tolerance from the reference or target value. The actuator control is started if actuator is further away from the reference than the outer tolerance.</p>
+<p><img src="./media-en/Outer_tolerance.png" alt="" /></p>
+<blockquote>
+<p>Outer tolerance. Here the <strong>actuator_outer_tolerance_mm</strong> parameter is 5 and inner tolerance is disabled. The actuator control is stopped right on the edge of the tolerance. How close to the actual reference the actuator goes, depends on the fork controller how fast the actuator is actually stopped and how much delay there is. </p>
+</blockquote>
+<h4 id="inner-tolerance"><a class="header" href="#inner-tolerance">Inner tolerance</a></h4>
+<p>Inner tolerance is additional tolerance method that can be used only with reference controlled fork. It can be set with <strong>actuator_inner_tolerance_mm</strong>. The idea is that actuator is started to control if it is outside the outer tolerance, but the control is stopped only when the actuator measurement is inside the inner tolerance from the reference or target value. There is also timer <strong>actuator_inner_tolerance_timer_ms</strong> that would require the actuator to be within the inner tolerance for specific time before the control is stopped.</p>
+<p><img src="./media-en/Inner_tolerance.png" alt="" /></p>
+<blockquote>
+<p>Inner tolerance. Here the <strong>actuator_outer_tolerance_mm</strong> parameter is 5 and <strong>actuator_inner_tolerance_mm</strong> is 3. The actuator control is stopped right on the edge of the inner tolerance. How close to the actual reference the actuator goes, depends on the fork controller how fast the actuator is actually stopped and how much delay there is. If the timer is used, that would make sure that actuator control is still active if the actuator would for example overshoot to the other side of the tolerance.</p>
+</blockquote>
+<h3 id="load-sensor"><a class="header" href="#load-sensor">Load sensor</a></h3>
+<h4 id="load-sensor-in-use"><a class="header" href="#load-sensor-in-use">Load sensor in use</a></h4>
+<p>Load sensor data is used in the Navitrol only if load sensor in use bit is 1. This can be checked from the Actuator control form. See &quot;Actuator Control form&quot; chapter.</p>
+<h4 id="disable-load-sensor-within-specific-distance-from-pickup-or-dropoff-point"><a class="header" href="#disable-load-sensor-within-specific-distance-from-pickup-or-dropoff-point">Disable load sensor within specific distance from Pickup or Dropoff point</a></h4>
+<p>Load sensor can be disabled when AGV is in Auto state and close to Pickup or Dropoff point. Distance to disable the sensor can be set with <strong>actuator_disable_load_sensor_distance</strong>. This is used for example in situations where load sensor would detect the load before AGV has driven all the way under the pallet and would start picking it up too early.</p>
+<h4 id="load-sensor-check-before-pickup"><a class="header" href="#load-sensor-check-before-pickup">Load sensor check before Pickup</a></h4>
+<p>Load sensor can be checked before and during the pickup action if <strong>actuator_check_load_sensor_status_before_loading</strong> is set. Error is set if load sensor does not detect the load.</p>
+<h4 id="load-sensor-check-after-pickup"><a class="header" href="#load-sensor-check-after-pickup">Load sensor check after Pickup</a></h4>
+<p>Load sensor can be checked after Pickup action has been done if <strong>actuator_check_load_sensor_status_after_loading</strong> is set. Error is set if load sensor does not detect the load.</p>
+<h4 id="load-sensor-check-after-dropoff"><a class="header" href="#load-sensor-check-after-dropoff">Load sensor check after Dropoff</a></h4>
+<p>Load sensor can be checked after Dropoff action has been done if <strong>actuator_check_load_sensor_status_after_unloading</strong> is set.
+Error is set if load sensor detects the load.</p>
+<h4 id="navitrol-load-status-change"><a class="header" href="#navitrol-load-status-change">Navitrol load status change</a></h4>
+<p>By default, Navitrol changes the load status whenever the load sensor status changes in Auto state. But if the load sensor is not reliable and causes lots of false positives, this parameter can be set to 1 or 2 to avoid load status to change based on sensor while AGV is driven in Auto state: <strong>change_load_status_only_on_load_state</strong>. The value 2 is optional mode to allow status to change empty if both Navithor and load sensor says so. Check &quot;ERROR_LOAD_SENSOR_STATUS_CHANGED_IN_AUTO&quot; chapter, before changing this parameter.</p>
+<h4 id="load-sensor-check-in-auto-state"><a class="header" href="#load-sensor-check-in-auto-state">Load sensor check in Auto state</a></h4>
+<p>Checks if load sensor status changes in Auto state and stays on new value within set time. The timer is used to avoid glitches taken into account, meaning that if the sensor just quickly changes to 0 and the back to 1, it does not raise an error. This timer can be set with <strong>load_sensor_status_change_timer_ms</strong> parameter.</p>
+<h4 id="load-sensor-conflict"><a class="header" href="#load-sensor-conflict">Load sensor conflict</a></h4>
+<p>Load sensor is checked with Navithor load status if the <strong>load_sensor_conflict_mode</strong> is set. Mode 1 is done close to Pickup and Dropoff point, at the beginning of Pickup and Dropoff buffers or when AGV state changes from Manual to Standby. Mode 2 is done when AGV is in Auto state. See &quot;ERROR_LOAD_SENSOR_CONFLICT_WITH_NAVITHOR&quot; chapter.</p>
+<h3 id="actuator-safety-height-after-drop-off-interruption"><a class="header" href="#actuator-safety-height-after-drop-off-interruption">Actuator safety height after drop-off interruption</a></h3>
+<p>If drop-off is interrupted before it is ready, actuator is kept at the current height for safety reasons until</p>
+<ul>
+<li>Drop-off is done succesfully again</li>
+<li>State is changed to Manual</li>
+<li>AGV is in Auto state and further away from the interrupt location than <strong>actuator_keep_height_after_dropoff_aborted_distance_m</strong> parameter.</li>
+</ul>
+<h3 id="actuator-keep-height-after-dropoff"><a class="header" href="#actuator-keep-height-after-dropoff">Actuator keep height after dropoff</a></h3>
+<p>After dropoff action, the actuator height can be set to be at the current height for distance of <strong>docking_limit_leave_speed_and_actuator_height_dist</strong> parameter. This feature should be used for example in situation, where the route height is higher than the height after unload. For example, if the route height is 300 mm for the whole unload buffer, but the unload will be done to the 0 mm height. This feature would then keep the height as 0 mm until the forks are not anymore under the pallet. This feature is not active if the parameter is negative.</p>
+<h3 id="actuator-set-to-floor-when-close-to-target-on-pickup-buffer"><a class="header" href="#actuator-set-to-floor-when-close-to-target-on-pickup-buffer">Actuator set to floor when close to target on Pickup buffer</a></h3>
+<p>Actuator can be set to floor height <strong>actuator_min_val</strong> when AGV is close enough to the detected target on Pickup buffer. The distance to target is set with parameter <strong>disable_safety_distance_on_buffer</strong>. Requires <strong>load_buffer_mode</strong> being 1 or 2. With this feature, the route height can be set to for example 300mm for the whole buffer lane if that is required for example for safety reasons. This feature is not active if <strong>disable_safety_distance_on_buffer</strong> parameter is negative.</p>
+<p>There is also parameter <strong>buffer_stop_AGV_when_decreasing_fork_before_load</strong> that will stop the AGV until the fork is moved to the floor. If this parameter is 0, then AGV will drive at the same time when moving fork to the floor height. </p>
+<h3 id="agv-stop-offset-based-on-actuator-position"><a class="header" href="#agv-stop-offset-based-on-actuator-position">AGV stop offset based on actuator position</a></h3>
+<p>If the actuator is not at the center of the AGV, like sideloader where the fork has some offset, <strong>fork_pos_x</strong> parameter can be set to define the actuator center position relative to the navigation point. This parameter will affect how the AGV stops to the Pickup and Dropoff symbolic points. Idea is that when AGV stops to the symbolic point, the actuator will be on top the symbolic point. This offset can be imagined as the route that is extended or retracted by this offset. </p>
+<ul>
+<li>If parameter is negative and AGV is driving forwards, AGV will stop after the symbolic point. </li>
+<li>If parameter is negative and AGV is driving backwards, AGV will stop before the symbolic point.</li>
+<li>If parameter is positive and AGV is driving forwards, AGV will stop before the symbolic point. </li>
+<li>If parameter is positive and AGV is driving backwards, AGV will stop after the symbolic point.</li>
+</ul>
+<p>On features like <a href="../../LoadHandling/BufferLanes/BufferLanes-en.html">Buffer lanes</a>, <a href="../../LoadHandling/BlockStacking/BlockStacking-en.html">Blockstacking</a> or <a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html">Docking</a> this parameter only allows the AGV to drive over the symbolic point by this offset, if needed. It does not affect to the distances where AGV stops relative to the detected pallets.</p>
+<p><img src="./media-en/StopOffsetForward.png" alt="" /></p>
+<blockquote>
+<p>AGV driving to forward direction. On this figure, the <strong>fork_pos_x</strong> is negative, meaning that the actuator center (red dashed line) is behind the navigation point (visualized with black dashed line). When AGV stops to the symbolic point, the actuator center would be on top of the symbolic point and navigation point would overshoot by the value of this parameter.</p>
+</blockquote>
+<p><img src="./media-en/StopOffsetReverse.png" alt="" /></p>
+<blockquote>
+<p>AGV is reversing. On this figure, the <strong>fork_pos_x</strong> is negative, meaning that the actuator center (red dashed line) is behind the navigation point (visualized with black dashed line). When AGV stops to the symbolic point, the actuator center would be on top of the symbolic point and navigation point would stop before the end symbolic point.</p>
+</blockquote>
+<p><img src="./media-en/StopOffsetForwardOver.png" alt="" /></p>
+<blockquote>
+<p>If the navigation point would overshoot the symbolic point, Navitrol will always create custom route to drive the overshoot distance. This is visualized here with green line next to the black symbolic point. This custom route is created for AGV to be able to drive to location where there is no segment like on this figure.</p>
+</blockquote>
+<p>If Navitrol should create the custom route, it will be done when AGV is within <strong>apply_actuator_offset_dist</strong> from the end symbolic point.</p>
+<h3 id="pickup-and-dropoff-sequences"><a class="header" href="#pickup-and-dropoff-sequences">Pickup and Dropoff sequences</a></h3>
+<p>If there are multiple actuators that should be controlled while picking up or dropping off pallet, pickup and dropoff sequences should be used. See <strong>actuator_load_sequence</strong> and <strong>actuator_unload_sequence</strong> parameters. With these sequences, Navitrol will control one actuator to its reference value until next sequence is started. If actuator is set as binary, the reference values are not used, but instead actuator is commanded to increase or decrease based on sequence state.</p>
+<h4 id="the-sequence-numbers"><a class="header" href="#the-sequence-numbers">The sequence numbers</a></h4>
+<ul>
+<li>None
+<ul>
+<li>0 = none</li>
+</ul>
+</li>
+<li>Lift 
+<ul>
+<li>1 = lift up. Reference set with <strong>actuator_load_aboard_offset_mm</strong> and <strong>actuator_load_min_val</strong> parameters, route height or <strong>ACTUATOR_LOAD_MIN_VAL</strong> parameter from the machine type parameter file.</li>
+<li>2 = lift down. Reference set to route height, <strong>actuator_min_val</strong> parameter or <strong>ACTUATOR_MIN_VAL</strong> parameter from the machine type parameter file. If AGV is in manual mode, reference is current height - <strong>actuator_load_aboard_offset_mm</strong> and <strong>actuator_load_min_val</strong>.</li>
+</ul>
+</li>
+<li>Reach 
+<ul>
+<li>3 = reach forwards. Reference set with <strong>actuator_reach_load_val</strong> when doing pickup and <strong>actuator_reach_unload_val</strong> when doing dropoff.</li>
+<li>4 = reach home. Reference set with <strong>actuator_reach_home_val</strong>.</li>
+</ul>
+</li>
+<li>Tilt
+<ul>
+<li>5 = tilt down. Reference set with <strong>actuator_tilt_dn_val_deg</strong>.</li>
+<li>6 = tilt home. Reference set with <strong>actuator_tilt_home_val_deg</strong>.</li>
+<li>7 = tilt up. Reference set with <strong>actuator_tilt_up_val_deg</strong>.</li>
+</ul>
+</li>
+<li>Sideshift
+<ul>
+<li>8 = side left. Reference set with <strong>actuator_side_shift_left_val</strong>.</li>
+<li>9 = side home. Reference set with <strong>actuator_side_shift_home_val</strong>.</li>
+<li>10 = side right. Reference set with <strong>actuator_side_shift_right_val</strong>.</li>
+</ul>
+</li>
+<li>Reserved, not used for anything
+<ul>
+<li>11 = notUsed</li>
+</ul>
+</li>
+<li>Secondary/Auxiliary lift 
+<ul>
+<li>12 = auxiliary lift up. Reference set to current height + <strong>actuator_auxiliary_lift_load_val_mm</strong>.</li>
+<li>13 = auxiliary lift down. Reference set to current height - <strong>actuator_auxiliary_lift_load_val_mm</strong>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="example-set-of-parameters-for-sequences"><a class="header" href="#example-set-of-parameters-for-sequences">Example set of parameters for sequences</a></h4>
+<pre><code class="language-bash">- I,actuator_load_sequence[0], 3 # Reach forward
+- I,actuator_load_sequence[1], 1 # Lift up
+- I,actuator_load_sequence[2], 4 # Reach home
+
+- I,actuator_unload_sequence[0], 3 # Reach forward
+- I,actuator_unload_sequence[1], 2 # Lift down
+- I,actuator_unload_sequence[2], 4 # Reach home
+</code></pre>
+<p>This load sequence would be as on the Figure down below. At first, the reach actuator is controlled to the forward reference, then the lift is controlled up and finally, the reach is controlled back to home position. The unload sequence would be almost the same, but the lift is controlled down instead of up.</p>
+<h4 id="default-sequences"><a class="header" href="#default-sequences">Default sequences</a></h4>
+<p>The default sequences are used if those sequence parameters are not set to parameter file. The sequence numbers are the same as on the list above. The default sequences are defined as follows:</p>
+<ul>
+<li>If <strong>actuator_type</strong> is 2 or 3
+<ul>
+<li>Pickup sequence: 1</li>
+<li>Dropoff sequence: 2</li>
+</ul>
+</li>
+<li>If <strong>actuator_type</strong> is 2 or 3 and <strong>actuator_tilt_enabled</strong> is 1
+<ul>
+<li>Pickup sequence: 1, 7</li>
+<li>Dropoff sequence: 6, 2</li>
+</ul>
+</li>
+<li>If <strong>actuator_type</strong> is 2 or 3 and <strong>actuator_reach_enabled</strong> is 1
+<ul>
+<li>Pickup sequence: 3, 1, 4</li>
+<li>Dropoff sequence: 3, 2, 4</li>
+</ul>
+</li>
+<li>If <strong>actuator_type</strong> is 2 or 3 and <strong>actuator_reach_enabled</strong> is 1 and <strong>actuator_tilt_enabled</strong> is 1
+<ul>
+<li>Pickup sequence: 6, 3, 1, 4, 7 </li>
+<li>Dropoff sequence: 6, 3, 2, 4, 7</li>
+</ul>
+</li>
+</ul>
+<h3 id="actuator-types"><a class="header" href="#actuator-types">Actuator types</a></h3>
+<h4 id="lift"><a class="header" href="#lift">Lift</a></h4>
+<p>Lift is a basic actuator that can be binary (for example lifting table) or reference controlled (for example forklift). It can be enabled with parameter <strong>actuator_type</strong> 2 or 3. </p>
+<p><img src="./media-en/ReferenceFork.png" alt="" /></p>
+<blockquote>
+<p>Example of the reference controlled fork. 1. Fork at the 0 reference. 2. Fork at the loaded height (for example 200 mm).</p>
+</blockquote>
+<p><img src="./media-en/LiftingTable.png" alt="" /></p>
+<blockquote>
+<p>Example of the binary controlled lifting table. 1. Lift at low or down position. 2. Lift at high or up position.</p>
+</blockquote>
+<h4 id="reach"><a class="header" href="#reach">Reach</a></h4>
+<p>Reach is an actuator that is able to move forks under the pallet and then back. For example, sideloader that is able to pickup pallets from the rack without moving the AGV. Reach can be used only with the Pickup and Dropoff sequences (<strong>actuator_load_sequence</strong> and <strong>actuator_unload_sequence</strong> values 3 and 4).</p>
+<p><img src="./media-en/Reach.png" alt="" /></p>
+<blockquote>
+<p>Movement of the reach actuator with the sideloader AGV. 1. The fork is inside AGV body and reach is at home position (<strong>actuator_reach_home_val</strong>). 2. Reach is extended out to loaded value (<strong>actuator_reach_load_val</strong>). If AGV has load, target value for this step is <strong>actuator_reach_unload_val</strong>. 3. Lift is moved to loaded position. Usually by <strong>actuator_load_aboard_offset_mm</strong>. 4. Reach is retracted back to the home position (<strong>actuator_reach_home_val</strong>).</p>
+</blockquote>
+<h4 id="fork-tilt"><a class="header" href="#fork-tilt">Fork tilt</a></h4>
+<p>Fork tilt is an actuator that is able to move forks up and down relative to the base of the fork.</p>
+<p><img src="./media-en/Tilt.png" alt="" /></p>
+<blockquote>
+<p>Movement of the tilt actuator. 1. Tilt at the home position (<strong>actuator_tilt_home_val_deg</strong>). 2. Tilt controlled to the down position (<strong>actuator_tilt_dn_val_deg</strong>). 3. Tilt controlled to the up position (<strong>actuator_tilt_up_val_deg</strong>). Tilt can be used only with the Pickup and Dropoff sequences (<strong>actuator_load_sequence</strong> and <strong>actuator_unload_sequence</strong> values 5, 6 and 7)</p>
+</blockquote>
+<h4 id="fork-side-shift"><a class="header" href="#fork-side-shift">Fork side shift</a></h4>
+<p>Fork side shift is an actuator that is able to move forks sideways. There are two ways to use this actuator. </p>
+<ul>
+<li>With the Pickup or Dropoff sequences <strong>actuator_load_sequence</strong> or <strong>actuator_unload_sequence</strong> values 8, 9 and 10</li>
+<li>With Racking and pallet detection features. When pallet is detected on the rack, the side shift can be controlled to the middle of the pallet without moving the AGV. It is moved then back to home position when AGV has picked the pallet and it is driven out from the rack safety distance. See <a href="../../LoadHandling/Racking/Racking-en.html">Racking document</a>. </li>
+</ul>
+<p><img src="./media-en/Sideshift.png" alt="" /></p>
+<blockquote>
+<p>Movement of the side shift from the above perspective. 1. Side shift at the home position (<strong>actuator_side_shift_home_val</strong>). 2. Side shift moved to the right position (<strong>actuator_side_shift_right_val</strong>). 3. Side shift moved to the left position (<strong>actuator_side_shift_left_val</strong>).</p>
+</blockquote>
+<h4 id="auxiliarysecondary-lift"><a class="header" href="#auxiliarysecondary-lift">Auxiliary/Secondary lift</a></h4>
+<p>Can be used as secondary lift for example on a forklift that has main mast and secondary mast and the secondary lift is used to pick up and drop-off pallet. On the supervisor message 1031 defined as secondary lift. Load sequence can be enabled with <strong>actuator_load_sequence</strong> parameter value 12 and unload sequence can be enabled with <strong>actuator_unload_sequence</strong> parameter value 13. Reference and measurement values can be seen from the Monitor Actuator Control form. Main lift is defined with <strong>actuator_type</strong> being 2, meaning that it is controlled as normal reference forklift.</p>
+<ul>
+<li>
+<p>Enable control logic for an auxiliary lift actuator: <strong>actuator_auxiliary_lift_enabled</strong></p>
+</li>
+<li>
+<p>Control type: <strong>actuator_auxiliary_lift_type</strong></p>
+</li>
+<li>
+<p>Tolerance, min and max values. These are used only if <strong>actuator_auxiliary_lift_type</strong> is 2.</p>
+<ul>
+<li><strong>actuator_auxiliary_lift_tolerance_mm</strong></li>
+<li><strong>actuator_auxiliary_lift_min_val_mm</strong></li>
+<li><strong>actuator_auxiliary_lift_max_val_mm</strong></li>
+</ul>
+</li>
+<li>
+<p>Target height to which the lift is controlled, when AGV has a load: <strong>actuator_auxiliary_lift_load_val_mm</strong>. Used only if <strong>actuator_auxiliary_lift_type</strong> is 2.</p>
+</li>
+</ul>
+<p><img src="./media-en/AuxiliaryLift.png" alt="" /></p>
+<blockquote>
+<p>Auxiliary lift example figure. The black color shows the auxiliary lift that can be controlled independently from the main lift. 1. The auxiliary lift at the 0 reference. 2. Main lift is controlled to 1m height. Auxiliary lift is still at 0 height. 3. Auxiliary lift is controlled to the loaded reference height. The main mast is not moved.</p>
+</blockquote>
+<p>Two lifting tables. </p>
+<ul>
+<li>First lift is setup as normal lift: <strong>actuator_type</strong> parameter as 3. </li>
+<li>The second lift is setup as an auxiliary lift: <strong>actuator_auxiliary_lift_enabled</strong> as 1 and <strong>actuator_auxiliary_lift_type</strong> parameter as 3. </li>
+<li>Enable pickup/dropoff action for both lifts with <strong>actuator_auxiliary_lift_as_secondary_lifting_device</strong>. </li>
+<li>Can be tested with Monitor Actuator control form by pressing &quot;Load&quot; button. That will control both lifts to high position. Pressing &quot;Unload&quot; button will control both to low position.</li>
+</ul>
+<p><img src="./media-en/image_two_lifts.png" alt="" /></p>
+<blockquote>
+<p>Two lifting table AGV example. 1. Both lifts at the low position. 2. First lift at the high and second lift at the low position. 3. First lift at the low position and second lift at the high position. 4. Both lifts at the high position.</p>
+</blockquote>
+<h4 id="fork-rotate"><a class="header" href="#fork-rotate">Fork rotate</a></h4>
+<p>Fork rotate is an actuator that is able to rotate the fork from other side to the another side of the AGV, or to the middle pointing forwards. At the moment, only way to control this is with Monitor Actuator control form by setting reference values. For example, VNA truck has this kind of actuator that allows it to drive into narrow aisles and pickup pallet from either side of the aisle. </p>
+<p>Parameters:</p>
+<ul>
+<li>Enable control logic for the rotate actuator: <strong>actuator_rotate_enabled</strong></li>
+<li>Tolerance: <strong>actuator_rotate_tolerance_deg</strong></li>
+<li>Min and max values: <strong>actuator_rotate_min_val_deg</strong> and <strong>actuator_rotate_max_val_deg</strong></li>
+</ul>
+<p><img src="./media-en/Rotate.png" alt="" /></p>
+<blockquote>
+<p>Movement of the rotate actuator from the above percpective. 1. Fork at middle position. 2. Fork at right position. 3. Fork at left position. </p>
+</blockquote>
+<h4 id="scanner-lift"><a class="header" href="#scanner-lift">Scanner lift</a></h4>
+<p>See <a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html">Scanner lift document</a>. </p>
+<h3 id="navithor-machine-tool-parameters-related-to-actuator"><a class="header" href="#navithor-machine-tool-parameters-related-to-actuator">Navithor Machine Tool parameters related to Actuator</a></h3>
+<p>There are few settings on the Machine parameters related to actuators.
+Those settings can be adjusted with Machine Tool application.</p>
+<p><img src="./media-en/MachineTool.png" alt="" /></p>
+<blockquote>
+<p>Machine Tool example with Omni fork AGV.</p>
+</blockquote>
+<p><img src="./media-en/MachineToolActuatorParams.png" alt="" /></p>
+<blockquote>
+<p>Parameters tab that has actuator related parameters.</p>
+</blockquote>
+<ul>
+<li>
+<p>Actuator type</p>
+<ul>
+<li>
+<p>Defines the type of the actuator for NAVITHOR purposes</p>
+<ul>
+<li>
+<p><strong>ACTUATOR_TYPE</strong> -- parameter</p>
+<ul>
+<li>
+<p>0 = No actuator</p>
+</li>
+<li>
+<p>1 = Forklift</p>
+</li>
+<li>
+<p>2 = Lift</p>
+</li>
+<li>
+<p>3 = Hitch (for Tugger-Trailer-type AGVs)</p>
+</li>
+<li>
+<p>4 = Sideloader. Fork that is pointing to the side from the AGV body.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Actuator minimum value</p>
+<ul>
+<li>
+<p>Defines the minimum actuator position from 'floor level' when AGV is not carrying a resource. Default value is 0</p>
+<ul>
+<li>Should be set to the same value with Navitrol parameter <strong>actuator_min_val</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Actuator minimum value with the load</p>
+<ul>
+<li>
+<p>Defines the minimum actuator position when AGV is carrying a resource. Navithor will force the AGV to lift the actuator to at least this height when pickup action is given. This is a limit from the base level ('floor level') and does not affect actuator position when reference is above this value</p>
+<ul>
+<li>Should be set to the same value with Navitrol <strong>actuator_load_min_val</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Load sensor to Navithor</p>
+<ul>
+<li><strong>LOAD_STATUS_KNOWN</strong> defines if AGV has load sensor or not. If this is set to 0, Navithor does not use the load status sent from Navitrol for anything. If this is 1, Navithor can use for example resource mismatch rules or sync the load status based on what Navitrol sends.</li>
+</ul>
+</li>
+<li>
+<p>Fork dimensions (If fork type is selected)</p>
+<ul>
+<li>
+<p><strong>DIM_FORK_GAP</strong> defines the gap between 2 forks. Used for visualization of the fork.</p>
+</li>
+<li>
+<p><strong>DIM_FORK_LENGTH</strong> defines the length of the forks. Used for visualization of the fork.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="./media-en/image5.png" alt="" /></p>
+<blockquote>
+<p>Fork type AGV on the Machine Tool.</p>
+</blockquote>
+<ul>
+<li>Actuator orientation for sideloader
+<ul>
+<li><strong>ACTUATOR_ORIENTATION</strong> (none, right, left) defines where the fork is pointing relative to the AGV body. On the figure down below the front of the AGV is orange color and rear is grey color and the actuator is pointing to the left side.</li>
+</ul>
+</li>
+</ul>
+<p><img src="./media-en/Sideloader.png" alt="" /></p>
+<blockquote>
+<p>Sideloader AGV on the Machine Tool.</p>
+</blockquote>
+<p><strong>Route properties in Navithor Tools related to Actuator</strong></p>
+<p>Height reference for the fork actuator is set to route in Navithor Tools.
+Height can be set separately for both lanes.</p>
+<p>User can also define if the &quot;Strict&quot; feature is ON. Strict means that machine won't drive until measured height of the actuator is the same as the reference height.</p>
+<p><img src="./media-en/ToolsActuatorValue.png" alt="" /></p>
+<blockquote>
+<p>Actuator value property on Navithor Tools.</p>
+</blockquote>
+<p><img src="./media-en/ToolsActuatorStrict.png" alt="" /></p>
+<blockquote>
+<p>Strict actuator property on Navithor Tools.</p>
+</blockquote>
+<p><strong>How to set reference height of the actuator on the route.</strong></p>
+<ol>
+<li>
+<p>Select property &quot;Actuator Value (mm)&quot;</p>
+</li>
+<li>
+<p>Select the lane (Single lane or Both)</p>
+</li>
+<li>
+<p>Select the part of the route to be adjusted</p>
+</li>
+<li>
+<p>Set value for the &quot;Actuator Value (mm)&quot; and press <em>Set Selection</em></p>
+</li>
+</ol>
+<p><strong>How to set Strict height of the actuator on the route.</strong></p>
+<ol>
+<li>
+<p>Select property &quot;Strict Actuator&quot;</p>
+</li>
+<li>
+<p>Select the lane (Single or Both)</p>
+</li>
+<li>
+<p>Select the part of the route to be adjusted</p>
+</li>
+<li>
+<p>Set value for the &quot;Strict Actuator&quot; and press <em>Set Selection</em></p>
+</li>
+</ol>
+<h3 id="actuator-control-form"><a class="header" href="#actuator-control-form">Actuator Control form</a></h3>
+<p>Once actuator control is activated (<strong>actuator_type</strong> &gt; 0) &quot;Actuator control&quot; -form appears under the tab &quot;Navitrol&quot;</p>
+<p><img src="./media-en/Actuator_control_form_reference.png" alt="" /></p>
+<blockquote>
+<p>Actuator control form with reference controlled fork.</p>
+</blockquote>
+<p>With this form it is possible to see the measured and reference values of some actuators and to take actuators to Manual control.</p>
+<h4 id="measurement-reference-and-other-values"><a class="header" href="#measurement-reference-and-other-values">Measurement, reference and other values</a></h4>
+<p>On the left side of the form, there is a list of data. The items are:</p>
+<ul>
+<li>measured value
+<ul>
+<li>Measured height of the fork in mm. With binary actuator, this will be 0 always.</li>
+</ul>
+</li>
+<li>reference value
+<ul>
+<li>Reference or target value for lift. For reference controlled lift, this is the reference height in mm and for binary lift, 0 = no control, 1 = decrease command, 2 = increase command.</li>
+</ul>
+</li>
+<li>activate actuator
+<ul>
+<li>Navitrol command to activate lift. 1 = lift control active, 0 = no control.</li>
+</ul>
+</li>
+<li>increase actuator
+<ul>
+<li>Navitrol command to increase lift. 1 = increase active, 0 = no control. Usually when actuator control is active (activate actuator bit), the direction is told with this or the decrease bit.</li>
+</ul>
+</li>
+<li>decrease actuator
+<ul>
+<li>Navitrol command to decrease lift. 1 = decrease active, 0 = no control. Usually when actuator control is active (activate actuator bit), the direction is told with this or the increase bit.</li>
+</ul>
+</li>
+<li>low limit active
+<ul>
+<li>Lift actuator at the low limit. Not used with reference controlled lift. This comes usually from customer interface and shows if the actuator is at the low limit sensor (actuator at low position).</li>
+</ul>
+</li>
+<li>high limit active
+<ul>
+<li>Lift actuator at the high limit. Not used with reference controlled lift. This comes usually from customer interface and shows if the actuator is at the high limit sensor (actuator at high position).</li>
+</ul>
+</li>
+<li>load sensor used
+<ul>
+<li>If load sensor is in use. This comes usually from customer interface and shows if the AGV has load sensor or not. 1 = sensor is used, 0 = no sensor data. If the number is higher than 1, then the system has more sensors. </li>
+</ul>
+</li>
+<li>load detected
+<ul>
+<li>Load sensor data. If the load sensor detected the load or not. Not used if the &quot;load sensor used&quot; is 0. Usually the value is 0 = load not detected or 1 = load detected. If the &quot;load sensor used&quot; is higher than 1, Navitrol will set load aboard only when the load is detected with all sensors.</li>
+</ul>
+</li>
+<li>scanner height reference
+<ul>
+<li>Scanner lift actuator reference value in mm. Relative to the fork, for example -200 means that the scanner lift target is 200 mm below the fork. </li>
+</ul>
+</li>
+<li>scanner height measurement
+<ul>
+<li>Scanner lift height measurement value in mm. Relative to the fork, for example -200 means that the scanner lift is 200 mm below the fork. </li>
+</ul>
+</li>
+<li>aux lift measurement
+<ul>
+<li>Auxiliary/Secondary lift measurement value in mm. </li>
+</ul>
+</li>
+<li>aux lift reference
+<ul>
+<li>Auxiliary/Secondary lift reference or target value in mm. </li>
+</ul>
+</li>
+<li>rotate meas deg
+<ul>
+<li>Rotate fork measurement value in degrees. 0 = fork pointing forwards, 90 = fork pointing to the left (counter-clockwise), -90 = fork pointing to the right (clockwise) </li>
+</ul>
+</li>
+<li>rotate ref deg
+<ul>
+<li>Rotate fork reference or target value in degrees. </li>
+</ul>
+</li>
+<li>secondary load sensor used
+<ul>
+<li>If load sensor is in use for secondary lift. This comes usually from customer interface and shows if the AGV has load sensor or not. 1 = sensor is used, 0 = no sensor data.</li>
+</ul>
+</li>
+<li>secondary load detected
+<ul>
+<li>Load sensor data for secondary lift. If the load sensor detected the load or not. Not used if the &quot;secondary load sensor used&quot; is 0. 0 = load not detected, 1 = load detected.</li>
+</ul>
+</li>
+</ul>
+<h4 id="buttons"><a class="header" href="#buttons">Buttons</a></h4>
+<ul>
+<li>Start/stop control
+<ul>
+<li>&quot;Take Control&quot; -button
+<ul>
+<li>Enables the Actuator manual control and takes AGV into Manual state.</li>
+</ul>
+</li>
+<li>&quot;Stop&quot; -button
+<ul>
+<li>Stops the manual control and changes state to Standby.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Reference control
+<ul>
+<li>&quot;Numeric up/down&quot;
+<ul>
+<li>Sets the reference value for the actuator</li>
+</ul>
+</li>
+<li>&quot;Send&quot; -button
+<ul>
+<li>Multiple send buttons that will send the current reference value from the left-side numeric up/down to Navitrol. The reference values are not sent if this button is not pressed.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Control buttons
+<ul>
+<li>&quot;Load / Unload&quot; -button. 
+<ul>
+<li>Has text &quot;Load&quot; when Navitrol load status is empty.</li>
+<li>Has text &quot;Unload&quot; when Navitrol load status is loaded.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="how-to-take-manual-control-of-the-actuator"><a class="header" href="#how-to-take-manual-control-of-the-actuator">How to take Manual control of the actuator</a></h4>
+<ol>
+<li>
+<p>Open Actuator Control form</p>
+</li>
+<li>
+<p>Press &quot;Take Control&quot;</p>
+</li>
+<li>
+<p>Set the wanted &quot;Reference value&quot;</p>
+</li>
+<li>
+<p>Press &quot;Send&quot; and system starts to drive the actuator to the given
+reference value.</p>
+</li>
+<li>
+<p>Pressing &quot;Stop&quot; button will stop the Manual control.</p>
+</li>
+</ol>
+<h4 id="pickupdropoff-sequence"><a class="header" href="#pickupdropoff-sequence">Pickup/Dropoff sequence</a></h4>
+<p>&quot;Load&quot; -button will start the pickup sequence as described in &quot;Pickup and Dropoff sequences&quot; chapter. This button can be clicked once the &quot;Take Control&quot; is pressed. After the pickup sequence is ready, the button text is changed to &quot;Unload&quot;. Pressing that button will start dropoff sequence. This button is useful for example testing the pickup and dropoff sequences if they are something else than default.</p>
+<h4 id="other-actuator-controls"><a class="header" href="#other-actuator-controls">Other actuator controls</a></h4>
+<p>Binary actuator can be enabled with <strong>actuator_type</strong> 3. Then its possible to command the lift to increase or decrease. Then the Actuator Control form will look like this:</p>
+<p><img src="./media-en/Actuator_control_form_binary.png" alt="" /></p>
+<blockquote>
+<p>Actuator control form with binary actuator</p>
+</blockquote>
+<p>Scanner lift control can be enabled with <strong>actuator_scanner_lift_enabled</strong> parameter as 1. Monitor will show &quot;Scanner Height Reference value&quot; where scanner height reference value in mm can be set. </p>
+<p>Auxiliary/Secondary lift control can be enabled with <strong>actuator_auxiliary_lift_enabled</strong> parameter as 1. Monitor will show &quot;Aux lift ref&quot; where auxiliry/secondary lift reference value in mm can be set. </p>
+<p>Rotate fork control can be enabled with <strong>actuator_rotate_enabled</strong> parameter as 1. Monitor will show &quot;Rotate ref&quot; where rotate fork reference value in degrees can be set. </p>
+<p><img src="./media-en/Actuator_control_form_all.png" alt="" /></p>
+<blockquote>
+<p>Actuator control form with all active actuators</p>
+</blockquote>
+<h3 id="ethernet-navithor-server----information-to-navithor"><a class="header" href="#ethernet-navithor-server----information-to-navithor">Ethernet Navithor Server -- Information to Navithor</a></h3>
+<p>Actuator related information is passed from Navitrol to Navithor by mapping the I/O information to the machine profile. These are not recommended to use anymore after Navithor 2.x.x.x. </p>
+<p>Both params.txt and Machine parameter.xml are used for mapping.</p>
+<p><img src="./media-en/image9.png" alt="" /></p>
+<blockquote>
+<p>I/0 binary mapping on Machine Tool</p>
+</blockquote>
+<ul>
+<li>
+<p>Actuator Position measurement</p>
+<ul>
+<li>
+<p>Navitrol parameters: <strong>actuator_val_io</strong></p>
+</li>
+<li>
+<p>Machine Tool: ActuatorPosition : i0...iN</p>
+</li>
+<li>
+<p>Example:</p>
+<ul>
+<li>Actuator height shall be passed to Navithor with the first value of the Integer I/O vector: <strong>actuator_val_io</strong> = 0 and ActuatorPosition = i0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Actuator Load detected information</p>
+<ul>
+<li>
+<p>Navitrol parameters: <strong>actuator_load_det_io</strong></p>
+</li>
+<li>
+<p>Machine Tool: LoadDetected : b0...bN</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Actuator Load status information</p>
+<ul>
+<li>Navitrol parameters: <strong>actuator_trust_io_load_status</strong> and <strong>actuator_load_status_io</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="select-source-for-actuator-inputs"><a class="header" href="#select-source-for-actuator-inputs">Select source for actuator inputs</a></h3>
+<p>Typically the actuator inputs of a machine come from one interface/source to Navitrol. However, when the actuator inputs come from multiple different sources, then there can be some ambiguity which input Navitrol uses. For example some machine type might have read the inputs for a lift from custom CAN interface before, but for a new project it is desired that the actuator inputs come from the Ethernet supervisor interface.</p>
+<p>To define the actuator input source explicitly, the following parameters can be set:</p>
+<ul>
+<li>I, actuator_input_source_arr[]</li>
+<li>I, actuator_input_type_arr[]</li>
+</ul>
+<p>If all inputs of actuators are desired to come from one source only, then only <strong>actuator_input_source_arr</strong> needs to be set.
+For example to read all the inputs from Supervisor status 3002 actuator section set:</p>
+<ul>
+<li>I, actuator_input_source_arr[0], 2 # ... 2 = Supervisor status section</li>
+</ul>
+<p>User can also set different sources for different actuator types. For example if Navitrol has previously read fork's lift and reach input from custom CAN interface, but now the fork's lift input needs to be read from Ethernet supervisor interface, following parameters can be set:<br />
+<em>Disclaimer: All configurations not supported. Consult Navitec whether the desired configuration is supported.</em></p>
+<ul>
+<li>I, actuator_input_source_arr[0], 2 # ... 2 = Supervisor status section</li>
+<li>I, actuator_input_source_arr[1], 10 # ... 10 = Custom CAN</li>
+<li>I, actuator_input_type_arr[0], 1 # ... 1 = Lift</li>
+<li>I, actuator_input_type_arr[1], 3 # ... 3 = Reach</li>
+</ul>
+<hr />
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="most-common-issues"><a class="header" href="#most-common-issues">Most common issues</a></h3>
+<h4 id="monitor-doesnt-show-correct-actuator-measurement"><a class="header" href="#monitor-doesnt-show-correct-actuator-measurement">Monitor doesn't show correct actuator measurement</a></h4>
+<ul>
+<li>Check that <strong>actuator_type</strong> parameter is 2.</li>
+<li>Check control interface that Navitrol receives correct measurement
+<ul>
+<li>Ethernet control with supervisor status message ID 3002 actuator section 1: 
+<ul>
+<li>Set parameter <strong>log_veh_inte_eth</strong> to 1</li>
+<li>Check this kind of log line: &quot;veh_inte_ethernet: Supervisor actuator val 0 act 0, lowL 0 highL 0 loadSen 0 loadDet 0&quot;</li>
+<li>This log line shows what data Navitrol receives via supervisor message. The values are: 
+<ul>
+<li>val = Actuator height in mm </li>
+<li>act = Actuator is active (0 or 1)</li>
+<li>lowL = Low limit sensor (0 or 1) </li>
+<li>highL = High limit sensor (0 or 1) </li>
+<li>LoadSen = Load sensor is in use (0 or 1) </li>
+<li>LoadDet = Load sensor value (0 or 1)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ethernet control with supervisor message ID 1031/1131
+<ul>
+<li>Set parameter <strong>log_veh_inte_eth</strong> to 2</li>
+<li>Check these kind of log lines: &quot;ETH_CTRL_IN 1031&quot;
+<ul>
+<li>Verify that the correct actuator type and actuator measured position is received.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CAN Encoder. Schwarzmueller or Curtis
+<ul>
+<li>Check this log line: &quot;HAL_CopyActuatorMeasToShared&quot;. It should show the actuator measured height.</li>
+<li>If this line is not shown, check that this parameter is enabled: <strong>can_actuator_ctrl_model</strong></li>
+<li>Check that these parameters are correct: 
+<ul>
+<li><strong>can_enc_actuator_calib_val_enc</strong></li>
+<li><strong>can_enc_actuator_calib_val_act</strong></li>
+<li><strong>can_enc_actuator_pulses_per_rev</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="actuator-doesnt-move-to-reference-value"><a class="header" href="#actuator-doesnt-move-to-reference-value">Actuator doesn't move to reference value</a></h4>
+<ul>
+<li>Check that <strong>actuator_type</strong> parameter is 2.</li>
+<li>Check control interface that Navitrol sends out the correct reference
+<ul>
+<li>Ethernet control with supervisor status message ID 3002 actuator section 1: 
+<ul>
+<li>Set parameter <strong>log_veh_inte_eth</strong> to 1</li>
+<li>Check this kind of log line: &quot;veh_inte_ethernet: Send actuator refVal 0 act 0 inc 0 dec 0 bin1 0 bin2 0 bin3 0 bin4 0&quot;</li>
+<li>This log line shows what data Navitrol sends out via supervisor message. The values are: 
+<ul>
+<li>refVal = Actuator reference in mm </li>
+<li>act = Activate command (0 or 1) </li>
+<li>inc = Increase command (0 or 1) </li>
+<li>dec = Decrease command (0 or 1) </li>
+<li>bin1 = Bitmapped value (bit 0: activate, bit 1: increase and bit 2: decrease) </li>
+<li>bin2 = Bitmapped value (reserved for future use) </li>
+<li>bin3 = Bitmapped value (bit 0: stop and hold active)</li>
+<li>bin4 = Bitmapped value (reserved for future use) </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ethernet control with supervisor message ID 1031/1131
+<ul>
+<li>Set parameter <strong>log_veh_inte_eth</strong> to 2</li>
+<li>Check these kind of log lines: &quot;ETH_CTRL_OUT 1131&quot;
+<ul>
+<li>Verify that the correct actuator type is sent out and there is some reference value.</li>
+<li>If the numOfActuators is 0, check that the correct actuator is enabled and correct control type is set on params.txt file. Check also that Navitrol receives actuator data on this log line: &quot;ETH_CTRL_IN 1031&quot;. Navitrol is not answering if it doesn't receive anything.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CAN Encoder. Schwarzmueller or Curtis
+<ul>
+<li>Check this log line: &quot;HAL_ControlSingleCanActuatorRPM&quot;. It should show actuator rpm and reference values.</li>
+<li>If this line is not shown, check that this parameter is enabled: <strong>can_actuator_ctrl_model</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="actuator-overshoots-the-reference"><a class="header" href="#actuator-overshoots-the-reference">Actuator overshoots the reference</a></h4>
+<ul>
+<li>Check that <strong>actuator_outer_tolerance_mm</strong> has valid value. Increase if possible.</li>
+<li>Try to decrease <strong>actuator_inner_tolerance_timer_ms</strong>, if it has some value.</li>
+<li>Try to decrease <strong>actuator_inner_tolerance_mm</strong>, if it is non-negative.</li>
+</ul>
+<h4 id="actuator-does-not-move-when-driving-out-from-drop-off-location"><a class="header" href="#actuator-does-not-move-when-driving-out-from-drop-off-location">Actuator does not move when driving out from drop-off location</a></h4>
+<p>Check the distance to the drop-off location and check if any of these parameters are higher than that distance: </p>
+<ul>
+<li><strong>docking_limit_leave_speed_and_actuator_height_dist</strong></li>
+<li><strong>actuator_keep_height_after_dropoff_aborted_distance_m</strong></li>
+</ul>
+<p>Check this kind of log line: &quot;Actuator use not allowed before driven 1.2 m distance from the last unload location. Dist: 0.5. Act: 0&quot;</p>
+<ul>
+<li>This is related to the <strong>docking_limit_leave_speed_and_actuator_height_dist</strong> parameter. The actuator control is not allowed until AGV has driven this parameter distance from last unload point.</li>
+</ul>
+<h4 id="agv-doesnt-go-to-standby-when-arriving-to-pickup-or-dropoff-symbolic-point"><a class="header" href="#agv-doesnt-go-to-standby-when-arriving-to-pickup-or-dropoff-symbolic-point">AGV doesn't go to Standby when arriving to Pickup or Dropoff symbolic point</a></h4>
+<p>AGV will go to Standby when actuator control is finished, meaning that actuator is within tolerance from the reference value or it is at the target low/high limit and actuator is not active on AGV system. Check the communication that actuator is not active on the AGV system.</p>
+<p>Check if this log line is shown: &quot;Actuator not within limits or is active, move not allowed (inLimits: 0, strictFork: 0, softLimit: 0, actActive: 1&quot;. This indicates if actuator is not within tolerance or it is still active from customer interfaces.</p>
+<h4 id="agv-stops-to-pickup-buffer"><a class="header" href="#agv-stops-to-pickup-buffer">AGV stops to Pickup buffer</a></h4>
+<p>Check these parameters:</p>
+<ul>
+<li><strong>disable_safety_distance_on_buffer</strong> is positive.</li>
+<li><strong>load_buffer_mode</strong> is 1 or 2. </li>
+<li><strong>buffer_stop_AGV_when_decreasing_fork_before_load</strong> is 1. This is 1 by default, so if this parameter is not on the params.txt file, it is set.</li>
+</ul>
+<p>If those parameters are set, the AGV is stopped, because the fork is trying to go to the floor level, but for some reason can't finish the action. This <strong>buffer_stop_AGV_when_decreasing_fork_before_load</strong> will stop the AGV until the fork has reached the floor level (<strong>actuator_min_val</strong>). </p>
+<p>Check the value of <strong>actuator_min_val</strong> and that actuator is at that height. Another option is to disable the stop check by setting the <strong>buffer_stop_AGV_when_decreasing_fork_before_load</strong> to 0. </p>
+<h4 id="load-sensor-conflict-with-navithor-after-pickupdropoff-aborted"><a class="header" href="#load-sensor-conflict-with-navithor-after-pickupdropoff-aborted">Load sensor conflict with navithor after Pickup/Dropoff aborted</a></h4>
+<p>Navithor load status is kept on wrong value if Pickup/Dropoff is not completed correctly. It can be reset to previous value on abort if this parameter is set <strong>navithor_load_status_reset_on_pickup_dropoff_abort</strong> = 1</p>
+<h3 id="errors-and-warnings"><a class="header" href="#errors-and-warnings">Errors and warnings</a></h3>
+<h4 id="warning_pos_cont_fork_war"><a class="header" href="#warning_pos_cont_fork_war">WARNING_POS_CONT_FORK_WAR</a></h4>
+<p>This warning is set when AGV is in Auto state and</p>
+<ul>
+<li>some actuator is moving and AGV is inside strict route property or</li>
+<li>reference controlled fork (<strong>actuator_type</strong> = 2) measurement value goes below <strong>ACTUATOR_MIN_VAL</strong> machine_type parameter or</li>
+<li>binary controlled actuator (<strong>actuator_type</strong> = 3) is commanded to increase but highlimit bit is not active</li>
+</ul>
+<p><strong>How to recover:</strong> This is not critical warning, but if it does not reset automatically, check that there are no active actuators and the binary actuator highlimit is set if it is commanded to increase. This should be reset automatically when all actuators are within limits.</p>
+<h4 id="error_pos_cont_fork_time_err"><a class="header" href="#error_pos_cont_fork_time_err">ERROR_POS_CONT_FORK_TIME_ERR</a></h4>
+<p>This error is triggered if actuator control is not ready within time of <strong>actuator_timer_s</strong> parameter.</p>
+<p><strong>How to recover:</strong> Actuator moves too slow to the target value. Try to increase actuator speed or increase this timer parameter.This error has timeout of 20 seconds, so it is reset automatically.</p>
+<h4 id="error_actuator_use_not_allowed"><a class="header" href="#error_actuator_use_not_allowed">ERROR_ACTUATOR_USE_NOT_ALLOWED</a></h4>
+<p>This error is triggered if <strong>actuator_only_on_sp</strong> is enabled, pickup or dropoff action is active and</p>
+<ul>
+<li>AGV is not at any symbolic point</li>
+<li>Actuator is tried to decrease on Pickup symbolic point</li>
+<li>Actuator is tried to increase on Dropoff symbolic point</li>
+<li>AGV is further away from symbolic point than <strong>actuator_max_dist_err_from_sp</strong>.</li>
+</ul>
+<p>This error is also triggered if <strong>actuator_check_load_sensor_status_before_loading</strong> is 1 and <strong>racking_mode</strong> is 1 and load sensor does not detect the load while doing pickup action.</p>
+<p><strong>How to recover:</strong> Check the conditions for this error and check if any of those fullfills. This error has timeout of 20 seconds, so it is reset automatically.</p>
+<h4 id="warning_actuator_use_not_allowed"><a class="header" href="#warning_actuator_use_not_allowed">WARNING_ACTUATOR_USE_NOT_ALLOWED</a></h4>
+<p>This warning is triggered if <strong>actuator_only_on_sp</strong> is enabled, pickup or dropoff action is active and</p>
+<ul>
+<li>AGV is not at any symbolic point</li>
+<li>Actuator is tried to decrease on Pickup symbolic point</li>
+<li>Actuator is tried to increase on Dropoff symbolic point</li>
+<li>AGV is further away from symbolic point than <strong>actuator_max_dist_err_from_sp</strong>.</li>
+</ul>
+<p><strong>How to recover:</strong> Check the conditions for this warning and check if any of those fullfills. This warning is reset only when Pickup or Dropoff action is finished.</p>
+<h4 id="warning_sensor_failure_in_loading"><a class="header" href="#warning_sensor_failure_in_loading">WARNING_SENSOR_FAILURE_IN_LOADING</a></h4>
+<p>Load sensor does not detect the load while doing pickup. This warning is reset if load sensor detects the load or AGV goes to STANDBY state. AGV is stopped from moving until the warning is reset. This error check can be disabled with the <strong>actuator_check_load_sensor_status_before_loading</strong> parameter if the load sensor cannot be used while doing the pickup.</p>
+<p><strong>How to recover:</strong> Check that pallet is firmly placed on the forks and move it closer to the sensor if possible. Check the sensor that it reports correct data.</p>
+<h4 id="error_load_sensor_conflict_after_pickup"><a class="header" href="#error_load_sensor_conflict_after_pickup">ERROR_LOAD_SENSOR_CONFLICT_AFTER_PICKUP</a></h4>
+<p>Load sensor doesn't detect the load after pickup action. This error is fatal error so it has to be reset by customer.
+This error check can be disabled with the <strong>actuator_check_load_sensor_status_after_loading</strong> parameter if the sensor cannot be used for this kind of check.</p>
+<p><strong>How to recover:</strong> Check that pallet is firmly placed on the forks and move it closer to the sensor if possible. Check the sensor that it reports correct data. Reset the error from Client, Monitor or Supervisor interface.</p>
+<h4 id="error_load_sensor_conflict_after_dropoff"><a class="header" href="#error_load_sensor_conflict_after_dropoff">ERROR_LOAD_SENSOR_CONFLICT_AFTER_DROPOFF</a></h4>
+<p>Load sensor detects the load after drop-off action has been completed. This error is fatal error so it has to be reset by customer.
+This error check can be disabled with the <strong>actuator_check_load_sensor_status_after_unloading</strong> parameter if the sensor cannot be used for this kind of check.</p>
+<p><strong>How to recover:</strong> Check the sensor that it reports correct data. Reset the error from Client, Monitor or Supervisor interface.</p>
+<h4 id="error_load_sensor_conflict_with_navithor"><a class="header" href="#error_load_sensor_conflict_with_navithor">ERROR_LOAD_SENSOR_CONFLICT_WITH_NAVITHOR</a></h4>
+<p>Load sensor and fleet control reported load status does not match. Error is reset after there is no conflict. Two modes that can be selected with <strong>load_sensor_conflict_mode</strong> parameter.</p>
+<p><strong>Mode 1:</strong> Check is done in three different situations:</p>
+<ol>
+<li>At <strong>actuator_disable_load_sensor_distance</strong> distance before AGV drives to the Pickup or Dropoff point.</li>
+<li>At the beginning of Pickup or Dropoff buffer.</li>
+<li>When AGV state changes from Manual to Standby.</li>
+</ol>
+<p>On situation 1 the check starts when AGV is at <strong>actuator_disable_load_sensor_distance</strong> distance from the Pickup or Dropoff point and ends when AGV has driven <strong>min_distance_to_check_the_load_sensor</strong> distance. On situation 2 the check starts when AGV is at the beginning of Pickup or Dropoff buffer and ends when AGV has driven <strong>min_distance_to_check_the_load_sensor</strong> distance. There is an option to force AGV to go to Manual state if this error is triggered. That can be done by setting this parameter: <strong>load_sensor_conflict_goes_to_manual</strong>. There is also parameter that defines what source is used for reset the manual state: <strong>load_sensor_conflict_manual_reset_source</strong>.</p>
+<p><strong>Mode 2:</strong> Check is done when AGV is in Auto state. Uses <strong>load_sensor_status_change_timer_ms</strong> parameter as a timer to avoid glitches. Not checked if AGV is closer to the Pickup or Dropoff symbolic point than <strong>actuator_disable_load_sensor_distance</strong>.</p>
+<p><strong>How to recover:</strong> Check that pallet is firmly placed on the forks and move it closer to the sensor if possible. Check the sensor that it reports correct data. Check Navithor Client that it has correct resource status. If Navithor has incorrect status do pickup/dropoff action from Client or remove/add resource from the AGV to get the status correct.</p>
+<h4 id="error_load_sensor_status_changed_in_auto"><a class="header" href="#error_load_sensor_status_changed_in_auto">ERROR_LOAD_SENSOR_STATUS_CHANGED_IN_AUTO</a></h4>
+<p>Load sensor status changes in Auto state. Fatal error that requires customer to reset it. Timer is used to avoid glitches taken into account, meaning that if the sensor just quickly changes to 0 and the back to 1, it does not raise an error. Timer timeout can be set with <strong>load_sensor_status_change_timer_ms</strong> parameter.</p>
+<p><strong>How to recover:</strong> Move pallet correctly to the sensor and check that load sensor reports correct value. Error can be reset from Client, Monitor or Supervisor interface after the sensor is checked.</p>
+<h4 id="error_actuator_safe_zone_violation"><a class="header" href="#error_actuator_safe_zone_violation">ERROR_ACTUATOR_SAFE_ZONE_VIOLATION</a></h4>
+<p>Actuator is too far from the reference when AGV is inside <em>Actuator safety zone</em>. This check uses <strong>actuator_outer_tolerance_mm</strong> for checking the difference between reference and measured values. If the AGV is doing Pickup or Dropoff actions <strong>actuator_load_aboard_offset_mm</strong> parameter is used with the tolerance parameter.</p>
+<p><strong>How to recover:</strong> Check that the actuator is close enough to the reference. If it drifts slowly or is very close to the outer tolerance, that might trigger this error. This is fatal error that can be reset from Client, Monitor or Supervisor interface after the reason is clear.</p>
+<h4 id="error_load_unload_height_too_low"><a class="header" href="#error_load_unload_height_too_low">ERROR_LOAD_UNLOAD_HEIGHT_TOO_LOW</a></h4>
+<p>Actuator reference is too low during Pickup or Dropoff actions. This error is used only with reference controlled fork (<strong>actuator_type</strong> = 2)</p>
+<ul>
+<li>Dropoff: Actuator reference is below <strong>actuator_min_val</strong> - <strong>actuator_outer_tolerance_mm</strong></li>
+<li>Pickup: Actuator reference is below the current height - <strong>actuator_outer_tolerance_mm</strong>. Meaning that actuator is tried to decrease when doing pickup.</li>
+</ul>
+<p><strong>How to recover:</strong> </p>
+<p>Check these parameters:</p>
+<ul>
+<li><strong>actuator_min_val</strong></li>
+<li><strong>actuator_outer_tolerance_mm</strong></li>
+<li><strong>ACTUATOR_MIN_VAL</strong> from machine_type parameter file</li>
+<li><strong>ACTUATOR_LOAD_MIN_VAL</strong> from machine_type parameter file</li>
+<li>Route height where the Pickup or Dropoff is done</li>
+</ul>
+<p>This log line shows the minimum allowed height: &quot;lowest allowed height&quot;.</p>
+<p>This is fatal error that can be reset from Client, Monitor or Supervisor interface after the reason is clear.</p>
+<h3 id="advanced-troubleshooting"><a class="header" href="#advanced-troubleshooting">Advanced troubleshooting</a></h3>
+<h4 id="useful-log-lines"><a class="header" href="#useful-log-lines">Useful log lines</a></h4>
+<p>Load statuses. This log line shows load statuses and some load sensor related information. This log line is visible only if there is load sensor used on the system.</p>
+<ul>
+<li>&quot;Actuator check load sensor: loadState 0 driveToLoad 0 driveAway 0 end 0 loadAboard 0 loadSensor 1 loadDet 0 navithorLoad 1, stateChanged 0 loadDetScannerHeightInHome 0&quot;
+<ul>
+<li>loadState = AGV in LOAD state </li>
+<li>driveToLoad = AGV is closer to the end symbolic point than <strong>actuator_disable_load_sensor_distance</strong></li>
+<li>driveAway = AGV is closer to the last symbolic point than <strong>actuator_disable_load_sensor_distance</strong></li>
+<li>end = AGV arrived to the trajectory end</li>
+<li>loadAboard = Navitrol load status (bitwise number), 0 = empty, 1 = main lift has load, 2 = secondary lift has load, 3 = both lifts has load.</li>
+<li>loadSensor = Load sensor in use</li>
+<li>loadDet = Load sensor status. 0 = no load detected, 1 = one sensor detects the load, 2 = two sensors detects the load...</li>
+<li>navithoLoad = Navithor load status. 0 = unknown, 1 = empty, 4 = full.</li>
+<li>stateChanged = AGV state changed from Manual to Auto</li>
+<li>loadDetScannerHeightInHome = Not used for anything</li>
+</ul>
+</li>
+</ul>
+<p>Lift actuator control. This log is active when AGV is not in Standby state.</p>
+<ul>
+<li>&quot;Actuator control: mcsForkMin 0, forkMin 0, forkLoadMin 0, targetVal 100, curVal 0, activate 1, incAct 1, decAct 0, strictFork: 0&quot;
+<ul>
+<li>mcsForkMin = Minimum fork height from Navithor. Same as <strong>ACTUATOR_MIN_VAL</strong> from machine_type parameter file.</li>
+<li>forkMin = Parameter <strong>actuator_min_val</strong></li>
+<li>forkLoadMin = Parameter <strong>actuator_load_min_val</strong></li>
+<li>targetVal = Fork reference value in mm or binary command (0 = no control, 1 = decrease, 2 = increase)</li>
+<li>curVal = Fork measurement in mm</li>
+<li>activate = 0 = Actuator control not active, 1 = Actuator control active</li>
+<li>incAct = 0 = Actuator not commanded to increase, 1 = Actuator commanded to increase</li>
+<li>decAct = 0 = Actuator not commanded to decrease, 1 = Actuator commanded to decrease</li>
+<li>strictFork = 0 = AGV is not inside strict property, 1 = AGV is inside strict property</li>
+</ul>
+</li>
+</ul>
+<p>Auto state lift actuator.</p>
+<ul>
+<li>&quot;Act: Auto_state, load sensor in use 0, load det 0, load aboard 0, mcsForkMinH 0, fork_min_val 0, targetVal 100&quot;
+<ul>
+<li>Load sensor in use = Load sensor in use or not.</li>
+<li>load det = Load sensor value</li>
+<li>load aboard = Navitrol load status</li>
+<li>mcsForkMinH = Minimum fork height from Navithor. Same as <strong>ACTUATOR_MIN_VAL</strong> from machine_type parameter file.</li>
+<li>fork_min_val = Parameter <strong>actuator_load_min_val</strong></li>
+<li>targetVal = Fork reference value in mm or binary command (0 = no control, 1 = decrease, 2 = increase)</li>
+</ul>
+</li>
+</ul>
+<p>Other actuator controls in Auto state.</p>
+<ul>
+<li>&quot;Actuator control general: type %s, curVal 0.0, targetVal 50.0 (%s), activate 0&quot;
+<ul>
+<li>type = Actuator type as string</li>
+<li>curVal = Actuator measurement value</li>
+<li>targetVal = Actuator reference value</li>
+<li>(%s) = String to tell if actuator values are in degrees (deg) or millimeters (mm).</li>
+<li>activate = Actuator control active</li>
+</ul>
+</li>
+</ul>
+<p>Other actuator controls in Load state.</p>
+<ul>
+<li>&quot;Actuator control load sequence 1 for type %s: curVal 0.0, targetVal 10.0 (%s), activate 0, timer 100 ms&quot;
+<ul>
+<li>load sequence = Sequence number. See &quot;Pickup and Dropoff sequences&quot; chapter.</li>
+<li>type = Actuator type as string</li>
+<li>curVal = Actuator measurement value</li>
+<li>targetVal = Actuator reference value</li>
+<li>(%s) = String to tell if actuator values are in degrees (deg) or millimeters (mm).</li>
+<li>activate = Actuator is requested to be active</li>
+<li>timer = Time passed since actuator control has started in ms.</li>
+</ul>
+</li>
+</ul>
+<p>Load sensor data. Logged in every state.</p>
+<ul>
+<li>&quot;Actuator loadSenUsed 0 loadDet 0&quot;
+<ul>
+<li>loadSenUsed = Load sensors in use</li>
+<li>loadDet = Load detected with sensors</li>
+</ul>
+</li>
+</ul>
+<p>All actuators in the system. Logged in every state. If some actuator is missing, check the communication that Navitrol receives data from all actuators.</p>
+<ul>
+<li>&quot;CommonActuator 0 type %s, source %d, meas 0.0 (%s)&quot;
+<ul>
+<li>0 = This first number is only array index for actuator</li>
+<li>type = Actuator type as string</li>
+<li>source = Source number where the actuator data comes in to the system.</li>
+<li>meas = Actuator measurement value</li>
+<li>(%s) = String to tell if actuator values are in degrees (deg) or millimeters (mm).</li>
+</ul>
+</li>
+</ul>
+<p>Lift actuator control in Manual mode.</p>
+<ul>
+<li>&quot;Actuator control:  targetVal 100, curVal 0, activate 1, incAct 1, decAct 0&quot;
+<ul>
+<li>targetVal = Fork reference value in mm or binary command</li>
+<li>curVal = Fork measurement in mm</li>
+<li>activate = 0 = Actuator control not active, 1 = Actuator control active</li>
+<li>incAct = 0 = Actuator not commanded to increase, 1 = Actuator commanded to increase</li>
+<li>decAct = 0 = Actuator not commanded to decrease, 1 = Actuator commanded to decrease</li>
+</ul>
+</li>
+</ul>
+<p>Lift actuator is active.</p>
+<ul>
+<li>&quot;Actuator not within limits or is active, move not allowed (inLimits: 0, strictFork: 0, softLimit: 0, actActive: 1&quot;
+<ul>
+<li>inLimits = 1 when actuator is within tolerances</li>
+<li>strictFork = 1 when AGV is within strict property</li>
+<li>softLimit = Fork is below <strong>ACTUATOR_MIN_VAL</strong> or below <strong>actuator_load_min_val</strong> when AGV has load or binary lift is not at high limit when it should be.</li>
+<li>actActive = Actuator active. This info comes via customer interface.</li>
+</ul>
+</li>
+</ul>
+<h4 id="useful-log-lines-for-communication"><a class="header" href="#useful-log-lines-for-communication">Useful log lines for communication</a></h4>
+<p>Ethernet control with supervisor status message ID 3002 actuator section 1.
+See <a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html">Supervisor document</a>.</p>
+<p>Incoming message to Navitrol:</p>
+<ul>
+<li>Set parameter <strong>log_veh_inte_eth</strong> to 1</li>
+<li>&quot;veh_inte_ethernet: Supervisor actuator val 0 act 0, lowL 0 highL 0 loadSen 0 loadDet 0&quot;
+<ul>
+<li>val = Actuator height in mm </li>
+<li>act = Actuator is active (0 or 1)</li>
+<li>lowL = Low limit sensor (0 or 1) </li>
+<li>highL = High limit sensor (0 or 1) </li>
+<li>LoadSen = Load sensor is in use (0 or 1) </li>
+<li>LoadDet = Load sensor value (0 or 1)</li>
+</ul>
+</li>
+</ul>
+<p>Outcoming message from Navitrol:</p>
+<ul>
+<li>&quot;veh_inte_ethernet: Send actuator refVal 0 act 0 inc 0 dec 0 bin1 0 bin2 0 bin3 0 bin4 0&quot;
+<ul>
+<li>refVal = Actuator reference in mm </li>
+<li>act = Activate command (0 or 1) </li>
+<li>inc = Increase command (0 or 1) </li>
+<li>dec = Decrease command (0 or 1) </li>
+<li>bin1 = Bitmapped value (bit 0: activate, bit 1: increase and bit 2: decrease) </li>
+<li>bin2 = Bitmapped value (reserved for future use) </li>
+<li>bin3 = Bitmapped value (bit 0: stop and hold active)</li>
+<li>bin4 = Bitmapped value (reserved for future use) </li>
+</ul>
+</li>
+</ul>
+<p>Ethernet control with supervisor message ID 1031/1131. See <a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html">Supervisor document</a>.</p>
+<p>Incoming message to Navitrol:</p>
+<ul>
+<li>
+<p>Set parameter <strong>log_veh_inte_eth</strong> to 2</p>
+</li>
+<li>
+<p>&quot;ETH_CTRL_IN 1031: MsgNum 123, numOfActs 2, numOfMeas 0, targetSensorsAvailable 0, targetSensors 0, safeSensorsAvailable 0, safeSensors 0&quot;</p>
+<ul>
+<li>MsgNum = Message number, should be increased by one for each message</li>
+<li>numOfActs = Number of actuators to control</li>
+<li>numOfMeas = Number of measurement sensors</li>
+<li>targetSensorsAvailable = Bitmap value of available sensors</li>
+<li>targetSensors = Bitmap value of active sensors</li>
+<li>safeSensorsAvailable = Bitmap value of available safety sensors</li>
+<li>safeSensors = Bitmap value of active safety sensors</li>
+</ul>
+</li>
+<li>
+<p>Actuator array. Logged if numOfActs is greater than 0.</p>
+</li>
+<li>
+<p>&quot;ETH_CTRL_IN 1031: Actuators[0] requestedControl 2, status 1, actPos 50, reserved 0&quot;</p>
+<ul>
+<li>Actuators[i] = Array index of actuator</li>
+<li>requestedControl = Actuator type to control.</li>
+<li>status = Actuator status.</li>
+<li>actPos = Actuator mesurement in mm or 0.1 degrees.</li>
+<li>reserved = Reserved for future use.</li>
+</ul>
+</li>
+<li>
+<p>Measurement sensors array. Logged if numOfMeas is greater than 0.</p>
+</li>
+<li>
+<p>&quot;ETH_CTRL_IN 1031: Measurements[0] type 1, measVal 0&quot;</p>
+<ul>
+<li>Measurements[i] = Array index of sensor.</li>
+<li>type = Sensor type.</li>
+<li>measVal = Measurement value. Distances in millimeters, angles in 0.1 degrees, weights in kilograms.</li>
+</ul>
+</li>
+</ul>
+<p>Outcoming message from Navitrol:</p>
+<ul>
+<li>
+<p>Set parameter <strong>log_veh_inte_eth</strong> to 2</p>
+</li>
+<li>
+<p>&quot;ETH_CTRL_OUT 1131: sent num 124, msgStatus 0, numOfActuators 2&quot;</p>
+<ul>
+<li>sent num = Message number, should be increased by one for each message</li>
+<li>msgStatus = 0 – ok, 1 – configuration error (an actuator section is sent with status bit 15 set)</li>
+<li>numOfActuators = Number of actuators that Navitrol controls</li>
+</ul>
+</li>
+<li>
+<p>Actuator array. Logged if numOfActuators is greater than 0.</p>
+</li>
+<li>
+<p>&quot;ETH_CTRL_OUT 1131: type 1, refVal 150, binary 1&quot;</p>
+<ul>
+<li>type = Actuator type</li>
+<li>refVal = Actuator reference value in millimeters or 0.1 degrees</li>
+<li>binary = Actuator status. Bit0 = activate, bit1 = increase, bit2 = decrease</li>
+</ul>
+</li>
+</ul>
+<p>CAN Encoder. Schwarzmueller or Curtis</p>
+<p>Incoming mesage to Navitrol:</p>
+<ul>
+<li>Check that this parameter is enabled: <strong>can_actuator_ctrl_model</strong></li>
+<li>&quot;HAL_CopyActuatorMeasToShared: Actuator 0 measured value 50 mm&quot;
+<ul>
+<li>Actuator = Actuator index</li>
+<li>measured value = Measured value in mm.</li>
+</ul>
+</li>
+</ul>
+<p>Outcoming message from Navitrol:</p>
+<ul>
+<li>
+<p>Fork up, using rpm.</p>
+</li>
+<li>
+<p>&quot;HAL_ControlSingleCanActuatorRPM: Actuator 0 control: refval 0.5, activate 1, outputRPM 500, maxOutputRPM 1000,  brakes 0&quot;.</p>
+<ul>
+<li>Actuator = Actuator index</li>
+<li>refVal = Reference value in m</li>
+<li>activate = If actuator should be activated</li>
+<li>outputRPM = RPM value out</li>
+<li>maxOutputRPM = Maximum RPM value. <strong>actuator_ctrl_max_output</strong> parameter.</li>
+<li>brakes = Brakes enabled or not</li>
+</ul>
+</li>
+<li>
+<p>Fork down, using proportional valve.</p>
+</li>
+<li>
+<p>&quot;Actuator p control, out 500, err 10, Pout 1.5, Iout 1000, min 0, max 1000&quot;</p>
+<ul>
+<li>out = Output value for valve</li>
+<li>err = Error value for control</li>
+<li>Pout = Proportional value for controller</li>
+<li>Iout = Integral value for controller</li>
+<li>min = Minimum value of the control. <strong>can_actuator_ctrl_prop_valve_min</strong> parameter.</li>
+<li>max = Maximum value of the control. <strong>can_actuator_ctrl_prop_valve_max</strong> parameter.</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

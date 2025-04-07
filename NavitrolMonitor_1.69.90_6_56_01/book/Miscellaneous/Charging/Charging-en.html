@@ -1,0 +1,479 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Charging and battery management - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html" class="active"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="charging-and-battery-management"><a class="header" href="#charging-and-battery-management">Charging and battery management</a></h1>
+<p>Updated 26.01.2024</p>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>This document explains charging logic and battery related information. Battery management systems (BMS) are also covered.</p>
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
+<p>Navitrol can monitor, log, relay and visualize battery information and perform opportunity charging. Navitrol can communicate with Battery Management Systems via Supervisor interface or via model specific CAN interface. Navitrol can receive charging commands from Navithor or Supervisor interface.</p>
+<p>If searching for the battery overtemperature actions see <a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html">Battery Overtemperature Actions</a> document.</p>
+<h3 id="requirements"><a class="header" href="#requirements">Requirements</a></h3>
+<ul>
+<li>Battery</li>
+<li>Interface to send Navitrol the battery data</li>
+</ul>
+<h3 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h3>
+<ul>
+<li>Charge type symbolic point, if charging is required.</li>
+</ul>
+<hr />
+<h2 id="setup"><a class="header" href="#setup">Setup</a></h2>
+<h3 id="quick-start"><a class="header" href="#quick-start">Quick start</a></h3>
+<h4 id="set-charge-command-source"><a class="header" href="#set-charge-command-source">Set charge command source</a></h4>
+<p>Set the <strong>charging_cmd_source</strong> to value where the charging command should come. This means that what source is used to give the start charge action. The options are:</p>
+<ol>
+<li>Fleet control (Navithor or VDA5050)</li>
+<li>Oportunity Charging: Start charging whenever AGV is stopped at Charge type symbolic point</li>
+<li>BMS will give the command.</li>
+</ol>
+<h4 id="set-interface-for-communicating-data-tofrom-navitrol"><a class="header" href="#set-interface-for-communicating-data-tofrom-navitrol">Set interface for communicating data to/from Navitrol</a></h4>
+<p>Set the <strong>extbatt_if_type</strong> parameter to correct value depending what interface is used to send battery data to Navitrol. The options are:</p>
+<ol>
+<li>Motor controller. Set <strong>extbatt_if_type</strong> parameter to -1. More information could be found from each motor controller manual. Supported motor controllers to sent battery data:
+<ul>
+<li>Schwarzmueller</li>
+<li>Roboteq</li>
+<li>Curtis. See <a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html">Curtis</a> document.</li>
+<li>MiControl</li>
+<li>Oriental</li>
+<li>Ethercat Synapticon</li>
+</ul>
+</li>
+<li>Supervisor interface. Can be used as a general communication protocol without committing to any BMS model. Set <strong>extbatt_if_type</strong> parameter to 5. With this setup, customer would need a PLC that communicates with the BMS or battery and sends the data to Navitrol via the supervisor interface. See <em>Battery section</em> 8 on the supervisor status message 3002 for more information: <a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html">Supervisor Interface</a>.</li>
+<li>BMS CAN interface for specific models. Ask Navitec about the CAN specification. The description of the <strong>extbatt_if_type</strong> parameter has list of what models Navitrol supports and what is the related value for this parameter. If Navitrol does not already have the interface for some model, that would require then custom development.</li>
+<li>Custom CAN interface. Set <strong>extbatt_if_type</strong> to -1. Some custom interfaces will send Navitrol the battery percentage or voltage or both. Contact Navitec if not sure if this applies to your project. <!-- At least these customers seems to send battery data: Nielsen, Mabi, some WFT machines, kovasat, Torwegge, DSH --></li>
+</ol>
+<h4 id="navithor-tools"><a class="header" href="#navithor-tools">Navithor Tools</a></h4>
+<p>Add Charge type symbolic point to the route.</p>
+<p><img src="./media-en/ChargeSP.png" alt="" /></p>
+<blockquote>
+<p>Charge symbolic point type on Navithor Tools. </p>
+</blockquote>
+<h4 id="navithor"><a class="header" href="#navithor">Navithor</a></h4>
+<p>If using Navithor see the <em>Managing Battery Levels</em> chapter in Navithor document. Navithor can for example, give drive orders to Charge if battery level goes too low or it can keep always some amount of AGV in a Charge point. </p>
+<hr />
+<p><strong>Required parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Recommended value</th><th>Description</th></tr></thead><tbody>
+<tr><td>charging_cmd_source</td><td>Int</td><td>1</td><td>0 = disabled, 1 = fleet control (Navithor or VDA5050), 2 = opportunity charging (Start charging whenever AGV is inside Charge type symbolic point), 3 = external source (Supervisor or other BMS, see <strong>extbatt_if_type</strong> parameter), 4 = project specific (Customer specific CAN interface)</td></tr>
+<tr><td>charging_prevents_driving</td><td>Int</td><td>1</td><td>When charging is active: 0 = driving allowed, 1 = driving preventented with soft stop</td></tr>
+<tr><td>battery_level_known</td><td>Int</td><td>1</td><td>1 to read battery percentage from external device (motor controller or bms), 0 to calculate it from battery voltage based on <strong>battery_voltage</strong> and <strong>battery_percentage</strong> parameters</td></tr>
+</tbody></table>
+<h3 id="fine-tuning"><a class="header" href="#fine-tuning">Fine-tuning</a></h3>
+<p><strong>Battery alert parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>battery_alert_from</td><td>Int</td><td>0</td><td>-1 no alert, 0 to alert from low voltage, 1 to alert from low battery percentage</td></tr>
+<tr><td>battery_alert_percentage</td><td>Float</td><td>5.0</td><td>Percentage lower than this value will set alert</td></tr>
+<tr><td>battery_alert_voltage</td><td>Float</td><td>29.5</td><td>Voltage lower than this value will set alert</td></tr>
+<tr><td>battery_high_temperature_warning_limit_C</td><td>Int</td><td>0</td><td>If battery temperature (Celcius) increases over the limit a warning set. 0 = disabled, 127 = max</td></tr>
+<tr><td>battery_high_temperature_error_limit_C</td><td>Int</td><td>0</td><td>If battery temperature (Celcius) increases over the limit an error set. 0 = disabled, 127 = max</td></tr>
+</tbody></table>
+<p><strong>General voltage parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>battery_voltage_gain</td><td>Float</td><td>0.01</td><td>Gain for updating the voltage. 1.0 = new voltage value is used without gain. Increase this parameter if voltage is updated too slow. Used like this: voltage = voltage + gain * (newVoltage - voltage)</td></tr>
+<tr><td>battery_voltage_input_scale</td><td>Float</td><td>0.0</td><td>Scale battery voltage input by multiplying with this value, 0.0 = do not scale.</td></tr>
+</tbody></table>
+<p><strong>Calculating percentage from voltage</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>battery_empty_voltage</td><td>Float</td><td>24.0</td><td>Limit to set percentage to 0. Used also to calculate new percentage value. Used only if <strong>battery_level_known</strong>  is 0.</td></tr>
+<tr><td>battery_voltage1</td><td>Float</td><td>25.4</td><td>Voltage limit used to calculate percentage between <strong>battery_empty_voltage</strong> and this value. Used only if <strong>battery_level_known</strong>  is 0.</td></tr>
+<tr><td>battery_percentage1</td><td>Float</td><td>5.0</td><td>Percentage value used to calculate percentage from voltage below <strong>battery_voltage1</strong>. Used only if <strong>battery_level_known</strong>  is 0.</td></tr>
+<tr><td>battery_voltage2</td><td>Float</td><td>26.85</td><td>Voltage limit used to calculate percentage between <strong>battery_voltage2</strong> and  <strong>battery_full_voltage</strong>. Used only if <strong>battery_level_known</strong>  is 0.</td></tr>
+<tr><td>battery_percentage2</td><td>Float</td><td>60.0</td><td>Percentage value used to calculate percentage from voltage above <strong>battery_voltage2</strong>. Used only if <strong>battery_level_known</strong>  is 0.</td></tr>
+<tr><td>battery_full_voltage</td><td>Float</td><td>29.1</td><td>Voltage limit to consider battery percentage to be 100%. Used only if <strong>battery_level_known</strong>  is 0.</td></tr>
+</tbody></table>
+<p><strong>battery_log.txt related parameters</strong></p>
+<p>See <em>Battery log</em> chapter and parameters on the <a href="../../Miscellaneous/Logging/Logging-en.html">Logging</a> document.</p>
+<p><strong>External Battery Management System parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>extbatt_if_type</td><td>Int</td><td>-1</td><td>External battery interface type: -1 = disabled, 0 = MasterVolt, 1 = SL BMS, 2 = Jungheinrich, 3 = RoboteQ, 4 = Voltabox, 5 = Ethernet Supervisor (message ID 3002 section 8), 6 = MEB battery, 7 = JLN, 8 = Wiferion</td></tr>
+<tr><td>can_extbatt_if_node_id</td><td>Int</td><td>0</td><td>Can node id for external battery interface</td></tr>
+<tr><td>extbatt_if_max_interval_ms</td><td>Int</td><td>10000</td><td>Maximum update interval (ms)</td></tr>
+<tr><td>can_extbatt_if_secondary_bus</td><td>Int</td><td>0</td><td>0 = Primary CAN Bus, 1 = Secondary CAN Bus</td></tr>
+<tr><td>log_bms</td><td>Int</td><td>0</td><td>0 = no bms logging, 1 = Log external battery management system communication.</td></tr>
+</tbody></table>
+<p><strong>Opportunity charging parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>charging_opp_min_at_charger_timer_ms</td><td>Int</td><td>3000</td><td>Timer for opportunity charging which defines how long vehicle has to stay in charging station before charging is requested</td></tr>
+</tbody></table>
+<p><strong>Customer specific parameters</strong></p>
+<p>These parameters are related only to customer specific interfaces. Ask Navitec if these are related to your project.</p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>charge_request_interval_ms</td><td>Int</td><td>1000</td><td>Charger request interval in msecs</td></tr>
+<tr><td>battery_update_interval_ms</td><td>Int</td><td>1000</td><td>Battery value update interval in msecs</td></tr>
+<tr><td>charging_collector_arm_extend_option</td><td>Int</td><td>0</td><td>Onboard charger collector arm extend options. 0 = extend one side only, 1 = extend two sides separately</td></tr>
+</tbody></table>
+<hr />
+<h2 id="how-to-use"><a class="header" href="#how-to-use">How to use</a></h2>
+<h3 id="sending-only-battery-data-to-navitrol-without-charging"><a class="header" href="#sending-only-battery-data-to-navitrol-without-charging">Sending only battery data to Navitrol without charging</a></h3>
+<p>Set these parameters:</p>
+<ul>
+<li><strong>charging_cmd_source</strong> to 0</li>
+<li><strong>extbatt_if_type</strong> to value where the data is sent to Navitrol. Use -1 if value is read directly from motor controller.</li>
+<li><strong>battery_level_known</strong> to 1</li>
+</ul>
+<p>Check the Monitor main screen bottom to see if the values are received correctly to Navitrol.</p>
+<h3 id="reading-percentage-values-from-voltage-without-charging"><a class="header" href="#reading-percentage-values-from-voltage-without-charging">Reading percentage values from voltage without charging</a></h3>
+<p>Set these parameters:</p>
+<ul>
+<li><strong>charging_cmd_source</strong> to 0</li>
+<li><strong>extbatt_if_type</strong> to value where the data is sent to Navitrol. Use -1 if value is read directly from motor controller.</li>
+<li><strong>battery_level_known</strong> to 0</li>
+</ul>
+<h3 id="example-charging-sequence-with-navithor-and-bms-connected-to-navitrol-via-supervisor-interface"><a class="header" href="#example-charging-sequence-with-navithor-and-bms-connected-to-navitrol-via-supervisor-interface">Example charging sequence with Navithor and BMS connected to Navitrol via supervisor interface.</a></h3>
+<p>Set these parameters:</p>
+<ul>
+<li><strong>charging_cmd_source</strong> to 1</li>
+<li><strong>extbatt_if_type</strong> to 5</li>
+<li><strong>charging_prevents_driving</strong> to 1</li>
+<li><strong>battery_level_known</strong> to 1</li>
+</ul>
+<p><img src="./media-en/ChargeDiagram.png" alt="" /></p>
+<blockquote>
+<ol>
+<li>BMS send battery percentage to PLC.</li>
+<li>PLC send the percentage to Navitrol via supervisor interface.</li>
+<li>Battery percentage is sent to Navithor.</li>
+<li>Navithor will give drive order for the AGV to Charge symbolic point when battery percentage is too low. </li>
+<li>AGV will drive to the Charge symbolic point and Navitrol reports that AGV is at Charge symbolic point.</li>
+<li>Navithor request charging.</li>
+<li>Navitrol -&gt; PLC: Charging required set to 1.</li>
+<li>PLC -&gt; BMS: Charge start command sent.</li>
+<li>BMS -&gt; PLC: Charge started.</li>
+<li>PLC -&gt; Navitrol: Charging 1 (the AGV is charging). At this point, WARNING_CHARGING_ACTIVE is set.</li>
+<li>Navitrol -&gt; PLC: Charging required 1, charging 1 (it still needs to charge and is charging).</li>
+<li>Navithor stops charge and want AGV to run production or battery status is full enough. </li>
+<li>Navitrol -&gt; PLC: Charging required 0 while charging still 1.</li>
+<li>PLC -&gt; BMS: Stop charging.</li>
+<li>BMS -&gt; PLC: Charging stopped.</li>
+<li>PLC -&gt; Navitrol: Charging 0. At this point, WARNING_CHARGING_ACTIVE is reset.</li>
+<li>Navitrol -&gt; PLC: Charging 0.</li>
+<li>Navitrol -&gt; Navithor: Charging stopped, Navithor can give drive order to the AGV.</li>
+</ol>
+</blockquote>
+<h3 id="opportunity-charging"><a class="header" href="#opportunity-charging">Opportunity charging</a></h3>
+<p>AGV start charging whenever is at Charge type symbolic point. Can be enabled with <strong>charging_cmd_source</strong> as 2. AGV will start charging whenever it is </p>
+<ul>
+<li>in Standby state </li>
+<li>closer than <strong>symbol_point_enter_dist</strong> parameter from the Charge type symbolic point. </li>
+<li>Has been in Standby for <strong>charging_opp_min_at_charger_timer_ms</strong> time.</li>
+</ul>
+<p>Charging is active only if AGV has stayed at the Charge symbolic point and has been in Standby for this time period. If the state changes to Auto or Manual while AGV is charging, the charge is stopped and the charge is started again when the start conditions are met.</p>
+<h3 id="monitor"><a class="header" href="#monitor">Monitor</a></h3>
+<h4 id="battery-manager-overview"><a class="header" href="#battery-manager-overview">Battery Manager Overview</a></h4>
+<p>Battery Manager Overview is a form in Monitor that shows Battery and Charging related data that Navitrol receives from the BMS. It is a useful tool for checking what is the status of battery or charging. By default, all the data is 0, but it should be updated once Navitrol receives the data from BMS.</p>
+<p><img src="./media-en/BatteryManagerOverview.png" alt="" /></p>
+<blockquote>
+<p>Battery manager overview form. </p>
+</blockquote>
+<p>Battery Manager Overview shows the following data:</p>
+<ul>
+<li>Battery percentage</li>
+<li>Battery voltage</li>
+<li>Battery status in numerical and in text form</li>
+<li>Battery errors in numerical and in text form</li>
+<li>State of health in percentages</li>
+<li>Current draw in Ampers</li>
+<li>Charger voltage</li>
+<li>Time left before battery is full in minutes</li>
+<li>Voltage of the minimum cell</li>
+<li>Battery temperature in Celsius degrees</li>
+<li>Load cycles. How many times battery has loaded</li>
+<li>Operating hours. How many hours the battery has run</li>
+<li>Remaining capacity. How much Amper Hours the battery has.</li>
+</ul>
+<h4 id="battery-percentage-and-voltage"><a class="header" href="#battery-percentage-and-voltage">Battery percentage and voltage</a></h4>
+<p><img src="./media-en/MonitorBattery.png" alt="" /></p>
+<blockquote>
+<p>Battery percentage and voltage can be seen on the bottom of the Monitor main screen. </p>
+</blockquote>
+<hr />
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="most-common-issues"><a class="header" href="#most-common-issues">Most common issues</a></h3>
+<h4 id="warning_agv_low_battery-is-active-even-though-percentage-is-high-enough"><a class="header" href="#warning_agv_low_battery-is-active-even-though-percentage-is-high-enough">WARNING_AGV_LOW_BATTERY is active even though percentage is high enough</a></h4>
+<ul>
+<li>Check the percentage and voltage that they are shown correctly on bottom of the Monitor main screen. See chapter <em>Monitor</em>.</li>
+<li>Check parameter <strong>battery_alert_from</strong> to see if the warning is set based on percentage or voltage.</li>
+<li>Check parameter <strong>battery_level_known</strong> to see if Navitrol calculates the percentage or if it is received from external source.</li>
+</ul>
+<hr />
+<h3 id="errors-and-warnings"><a class="header" href="#errors-and-warnings">Errors and warnings</a></h3>
+<h4 id="639---warning_charging_active"><a class="header" href="#639---warning_charging_active">639 - WARNING_CHARGING_ACTIVE</a></h4>
+<p>Description: Vehicle is stopped due to charging</p>
+<p>Error level: Warning</p>
+<p>Machine types: Navitrol with driving</p>
+<p>Error reason: Vehicle is stopped with softstop because of charging. Set only if <strong>charging_prevents_driving</strong> is set to 1 and charging is active. </p>
+<p>How to recover: Reset automatically when charging is finished. If stopping is undesired, check sensor status for charging.</p>
+<h4 id="520---error_battery_high_temperature"><a class="header" href="#520---error_battery_high_temperature">520 - ERROR_BATTERY_HIGH_TEMPERATURE</a></h4>
+<p>Description: Battery temperature has exceeded the error limit</p>
+<p>Error level: Error</p>
+<p>Machine types: Navitrol with driving</p>
+<p>Error reason: Battery temperature reported by battery management system (BMS) has exceeded the limit defined with a parameter <strong>battery_high_temperature_error_limit_C</strong></p>
+<p>How to recover: Let the battery cool down or modify the limit</p>
+<h4 id="601---warning_agv_low_battery"><a class="header" href="#601---warning_agv_low_battery">601 - WARNING_AGV_LOW_BATTERY</a></h4>
+<p>Description: AGV battery level low</p>
+<p>Error level: Warning</p>
+<p>Machine types: Navitrol with driving</p>
+<p>Error reason: Battery level is too low. </p>
+<ul>
+<li>If <strong>battery_alert_from</strong> is 0, battery voltage is lower than <strong>battery_alert_voltage</strong>. </li>
+<li>If <strong>battery_alert_from</strong> is 1, battery percentage is lower than <strong>battery_alert_percentage</strong>.</li>
+</ul>
+<p>How to recover: Charge the battery</p>
+<h4 id="611---warning_agv_no_battery_level"><a class="header" href="#611---warning_agv_no_battery_level">611 - WARNING_AGV_NO_BATTERY_LEVEL</a></h4>
+<p>Description: AGV battery level unknown</p>
+<p>Error level: Warning</p>
+<p>Machine types: Navitrol with driving</p>
+<p>Error reason: Navitrol cannot read battery level. Two reasons: </p>
+<ol>
+<li>External bms initialization failed
+<ul>
+<li>CAN interface error. Check that node IDs are correct if using CAN interface. Check that <strong>extbatt_if_type</strong> is on correct value.</li>
+<li>Check if there is this kind of log line: &quot;ExtBattCanInit CanRegisterMsgDefs for node id&quot;. It will show what node ID has been failed to register.</li>
+</ul>
+</li>
+<li>Timeout.
+<ul>
+<li>Data not received within <strong>extbatt_if_max_interval_ms</strong> time.</li>
+</ul>
+</li>
+</ol>
+<p>How to recover: Reset when data received within time or when initialization is successful. If it does not reset take a log and contact Navitec</p>
+<h4 id="635---warning_battery_full_charge_needed"><a class="header" href="#635---warning_battery_full_charge_needed">635 - WARNING_BATTERY_FULL_CHARGE_NEEDED</a></h4>
+<p>Description: Battery needs a full (reference) charge</p>
+<p>Error level: Warning</p>
+<p>Machine types: Vehicles with external battery interface</p>
+<p>Error reason: Too many load cycles without full charge. Related to Voltabox BMS only, see <strong>extbatt_if_type</strong>. Reference charge might be necessary, if battery has not been fully charged for a long time (30 load cycles). </p>
+<p>How to recover: Battery charge to full capacity. Warning is reset when the status is cleared from Voltabox side. Check Voltabox specification for more information. </p>
+<h4 id="636---warning_battery_error_or_warning_active"><a class="header" href="#636---warning_battery_error_or_warning_active">636 - WARNING_BATTERY_ERROR_OR_WARNING_ACTIVE</a></h4>
+<p>Description: Battery management has active error or warning</p>
+<p>Error level: Warning</p>
+<p>Machine types: Vehicles with external battery interface</p>
+<p>Error reason: Used battery management system has an error</p>
+<p>How to recover: Resolve error in battery management system</p>
+<h4 id="646---warning_battery_high_temperature"><a class="header" href="#646---warning_battery_high_temperature">646 - WARNING_BATTERY_HIGH_TEMPERATURE</a></h4>
+<p>Description: Battery temperature has exceeded the warning limit. </p>
+<p>Error level: warning</p>
+<p>Machine types: Navitrol with driving</p>
+<p>Error reason: Battery temperature reported by battery management system (BMS) has exceeded the limit defined with a parameter battery_high_temperature_warning_limit_C</p>
+<p>How to recover: Let the battery cool down or modify the limit</p>
+<h4 id="921---warning_ext_battery"><a class="header" href="#921---warning_ext_battery">921 - WARNING_EXT_BATTERY</a></h4>
+<p>Description: BatteryFaults bit received from customer CAN interface. Contact Navitec for more information. </p>
+<p>Error level: Warning</p>
+<p>Machine types: All vehicles </p>
+<p>Error reason: Communication failure with external battery management system</p>
+<p>How to recover: Reset when BatteryFaults bit is not received anymore.</p>
+<h3 id="advanced-troubleshooting"><a class="header" href="#advanced-troubleshooting">Advanced troubleshooting</a></h3>
+<p>Here are some useful log lines related to battery and BMS:</p>
+<p>&quot;ExtBattData read, V 24.1 SoC 10.000 extraData 0&quot;</p>
+<ul>
+<li>External battery voltage and percentage. extraData tells if extra info is received.</li>
+</ul>
+<p>&quot;ExtBattData&quot;</p>
+<ul>
+<li>All external battery logging.</li>
+</ul>
+<p>&quot;Updated battery&quot;</p>
+<ul>
+<li>Current battery voltage and percentage in the system. Input values that Navitrol receives are in parenthesis. Useful logging if Navitrol should calculate the battery percentage from voltage (<strong>battery_level_known</strong> parameter 0).</li>
+</ul>
+<p>&quot;veh_inte_ethernet: Parse battery section&quot;</p>
+<ul>
+<li>Data that Navitrol receives from supervisor battery section. Logged only if <strong>log_veh_inte_eth</strong> is greater than 0.</li>
+</ul>
+<p>&quot;veh_inte_ethernet: Battery, pct: 50.0 current 24.0&quot;</p>
+<ul>
+<li>Percentage and current in Amperes that Navitrol sends to supervisor via battery secion. </li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

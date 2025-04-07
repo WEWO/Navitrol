@@ -1,0 +1,685 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Trailer transport - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html" class="active"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="trailer-transport"><a class="header" href="#trailer-transport">Trailer Transport</a></h1>
+<p>Updated 26.01.2024</p>
+<hr />
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
+<p>Trailer transport is a Navitrol feature that makes it possible to transport trailers with an omni AGV. When connected to the trailer, the omni AGV behaves like a truck pulling or pushing the trailer with it.</p>
+<p><img src="./media-en/example_trailer.png" alt="" /></p>
+<blockquote>
+<p>Example trailer</p>
+</blockquote>
+<p>In a typical use case an uncoupled omni AGV gets an order to transport a trailer from location to another. The AGV drives to the trailer location and couples itself to the kingpin of the trailer. Then the AGV drives to the target location and uncouples itself from the trailer.</p>
+<p>When the AGV is coupled to a trailer, the coupled trailer system behaves like a steer drive where the navigation point is in the middle of the middlemost axle of the trailer and the omni AGV acts like a steering wheel. See the image below.</p>
+<p><img src="./media-en/omni_coupled_with_trailer.png" alt="" /></p>
+<blockquote>
+<p>Blue AGV coupled with with gray trailer frame. <br />1. Navigation point of the omni AGV and location of trailer kingpin. <br />2. Trailer support legs. <br />3. Navigation point of the trailer. <br />4. Trailer wheels</p>
+</blockquote>
+<p>In case you are looking for a way to use multiple AGVs simultaneously to transport a single large resource, see <a href="../CoupledDriving/CoupledDrivingFeature-en.html">Coupled driving feature</a> instead.</p>
+<h3 id="requirements"><a class="header" href="#requirements">Requirements</a></h3>
+<p><strong>Knowledge:</strong></p>
+<ul>
+<li>Basics of AGV calibration</li>
+</ul>
+<p><strong>Hardware:</strong></p>
+<ul>
+<li>A well calibrated omni drive AGV, see <a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html">Initial calibration guide</a></li>
+<li>Actuators for coupling and uncoupling a trailer and an AGV
+<ul>
+<li>The AGV system is responsible of controlling the actuators based on generic commands from Navitrol</li>
+</ul>
+</li>
+<li>2D scanner for trailer angle detection
+<ul>
+<li>This is used to determine the angle between the AGV and the trailer based on wheels of the trailer.</li>
+<li>Optionally this scanner can be attached to extendable telescope structure</li>
+</ul>
+</li>
+<li>Separate scanner for positioning</li>
+<li>For outdoor environments
+<ul>
+<li>GPS sensors and IMU for navigating without scanner measurements. See <a href="../../Localization/GpsPositioning/GpsPositioning-en.html">GPS positioning</a></li>
+</ul>
+</li>
+<li>Trailer must have two support legs</li>
+</ul>
+<p><strong>Software:</strong></p>
+<ul>
+<li>Navitrol standalone or Navithor fleet control based production system</li>
+<li>Navitrol version 6.34.00 or later</li>
+<li><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html">Ethernet supervisor communication interface</a> with messages 3002 - section 12, 3102 - section 17, 3042 and 3142.</li>
+<li><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html">Pallet detection v2 feature</a>, requiring target detection license
+<ul>
+<li>Required for trailer angle detection</li>
+<li>Highly recommended for docking to trailer before coupling</li>
+</ul>
+</li>
+</ul>
+<p><strong>Environment and routes:</strong></p>
+<ul>
+<li>Enough space for long straight routes for coupling and uncoupling</li>
+<li>Routes must be suitable for both the uncoupled AGV and the coupled trailer system</li>
+</ul>
+<h3 id="limitations"><a class="header" href="#limitations">Limitations</a></h3>
+<ul>
+<li>Low drive speeds when transporting a trailer
+<ul>
+<li>Typically maximum of 1.5m/s forwards and 1m/s in reverse</li>
+</ul>
+</li>
+<li>UI visualization
+<ul>
+<li>Trailer is not visualized in Navitrol monitor and Navithor client</li>
+</ul>
+</li>
+<li>When using with Standalone, separate pick up and drop of symbolic points must be defined for each trailer size</li>
+<li>The trailer angle detection scanner must be installed to the middle of the AGV's rear end</li>
+</ul>
+<p><strong>When coupled to a trailer following features cannot be used:</strong></p>
+<ul>
+<li>Omni frame heading</li>
+<li>Obstacle avoidance</li>
+</ul>
+<h3 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h3>
+<ul>
+<li><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html">Pallet detection &amp; Docking</a></li>
+<li><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html">Ethernet supervisor interface</a></li>
+<li><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html">Return to Route</a></li>
+<li><a href="../../DriveControl/Standalone/Standalone-en.html">Standalone</a> OR Navithor</li>
+<li><a href="../../Localization/GpsPositioning/GpsPositioning-en.html">GPS positioning</a></li>
+<li><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html">Imu and Sensor Fusion</a></li>
+</ul>
+<hr />
+<h2 id="set-up"><a class="header" href="#set-up">Set up</a></h2>
+<h3 id="quick-start"><a class="header" href="#quick-start">Quick start</a></h3>
+<ol>
+<li>Install the required hardware to the AGV
+<ul>
+<li>See &quot;Requirements&quot; chapter</li>
+<li><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html">Imu and Sensor Fusion</a></li>
+<li><a href="../../Localization/GpsPositioning/GpsPositioning-en.html">GPS Positioning</a></li>
+</ul>
+</li>
+<li>Calibrate positioning and driving of the omni AGV without trailer
+<ul>
+<li><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html">Initial Calibration Guide</a></li>
+</ul>
+</li>
+<li>Teach the production environment</li>
+<li>Define routes suitable for the coupled and uncoupled AGV systems</li>
+<li>Set up pallet detection feature for detecting and docking to trailer legs
+<ul>
+<li><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html">Pallet Detection</a></li>
+<li>Coupling sequence, see &quot;Coupling sequence&quot; chapter.</li>
+</ul>
+</li>
+<li>Implement the required supervisor messages
+<ul>
+<li>See &quot;Requirements chapter&quot; and <a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html">Ethernet Supervisor Interface Specification</a></li>
+</ul>
+</li>
+<li>Enable trailer transport feature
+<ul>
+<li>Add <strong>trailer_transport_enabled</strong> to params.txt and set the value to 1</li>
+</ul>
+</li>
+<li>Calibrate Trailer angle detection
+<ul>
+<li>See the related chapter</li>
+</ul>
+</li>
+<li>Calibrate driving with a trailer
+<ul>
+<li>See the related chapter</li>
+</ul>
+</li>
+<li>Set production control parameters
+<ul>
+<li>Either Navitrol standalone</li>
+<li>Or Navithor fleet control, see &quot;Navithor set up&quot; chapter</li>
+</ul>
+</li>
+</ol>
+<p><strong>Required parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required value</th><th>Description</th></tr></thead><tbody>
+<tr><td>trailer_transport_enabled</td><td>Int</td><td>1</td><td>Enables the trailer transport feature</td></tr>
+</tbody></table>
+<h3 id="fine-tuning"><a class="header" href="#fine-tuning">Fine-tuning</a></h3>
+<h4 id="calibrating-trailer-driving"><a class="header" href="#calibrating-trailer-driving">Calibrating trailer driving</a></h4>
+<p>For route following purposes the uncoupled AGV behaves like a normal omni AGV and when coupled to a trailer the system behaves like a steer drive.
+When switching between the two the behavior of the AGV system will change so much that separate control gain parameters will be needed.</p>
+<p>Uncoupled system uses normal control parameters (<strong>pc_pid_heading_p</strong>, <strong>pc_pid_dist_p</strong> and related speed-based gains).</p>
+<p>Coupled system uses loaded gain parameters (<strong>pc_pid_heading_p_loaded</strong>, <strong>pc_pid_dist_p_loaded</strong> and related speed adjusted gains). In addition to normal control gains the coupled systems uses <strong>trailer_transport_pid_heading_err_p</strong> which determines how aggressively the detected trailer heading error is corrected.
+Heading, distance and trailer heading gains must be adjusted so that the AGV system follows the route as accurately as possible.</p>
+<p>If the coupled system drives accurately on slower speeds but starts to oscillate on higher ones, <strong>pc_pid_speed_setting_loaded</strong> parameters can be used to define separate control gains for different speeds. Typically lower gains are needed for higher speeds.</p>
+<p>Note: When the AGV is pulling a trailer (AGV system is driving forwards) the trailer angle error naturally decrease so accurate control on higher speeds can be achieved compared to the situation where AGV is pushing the trailer. For this reason, it is recommended to design routes so that forward direction is used wherever possible.</p>
+<p>It is also important to calibrate the angle detection well so that there is no offset. Otherwise, the trailer heading error correction will constantly fight against the normal heading and distance control.
+The trailer angle detection offset can be measured by driving the AGV manually straight forward for couple of meters while pulling the trailer. After the drive the real trailer angle should be zero. If the detected trailer angle is not, scanner heading parameters should be tuned.</p>
+<p>Instructions on how to use the forementioned parameters and how to calibrate the heading and distance control can be found from the <a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html">Initial Calibration Guide</a></p>
+<h4 id="fine-tuning-parameters"><a class="header" href="#fine-tuning-parameters">Fine tuning parameters</a></h4>
+<p><strong>Coupling and uncoupling sequence parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>trailer_error_timer_ms</td><td>Int</td><td>60000</td><td>Determines the wait time during coupling and uncoupling sequences to adjust the actuator between states. <br />For example, at the start of coupling sequence Navitrol request the AGV system to prepare actuator for coupling. If supervisor has not sent coupling status &quot;ready for coupling&quot; within the time defined by this parameter ERROR_TRAILER_TRANSPORT_COUPLING will be triggered. <br /> The value should be larger than the time required for the slowest (un)coupling action.</td></tr>
+<tr><td>trailer_kingpin_approach_max_dist</td><td>Float</td><td>1.0</td><td>The maximum drive distance in meters for approaching/searching the kingpin during the coupling sequence. If the AGV system does not report that the kingpin has been detected before this distance has been driven Navitrol will stop the AGV and ERROR_TRAILER_TRANSPORT_COUPLING will be triggered.<br /> The value should be set so that it is large enough to cover the distance from the pick up sp to to the kingpin but low enough that the AGV is safely stopped in case the AGV does not detect the kingpin.</td></tr>
+<tr><td>trailer_kingpin_approach_max_v</td><td>Float</td><td>0.2</td><td>Defines the maximum velocity during the kingpin approach search drive. <br /> In general, lower speeds increase position control accuracy and are safer where higher ones save time.</td></tr>
+<tr><td>trailer_uncoupling_straight_leave_dist</td><td>Float</td><td>0.5</td><td>The drive distance after unlocking the actuators from kingpin during uncoupling. <br />Will be driven straight so that the AGV gets fully out of under the trailer before resuming normal driving and following the defined routes. <br />The value should be large enough so that after the drive AGV can move freely without a possibility to collide with the dropped of trailer.</td></tr>
+<tr><td>trailer_uncoupling_straight_leave_max_v</td><td>Float</td><td>0.2</td><td>Defines the maximum velocity during the uncoupling straight leave drive. In general, lower speeds increase position control accuracy and are safer where higher ones save time.</td></tr>
+</tbody></table>
+<p><strong>Parameters for defining maximum trailer heading errors based on the scanner telescope length</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>trailer_max_heading_err_close_deg</td><td>Float</td><td>7.0</td><td>Used for stopping the AGV before the compressed scanner telescope can hit the trailer wheels <br /> ERROR_TRAILER_ANGLE_TOO_LARGE is set, if trailer heading error is larger than this value and scanner telescope length is less than the distance to frontmost axle</td></tr>
+<tr><td>trailer_max_heading_err_far_deg</td><td>Float</td><td>1.5</td><td>Used for stopping the AGV before the extended scanner telescope can hit the trailer wheels <br /> ERROR_TRAILER_ANGLE_TOO_LARGE is set, if trailer heading error is larger than this value and scanner telescope length is larger than the distance to frontmost axle</td></tr>
+</tbody></table>
+<p><img src="./media-en/trailer_max_heading_err_visualization.png" alt="" /></p>
+<blockquote>
+<p>Trailer max heading error visualized: <br /> 1. Navigation point of the AGV (kingpin of the trailer).  <br /> 2. Scanner telescope length <br /> 3. Distance to frontmost axle <br /> 4. Trailer heading error</p>
+</blockquote>
+<p>Note: If the system does not have scanner telescope, only one of these parameters are used, based on the constant scanner telescope length provided to Navitrol</p>
+<p><strong>Position control parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>trailer_transport_pid_heading_err_p</td><td>Float</td><td>3.0</td><td>Position control gain for trailer to AGV heading error control in trailer transport. <br />Affects how aggressively the heading error is corrected towards zero. <br />This control gain will compete with normal heading and distance correction gains (pc_pid_heading_p,loaded pc_pid_dist_p_loaded). <br />The higher the value of any of these parameters the more the related correction is prioritized over the other two.</td></tr>
+</tbody></table>
+<p><strong>Logging parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>log_trailer_transport</td><td>Int</td><td>0</td><td>Used to control amount of trailer transport related logging. 0 - basic level, 1 - detailed logging enable. <br />If you encounter any issues with the feature set the value to 1 before taking and sending a log for further inspection.</td></tr>
+</tbody></table>
+<h4 id="navithor-set-up"><a class="header" href="#navithor-set-up">Navithor set up</a></h4>
+<p>When Navithor fleet control system is used with trailer transport feature following parameters must be set to make sure that the coupled/uncoupled status will be updated between the systems even outside pick up and drop off situations.</p>
+<p><img src="./media-en/navithor_production_manager_resource_missmatch_rules_setup.png" alt="" /></p>
+<blockquote>
+<p>ProductionManager_ResourceMismatchRules to set</p>
+</blockquote>
+<p><strong>ProductionManager_AlwaysCheckResourceMismatch</strong> set to True</p>
+<h2 id="how-to-use"><a class="header" href="#how-to-use">How to use</a></h2>
+<h3 id="use-case-sequence"><a class="header" href="#use-case-sequence">Use case sequence</a></h3>
+<ol>
+<li>An uncoupled AGV is on standby waiting for a production order</li>
+<li>AGV receives a production order to pick up a trailer</li>
+<li>AGV starts to drive towards the target pick up symbolic point</li>
+<li>AGV approaches the trailer reversing</li>
+<li>Target detection determines the exact trailer position for example based on the trailer legs.
+<ul>
+<li>Note: If pallet detection is not used the trailer must be located on the target symbolic point with minimal position and angle errors.</li>
+</ul>
+</li>
+<li>Navitrol docs to the pick up symbolic point</li>
+<li>Coupling sequence is performed
+<ol>
+<li>AGV reverses straight towards the kingpin of the trailer and stops when the kingpin is reached</li>
+<li>AGV locks to the trailer and lifts it up</li>
+<li>AGV sends trailer dimensions to Navitrol</li>
+<li>Navigation point is changed from the AGV to the trailer wheels</li>
+<li>The AGV and trailer are now coupled and work as a trailer system</li>
+</ol>
+<ul>
+<li>See related chapter for more info</li>
+</ul>
+</li>
+<li>Trailer system gets a drive order to a drop of symbolic point</li>
+<li>Trailer system drives to the target symbolic point so that
+<ul>
+<li>The trailer navigation point follows the defined routes</li>
+<li>The detected trailer angle is used for position control</li>
+</ul>
+</li>
+<li>Trailer navigation point reaches the drop of symbolic point</li>
+<li>Uncoupling sequence is performed
+<ol>
+<li>AGV lowers and unlocks the trailer</li>
+<li>AGV drives straight forward from under the trailer so that it won't hit the trailer support legs</li>
+<li>AGV preforms return to route function</li>
+</ol>
+<ul>
+<li>See related chapter for more info</li>
+</ul>
+</li>
+<li>The AGV is now ready for next production order</li>
+</ol>
+<h3 id="trailer-coupling-and-uncoupling"><a class="header" href="#trailer-coupling-and-uncoupling">Trailer coupling and uncoupling</a></h3>
+<h4 id="coupling-sequence"><a class="header" href="#coupling-sequence">Coupling sequence</a></h4>
+<p>A description of the trailer coupling sequence from Navitrol point of view.</p>
+<p>The terms in <em>italic</em> are references to &quot;coupling actions&quot; and supervisor's &quot;coupling status&quot; information defined in the ethernet supervisor document.</p>
+<ol>
+<li>Production order to pick up point
+<ul>
+<li>Navitrol gets drive order to a pick up symbolic point while unloaded <br />Note: The AGV is considered unloaded when it is uncoupled from the trailer. The trailer is considered uncoupled after the Supervisor has sent <em>Uncoupled</em> as <em>Trailer coupling status</em></li>
+</ul>
+</li>
+<li>Docking to the pick up point with pallet detection
+<ul>
+<li>Pallet detection can be used to dock to the target pick up point</li>
+<li>Optional but recommended step as without docking it is very hard to hit the kingpin.</li>
+<li>Requires pallet model based on the trailer legs</li>
+<li>For more information see pallet detection documentation</li>
+</ul>
+</li>
+</ol>
+<p><img src="./media-en/docking_to_trailer_legs_with_pallet_detection.png" alt="" /></p>
+<blockquote>
+<p>Docking to trailer coupling start point using pallet detection. The red circle is the load symbolic point where the coupling sequence will start. Parameter <strong>docking_stop_dist</strong> defines the expected distance from the symbolic point to the middle of the trailer legs -- the pallet detection will search the target around that point.</p>
+</blockquote>
+<ol start="3">
+<li>Arriving to pick up point
+<ul>
+<li>The AGV arrives to pick up symbolic point (with or without docking)</li>
+<li>Navitrol enters load state starting the trailer coupling sequence.</li>
+</ul>
+</li>
+<li>Navitrol requests coupling preparations
+<ul>
+<li>Navitrol sends <em>trailer coupling action</em> to <em>Prepare for coupling</em>. This action is sent in Trailer transport status section's &quot;Trailer coupling action&quot;-data field</li>
+</ul>
+</li>
+<li>Navitrol will wait until coupling preparations are done
+<ul>
+<li>AGV system sends this information by changing the <em>Trailer coupling status</em> to <em>Ready for coupling.</em></li>
+<li>Coupling preparations can be for example raising actuator to kingpin level.</li>
+</ul>
+</li>
+<li>Navitrol will start reversing towards the kingpin
+<ul>
+<li>Navitrol will start reversing straight backwards from the current position until <em>Trailer coupling status</em> changes to <em>Kingpin detected</em>
+<ul>
+<li><strong>trailer_kingpin_approach_max_v</strong> defines the speed of the drive</li>
+<li><strong>trailer_kingpin_approach_max_dist</strong> defines the maximum distance of the drive</li>
+</ul>
+</li>
+<li>If the maximum distance is driven without receiving <em>Kingpin detected</em> trailer coupling error is raised</li>
+</ul>
+</li>
+<li>AGV stops at the kingpin</li>
+<li>Navitrol request coupling action
+<ul>
+<li>Navitrol will send <em>Couple</em> action</li>
+<li>Coupling action in this phase can include for example raising the actuator and locking AGV to the kingpin of the AGV</li>
+</ul>
+</li>
+<li>Navitrol will wait until coupling is ready
+<ul>
+<li>AGV system send this information by sending <em>Coupled</em> status</li>
+</ul>
+</li>
+<li>Navitrol will wait for trailer dimensions
+<ul>
+<li>Only happens if the trailer dimensions have not been received before this point
+<ul>
+<li><strong>Note</strong>: Navitrol will start requesting this information when the coupling sequence starts after entering the load state</li>
+</ul>
+</li>
+<li>Navitrol needs the trailer dimensions for trailer angle detection</li>
+</ul>
+</li>
+<li>Coupling sequence is ready
+<ul>
+<li>The AGV is coupled to the trailer and is ready to transport it based on incoming production orders</li>
+</ul>
+</li>
+</ol>
+<p><img src="./media-en/coupling_sequence_diagram.png" alt="" /></p>
+<blockquote>
+<p>Coupling sequence communication diagram</p>
+</blockquote>
+<h4 id="uncoupling-sequence"><a class="header" href="#uncoupling-sequence">Uncoupling sequence</a></h4>
+<p>A description of the trailer uncoupling sequence from Navitrol point of view.</p>
+<p>The sentences in <em>italic</em> are references to coupling actions and coupling status in supervisor document.</p>
+<ol>
+<li>Production order to drop off symbolic point
+<ul>
+<li>Navitrol receives drive order to an drop off symbolic point while loaded. <br /> Note: The AGV considered loaded when the trailer is coupled to the AGV. Trailer is considered coupled when AGV system sends <em>Coupled</em> in <em>Trailer coupling status</em> data field of Supervisor trailer transport status section</li>
+</ul>
+</li>
+<li>AGV enters the target drop off point
+<ul>
+<li>Uncoupling sequence starts</li>
+</ul>
+</li>
+<li>Navitrol request uncoupling preparations
+<ul>
+<li>Navitrol sends action to <em>Prepare for uncoupling</em></li>
+<li>Uncoupling preparations at this point can include for example lowering the actuators so that the trailer is unlocked and the AGV can be driven out from under the trailer.</li>
+</ul>
+</li>
+<li>Navitrol will wait until uncoupling preparations are ready
+<ul>
+<li>AGV system must inform this by changing <em>Trailer coupling status</em> to <em>Ready for uncoupling</em></li>
+<li>AGV is now physically uncoupled from the trailer</li>
+</ul>
+</li>
+<li>Navitrol will drive from under the trailer
+<ul>
+<li>Navitrol will drive straight forward away from the kingpin for a defined distance</li>
+<li><strong>trailer_uncoupling_straight_leave_dist</strong> defines the drive distance that is driven fully</li>
+<li><strong>trailer_uncoupling_straight_leave_max_v</strong> defines the speed of the drive</li>
+</ul>
+</li>
+<li>Navitrol will stop and request finishing uncoupling
+<ul>
+<li>Navitrol sends action to <em>Uncouple</em></li>
+<li>Finishing uncoupling can include for example lowering the actuators to a drive height</li>
+</ul>
+</li>
+<li>Wait until uncoupling has been finished
+<ul>
+<li>AGV system must inform this by sending <em>Uncoupled</em> status.</li>
+</ul>
+</li>
+<li>Navitrol will perform automatic return to route
+<ul>
+<li>It is possible that the AGV is not on the defined route, if the straight drive from under the trailer is very long and there is even a slight angle error at the beginning</li>
+<li>Note: the return to route feature parameters need to be calibrated to suit your needs</li>
+</ul>
+</li>
+<li>Uncoupling sequence is ready
+<ul>
+<li>The AGV is free for new trailer production orders</li>
+</ul>
+</li>
+</ol>
+<h3 id="user-interfaces"><a class="header" href="#user-interfaces">User interfaces</a></h3>
+<p><strong>Navitrol monitor</strong>
+When the AGV is coupled to a trailer, following trailer transport related information is available in Navitrol Monitor:</p>
+<p><img src="./media-en/trailer_in_monitor_view.png" alt="" /></p>
+<blockquote>
+<p>Trailer transport Navitrol Monitor view: <br />1. Trailer Navigation point, <br />2. Detected trailer wheels / angle, <br />3. Scanner that is moved with telescope</p>
+</blockquote>
+<p><strong>Navithor client</strong>
+Navithor client has no trailer transport specific visualization implemented. Instead the position of AGV can be seen to jump on the map when the navigation point changes from AGV to the picked up trailer at the end of coupling sequence. This can be partly hidden by defining the carried resource to match the trailer dimensions.</p>
+<h3 id="communication-between-agv-and-navitrol"><a class="header" href="#communication-between-agv-and-navitrol">Communication between AGV and Navitrol</a></h3>
+<p>Trailer transport feature requires the trailer status and dimension data from the AGV.</p>
+<p>The status data should be sent with recommended interval of 40-100ms.
+After Navitrol has received the status once, Navitrol expects to get it at maximum interval of one second. If the data is not received ERROR_TRAILER_STATUS_NOT_RECEIVED will be set.</p>
+<p>The trailer dimension data is needed for trailer angle detection. Navitrol will request the data using Navitrol trailer status section. Without trailer angle detection Navitrol cannot control the trailer and will refuse driving in auto mode.</p>
+<p>The data can be sent using trailer transport messages in Ethernet Supervisor interface. See the <a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html">Supervisor documentation</a> for following messages:</p>
+<ul>
+<li>Message 3002 - Supervisor status, Trailer transport status section (section ID = 12)</li>
+<li>Message 3102 - Navitrol status, Trailer transport status section (section ID = 17)</li>
+<li>Message 3042 - Set trailer dimensions</li>
+<li>Message 3142 - Set trailer dimensions result</li>
+</ul>
+<h3 id="trailer-angle-detection"><a class="header" href="#trailer-angle-detection">Trailer angle detection</a></h3>
+<p>The angle between the trailer and the AGV is required for controlling the system. The angle can be detected using 2D laser scanner either from front or behind the trailer rear wheels.
+Optionally this scanner can be attached to an extendable telescope structure so that the scanner can be moved behind rear wheels. This makes it possible to use the same scanner for safety when reversing with the trailer.</p>
+<p><img src="./media-en/trailer_angle_detection.png" alt="" /></p>
+<blockquote>
+<p>Trailer angle detection with 2D scanner. The measured angle is the angle between the AGV and the trailer. Trailer angle is determined by the front wheels (orange) using pallet detection feature.</p>
+</blockquote>
+<p>The trailer angle detection algorithm requires the trailer wheel dimensions which can be provided with the Ethernet supervisor message <em>3042 - Trailer Transport: Set Trailer Dimensions</em>.</p>
+<p>The detection scanner is selected with <strong>target_detection_scan_selection</strong> parameter. The scanner must be installed to the center of the AGV frame (on the x-axis of the AGV frame) as seen in figure above. It gets the distance from the navigation point (kingpin) from the <em>Scanner Telescope Length</em> data in Ethernet supervisor status message 3002 section <em>Trailer transport section</em>.</p>
+<p>The detection algorithm uses the pallet detection v2 implementation.
+Parameter <strong>pallet_det_2_detect_only_front_legs</strong> should be set to 1.</p>
+<p>The angle detection results might be noisy which will affect directly to the calculated trailer navigation position and furthermore the stability of the driving. To filter the noise in the angle detection results, parameter <strong>target_detection_results_dampening</strong> can be used. The closer to zero the value is set the more the angle results are filtered.
+However, too much filtering will cause delay to the angle detection.
+Value 0.3 is a good starting point for further tuning.</p>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="most-common-issues"><a class="header" href="#most-common-issues">Most common issues</a></h3>
+<h4 id="trailer-system-oscillates-while-driving"><a class="header" href="#trailer-system-oscillates-while-driving">Trailer system oscillates while driving</a></h4>
+<p>Oscillation is most often caused by several accumulating error sources.</p>
+<p>Check from &quot;Calibrating trailer driving&quot; chapter that:</p>
+<ul>
+<li>Omni AGV is well calibrated when not coupled to the trailer
+<ul>
+<li>The AGV follows control references accurately</li>
+<li>Scanner (and GPS) positioning is accurate</li>
+</ul>
+</li>
+<li>Trailer angle detection is accurate
+<ul>
+<li>The scanner must be firmly attached in relation to the AGV frame</li>
+<li>The given trailer wheel positions and dimensions must be accurate</li>
+<li>There is no angle offset when the trailer is straight</li>
+</ul>
+</li>
+<li>Driving with trailer is well calibrated
+<ul>
+<li>Loaded gain parameters are tuned</li>
+<li>Given trailer dimensions must be accurate</li>
+</ul>
+</li>
+<li>Routes are planned so that the trailer system drives forward as much as possible as the control is more stable when the AGV is pulling the trailer compared to pushing.</li>
+</ul>
+<h3 id="errors-and-warnings"><a class="header" href="#errors-and-warnings">Errors and warnings</a></h3>
+<h4 id="713---error_trailer_transport_coupling"><a class="header" href="#713---error_trailer_transport_coupling">713 - ERROR_TRAILER_TRANSPORT_COUPLING</a></h4>
+<p>This error is set, and drive stopped if</p>
+<ul>
+<li>Trailer was lost or connected unexpectedly
+<ul>
+<li>While coupled or uncoupled the trailer coupling status from supervisor is changed unexpectedly.</li>
+<li>For example, while Navitrol thinks that the trailer is coupled to the AGV and driving and reported coupling status changes to uncoupled.</li>
+<li>No error is raised on unexpected changes during coupling and uncoupling sequences</li>
+</ul>
+</li>
+<li>Kingpin was not found
+<ul>
+<li>During coupling when reversing to kingpin the maximum drive distance is reached without coupling status indicating that the kingpin is detected.</li>
+<li>Max drive distance is determined by <strong>trailer_kingpin_straight_drive_dist</strong></li>
+</ul>
+</li>
+<li>The AGV system does not respond to coupling action requests
+<ul>
+<li>During coupling or uncoupling sequence the reported state has been same for over the max wait time determined by <strong>trailer_error_timer_ms</strong></li>
+</ul>
+</li>
+<li>During uncoupling if the automatic return to route fails
+<ul>
+<li>Either return to route parameters have not been calibrated correctly or the AGV is too far from the route to return.</li>
+</ul>
+</li>
+</ul>
+<p>The error is fatal, and it needs to be reset manually by the user after the issue causing it has been resolved.</p>
+<p>After the error is cleared Navitrol will determine the correct coupling state based on the coupling status received from the AGV system.</p>
+<h4 id="715---error_trailer_angle_not_detected"><a class="header" href="#715---error_trailer_angle_not_detected">715 - ERROR_TRAILER_ANGLE_NOT_DETECTED</a></h4>
+<p>This error is set if trailer angle is not detected successfully when coupled to a trailer. Possible reasons are that the pallet detection is not enabled and set up correctly or the angle detection scanner does find the wheels in the near the axles defined with &quot;Set trailer dimensions&quot;-message.</p>
+<p>The error is automatically reset when the trailer angle is successfully detected -- Successfully detected angle is rendered as a green line in Navitrol Monitor.</p>
+<h4 id="716---error_trailer_angle_too_large"><a class="header" href="#716---error_trailer_angle_too_large">716 - ERROR_TRAILER_ANGLE_TOO_LARGE</a></h4>
+<p>This error is set if detected trailer angle error compared to the AGV angle is larger than the limits set with parameters <strong>trailer_max_heading_err_close_deg</strong> and <strong>trailer_max_heading_err_far_deg.</strong> See the &quot;Fine tuning parameters&quot; chapter for more information.</p>
+<p>The error is automatically reset when the trailer angle is back within the limits. However, getting the angle error to the limits while error is active will most likely require manual control since automatic driving is prevented by the error.</p>
+<h4 id="714---error_trailer_status_not_received"><a class="header" href="#714---error_trailer_status_not_received">714 - ERROR_TRAILER_STATUS_NOT_RECEIVED</a></h4>
+<p>This error is set if valid trailer status has been received once but after that either the communication is lost, or data received is invalid for more than one second.</p>
+<p>To fix the issue make sure that the supervisor sends <strong>Message 3002 -- Supervisor status, Trailer transport status section (section ID = 12)</strong> with valid data.</p>
+<h3 id="advanced-troubleshooting"><a class="header" href="#advanced-troubleshooting">Advanced troubleshooting</a></h3>
+<p>This chapter provides instructions for advanced trouble shooting.
+See the <a href="../../Miscellaneous/Logging/Logging-en.html">Guide for taking and reading log files</a> as well.</p>
+<p><strong>Logging parameters</strong><br />
+Set both <strong>log_trailer_transport</strong> and <strong>log_veh_inte_eth</strong> to value 1 before taking a log for advanced troubleshooting.</p>
+<p><strong>Log keywords</strong><br />
+Following keywords can be used to search more information on specific points of interest. They are case sensitive.</p>
+<table><thead><tr><th>Point of interest</th><th>Keyword</th><th>Use case</th></tr></thead><tbody>
+<tr><td>Everything</td><td>&quot;railer&quot;</td><td>Start point for narrowing down the issue if it is not quite sure what goes wrong.</td></tr>
+<tr><td>Coupling state changes</td><td>&quot;Trailer state&quot;</td><td>Helpful if there seems to be issues in coupling or uncoupling sequences.</td></tr>
+<tr><td>Supervisor interface</td><td>&quot;trailer transport&quot;</td><td>Can be used to check if Navitrol receives the required trailer transport data over the supervisor interface and if Navitrol responds with valid data to the supervisor.</td></tr>
+<tr><td>Trailer angle error</td><td>&quot;TrailerTransport - Angle error&quot;</td><td>Can be used to observe trailer angle error and for example to calibrate angle detection offset.</td></tr>
+</tbody></table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../PositionControl/BarrierStop/BarrierStop-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../PositionControl/BarrierStop/BarrierStop-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

@@ -1,0 +1,1 @@
+XML files with prefix draw_io_ are modifidable using website draw.io

@@ -1,0 +1,897 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Scanner configurations - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html" class="active"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="scanner-configurations"><a class="header" href="#scanner-configurations">Scanner Configurations</a></h1>
+<p>Updated 24.04.2024</p>
+<hr />
+<h2 id="glossary"><a class="header" href="#glossary">Glossary</a></h2>
+<table><thead><tr><th>Term</th><th>Description</th></tr></thead><tbody>
+<tr><td>UDP</td><td>User Datagram Protocol</td></tr>
+<tr><td>TCP</td><td>Transmission Control Protocol</td></tr>
+</tbody></table>
+<hr />
+<h2 id="universal-scanner-parameters"><a class="header" href="#universal-scanner-parameters">Universal scanner parameters</a></h2>
+<h3 id="scanner-mounting-location-and-angle"><a class="header" href="#scanner-mounting-location-and-angle">Scanner mounting location and angle</a></h3>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>scan_rear_x</td><td>Float</td><td>0.99</td><td>The rear scanner's X coordinate w.r.t. navigation point of vehicle</td></tr>
+<tr><td>scan_rear_y</td><td>Float</td><td>0.0</td><td>The rear scanner's Y coordinate w.r.t. navigation point of vehicle</td></tr>
+<tr><td>scan_front_x</td><td>Float</td><td>-0.09</td><td>The front scanner's X coordinate w.r.t. navigation point of vehicle</td></tr>
+<tr><td>scan_front_y</td><td>Float</td><td>0.0</td><td>The front scanner's Y coordinate w.r.t. navigation point of vehicle</td></tr>
+<tr><td>scan_rear_sen_ang</td><td>Float</td><td>90.0</td><td>The rear scanner's angle difference between the vehicles and the scanners coordinate systems (degrees)</td></tr>
+<tr><td>scan_front_sen_ang</td><td>Float</td><td>90.0</td><td>The front scanner's angle difference between the vehicles and the scanners coordinate systems (degrees)</td></tr>
+<tr><td>scan_rear_beam_min_ang_deg</td><td>Float</td><td>0.0</td><td>Min angle to define the range for valid scanner measurements for the rear scanner with 0 being the first measurement beam (degrees)</td></tr>
+<tr><td>scan_rear_beam_max_ang_deg</td><td>Float</td><td>360.0</td><td>Max angle to define the range for valid scanner measurements for the rear scanner with 0 being the first measurement beam (degrees)</td></tr>
+<tr><td>scan_front_beam_min_ang_deg</td><td>Float</td><td>0.0</td><td>Min angle to define the range for valid scanner measurements for the front scanner with 0 being the first measurement beam (degrees)</td></tr>
+<tr><td>scan_front_beam_max_ang_deg</td><td>Float</td><td>360.0</td><td>Max angle to define the range for valid scanner measurements for the front scanner with 0 being the first measurement beam (degrees)</td></tr>
+<tr><td>scan_rear_upside_down</td><td>Int</td><td>0</td><td>Set 1 if rear scanner is installed upside down</td></tr>
+<tr><td>scan_front_upside_down</td><td>Int</td><td>0</td><td>Set 1 if front scanner is installed upside down</td></tr>
+<tr><td>scan_rear_use_nth_meas</td><td>Int</td><td>1</td><td>Use only every nth meas from each rear scanner scan for localization</td></tr>
+<tr><td>scan_front_use_nth_meas</td><td>Int</td><td>1</td><td>Use only every nth meas from each front scanner scan for localization</td></tr>
+<tr><td>scan_rear_offset_mm</td><td>Int</td><td>0</td><td>Rear scanner measurement offset correction (mm)</td></tr>
+<tr><td>scan_front_offset_mm</td><td>Int</td><td>0</td><td>Front scanner measurement offset correction (mm)</td></tr>
+<tr><td>scanner_dAng_factor</td><td>Float</td><td>-1.0</td><td>Common scanner dAng scaling, -1 to disable, &gt;0 scaling factor for dAng (reasonable values 0.995 ... 1.005) NOTE:Never use without consulting Navitec first</td></tr>
+<tr><td>scanner_dAng_factor_rear</td><td>Float</td><td>-1.0</td><td>Rear scanner dAng scaling, -1 to disable, &gt;0 scaling factor for dAng (reasonable values 0.995 ... 1.005) NOTE:Never use without consulting Navitec first</td></tr>
+<tr><td>scanner_dAng_factor_front</td><td>Float</td><td>-1.0</td><td>Front scanner dAng scaling, -1 to disable, &gt;0 scaling factor for dAng (reasonable values 0.995 ... 1.005) NOTE:Never use without consulting Navitec first</td></tr>
+</tbody></table>
+<h3 id="other-generic"><a class="header" href="#other-generic">Other generic</a></h3>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>scanner_protection_zone_sensitivity</td><td>Int</td><td>1</td><td>Number of consecutive scanner protection zone violations required</td></tr>
+<tr><td>scan_max_dt_err_ms</td><td>Int</td><td>5</td><td>The maximum allowed time difference in scanning interval, triggers WARNING/ERROR_SCANNER_FRONT/REAR_HIGH_DT</td></tr>
+<tr><td>scan_delay</td><td>Float</td><td>0.0</td><td>Delay of scanner measurements in ms relative to odometry measurements (negative if scanner is slower than odometry)</td></tr>
+</tbody></table>
+<h4 id="frontrear-and-localization-scanner-selection"><a class="header" href="#frontrear-and-localization-scanner-selection">Front/rear and localization scanner selection</a></h4>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>scan_rear_front_selection</td><td>Int</td><td>3</td><td>Defines which scanners are connected: 1 = rear scanner only, 2 = front scanner only, 3 = both scanners</td></tr>
+<tr><td>scan_rear_front_localization_selection</td><td>Int</td><td>3</td><td>Defines which scanners are used for localization: 1 = rear scanner only, 2 = front scanner only, 3 = both scanners</td></tr>
+<tr><td>scanner_model_front</td><td>Int</td><td>0</td><td>Front scanner model:<br>0 = Sick Ethernet<br>1 = Sick S300<br>2 = Omron OS32C<br>3 = P+F R2000 UHD<br>4 = obsolete<br>5 = Leuze RSL400<br>6 = Hokuyo UAM-05LP<br>7 = Keyence SZ-V 32N<br>8 = Sick uScan<br>9 = Sick S300 TCP/IP<br>10 = Reserved<br>11 = Quanergy M1<br>12 = Hokuyo SCIP<br>13 - reserved for internal use<br>14 = Ouster<br>15 = DDS<br>16 = Leuze RSL200</td></tr>
+<tr><td>scanner_model_rear</td><td>Int</td><td>0</td><td>Rear scanner model - Look for model number from the <strong>scanner_model_front</strong> -- parameter description</td></tr>
+</tbody></table>
+<h4 id="frontrear-scanner-communication-settings"><a class="header" href="#frontrear-scanner-communication-settings">Front/rear scanner communication settings</a></h4>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>front_scanner_serial_port</td><td>String</td><td>&quot;/dev/ttyS0&quot;</td><td>Serial port used for front scanner communication</td></tr>
+<tr><td>rear_scanner_serial_port</td><td>String</td><td>&quot;/dev/ttyS1&quot;</td><td>Serial port used for rear scanner communication</td></tr>
+<tr><td>front_scanner_ip</td><td>String</td><td>&quot;&quot;</td><td>Front scanner IP address</td></tr>
+<tr><td>rear_scanner_ip</td><td>String</td><td>&quot;&quot;</td><td>Rear scanner IP address</td></tr>
+<tr><td>front_scanner_port</td><td>Int</td><td>44818</td><td>Front scanner port</td></tr>
+<tr><td>rear_scanner_port</td><td>Int</td><td>44818</td><td>Rear scanner port</td></tr>
+</tbody></table>
+<h4 id="safety-zone-configurations"><a class="header" href="#safety-zone-configurations">Safety zone configurations</a></h4>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>wallmon_scanner_zone_mode</td><td>Int</td><td>1</td><td>0 = ignore safety zones; over 0 to slow down with warning zone 2 and to stop with warning zone 1 and protection zone, 1 = stopping is done with slow down ramp, 2 = stopping is done immediately</td></tr>
+<tr><td>wallmon_scanner_zone_trigger_both</td><td>Int</td><td>0</td><td>0 = trigger only slow/stop to front/rear scanner direction, 1 = trigger both fw&amp;bw slow from a single scanner, 2 = trigger also stop to both directions from a single scanner</td></tr>
+</tbody></table>
+<h3 id="distance-limits"><a class="header" href="#distance-limits">Distance limits</a></h3>
+<p>Maximum distance (in meters) to use can be defined per scanner model using the following parameters (with defaults)</p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>scan_min_dist</td><td>Float</td><td>0.2</td><td>General minimum measurement distance</td></tr>
+<tr><td>scan_s300_max_dist</td><td>Float</td><td>29.9</td><td>Maximum distance measurement to use for Sick s300</td></tr>
+<tr><td>scan_sick_eth_max_dist</td><td>Float</td><td>65.0</td><td>Maximum distance measurement to use for Sick eth</td></tr>
+<tr><td>scan_pef_max_dist</td><td>Float</td><td>131.0</td><td>Maximum distance measurement to use for Pef</td></tr>
+<tr><td>scan_omron_max_dist</td><td>Float</td><td>65.5</td><td>Maximum distance measurement to use for Omron</td></tr>
+<tr><td>scan_hokuyo_max_dist</td><td>Float</td><td>39.9</td><td>Maximum distance measurement to use for Hokuyo</td></tr>
+<tr><td>scan_leuze_rsl200_max_dist</td><td>Float</td><td>25.0</td><td>Maximum distance measurement to use for Leuze RSL200</td></tr>
+<tr><td>scan_leuze_rsl400_max_dist</td><td>Float</td><td>65.5</td><td>Maximum distance measurement to use for Leuze RSL400</td></tr>
+<tr><td>scan_velodyne_max_dist</td><td>Float</td><td>100.0</td><td>Maximum distance measurement to use for Velodyne</td></tr>
+<tr><td>scan_keyence_max_dist</td><td>Float</td><td>60.0</td><td>Maximum distance measurement to use for Keyence</td></tr>
+<tr><td>scan_uscan_max_dist</td><td>Float</td><td>65.5</td><td>Maximum distance measurement to use for micro scan</td></tr>
+<tr><td>scan_ros_max_dist</td><td>Float</td><td>100.0</td><td>Maximum distance measurement to use for ros virtual scanner</td></tr>
+<tr><td>scan_quanergy_m1_max_dist</td><td>Float</td><td>65.5</td><td>Maximum distance measurement to use for Quanergy</td></tr>
+<tr><td>scan_ouster_max_dist</td><td>Float</td><td>65.5</td><td>Maximum distance measurement to use for Ouster</td></tr>
+<tr><td>scan_dds_max_dist</td><td>Float</td><td>100.0</td><td>Maximum distance measurement to use for DDS</td></tr>
+</tbody></table>
+<h3 id="scanners-for-safety-only"><a class="header" href="#scanners-for-safety-only">Scanners for safety only</a></h3>
+<p>Navitrol supports up to four scanners that are used for safety only.
+Only the model of the scanner and IP address/port or serial port path are required for the set up.</p>
+<p>Parameters:</p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>safety_scanner_model[]</td><td>Int</td><td>-1 = not defined</td><td>Look for model number from the <strong>scanner_model_front</strong> -- parameter description</td></tr>
+<tr><td>safety_scanner_addr[]</td><td>String</td><td>&quot;&quot;</td><td>Serial port path or ip:port</td></tr>
+</tbody></table>
+<table><thead><tr><th>Parameter Example</th><th></th></tr></thead><tbody>
+<tr><td><strong>I,safety_scanner_model[0], 2</strong></td><td>2 = Omron OS32C</td></tr>
+<tr><td><strong>S,safety_scanner_addr[0], 192.168.1.1:44818</strong></td><td></td></tr>
+<tr><td><strong>I,safety_scanner_model[1], 6</strong></td><td>6 = Hokuyo UAM-05LP</td></tr>
+<tr><td><strong>S,safety_scanner_addr[1], 192.168.1.2:10940</strong></td><td></td></tr>
+</tbody></table>
+<p><strong>Note:</strong> Not all the scanner models supported by Navitrol can send safety status.
+Supported scanners for safety only (<strong>Navitrol 6.17.00)</strong></p>
+<ul>
+<li>
+<p>Omron OS32C</p>
+</li>
+<li>
+<p>Hokuyo UAM-05LP</p>
+</li>
+<li>
+<p>Keyence SZ-V 32N</p>
+</li>
+<li>
+<p>Sick uScan/nanoScan</p>
+</li>
+<li>
+<p>Sick S300 -- full support starting from <strong>Navitrol 6.32.00</strong></p>
+</li>
+<li>
+<p>Leuze RSL400</p>
+</li>
+<li>
+<p>Leuze RSL200</p>
+</li>
+</ul>
+<h3 id="additional-measurement-scanners"><a class="header" href="#additional-measurement-scanners">Additional measurement scanners</a></h3>
+<p>In addition to localization scanners (front/rear), Navitrol supports two additional measuring scanners. Measurement scanners can trigger slow down and stop based on warning zones if parameter <strong>wallmon_scanner_zone_mode</strong> is non-zero. Any scanner model supported by Navitrol can be defined to be used as measurement only scanner as well. These scanners can be used for</p>
+<ul>
+<li>
+<p>Obstacle avoidance</p>
+</li>
+<li>
+<p>Target detection</p>
+</li>
+</ul>
+<p>Array parameters are used to define these additional measurement
+scanners. Up to two additional scanners (indexes 0 and 1) are supported.
+Most parameters are familiar from front/rear scanner parameter set. The
+following lists all parameters with some sample values:</p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Example value</th><th>Description</th></tr></thead><tbody>
+<tr><td>scanner_meas_model[]</td><td>Int</td><td>3</td><td>-1 disabled is the default</td></tr>
+<tr><td>scanner_meas_addr[]</td><td>String</td><td>192.168.2.182:80</td><td>IP:port or serial port</td></tr>
+<tr><td>scanner_meas_x[]</td><td>Float</td><td>0.0</td><td>The measurement scanner's X coordinate w.r.t. navigation point of vehicle</td></tr>
+<tr><td>scanner_meas_y[]</td><td>Float</td><td>0.0</td><td>The measurement scanner's Y coordinate w.r.t. navigation point of vehicle</td></tr>
+<tr><td>scanner_meas_sen_ang_deg[]</td><td>Float</td><td>0.0</td><td>The measurement scanner angle</td></tr>
+<tr><td>scanner_meas_beam_min_ang_deg[]</td><td>Float</td><td>0.0</td><td>Measurement scanner  beam min angle define the range of valid scanner measurement beams for each scanner with 0 deg being the first measurement beam</td></tr>
+<tr><td>scanner_meas_beam_max_ang_deg[]</td><td>Float</td><td>360.0</td><td>Measurement scanner  beam max angle define the range of valid scanner measurement beams for each scanner with 0 deg being the first measurement beam</td></tr>
+<tr><td>scanner_meas_upside_down[]</td><td>Int</td><td>0</td><td>Set 1 if measurement scanner is installed upside down</td></tr>
+<tr><td>scanner_meas_use_nth_meas[]</td><td>Int</td><td>1</td><td>Use only every nth meas from each measurement scanner scan for localization</td></tr>
+<tr><td>scanner_meas_offset_mm[]</td><td>Int</td><td>0</td><td>Measurement scanner offset correction (mm)</td></tr>
+<tr><td>scanner_meas_dAng_factor[]</td><td>Float</td><td>-1.0</td><td>Common scanner dAng scaling, -1 to disable, &gt;0 scaling factor for dAng (reasonable values 0.995 ... 1.005) NOTE:Never use without consulting Navitec first</td></tr>
+<tr><td>scanner_meas_scan_delay[]</td><td>Float</td><td>0.0</td><td>Delay of scanner measurements in ms relative to odometry measurements (negative if scanner is slower than odometry)</td></tr>
+<tr><td>scanner_meas_scan_rot_cor_invert_dir[]</td><td>Int</td><td>0</td><td>Invert direction in rotation correction</td></tr>
+<tr><td>scanner_sends_every_nth_meas[]</td><td>Int</td><td>1</td><td>Scanner sends only every nth meas - not Navigation SW controllable, valid for specific scanners only</td></tr>
+</tbody></table>
+<h2 id="leuze"><a class="header" href="#leuze">Leuze</a></h2>
+<h3 id="rsl200"><a class="header" href="#rsl200">RSL200</a></h3>
+<h4 id="scanner-configuration"><a class="header" href="#scanner-configuration">Scanner configuration</a></h4>
+<p>Download Leuze configuration and diagnostic software Sensor Studio.
+Additionally, download and install Safety Device Collection software to have device library and be able to configure the scanner. If Sensor Studio has been installed already the old will need to be uninstalled first before installing a new interface.</p>
+<p>Connect the scanner via USB to your PC. Start the configuration software and select device search online. Press [<strong>Next</strong>].</p>
+<p><img src="./media-en/leuze_rsl_200_select_device.png" alt="" />
+&gt;Select device RSL200</p>
+<p>Press [<strong>Next</strong>].</p>
+<p><img src="./media-en/leuze_rsl_200_search_device.png" alt="" /></p>
+<blockquote>
+<p>Search for the device. Select USB as Adapter </p>
+</blockquote>
+<p>Start search</p>
+<p><img src="./media-en/leuze_rsl_200_search_complete.png" alt="" /></p>
+<blockquote>
+<p>Search complete</p>
+</blockquote>
+<p>Press [<strong>Next</strong>].</p>
+<p><img src="./media-en/leuze_rsl_200_set_data_telegrams.png" alt="" /></p>
+<blockquote>
+<p>Access from: Settings → Data telegrams</p>
+</blockquote>
+<p>Set the IP address to the connected port of the IPC, set Telegram interval and Index interval as shown in the above Figure. Set the port to a unique port setting.</p>
+<p><img src="./media-en/leuze_rsl_200_set_LAN.png" alt="" /></p>
+<blockquote>
+<p>Access from: Settings → Communication → LAN</p>
+</blockquote>
+<p>Set the IP address to the same subnet as the port.</p>
+<p><img src="./media-en/leuze_rsl_200_download.png" alt="" /></p>
+<blockquote>
+<p>Download the parameters. </p>
+</blockquote>
+<p>Press the download button highlighted by a black square. A popup will appear, the default password is provided below.</p>
+<p>The software will require authentication.</p>
+<p>User: Engineer</p>
+<p>Password: safety</p>
+<p>Press OK on the next popup to update the parameters.</p>
+<h3 id="rsl400"><a class="header" href="#rsl400">RSL400</a></h3>
+<h4 id="scanner-configuration-1"><a class="header" href="#scanner-configuration-1">Scanner configuration</a></h4>
+<p>Download Leuze configuration and diagnostic software Sensor Studio.
+Additionally, download and install Safety Device Collection software to have device library and be able to configure the scanner.</p>
+<p>Connect to the scanner via ethernet to your PC. Start the configuration software and select device search online. Press [<strong>Next</strong>].</p>
+<p><img src="./media-en/image4.png" alt="" /></p>
+<p>Select the device to which you are trying to connect with the software and press [<strong>Next</strong>]. If you cannot see any devices in the list, make sure that Safety Device Collection is installed.</p>
+<p><img src="./media-en/image5.png" alt="" /></p>
+<p>Select <strong>LAN</strong> as interface and <strong>Ethernet</strong> as adapter.</p>
+<p>Press [<strong>Start</strong>] to begin the search.</p>
+<p>Select the correct device from the list and press [<strong>Next</strong>].</p>
+<p><img src="./media-en/image6.png" alt="" /></p>
+<p>In order to get the scanner communicating with Navitrol, the UDP telegram needs to be configured to send packets to the IP of the navigation PC to the specified port.</p>
+<p>Go to <strong>SETTINGS → Data telegrams</strong>.</p>
+<p><img src="./media-en/image7.png" alt="" /></p>
+<p>Set the following settings:</p>
+<p><img src="./media-en/image8.png" alt="" /></p>
+<p>When the configurations are finished, download the setting to the device by pressing the download button.</p>
+<p><img src="./media-en/image9.png" alt="" /></p>
+<p>The software will require authentication.</p>
+<p>User: Engineer</p>
+<p>Password: safety</p>
+<p><img src="./media-en/image10.png" alt="" /></p>
+<p>Set the following parameters to params.txt:</p>
+<p><strong>I,scanner_model_front/rear, 5</strong></p>
+<p><strong>I,front/rear_scanner_port, 9999/9998 (The port that was set for the UDP telegram)</strong></p>
+<p><strong>F,reflector_rssi_min_ratio, 0.80</strong></p>
+<p>Leuze can be configured to use 2 or 4 safety zones and Navitrol supports only 3. To choose which option is configured with Leuze, add the following parameter:</p>
+<p><strong>I,scan_leuze_use_two_prot_funcs, 0 = 2 protective fields (default), 1 = 4 fields</strong></p>
+<p>To select which warning zones to trigger from the Leuze status message, add the following parameter:</p>
+<p><strong>I,scan_leuze_warning_zone_mode, 0 (default)</strong></p>
+<p>If Leuze is configured to use 2 safety zones:</p>
+<p><strong>Mode Selection</strong></p>
+<p><strong>0 = protection + warning zone 1<br />
+2 = protection + warning zone 2<br />
+5 = warning zones 1 + 2</strong></p>
+<p>If Leuze is configured to use 4 safety zones:</p>
+<p>(usually P = estop, W1 = soft stop, W2 = slowdown)</p>
+<p><img src="./media-en/image11.png" alt="" /></p>
+<h4 id="scanner-reset"><a class="header" href="#scanner-reset">Scanner reset</a></h4>
+<p>When scanner has been configured in the Sensor Studio and the configuration is not known, then it may become impossible to connect to it. In such a case it may become necessary to reset it using the following procedure.</p>
+<ol>
+<li>
+<p>Switch off the scanner</p>
+</li>
+<li>
+<p>Remove scanner from the CU - mounting base (2 in the Figure)</p>
+</li>
+<li>
+<p>Remove Jumper PNP/NPN (1 in the Figure) like it is shown on the figure</p>
+</li>
+</ol>
+<p><img src="./media-en/image12.png" alt="" /></p>
+<ol start="4">
+<li>
+<p>Attach scanner on the base</p>
+</li>
+<li>
+<p>Switch on the scanner</p>
+</li>
+<li>
+<p>Message &quot;HIDE COVER  TO RESET CONFIGURATION&quot; should be displayed on the scanner</p>
+</li>
+<li>
+<p>Within 2 minutes: Cover the screen (360°) with a cloth, so that all measurement values are small than 150mm.</p>
+</li>
+<li>
+<p>If successful , the scanner deletes the configuration; „CONFIGURATION WAS RESET -- WAITING FOR CONFIGURATION&quot;</p>
+</li>
+<li>
+<p>Switch off scanner</p>
+</li>
+<li>
+<p>Remove scanner from CU</p>
+</li>
+<li>
+<p>Insert Jumper PNP/NPN</p>
+</li>
+<li>
+<p>Attach scanner to CU</p>
+</li>
+</ol>
+<h2 id="sick"><a class="header" href="#sick">Sick</a></h2>
+<h3 id="s300"><a class="header" href="#s300">S300</a></h3>
+<p>There are several variants of S300 available. S300 Expert feature list includes &quot;Extended measured data output via RS-422 with landmark recognition&quot;, which means that</p>
+<ul>
+<li>S300 Expert can transfer all measured data in real-time (i.e. 40 ms interval), if the interface is set to 500 kBaud and no filter is set.</li>
+<li>S300 Expert has built-in reflector detection (landmark detection).</li>
+</ul>
+<p>Other S300 variants do not support reflector detection and can transfer only every second measurement (i.e. 80 ms interval), if the interface is set to 500 kBaud.</p>
+<p>So, if reflector detection is needed, then Expert model S300 scanners must be used. Because of capability to transfer all measurement data in real-time, S300 Expert is strongly recommended for localization use in all cases.</p>
+<p>Configuration of the S300 is done with SICKs CDS-software.</p>
+<h4 id="configuration-as-localization-scanner"><a class="header" href="#configuration-as-localization-scanner">Configuration as Localization Scanner</a></h4>
+<p>The S300 scanners should be configured as described in this section to be used as localization scanners. It should be noted that, for communication protocol version 1.03 and later, it is not possible to get warning zone information from the scanners when used for localization, only protection zone information is available.</p>
+<p>The baud rate has to be set to <strong>500 kBaud</strong>, the send mode needs to be <strong>Continuous data output</strong> and the Measured data output has to be <strong>Distance</strong> with no ranges selected. Also, the Message structure must be <strong>1 message</strong> and all I/O data outputs need to be unchecked. These configurations can be done from the <strong>Measured data output</strong>-tab.</p>
+<p><img src="./media-en/image13.png" alt="" /></p>
+<p>Also the field mode has to be set to <strong>4 x 0.5</strong> from the <strong>Resolution/scanning range-tab</strong>.</p>
+<p><img src="./media-en/image14.png" alt="" /></p>
+<p>Set the following parameters to params.txt:</p>
+<p><strong>I,scanner_model_front/rear, 1</strong></p>
+<p><strong>S,front/rear_scanner_serial_port, &quot;The name of the serial port that the scanner is connected to</strong></p>
+<p><strong>F,reflector_rssi_min_ratio, 0.75</strong></p>
+<h4 id="configuration-as-safety-scanner"><a class="header" href="#configuration-as-safety-scanner">Configuration as Safety Scanner</a></h4>
+<p>The S300 scanners can be configured as safety scanners with both warning zone and protection zone information available for communication protocol version 1.03 and later. The only difference in the configuration software from the localization case is that OSSDs from I/O output needs to be enabled as seen below. All the other settings should be the same as in localization scanner configuration.</p>
+<p>In params.txt file, the following parameters should be set:</p>
+<p><strong>I,safety_scanner_model[0], 1</strong></p>
+<p><strong>S,safety_scanner_addr[0], &quot;The name of the serial port that the scanner is connected to&quot;</strong></p>
+<p><img src="./media-en/image15.PNG" alt="" /></p>
+<h3 id="microscannanoscan"><a class="header" href="#microscannanoscan">microScan/nanoScan</a></h3>
+<p>Download and launch Sick Safety Designer configuration software.</p>
+<p>Connect to the device with a micro USB cable.</p>
+<p>Select <strong>Search for devices</strong>.</p>
+<p><img src="./media-en/image16.png" alt="" /></p>
+<p>Double-click the found device to add it to the project.</p>
+<p><img src="./media-en/image17.png" alt="" /></p>
+<p>Open <strong>Configuration Data output.</strong></p>
+<ol>
+<li>
+<p>Select <strong>On request and additionally countinuously to target computer</strong> as Send mode.</p>
+</li>
+<li>
+<p>Set the IP address of the port in which the scanner is connected as the IP address (IPC LAN1 port default IP is 10.10.6.100).</p>
+</li>
+<li>
+<p>Set the UDP port to be the same as in params.txt (default 2111 for front scanner and 2110 for rear scanner).</p>
+</li>
+<li>
+<p>Set the scanner to send every measuring.</p>
+</li>
+<li>
+<p>Set the scanner to send all of the data available.</p>
+</li>
+</ol>
+<p><img src="./media-en/image18.png" alt="" /></p>
+<p>Download the configurations to the device with the <strong>Transfer</strong> button.</p>
+<p>Confirm by pressing <strong>Yes</strong>.</p>
+<p><img src="./media-en/image19.png" alt="" /></p>
+<p>The software will require authentication.</p>
+<p>User group: Authorized client</p>
+<p>Password: SICKSAFE or sicksafe</p>
+<p><img src="./media-en/image20.png" alt="" /></p>
+<p>To activate the new configurations, the device must be started in test mode and the configurations must be verified.</p>
+<p>Press <strong>Yes</strong> on the Start device in test mode -window that appears after the transfer.</p>
+<p><img src="./media-en/image21.png" alt="" /></p>
+<p>To confirm that the settings are valid, press <strong>Verify</strong>.</p>
+<p>Approve the verification report by pressing <strong>Yes</strong>.</p>
+<p><img src="./media-en/image22.png" alt="" /></p>
+<p>Set the following parameters to params.txt:</p>
+<p><strong>I,scanner_model_front/rear, 8</strong></p>
+<p><strong>I,front/rear_scanner_port, 2111/2110 (The port that was set for the UDP telegram)</strong></p>
+<p><strong>F,reflector_rssi_min_ratio, 0.75</strong></p>
+<h4 id="safety-zone-configurations-1"><a class="header" href="#safety-zone-configurations-1">Safety zone configurations</a></h4>
+<p>By default, only two zone triggers (one protection zone and warning zone) are used. To have two warning zone violations reported to Navitrol, extra configuration is needed, both in Sick Safety Designer as well as Navitrol parameters. Scanner has to be configured to use cutoff paths to communicate violated zone to Navitrol.</p>
+<p>Following instructions for scanner configuration was provided by Sick</p>
+<h5 id="configuring-with-safety-designer"><a class="header" href="#configuring-with-safety-designer">Configuring with Safety Designer.</a></h5>
+<p>After creating a project in Safety Designer with chosen nanoScan3 device and optionally accessing the device with USB, you should be able to see the measurements from nanoScan3 in the &quot;Fields&quot; configuration window.
+The configuration file can also be made without the device.</p>
+<p><img src="./media-en/image23.png" alt="" /></p>
+<p>The field coordinates window can be zoomed using CTRL+Scroll</p>
+<p>The first protective field can be drawn with the rectangle-tool circled with yellow marker. In this example protective field is 500 mm wide, 800 mm high ranging from 200 mm to 1000 mm. Software automatically adds a triangular shape in front of the protective field, so blinding the scanner would not prevent safety output from activating.</p>
+<p><img src="./media-en/image24.png" alt="" /></p>
+<p>Warning fields can be added using the top right marked button &quot;Add field to field set&quot; and it can be set as a &quot;Warning field&quot; by choosing &quot;Field type&quot; in the bottom right corner. After that you can similarly define the field with &quot;Draw rectangle&quot; or with other shape tools.</p>
+<p>Below we can see 3 fields. One protective field defined from 200 -- 1000 mm, two warning fields with 1000 - 1500 mm and 1500 -- 2000 mm ranges respectively.</p>
+<p><img src="./media-en/image25.png" alt="" /></p>
+<p>After defining the fields, move to &quot;Inputs and outputs, local&quot; to define the digital outputs. In this example we assign two &quot;Monitoring results&quot; into inputs 2 and 3.</p>
+<p><img src="./media-en/image26.png" alt="" /></p>
+<p>After defining the outputs, move to &quot;Monitoring cases&quot;-tab to assign the fields defined before to the outputs, by dragging the field set. After that tick the &quot;Universal outputs&quot;, so the safety scanner knows which outputs to activate, when field is intercepted.</p>
+<p><img src="./media-en/image27.png" alt="" /></p>
+<p>Now you have configured the scanner to use two warning fields and one protective field. Next step is to send the configuration to the scanner if you have one available by clicking &quot;Transfer&quot;, or to save the configuration for later use.</p>
+<p>Safe Cut-off path needs to be configured for protective field, and Non-safe Cut-off paths for warning fields. In the example case above the cut-off paths were set to following values:</p>
+<ul>
+<li>
+<p>Protective field has safe cut-off path 1</p>
+</li>
+<li>
+<p>Warning field 1 has non-safe cut-off path 2</p>
+</li>
+<li>
+<p>Warning field 2 has non-safe cut-off path 3</p>
+</li>
+</ul>
+<p>These values we need to configure to the Navitrol parameters.</p>
+<h5 id="navitrol-parameters"><a class="header" href="#navitrol-parameters">Navitrol parameters</a></h5>
+<p>Navitrol parameters are configured to same path numbers (1-20) as defined in Safety Designer to map fields into zones in Navitrol. After fields are defined and configurations done in both Safety Designer and Navitrol, configuration should be verified by connecting Navitrol Monitor and triggering the scanner fields to see if matching warning is raised in Monitor.</p>
+<p>Parameters:</p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>scan_sick_protection_zone_safety_cutoff_path</td><td>Int</td><td>0</td><td>Used to check protection zone violation, 0 for disabled; min 0, max 20</td></tr>
+<tr><td>scan_sick_warning_zone1_safety_cutoff_path</td><td>Int</td><td>0</td><td>Used to check warning zone 1 violation, 0 for disabled; min 0, max 20</td></tr>
+<tr><td>scan_sick_warning_zone2_safety_cutoff_path</td><td>Int</td><td>0</td><td>Used to check warning zone 2 violation, 0 for disabled; min 0, max 20</td></tr>
+</tbody></table>
+<h3 id="tim-lms1-lms511"><a class="header" href="#tim-lms1-lms511">TIM***, LMS1**, LMS511</a></h3>
+<p>Download and launch Sopas Engineering Tool.</p>
+<ol>
+<li>
+<p>Search for devices by pressing the <strong>Search devices: Defaul</strong>t button.</p>
+</li>
+<li>
+<p>Press the <strong>Edit IP address</strong> button.</p>
+</li>
+</ol>
+<p><img src="./media-en/image28.png" alt="" /></p>
+<ol>
+<li>
+<p>Select <strong>Use the following IP settings</strong>.</p>
+</li>
+<li>
+<p>Select an IP address for the scanner. It is recommended to set the front and rear scanners to different domains. The ethernet port in which the scanner is connected to must also be in the same domain.</p>
+</li>
+<li>
+<p>Set the Subnetmask to 255.255.255.0.</p>
+</li>
+</ol>
+<p><img src="./media-en/image29.png" alt="" /></p>
+<p>Set the following parameters to params.txt:</p>
+<p><strong>I,scanner_model_front/rear, 0</strong></p>
+<p><strong>S,front/rear_scanner_ip, &quot;The IP address that was set for the scanner&quot;</strong></p>
+<p><strong>I,front/rear_scanner_port, &quot;The port that was set for the scanner&quot;</strong></p>
+<p><strong>F,reflector_rssi_min_ratio, 0.75</strong></p>
+<h2 id="omron"><a class="header" href="#omron">Omron</a></h2>
+<h3 id="os32c"><a class="header" href="#os32c">OS32C</a></h3>
+<p>Download the OS32C Configuration Tool software.</p>
+<p>Connect to the device via Ethernet.</p>
+<p>Configure your local area connection of your PC to obtain an IP address
+automatically.</p>
+<p><img src="./media-en/image30.png" alt="" /></p>
+<p>Start the configuration software. A Discover Sensors window will pop up.</p>
+<p>Press [<strong>Continue</strong>] to search for devices that are connected to your PC.</p>
+<p><img src="./media-en/image31.png" alt="" /></p>
+<p>When a sensor is found the software will require authentication.</p>
+<pre><code>User: Supervisor
+Password: supeusr
+</code></pre>
+<p><img src="./media-en/image32.png" alt="" /></p>
+<p>Go to <strong>Utilities Sensor Ethernet Configuration.</strong> The Ethernet Configuration screen pops up.</p>
+<ol>
+<li>
+<p>Select <strong>Use the following address</strong>.</p>
+</li>
+<li>
+<p>Select an <strong>IP address</strong> for the scanner. It is recommended to set the front and rear scanners to different domains. The Ethernet port of the IPC in which the scanner is connected must also be in the same domain.</p>
+</li>
+<li>
+<p>Set the <strong>Subnet mask</strong> to 255.255.255.0.</p>
+</li>
+<li>
+<p>Press [<strong>Write to Sensor</strong>]</p>
+</li>
+</ol>
+<p><img src="./media-en/image34.png" alt="" /></p>
+<p>Confirm the changes in Ethernet configuration.</p>
+<p>An information window is displayed. Read the message and decide if you want to continue to use the current IP address or start using the new address by restarting the sensor. To confirm and change the IP, press [<strong>Connect</strong>].</p>
+<p><img src="./media-en/figure35.png" alt="" /></p>
+<p>Set the following parameters to params.txt:</p>
+<p><strong>I,scanner_model_front/rear, 2</strong></p>
+<p><strong>S,front/rear_scanner_ip, &quot;The IP address that was set for the scanner&quot;</strong></p>
+<p><strong>I,front/rear_scanner_port, 44818</strong></p>
+<p><strong>F,reflector_rssi_min_ratio, 0.85</strong></p>
+<p><strong>scan_omron_set_warning_zones 1 to change the warning zone set and 0 if they are valid</strong></p>
+<h2 id="hokuyo"><a class="header" href="#hokuyo">Hokuyo</a></h2>
+<h3 id="uam-05lp"><a class="header" href="#uam-05lp">UAM-05LP</a></h3>
+<h4 id="changing-ip-address"><a class="header" href="#changing-ip-address">Changing IP-address</a></h4>
+<p>Download the UAM project Designer SW.</p>
+<p>Connect to the device using USB cable. Configuration is password protected and default password is 12345678. For details, see &quot;Safety Laser Scanner UAM-05LP User's Manual&quot;</p>
+<p>Factory default values are</p>
+<ul>
+<li>
+<p>IP address : 192.168.0.10</p>
+</li>
+<li>
+<p>Default gateway : 192.168.0.1</p>
+</li>
+<li>
+<p>Subnet mask : 255.255.255.0</p>
+</li>
+<li>
+<p>Port number : 10940</p>
+</li>
+</ul>
+<p><img src="./media-en/image36.png" alt="" /></p>
+<p>When all the configurations are complete, click &quot;Confirm&quot; button to verify the configuration and send to device or save to SD card.</p>
+<h4 id="navitrol-parameters-1"><a class="header" href="#navitrol-parameters-1">Navitrol parameters</a></h4>
+<p>Set the following parameters to params.txt:</p>
+<p><strong>I,scanner_model_front/rear, 6</strong></p>
+<p><strong>S,front/rear_scanner_ip, *The IP address that was set for the scanner*</strong></p>
+<p><strong>I,front/rear_scanner_port, 10940</strong></p>
+<p><strong>F,reflector_rssi_min_ratio, 0.5</strong></p>
+<h4 id="smart-urg-series"><a class="header" href="#smart-urg-series">Smart-URG series</a></h4>
+<p><strong>NOTE: Only model UST-10LX-H02 tested by Navitec</strong></p>
+<p>Download the data viewing tool UrgBenriPlus.</p>
+<p>Connect to the device using Ethernet.</p>
+<p><img src="./media-en/image37.png" alt="" /></p>
+<p>Default IP-address of the scanner is 192.168.0.10. You can change it by connecting to the device and then pressing the Change IP Address button. This opens the window shown below.</p>
+<p><img src="./media-en/image38.png" alt="" /></p>
+<h4 id="navitrol-parameters-2"><a class="header" href="#navitrol-parameters-2">Navitrol parameters</a></h4>
+<p>Set the following parameters to params.txt:</p>
+<p><strong>I,scanner_model_front/rear, 12</strong></p>
+<p><strong>S,front/rear_scanner_ip, &quot;The IP address that was set for the scanner&quot;</strong></p>
+<p><strong>I,front/rear_scanner_port, 10940</strong></p>
+<p><strong>F,reflector_rssi_min_ratio, 0.75</strong></p>
+<h2 id="keyence"><a class="header" href="#keyence">Keyence</a></h2>
+<h3 id="sz-v32nsz-v32nc"><a class="header" href="#sz-v32nsz-v32nc">SZ-V32N/SZ-V32NC</a></h3>
+<p>SZ-V series is a modular design safety scanner, consisting of two main components; scanner head and display unit. Different component combinations then result in different device variants. From Navitrol point of view the relevant thing is to have display unit having network interface and device having 'N' in model name:</p>
+<ul>
+<li>
+<p>No N: No network connection capability</p>
+</li>
+<li>
+<p>N: With PROFIsafe (PROFINET, UDP, EtherNet/IP™)</p>
+</li>
+<li>
+<p>NC: With CIP Safety™ (EtherNet/IP™, UDP)</p>
+</li>
+</ul>
+<h4 id="connecting"><a class="header" href="#connecting">Connecting</a></h4>
+<p>The picture below shows different options for connecting SZ-V series devices to network. Complete units (having both head and display unit) can be connected directly to IPC or via switch. They can be connected &quot;daisy-chained&quot; using dual connectors in display unit.</p>
+<p><img src="./media-en/image39.png" alt="" /></p>
+<p>SZ-V series devices also support master-slave connection, where head units without display units are connected to full unit via special expansion cable; see red rectangle in picture above In such a case communication to slave units (heads) can be realized through the master device.</p>
+<p><strong>NOTE:</strong> Navitrol does not support this master-slave communication method.</p>
+<h4 id="operating-modes"><a class="header" href="#operating-modes">Operating modes</a></h4>
+<p>SZ-V series has two operating modes; Standard Mode and High Speed Mode.</p>
+<p><strong>High Speed Mode</strong> is required by Navitrol. It does with some shortcomings though.</p>
+<p><img src="./media-en/image40.png" alt="" /></p>
+<p>The measurement distance data can be received in increments of 0.2° in standard mode and in increments of 0.4° if the Operating mode is High Speed mode.</p>
+<p>Keyence also has an option for &quot;measured value stabilization filter&quot;; which is not recommended as it adds extra delay to measurements.</p>
+<h4 id="configuration"><a class="header" href="#configuration">Configuration</a></h4>
+<p>Configuration can be done using Keyence SZ-V configuration software SZ-V Configurator; included in the Safety Device Configurator. It is possible to communicate with the SZ-V configuration software (SZ-V Configurator) via Ethernet or USB.</p>
+<p>Detailed step by step instructions for different connection options are described in &quot;Keyence Safety Laser Scanner SZ-V32N / SZ-V32NC Communications Manual&quot;. The following pictures show the relevant communication settings when used with Navitrol. Communication protocol shall be UDP and scanner should have a static IP address.</p>
+<p>Select communication protocol</p>
+<p><img src="./media-en/image41.png" alt="" /></p>
+<p>Set IP address</p>
+<p><img src="./media-en/image42.png" alt="" /></p>
+<h4 id="navitrol-parameters-3"><a class="header" href="#navitrol-parameters-3">Navitrol parameters</a></h4>
+<p>Set the following parameters to params.txt:</p>
+<p><strong>I,scanner_model_front/rear, 7</strong></p>
+<p><strong>S,front/rear_scanner_ip, &quot;The IP address that was set for the scanner&quot;</strong></p>
+<p><strong>I,front/rear_scanner_port, 8800</strong></p>
+<h2 id="pepperlfuchs"><a class="header" href="#pepperlfuchs">Pepperl+Fuchs</a></h2>
+<h3 id="r2000"><a class="header" href="#r2000">R2000</a></h3>
+<p>The only manual setting required is the IP address setting of the Ethernet connection of the scanner. The Navitrol application handles the other scanner settings at startup. There are two methods to edit the IP setting; local user interface and PACTware software.</p>
+<h4 id="using-pactware-software"><a class="header" href="#using-pactware-software">Using PACTware software</a></h4>
+<ul>
+<li>
+<p>Download the PACTware software and Device Type Manager (DTM) from the software section on the page: <a href="http://www.pepperl-fuchs.com/global/en/classid_53.htm?view=productdetails&amp;prodid=64617">pepperl-fuchs.com</a></p>
+</li>
+<li>
+<p>Connect the scanner to the computer via Ethernet cable.</p>
+</li>
+<li>
+<p>Set your computer IP address to 192.168.0.xxx (the scanner default IP address is 192.168.0.1).</p>
+</li>
+<li>
+<p>If the scanner is restored to factory default settings just set your computer to DHCP mode (the scanner is in Auto IP mode).</p>
+</li>
+<li>
+<p>Start the PACTware software.</p>
+</li>
+<li>
+<p>In the Device catalog, select communication by double clicking the R2000 IP Comm (see Fig 10). The selected IP communication should appear in the Structure window.</p>
+</li>
+</ul>
+<p><img src="./media-en/image43.png" alt="" /></p>
+<blockquote>
+<p>Figure 10: Select communication.</p>
+</blockquote>
+<ul>
+<li>Select the device in the Device catalog by double clicking the proper device model, like OMDxxx-R2000 UHD (see Fig 11). The selected device should appear in the Structure window (see Fig 12).</li>
+</ul>
+<p><img src="./media-en/image44.png" alt="" /></p>
+<blockquote>
+<p>Figure 11: Select device.</p>
+</blockquote>
+<ul>
+<li>
+<p>Select R2000 IP Comm in the Structure window and click connect in the top bar. Do the same for OMDxxx-R2000. If a connection is established the connection picture in the Structure window should turn green (Fig 12).</p>
+</li>
+<li>
+<p>When connected, double click the OMDxxx-R2000 (Fig 12) to open a scanner configuration window (Fig 13).</p>
+</li>
+</ul>
+<p><img src="./media-en/image45.png" alt="" /></p>
+<blockquote>
+<p>Figure 12: Connect.</p>
+</blockquote>
+<p>In the scanner configuration window (Fig 13):</p>
+<ul>
+<li>
+<p>Select the Ethernet Setup.</p>
+</li>
+<li>
+<p>Tick Enable update of IP configuration.</p>
+</li>
+<li>
+<p>Change the IP address in the New Settings.</p>
+</li>
+<li>
+<p>Store the settings in the device.</p>
+</li>
+<li>
+<p>Reboot the scanner or turn it off.</p>
+</li>
+</ul>
+<p><img src="./media-en/image46.png" alt="" /></p>
+<blockquote>
+<p>Figure 13: Ethernet Setup.</p>
+</blockquote>
+<h4 id="using-local-user-interface"><a class="header" href="#using-local-user-interface">Using local user interface</a></h4>
+<p>Local user interface can be used to change the IP address settings.</p>
+<p><img src="./media-en/image47.png" alt="" /></p>
+<p>Buttons 3 and 4 can be used to navigate into local menu system for acquiring and modifying some settings, like IP settings. Visual feedback is presented in area marked with 7. Local menu is pretty intuitive to use -- menu structure and more detailed instructions can be found from P&amp;F OMDxx-R2000 user manuals.</p>
+<p><strong>NOTE:</strong> Changes to the IP configuration take effect only after a restart.</p>
+<h4 id="navitrol-parameters-4"><a class="header" href="#navitrol-parameters-4">Navitrol parameters</a></h4>
+<p>Set the following parameters to params.txt:</p>
+<p><strong>I,scanner_model_front/rear, 3</strong></p>
+<p><strong>S,front/rear_scanner_ip, &quot;The IP address that was set for the scanner&quot;</strong></p>
+<p><strong>I,front/rear_scanner_port, 80</strong></p>
+<p><strong>F,reflector_rssi_min_ratio, 0.75</strong></p>
+<p><strong>There are also several P&amp;F R2000 specific parameters in params.txt. Available and recommended settings for these values depend on R2000 device family. See chapter R2000 variants for details.</strong></p>
+<h3 id="r2000-variants"><a class="header" href="#r2000-variants">R2000 variants</a></h3>
+<p>There are three variants of R2000 -- UHD, HD and SD. UHD model is most capable and the recommended model. One clear difference is the maximum sampling rate. Navitrol documentation has in the past recommended settings that are valid for UHD model only.</p>
+<p><img src="./media-en/image48.jpeg" alt="" /></p>
+<p><strong>NOTE: Some values (2800/3150) in the table above are not REALLY usable. Another thing to consider is that increasing the number and frequency of measurements increases the load on the CPU.</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>scan_pef_samples_per_scan</td><td>Int</td><td>2400</td><td>Valid values: 72, 90, 120, 144, 180, 240, 360, 400, 450, 480, 600, 720, 800, 900, 1200, 1440, 1800, 2400, 3600, 4200, 5040, 5600, 6300, 7200, 8400, 10080, 12600, 16800, 25200</td></tr>
+<tr><td>scan_pef_freq</td><td>Int</td><td>25</td><td>Valid max values for freq/samples: 10/25200, 15/16800, 20/12600, 25/10080, 30/8400, 35/7200, 40/6300, 45/5600, 50/5040 (NOTE: UHD  limitations)</td></tr>
+<tr><td>scan_pef_use_nth_scan</td><td>Int</td><td>1</td><td>Use only every n~th~ scan <br>NOTE: This is Navigation SW internal parameter - not sent to scanner.</td></tr>
+<tr><td>scan_pef_use_nth_meas</td><td>Int</td><td>1</td><td>Use only every n~th~ measurement from each scan for natural features navigation<br>NOTE: This is Navigation SW internal parameter - not sent to scanner.</td></tr>
+<tr><td>scan_pef_display_on</td><td>Int</td><td>0</td><td>0 = scanner display off, 1 = display on</td></tr>
+<tr><td>scan_pef_lcm_mode</td><td>Int</td><td>0</td><td>Lens Contamination Monitor (LCM) sensitivity: 0 - disabled, 1 - low, 2 - medium, 3 - high</td></tr>
+</tbody></table>
+<p>Navitrol reads the device model/family information from the device connected and validates parameters (scan_pef_samples_per_scan/scan_pef_freq) based on the actual capabilities of the device connected.</p>
+<h4 id="r2000-uhd"><a class="header" href="#r2000-uhd">R2000 UHD</a></h4>
+<p>Recommended parameters to begin with depend also on the Navitrol version and IPC capabilities.</p>
+<p><strong>Navitrol versions prior to 6.34.00</strong></p>
+<table><thead><tr><th>Parameter</th><th>With natural features only</th><th>With reflectors</th></tr></thead><tbody>
+<tr><td><strong>I,scan_pef_samples_per_scan</strong></td><td>2400</td><td>5040</td></tr>
+<tr><td><strong>I,scan_pef_freq</strong></td><td>50</td><td>50</td></tr>
+<tr><td><strong>I,scan_pef_use_nth_scan</strong></td><td>2</td><td>2</td></tr>
+<tr><td><strong>I,scan_pef_use_nth_meas</strong></td><td>1</td><td>2</td></tr>
+<tr><td><strong>I,scan_pef_display_on</strong></td><td>0</td><td>0</td></tr>
+</tbody></table>
+<p><strong>Navitrol versions 6.34.00 and later</strong></p>
+<p>With one P&amp;F used for localization <strong>OR</strong> high spec IPC/CPU when using two scanners for localization (consult Navitec).</p>
+<table><thead><tr><th>Parameter</th><th>With natural features only</th><th>With reflectors</th></tr></thead><tbody>
+<tr><td><strong>I,scan_pef_samples_per_scan</strong></td><td>3600</td><td>7200</td></tr>
+<tr><td><strong>I,scan_pef_freq</strong></td><td>50</td><td>25</td></tr>
+<tr><td><strong>I,scan_pef_use_nth_scan</strong></td><td>2</td><td>1</td></tr>
+<tr><td><strong>I,scan_pef_use_nth_meas</strong></td><td>1</td><td>2</td></tr>
+<tr><td><strong>I,scan_pef_display_on</strong></td><td>0</td><td>0</td></tr>
+</tbody></table>
+<p>If these settings cause too much load on the CPU, then settings recommended for Navitrol versions prior to 6.34.00 should be used instead.</p>
+<h4 id="r2000-hd"><a class="header" href="#r2000-hd">R2000 HD</a></h4>
+<p>Setup of HD variant is the same as UHD -- only difference is that there are some limitations in sampling rate.</p>
+<p>Recommended parameters to begin with:</p>
+<p><strong>Navitrol versions prior to 6.34.00</strong></p>
+<table><thead><tr><th>Parameter</th><th>With natural features only</th><th>With reflectors</th></tr></thead><tbody>
+<tr><td><strong>I,scan_pef_samples_per_scan</strong></td><td>2520</td><td>2520</td></tr>
+<tr><td><strong>I,scan_pef_freq</strong></td><td>25</td><td>25</td></tr>
+<tr><td><strong>I,scan_pef_use_nth_scan</strong></td><td>1</td><td>1</td></tr>
+<tr><td><strong>I,scan_pef_use_nth_meas</strong></td><td>1</td><td>1</td></tr>
+<tr><td><strong>I,scan_pef_display_on</strong></td><td>0</td><td>0</td></tr>
+</tbody></table>
+<p><strong>Navitrol versions 6.34.00 and later</strong></p>
+<p>With one P&amp;F used for localization <strong>OR</strong> high spec IPC/CPU when using two scanners for localization (consult Navitec).</p>
+<table><thead><tr><th>Parameter</th><th>With natural features only</th><th>With reflectors</th></tr></thead><tbody>
+<tr><td><strong>I,scan_pef_samples_per_scan</strong></td><td>3600</td><td>3600</td></tr>
+<tr><td><strong>I,scan_pef_freq</strong></td><td>23</td><td>23</td></tr>
+<tr><td><strong>I,scan_pef_use_nth_scan</strong></td><td>1</td><td>1</td></tr>
+<tr><td><strong>I,scan_pef_use_nth_meas</strong></td><td>1</td><td>1</td></tr>
+<tr><td><strong>I,scan_pef_display_on</strong></td><td>0</td><td>0</td></tr>
+</tbody></table>
+<p>If these settings cause too much load on the CPU, then settings recommended for Navitrol versions prior to 6.34.00 should be used instead.</p>
+<h2 id="quanergy"><a class="header" href="#quanergy">Quanergy</a></h2>
+<h3 id="quanergy-m1"><a class="header" href="#quanergy-m1">Quanergy M1</a></h3>
+<p>Quanergy M1 comes in different variants; M1-CORE, M1-PLUS and M1-ULTRA (consult Navitec for variant selection). They differ in some features like maximum scan distance. Configuration for each model is however the same.</p>
+<p>The Quanergy M1 Sensor Settings Management application (web server) runs in a web browser over the HTTP communication protocol to support a direct connection between the web server (scanner) and client. For details see <em>&quot;Quanergy M1 Sensor User Guide&quot;</em>. The following lists some basic settings that shall be set for navigation use.</p>
+<p><strong>NOTE:</strong> Reflectors can't be used for localization with Quanergy M1 scanner.</p>
+<h4 id="connecting-1"><a class="header" href="#connecting-1">Connecting</a></h4>
+<p>Connect the scanner to any PC with browser.</p>
+<ul>
+<li>
+<p>Open a web browser.</p>
+</li>
+<li>
+<p>In the browser URL field, type the URL, which is simply the sensor IP address appended by :7780. For example 192.168.1.180:7780</p>
+</li>
+<li>
+<p>Press the Enter key. The M1 Sensor tab appears</p>
+</li>
+</ul>
+<p>By default, the login credentials are:</p>
+<pre><code>Username: editor
+Password: &lt;sensor_serial_number&gt;
+</code></pre>
+<p><img src="./media-en/figure49.png" alt="" /></p>
+<h4 id="settings"><a class="header" href="#settings">Settings</a></h4>
+<p>Relevant settings can be found from &quot;Settings-Edit Settings&quot; and &quot;Settings-Edit Network Settings&quot;.</p>
+<p><img src="./media-en/image50.png" alt="" /></p>
+<p><strong>Network settings</strong></p>
+<p>Set static IP address of your choice and &quot;Submit&quot; and &quot;Reboot&quot;.</p>
+<p><img src="./media-en/image51.png" alt="" /></p>
+<p><strong>Sensor settings</strong></p>
+<p>Select maximum frame rate of 20 Hz. This results in roughly 0.134 degree angular resolution.</p>
+<p>It is recommended to use Return data: Return 0. If any other data selection is used, then</p>
+<ul>
+<li>
+<p>single return -- Navitrol obviously uses the data set selected</p>
+</li>
+<li>
+<p>multi return (ALL) -- Navitrol picks return 0 value (causes unnecessary extra network load)</p>
+</li>
+</ul>
+<p><img src="./media-en/image52.png" alt="" /></p>
+<h4 id="navitrol-parameters-5"><a class="header" href="#navitrol-parameters-5">Navitrol parameters</a></h4>
+<p>Set the following parameters to params.txt:</p>
+<p><strong>I,scanner_model_front/rear, 11</strong></p>
+<p><strong>S,front/rear_scanner_ip, &quot;The IP address that was set for the scanner&quot;</strong></p>
+<p><strong>I,front/rear_scanner_port, 4141</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

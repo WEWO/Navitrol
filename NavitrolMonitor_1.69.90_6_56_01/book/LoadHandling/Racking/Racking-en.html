@@ -1,0 +1,541 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Racking - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html" class="active"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="racking-user-instructions"><a class="header" href="#racking-user-instructions">Racking User Instructions</a></h1>
+<p>Updated 26.01.2024</p>
+<hr />
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>Warehouse racking feature introduces large inventory and warehouse support in Navitec software products. From Navitrol's point of view this means ability to load and unload items from multiple heights (shelves) in one location. Racking also comes with a variety of detection features for more accurate and safer operation.</p>
+<p>In addition to a normal drive order to symbolic point, Navitrol gets a shelf ID which incorporates height information. Racks and shelves in the production area are defined in Navithor Tools software. Please read the Navithor Tools warehouse racking document for more information.</p>
+<h2 id="general-instructions"><a class="header" href="#general-instructions">General Instructions</a></h2>
+<p>There are two minimum requirements to start up the feature in Navitrol.</p>
+<ol>
+<li>
+<p>Update racking feature license to AGV</p>
+</li>
+<li>
+<p>Set parameter <strong>racking_mode to 1</strong></p>
+</li>
+</ol>
+<p>For loading and unloading, parameter <strong>actuator_load_aboard_offset_mm</strong> needs to be defined. This tells how much forks are lifted to pick up a pallet. Note that in racking it is required that parameter <strong>actuator_load_min_val is set to 0</strong>.
+Next, it is represented how to define fork movements when approaching the rack.</p>
+<h2 id="define-fork-movements-close-to-rack"><a class="header" href="#define-fork-movements-close-to-rack">Define fork movements close to rack</a></h2>
+<p>For safety, it is important to carefully define the minimum distance from the rack symbolic points outside of which AGV can move the forks while driving. This ensures that if the AGV is still trying to move the forks while inside the distance limit, it will stop to an error avoiding possible collision to shelf. This parameter is called <strong>racking_min_dist_rack_to_move_actuator_meters.</strong> To avoid safety errors, parameter called <strong>racking_check_point_before_min_dist_rack_offset_m</strong> is introduced.
+This parameter defines the distance from the safety limit where AGV is triggered to stop if forks are still not at target height or AGV must do some detection routines like pallet detection or empty space detection (see Figure 1). AGV continues driving when the detection routines are ready and forks are on the correct height. This offset parameter is used also when leaving rack to make sure that it is safe to start lowering the fork.</p>
+<p>Error: <strong>ERROR_ACTUATOR_OUT_OF_TOLERANCES_CLOSE_TO_RACK</strong></p>
+<p><img src="./media-en/image3.png" alt="" /></p>
+<blockquote>
+<p>Figure 1: Minimum distance from rack symbolic point to allow fork movements (left fig.). Check point to stop AGV for controlling forks to target level and to do detection routines (right fig.).</p>
+</blockquote>
+<h3 id="define-fork-movements-approaching-rack"><a class="header" href="#define-fork-movements-approaching-rack">Define fork movements approaching rack</a></h3>
+<p>There are two options how AGV can approach the rack. In first option, AGV can move the forks to target level while driving before it gets close to the rack. In second option, AGV drives close to the rack forks down and stops in front of the rack to control forks to the target level.</p>
+<p>The following set of parameters can be used to control fork movements while approaching the rack:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>actuator_move_allowed_while_driving_loaded</strong></td><td>to allow fork control while driving and carrying a pallet.</td></tr>
+<tr><td><strong>actuator_move_allowed_while_driving_unloaded</strong></td><td>to allow fork control while driving without pallet.</td></tr>
+<tr><td><strong>racking_max_dist_from_rack_begin_lift_actuator_meters</strong></td><td>defines how early the AGV can start controlling forks to target level.</td></tr>
+<tr><td><strong>racking_actuator_speed_loaded_mm_per_s</strong></td><td>tells the speed of the forks when AGV is carrying a pallet. It is used to calculate starting point for lifting the forks so that they are at target level before the check point in front of the rack.</td></tr>
+<tr><td><strong>racking_actuator_speed_not_loaded_mm_per_s</strong></td><td>tells the speed of the forks while driving without pallet.</td></tr>
+</tbody></table>
+<h3 id="define-agv-speed-approaching-and-close-to-rack"><a class="header" href="#define-agv-speed-approaching-and-close-to-rack">Define AGV speed approaching and close to rack</a></h3>
+<p>AGV's speed in racking uses the same principals as in normal navigation.
+However, there can be an additional limitation for AGV's speed when forks are not at driving level or so-called home position. Even if the speed limitation is not taken into use, the parameters that describe the speed are used for calculating the start point for controlling forks to next target level. This is in case forks can be moved while driving.</p>
+<p>Parameters:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>actuator_not_in_home_position_limit_agv_speed</strong></td><td>to limit speed when forks are not at home position</td></tr>
+<tr><td><strong>actuator_not_in_home_position_agv_speed_loaded_m_per_s</strong></td><td>defines the speed when AGV is carrying a pallet and forks are not at home position</td></tr>
+<tr><td><strong>actuator_not_in_home_position_agv_speed_unloaded_m_per_s</strong></td><td>defines the speed when AGV is driving without pallet and forks are not at home position</td></tr>
+<tr><td><strong>actuator_home_val_mm</strong></td><td>defines the home position when driving without a pallet.<br>This can be either actuator_min_val or the actuator value defined in route properties in Navithor Tools, whichever is larger.</td></tr>
+</tbody></table>
+<h3 id="actuator-zones"><a class="header" href="#actuator-zones">Actuator zones</a></h3>
+<p>Actuator zones are polygons in the map that can be added and edited in Navithor Tools. When AGV is inside a zone, certain detections and actions take place depending on the type of the zone. AGV is considered to be inside Actuator zone when one of its corner points or navigation point is inside the zone. There is also a small safety margin applied around AGV to extend the corner points from the actual dimensions. There are two types of Actuator zones which are next represented in more detail.</p>
+<h3 id="safety-zone"><a class="header" href="#safety-zone">Safety zone</a></h3>
+<p>Actuator safety zone is planned to be used close to racks. It is meant as a redundant safety method if the main logic would fail. It detects if the target value of the forks differs more than tolerance from the measured value and if so, triggers an error to stop the AGV. This means it only supervises that forks are not controlled of tolerances when they are inside a rack, and that target value does not change when inside a rack. The safety zone feature does not check whether the forks will hit the shelf when driving to the rack and it does not know if a pallet is being pushed for example.</p>
+<p>Error: <strong>ERROR_ACTUATOR_SAFE_ZONE_VIOLATION</strong> Parameter(s):</p>
+<ul>
+<li><strong>actuator_safety_zone_margin_meters</strong> to extend corners of the AGV's frame for actuator safety zone check.</li>
+</ul>
+<h3 id="home-position-zone"><a class="header" href="#home-position-zone">Home position zone</a></h3>
+<p>Home position zone is meant for driving in the cross aisles and generally whenever it is needed to drive with forks down.
+When AGV is inside the zone, it is forced to lower the forks to home position which ensures safety driving outside of the rack corridors.
+If the AGV enters the zone with forks not at the home position, target value for the forks immediately changes to the home position value. User can choose whether AGV stops or can continue driving while moving the forks to home position.</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>actuator_home_val</strong></td><td>is home position when driving without a pallet. When carrying a pallet home position is actuator_home_val + actuator_load_aboard_offset_mm.</td></tr>
+<tr><td><strong>actuator_home_pos_safety_margin_meters</strong></td><td>to extend corners of the AGV's frame for actuator home position zone check.</td></tr>
+<tr><td><strong>actuator_strict_for_home_pos_zone</strong></td><td>0 = continue driving while controlling forks to home position, 1 = stop the AGV while controlling forks to home position.</td></tr>
+</tbody></table>
+<p><img src="./media-en/image4.png" alt="" /></p>
+<blockquote>
+<p>Figure 2: Use of actuator home position zone. When AGV comes out of the rack aisle to the cross aisle, it is forced to control the forks to home position.</p>
+</blockquote>
+<h2 id="pallet-detection"><a class="header" href="#pallet-detection">Pallet detection</a></h2>
+<h3 id="pallet-detection-modes"><a class="header" href="#pallet-detection-modes">Pallet detection modes</a></h3>
+<p>Two modes:  </p>
+<ul>
+<li>
+<p>1. Pallet detection: Check pallet location and angle. </p>
+</li>
+<li>
+<p>2. Pocket detection: Scanning the correct height for the pallet legs using scanner and controlling the forks to the middle of the legs. </p>
+</li>
+</ul>
+<p>Docking. Meaning that AGV will change the route to drive to the detected target. </p>
+<h3 id="pallet-location-check"><a class="header" href="#pallet-location-check">Pallet location check</a></h3>
+<p>Pallet detection in the racking feature means that pallet location and angle is verified using pallet detection. If the angle is too high or if pallet is too far from the expected location, error is set.</p>
+<p>Symbolic point location depends on the navigation point (AGV kinematics), so it might not be on the middle of the rack. <strong>docking_stop_distance</strong> parameter is used to check the pallet location related to the symbolic point.
+Then the pallet location is verified with parameter <strong>docking_max_dist_error_from_end_point</strong>. If the pallet is further away from the symbolic point, error will be set.
+The pallet angle is checked with parameter <strong>docking_max_target_angle</strong>. These checks are done on both modes, also after pocket detection has controlled the forks to the pocket height. </p>
+<p><img src="./media-en/image5.png" alt="" /></p>
+<blockquote>
+<p>Figure 3: Symbolic point related to the pallet location.</p>
+</blockquote>
+<h3 id="pocket-detection"><a class="header" href="#pocket-detection">Pocket detection</a></h3>
+<p>Pocket detection is a feature that will search the correct height for the pocket (space between the legs) using laser scanner.  </p>
+<p>Sequence:  </p>
+<ul>
+<li>
+<p>When the forks are lifted to shelf level, the target height value is decreased by <strong>stack_loading_max_pocket_size_mm</strong> amount to start the scan and to make sure the scanner is below the legs of the pallet. See <em>Min height to allow pockets</em> on Figure 4. </p>
+</li>
+<li>
+<p>Then the pallet detection is activated and target height is set to two times this <strong>stack_loading_max_pocket_size_mm</strong> parameter.
+See <em>Max pocket height</em> on a Figure 4.</p>
+</li>
+<li>
+<p>Now during the lifting phase, the low and high heights of the legs are stored. See Figure 5.</p>
+</li>
+<li>
+<p>When the lifting is done, the last found pocket that is over the <strong>stack_loading_min_pocket_size_mm</strong> parameter is chosen. </p>
+</li>
+<li>
+<p>ERROR_PALLET_POCKET_NOT_FOUND is set if there are no pockets found on this phase. </p>
+</li>
+<li>
+<p>Then the actuator is controlled to the middle of the pocket. Here the height difference between the actuator height and scanner height is taken into account using the measurement of the scanner height (if available) + offset parameter or only the offset parameter: <strong>target_detection_actuator_offset_to_scanner_mm</strong>. </p>
+</li>
+</ul>
+<p><img src="./media-en/image6.png" alt="" /></p>
+<blockquote>
+<p>Figure 4: Example of the pocket detection.</p>
+</blockquote>
+<p><img src="./media-en/image7.png" alt="" /></p>
+<blockquote>
+<p>Figure 5: Pocket height values. The pocket height is middle of these two values.</p>
+</blockquote>
+<h3 id="pallet-detection-errors"><a class="header" href="#pallet-detection-errors">Pallet detection errors</a></h3>
+<p>This error is set if pocket is not within max and min limit parameters. </p>
+<ul>
+<li>
+<p><strong>ERROR_PALLET_POCKET_NOT_FOUND</strong>: Couldn't find suitable pocket. </p>
+</li>
+<li>
+<p>This will be fatal error, so it would need operator action to reset. </p>
+</li>
+</ul>
+<p>This error is set if target heading is too large or if target is too far from symbolic point or if target is not found. </p>
+<ul>
+<li>
+<p><strong>ERROR_PALLET_DET_FAILURE</strong>: Couldn't find pallet or target is too far away from expected location </p>
+</li>
+<li>
+<p>This will be fatal error, so it would need operator action to reset. </p>
+</li>
+</ul>
+<h3 id="pallet-detection-parameters"><a class="header" href="#pallet-detection-parameters">Pallet detection parameters</a></h3>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>I,racking_pallet_det_mode, 1</strong> </td><td> 0 = Disable the check<br>1 = pallet detection checked on precheck state<br>2 = Trying to find the middle point of the pocket by scanning the shelf height +- stack_loading_max_pocket_size_mm. </td></tr>
+<tr><td><strong>I,racking_pocket_det_height_offset_mm, 0</strong></td><td>Offset added to the detected pocket height.</td></tr>
+<tr><td><strong>I,docking_to_target_enabled, 1</strong> </td><td> 1 = Enables docking to target.<br>2 = docking with custom route </td></tr>
+<tr><td><strong>F,docking_stop_distance</strong>,</td><td> Used to calculate new stopping point for AGV navigation point. Calculated from navigation point to the pallet front line. Depends on AGV kinematics. </td></tr>
+<tr><td><strong>F,docking_max_dist_error_from_end_point, 0.2</strong> </td><td> Used to check that pallet is found close enough the rack symbolic point </td></tr>
+<tr><td><strong>F,docking_max_start_angle, 10.0</strong></td><td> Max allowed angle for the pallet related to the symbolic point. </td></tr>
+<tr><td><strong>I,stack_loading_max_pocket_size_mm, 130</strong></td><td> Max  allowed height for pocket. Used also to lift the forks over the shelf height to make sure that we detect the pocket. Shelf height +- this parameter. </td></tr>
+<tr><td><strong>I,stack_loading_min_pocket_size_mm, 70</strong></td><td> Min allowed height for pocket. </td></tr>
+<tr><td><strong>I,stack_loading_min_hits_top_legs, 2</strong></td><td> Counter for consecutive leg detections. When legs are detected enough times, the height measurement from first detection is used as pocket bottom value. </td></tr>
+<tr><td><strong>I,stack_loading_min_false_hits_legs, 2</strong> </td><td> Counter for consecutive false leg detections. When legs are not detected enough times, the height measurement from first scan is used as pocket top value. </td></tr>
+<tr><td><strong>I,target_detection_actuator_offset_to_scanner_mm</strong> </td><td> Height offset from the scanner to the fork. Used to get the correct height for the fork when detecting the middle point of pocket with scanner. Because when the scanner sees the middle point, the fork might not be on correct level to be able to drive to the pocket. If the scanner can be moved, then its measurement value + this offset is used instead. </td></tr>
+</tbody></table>
+<h2 id="beam-detection"><a class="header" href="#beam-detection">Beam detection</a></h2>
+<p>The idea with the beam detection is to detect the shelf height with scanner. If the shelf height is only defined in Tools, it might be too risky to use because the height needs to be measured accurately to avoid hitting the shelf.  </p>
+<p>NOTE! The beam detection is done only when the AGV is loaded and driving to empty shelf to do unload. </p>
+<p><img src="./media-en/image8.png" alt="" /></p>
+<blockquote>
+<p>Figure 6: Shelf example.</p>
+</blockquote>
+<p>Sequence: </p>
+<ul>
+<li>
+<p>On the precheck state, the scanner will be decreased to low position (also might require lowering the forks for a small amount). </p>
+</li>
+<li>
+<p>The forks are lifted to predefined height. The height should be high enough so the whole shelf can be detected with the scanner. </p>
+</li>
+<li>
+<p>The pallet detection is enabled with linear model search. There is assumption for the length of the shelf (<strong>pallet_model_width_y</strong> + <strong>pallet_det_linear_model_max_err</strong>). </p>
+</li>
+<li>
+<p>The detected line is matched for this assumption.  </p>
+</li>
+<li>
+<p>If the shelf is detected, we keep increasing. </p>
+</li>
+<li>
+<p>When the shelf is not detected anymore (meaning that we had detected it before at least once) -&gt; The current detection height is the shelf height.  </p>
+</li>
+<li>
+<p>Then <strong>racking_shelf_height_to_fork_offset_mm</strong> parameter and the scanner height measurement are added to this detected height to get correct height for the actuator. </p>
+</li>
+<li>
+<p>Lines that are longer than the assumption are accepted. There is also check for the x and y coordinates and the angle to makes sure that we detect the shelf and not wall behind the shelf. </p>
+</li>
+</ul>
+<p><img src="./media-en/image9.png" alt="" /></p>
+<blockquote>
+<p>Figure 7: The start of the beam detection. Here the AGV is on the Precheck state and the forks are lifted to the shelf level.</p>
+</blockquote>
+<p>NOTE! <strong>racking_shelf_height_mm</strong> defines the distance from the safe drive-in height to below the shelf height. The forks are lowered to this height just to make sure that we scan the whole shelf. The scan will be started after the forks are at correct position below the shelf. This parameter should be the height of the shelf. If there are shelves with different heights, this parameter should have the value of the shelf that has the largest value.</p>
+<p><img src="./media-en/image10.png" alt="" /></p>
+<blockquote>
+<p>Figure 8: Start of the scan. Here the scanner is decreased below the shelf to start detecting the beam.</p>
+</blockquote>
+<p>When the beam detection does not detect the shelf anymore, the lifting is stopped, and that scanning height is used as a shelf height.
+The height for the fork will be then measured fork height -- measured scanner height + racking_shelf_height_to_fork_offset_mm </p>
+<p><img src="./media-en/image11.png" alt="" /></p>
+<blockquote>
+<p>Figure 9: End of the beam detection. Here the shelf height is detected with the scanner and that is used to control the forks to correct height.</p>
+</blockquote>
+<h3 id="beam-detection-error"><a class="header" href="#beam-detection-error">Beam detection error</a></h3>
+<p>This error is set if the actuator reaches the target height on the lifting phase and the shelf top height is not detected. </p>
+<ul>
+<li>
+<p><strong>ERROR_RACKING_BEAM_DETECTION_FAILED</strong>: Could not find suitable beam for detecting the shelf height. </p>
+</li>
+<li>
+<p>This will be fatal error, so it would need operator action to reset. </p>
+</li>
+</ul>
+<h3 id="beam-detection-parameters"><a class="header" href="#beam-detection-parameters">Beam detection parameters</a></h3>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>I,racking_shelf_height_detection_enabled, 1</strong></td><td>1 = enable beam detection<br>0 = disable</td></tr>
+<tr><td><strong>I,racking_shelf_height_mm, 100</strong></td><td>Defines roughly the height of the shelf</td></tr>
+<tr><td><strong>F,racking_shelf_max_dist_err_m, 0.2</strong></td><td>Maximum distance where the shelf can be from the symbolic point (uses docking_stop_distance)</td></tr>
+<tr><td><strong>F,racking_shelf_max_angle_err_deg, 10.0</strong></td><td>Maximum angle error for detected shelf</td></tr>
+<tr><td><strong>I,racking_shelf_height_to_fork_offset_mm, 30</strong></td><td>Offset from the accurate shelf height to the fork height, where the AGV can safely drive in and out from the shelf without hitting the shelf.</td></tr>
+<tr><td><strong>I,actuator_load_aboard_offset_mm, 100</strong></td><td>Height offset when AGV is loaded</td></tr>
+<tr><td><strong>I,actuator_scanner_lift_detection_level_val_mm,</strong></td><td>Detection height for the scanner (related to the fork). If the scanner is not movable, this can be used as an offset.</td></tr>
+<tr><td><strong>F,pallet_model_width_y[0], 0.8</strong></td><td>Pallet width. If we detect something that is wider than any of pallet models (+ error), it is defined as beam</td></tr>
+<tr><td><strong>F,pallet_det_linear_model_max_err, 0.05</strong></td><td>Error added to the pallet width.</td></tr>
+</tbody></table>
+<h2 id="empty-space-detection"><a class="header" href="#empty-space-detection">Empty space detection</a></h2>
+<p>Empty space detection is a feature that will check if the unload location is empty using the laser scanner. This is used only when the AGV is loaded and driving to unload location.</p>
+<p>Sequence:</p>
+<ul>
+<li>
+<p>Starts when the AGV is at precheck state. This detection is used only on unload case.</p>
+</li>
+<li>
+<p>Search area is the pallet size.</p>
+</li>
+<li>
+<p>Search height can be set in two ways:</p>
+<ul>
+<li>
+<p>From the current shelf height to the shelf height above -- offset parameter.</p>
+</li>
+<li>
+<p>Height is current shelf height + height parameter.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>At first, the scanner is decreased to detection height and forks are lifted to level where the scanner can see above the shelf.</p>
+</li>
+<li>
+<p>AGV starts scanning the area by lifting the forks. The empty space check is done only when lifting up. After the scan, the forks are lowered back to the shelf height.</p>
+</li>
+<li>
+<p>If the area has more scanner points than the limit (the max number of scanner points can be set with parameter), the area is not empty, and error is set. If no scanner points are found, the area is empty and AGV can continue driving to the shelf.</p>
+</li>
+</ul>
+<p>NOTE! If pallet detection is used, the last found pallet model is used to define the search area. If pallet detection is not used, the pallet model with index 0 is used as default.</p>
+<p><img src="./media-en/image12.png" alt="" /></p>
+<blockquote>
+<p>Figure 10: Empty space height to the shelf above.</p>
+</blockquote>
+<p><img src="./media-en/image13.png" alt="" /></p>
+<blockquote>
+<p>Figure 11: Search area from above.</p>
+</blockquote>
+<p>Symbolic point location depends on the navigation point (AGV kinematics), so it might not be on the middle of the rack. The <strong>docking_stop_distance</strong> is used to check the correct location related to the symbolic point. Then the empty space detection is used only for the area where the pallet will be unloaded. The pallet length and width are known based on the pallet detection results from last load point or the zero index pallet model parameters.</p>
+<p>The <strong>Navitrol 6.32</strong> has two additional parameters that can define larger area for empty space detection. These values are added to the pallet dimensions (width and length). The parameters are <strong>empty_space_area_width_addition_m</strong> and <strong>empty_space_area_length_addition_m</strong></p>
+<h3 id="empty-space-detection-error"><a class="header" href="#empty-space-detection-error">Empty space detection error</a></h3>
+<p>This error is set if scanner points exceed the <strong>occup_check_min_hits</strong> on the search area.</p>
+<ul>
+<li>
+<p><strong>ERROR_RACKING_EMPTY_SPACE_NOT_DETECTED</strong>: Unload area not free, cannot continue driving.</p>
+</li>
+<li>
+<p>This will be fatal error, so it would need operator action to reset.</p>
+</li>
+</ul>
+<h3 id="empty-space-detection-parameters"><a class="header" href="#empty-space-detection-parameters">Empty space detection parameters</a></h3>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>I,racking_empty_space_check_mode: 1</strong> </td><td> 0 = Disable the check, 1 = Check to the height of the rack above, 2 = Use only racking_empty_space_det_height_mm parameter to define the height. </td></tr>
+<tr><td><strong>I,occup_check_min_hits, 2</strong> </td><td> Defines how many scanner points are needed inside the search area to trigger the error. </td></tr>
+<tr><td><strong>I,racking_empty_space_det_height_mm, 200</strong> </td><td> How far from the current shelf we can lift the actuator to check the empty space. By default, the height is taken from the shelf above, but if it is not found this parameter is used. In most cases, increasing only 20cm might already be enough to see if the unload area is empty or not. </td></tr>
+<tr><td><strong>I,racking_shelf_height_mm, 100</strong> </td><td> Estimate for the shelf height. Used in empty space detection to get the detection height below the shelf above. </td></tr>
+<tr><td><strong>F,docking_stop_distance,</strong> </td><td> Used to get the search area related to the symbolic point. Calculated from symbolic point to the imagined unload location (pallet front line).</td></tr>
+<tr><td><strong>F,pallet_model_width_y[0], 0.8</strong> </td><td> Width of the search area. </td></tr>
+<tr><td><strong>F,pallet_model_length_x[0], 1.25</strong> </td><td> Length of the search area. Calculated from the symbolic point + docking_stop_distance. </td></tr>
+<tr><td><strong>F,empty_space_area_width_addition_m, 0.00</strong></td><td>Positive value increases the width of the empty space detection area. This value is added to the pallet width to both directions. If this value is 0.05 and width is 0.8 the safety area width is 0.9. Min -1.0 Max 1.0 (meters)</td></tr>
+<tr><td><strong>F,empty_space_area_length_addition_m, 0.00</strong></td><td>Positive value increases the length of the empty space detection area. This value is added to the pallet length to both directions. If this value is 0.05 and length is 1.25 the safety area length is 1.35. Min -1.0 Max 1.0 (meters)</td></tr>
+</tbody></table>
+<h2 id="data-matrix-marker-detection-for-position-correction-of-side-loader-loading-position"><a class="header" href="#data-matrix-marker-detection-for-position-correction-of-side-loader-loading-position">Data Matrix marker detection for position correction of side loader loading position</a></h2>
+<p>Data matrix detection is used to detect the position of a marked load to ensure the correct picking position. Additionally, the identity of the load is verified to ensure that the correct load is picked. The detection works according to the following sequence.</p>
+<ul>
+<li>The AGV gets a drive order to a symbolic point for loading.</li>
+<li>The AGV stops a certain distance before the loading point and raises the actuator to the basic shelf level increased with an additional marker detection height.</li>
+<li>When the actuator is at the search height, the camera gets a start measuring signal</li>
+<li>Measurements are collected until five measurements give approximately the same stopping point</li>
+<li>The AGV drives further to the calculated stopping point.</li>
+<li>When the distance is driven and the AGV has stopped, the stopping position is verified with an additional marker detection. After verification the camera measurements are stopped.</li>
+<li>If the AGV position is within accuracy limits, the target marker ID is sent to the fleet control for verification. If the stopping accuracy limit is not met, the picking sequence is interrupted.</li>
+<li>If the marker ID is correct, the racking sequence continues with a loading command from fleet control, else the load is not picked and the racking sequence is ended.</li>
+<li>A new drive order can be given.</li>
+</ul>
+<h2 id="marker-detection-errors"><a class="header" href="#marker-detection-errors">Marker detection errors</a></h2>
+<p>This error is set if the camera is not providing measurements when requested:</p>
+<ul>
+<li><strong>ERROR_MARKER_DETECTION_INACTIVE</strong>:  Marker detection sensor not responding to activation, check connections and configuration</li>
+</ul>
+<p>This error is set if the actuator reference is set too high for marker detection:</p>
+<ul>
+<li><strong>ERROR_DETECTION_TARGET_REF_TOO_HIGH</strong>: Target detection reference goes higher than actuator_max_val</li>
+</ul>
+<h3 id="marker-detection-parameters"><a class="header" href="#marker-detection-parameters">Marker detection parameters</a></h3>
+<p>The target marker detection is currently implemented for racking, therefore the below racking paramters shall be set.</p>
+<p>The camera used for marker detection is handled as an external localization sensor requiring the additional below parameters.</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,target_verification_distance_from_sym_point, 0.08</strong> </td><td> Stopping for target position verification at this distance [m] from symbolic point. Suitable values 0.05…0.15 largely depending on camera optics and detection distance . </td></tr>
+<tr><td><strong>F,racking_max_dist_from_rack_begin_lift_actuator_meters, 0</strong> </td><td> The earliest point to start moving the actuator to rack level. Distance in meters. Must be bigger than target_verification_distance_from_sym_point </td></tr>
+<tr><td><strong>I,target_marker_search_height_mm, 0</strong> </td><td> Additional lifting of the actuator over its nominal level for detection purposes. A slight angle between camera and load is recommended and the height is adjusted accordingly </td></tr>
+<tr><td><strong>F,target_marker_stop_accuracy_limit, 0.01</strong> </td><td> Required stopping accuracy to end point of the correction drive. </td></tr>
+<tr><td><strong>F,target_marker_position_offset, 0.0</strong> </td><td> Position offset between marker and lifting (mid) point of the load. Positive value when the marker is on the right of the lifting point when the load is seen from the AGV. </td></tr>
+<tr><td><strong>I,racking_mode, 1</strong> </td><td> 0 = disabled 1 = enabled. </td></tr>
+<tr><td><strong>I,racking_pallet_det_mode, 3</strong> </td><td> 0 = disabled, 1 = check that pallet is found on Precheck state, 2 = check that pocket is found on Precheck state, 3 = marker detection to localize load; min 0, max 3. </td></tr>
+<tr><td><strong>I,ext_loc_eth_model[0], 2</strong> </td><td> model 2 is the Sick Lector which currently is the only sensor type for this kind of detection. The first external sensor defined to be of type 2 is selected for use. </td></tr>
+<tr><td><strong>S,ext_loc_eth_ip[0]</strong> </td><td> IP according to camera settings. </td></tr>
+<tr><td><strong>I,ext_loc_eth_port[0]</strong> </td><td> Port according to camera settings. </td></tr>
+<tr><td><strong>F, ext_loc_x_offset[0]</strong> </td><td> camera longitudinal position offset on the vehicle. 0 if in the vehicle navigation point i.e., on Y-axis. </td></tr>
+<tr><td><strong>F,ext_loc_y_offset[0]</strong> </td><td> camera transversal position offset, 0 in the vehicle navigation point i.e. on X-axis. </td></tr>
+<tr><td><strong>F,ext_loc_h_offset_deg[0]</strong> </td><td> 0 heading offset in degrees between machine coordinate system and camera coordinate system, horizontal heading angle of focal axis. </td></tr>
+<tr><td><strong>F,ext_loc_focal_orientation_deg[0]</strong> </td><td> 0 orientation of camera coordinates around focal axis. The rotation angle is the angle between the X-axis of the yellow camera coordinate frame and the X-axis of the red navigation coordinate frame measured from the red X-axis. </td></tr>
+</tbody></table>
+<p><img src="./media-en/image14.png" alt="" /></p>
+<blockquote>
+<p>Figure 12: Camera coordinate frame and Navitrol coordinate frame. If the camera is mounted cables down, the ext_loc_focal_orientation_deg shall be -90 degrees, if the cables are pointing up-wards it shall be +90 degrees.</p>
+</blockquote>
+<p>The marker position on the load should match the camera position on the fork or machine. So, the marker position offset parameter should be the same as the camera ext_loc_x_offset.</p>
+<p><img src="./media-en/image15.png" alt="" /></p>
+<blockquote>
+<p>Figure 13: Basic case with camera on the centre line of the fork or machine and the marker on the centre line of the loading point.</p>
+</blockquote>
+<p><img src="./media-en/image16.png" alt="" /></p>
+<blockquote>
+<p>Figure 14: If the camera is set with an offset to the centre line, all markers must have the same offset.</p>
+</blockquote>
+<p><img src="./media-en/image17.png" alt="" /></p>
+<blockquote>
+<p>Figure 15: Camera offsets relative to the vehicle coordinates i.e., the navigation point of the vehicle.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../LoadHandling/BufferLanes/BufferLanes-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../LoadHandling/BufferLanes/BufferLanes-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

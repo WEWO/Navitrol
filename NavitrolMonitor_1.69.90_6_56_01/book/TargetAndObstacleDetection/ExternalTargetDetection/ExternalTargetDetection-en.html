@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>External target detection - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html" class="active"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="external-target-detection"><a class="header" href="#external-target-detection">External Target Detection</a></h1>
+<p>Updated 26.07.2024</p>
+<hr />
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>External target detection stands for a target detection feature where Navitrol receives target X,Y and heading difference to the target and external sensor detects this target. Thus, Navitrol does not do target detection itself, Navitrol only receives the position of the desired target from external target detection system.</p>
+<p>This external target detection system can be whatever (meaning laser scanner, camera, ultrasound sensor etc) as long as it can produce X.Y and heading difference information of the target to Navitrol.</p>
+<h2 id="functionality"><a class="header" href="#functionality">Functionality</a></h2>
+<p>For the external target detection, Navitrol will send this information:</p>
+<ol>
+<li>
+<p>When to start detection of the target, based on requirements below:</p>
+<ul>
+<li>
+<p>Normal Pickup symbolic point</p>
+<ul>
+<li>The maximum angle between the camera and symbolic point before starting the detection.</li>
+<li>Distance to the symbolic point before starting the detection.</li>
+</ul>
+</li>
+<li>
+<p>Racking</p>
+<ul>
+<li>When AGV is close to the shelf and actuator is lifted to the shelf height, but AGV has not yet driven in to the shelf.</li>
+</ul>
+</li>
+<li>
+<p>Buffer lanes</p>
+<ul>
+<li>AGV is inside buffer area + <strong>buffer_check_start_dist_offset_m</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>X, Y, Z and angle difference to the assumed target position (symbolic point) with respect to the sensor in AGV coordinates. With this external target detection system can define the area where to search the target (pallet width + max allowed position error).</p>
+</li>
+<li>
+<p>Information if target is detected too far away from the route/symbolic point.</p>
+</li>
+</ol>
+<p>Navitrol receives target position difference and target locked information. In addition, Error code and Device type fields to the message (message <strong>3035 external target detection request</strong>)</p>
+<p>Navitrol has to receive the position information of the target from the external target detection system:</p>
+<ol>
+<li>
+<p><strong>dX and dY</strong> With respect to the sensor in sensor coordinate as frame as defined in Navitrol (values <strong>dX</strong> and <strong>dY)</strong></p>
+</li>
+<li>
+<p>Heading H as the target heading with respect to the sensor heading.
+(<strong>H</strong> target heading is 90 degrees in this picture)</p>
+</li>
+</ol>
+<p><img src="./media-en/image4.jpeg" alt="" /></p>
+<p><img src="./media-en/image5.png" alt="" /></p>
+<h3 id="buffer-lanes"><a class="header" href="#buffer-lanes">Buffer lanes</a></h3>
+<ul>
+<li>AGV start requesting detection as soon as it is inside the buffer area + <strong>buffer_check_start_dist_offset_m</strong>.</li>
+<li>The initial target position is the symbolic point, but the once the target is found the target position is updated to the detected target position. The target height (Z) is 0.</li>
+<li>Can be configured in a way that AGV waits only one result or update within specified interval. See <strong>ext_target_det_sensor_update_rate_ms</strong> parameter below.</li>
+<li>AGV does not stop for detection. </li>
+<li>Pickup: If no target result received until the end of the buffer, Navitrol will trigger WARNING_TARGET_APPROACH_ERROR.</li>
+<li>Dropoff: If no target result received until the end of the buffer, Navitrol will perform dropoff on top of symbolic point.</li>
+</ul>
+<h3 id="racking"><a class="header" href="#racking">Racking</a></h3>
+<ul>
+<li>AGV start requesting detection when it is close to the shelf and actuator is lifted to the shelf height, but AGV has not yet driven in to the shelf.
+<ul>
+<li>The assumed target position is the symbolic point, the target height (Z) is the shelf height.</li>
+</ul>
+</li>
+<li>Should be configured in a way that AGV waits only one result. <strong>ext_target_det_sensor_update_rate_ms</strong> parameter as 0.
+<ul>
+<li>AGV continues driving and docks to the target once target position is received</li>
+<li>If no target result is received within 3 seconds or received target is too far from the symbolic point, ERROR_PALLET_DET_FAILURE error is set. See <a href="../../LoadHandling/Racking/Racking-en.html">Racking</a> document for more info.</li>
+</ul>
+</li>
+</ul>
+<h3 id="stacking"><a class="header" href="#stacking">Stacking</a></h3>
+<ul>
+<li>AGV start requesting detection as soon as it is inside the buffer area + <strong>buffer_check_start_dist_offset_m</strong>.</li>
+<li>The initial target position is the symbolic point, but once the target is found the target position is updated to the detected target position. The target height (Z) is the estimated height. See <strong>ext_target_det_height_mode</strong> parameter.</li>
+<li>Can be configured in a way that AGV waits only one result or update within specified interval. See <strong>ext_target_det_sensor_update_rate_ms</strong> parameter below.</li>
+<li>AGV does not stop for detection. </li>
+<li>When target position is received, Navitrol will stop in front of the stack and move the actuator to estimated height that is given with a drive order from fleet control.</li>
+<li>New target detection is requested and target Z is needed to tell the target height for the actuator.</li>
+<li>If target detection is not received within <strong>block_stacking_max_detection_wait_time_ms</strong>, 
+<ul>
+<li>On Pickup, ERROR_PALLET_POCKET_NOT_FOUND is set.</li>
+<li>On Dropoff, dropoff is performed to the ground if there is space on the buffer lane or if buffer is full, AGV waits for new drive order. </li>
+</ul>
+</li>
+<li>If target detection is received, Navitrol will control the actuator to the specified height and will continue driving to stack for pickup or dropoff.</li>
+<li>See <a href="../../LoadHandling/StackLoading/StackLoading-en.html">Pickup from stack</a> and <a href="../../LoadHandling/BlockStacking/BlockStacking-en.html">Dropoff to stack</a> documents for more info.</li>
+</ul>
+<h2 id="mode"><a class="header" href="#mode">Mode</a></h2>
+<p>There are two possible modes for external target detection. </p>
+<ol>
+<li>Navitrol expects detection results within <strong>ext_target_det_sensor_update_rate_ms</strong> timer when detection is requested. If detection result is coming later than this parameter, detection is not requested.</li>
+<li>Navitrol expects only one detection result. This can be activated with <strong>ext_target_det_sensor_update_rate_ms</strong> as 0. Navitrol request detection until it has received the result. Error is set if response is not received in time. See <strong>ext_target_det_response_timeout_ms</strong> parameter.</li>
+</ol>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<p>These parameters must be set to params.txt file when external target detection is used. For more information on docking, see <a href="../../PositionControl/Docking/Docking-en.html">Docking</a>.</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>I,target_detection_type_selection, 4</strong></td><td>4 = external target detection. This parameter activates external target detection feature.</td></tr>
+<tr><td><strong>F,target_detection_max_dist_to_symbolic_point, 6.0</strong></td><td>Max distance to the symbolic point to start sending &quot;start observing&quot; signal to the external target detection sensor</td></tr>
+<tr><td><strong>I,docking_to_target_enabled, 1</strong></td><td>1 = Enables docking to target.<br>2 = **not supported with external target detection</td></tr>
+<tr><td><strong>F,docking_max_start_distance, 3.5</strong></td><td>Beyond maximum distance docking won't be triggered</td></tr>
+<tr><td><strong>F,docking_max_start_angle, 20.000000</strong></td><td>Max angle difference from navigation point to the target compared to tarjectory's end point's heading, when starting to dock [+-degrees fov]</td></tr>
+<tr><td><strong>F,docking_max_start_heading, 45.000000</strong></td><td>Max angle diff for vehicle heading and trajectory's end point heading, when starting to dock [+-degrees fov]</td></tr>
+<tr><td><strong>F,ext_target_det_sensor_x_pos, 0.0</strong></td><td>External target detection sensor x position with respect to the AGV navigation point. Positive towards front of the vehicle</td></tr>
+<tr><td><strong>F,ext_target_det_sensor_y_pos, 0.0</strong></td><td>External target detection sensor y position with respect to the AGV navigation point. Positive to the left side of the vehicle</td></tr>
+<tr><td><strong>F,ext_target_det_sensor_angle_deg, 0.0</strong></td><td>External target detection sensor heading with respect to the AGV heading.</td></tr>
+<tr><td><strong>I,ext_target_det_sensor_update_rate_ms, 500</strong></td><td>External target detection data is sent to supervisor every second when target is not detected. This parameter defines the update interval when target detection is activated. Maximum value 900 ms. 0 = Expect target detection only once when requested.</td></tr>
+<tr><td><strong>I,ext_target_det_measurement_delay_ms, 50</strong></td><td>Delay of sensor measurement in ms relative to AGV position measurements. Maximum value 300 milliseconds</td></tr>
+<tr><td><strong>F,ext_target_min_dist_from_traj_end_to_nav_point, 0.40</strong></td><td>Minimum distance from navigation point to trajectory end that target position is still updated</td></tr>
+<tr><td><strong>F,ext_target_det_target_rendering_width, 0.9</strong></td><td>External target detection target width when rendered to NavitrolMonitor. Does not affect to any calculations.</td></tr>
+<tr><td><strong>F,ext_target_det_target_rendering_length, 0.4</strong></td><td>External target detection target width when rendered to Monitor. Does not affect to any calculations.</td></tr>
+<tr><td><strong>I,ext_target_det_height_mode, 0</strong></td><td>0 = External target detection z value is used as reference height for actuator. E.g. z = 0.9m, actuator reference will be 900mm. <br>1 = z value is in sensor coordinates. E.g. value 0.2m would lift actuator 200mm from its current height.</td></tr>
+<tr><td><strong>U, log_ext_target_det, 0</strong></td><td>Enables logging of external target detection data. 0 - disabled, 1 - enabled</td></tr>
+<tr><td><strong>I,ext_target_det_response_timeout_ms, 2000</strong></td><td>Time to wait [ms] for target detection response. Error is set if Navitrol doesn't receive response within this time. If set to 0, error is never set. Only used when ext_target_det_sensor_update_rate_ms is 0.</td></tr>
+</tbody></table>
+<h2 id="supervisor-interface-configuration"><a class="header" href="#supervisor-interface-configuration">Supervisor interface configuration</a></h2>
+<h3 id="3135----external-target-detection-request"><a class="header" href="#3135----external-target-detection-request">3135 -- External target detection request</a></h3>
+<p>Navitrol sends this message periodically to the <em>Supervisor/PLC for</em> external target detection. The sending interval is 1 Hz while the target detection is inactive. When the target detection is active, the sending interval is according to a parameter. The parameter value shall be set according to the sensor update rate. Target searching is activated at a certain distance to the symbolic point and deactivated again when the target is reached or when the target finding fails because of too short remaining distance to the symbolic point.</p>
+<table><thead><tr><th>Data field</th><th>Type</th><th>Length (bytes)</th><th>Comment</th></tr></thead><tbody>
+<tr><td>Protocol Version = 4</td><td>Unsigned Short</td><td>2</td><td>Navitrol ethernet protocol version</td></tr>
+<tr><td>Message ID = 3135</td><td>Unsigned Short</td><td>2</td><td></td></tr>
+<tr><td>Message length = 28</td><td>Unsigned Integer</td><td>4</td><td>Message length in bytes including all data fields (including Protocol Version and Message ID)</td></tr>
+<tr><td>Start detection</td><td>Unsigned Short</td><td>2</td><td>1 - Start detecting the target<br>0 - Stop detecting</td></tr>
+<tr><td>Assumed target position X difference</td><td>Float</td><td>4</td><td>Distance from sensor position along the centre line of the detection sensor view.</td></tr>
+<tr><td>Assumed target position Y difference</td><td>Float</td><td>4</td><td>Distance from sensor position perpendicular to the center line of the detection sensor view.<br>Positive to the left.</td></tr>
+<tr><td>Assumed target position Z difference</td><td>Float</td><td>4</td><td>Distance from sensor position in vertical direction.<br>Positive direction upwards.<br>Value forced to 0</td></tr>
+<tr><td>Assumed target angle difference</td><td>Float</td><td>4</td><td>Angle of the target with respect to the X-axis.<br>Positive in CCW direction.</td></tr>
+<tr><td>Detection too far from route</td><td>Unsigned short</td><td>2</td><td>1 = target detected too far away.<br>Otherwise, value is 0</td></tr>
+</tbody></table>
+<h3 id="3035----external-target-detection-response"><a class="header" href="#3035----external-target-detection-response">3035 -- External target detection response</a></h3>
+<p>The supervisor replies to the detection request from Navitrol with target found information and target x, y, z and angle. Additionally, the Supervisor sends the error code if the sensor goes into error state. </p>
+<table><thead><tr><th>Data field</th><th>Type</th><th>Length (bytes)</th><th>Comment</th></tr></thead><tbody>
+<tr><td>Protocol Version = 4</td><td>Unsigned Short</td><td>2</td><td>Navitrol ethernet protocol version</td></tr>
+<tr><td>Message ID = 3035</td><td>Unsigned Short</td><td>2</td><td></td></tr>
+<tr><td>Message length = 38</td><td>Unsigned Integer</td><td>4</td><td>Message length in bytes including all data fields (including Protocol Version and Message ID)</td></tr>
+<tr><td>Target X difference from sensor</td><td>Float</td><td>4</td><td>X is the center line of the detection sensor view</td></tr>
+<tr><td>Target Y difference from sensor</td><td>Float</td><td>4</td><td>Y to the left from sensor  X-axis</td></tr>
+<tr><td>Target Z difference from sensor</td><td>Float</td><td>4</td><td>Z is in vertical direction.<br>Positive direction upwards.<br>Value forced to 0</td></tr>
+<tr><td>Target angle difference between sensor heading and target heading</td><td>Float</td><td>4</td><td>0 along sensor X-axis, positive in CCW direction</td></tr>
+<tr><td>Target found</td><td>Unsigned short</td><td>2</td><td>0 = target not found<br>1 = target found</td></tr>
+<tr><td>Error code</td><td>Unsigned integer</td><td>4</td><td>Device error code number<br>Value 0 = no errors</td></tr>
+<tr><td>Reserved bytes</td><td>Integer</td><td>4</td><td>Value forced to 0</td></tr>
+<tr><td>Reserved bytes</td><td>Integer</td><td>4</td><td>Value forced to 0</td></tr>
+</tbody></table>
+<h3 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h3>
+<p>To enable more extensive logging set parameter U, log_ext_target_det, 1. The logging has prefix &quot;ExtTarDet:&quot;.</p>
+<p>Different errors related to external target detection can be found from <a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html">Error Descriptions</a> document.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

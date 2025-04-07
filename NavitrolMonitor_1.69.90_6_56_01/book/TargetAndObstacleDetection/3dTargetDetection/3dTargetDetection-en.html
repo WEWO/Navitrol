@@ -1,0 +1,536 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3D Target detection - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html" class="active"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="3d-load-detection"><a class="header" href="#3d-load-detection">3D Load detection</a></h1>
+<p>Updated 15.07.2024</p>
+<hr />
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
+<p>The feature performs load detection with a 3D camera, enabling a better overall view of the load. The 3D load detection estimates object pose by matching 3D sensor data with CAD models. The feature allows for accurate pose estimation of single as well as several stacked objects. The feature can also be used for empty space detection, which means searching for an empty space in a rack or ground for unloading. A license is required for this feature.</p>
+<h3 id="requirements"><a class="header" href="#requirements">Requirements</a></h3>
+<ul>
+<li>A 3D camera providing XYZI values</li>
+<li>The pose of the camera w.r.t. the navigation point is known (x,y,z,roll,pitch,yaw)</li>
+<li>Third party licenses installed</li>
+<li>Load CAD file (.stl) -- Z-axis is pointing upwards</li>
+<li>Debian Buster or Bullseye</li>
+</ul>
+<h3 id="limitations"><a class="header" href="#limitations">Limitations</a></h3>
+<ul>
+<li>The computing time differs on the scene, the 3D camera, and how many objects of interest are stacked but the detection takes approximately 200 to 350 milliseconds, including data acquisition.</li>
+<li>The field-of-view of a 3D camera is limited in comparison to 2D range scanners, normally 40-60 deg</li>
+<li>Incompatible with 2D load detection </li>
+<li>Maximum of three different pallet models supported at the same system. See ModelIndex.</li>
+<li>Maximum of four different 3D sensors supported at the same system. See SensorIndex.</li>
+</ul>
+<h2 id="setup"><a class="header" href="#setup">Setup</a></h2>
+<h3 id="quick-start"><a class="header" href="#quick-start">Quick start</a></h3>
+<p>The symbolic point is defined as load or unload, with option <em>Enable load detection</em> in Tools.</p>
+<p>Transfer the third party libraries folder <em>dependencies.7z</em> to the IPC. Unzip the folder.<br />
+<code>cd dependencies</code><br />
+<code>dpkg -i *</code><br />
+<code>apt-get install xvfb</code></p>
+<p>Add to the startNavitrol.sh to the end of the file, the following line to create a virtual screen to allow rendering the partial views<br />
+<code>nano startNavitrol.sh</code> in <code>/home/navitec</code><br />
+copy-paste in:<br />
+<code>Xvfb :99 -screen 0 1024x768x24 &gt; /dev/null 2&gt;&amp;1 &amp;</code></p>
+<p>Set the required parameters prior to generating partial views. Uploading the CAD file creates offline a database of 2.5D rendered partial views. The generated files are saved as .ply and .txt in folder <code>/home/navitec/poses</code>, and .bin and .idx in folder <code>/home/navitec</code>. Upload the CAD file to the IPC by pressing <code>Upload to Navitrol</code> in Navitrol Monitor<br />
+<img src="./media-en/image7.png" alt="" /></p>
+<p><strong>Required parameters</strong></p>
+<p>ModelIndex should be between [0..2].</p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required value</th><th>Description</th></tr></thead><tbody>
+<tr><td>target_detection_type_selection</td><td>I</td><td>4</td><td>Defines the source of load detection output</td></tr>
+<tr><td>obj_reg_3d_enabled</td><td>I</td><td>1</td><td>3D load detection enabled</td></tr>
+<tr><td>obj_reg_3d_model_name[ModelIndex]</td><td>S</td><td></td><td>Model name is the CAD file excl. the file extension</td></tr>
+<tr><td>obj_reg_3d_object_length[ModelIndex]</td><td>F</td><td>0.0</td><td>Length of the model in meters</td></tr>
+<tr><td>obj_reg_3d_object_width[ModelIndex]</td><td>F</td><td>0.0</td><td>Width of the model in meters</td></tr>
+<tr><td>obj_reg_3d_object_height[ModelIndex]</td><td>F</td><td>0.0</td><td>Height of the model in meters</td></tr>
+</tbody></table>
+<p><strong>Optional parameters</strong></p>
+<p>SensorIndex should be between [0..3].</p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>obj_reg_3d_sensor_fov_vertical_deg[SensorIndex]</td><td>F</td><td>0.0</td><td>The sensor's vertical field of view [deg]. Used for empty space detection and pose verification. By default 45.0 for O3D, 60.0 for Visionary. Depends on roll angle.</td></tr>
+<tr><td>obj_reg_3d_sensor_fov_horizontal_deg[SensorIndex]</td><td>F</td><td>0.0</td><td>The sensor's horizontal field of view [deg]. Used for empty space detection and pose verification. By default 60.0 for O3D, 70.0 for Visionary. Depends on roll angle.</td></tr>
+<tr><td>obj_reg_3d_sensor_translation_x[SensorIndex]</td><td>F</td><td>0.0</td><td>The x offset of the 3D camera from navigation point in meters</td></tr>
+<tr><td>obj_reg_3d_sensor_translation_y[SensorIndex]</td><td>F</td><td>0.0</td><td>The y offset of the 3D camera from navigation point in meters</td></tr>
+<tr><td>obj_reg_3d_sensor_translation_z[SensorIndex]</td><td>F</td><td>0.0</td><td>The z offset of the 3D camera from fork centre point in meters, or floor if <strong>obj_reg_3d_sensor_height_fixed</strong> is 1</td></tr>
+<tr><td>obj_reg_3d_sensor_internal_rotation_roll_deg[SensorIndex]</td><td>F</td><td>0.0</td><td>The roll angle offset of the 3D camera w.r.t. its own X-axis</td></tr>
+<tr><td>obj_reg_3d_sensor_internal_rotation_pitch_deg[SensorIndex]</td><td>F</td><td>0.0</td><td>The pitch angle offset of the 3D camera w.r.t. its own Y-axis</td></tr>
+<tr><td>obj_reg_3d_sensor_internal_rotation_yaw_deg[SensorIndex]</td><td>F</td><td>0.0</td><td>Sensor calibration yaw. Sensor's internal coordinate frame.</td></tr>
+<tr><td>obj_reg_3d_sensor_model[SensorIndex]</td><td>I</td><td>0</td><td>Sensor model <br> 0 -- disabled<br> 1 -- IFM O3D<br> 2 -- SICK Visionary-T Mini<br> 3 -- DDS pointcloud topic</td></tr>
+<tr><td>obj_reg_3d_sensor_external_rotation_yaw_deg[SensorIndex]</td><td>F</td><td>0.0</td><td>The angular deviation between the transformed 3d sensor's X and AGV's X in machine coordinate frame (heading).</td></tr>
+<tr><td>dds_pointcloud2_topic_name[SensorIndex]</td><td>S</td><td></td><td>The topic name for the pointcloud2 message.</td></tr>
+<tr><td>obj_reg_3d_sensor_ip[SensorIndex]</td><td>S</td><td></td><td>The IP address of the 3D camera</td></tr>
+<tr><td>obj_reg_3d_sensor_height_fixed[SensorIndex]</td><td>I</td><td>0</td><td>The camera is mounted statically and is independent of the actuator</td></tr>
+<tr><td>obj_reg_3d_pointcloud_logging</td><td>I</td><td>0</td><td>Enable pointcloud logging - 0 -- disabled, 1 -- enabled</td></tr>
+<tr><td>obj_reg_3d_number_of_pointcloud_logs</td><td>I</td><td>0</td><td>The maximum number of pointcloud logs saved to folder</td></tr>
+<tr><td>obj_reg_3d_region_of_interest_min_x</td><td>F</td><td>1.0</td><td>Bounding box, all points outside limit w.r.t. camera's local coordinate frame will be filtered out</td></tr>
+<tr><td>obj_reg_3d_region_of_interest_max_x</td><td>F</td><td>5.0</td><td>Bounding box, all points outside limit w.r.t. camera's local coordinate frame will be filtered out</td></tr>
+<tr><td>obj_reg_3d_region_of_interest_min_z</td><td>F</td><td>0.0</td><td>Bounding box, all points outside limit w.r.t. camera's local coordinate frame will be filtered out</td></tr>
+<tr><td>obj_reg_3d_region_of_interest_max_z</td><td>F</td><td>0.6</td><td>Bounding box, all points outside limit w.r.t. camera's local coordinate frame will be filtered out</td></tr>
+<tr><td>obj_reg_3d_intensity_filter_scale</td><td>F</td><td>0.85</td><td>Points with lower intensity than nominal for distance will be filtered. Larger value is stricter</td></tr>
+<tr><td>obj_reg_3d_cluster_tolerance_dist</td><td>F</td><td>0.096</td><td>Distance tolerance for clustering two points together</td></tr>
+<tr><td>obj_reg_3d_cluster_min_size</td><td>I</td><td>40</td><td>Minimum number of points in cluster to be regarded</td></tr>
+<tr><td>obj_reg_3d_minimum_model_inlier</td><td>F</td><td>0.25</td><td>Percentage of inliers for accepting a model, the higher the value the stricter</td></tr>
+<tr><td>obj_reg_3d_distance_between_pallet_legs[ModelIndex]</td><td>F</td><td>0.0</td><td>Distance between two pallet legs, to minimize false positives. Required for stacked objects. 0.0 -- not used for discrimination</td></tr>
+<tr><td>obj_reg_3d_min_rack_beam_width</td><td>F</td><td>1.5</td><td>The minimum width of a rack beam to be detected. Recommended to be larger than the largest model width or length. 0.0 -- not used</td></tr>
+<tr><td>obj_reg_3d_stop_for_target_detection_dist</td><td>F</td><td>2.0</td><td>Maximum distance from the object before AGV stops and tries detection on standstill. Distance from AGV:s navigation point to the detected object</td></tr>
+<tr><td>obj_reg_3d_target_min_n_times_validated_consecutively</td><td>I</td><td>2</td><td>Minimum number of times target must be validated consecutively before giving results</td></tr>
+<tr><td>obj_reg_3d_target_max_n_times_measured_while_stopped</td><td>I</td><td>15</td><td>The maximum detection attempts at standstill until driving closer to target.</td></tr>
+<tr><td>obj_reg_3d_max_diff_in_xy_results,</td><td>F</td><td>0.03</td><td>The maximum deviation of the pose in x,y,z between pose estimates to be considered conforming</td></tr>
+<tr><td>obj_reg_3d_max_diff_in_angle_results_deg</td><td>F</td><td>2.5</td><td>The maximum heading deviation between pose estimates to be considered conforming</td></tr>
+<tr><td>obj_reg_3d_empty_space_width_margin</td><td>F</td><td>0.1</td><td>Margin added to the empty space width when creating the bounding box</td></tr>
+<tr><td>obj_reg_3d_empty_space_length_margin</td><td>F</td><td>0.1</td><td>Margin added to the empty space length when creating the bounding box</td></tr>
+<tr><td>obj_reg_3d_empty_space_height_margin</td><td>F</td><td>0.1</td><td>Margin added to the empty space height when creating the bounding box</td></tr>
+<tr><td>obj_reg_3d_empty_space_max_cluster_density</td><td>I</td><td>50</td><td>Maximum number of allowed measurement points per cubic meter inside empty space</td></tr>
+<tr><td>obj_reg_3d_view_blocked_by_load_aboard</td><td>I</td><td>0</td><td>The empty space detection is omitted as the 3D camera is blocked by the load. 0 -- empty space enabled, 1 -- disabled</td></tr>
+<tr><td>obj_reg_3d_empty_space_min_material_width</td><td>F</td><td>0.3</td><td>Minimum solid material width beneath empty space</td></tr>
+<tr><td>target_detection_max_dist_to_symbolic_point</td><td>F</td><td>6.0</td><td>Distance to start detection from symbolic point. Calculated along trajectory</td></tr>
+<tr><td>buffer_check_start_dist_offset_m</td><td>F</td><td>2.0</td><td>Distance before buffer area to start detection</td></tr>
+</tbody></table>
+<h2 id="how-to-use"><a class="header" href="#how-to-use">How to use</a></h2>
+<h3 id="limitations-1"><a class="header" href="#limitations-1">Limitations</a></h3>
+<ul>
+<li>The height of the object is assumed to be known, the object is assumed to be within starting height <strong>obj_reg_3d_region_of_interest_min_z</strong> and parameter <strong>obj_reg_3d_object_height</strong>. </li>
+<li>The bottom-most object in a cluster is assumed to be the object of interest, if a match is not found from the bottom-most subcluster the feature will evaluate the next cluster (to optimize the search)</li>
+<li>Parameter <strong>obj_reg_3d_distance_between_pallet_legs</strong> is used to avoid false positives, it is based on the assumption that the object has 3 legs and between these legs a space between. This allows to differentiate between boxes of similar size and pallets. The matching can be done without the parameter but is then only based on how well the sensor view fits the CAD model, which may be noisy.</li>
+<li>Stacked objects are assumed to be in similar pose and if the pose deviates too much the algorithm will not be able to find the stacked objects.</li>
+<li>The load detection tracks the object to some extent and updates, however, if the object is completely removed from the scene the AGV will drive to last estimated pose. The pose is not cleared during docking if it does not see it any longer, as the field-of-view of the sensor is limited, and it may not see the object during docking.</li>
+</ul>
+<h3 id="creating-training-database-of-a-cad-model"><a class="header" href="#creating-training-database-of-a-cad-model">Creating training database of a CAD model</a></h3>
+<p>Accessible from Navitrol Monitor, under <code>Navitrol</code> → <code>Generate Partial Views from CAD Form - 3D sensor</code>. The scale factor is for transforming the CAD file from millimeters to meters or from inches to meters. The CAD rendering options is for determining how many partial views will be generated. The <em>Normal</em>-option generates 18 partial views that correspond the most likely sensor point clouds. Generating partial views from CAD file is performed offline and takes a while, thus requires that the AGV is in STANDBY mode when uploading to Navitrol. Generating partial views takes a while and is therefore not safe to run in normal operation, as the thread is frozen. The partial views will be generated from the CAD file selected in Browse.<br />
+<img src="./media-en/image7.png" alt="" /></p>
+<p>The message from Monitor is logged as<br />
+<em>MONITOR STL PACKET -- filename</em><br />
+A pop-up message will appear in Monitor depicting the status of the partial view generation, an example is visualized in the Figure below. </p>
+<p><img src="./media-en/image8.png" alt="" /></p>
+<p>The statuses include:</p>
+<ul>
+<li>Invalid filename</li>
+<li>Error occurred during rendering - try again</li>
+<li>Invalid scale factor</li>
+<li>Successful</li>
+</ul>
+<p>The partial view files (.bin, .idx, .ply, .txt) are parsed at startup and when a new model is generated.</p>
+<p>The Figure below visualizes a subset of the generated partial views for a eur-pallet.</p>
+<p><img src="./media-en/partial_views.PNG" alt="" /></p>
+<h3 id="3d-camera-setup"><a class="header" href="#3d-camera-setup">3D camera setup</a></h3>
+<h4 id="ifm-o3d"><a class="header" href="#ifm-o3d">IFM O3D</a></h4>
+<p>If the used 3D camera is the IFM O3D303 or O3DP03 the configuration of the camera must be uploaded to the camera. In the IPC write the following commands, by replacing the below IP with the IP of the camera. The configuration file must only be uploaded once for the O3D303 and after each reboot for the O3DP03. Follow the steps below to modify the IFM parameters:</p>
+<ol>
+<li>Upload the provided <em>configurationFileIFM</em> script to the IPC.</li>
+<li>Give script permission - <code>chmod +x configurationFileIFM</code></li>
+<li><code>./configurationFileIFM IP-ADDRESS</code></li>
+<li>Verify that the configuration file was successfully updated from console</li>
+</ol>
+<h5 id="dds"><a class="header" href="#dds">DDS</a></h5>
+<p>Set parameter <strong>dds_pointcloud2_topic_name[]</strong> and <strong>dds_enabled</strong> to 1, and <strong>obj_reg_3d_sensor_model[]</strong> to 3. </p>
+<p>IFM O3R:</p>
+<p>The sensor provides Z-buffer data, i.e. Z is by default pointing &quot;forward&quot;</p>
+<ol>
+<li><em>docker load &lt; ifm3d_ros_driver.tar.gz</em></li>
+<li>Run script: <em>./start_ifm_ros2_driver.sh</em></li>
+<li><em>cd colcon_ws</em></li>
+<li><em>source install/setup.bash</em></li>
+<li><em>cd src/ifm3d-ros2/launch/examples</em></li>
+</ol>
+<p>If the IP address of the VPU has been changed the following modifications need to be performed before launching the script.</p>
+<ol>
+<li>apt install nano</li>
+<li>nano /home/ifm/colcon_ws/install/ifm3d_ros2/share/ifm3d_ros2/config/examples/o3r_3d.yaml</li>
+<li>Modify ip: to the desired IP address</li>
+<li>nano /home/ifm/colcon_ws/install/ifm3d_ros2/share/ifm3d_ros2/config/examples/o3r_2d.yaml</li>
+<li>Modify ip: to the desired IP address</li>
+</ol>
+<p>Launch script:
+<em>ros2 launch example_o3r_2d_and_3d.launch.py</em></p>
+<p>The topic name is by default rt/ifm3d/camera_3d/cloud for the O3R-driver.</p>
+<h3 id="coordinate-frame"><a class="header" href="#coordinate-frame">Coordinate frame</a></h3>
+<p>The sensor pointcloud is transformed according to the above parameters to obtain the object pose in map coordinates. The translation components x and y are the deviations from the navigation point in the AGV's coordinate frame. The translation z component is defined with respect to the fork centre height or w.r.t. the floor if <strong>obj_reg_3d_sensor_height_fixed</strong> is set to 1.</p>
+<p>The left-most sensor shows the &quot;raw&quot; internal sensor coordinate frame and the right-most the transformed coordinate frame. The below example sensor provides Z-buffer data, which means that &quot;forward&quot; would be Z, instead of X. The detection algorithm assumes an X-buffer, so the sensor's internal rotation must be changed. In the below case the <strong>obj_reg_3d_sensor_internal_rotation_roll_deg</strong> would be 90 degrees and <strong>obj_reg_3d_sensor_internal_rotation_yaw_deg</strong> would be -90 degrees. </p>
+<p><img src="./media-en/sensor_rotation.PNG" alt="" /></p>
+<blockquote>
+<p>Sensor's internal rotation</p>
+</blockquote>
+<p>The roll, pitch and yaw angles are defined as the rotation along the x, y and z-axes of the sensor, respectively, as shown in the Figure below. The <strong>obj_reg_3d_sensor_external_rotation_yaw_deg</strong> angle is defined with respect to the AGV coordinate frame, the external yaw of the 3d sensor in the Figure below would be either 180 or -180 degrees.</p>
+<p><img src="./media-en/figure1.png" alt="" /></p>
+<p>The sensor is rendered in Monitor based on parameters:
+<strong>obj_reg_3d_sensor_translation_x</strong>, <strong>obj_reg_3d_sensor_translation_y</strong> and
+<strong>obj_reg_3d_sensor_external_rotation_yaw_deg</strong>. The triangle inside the square represents the viewing direction of the sensor, as visualized in the Figure below</p>
+<p><img src="./media-en/image2.png" alt="" /></p>
+<h3 id="filtering--clustering"><a class="header" href="#filtering--clustering">Filtering &amp; Clustering</a></h3>
+<p>The search space can be minimized, to make processing faster and to avoid possible false positives, via parameters with prefix <strong>obj_reg_3d_region_of_interest_</strong>. The region of interest is described in the sensor's local coordinate frame.</p>
+<p>The intensity is quadratically dependent on the distance to the 3D camera. The intensity of points is also dependent on the material, and the default value is based on wood. The strictness of the intensity filter can be scaled by parameter.
+The higher the value the more strict the filtering. <strong>F, obj_reg_3d_intensity_filter_scale, # Range [0.0, 1.0]</strong></p>
+<p>Objects far from the 3D camera may have sparsely distributed points, meaning a small value for <strong>obj_reg_3d_cluster_tolerance_dist</strong> might not be able to cluster the entire object, and too large values might result in adjacent objects being clustered together.</p>
+<h3 id="detection-and-pose-estimation"><a class="header" href="#detection-and-pose-estimation">Detection and pose estimation</a></h3>
+<p>The detection is started when </p>
+<ul>
+<li>AGV is in Auto state </li>
+<li>AGV heading is within +-45 degrees from the end symbolic point. This takes frame heading into account</li>
+<li>The distance is ok. This is calculated in two ways: 
+<ul>
+<li>AGV is inside target buffer area + <strong>buffer_check_start_dist_offset_m</strong> parameter or</li>
+<li>AGV is within <strong>target_detection_max_dist_to_symbolic_point</strong> from the end symbolic point</li>
+</ul>
+</li>
+</ul>
+<p>The detection is based on matching the sensor pointcloud to the partial views of several CAD files of different models, until a match returning the smallest error and largest number of inliers is found.</p>
+<p>In the case the object of interest has three legs on both the shorter and longer side, such as a eur-pallet, the parameter <strong>obj_reg_3d_distance_between_pallet_legs</strong> is defined as the distance between the shorter side's legs, for each model. The Figure below depicts the parameter selection for a eur-pallet, for which the value would be 0.35. This minimizes the risk of false positives for solid facades of similar dimensions.</p>
+<p><img src="./media-en/figure5.png" alt="" /></p>
+<p>The number of inliers between the CAD partial view and the sensor pointclouds is used for rejecting false-positive estimations, and can be tuned by <strong>obj_reg_3d_minimum_model_inlier</strong>.
+The higher the value the smaller the risk of false positive matches, but also the risk of rejecting true positives increases. The inlier fraction is logged in the console after a successful registration as: <em>Object registration - registration successful. Inlier fraction(s):</em></p>
+<p>The <strong>obj_reg_3d_minimum_model_inlier</strong> can be increased to a higher value if the inlier fraction is noticed to be higher during a successful match. Depending on the quality of the data and the model, the inlier fraction can be between 0.4 to 0.6.</p>
+<p>The returned pose is the centre point of the model facade and is computed from the length and width of the model. The acquired pose is transformed to map coordinates and given as x, y, z, heading.
+An initial docking target is found after obtaining <strong>obj_reg_3d_target_min_n_times_validated_consecutively</strong> consecutive conforming poses. For more information on docking, see <a href="../../PositionControl/Docking/Docking-en.html">Docking</a>. The pose is continuously updated if the new pose estimates conform with previous estimations. The allowed deviation between poses is determined by parameters <strong>obj_reg_3d_max_diff_in_xy_results</strong> and <strong>obj_reg_3d_max_diff_in_angle_results_deg</strong>. The smaller the value the stricter the estimation will be, but may result in false negatives. In case several similar objects are stacked the pose closest to the target actuator height is returned.</p>
+<p>The status of the detection is logged with the prefix<br />
+<em>Object registration -</em></p>
+<p>The pose of the object is logged as<br />
+<em>Object registration pose [map coord] : (x, y, z, h)</em></p>
+<h3 id="empty-space-detection"><a class="header" href="#empty-space-detection">Empty space detection</a></h3>
+<p>The empty space detection is used for unloading AGVs. The exact unload position is assumed to be known in x, y and heading.</p>
+<p>An empty space is defined as a volume of object dimension, plus margins, with less points than a threshold. The maximum number of points allowed within the entire volume is defined by <strong>obj_reg_3d_empty_space_min_cluster</strong>. The object dimensions are obtained from parameters <strong>obj_reg_3d_object_length/width/height</strong>.</p>
+<p>If <strong>obj_reg_3d_view_blocked_by_load_aboard</strong> is 1, the empty space will always return true and the AGV will unload blindly to the unload symbolic point, without verifying if an empty space is found.</p>
+<p>If the volume is larger than the field of view of the sensor from current distance to the unload point, an error message is logged. An empty space is only valid if there is solid material underneath, width defined by <strong>obj_reg_3d_empty_space_min_material_width</strong>. This is to prevent empty spaces being found mid-air.</p>
+<p>The empty space detection returns a height for which an empty volume that meets the above requirements. The status of the empty space detection is logged with the prefix: <em>Empty space -</em></p>
+<p>The detection is initiated if the symbolic point is unload, there is a load aboard and <strong>obj_reg_3d_view_blocked_by_load_aboard</strong> is set to 0. The status of the detection initiation can be seen from <em>Empty space status -</em></p>
+<h3 id="buffer-lane-detection"><a class="header" href="#buffer-lane-detection">Buffer lane detection</a></h3>
+<p>Blockstacking, meaning the detection of stacks for loading and unloading, requires buffer lane enabled in Tools and the correct parameter set-up. See document <a href="../../LoadHandling/BufferLanes/BufferLanes-en.html">Navitrol - Buffer lanes</a> for more information.</p>
+<p>All objects in a stack are assumed to be of same model and in similar orientation.</p>
+<p>The detection for loading from a stack is performed by finding the bottom-most object closest to the AGV in the buffer lane, and raising the forks until the top of the stack is found. The top of the stack is found by finding an empty space with less points than <strong>obj_reg_3d_empty_space_min_cluster</strong> above the current top-most object. After the empty space is found, the AGV will load the top-most object from the stack.See document <a href="../../LoadHandling/StackLoading/StackLoading-en.html">Navitrol - Stackloading</a> for more information.<br />
+The current top-most pallet in the stack is logged as: <em>Object registration - buffer area current top-most pallet (x,y,z,h)</em></p>
+<p>Unloading to a buffer stack is done by detecting the bottom-most object and increasing until finding a height where there is less points than <strong>obj_reg_3d_empty_space_min_cluster</strong>. If the bottom-most object is not found in the stack or stacking is not allowed, the AGV will unload in front of the obstacle in the buffer lane, based on the closest point in the obstacle. The closest obstacle in the buffer lane, in map coordinates, can be seen in the log as <em>Buffer lane obstacle closest position (x, y)</em>. See document <a href="../../LoadHandling/BlockStacking/BlockStacking-en.html">Navitrol - Blockstacking</a> for more information.</p>
+<h3 id="stopping-while-executing-3d-object-registration"><a class="header" href="#stopping-while-executing-3d-object-registration">Stopping while executing 3d object registration</a></h3>
+<p>During 3D object registration it is possible to stop the AGV and give more time for the feature to detect the target. Stopping will occur when the AGV is closer than <strong>obj_reg_3d_stop_for_target_detection_dist</strong> distance to unrecognized object or a cluster. Stopping will not occur if object is validated and detected correctly already further away.</p>
+<p>Workflow for the detection sequence while being stopped is the following:</p>
+<ol>
+<li>Stop the AGV when object is <strong>obj_reg_3d_stop_for_target_detection_dist</strong> distance away from the AGV</li>
+<li>Detect and validate the target <strong>obj_reg_3d_target_min_n_times_validated_consecutively</strong> times in a row</li>
+<li>After <strong>obj_reg_3d_target_max_n_times_measured_while_stopped</strong> detection attempts, continue moving towards the target again</li>
+<li>If detection successful, start docking</li>
+</ol>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="partial-views"><a class="header" href="#partial-views">Partial views</a></h3>
+<h4 id="invalid-scale-factor-of-partial-view"><a class="header" href="#invalid-scale-factor-of-partial-view">Invalid scale factor of partial view</a></h4>
+<ul>
+<li>The dimension of the partial view is incorrect. Verify that the scale factor for the CAD file is correct</li>
+</ul>
+<h4 id="upload-to-navitrol-causes-navitrol-to-crash-and-lose-connection-to-agv-the-following-line-is-logged-in-the-console"><a class="header" href="#upload-to-navitrol-causes-navitrol-to-crash-and-lose-connection-to-agv-the-following-line-is-logged-in-the-console">Upload to Navitrol causes Navitrol to crash and lose connection to AGV. The following line is logged in the console</a></h4>
+<ul>
+<li><em>vtkXOpenGLRenderWindow (0x7f5c3c01f0c0): bad X server connection. DISPLAY=:99. Aborting.</em> -- Verify that Xvfb is installed from <code>which Xvfb</code>. If not, <code>apt-get install xvfb</code>. Otherwise, try restarting the virtual screen manually by <code>Xvfb :99 -screen 0 1024x768x24 \&gt; /dev/null 2\&gt;&amp;1 &amp;</code></li>
+</ul>
+<h4 id="invalid-filename-of-partial-view"><a class="header" href="#invalid-filename-of-partial-view">Invalid filename of partial view</a></h4>
+<ul>
+<li>Verify that the Monitor package, logged as <em>MONITOR STL PACKET -- filename</em> has been received and parsed correctly and that the filename matches the CAD file name excluding the file extension (.stl), and that the provided .stl file is not corrupted and has more than 4 points</li>
+</ul>
+<h3 id="load-detection-3d-form"><a class="header" href="#load-detection-3d-form">Load detection 3d form</a></h3>
+<p><img src="./media-en/load_detection_form.png" alt="" /></p>
+<blockquote>
+<p>Load detection 3d form</p>
+</blockquote>
+<p>A green color indicates the requirements are met, red means they are not.</p>
+<h4 id="agv-distance-within-detection-range"><a class="header" href="#agv-distance-within-detection-range">AGV distance within detection range</a></h4>
+<ul>
+<li>The AGV's distance to the symbolic point along trajectory is more than <strong>target_detection_max_dist_to_symbolic_point</strong>.</li>
+</ul>
+<h4 id="agv-heading-within-detection-range"><a class="header" href="#agv-heading-within-detection-range">AGV heading within detection range</a></h4>
+<ul>
+<li>The AGV's heading is more than +-45 degrees from the symbolic point heading.</li>
+</ul>
+<h4 id="symbolic-point-has-load-detection-enabled"><a class="header" href="#symbolic-point-has-load-detection-enabled">Symbolic point has load detection enabled</a></h4>
+<ul>
+<li>Enable load detection in Navithor Tools for the symbolic point.</li>
+</ul>
+<h4 id="partial-views-ok"><a class="header" href="#partial-views-ok">Partial views ok</a></h4>
+<ul>
+<li>The model name in parameter <strong>obj_reg_3d_model_name[]</strong> is not correct or no CAD file (.stl) has been uploaded via the Generate partial views from CAD form - 3D sensor.</li>
+</ul>
+<h4 id="load-detection-status"><a class="header" href="#load-detection-status">Load detection status</a></h4>
+<ul>
+<li>
+<p>&quot;Region of interest too small for model&quot; - The parameters <strong>obj_reg_3d_region_of_interest_min/max_z</strong> are too strict. Check the validity of parameters <strong>obj_reg_3d_region_of_interest_min/max_z</strong> and/or <strong>obj_reg_3d_object_height</strong>.</p>
+</li>
+<li>
+<p>&quot;Intensity filter failed&quot; - Parameter value <strong>obj_reg_3d_intensity_filter_scale_factor</strong> is too high and no points have intensity above threshold.</p>
+</li>
+<li>
+<p>&quot;Passthrough filter (x, y) failed&quot; - Verify that parameters <strong>obj_reg_3d_sensor_translation_x/y</strong> and <strong>obj_reg_3d_region_of_interest_min/max_x</strong> are valid.</p>
+</li>
+<li>
+<p>&quot;Passthrough filter z failed&quot; - Verify <strong>obj_reg_3d_sensor_translation_z</strong> and <strong>obj_reg_3d_sensor_rotation_pitch_deg</strong>, or all <strong>obj_reg_3d_sensor_rotation</strong>-prefixed parameters if sensor provides Z-buffer pointcloud.</p>
+</li>
+<li>
+<p>&quot;Euclidean segmentation failed&quot; - The parameter <strong>obj_reg_3d_cluster_min_size</strong> is too high or <strong>obj_reg_3d_cluster_tolerance_dist</strong> is too small.</p>
+</li>
+<li>
+<p>&quot;No match found - model file corrupted&quot; - Reupload the partial views for CAD file(s). The log line with prefix &quot;2.5D rendered model&quot; will inform the index of the corrupted model file.</p>
+</li>
+<li>
+<p>&quot;No match found - model not found&quot; - A model giving a larger inlier fraction than <strong>obj_reg_3d_minimum_model_inlier</strong> is not found, or a subcluster of model height with more points than <strong>obj_reg_3d_cluster_min_size</strong> is not found.</p>
+</li>
+<li>
+<p>&quot;No match found - fitness value too high&quot; - The error of the fine tuned pose is too high. </p>
+</li>
+<li>
+<p>&quot;No match found - pose invalid&quot; - The computed pose doesn't have any neighbouring points in the sensor pointcloud. </p>
+</li>
+<li>
+<p>&quot;No match found - pocket detection failed&quot; - Pockets have not been detected for the model, defined based on:
+<strong>obj_reg_3d_distance_between_pallet_legs</strong></p>
+</li>
+<li>
+<p>&quot;Detection ok&quot; - The detection was successful, a pose estimate was obtained.</p>
+</li>
+</ul>
+<h4 id="target-found"><a class="header" href="#target-found">Target found</a></h4>
+<ul>
+<li>Two consecutive pose estimates deviating less than <strong>obj_reg_3d_max_diff_in_xy_results</strong> and <strong>obj_reg_3d_max_diff_in_angle_results_deg</strong> has not been obtained. </li>
+</ul>
+<h4 id="the-dimensions-of-the-load-are-ok"><a class="header" href="#the-dimensions-of-the-load-are-ok">The dimensions of the load are ok</a></h4>
+<ul>
+<li>An object has been loaded</li>
+</ul>
+<h4 id="empty-space-detection-status"><a class="header" href="#empty-space-detection-status">Empty space detection status</a></h4>
+<ul>
+<li>
+<p>&quot;The sensor field of views are smaller than the object or object is not in the sensor field of view.&quot; - Based on the current distance to query point, the sensor transformation and parameters <strong>obj_reg_3d_sensor_fov_vertical_deg</strong> and <strong>obj_reg_3d_sensor_fov_horizontal_deg</strong>.</p>
+</li>
+<li>
+<p>&quot;The empty space was found on floor level&quot; - An empty space around the query point on floor level was found. No solid material required to be seen.</p>
+</li>
+<li>
+<p>&quot;The empty space detection failed - space occupied.&quot; - The empty space around the query points has more points than <strong>obj_reg_3d_empty_space_max_cluster_density</strong> multiplied by the volume of the empty space (length * width * height) with margins.</p>
+</li>
+<li>
+<p>&quot;The empty space detection failed - no rack found.&quot; - No solid material of minimum width <strong>obj_reg_3d_empty_space_min_material_width</strong> found below the empty space, the empty space is invalidated.</p>
+</li>
+<li>
+<p>&quot;The empty space was found&quot; - The empty space was found around the query point. Unloading will commence. </p>
+</li>
+</ul>
+<h4 id="the-unload-query-point-in-map-coordinates-x-y-z-h"><a class="header" href="#the-unload-query-point-in-map-coordinates-x-y-z-h">The unload query point in map coordinates (x, y, z, h)</a></h4>
+<ul>
+<li>The centre point (x, y) of the volume used for empty space detection</li>
+</ul>
+<h4 id="the-dimensions-of-the-load-incl-margins-l-w-h"><a class="header" href="#the-dimensions-of-the-load-incl-margins-l-w-h">The dimensions of the load, incl. margins (L, W, H)</a></h4>
+<ul>
+<li>The length, width and height of the volume and margins, <strong>obj_reg_3d_empty_space_length_margin</strong>, <strong>obj_reg_3d_empty_space_width_margin</strong>, and <strong>obj_reg_3d_empty_space_height_margin</strong>, used for empty space detection.</li>
+</ul>
+<h3 id="errors-and-warnings"><a class="header" href="#errors-and-warnings">Errors and warnings</a></h3>
+<h4 id="562---error_3d_partial_views_invalid"><a class="header" href="#562---error_3d_partial_views_invalid">562 - ERROR_3D_PARTIAL_VIEWS_INVALID</a></h4>
+<ul>
+<li>The partial views for 3d detection are invalid and parsing was unsuccessful. Verify that the <strong>obj_reg_3d_model_name</strong> corresponds to the name of the CAD file and that the files exist in <code>/home/navitec/</code> and <code>/home/navitec/poses/</code> and are not corrupted.</li>
+</ul>
+<h4 id="563---error_3d_prerequisites_not_found"><a class="header" href="#563---error_3d_prerequisites_not_found">563 - ERROR_3D_PREREQUISITES_NOT_FOUND</a></h4>
+<ul>
+<li>The required 3rd party libraries could not be found. Verify that all the packages in the <em>dependencies.7z</em> have been installed.</li>
+</ul>
+<h4 id="665---warning_3d_sensor_data_not_received"><a class="header" href="#665---warning_3d_sensor_data_not_received">665 - WARNING_3D_SENSOR_DATA_NOT_RECEIVED</a></h4>
+<ul>
+<li>A sensor pointcloud is not received, verify network settings and ip address. Check <strong>obj_reg_3d_sensor_model</strong> and <strong>obj_reg_3d_sensor_ip</strong> or <strong>dds_pointcloud2_topic_name</strong></li>
+</ul>
+<h3 id="advanced-troubleshooting"><a class="header" href="#advanced-troubleshooting">Advanced troubleshooting</a></h3>
+<h4 id="pointcloud-logs"><a class="header" href="#pointcloud-logs">Pointcloud logs</a></h4>
+<ul>
+<li>If pointcloud logging is enabled, pointclouds will be saved to <code>/home/navitec/pointcloud_logs/</code> folder. The pointcloud logs are saved as <em>pointcloud_error_log_n.ply</em>. The newest file is the 0<sup>th</sup>, and the oldest logs are deleted after reaching <strong>obj_reg_3d_number_of_pointcloud_logs</strong>. The pointclouds are saved to .ply format and can be viewed in e.g. Meshlab, which is a free software.</li>
+<li>The Navitrol timestamp of the pointcloud is visible as a comment in the <em>.ply</em> file, the files are written in ASCII format. The width of the pointcloud is also written as a comment to the <em>.ply</em> file.</li>
+</ul>
+<h4 id="unsuccessful-parsing-of-partial-views"><a class="header" href="#unsuccessful-parsing-of-partial-views">Unsuccessful parsing of partial views</a></h4>
+<ul>
+<li>In the log there is visible the following line: <em>Could not open file:</em>. The number of partial views parsed can be deduced from log lines 
+<em>Could not open file: ./poses/modelname_poses_3.txt for reading</em><br />
+<em>Could not open file: ./poses/modelname_cluster_3.ply for reading.</em><br />
+In the above example only 3 partial views were parsed for <em>modelname.</em> If the number is 0 for either .txt or .ply, no file  matching the filename could be found in the required folder. To check for file corruption search in the log for prefix <em>Partial view parsing -</em></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

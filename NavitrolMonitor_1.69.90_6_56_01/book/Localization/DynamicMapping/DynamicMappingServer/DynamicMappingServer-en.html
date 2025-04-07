@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Dynamic mapping server - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../../favicon.svg">
+                        <link rel="shortcut icon" href="../../../favicon.png">
+                <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+                <link rel="stylesheet" href="../../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html" class="active"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="navitrol-dynamic-mapping-server-and-client"><a class="header" href="#navitrol-dynamic-mapping-server-and-client">Navitrol Dynamic Mapping Server and Client</a></h1>
+<p>Updated 26.01.2024</p>
+<hr />
+<h2 id="glossary"><a class="header" href="#glossary">Glossary</a></h2>
+<table><thead><tr><th>Term</th><th>Description</th></tr></thead><tbody>
+<tr><td>Navitrol</td><td>Navigation software for an individual vehicle</td></tr>
+<tr><td>NavitrolMonitor</td><td>Monitoring software for the Navitrol positioning software running an on individual vehicle</td></tr>
+<tr><td>NavithorTools</td><td>Software for creating and editing environment and routes for the Navitrol navigation software</td></tr>
+<tr><td>Dynamic Mapping Lite</td><td>Dynamic environment updating for an individual vehicle</td></tr>
+<tr><td>Dynamic Mapping Full</td><td>Dynamic environment updating for a fleet of vehicles</td></tr>
+<tr><td>Dynamic Mapping Server</td><td>A server where dynamic points from Dynamic Mapping Lite are gathered to be used in Dynamic Mapping Full</td></tr>
+<tr><td>Dynamic Mapping Client</td><td>User interface software used to display and control Dynamic Mapping Server when running server</td></tr>
+</tbody></table>
+<hr />
+<h2 id="dynamic-mapping-lite"><a class="header" href="#dynamic-mapping-lite">Dynamic Mapping Lite</a></h2>
+<p>Dynamic Mapping Lite is a Navitrol feature that keeps a set of the most recent matched scanner measurements in memory and stores them as temporary environment points to be used for navigation.</p>
+<h3 id="relevant-parameters"><a class="header" href="#relevant-parameters">Relevant Parameters</a></h3>
+<ul>
+<li>
+<p><strong>I,dyn_map_lite_pos_corr, =</strong> 0 to disable, 1 to enable position correction based on dynamic mapping.</p>
+</li>
+<li>
+<p><strong>I,dyn_map_lite_n_meas, =</strong> Has to be &gt; 0 for dynamic mapping to be enabled. Determines how many measurements to keep in dynamic map lite. Recommended value 50.</p>
+</li>
+<li>
+<p><strong>I,dyn_map_lite_only_on_auto, =</strong> 1 to only update dynamic map when auto driving, 0 for all driving.</p>
+</li>
+<li>
+<p><strong>F,dyn_map_lite_resolution, =</strong> Resolution of dynamic mapping points. Recommended value 0.02.</p>
+</li>
+<li>
+<p><strong>F,dyn_map_lite_meas_interval_m, =</strong> Minimum distance in meters between measurements added to map. Recommended value 0.05.</p>
+</li>
+<li>
+<p><strong>F,dyn_map_lite_meas_interval_deg, =</strong> Minimum heading difference in degrees between measurements added to map. Recommended value 10.</p>
+</li>
+<li>
+<p><strong>F,dyn_map_lite_update_min_env_conf, =</strong> Minimum position confidence in percentages to update dynamic map.</p>
+</li>
+<li>
+<p><strong>F,dyn_map_lite_wait_dist_after_pos_lost, =</strong> Distance in meters required to travel after position had been lost before starting to update dynamic map.</p>
+</li>
+<li>
+<p><strong>I,dyn_map_lite_excluded_areas, =</strong> 1 to use dynamic mapping excluded areas and not add points within them, 0 to disable.</p>
+</li>
+<li>
+<p><strong>F,corr_conf_dyn_map_lite_max_dist, =</strong> Determines in meters how fast position confidence drops once no static features are seen. Recommended 10 meters. Much larger values shouldn't be used as drift cumulates.</p>
+</li>
+<li>
+<p><strong>F,dyn_map_pt_min_weight_logged, =</strong> Limit amount of dynamic points written to log and sent to the Monitor. Set minimum map weight for point to be included in the log. Recommended 0.0 - 0.2.</p>
+</li>
+<li>
+<p><strong>I, dyn_map_lite_make_xy_corrs, =</strong> 1 to use the dynamic mapping confidence for xy gain if it is higher than static map. Recommended 1.</p>
+</li>
+<li>
+<p><strong>I, dyn_map_lite_pos_init_mode, =</strong> 0 disable position initializing from dynamic mapping, 1 initialize position and restore confidence if AGV's surrounding has not been changed significantly.</p>
+<p>Principle of operation: On startup, if scanner points are matching the saved points before shutdown, Navitrol will create dynamic map from scanner points that are visible on startup and restore the confidence saved before shutdown. Accuracy of initial match to the saved scanner points can be changed with parameter <strong>F,start_pos_ini_min_match_rate.</strong></p>
+</li>
+<li>
+<p><strong>F, dyn_map_lite_pos_init_weight, =</strong> Weight of dynamic mapping points added during position initialization. Recommended 0.02-0.05.</p>
+</li>
+</ul>
+<h3 id="environment-update"><a class="header" href="#environment-update">Environment Update</a></h3>
+<p>When Dynamic Mapping Lite is switched on and the vehicle starts moving, Navitrol will start storing the most recent matched scanner measurements to the map as light blue dots.</p>
+<p><img src="./media-en/image4.png" alt="" />
+&gt;Figure 1. Dynamic points created by Dynamic Mapping Lite.</p>
+<p>Dynamic environment points will start to gather more weight as they receive more scanner hits. The weight of the dynamic point is indicated with the shade of blue. The darker the blue, the higher weight the dynamic point has.</p>
+<p><img src="./media-en/image5.png" alt="" />
+&gt;Figure 2. Dynamic points with different weights.</p>
+<p>Updating the dynamic points is done by removing the oldest points from the memory when memory is full and replacing them with new points.</p>
+<p>When using Dynamic Mapping it is vital that there are some static features in the environment to lock the dynamic features in the correct places. Even though the dynamic map is only updated when position confidence is high enough, the sufficient position confidence can be reached with dynamic points only. In this case if there is no static environment to lock the dynamic points in place the dynamic map can start cumulatively drifting from the correct position.</p>
+<h3 id="dynamic-mapping-excluded-areas"><a class="header" href="#dynamic-mapping-excluded-areas">Dynamic Mapping Excluded Areas</a></h3>
+<p>Dynamic Mapping might not be needed in all areas of the route of the vehicle. These areas can be excluded by defining them in NavithorTools using feature zones.</p>
+<p>Areas where updating the dynamic map is not needed are defined using polygons.</p>
+<p>It is advised to exclude areas that do not create a solid environment model. In picture below a round ventilation channel runs horizontally on the height of the scanner view. The wall is thus not detected as thin line but is blurred instead. As dynamic mapping cannot then have any good reference from this kind of wall it is strongly advised to exclude this kind of features from the dynamic map.</p>
+<p><img src="./media-en/image6.png" alt="" />
+&gt;Figure 3. Example of bad environment for dynamic map.</p>
+<p>Also, open areas with lot of moving manual traffic seen by AGV's laser scanners should also be set as excluded.</p>
+<p><img src="./media-en/FeatureZoneTool.PNG" alt="" />
+&gt;Figure 4. Defining an feature zone polygon to be excluded from Dynamic Mapping.</p>
+<h2 id="dynamic-mapping-full"><a class="header" href="#dynamic-mapping-full">Dynamic Mapping Full</a></h2>
+<p>Dynamic Mapping Full is a feature that combines dynamic environment points from several vehicles to a <strong>Dynamic Mapping Server</strong> to create a shared dynamic map for all of them. Dynamic Mapping Lite points from every individual vehicle are sent to the Dynamic Mapping Server, where they are gathered and stored into a combined larger dynamic map. <strong>Dynamic Mapping Client</strong> is used to control server and edit stored dynamic map. <strong>Dynamic Mapping Server</strong> has only a basic UI for displaying server state.</p>
+<h3 id="relevant-parameters-navitrol-side"><a class="header" href="#relevant-parameters-navitrol-side">Relevant Parameters (Navitrol side)</a></h3>
+<ul>
+<li>
+<p><strong>I,dyn_map_server_enable, =</strong> 0 to disable, 1 to enable Dynamic Mapping Full.</p>
+</li>
+<li>
+<p><strong>S,dyn_map_server_ip, =</strong> IP address of the Dynamic Mapping Server.</p>
+</li>
+<li>
+<p><strong>I,dyn_map_server_port, =</strong> Port used for communication between Navitrol clients and the server.</p>
+</li>
+<li>
+<p><strong>I,dyn_map_server_update_interval_ms, =</strong> Interval in milliseconds for updating the Dynamic Mapping Server. Recommended value 500-2000 ms. With larger fleets it is recommended to keep the interval low.</p>
+</li>
+<li>
+<p><strong>I,dyn_map_server_update_min_n_new_meas, =</strong> Determines how many dynamic mapping light measurements have to have changed in memory for update to be sent to server. Recommended value half of dyn_map_lite_n_meas.</p>
+</li>
+<li>
+<p><strong>I,dyn_map_server_recv_timeout_ms, =</strong> Maximum time in milliseconds for connection break before timeout. Recommended value 5000 ms.</p>
+</li>
+</ul>
+<h3 id="installation"><a class="header" href="#installation">Installation</a></h3>
+<p>For instruction how to install and run Dynamic Mapping Server as a windows service see section <em>Installing</em> <em>Dynamic Mapping Server as a service</em> for more details.</p>
+<p>Dynamic Mapping Server is operated with separate programs named <strong>NavitrolDynamicMappingServer.exe</strong> and <strong>DynamicMappingClient.exe</strong></p>
+<p>To establish connection between the Dynamic Mapping Server and the Navitrol clients:</p>
+<ol>
+<li>
+<p>Every Navitrol client must have the IP address of the server set as <strong>dyn_map_server_ip</strong> in the params.txt file.</p>
+</li>
+<li>
+<p>Every Navitrol client must have a port number as  <strong>dyn_map_server_port</strong> in the params.txt file that matches the port set for the Dynamic Mapping Server as <strong>ServerPort</strong> in the  server's Parameters.xml file (not to be confused with Server Port  in the Dynamic Mapping Client configuration).</p>
+</li>
+<li>
+<p>Every Navitrol client must have a license to run Dynamic Mapping Full.</p>
+</li>
+<li>
+<p>Dynamic Mapping Full must be enabled with <strong>dyn_map_server_enable</strong> parameter in the params.txt file</p>
+</li>
+</ol>
+<p>After the environment with all the static features has been created, the environment data must be exported for the Dynamic Mapping Server. This can be done from:</p>
+<p><strong>Export / Upload Export Dynamic Mapping Server Data</strong></p>
+<p><img src="./media-en/image8.png" alt="" /> <img src="./media-en/image9.png" alt="" />
+&gt;Figure 5. Exporting Dynamic Mapping Server Data from NavithorTools.</p>
+<p>The file name by default will take the form of <strong>dyn_********.ntdi</strong> where the file extension indicates a
+Dynamic Mapping Server Data file.</p>
+<p>Tools will prompt user to confirm using the <strong>finalized measurements</strong> as base data for the new dynamic map. If the finalized measurements are still valid data saying 'Yes' is safe. If the area has lots of dynamic features and the teach data is so old that it contains lot of false data, then saying 'No' is a better a choice. If 'No' is selected, then the dynamic base map will be empty and will only contain the information about possible excluded areas.</p>
+<p>After the ntdi-file is created it needs to be loaded to Dynamic Mapping Server using Dynamic Mapping Client.</p>
+<p>Uploading maps to server is done using Dynamic Mapping Client. The server stream port needs to be open to successfully upload maps. To upload new map from the client, first select <strong>Server</strong> -&gt; <strong>Change Map</strong> -&gt; <strong>Upload new map.</strong> After successful upload, the selected map will appear to the MapSelectionForm list. Clicking listed map item and pressing <strong>Select</strong> will load the map to the server as well as to all connected clients.</p>
+<p><img src="./media-en/image11.png" alt="" /> <img src="./media-en/image10.png" alt="" />
+&gt;Figure 6. Loading a Dynamic Mapping Server Data file to be used for the
+server.</p>
+<p>If successful, the base environment will appear on the user interface.</p>
+<p><img src="./media-en/image12.png" alt="" />
+&gt;Figure 7. Base environment for the Dynamic Mapping Server.</p>
+<h4 id="installing-dynamic-mapping-server-as-a-service"><a class="header" href="#installing-dynamic-mapping-server-as-a-service">Installing Dynamic Mapping Server as a service</a></h4>
+<p>Dynamic Mapping Server can be run as a Windows service. To do this, the Dynamic Mapping Server service needs to be installed as a service.</p>
+<p>First, the NavitrolDynamicMappingServer.exe.config file must be edited in a text editor. In section <strong>&lt;userSettings&gt;</strong> parameter value <strong>runAsService</strong> marked in red below must be set to <strong>True</strong>. The file can be found in the same folder as the NavitrolDynamicMappingServer executable. Dynamic Mapping server can be run as an executable if this parameter is kept as false.</p>
+<pre><code class="language-xml">&lt;userSettings&gt;
+  &lt;NavitrolDynamicMappingServer.Properties.Settings&gt;
+    &lt;setting name=&quot;runAsService&quot; serializeAs=&quot;String&quot;&gt;
+      &lt;value&gt;False&lt;/value&gt;
+    &lt;/setting\&gt;
+    &lt;setting name=&quot;serverServicePort&quot; serializeAs=&quot;String&quot;&gt;
+      &lt;value&gt;8080&lt;/value&gt;
+    &lt;/setting&gt;
+    &lt;setting name=&quot;serverStreamPort&quot; serializeAs=&quot;String&quot;&gt;
+      &lt;value&gt;8090&lt;/value&gt;
+    &lt;/setting&gt;
+  &lt;/NavitrolDynamicMappingServer.Properties.Settings&gt;
+&lt;/userSettings&gt;
+</code></pre>
+<p>Next, using Command Prompt as an admin navigate to the path where the NavitrolDynamicMappingServer.exe is located. Type in command:</p>
+<p><strong>NavitrolDynamicMappingServer.exe -install</strong>.</p>
+<p>Server as a service can be uninstalled by typing in:</p>
+<p><strong>NavitrolDynamicMappingServer.exe -uninstall</strong>.</p>
+<p>Once installed, &quot;<strong>Dynamic Mapping Server as a Service</strong>&quot; should appear listed in the windows service when viewed with Services app. To start or stop the server right click the service in the list and select &quot;start&quot; or &quot;stop&quot;. These are not to be confused with &quot;start&quot; and &quot;stop&quot; option available in the Dynamic Mapping Client user interface, where starting and stopping controls the processing of incoming dynamic data from Navitrol clients.</p>
+<p><img src="./media-en/image13.png" alt="" /></p>
+<blockquote>
+<p>Figure 8. Dynamic Mapping Server as a service listed in Windows Services
+app</p>
+</blockquote>
+<p>Server can be accessed and operated with a separate client application <strong>DynamicMappingClient.exe</strong>. To connect client to the Dynamic Mapping Server navigate to <strong>Tools</strong> <strong>Configuration,</strong> open server configurations menu and type in the IP-address of the server. Network traffic through <strong>Server port</strong> and <strong>Server Stream</strong> port must allowed. These are by default set to ports 8080 and 8090, but can be changed from the NavitrolDynamicMappingServer.exe.config. It must be noted that these need to match in both config file and client configuration in order to establish connection between server and client. After succesfull connection the status indicator chages from &quot;Disconnected&quot; to &quot;Running&quot; or &quot;Stopped&quot; depending on current server state. Most likely communication to these ports need to be allowed from the windows firewall before data starts to come through.</p>
+<p><img src="./media-en/image14.png" alt="" /></p>
+<blockquote>
+<p>Figure 9. Server Configurations location</p>
+</blockquote>
+<p><img src="./media-en/image15.png" alt="" /></p>
+<blockquote>
+<p>Figure 10. Server Configurations menu</p>
+</blockquote>
+<h3 id="dynamic-mapping-client-user-interface"><a class="header" href="#dynamic-mapping-client-user-interface">Dynamic Mapping Client User Interface</a></h3>
+<p>All server controlling is done through Dynamic Mapping Client including starting and stopping server update process, creating backups, changing map, or editing map. Start and stop will control the processing and incorporation of incoming dynamic data to the dynamically generated and shared map. Stopping the server does not shut down the server. If server needs to be shut down either the windows service needs to be stopped from Windows Service manager, or if running directly from executable closing the executable.</p>
+<p>All Navitrol clients connected to the server will be displayed on their live location on the dynamic map. After a Navitrol client has established connection with the server once, it will be displayed in the user interface even if connection is lost. Only the status of the client will change in this case.</p>
+<p>Navitrol client status is indicated with ok, map mismatch, disconnected or outside area messages. Map mismatch indicates that the map on the server and on Navitrol client is different. Outside area status indicates that the AGV is outside production area. If an AGV is getting hits from outside the production area these are logged as well as displayed besides status message as unsaved points. These points are not stored to Dynamic Mapping server as they are coming from outside the production area.</p>
+<p>Dynamic Mapping Client displays an About tab which shows current client and server versions as well as their compatibility.</p>
+<p><img src="./media-en/image16.png" alt="" /></p>
+<blockquote>
+<p>Figure 11. Dynamic Mapping Client displaying server to client
+compatibility</p>
+</blockquote>
+<p>On the <strong>Server Clients</strong> data table, the following information about the connected Navitrol clients are displayed:</p>
+<ul>
+<li>IP address</li>
+<li>Map level or floor where the vehicle is currently</li>
+<li>X and Y coordinates of the vehicle's navigation point</li>
+<li>Position confidence</li>
+<li>Navitrol version</li>
+<li>Indication that server is uploading new dynamic points</li>
+<li>Status messages
+<ul>
+<li>OK</li>
+</ul>
+</li>
+<li>Map mismatch (different environments uploaded for the client and the server)
+<ul>
+<li>Disconnected</li>
+</ul>
+</li>
+<li>Outside Area with unsaved points count</li>
+</ul>
+<p><img src="./media-en/image17.png" alt="" />
+&gt;Figure 12. Dynamic Mapping Server user interface.</p>
+<h3 id="environment-update-1"><a class="header" href="#environment-update-1">Environment Update</a></h3>
+<p>When the vehicles are operating and the position confidence stays high enough, the dynamic map will continuously update adding environment points for new dynamic features added to it.</p>
+<p><img src="./media-en/image18.png" alt="" />
+<img src="./media-en/image19.png" alt="" /></p>
+<blockquote>
+<p>Figure 13. Dynamic environment points generated by Dynamic Mapping Server.</p>
+</blockquote>
+<p>After the Dynamic Mapping Server has uploaded the updated dynamic points for the Navitrol client, they are also displayed on the NavitrolMonitor side. All dynamic environment points that are currently being used for the client are displayed as black dots in the NavitrolMonitor.</p>
+<p><img src="./media-en/image20.png" alt="" /> <img src="./media-en/image21.png" alt="" />
+&gt;Figure 14. Dynamic environment points generated by Dynamic Mapping Server displayed in NavitrolMonitor.</p>
+<h3 id="dynamic-map-editing"><a class="header" href="#dynamic-map-editing">Dynamic Map Editing</a></h3>
+<p>If there is a need to edit the dynamic environment created by the Dynamic Mapping Server, this can be done with the Edit Dynamic Map tool:</p>
+<p><strong>Tools Edit Map</strong></p>
+<p><img src="./media-en/image22.png" alt="" /> <img src="./media-en/image23.png" alt="" />
+&gt;Figure 15. Opening the Edit Dynamic Map form.</p>
+<p>Measurements can be selected by clicking them on the map. Selected set of measurements are highlighted with a blue color. The selected measurements can be erased from the environment with <strong>Delete All</strong>.</p>
+<p><img src="./media-en/image24.png" alt="" />
+&gt;Figure 16. Selecting a set of measurements for deleting.</p>
+<p>Measurements can also be deleted one by one by selecting individual measurements form the Edit Dynamic Map form. Selected measurements are highlighted with a bugurdy colour. The selected measurement can be erased from the environment with <strong>Delete Selected</strong>.</p>
+<p><img src="./media-en/image25.png" alt="" /></p>
+<blockquote>
+<p>Figure 17. Selecting an individual measurement for deleting.</p>
+</blockquote>
+<p>The retrieval of data is indicated with a <strong>RetrievingData</strong> status in the client UI. Server processes map edit request when a suitable window for data gathering opens amid handling incoming updates from connected Navitrol clients. The processing of incoming updates takes priority. Also, depending on the amount of data on a particular section of the map, the gathering and sending data back to user might take some time. If gathering takes up considerable long, lowering server-side parameter <strong>MaxHandledPoseAndPointSets</strong> should speed up the process by lowering the amount of data sent in one request.</p>
+<p><img src="./media-en/image26.png" alt="" /></p>
+<blockquote>
+<p>Figure 18. Dynamic Mapping Client map edit request</p>
+</blockquote>
+<h3 id="backups-and-restore"><a class="header" href="#backups-and-restore">Backups and Restore</a></h3>
+<p>Dynamic Mapping Server stores backups of the dynamic environment periodically. Backup interval can be adjusted from server side Parameters.xml file with parameter <code>&lt;BackupInterval_s&gt;</code>. Negative number will disable periodic backupping. Backups of the current dynamic environment can also be saved manually with: <strong>Tools Save Backup</strong></p>
+<p><img src="./media-en/image27.png" alt="" />
+&gt;Figure 19. Saving a backup of the dynamic map.</p>
+<p>Backups are saved in the <strong>Backups</strong> folder located in the same folder as the <strong>DynamicMappingServer.exe</strong> program.</p>
+<p>Server will start backupping when a suitable window for backupping is avaiable while handling incoming updates from Navitrol clients take priority. When backupping is in process all other user actions are temporarily prevented and the status indicator will display &quot;Backupping&quot;.</p>
+<p>To restore dynamic mapping server to a earlier backup Dynamic Mapping Server must be closed and a backup-file needs to be unzipped to Storage-folder. After starting Server the backup-files are read and map data is restored to the moment stored in the backup-file.</p>
+<h2 id="position-confidence-with-dynamic-mapping"><a class="header" href="#position-confidence-with-dynamic-mapping">Position Confidence with Dynamic Mapping</a></h2>
+<p>When dynamic mapping feature is in use, the position confidence of the AGV is calculated differently, as it is allowed to drive for a time without a matching static environment. Below are two figures illustrating the position confidence of the AGV when it goes out of static environment.</p>
+<p><img src="./media-en/image28.PNG" alt="" /></p>
+<blockquote>
+<p>Figure 20: Position confidence when going outside of the static map without dynamic mapping.</p>
+</blockquote>
+<p>In the figure above, dynamic mapping feature was turned off. The AGV was matching with the static environment up to 12 second mark, then it went outside of it. The position confidence therefore decreased rapidly and went down to zero.</p>
+<p><img src="./media-en/image29.PNG" alt="" /></p>
+<blockquote>
+<p>Figure 21: Position confidence when going outside of the static map with dynamic mapping.</p>
+</blockquote>
+<p>Conversely, in the above figure, dynamic mapping feature is turned on.
+When the AGV is out of the static environment, position confidence is decreased with a slight slope instead of immediately. How fast the confidence should drop in such a situation can be adjusted with the <strong>corr_conf_dyn_map_lite_max_dist</strong> parameter.
+When this parameter is set to higher values, the confidence will decrease more slowly.</p>
+<p>The following points should be noted regarding position confidence with dynamic mapping:</p>
+<ol>
+<li>
+<p>This behavior is only valid when dynamic mapping is deemed to be &quot;OK&quot;, that is, there are enough dynamic points, and they match sufficiently to the static map. If that is not the case, even if dynamic mapping is feature is enabled, the confidence will decrease rapidly without a static map.</p>
+</li>
+<li>
+<p>Dynamic mapping points can never increase the confidence. They only prevent confidence decrease. This means that if the AGV was never in a place with a good static environment, the confidence will stay low regardless of the dynamic points.</p>
+</li>
+</ol>
+<h2 id="relevant-server-parameters"><a class="header" href="#relevant-server-parameters">Relevant Server Parameters</a></h2>
+<p>Below are listed some useful server-side parameters and their default values defined in the Parameters.xml file located in the Dynamic Mapping Server folder.</p>
+<ul>
+<li>
+<p><strong>&lt;ServerPort&gt;6089&lt;/ServerPort&gt;</strong> = port to which Navitrol clients connect.</p>
+</li>
+<li>
+<p><strong>&lt;MaxBackupFiles&gt;50&lt;/MaxBackupFiles&gt;</strong> = Max number of backups kept before overwriting.</p>
+</li>
+<li>
+<p><strong>&lt;BackupInterval_s&gt;3600&lt;/BackupInterval_s&gt;</strong> = Interval of periodic backups.</p>
+</li>
+<li>
+<p><strong>&lt;MaxHandledPoseAndPointSets&gt;50&lt;/MaxHandledPoseAndPointSets</strong>&gt; = Max number of processed and retrieved measurement sets when map edit is requested from client. If retrieving data from server to client using Edit Map form takes considerable long, lower this parameter will speed the data gathering process.</p>
+</li>
+<li>
+<p><strong>&lt;ServerStatusUpdateInterval_ms&gt;500&lt;/ServerStatusUpdateInterval_ms&gt;</strong>= interval defines how often server status is sent to connected  Dynamic Mapping Client interfaces.</p>
+</li>
+<li>
+<p><strong>&lt;MaxMapUpdateCycleTime_ms&gt;30000&lt;/MaxMapUpdateCycleTime_ms&gt;</strong> = maximum time allowed for the Dynamic Mapping Server to process new map update packets. If the time is exceeded packets received but not yet processed will be skipped to prevent server from cumulating unprocessed packets. There could be a situation where handling a update takes considerably long time due to amount of data it contains. During this more packets are being sent from Navitrol clients and cumulated. Lower this value gives server a limit of how long it can process a packet before moving on.</p>
+</li>
+</ul>
+<h2 id="language-options"><a class="header" href="#language-options">Language options</a></h2>
+<p>Dynamic Mapping Client supports English, German and Japanese localization available from Language tab.</p>
+<p><img src="./media-en/image30.PNG" alt="" /></p>
+<blockquote>
+<p>Language options</p>
+</blockquote>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<p>While using the Dynamic mapping feature there will be cases when the dynamic feature is not working or configured properly. Also, there could be situations when the parameters are not set correctly, or the user needs to know what to do in case a certain error appears. This section discusses different situations where trouble shooting, or fine tuning of parameters will be required. This section does not cover the exhaustive list of errors and contains only the most commonly occurring errors or trouble shooting situations.</p>
+<h3 id="dynamic-mapping-lite-not-activating"><a class="header" href="#dynamic-mapping-lite-not-activating">Dynamic mapping lite not activating</a></h3>
+<p>This can happen when the parameters are not enabled or set correctly. Make sure the parameter 'dyn_map_lite_pos_corr' is set to 1, in addition the parameter 'dyn_map_lite_n_meas' should have some value greater than zero. If this parameter is set to 0 then no measurement is stored for dynamic mapping lite and the environment is not read at all. This will lead the user to think that the feature is not working at all.</p>
+<h3 id="dynamic-mapping-full-not-activating"><a class="header" href="#dynamic-mapping-full-not-activating">Dynamic mapping full not activating</a></h3>
+<p>The most common mistake for dynamic mapping full to not work at all is that the parameters for dynamic full are enabled but the parameters for dynamic mapping lite are disabled. To make use of dynamic mapping full, the parameters for both dynamic lite and full should be enabled.</p>
+<h3 id="dynamic-mapping-server-is-not-connected"><a class="header" href="#dynamic-mapping-server-is-not-connected">Dynamic mapping server is not connected</a></h3>
+<p>There can be an instance when the Dynamic mapping server is running but under the 'Status' it says 'Disconnected'. This can happen when the IP address of the machine where the Dynamic mapping server is running is not entered correctly. Depending on how the machine is connected the IP address can be of Wi-Fi or of LAN. Entering the command 'ipconfig' in command prompt will displays the IP addresses of the machine being used from which the correct one can be selected. After entering the correct IP address, the 'Status' should be changed to 'Running' or &quot;stopped&quot; and this verifies that the dynamic mapping server is connected properly.</p>
+<p>Issue may also occur due to windows firewall and incorrectly set rules for incoming traffic for the ports used by Dynamic Mapping Server and Client. Extra care must be paid when setting up inbound rules for the used ports. This is the most common issue when setting up Dynamic Mapping Server and no data comes through to Client.</p>
+<p>If AGVs cannot connect to server even if the correct server IP and port number has been configured to the AGV parameter file, it could be that windows firewall blocks communication to the port on the server-side pc. In this case inbound rule should be added to add the used port as allowed.</p>
+<p>Connection issue may also be caused by trying to use incompatible server and client versions.</p>
+<h3 id="agv-loses-position-confidence"><a class="header" href="#agv-loses-position-confidence">AGV loses position confidence</a></h3>
+<p>There can be a situation where the environment around the AGV is dynamic for a very long distance with no static features present and then the AGV might lose its position confidence. In that situation the parameter corr_conf_dyn_map_lite_max_dist' should be increased, the recommended value for this parameter is 10 meters. However, it is suggested that much larger values should not be used as it will accumulate the drift and it may require changing some of the other dynamic mapping parameters as well.</p>
+<h3 id="map-mismatch-error"><a class="header" href="#map-mismatch-error">Map mismatch error</a></h3>
+<p>Sometime there can be a situation where 'Map mismatch' message is seen under the 'Status' in Dynamic mapping server and connected AGVs. This can happen when the environments or maps uploaded to dynamic mapping server and the AGV are different. If there is a slight difference between the two maps, then this error will persist initially.</p>
+<p>To remove this error export new file for dynamic mapping server from the environment and upload the same environment to the AGV as well.</p>
+<h3 id="parametererror-status"><a class="header" href="#parametererror-status">ParameterError status</a></h3>
+<p>This error occurs if no new packets are being processed by the Dynamic Mapping Server coming from Navitrol clients. It is caused when <strong>MaxMapUpdateCycleTime_ms</strong> parameters is set too low and server never has enough time to process incoming data. Server needs to be shut down and parameter adjusted before restart.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../../Localization/ExternalLocalization/ExternalLocalization-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../../Localization/ExternalLocalization/ExternalLocalization-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

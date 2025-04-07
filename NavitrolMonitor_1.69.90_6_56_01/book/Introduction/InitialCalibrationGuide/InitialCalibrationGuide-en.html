@@ -1,0 +1,904 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Initial calibration guide - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html" class="active"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="initial-calibration-guide"><a class="header" href="#initial-calibration-guide">Initial Calibration Guide</a></h1>
+<p>Updated 26.01.2024</p>
+<hr />
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>Navitrol determines the position of the vehicle based on its two main data sources: odometry and scanner data. The odometry is used for the dead reckoning calculation which the scanner data then validate and correct. If these do not comply with the reality, the AGV might lose its position and/or drive very poorly. Thus, the calibration process is one of the most fundamental steps in the commissioning of an AGV and it is only possible to achieve good results if it is done properly.</p>
+<p>The procedure can be divided into several steps as it ranges from adjusting scanner positions to tuning the control gains of advanced position control features.
+To achieve the best results, it is recommended to follow the order given in this document.
+Furthermore, since Navitrol supports several different kinematic types (see section 2.1), some sections might be redundant for the vehicle of interest.
+Therefore, sections relevant to only some kinematic types are marked by their abbreviations.</p>
+<h3 id="machine-types"><a class="header" href="#machine-types">Machine Types</a></h3>
+<p>Navitrol supports a variety of different kinematic types. In this document, the following ones are covered:</p>
+<ul>
+<li>Differential drive (D)</li>
+<li>Mecanum drive (M)</li>
+<li>Omni drive (O)</li>
+<li>Steer drive (S)</li>
+<li>Differential sub-unit for Steer (DS) and Omni (DO)</li>
+</ul>
+<p>In addition to this, there are different communication alternatives and other options that can be tailored for the specific vehicle and since the control process varies a lot between the different combinations, it is important that Navitrol knows how to distinguish between them. This is defined by the so-called machine type ID and the associated machine type key in the Navitrol parameter file <em>params.txt</em>:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>I,machine_type_id</strong></td><td>ID of the machine type.</td></tr>
+<tr><td><strong>U,machine_type_key</strong></td><td>Verification key corresponding to the machine type ID.</td></tr>
+</tbody></table>
+<p>The values for these parameters are provided by Navitec Systems.</p>
+<h3 id="vehicle-coordinate-system"><a class="header" href="#vehicle-coordinate-system">Vehicle Coordinate System</a></h3>
+<p>Each vehicle has its own internal coordinate system with its origin in the so-called navigation point. The system orientation in relation to the vehicle frame is defined such that the x-axis points towards the front of the vehicle and the y-axis towards the vehicle's left side, see Figure 1.</p>
+<p><img src="./media-en/image3.png" alt="" /></p>
+<blockquote>
+<p>Figure 1: Vehicle coordinate system.</p>
+</blockquote>
+<h2 id="initial-configurations"><a class="header" href="#initial-configurations">Initial Configurations</a></h2>
+<p>Navitrol relies on measurements and configuration settings specified by the user when computing the dead reckoning and position corrections using scanner data. It is important that these are set precisely as even small offsets can cause large deviations in the position calculation and if the reader has access to the CAD model it is recommended to start from this.
+All coordinates are given in relation to the vehicles internal coordinate system.</p>
+<p>At this stage of the calibration process, it is recommended to keep the vehicle off the ground to minimize the risk of any accident.</p>
+<h3 id="deactivate-features-disturbing-the-calibration"><a class="header" href="#deactivate-features-disturbing-the-calibration">Deactivate Features Disturbing The Calibration</a></h3>
+<p>Some features of Navitrol should be disabled during the calibration process as they otherwise have a negative impact on the result:</p>
+<ul>
+<li>
+<p>Disable sensor fusion by setting <strong>I,sf_use_sensor_fusion</strong> to zero.</p>
+</li>
+<li>
+<p>Disable the automatic odometry correction by setting the following parameter to zero:</p>
+<ul>
+<li><strong>F,odo_err_est_alpha</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="control-interval"><a class="header" href="#control-interval">Control Interval</a></h3>
+<p>The control interval specifies at what rate Navitrol should expect to receive the control messages. If Navitrol has a direct connection to the motor controller, then this would be the message time interval between Navitrol and the motor controller itself.
+However, if Navitrol is connected to the motor controllers via a PLC/PC, then the control interval is defined between Navitrol and PLC/PC instead.</p>
+<p>Set the specified interval and error ratios with the following parameters:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>I,control_interval_us</strong></td><td>Control message interval in microseconds.</td></tr>
+<tr><td><strong>F,control_interval_error_ratio</strong></td><td>Defines how much the measured control interval can deviate from target (e.g. 1.1 means 10%).</td></tr>
+<tr><td><strong>I,control_interval_max_stdev_us</strong></td><td>Defines how much the measured control interval standard deviation can be in microseconds.</td></tr>
+</tbody></table>
+<h3 id="vehicle-frame-dimensions"><a class="header" href="#vehicle-frame-dimensions">Vehicle Frame Dimensions</a></h3>
+<p>Scanner points hitting objects within the vehicle frame needs to be filtered out to avoid their negative impact on the localization properties.
+If the dimensions are set properly, one will see that Navitrol Monitor renders these points as gray:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,dim_front</strong></td><td>distance from the navigation point to the front of the vehicle along the x-axis.</td></tr>
+<tr><td><strong>F,dim_rear</strong></td><td>distance from the navigation point to the rear of the vehicle along the x-axis.</td></tr>
+<tr><td><strong>F,dim_left</strong></td><td>distance from the navigation point to the left side of the vehicle along the y-axis.</td></tr>
+<tr><td><strong>F,dim_right</strong></td><td>distance from the navigation point to the left side of the vehicle along the y-axis.</td></tr>
+</tbody></table>
+<h3 id="localization-scanners"><a class="header" href="#localization-scanners">Localization Scanners</a></h3>
+<p>Navitrol supports up to two separate localization scanners and their orientations and positions are defined by the following parameters in <em>params.txt</em>:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,scan_rear_x</strong></td><td>rear scanner x-coordinate.</td></tr>
+<tr><td><strong>F,scan_rear_y</strong></td><td>rear scanner y-coordinate.</td></tr>
+<tr><td><strong>F,scan_front_x</strong></td><td>front scanner x-coordinate.</td></tr>
+<tr><td><strong>F,scan_front_y</strong></td><td>front scanner y-coordinate.</td></tr>
+<tr><td><strong>I,scan_rear_upside_down</strong></td><td>1 if rear scanner is mounted upside down.</td></tr>
+<tr><td><strong>I,scan_front_upside_down</strong></td><td>1 if front scanner is mounted upside down.</td></tr>
+<tr><td><strong>F,scan_rear_sen_ang</strong></td><td>angular offset between the coordinate system of the rear scanner and the coordinate system of the vehicle.</td></tr>
+<tr><td><strong>F,scan_front_sen_ang</strong></td><td>angular offset between the coordinate system of the front scanner and the coordinate system of the vehicle.</td></tr>
+</tbody></table>
+<p><strong>NOTE!</strong> Depending on how many scanners that are used for localization or target detection, some of these parameters might be redundant.
+Navitrol Monitor can be used to visually estimate whether the values are roughly correct, for example by placing the vehicle next to straight wall and verifying that the scanner views are matching.</p>
+<h2 id="vehicle-wheel-positions-and-configurations"><a class="header" href="#vehicle-wheel-positions-and-configurations">Vehicle Wheel Positions and Configurations</a></h2>
+<p>The dead reckoning calculation uses the wheel positions and the encoder information to determine how the vehicle is moving. Depending on the kinematic type, different information is required. If not mentioned specifically, distance parameters should also include the sign according to the vehicle's coordinate system.</p>
+<p><strong>Differential drive</strong></p>
+<p>For the differential drive, the wheel positions are specified by a single parameter as they are symmetrical around the navigation point:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,wheel_track</strong></td><td>absolute distance between the driving wheels along the y-axis.</td></tr>
+</tbody></table>
+<p><strong>Mecanum drive</strong></p>
+<p>In addition to the <strong>wheel_track</strong> parameter, mecanum vehicles also require information about the distance to the driving wheels along the x-axis:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,wheel_track</strong></td><td>absolute distance between the driving wheels along the y-axis.</td></tr>
+<tr><td><strong>F,wheel_dist</strong></td><td>absolute distance between the driving wheels along the x-axis.</td></tr>
+</tbody></table>
+<p><strong>Omni drive</strong></p>
+<p>Since Navitrol supports up to six individual omni wheels, most of the omni specific parameters are defined as arrays with index <strong>i = 0,1,...,5</strong>.
+These indices may be defined arbitrary by the user but should start from zero and remain consistent between the parameters.</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,wheel_x[i]</strong></td><td>x-coordinate of the wheel with index <strong>i</strong>.</td></tr>
+<tr><td><strong>F,wheel_y[i]</strong></td><td>y-coordinate of the wheel with index <strong>i</strong>.</td></tr>
+<tr><td><strong>F,wheel_y_off[i]</strong></td><td>wheel offset from turning axle of the wheel with index <strong>i</strong> (y in vehicle coordinates when straight).</td></tr>
+</tbody></table>
+<p>The dead reckoning is computed based on encoder data from two individual wheels.
+The wheels that are used for this are specified in the Navitrol parameter file with the parameter <strong>I,omni_deadrec_ref_axle[i]</strong>.
+A general guideline is that the selected wheels should not be lined up parallel to either the x-axis or the y-axis and that the greater the distance between them the better.
+An example of this can bee seen in Figure 2.</p>
+<p><img src="./media-en/image4.png" alt="" /></p>
+<blockquote>
+<p>Figure 2: Example of which combination of wheels that together are viable for dead reckoning. The wheels with the same color make a viable pair.</p>
+</blockquote>
+<p><strong>I,mot_ctrl_omni_speed_control_used[<strong>i</strong>]</strong> should be set to determine which wheels are used for speed control and finally <strong>I,maintain_omni_kinematics</strong> should be set to 1 if the motor controller is not able to handle rapid large changes in the reference value, otherwise it should be 0.</p>
+<p><strong>Steer drive</strong></p>
+<p>Steer driven vehicles require two parameters to specify the wheel configuration:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,wheel_dist</strong></td><td>distance from the navigation point to the center point of the driving wheel along the x-axis.</td></tr>
+<tr><td><strong>F,wheel_off_center</strong></td><td>distance from the navigation point to the center point of the driving wheel along the y-axis.</td></tr>
+</tbody></table>
+<p><strong>Differential Sub-unit</strong></p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><em>Omni</em></td><td></td></tr>
+<tr><td><strong>F,wheel_x[i]</strong></td><td>x-coordinate of the sub-unit center point with sub-unit index <strong>i</strong>.</td></tr>
+<tr><td><strong>F,wheel_y[i]</strong></td><td>y-coordinate of the sub-unit center point with sub-unit index <strong>i</strong>.</td></tr>
+<tr><td><em>Steer</em></td><td></td></tr>
+<tr><td><strong>F,wheel_dist</strong></td><td>Distance between navigation point and sub-unit center point.</td></tr>
+<tr><td><em>Common for both Omni and Steer</em></td><td></td></tr>
+<tr><td><strong>F,sub_diff_wheel_track</strong></td><td>Distance between the centers of the wheels in differential steer-drive wheel unit.</td></tr>
+</tbody></table>
+<p><img src="./media-en/image19.png" alt="" /></p>
+<blockquote>
+<p>w = <strong>sub_diff_wheel_track</strong> parameter.</p>
+</blockquote>
+<h3 id="wheel-control-source"><a class="header" href="#wheel-control-source">Wheel Control source</a></h3>
+<p>The wheel control source depends on the motor controllers and interface being used (for example CAN, Ethercat or Ethernet Supervisor). Configure the parameters based on what control source/communication interface is utilized. The different wheel control source parameters can be found from the following documents:</p>
+<ul>
+<li>CAN and EtherCat wheel control source configurations : <a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html#quick-start">Motor controllers common</a></li>
+<li>Ethernet Supervisor wheel control source configurations : <a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html">Communication specification between Navitrol and Ethernet supervisor</a></li>
+</ul>
+<h3 id="steer-encoders-o-s-do-ds"><a class="header" href="#steer-encoders-o-s-do-ds">Steer Encoders (O, S, DO, DS)</a></h3>
+<p>Two of the kinematic types, omni drive and steer drive (+ differential sub-units), rely on an absolute encoder to determine the orientation of their wheels. Due to variations among the different models, Navitrol requires the user to define the specifications in <em>params.txt</em>. Among other things, this includes defining the resolution of the encoder.</p>
+<p><strong>Omni drive</strong></p>
+<p>The parameters that should be defined/calibrated if Navitrol receives the raw data directly from the encode are:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>U,omni_steer_enc_pulses_overflow[i]</strong></td><td>should be set to the decimal value of the total resolution. This means that if the total resolution is given by e.g. 25 bits, then the parameter should be set to 33.554.431.</td></tr>
+<tr><td><strong>U,omni_steer_enc_pulses_per_rev[i]</strong></td><td>should be set to the amount of pulses per wheel revolution of the encoder. A possible gear ratio must be considered.</td></tr>
+<tr><td><strong>U,omni_steer_enc_zero[i]</strong></td><td>should be set to the pulse count that corresponds to the zero angle (wheel facing forward).<br>This needs to be calibrated after the mounting of the encoder.</td></tr>
+<tr><td><strong>I,omni_enc_steer_node_id[i]</strong></td><td>is the CANOpen id of the steer encoder.</td></tr>
+<tr><td><strong>I,can_steer_enc_model</strong></td><td>should be set to either<br>0 = generic (no config)<br>1 = Leine&amp;Linde (RSA608)<br>2 = Sick (AHS/AHM36)</td></tr>
+</tbody></table>
+<p>The only parameter that must be tuned manually is <strong>omni_steer_enc_zero</strong> since the rest of the parameters are not dependent on the mounting. At this stage, estimate the zero level by physically setting the steer wheel as straight as possible and read the pulse count from terminal with the command:
+<code>.\\Navitrol dumpl 0 &quot;CanAbsEncoderParseRxMsg RPDO1 node&quot;</code>
+or 
+<code>.\\Navitrol dumpl 0 &quot;CanAbsEncoderParseRxMsg RPDO2 node&quot;</code> depending on the encoder model.</p>
+<p>If EtherCAT is used as a control interface, check the encoder parameters and command for tuning encoder zero from <a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html">Ethercat encoder</a> document.</p>
+<p>When Navitrol is not receiving raw encoder data directly from absolute encoder, then it is possible to calibrate the zero angle by adjusting the angular offset with the parameter <strong>F,omni_steer_ang_offset_deg[i]</strong> [deg].</p>
+<p><strong>Steer drive:</strong></p>
+<p>The parameters that should be defined/calibrated if Navitrol receives the raw data directly from the encode are:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>U,steer_enc_pulses_overflow</strong></td><td>should be set to the decimal value of the total resolution. This means that if the total resolution is given by e.g. 25 bits, then the parameter should be set to 33.554.431.</td></tr>
+<tr><td><strong>I,steer_enc_pulses_per_rev</strong></td><td>should be set to the amount of pulses per wheel revolution of the encoder. An possible gear ratio must be considered.</td></tr>
+<tr><td><strong>I,can_steer_enc_zero</strong></td><td>should be set to the pulse count that corresponds to angle 0 (wheel facing forward). This needs to be calibrated after the mounting of the encoder.</td></tr>
+<tr><td><strong>I,can_enc_steer_node_id</strong></td><td>Is the CANOpen id of the steer encoder.</td></tr>
+<tr><td><strong>I,can_steer_enc_model</strong></td><td>Should be set to either<br>0 = generic (no config)<br>1 = Leine&amp;Linde (RSA608)<br>2 = Sick (AHS/AHM36)</td></tr>
+</tbody></table>
+<p>The only parameter that must be tuned manually is <strong>can_steer_enc_zero</strong> since the rest of the parameters are not dependent on the mounting.
+At this stage, estimate the zero level by physically setting the steer wheel as straight as possible and read the pulse count from terminal with the command:
+<code>.\Navitrol dumpl 0 &quot;CanAbsEncoderParseRxMsg RPDO1 node&quot;</code>
+or 
+<code>.\Navitrol dumpl 0 &quot;CanAbsEncoderParseRxMsg RPDO2 node&quot;</code> depending on the encoder model.</p>
+<p>When Navitrol is not receiving raw encoder data directly from a CAN absolute encoder, then it is possible to calibrate the zero angle by adjusting the angular offset with the parameter <strong>F,mot_ctrl_steer_ang_offset_deg</strong> [deg].</p>
+<h3 id="odometry-scale"><a class="header" href="#odometry-scale">Odometry Scale</a></h3>
+<p>Since Navitrol often receives odometry information expressed in angular velocities or in encoder pulses, it is necessary to convert these values internally to something that might be used for the dead reckoning calculations.
+How this conversion is done depends on the source of the odometry.</p>
+<h4 id="velocity-calculated-from-encoder-pulses"><a class="header" href="#velocity-calculated-from-encoder-pulses">Velocity Calculated from Encoder Pulses</a></h4>
+<p>If the odometry is read from an incremental encoder or through the Supervisor interface, the conversion rate from a single pulse to meters needs to be defined. The scaling factor is defined by:</p>
+<p>\( odometry\ scale = \frac{\pi\ \ *(\ Wheel\ diameter\ \lbrack m\rbrack)}{(Pulses\ per\ revolution)\ *(Gear\ ratio)} \)</p>
+<p>It is set by the Navitrol parameter <strong>F,mot_ctrl_drive_dist_scale</strong> for all kinematic types except for differential drive which uses <strong>F,mot_ctrl_left_dist_scale</strong> and
+<strong>F,mot_ctrl_right_dist_scale</strong> for the left and right wheel respectively.</p>
+<h4 id="velocity-calculated-from-motor-rpm"><a class="header" href="#velocity-calculated-from-motor-rpm">Velocity Calculated from Motor RPM</a></h4>
+<p>If the odometry is calculated from an RPM value stated by the motor controller, then the scaling factor is defined by:</p>
+<p>\( odometry\ scale = \frac{\pi\ \ *(\ Wheel\ diameter\ \lbrack m\rbrack)}{60 *(Gear\ ratio)} \)</p>
+<p>It is set by the Navitrol parameter <strong>mot_ctrl_drive_rpm_to_m_per_s</strong>.</p>
+<h3 id="wheel-spinning-and-steering-direction"><a class="header" href="#wheel-spinning-and-steering-direction">Wheel Spinning and Steering Direction</a></h3>
+<p>Depending on how the mechanical parts have been mounted it might be necessary to invert the input and/or output speed such that the sign of the calculated velocity is correct. The verification is commonly done using the keyboard control of Navitrol Monitor.</p>
+<p>The Navitrol parameters that regulate the sign of the input and output depends on the machine type of the vehicle, although the idea is the same:</p>
+<ul>
+<li>
+<p>If the wheels physically spin in the opposite direction of the reference, then the output should be inverted.</p>
+</li>
+<li>
+<p>If the wheel spinning direction in Navitrol monitor is incorrect, then the input should be inverted (see Figure 3).</p>
+</li>
+</ul>
+<p><img src="./media-en/image5.png" alt="" />
+<img src="./media-en/image6.png" alt="" /></p>
+<blockquote>
+<p>Figure 3: The wheel spinning direction is visualized by the wheel arrows in Navitrol Monitor. Green corresponds to forward/positive while red corresponds to reverse/negative.</p>
+</blockquote>
+<p>Additionally, for machine types with steering wheels, one should also verify the steering direction of the wheels.</p>
+<p><strong>Differential drive</strong></p>
+<ul>
+<li>
+<p><strong>I,mot_ctrl_left_inv_out</strong> = 1 to invert output for the left motor.</p>
+</li>
+<li>
+<p><strong>I,mot_ctrl_right_inv_out</strong> = 1 to invert output for the right motor.</p>
+</li>
+<li>
+<p>Change the sign of <strong>F,mot_ctrl_left_dist_scale</strong> to invert the input.</p>
+</li>
+<li>
+<p>Change the sign of <strong>F,mot_ctrl_right_dist_scale</strong> to invert the input.</p>
+</li>
+</ul>
+<p><strong>Mecanum drive</strong></p>
+<ul>
+<li>
+<p><strong>I,mot_ctrl_mecanum_inv_output[i]</strong> = 1 to invert output for the motor.</p>
+</li>
+<li>
+<p><strong>I,mot_ctrl_mecanum_inv_input[i]</strong> = 1 to invert input for the motor.</p>
+</li>
+</ul>
+<p><strong>Omni drive</strong></p>
+<ul>
+<li>
+<p><strong>I,mot_ctrl_omni_speed_inv_output[i]</strong> = 1 to invert the output for the drive motor.</p>
+</li>
+<li>
+<p><strong>I,mot_ctrl_omni_speed_inv_input[i]</strong> = 1 to invert the input for the drive motor.</p>
+</li>
+<li>
+<p><strong>I,mot_ctrl_omni_steer_inv_output[i]</strong> = 1 to invert the output for the steer motor.</p>
+</li>
+<li>
+<p><strong>I,mot_ctrl_omni_steer_inv_input[i]</strong> = 1 to invert the input for the steer motor.</p>
+</li>
+</ul>
+<p><strong>Steer drive</strong></p>
+<ul>
+<li>
+<p><strong>I,mot_ctrl_wheel_v_inv_out</strong> = 1 to invert the output for the drive motor.</p>
+</li>
+<li>
+<p><strong>I,mot_ctrl_steer_v_inv_out</strong> = 1 to invert the output for the steer motor.</p>
+</li>
+<li>
+<p><strong>I,mot_ctrl_steer_v_inv_in</strong> = 1 to invert the input for the steer motor.</p>
+</li>
+</ul>
+<p><strong>Differential Sub-units</strong></p>
+<p><em>Do not use Omni or Steer inversion parameters with differential sub-units.</em></p>
+<p>Navitrol Monitor shows normally the main kinematic wheels (Omni or Steer), but the sub-unit wheels can be shown from the following setting:</p>
+<p><img src="./media-en/image17.png" alt="" /></p>
+<blockquote>
+<p>Show sub-unit wheels on Navitrol Monitor.</p>
+</blockquote>
+<p>Easy way to check omni sub-units driving directions is to first enable only one sub-unit by setting the <strong>omni_steer_nbr</strong> parameter to 1 and check that both right and left spins to correct directions in real and in Navitrol Monitor. Then increasing the <strong>omni_steer_nbr</strong> by one and checking the next sub-unit and so on until all sub-units are correct.</p>
+<p><img src="./media-en/sub_unit_one_omni_wheel.png" alt="" /> <img src="./media-en/sub_unit_one_omni_wheel2.png" alt="" /> </p>
+<blockquote>
+<p>Showing Omni wheel 0 index as normal wheel (left figure) and as sub-unit (right figure). Wheels spinning forward.</p>
+</blockquote>
+<p><img src="./media-en/sub_unit_two_omni_wheels.png" alt="" /> <img src="./media-en/sub_unit_two_omni_wheels2.png" alt="" /></p>
+<blockquote>
+<p>Showing Omni wheels 0 and 1 indices as normal wheels (left figure) and as sub-units (right figure). Wheels spinning forward.</p>
+</blockquote>
+<p>i = index of the wheel. For Steer drive, i is always 0. For Omni Drive, i is the omni wheel index.</p>
+<ul>
+<li>
+<p><strong>I,mot_ctrl_diffunit_left_inv_output[i], =</strong> 1 to invert output for the left motor.</p>
+</li>
+<li>
+<p><strong>I,mot_ctrl_diffunit_right_inv_output[i], =</strong> 1 to invert output for the right motor.</p>
+</li>
+<li>
+<p><strong>I,mot_ctrl_diffunit_left_inv_input[i], =</strong> 1 to invert input for the left motor.</p>
+</li>
+<li>
+<p><strong>I,mot_ctrl_diffunit_right_inv_input[i], =</strong> 1 to invert input for the right motor.</p>
+</li>
+</ul>
+<p>After all differential sub-units have been configured, open <a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html#motor-controller-test-form---differential-unit">Motor controller test form</a> from NavitrolMonitor. From the test form it is possible to give reference angle and speed for each individual sub-unit. Test that all the sub-units are turning correctly and spinning in the right direction. </p>
+<h2 id="velocity-and-steering-controller-calibration"><a class="header" href="#velocity-and-steering-controller-calibration">Velocity and Steering Controller Calibration</a></h2>
+<p>Sections marked with <strong>PID only</strong> refer to a case where Navitrol directly controls the output of the motor and are not necessary if Navitrol is just reporting target velocity.
+From this point forwards it is necessary to have the vehicle on the ground such that it can freely drive around.</p>
+<h3 id="calibrate-wheel-velocity-control-pid-only"><a class="header" href="#calibrate-wheel-velocity-control-pid-only">Calibrate Wheel Velocity Control (PID only)</a></h3>
+<p>Even though the parameters that define the properties of the wheel velocity control vary between the different kinematic types, the process for tuning them is the same:</p>
+<ul>
+<li>
+<p>Set the initial values for the wheel velocity control parameters to zero.</p>
+</li>
+<li>
+<p>Give a drive command either forward or reverse from Navitrol Monitor to generate a reference step.</p>
+</li>
+<li>
+<p>Increase the proportional gain stepwise while monitoring how the measured velocity is reaching the target velocity in the control chart for the relevant kinematic type. Repeat until the measured speed starts to oscillate.</p>
+</li>
+<li>
+<p>Increase the derivative gain until the overshoot of the measured speed is controlled to less than 5% of the target.</p>
+</li>
+<li>
+<p>Repeat the two former steps until the fastest rise time with less than 10% overshoot is reached.</p>
+</li>
+</ul>
+<p><strong>Differential drive (D, DS)</strong></p>
+<p>The proportional gain is adjusted by Navitrol parameters <strong>F,mot_ctrl_left_p</strong> and <strong>F,mot_ctrl_right_p</strong> while the derivative gain is adjusted by <strong>F,mot_ctrl_left_d</strong> and <strong>F,mot_ctrl_right_d</strong>. The control chart relevant for this part of the calibration can be found in Navitrol Monitor under <em>Navitrol Monitor Charts Differential Drive Motors Drive Motor Speed Control</em>.</p>
+<p><strong>Mecanum drive</strong></p>
+<p>For mecanum drives, the wheels are indexed by <strong>i = 0,...,3</strong> where 0 = FL, 1 = FR, 2 = RL and 3 = RR. The Navitrol parameters for the proportional and derivative gains are <strong>F,mot_ctrl_mecanum_p[i]</strong> and <strong>F,mot_ctrl_mecanum_d[i]</strong> respectively. The control chart relevant for this part of the calibration can be found in Navitrol Monitor under <em>Navitrol Monitor Charts Mecanum Drive Motors Speed Control)</em>.</p>
+<p><strong>Omni drive (O, DO)</strong></p>
+<p>The Navitrol parameters for the proportional and derivative gains are <strong>F, mot_ctrl_omni_speed_p[i]</strong> and <strong>F, mot_ctrl_omni_speed_d[i]</strong> respectively. The control chart relevant for this part of the calibration can be found in Navitrol Monitor under <em>Navitrol Monitor Charts Omni Drive Motors PD Control</em>**.**</p>
+<p><strong>Steer drive</strong></p>
+<p>The Navitrol parameters for the proportional and derivative gains for the forward direction are <strong>F,mot_ctrl_wheel_v_p</strong> and <strong>F,mot_ctrl_wheel_v_d</strong> respectively. The corresponding parameters for the reverse direction are <strong>F,mot_ctrl_wheel_v_rev_p</strong> and <strong>F,mot_ctrl_wheel_v_rev_d</strong>, which often may be set to the same values as the forward gains. The control chart relevant for this part of the calibration can be found in Navitrol Monitor under <em>Navitrol Monitor Charts Steer Drive Motors Drive Motor Speed Control (steer)</em>.</p>
+<h3 id="calibrate-wheel-steer-control-pid-only-o-s-do-ds"><a class="header" href="#calibrate-wheel-steer-control-pid-only-o-s-do-ds">Calibrate Wheel Steer Control (PID only, O, S, DO, DS)</a></h3>
+<p>Just as for the wheel velocity controller, the parameters that needs to be configured for the wheel steer controller differ between the kinematic types although the process of calibrating them is the same.
+The control gains are tuned in a similar manner as previously, however now there is also an integral part to take into consideration:</p>
+<ul>
+<li>
+<p>Set the initial values for the wheel steer control parameters to zero.</p>
+</li>
+<li>
+<p>Give a drive reference with curvature from Navitrol Monitor to generate a steering reference value.</p>
+</li>
+<li>
+<p>Increase the proportional gain stepwise while monitoring how the measured angle is reaching the target angle in the control chart for the relevant kinematic type. Repeat until the measured angle shows stable oscillations.</p>
+</li>
+<li>
+<p>Increase the derivative gain in small steps until the system does no longer oscillate.</p>
+</li>
+<li>
+<p>Repeat the two former steps until the system is responsive enough without having oscillations.</p>
+</li>
+<li>
+<p>Adjust the integral gain to minimize the static error while keeping the overshoot and oscillations low.</p>
+</li>
+</ul>
+<p><strong>Omni drive</strong></p>
+<p>The Navitrol parameters for the proportional, derivative and integral gains are <strong>F,mot_ctrl_omni_steer_p[i],</strong> <strong>F,mot_ctrl_omni_steer_d[i]</strong> and <strong>F,mot_ctrl_omni_steer_i[i]</strong> respectively. The control chart relevant for this part of the calibration can be found in Navitrol Monitor under <em>Navitrol Monitor Charts Steer Drive Motors Steering</em>.</p>
+<p>It is important to set the target steer angle to a reasonable and safe value during the calibration that is well within the steering limits.
+This is enabled by the parameter <strong>I,omni_steer_limit_enable[i] = 1</strong> and defined by <strong>F,omni_steer_limit_CCW_angle_deg[i]</strong> in the counter clockwise direction and
+<strong>F,omni_steer_limit_CW_angle_deg[i]</strong> in the clockwise direction.</p>
+<p><strong>Steer drive</strong></p>
+<p>The Navitrol parameters for the proportional, derivative and integral gains are <strong>F,mot_ctrl_steer_ang_p, F,mot_ctrl_steer_ang_d</strong> and <strong>F,mot_ctrl_steer_ang_i</strong> respectively. The control chart relevant for this part of the calibration can be found in Navitrol Monitor under <em>Navitrol Monitor Charts Steer Drive Motors Steering</em>.</p>
+<p>It is important to set the target steer angle to a reasonable and safe value during the calibration that is well within the steering limits by adjusting <strong>F, mot_ctrl_max_steer_ang_deg</strong> and <strong>F,mot_ctrl_min_steer_ang_deg.</strong></p>
+<h2 id="odometry-calibration"><a class="header" href="#odometry-calibration">Odometry Calibration</a></h2>
+<p>A good odometry calibration is necessary to achieve good performance while driving autonomously as it is the foundation behind the dead reckoning calculations.</p>
+<h3 id="steer-encoders-o-s-do-ds-1"><a class="header" href="#steer-encoders-o-s-do-ds-1">Steer Encoders (O, S, DO, DS)</a></h3>
+<p>After the initial estimation of the steer encoder zero level has been done it is important to verify the performance and if it does not fulfill the requirements, one should continue to calibrate it until it does. The procedure can be divided into the following steps:</p>
+<ul>
+<li>
+<p>Put the AGV on the ground, aligned with a reference line, and manually drive it straight for at least 10 meters using the Navitrol Monitor keyboard control. It is important that the wheels are at the zero position when starting the drive.</p>
+</li>
+<li>
+<p>Measure the physical distance and angle deviation from the straight line.</p>
+</li>
+<li>
+<p>If the distance deviation is larger than 5 centimeters and/or the heading deviation is larger than 1 degree, estimate which wheel is causing the offset and change the zero level values correspondingly. Repeat the previous steps.</p>
+</li>
+</ul>
+<p>Additionally, for omni drive vehicles, when the deviation during straight driving falls within the tolerances, one should verify that the by Navitrol perceived driving is straight as well:</p>
+<ul>
+<li>
+<p>Initialize the AGVs position such that it is aligned with the grid in the main window of Navitrol Monitor and make sure that there is no environment around it to avoid scanner corrections during the calibration process. The heading should be zero.</p>
+</li>
+<li>
+<p>Give a reference straight forward.</p>
+</li>
+<li>
+<p>If the drive path visualized by Monitor deviates from a straight physical path, abort the Monitor connection and use the playback function (bottom slider) to analyze the wheel orientation. If the wheel orientation is not close to zero it is possible to adjust the measured angles with the parameter <strong>F,omni_steer_ang_offset_deg[i]</strong>.</p>
+</li>
+</ul>
+<h3 id="odometry-scale-1"><a class="header" href="#odometry-scale-1">Odometry Scale</a></h3>
+<p>Assuming that the scanner positions and angles are adequately configured at this point, one can utilize Navitrol Monitor to fine tune the odometry scale. The procedure can be broken down to the following steps:</p>
+<ul>
+<li>
+<p>In Navitrol Monitor, initialize the vehicle position far from any predefined environment such that there will be no match between the scanner points and the defined map. It is preferable to align the vehicle frame with the grid network in Navitrol Monitor.</p>
+</li>
+<li>
+<p>In Navitrol Monitor, select the option to freeze the data.</p>
+</li>
+<li>
+<p>Give a drive reference straight forward using the keyboard control of Navitrol Monitor. Keep driving for around ten meters or more if possible.</p>
+</li>
+<li>
+<p>If the odometry is correct and the scanner angle is properly defined, then there should be no offset between the frozen scanner data and the live data. If there is a lengthwise offset, measure this using the Navitrol Monitor measurement tool and calculate the ratio between the driven distance and the measured offset.</p>
+</li>
+<li>
+<p>Adjust the odometry scale parameter according to the calculated ratio.</p>
+</li>
+<li>
+<p>Repeat the procedure until the lengthwise offset has been eliminated.</p>
+</li>
+</ul>
+<h3 id="wheel-positions"><a class="header" href="#wheel-positions">Wheel Positions</a></h3>
+<p>At the point when the odometry scale and possible steer encoders (O, S) have been properly tuned, the vehicle should be able to drive straight and correctly estimate the driven distance. However, to make precise and accurate turns it is important to also calibrate the positions of the wheels carefully. This is done by the following steps:</p>
+<ul>
+<li>
+<p>In Navitrol Monitor, initialize the vehicle position far from any predefined environment such that there will be no matching environment. It is preferable to align the vehicle frame with the grid network in Navitrol Monitor.</p>
+</li>
+<li>
+<p>In Navitrol Monitor, select the option to freeze the data.</p>
+</li>
+<li>
+<p>Make a turn in slow speed with a small turn radius. If the mechanical construction of the vehicle allows for pivoting, then that is preferred.</p>
+</li>
+<li>
+<p>Compare the frozen scanner points with the live view. If there is an angular offset, adjust the wheel position parameters accordingly.</p>
+</li>
+</ul>
+<p>If the frozen scanner points deviate from the live view, it means that the dead reckoning estimation is not correct. Since the odometry scale has already been calibrated, as well as the steer encoders, the most probable cause for this is the wheel placement. For example, if the estimated pivoting angle is less than the actual pivoting angle for a
+differential driven vehicle, it is likely that the length of the differential axle has been overestimated.</p>
+<h2 id="scanner-calibration"><a class="header" href="#scanner-calibration">Scanner Calibration</a></h2>
+<p>Before performing the Navitrol scanner calibration, it is vital for the navigation that the height and seen angle of laser scanners are first mechanically adjusted to be as level as possible in relation to the ground.</p>
+<h3 id="scanner-positions-and-angles"><a class="header" href="#scanner-positions-and-angles">Scanner Positions and Angles</a></h3>
+<h4 id="automatic-scanner-calibration"><a class="header" href="#automatic-scanner-calibration">Automatic Scanner Calibration</a></h4>
+<p>If the AGV is using two laser scanners for localization it is of high importance that these are well-aligned with each other. If this is not done correctly, the environment that is used for navigation can be seen differently depending on the orientation of the vehicle and on which laser scanner sees the environment.</p>
+<p>Navithor Tools implements a feature that automates this process by matching recorded measurements to each other. It is accessed from the top bar under <em>Tools --&gt; Calibrate Scanners</em> and requires a teach file with clearly seen environment to work. Preferably, the teach file should cover the AGV driving the path of a figure 8 three times in slow speed.</p>
+<h4 id="manual-fine-tuning-of-scanner-angles"><a class="header" href="#manual-fine-tuning-of-scanner-angles">Manual Fine Tuning of Scanner Angles</a></h4>
+<p>After the localization scanners have been aligned with each other they will still need to be aligned with the vehicle frame. This is important also for systems with a single scanner used for localization. If this is not done carefully there will be discrepancies between measured odometry and scanner data which in turn will have a negative impact on the performance of the vehicle, causing false position corrections. This discrepancy usually shows up as large lateral corrections and a good performance is only achieved after these have been reduced to fulfill the defined requirements.</p>
+<p>The lateral corrections should be monitored under <em>Navitrol Monitor</em> --&gt; <em>Charts --&gt; Odometry Correction --&gt; Position Correction Averages</em> while the AGV is driving on a straight route. The target is to reach a lateral correction within [-0.1, 0.1] [cm/m]. If the average correction is not within the acceptable limits, manual tuning of the
+scanner angles is required. This can be broken down into the following steps:</p>
+<ul>
+<li>
+<p>Disable the rear scanner by setting <strong>I,scan_rear_front_selection = 2 and I,scan_rear_front_localization_selection = 2.</strong></p>
+</li>
+<li>
+<p>Reload the parameter file from Navitrol Monitor under <em>Navitrol -&gt; Reload Parameter file</em>.</p>
+</li>
+<li>
+<p>Record a teach file where only one scanner is activated and create a new project with clearly defined environment and a straight route of 3-10 meters, longer is better. Make sure that one of the lanes is set to reverse.</p>
+</li>
+<li>
+<p>Raise the average position correction gain by increasing <strong>F,odo_err_est_alpha</strong> from <strong>0.002</strong> to <strong>0.006</strong>.</p>
+</li>
+<li>
+<p>Create a drive order between the two endpoints of the route and set the AGV driving back and forth in an endless loop.</p>
+</li>
+<li>
+<p>Adjust the defined scanner angle with the parameter <strong>F,scan_front_sen_angle</strong> until the lateral corrections are within the acceptable range. Start by both increasing and lowering it by 1 degree to determine which direction it should be adjusted in before tuning it more accurately. NOTE! If the lateral correction chart displays large jumps during the calibration process it is likely that the environment is not good enough and should be redefined.</p>
+</li>
+<li>
+<p>When the front scanner has been well aligned with the odometry the final calibration step is to activate and adjust the angle of the rear scanner accordingly. E.g. if <strong>scan_front_sen_ang</strong> was decreased from 90 to 89, one must also adjust <strong>scan_rear_sen_ang</strong> from -90 to -91.</p>
+</li>
+<li>
+<p>Finally, set <strong>odo_err_est_alpha</strong>, <strong>scan_rear_front_selection</strong> and <strong>scan_rear_front_localization_selection</strong> back to their original values and analyse the corrections once again. If the scanners are not matching each other, start by adjusting scan_rear_sen_ang. The scanner points should match each other on both sides of the  vehicle.</p>
+</li>
+</ul>
+<p><strong>NOTE!</strong> Matching the scanner views to each other is the most vital part of the scanner calibration process. Once the front scanner is calibrated according to the procedure and it is time to calibrate the rear scanner, pay more attention to matching the scanner views than the correction charts.</p>
+<h3 id="odometry-to-scanner-delay"><a class="header" href="#odometry-to-scanner-delay">Odometry to Scanner Delay</a></h3>
+<p>If there is delay between the incoming odometry data and the incoming scanner measurements, the delay needs to be specified for Navitrol so that it can be taken into consideration. The delay can be measured by performing the following steps:</p>
+<ul>
+<li>
+<p>Connect to Navitrol with Navitrol Monitor.</p>
+</li>
+<li>
+<p>Drive the vehicle manually towards and away from a wall that is perpendicular to the vehicles heading.</p>
+</li>
+<li>
+<p>Monitor the possible delay from <em>Navitrol Monitor</em> -&gt; <em>Charts</em> -&gt; <em>Odometry Correction</em> -&gt; <em>Scan Delay Calibration</em> (check the affecting parameters from the table below)</p>
+</li>
+<li>
+<p>Calculate the time difference between the moment when Navitrol has received input of the vehicle moving from the scanner measurements (green graph for front scanner and red graph for rear scanner) to the moment when Navitrol has received odometry stating that there is movement. Set the parameter</p>
+<pre><code>  F, scan_delay [ms]
+</code></pre>
+</li>
+</ul>
+<p>accordingly (negative if scanner is slower than odometry).</p>
+<h4 id="scan-delay-calibration-parameters"><a class="header" href="#scan-delay-calibration-parameters">Scan Delay Calibration parameters</a></h4>
+<p>These parameters can be adjusted to change the threshold for drawing the scanner measurements in the <em>Scan Delay Calibration</em> chart in Navitrol Monitor. The default values should be usually sufficient</p>
+<table><thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,calib_scan_delay_min_dist</strong></td><td>0.2</td><td>Minimum beam distance to environment to activate scanner delay calculation. [m]</td></tr>
+<tr><td><strong>F,calib_scan_delay_max_dist</strong></td><td>5.0</td><td>Maximum beam distance to environment to activate scanner delay calculation. [m]</td></tr>
+<tr><td><strong>I,calib_scan_delay_n_dist_beams</strong></td><td>31</td><td>Maximum/ideal number of beams considered when calculating the average distance to the wall.</td></tr>
+<tr><td><strong>I,calib_scan_delay_min_ok_beams</strong></td><td>20</td><td>Minimum number of beams that have to be valid.</td></tr>
+<tr><td><strong>F,calib_scan_delay_dev_limit</strong></td><td>0.05</td><td>Maximum deviation of the distance measured by a single beam from the average measured distance. Beams not fulfilling this are not used for the scanner delay calibration. [m]</td></tr>
+<tr><td><strong>F,scan_delay</strong></td><td>0.0</td><td>Delay of scanner measurement [ms] relative to odometry measurements.</td></tr>
+</tbody></table>
+<h2 id="position-controller-calibration"><a class="header" href="#position-controller-calibration">Position Controller Calibration</a></h2>
+<p>After the odometry and scanner positions are calibrated accurately, it is vital to make sure that also the position controller works properly.
+It calculates reference values for speed and steering and is responsible for keeping the vehicle on track while driving.</p>
+<h3 id="define-limitations"><a class="header" href="#define-limitations">Define Limitations</a></h3>
+<p>For the position controller to be able to give reasonable reference values that the vehicle can follow, it is possible to enforce limitations on velocity, turning rate and steer rate etc.:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,mot_ctrl_max_wheel_v_fw</strong></td><td>Max drive wheel velocity when driving forwards [m/s].</td></tr>
+<tr><td><strong>F,mot_ctrl_max_wheel_v_bw</strong></td><td>Max drive wheel velocity when driving in reverse [m/s].</td></tr>
+<tr><td><strong>F,mot_ctrl_max_wheel_acc</strong></td><td>Max acceleration [m/s^2].</td></tr>
+<tr><td><strong>F,mot_ctrl_max_wheel_dec</strong></td><td>Max deceleration [m/s^2].</td></tr>
+<tr><td><strong>F,max_turn_rate_deg_p_s</strong></td><td>Maximum turning rate of the vehicle [deg/s]. Limit is applied to the speed of the planned trajectory.</td></tr>
+<tr><td><strong>F,mot_ctrl_max_steer_rate_deg_p_s</strong></td><td>Maximum turning rate of the steering wheels [deg/s]. Limit is applied to the speed of the planned trajectory (O, S).</td></tr>
+<tr><td><strong>F,mot_ctrl_max_steer_rate_scale</strong></td><td>Scale factor for mot_ctrl_max_steer_rate_deg_p_s used during driving to limit the reference steering angle change (S).</td></tr>
+<tr><td><strong>F,sub_diff_max_turn_wheel_speed</strong></td><td>Maximum diffunit turning speed [m/s] for each wheel (DS, DO).</td></tr>
+</tbody></table>
+<h3 id="output-and-feedback-delay"><a class="header" href="#output-and-feedback-delay">Output and Feedback Delay</a></h3>
+<p>When Navitrol sets a velocity or RPM target, there is always some amount of delay until this results in physical movement of the motor.
+In practice, it is important to minimize this delay as it worsens the performance of the system and makes it unresponsive in certain situations.
+However, Navitrol does implement a way to minimize the effect for small delays of this kind by predicting the upcoming control sequence.
+The delay can be visually estimated based on the speed control chart in Navitrol Monitor:</p>
+<ul>
+<li>
+<p>Give the vehicle a manual drive command using Navitrol Monitor keyboard control.</p>
+</li>
+<li>
+<p>Monitor the results from <em>Navitrol Monitor Charts Speed Control Final Speed Control.</em></p>
+</li>
+<li>
+<p>Calculate the time difference between the moment Navitrol sets a target velocity (orange graph) to the moment Navitrol receives odometry measurements indicating movement, see Figure 5.</p>
+</li>
+<li>
+<p>Change the Navitrol parameter <strong>I,pc_predict_ms</strong> to the calculated value.</p>
+</li>
+</ul>
+<p><img src="./media-en/image7.png" alt="" />
+<img src="./media-en/image8.png" alt="" /></p>
+<blockquote>
+<p>Figure 4: Feedback delay in Navitrol Monitor is calculated by subtracting the corresponding timestamps, in this case 42998.6183 s -- 42998.4700 s = 0.1483 s = 148.3 [ms].</p>
+</blockquote>
+<p>The drive performance with the estimated value should be evaluated on a pre-defined route:</p>
+<ul>
+<li>
+<p>Let the vehicle drive in a loop in automatic mode along a route with at least two defined curves of 90 degrees, see Figure 5.</p>
+</li>
+<li>
+<p>Monitor the point where the vehicle begins the turn in relation to its trajectory.</p>
+</li>
+<li>
+<p>Adjust the delay time. If the vehicle starts turning too late it often means that the delay time has been underestimated and vice versa.</p>
+</li>
+</ul>
+<p><img src="./media-en/image9.png" alt="" /></p>
+<blockquote>
+<p>Figure 5: Example route for fine tuning the output and feedback delay. The straight path should be long enough for the vehicle to stabilize between the turns.</p>
+</blockquote>
+<h3 id="distance-and-heading-control-gains"><a class="header" href="#distance-and-heading-control-gains">Distance and Heading Control Gains</a></h3>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>pc_pid_heading_p</td><td>Float</td><td>4.0</td><td>Position control heading gain</td></tr>
+<tr><td>pc_pid_dist_p</td><td>Float</td><td>4.0</td><td>Position control distance gain</td></tr>
+</tbody></table>
+<p>The part of the position controller that is responsible for keeping the vehicle on the route while driving can be split into two main parts: distance control and heading control.
+The purpose of the distance control is to minimize the distance between the navigation point of the vehicle and the route while the heading control works to align the vehicle's frame heading with the route tangent.
+The influence of each term might be adjusted by the corresponding gain parameters, as the optimal values heavily depend on the vehicle model itself.</p>
+<p>The idea is to reach a highly accurate and responsive control while still minimizing the oscillations and overshoot. Often, oscillation is caused by either an inaccurate delay estimation (<strong>pc_predict_ms</strong>) or non-optimal position control gains. In general, oscillation decreases as the heading gain is increased but the higher the gain, the more
+important it is that the delay parameter is accurate and the delay consistent. If there are large delays in the steer controller, increasing the heading gain may have the opposite effect.</p>
+<p>Large distance gains might give a more responsive system, but they might also introduce overshoot and oscillation. Additionally, they require an accurate positioning since noise in the localization always will propagate to the position control. Thus, it is often viable to not set the distance gain too high.</p>
+<p>Oscillations are more prone to appear as the driving speed increases.
+To deal with this, Navitrol implements a way to define the position control gains in speed dependent sets according to Figure 6. If the speed settings are not implemented, then only the first set of control gains are necessary.</p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>pc_pid_speed_setting[]</td><td>Float</td><td>0.0</td><td>Change PID settings after the speed is higher than given here (0.0 == disabled)</td></tr>
+<tr><td>pc_pid_speed_dist_p[]</td><td>Float</td><td>0.0</td><td>Position control distance gain for different speed values</td></tr>
+<tr><td>pc_pid_speed_heading_p[]</td><td>Float</td><td>0.0</td><td>Position control heading gain for different speed values</td></tr>
+</tbody></table>
+<p><img src="./media-en/image10.png" alt="" /></p>
+<blockquote>
+<p>Figure 6: Visualization of how the position control gains relate to the speed settings. The names of the speed settings and control gains reflect the corresponding Navitrol parameters.</p>
+</blockquote>
+<p>The process of calibrating the position control may be divided into the following steps:</p>
+<ul>
+<li>
+<p>Starting at the lowest speed setting, set both control gains to low values. 1 is a good starting point for both.</p>
+</li>
+<li>
+<p>Let the vehicle drive in a loop on route with two turns of 270 degrees, see Figure 7.</p>
+</li>
+<li>
+<p>Monitor how well the vehicle is following the route and how responsive it is to distance and heading offsets.</p>
+</li>
+<li>
+<p>Adjust the control gains to increase the performance of the system according to the guidelines mentioned previously, starting with the distance gain.</p>
+</li>
+<li>
+<p>Increase the speed and introduce a new speed setting when it is evident that the previously defined control gains cannot work properly anymore.</p>
+</li>
+<li>
+<p>Repeat until the full speed range of the vehicle has been covered. For high speeds it might be necessary to adapt the route layout.</p>
+</li>
+</ul>
+<p><img src="./media-en/image11.png" alt="" /></p>
+<blockquote>
+<p>Figure 7: Route for tuning position control gains.</p>
+</blockquote>
+<h4 id="distance-and-heading-control-gains-for-loaded-agv"><a class="header" href="#distance-and-heading-control-gains-for-loaded-agv">Distance and Heading Control Gains for loaded AGV</a></h4>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>pc_pid_heading_p_loaded</td><td>Float</td><td>0.0</td><td>PosCont head gain for loaded AGV (0.0 == use non-loaded value)</td></tr>
+<tr><td>pc_pid_dist_p_loaded</td><td>Float</td><td>0.0</td><td>PosCont dist gain for loaded AGV (0.0 == use non-loaded value)</td></tr>
+<tr><td>pc_pid_speed_setting_loaded[]</td><td>Float</td><td>0.0</td><td>Change PID settings for loaded AGV after the speed is higher than given here (0.0 == disabled)</td></tr>
+<tr><td>pc_pid_speed_heading_p_loaded[]</td><td>Float</td><td>0.0</td><td>PosCont head gains for loaded AGV for different speed values (0.0 == disabled)</td></tr>
+<tr><td>pc_pid_speed_dist_p_loaded[]</td><td>Float</td><td>0.0</td><td>PosCont dist gains for loaded AGV for different speed values (0.0 == disabled)</td></tr>
+</tbody></table>
+<p>In many applications, the vehicle is meant to transport resources between different points along the route. For heavy and/or large resources it is common that the kinematic properties of the vehicle change noticeably between the loaded and unloaded state. To reduce the effect of this, Navitrol implements a way to adapt the control gains
+based on the current load state of the vehicle. It works together with its corresponding speed settings as seen in Figure 8.</p>
+<p><img src="./media-en/image12.png" alt="" /></p>
+<blockquote>
+<p>Figure 8: Visualization of how the position control gains relate to the speed settings for a loaded vehicle. The names of the speed settings and control gains reflect the corresponding Navitrol parameters.</p>
+</blockquote>
+<h4 id="distance-and-heading-control-gains-based-on-load-weight"><a class="header" href="#distance-and-heading-control-gains-based-on-load-weight">Distance and Heading Control Gains based on load weight</a></h4>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>pc_pid_load_weight_kg[]</td><td>Float</td><td>0.0</td><td>Change PosContPID settings for loaded AGV when load weight is higher than given here (0.0 == disabled).</td></tr>
+<tr><td>pc_pid_speed_heading_p_loaded1[]</td><td>Float</td><td>0.0</td><td>PosContPID settings using two dim gain array (0.0 == disabled). <br> See the <em>Speed/Load</em> array below how these parameters are used.</td></tr>
+<tr><td>pc_pid_speed_dist_p_loaded1[]</td><td>Float</td><td>0.0</td><td>PosContPID settings using two dim gain array (0.0 == disabled)</td></tr>
+<tr><td>pc_pid_speed_heading_p_loaded2[]</td><td>Float</td><td>0.0</td><td>PosContPID settings using two dim gain array (0.0 == disabled)</td></tr>
+<tr><td>pc_pid_speed_dist_p_loaded2[]</td><td>Float</td><td>0.0</td><td>PosContPID settings using two dim gain array (0.0 == disabled)</td></tr>
+<tr><td>pc_pid_speed_heading_p_loaded3[]</td><td>Float</td><td>0.0</td><td>PosContPID settings using two dim gain array (0.0 == disabled)</td></tr>
+<tr><td>pc_pid_speed_dist_p_loaded3[]</td><td>Float</td><td>0.0</td><td>PosContPID settings using two dim gain array (0.0 == disabled)</td></tr>
+</tbody></table>
+<p>Note that Navitrol needs to get the load weight through some interface to be able to define what weight gain should be used. This information is not provided through every interface, so ask Navitec if your setup is able to use this.</p>
+<p>If all of these gain parameters that are listed in this Chapter are enabled, the correlation between speed and load weights would look like this table below.</p>
+<p>Priority of the gains:</p>
+<ol>
+<li>Use the weight gains: if <strong>pc_pid_load_weight[0]</strong> &gt; 0.0.</li>
+<li>Use the loaded speed gains: if <strong>pc_pid_speed_setting_loaded[i]</strong>, <strong>pc_pid_speed_dist_p_loaded[i]</strong> and <strong>pc_pid_speed_heading_p_loaded[i]</strong> are all &gt; 0.0.</li>
+<li>Use the standard loaded gains: if <strong>pc_pid_dist_p_loaded</strong> and <strong>pc_pid_heading_p_loaded</strong> are &gt; 0.0.</li>
+<li>Use non-loaded speed gains: if <strong>pc_pid_speed_setting[i]</strong>, <strong>pc_pid_speed_dist_p[i]</strong> and <strong>pc_pid_speed_heading_p[i]</strong> are all &gt; 0.0.</li>
+<li>Use non-loaded basic gain values <strong>pc_pid_heading_p</strong> and <strong>pc_pid_dist_p</strong>.</li>
+</ol>
+<table><thead><tr><th>Speed/Load</th><th>Not loaded</th><th>&lt; weight0</th><th>&lt; weight1</th><th>&lt; weight2</th><th>&gt; weight2</th></tr></thead><tbody>
+<tr><td><strong>&lt; speed0</strong></td><td>pc_pid_heading_p <br> pc_pid_dist_p</td><td>pc_pid_heading_p_loaded <br>  pc_pid_dist_p_loaded</td><td>pc_pid_speed_heading_p_loaded1[0] <br> pc_pid_speed_dist_p_loaded1[0]</td><td>pc_pid_speed_heading_p_loaded2[0] <br> pc_pid_speed_dist_p_loaded2[0]</td><td>pc_pid_speed_heading_p_loaded3[0] <br> pc_pid_speed_dist_p_loaded3[0]</td></tr>
+<tr><td><strong>&lt; speed1</strong></td><td>pc_pid_speed_heading_p[0] <br> pc_pid_speed_dist_p[0]</td><td>pc_pid_speed_heading_p_loaded[0] <br> pc_pid_speed_dist_p_loaded[0]</td><td>pc_pid_speed_heading_p_loaded1[1] <br> pc_pid_speed_dist_p_loaded1[1]</td><td>pc_pid_speed_heading_p_loaded2[1] <br> pc_pid_speed_dist_p_loaded2[1]</td><td>pc_pid_speed_heading_p_loaded3[1] <br> pc_pid_speed_dist_p_loaded3[1]</td></tr>
+<tr><td><strong>&lt; speed2</strong></td><td>pc_pid_speed_heading_p[1] <br> pc_pid_speed_dist_p[1]</td><td>pc_pid_speed_heading_p_loaded[1] <br> pc_pid_speed_dist_p_loaded[1]</td><td>pc_pid_speed_heading_p_loaded1[2] <br> pc_pid_speed_dist_p_loaded1[2]</td><td>pc_pid_speed_heading_p_loaded2[2] <br> pc_pid_speed_dist_p_loaded2[2]</td><td>pc_pid_speed_heading_p_loaded3[2] <br> pc_pid_speed_dist_p_loaded3[2]</td></tr>
+<tr><td><strong>&gt; speed2</strong></td><td>pc_pid_speed_heading_p[2] <br> pc_pid_speed_dist_p[2]</td><td>pc_pid_speed_heading_p_loaded[2] <br> pc_pid_speed_dist_p_loaded[2]</td><td>pc_pid_speed_heading_p_loaded1[3] <br> pc_pid_speed_dist_p_loaded1[3]</td><td>pc_pid_speed_heading_p_loaded2[3] <br> pc_pid_speed_dist_p_loaded2[3]</td><td>pc_pid_speed_heading_p_loaded3[3] <br> pc_pid_speed_dist_p_loaded3[3]</td></tr>
+</tbody></table>
+<p><strong>Example set of parameters:</strong></p>
+<pre><code class="language-bash">F,pc_pid_load_weight_kg[0], 350 		# weight parameter array size ==3     =&gt;  gives 4 ranges
+F,pc_pid_load_weight_kg[1], 700 	    # Weight0 &lt; Weight1 &lt; Weight2
+F,pc_pid_load_weight_kg[2], 900
+
+F,pc_pid_speed_setting_loaded[0], 0.5	# speed parameter array size ==3     =&gt;  gives 4 ranges
+F,pc_pid_speed_setting_loaded[1], 1.0	# speed0 &lt; speed1 &lt; speed2 (when AGV is loaded)
+F,pc_pid_speed_setting_loaded[2], 1.5
+
+F,pc_pid_speed_setting[0], 0.8	        # speed parameter array size ==3     =&gt;  gives 4 ranges
+F,pc_pid_speed_setting[1], 1.2	        # speed0 &lt; speed1 &lt; speed2 (when AGV is not loaded)
+F,pc_pid_speed_setting[2], 1.7
+
+F,pc_pid_speed_heading_p_loaded1[0], 4.1
+F,pc_pid_speed_heading_p_loaded1[1], 6.6
+F,pc_pid_speed_heading_p_loaded1[2], 3.2
+F,pc_pid_speed_heading_p_loaded1[3], 10.5
+
+F,pid_speed_dist_p_loaded1[0], 4.3
+F,pid_speed_dist_p_loaded1[1], 3.0
+F,pid_speed_dist_p_loaded1[2], 7.5
+F,pid_speed_dist_p_loaded1[3], 10.0
+
+F,pc_pid_speed_heading_p_loaded2[0], 5.5
+</code></pre>
+<h3 id="stopping-accuracy"><a class="header" href="#stopping-accuracy">Stopping Accuracy</a></h3>
+<p>Accurate stopping is a requirement for most applications and Navitrol implements different methods to facilitate this, such as crawl mode, stop offsets and distance-based control gains:</p>
+<ul>
+<li>
+<p>Let the vehicle drive in a loop on a route with two stop points and a 90 degree turn in-between, see Figure 9. The speed of the route should be low, just as it would be in a real application.</p>
+</li>
+<li>
+<p>Monitor where the vehicle stops in relation to the route. If there is an offset, first try to modify the crawl mode parameters:</p>
+</li>
+</ul>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,slow_down_crawl_dist</strong></td><td>How far from the stopping point that the crawl mode is activated.</td></tr>
+<tr><td><strong>F,min_slow_down_speed</strong></td><td>Speed while in crawl mode.</td></tr>
+</tbody></table>
+<ul>
+<li>For systematic and constant stopping deviations there is a possibility to define a stopping offset:</li>
+</ul>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,pc_stop_distance_offset</strong></td><td>Stopping distance offset from last point (positive if stops too early)</td></tr>
+</tbody></table>
+<p><img src="./media-en/image13.png" alt="" /></p>
+<blockquote>
+<p>Figure 9: Route for tuning stopping accuracy.</p>
+</blockquote>
+<p><strong>Steer drive and differential drive</strong></p>
+<p>Furthermore, Navitrol includes an accurate stopping feature that dynamically adjusts the position controller gains when arriving at a stop point. It can be activated by setting the parameter <strong>F,pc_end_gain_dist</strong> [m] to a value larger than zero and then adjusting the different gains/gain limits specified by the parameters:</p>
+<ul>
+<li>
+<p><strong>F,pc_end_gain1 --</strong> Used in the dynamic calculation of the proportional gains for position control of both heading and
+distance.</p>
+</li>
+<li>
+<p><strong>F,pc_end_max_gain --</strong> Maximum proportional gain for position control of both heading and distance.</p>
+</li>
+<li>
+<p><strong>F,pc_end_min_gain --</strong> Minimum proportional gain for position control of distance.</p>
+</li>
+</ul>
+<p>The effect of the parameter <strong>pc_end_gain1</strong> is illustrated in Figure 10 and one can see how an increased parameter value increases the heading gain but reduces the distance gain.</p>
+<p><img src="./media-en/image14.png" alt="" />
+<img src="./media-en/image15.png" alt="" /></p>
+<blockquote>
+<p>Figure 10: Illustration of how the pc_end_gain1 parameter affects the heading and distance position control gains.</p>
+</blockquote>
+<h3 id="pivoting"><a class="header" href="#pivoting">Pivoting</a></h3>
+<p>If the mechanical construction of the vehicle allows for pivoting, where the vehicle is turning around its navigation point without any translational movement, then also this should be configured:</p>
+<ul>
+<li>
+<p>Set the required target accuracy in degrees to the Navitrol parameter <strong>F,pivot_target_head_diff_deg</strong>. Setting it too low can result in issues as the position controller is not able to fulfill it.</p>
+</li>
+<li>
+<p>Let the vehicle drive in a loop on a route with two pivot points, see Figure 11.</p>
+</li>
+<li>
+<p>Monitor the pivoting speed and adjust it if necessary by changing the Navitrol parameter <strong>F,pivot_speed</strong>.</p>
+</li>
+<li>
+<p>Monitor the angular stopping accuracy. Navitrol decreases the speed reference when reaching the end of the pivot and these quantities can be adjusted by the parameters</p>
+</li>
+</ul>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,pivot_crawl_speed</strong></td><td>Drive point velocity during pivot when close to target.</td></tr>
+<tr><td><strong>F,pivot_crawl_head_diff_deg</strong></td><td>Slow driving angular distance during pivot [deg].</td></tr>
+<tr><td><strong>F,pivot_dec_head_deg</strong></td><td>Angular difference from stop target before decelerating from pivot speed to slowdown speed during pivot [deg].</td></tr>
+</tbody></table>
+<p><img src="./media-en/image16.png" alt="" /></p>
+<blockquote>
+<p>Figure 11: Route for tuning pivoting.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../Introduction/OdometrySource/OdometrySource-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../Introduction/OdometrySource/OdometrySource-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

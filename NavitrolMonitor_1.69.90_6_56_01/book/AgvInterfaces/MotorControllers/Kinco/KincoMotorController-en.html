@@ -1,0 +1,435 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Kinco - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../../favicon.svg">
+                        <link rel="shortcut icon" href="../../../favicon.png">
+                <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+                <link rel="stylesheet" href="../../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html" class="active"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="kinco-can-motor-controller"><a class="header" href="#kinco-can-motor-controller">Kinco CAN motor controller</a></h1>
+<p>Updated 26.06.2024</p>
+<hr />
+<h2 id="glossary"><a class="header" href="#glossary">Glossary</a></h2>
+<table><thead><tr><th>Term</th><th>Description</th></tr></thead><tbody>
+<tr><td>OD</td><td>Object Dictionary</td></tr>
+<tr><td>SDO</td><td>Service Data Object</td></tr>
+<tr><td>PDO</td><td>Process Data Object</td></tr>
+<tr><td>NMT</td><td>Network Management</td></tr>
+<tr><td>RS232</td><td>Recommended Standard 232. Communication protocol for serial communication.</td></tr>
+</tbody></table>
+<hr />
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
+<p>Kinco offers single channel motor controllers that can be used for driving in the AGV.</p>
+<p>This document provides instructions for configuring the motor controllers to be compatible with Navitrol.</p>
+<h3 id="requirements"><a class="header" href="#requirements">Requirements</a></h3>
+<p><strong>Hardware:</strong></p>
+<ul>
+<li>Supported Kinco Motor controller models can be found from the <a href="../../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html">List of supported devices</a>. </li>
+<li>Connectors for wiring (or alternatively Kinco cables with connectors). Without the connectors, it is not possible to wire the motor controller. Types and number of connectors can be found from the Technical Manual for the motor controller.</li>
+<li>Adapter for connecting the motor controller to PC. RS232 cable is required by the KincoServo+ software.</li>
+</ul>
+<p><strong>Software</strong></p>
+<ul>
+<li>Motor controller related software can be downloaded from: <a href="https://en.kinco.cn/download/download.html">Kinco Download site</a>.</li>
+<li>The following item should be downloaded for the commissioning:
+<ul>
+<li><strong>KincoServo+</strong> for parameters adjustment and diagnostics</li>
+</ul>
+</li>
+</ul>
+<p><strong>Documentation</strong> </p>
+<p>Technical manual is needed for the motor controller. It contains dimensions, wiring instructions and CANOpen messages. Additionally, it contains the commissioning instructions and the SDO object dictionary. Technical manual depends on the motor controller model and can be found on the <a href="https://en.kinco.cn/download/download.html">Kinco Download site</a>. </p>
+<ul>
+<li>The manual for OD1X4S and FD1X4S models:
+<ul>
+<li><strong>Kinco Low-Voltage User Manual</strong></li>
+</ul>
+</li>
+<li>The Catalog contains some technical information of the driver and motor.
+<ul>
+<li><strong>Kinco Catalog Low voltage servo</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="limitations"><a class="header" href="#limitations">Limitations</a></h3>
+<ul>
+<li><strong>Motor controller might not support all functions (steering, driving, actuating)</strong>. See <a href="../../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html">List of supported devices</a> for information about the supported functionalities.</li>
+<li>It is not possible to use Kinco motor controller with other motor controllers in the same AGV</li>
+</ul>
+<h3 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h3>
+<ul>
+<li><a href="../../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html">CAN communication</a>. </li>
+</ul>
+<hr />
+<h2 id="electrical-connections"><a class="header" href="#electrical-connections">Electrical connections</a></h2>
+<p>The connections might vary depending on the motor controller model. See <a href="https://en.kinco.cn/download/download.html">Kinco Download site</a> for further info.</p>
+<hr />
+<h2 id="quick-setup"><a class="header" href="#quick-setup">Quick setup</a></h2>
+<p>The following steps should be done during commissioning:</p>
+<h4 id="step-1-option-1-kincoservo"><a class="header" href="#step-1-option-1-kincoservo">Step 1 (Option 1): KincoServo+</a></h4>
+<ul>
+<li><a href="#change-node-id-and-baud-rate">Change Node-ID and baud rate with KincoServo+</a></li>
+</ul>
+<h4 id="step-1-option-2-general-can-analyzer-commissioning"><a class="header" href="#step-1-option-2-general-can-analyzer-commissioning">Step 1 (Option 2): General CAN-analyzer Commissioning</a></h4>
+<p>If you do not have KincoServo+ compatible adapter, the commissioning needs to be done by using a CAN analyzer.</p>
+<ul>
+<li><a href="#change-node-id-and-baud-rate-with-can-analyzer">Changing Node-ID and baud rate with CAN-analyzer</a></li>
+</ul>
+<h4 id="step-2"><a class="header" href="#step-2">Step 2</a></h4>
+<p>After the Node and baud-rate are set on all motor controllers, proceed to:</p>
+<ul>
+<li><a href="#navitrol-parameterization-and-controller-tuning">Navitrol parameterization and controller tuning</a></li>
+</ul>
+<hr />
+<p><strong>Required parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required value</th><th>Description</th></tr></thead><tbody>
+<tr><td>The indices of the following array parameters are: <br> <strong>Differential drive</strong>: <br> 0 = Left wheel <br> 1 = Right wheel <br> <strong>Mecanum</strong>: <br> 0 = Forward Left <br> 1 = Forward Right <br> 2 = Rear Left <br> 3 = Rear Right</td><td></td><td></td><td></td></tr>
+<tr><td><strong>Drive Motor controllers</strong></td><td></td><td></td><td></td></tr>
+<tr><td>mot_ctrl_drive_controller_type_arr[]</td><td>Int</td><td>4</td><td>4 = Kinco</td></tr>
+<tr><td>mot_ctrl_drive_p_arr[]</td><td>Float</td><td>30.0</td><td>P value of the drive motor controller. 0.0 = this parameter not used. When tested with motor without any load, this was quite low value. For example, 30.0.</td></tr>
+<tr><td>mot_ctrl_drive_i_arr[]</td><td>Float</td><td>0.0</td><td>I value of the drive motor controller. 0.0 = this parameter not used. When tested with motor without any load, this was set to 0.</td></tr>
+<tr><td>mot_ctrl_drive_can_nodeid_arr[]</td><td>Int</td><td>1</td><td>Motor controller CAN node id for drive motor. 0 = this parameter not used. Default node id for kinco is 1.</td></tr>
+<tr><td>mot_ctrl_drive_encoder_pulses_per_rev</td><td>Uint</td><td>4096</td><td>Encoder resolution (pulses per revolution) used to calculate RPM if drive motor does not provide that. 0 = this parameter not used.</td></tr>
+<tr><td><strong>Other required parameters</strong></td><td></td><td></td><td></td></tr>
+<tr><td>can_primary_any_id</td><td>Int</td><td>1</td><td>Primary CAN valid PDO id's that can be registered: 0 = Only valid PDO id's can be registered, 1 = Any id can be registered. For Kinco, this is required to be 1 for Error reset SDO message register to CAN PDO.</td></tr>
+<tr><td>can_nodeguard_guard_time_ms</td><td>Int</td><td>1000</td><td>Nodeguarding guard time [ms]: 0 = Nodeguard disabled</td></tr>
+<tr><td>can_sync</td><td>Int</td><td>1</td><td>Navigation SW (Primary CAN) role for CANOpen SYNC messages: 0 = None, 1 = SYNC producer, 2 = SYNC consumer</td></tr>
+</tbody></table>
+<hr />
+<h3 id="fine-tuning"><a class="header" href="#fine-tuning">Fine-tuning</a></h3>
+<p><strong>Optional parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>mot_ctrl_reset_errors_timer</td><td>Int</td><td>500</td><td>After the defined time (ms) Navitrol tries automatically reset motor control faults. Value 0 = fault reset disabled. When error is active on controller. Navitrol will start sending Error reset SDO within this interval until the errors are reset.</td></tr>
+<tr><td>mot_ctrl_drive_encoder_pulses_per_rev_arr[]</td><td>Int</td><td>0</td><td>Encoder resolution (pulses per revolution) used to calculate RPM if drive motor does not provide that. 0 = this parameter not used. If AGV has motors with different resolution, this parameter can be used to override <strong>mot_ctrl_drive_encoder_pulses_per_rev</strong></td></tr>
+</tbody></table>
+<hr />
+<h2 id="kincoservo-easy-commissioning"><a class="header" href="#kincoservo-easy-commissioning">KincoServo+ Easy Commissioning</a></h2>
+<p>Kinco offers KincoServo+ for easy commissioning. It can be downloaded from <a href="https://en.kinco.cn/download/download.html">Kinco Download site</a>.</p>
+<h3 id="change-node-id-and-baud-rate"><a class="header" href="#change-node-id-and-baud-rate">Change Node-ID and baud rate</a></h3>
+<ul>
+<li>
+<p>Download KincoServo+ software and connect your PC to the motor controller (communication interface RS232).</p>
+</li>
+<li>
+<p>The default baud rate for RS232 is 38400 and COM ID 1. If user does not know the COM ID, broadcast address 127 can be used instead.</p>
+</li>
+<li>
+<p>The default CAN Node-ID is 1. It can be changed from <em>Driver -&gt; Driver Configuration -&gt; Node_ID</em>. </p>
+<p><img src="./media-en/Kinco_CAN_nodeid.png" alt="" /></p>
+<blockquote>
+<p>Change the Node-ID</p>
+</blockquote>
+</li>
+<li>
+<p>Change the CAN baud rate. Default baud rate for Kinco motor controller is 500 kbd. Please note that the Kinco motor controller and Navitrol baud rate needs to match.</p>
+<p><img src="./media-en/Kinco_CAN_Baudrate.png" alt="" /></p>
+<blockquote>
+<p>Change the baud rate.</p>
+</blockquote>
+</li>
+<li>
+<p>Go to the <em>Driver -&gt; Init Save Reboot</em> and click <em>Save Motor Parameters</em>, after that click <em>Reboot</em>.</p>
+<p><img src="./media-en/Kinco_SaveParams.png" alt="" /></p>
+<blockquote>
+<p>Save Motor parameters</p>
+</blockquote>
+</li>
+<li>
+<p>Repeat the same procedure for all motor controllers.</p>
+</li>
+</ul>
+<h2 id="general-can-analyzer-commissioning-option-2"><a class="header" href="#general-can-analyzer-commissioning-option-2">General CAN-analyzer commissioning (Option 2)</a></h2>
+<p>If you do not have the possibility to use KincoServo+ software, the commissioning needs to be done by using CAN analyzer. With this method each motor controller needs to be connected and configured separately on the bus.</p>
+<h3 id="controller-switch-configuration"><a class="header" href="#controller-switch-configuration">Controller switch configuration</a></h3>
+<ul>
+<li>
+<p>Connect the motor controller to your PC with a CAN-USB adapter.</p>
+</li>
+<li>
+<p><strong>NOTE:</strong> The controller might have DIP switch that activates 120-ohm resistor. A CAN-bus needs 120-ohm resistors on both ends of the bus</p>
+</li>
+</ul>
+<p><img src="./media-en/OD124S_DIP_Switch.png" alt="" /></p>
+<blockquote>
+<p>DIP switch from the OD124S controller.</p>
+</blockquote>
+<h3 id="change-node-id-and-baud-rate-with-can-analyzer"><a class="header" href="#change-node-id-and-baud-rate-with-can-analyzer">Change Node-ID and baud rate with CAN-analyzer</a></h3>
+<p>The default Node-ID is 1 and the CAN baud rate is 500 kBd.</p>
+<p>To change the baud rate and Node-ID, you need to change object 2F81:0h (baud rate) and 100B:0h (Node-ID). The changes in objects 2F81h and 100Bh must be stored by writing value 65766173h in object 1010h:1h. This can be done by following the sequence presented below in the table.</p>
+<table><thead><tr><th>SEND/RESPONSE</th><th>COB ID (in hex 0x)</th><th>dlc</th><th>Data bytes (in hex 0x)</th><th>Description</th></tr></thead><tbody>
+<tr><td>SEND</td><td>601</td><td>8</td><td>2F 0B 10 00 NODEID 00 00 00</td><td>Define Node-ID (put desired Node-ID to NODEID)</td></tr>
+<tr><td>RESPONSE</td><td>581</td><td>8</td><td>60 xx xx xx xx xx xx xx</td><td>SDO Response OK</td></tr>
+<tr><td>SEND</td><td>601</td><td>8</td><td>2F 81 2F 00 <strong>19</strong> 00 00 00</td><td>SDO Upload request:<br>Change baud rate to 250 kbs<br> 0x01 = 10 kbd, 0x05 = 50 kbd, 0x0C = 125 kbd,<br> 0x19 = 250 kbd, 0x32 = 500 kbd, 0x64 = 1000 kbd</td></tr>
+<tr><td>RESPONSE</td><td>581</td><td>8</td><td>60 xx xx xx xx xx xx xx</td><td>Response OK</td></tr>
+<tr><td>SEND</td><td>601</td><td>8</td><td>23 10 10 01 73 61 76 65</td><td>SDO Upload request:<br>Save all communication  parameters</td></tr>
+</tbody></table>
+<blockquote>
+<p>Change Node-ID and baud rate with CAN-analyzer</p>
+</blockquote>
+<p><strong>After you have done these changes, turn off the motor controller and then turn the motor controller back on, the Node-ID and baud rate should be set to the values you just sent to the motor controller.</strong></p>
+<h2 id="navitrol-parameterization-and-controller-tuning"><a class="header" href="#navitrol-parameterization-and-controller-tuning">Navitrol parameterization and controller tuning</a></h2>
+<h3 id="node-id-and-can-bus-bitrate"><a class="header" href="#node-id-and-can-bus-bitrate">Node-ID and CAN bus bitrate</a></h3>
+<p>Node-ID defines the address of the CANopen device and it must be in range from 1 to 127. In addition, the Node-ID has to be unique for each device on the CAN bus.</p>
+<p>CAN bus bitrate (baud rate) is the communication speed. By following these instructions, this speed is set to 250 Kbit/s for the motor controllers. The speed needs to be the same for Navitrol and motor controllers, otherwise the CAN bus communication will not work.</p>
+<p>Every motor controller has a Node-ID. params.txt file has a parameter for each motor controller Node-ID and a parameter for Navitrol CAN bus bitrate. </p>
+<p>First, set Node-ID to the corresponding parameters:</p>
+<ul>
+<li><strong>mot_ctrl_drive_can_nodeid_arr</strong></li>
+</ul>
+<p>Set the communication parameters (<strong>can_ch</strong> and <strong>can_bitrate_k</strong>) according to <a href="../../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html">CAN communication</a> document.</p>
+<h3 id="pi-controller-values-tuning"><a class="header" href="#pi-controller-values-tuning">PI-controller values tuning</a></h3>
+<p>All Kinco motor controllers have an internal PI-controller that must be tuned. These controllers must be tuned. Rule of thumb instructions to find the optimal parameters are presented below (reference from Kinco CANopen document).</p>
+<p>*1. According to oscillation and noise sensed with the finger and the ears: This method is based on experience,but it’s efficient. The user can listen to or touch the machine, at the same time increasing and reducing the <strong>kvp</strong>. When an acceptable maximum <strong>kvp</strong> value is found, the current setting can be specified as the maximum velocity loop bandwidth. <br></p>
+<ol start="2">
+<li>According to the scope image from KincoServo+: The user can create a jump command for velocity control and sample actual velocity and current while changing <strong>kvp</strong>. The right velocity curve should quickly fulfil the command without oscillation and unusual noise.*</li>
+</ol>
+<p>Motor controller can be tuned </p>
+<ul>
+<li>Modifying the <em>Kvp</em> and Kvi/32 parameters with KincoServo+ software. After the optimal parameters are found, save those to the Navitrol parameters (params.txt) </li>
+<li>Modifying Navitrol P- and I-gain parameters with Navitrol and Navitrol Monitor. When Navitrol starts, it will always override the motor controller P- and I-gain values based on Navitrol parameters.</li>
+</ul>
+<p>The P-gain can be set with <strong>mot_ctrl_drive_p_arr</strong>. These values are set to <em>Kvp[0]</em> (SDO Object Index 0x60F9 SubIndex 0x01) parameter from Kinco documentation.
+The I-gain can be set with <strong>mot_ctrl_drive_i_arr</strong>. These values are set to <em>Kvi/32</em> (SDO Object Index 0x60F9 SubIndex 0x07) parameter from Kinco documentation. The <em>Kvi[0]</em> (SDO Object Index 0x60F9 SubIndex 0x02) is not used with Navitrol, it is kept as 0. </p>
+<h3 id="sdo-parameters-for-can-open"><a class="header" href="#sdo-parameters-for-can-open">SDO-parameters for CAN-open</a></h3>
+<p>Navitrol configures a subset of Kinco motor controller's SDO-parameters when Navitrol starts.
+These configurations are sent as SDO-messages to the motor controllers. The SDO-messages that Navitrol configures can be seen on the table below.
+The parameters for automatic SDO-configurations (for example, SDO message interval and SDO message response timeout) are presented on the <a href="../../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html">CAN communication</a> document.</p>
+<p><strong>SDO Object table</strong></p>
+<table><thead><tr><th>Name</th><th>Address</th><th>Data type</th><th>Value in hex</th><th>Description</th></tr></thead><tbody>
+<tr><td>Invert direction</td><td>607E0008</td><td>Unsigned8</td><td>0</td><td>Invert motion <br> 0：CCW is positive direction <br> 1：CW is positive direction</td></tr>
+<tr><td>Kvp</td><td>60F90110</td><td>Unsigned16</td><td>0</td><td>Bigger Kvp, bigger gain, but it may cause motor noise. Navitrol set the value based on <strong>mot_ctrl_drive_p_arr</strong> parameter. The parameter value is converted to integer. For example, if this parameter is set to 200.4, the written value is: 200 (0xC8 in hex).</td></tr>
+<tr><td>Kvi</td><td>60F90210</td><td>Unsigned16</td><td>0</td><td>Bigger Kvi, bigger gain, but it may cause motor noise</td></tr>
+<tr><td>Kvi/32</td><td>60F90710</td><td>Unsigned16</td><td>0</td><td>It is 1/31 of the normal kvi. Navitrol set the value based on <strong>mot_ctrl_drive_i_arr</strong> parameter. The parameter value is multiplied with 32 and rounded to the nearest larger integer. For example, if this parameter is set to 1.3, the written value is: 1.3 * 32.0 = 41.6 -&gt; 42 (0x2A in hex).</td></tr>
+<tr><td>Operation mode</td><td>60600008</td><td>Integer8</td><td>3</td><td>Operation mode: <br> 1: Position control <br> 3: Speed control <br> 4: Torque control <br> -3：Speed control (Quick fast mode) <br> -4：Pulse train control <br> 6：Home mode <br> 7：Differential complementarity based on CANopen</td></tr>
+<tr><td>Din1_Function</td><td>20100310</td><td>Unsigned16</td><td>2</td><td>0002: Reset Errors function set to Din1</td></tr>
+<tr><td>Din_Simulate</td><td>20100210</td><td>Unsigned16</td><td>0</td><td>bit0: Din1. Used to reset errors when bit0 is changed from 0 to 1.</td></tr>
+<tr><td>Abort connection mode</td><td>60070010</td><td>Unsigned16</td><td>1</td><td>CAN communication abort time determine action logic when driver still do not receive node protection message over <strong>node guarding time</strong> * <strong>node guarding factor</strong> <br> 0: no process <br> 1: error</td></tr>
+<tr><td>Nodeguarding guard time</td><td>100C0010</td><td>Unsigned16</td><td>0xC8</td><td>Nodes protect masters, it can monitor current state of every node. Masters (node protection time as period) send remote frame to check slave node state. Nodes need to response in a time. Otherwise, master nodes regard slave nodes off-line. Driver will have alarms. Navitrol set the value based on <strong>can_nodeguard_guard_time_ms</strong> parameter.</td></tr>
+<tr><td>Life Time Factor</td><td>100D0008</td><td>Unsigned8</td><td>3</td><td>Node guarding time factor</td></tr>
+</tbody></table>
+<blockquote>
+<p>SDO Object table that Navitrol configures during startup. <br>The address contains Object Index, SubIndex and data type as following: <br> For example address 607E0208: <br> Object index = 0x607E <br> SubIndex = 0x02 <br> Data type = 0x08 (0x08 = 1 byte, 0x10 = 2 bytes, 0x20 = 4 bytes)</p>
+</blockquote>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="motor-is-not-spinning-when-sending-rpm-value-to-it-and-there-is-no-error-code"><a class="header" href="#motor-is-not-spinning-when-sending-rpm-value-to-it-and-there-is-no-error-code">Motor is not spinning when sending RPM value to it and there is no error code</a></h3>
+<p>The encoder resolution might be incorrect. Kinco communication protocol is not using RPM value for speed, but instead Kinco internal decimal value that Navitrol will calculate from RPM based on encoder resolution parameter. By default, these parameters are 0 and with that value the measured RPM and target RPM are so low that the motor is not spinning. </p>
+<p>Citation from Kinco document: <br>
+<em>For example, engineering unit of speed is rpm and internal unit is dec. The relationship is:
+1RPM = 2730dec (Encoder resolution 10000)! It is assumed that if the speed is 10rpm, user need to write
+27300dec (6AA4 in HEX) when use communication to control. The decimal value is calculated from this formula: DEC = [(RPM * 512 * encoder resolution) / 1875]</em></p>
+<p>Check that these parameters have correct values. </p>
+<ul>
+<li><strong>mot_ctrl_drive_encoder_pulses_per_rev</strong> and <strong>mot_ctrl_drive_encoder_pulses_per_rev_arr</strong></li>
+</ul>
+<h3 id="can-bus-errors"><a class="header" href="#can-bus-errors">CAN-bus errors</a></h3>
+<p>If CAN-bus is not working correctly, make sure that following things are checked:</p>
+<ul>
+<li>CAN-bus has 120 ohm resistors activated on the both end of the bus. The total CAN-bus impedance has to be approximately 60 ohms.</li>
+<li>If the motor controller has PID switch for the resistor, check that it is set to correct position.</li>
+<li>Check that all motor controllers and other CAN-devices in the bus have same baud rate</li>
+<li>Make sure that all CAN-devices on the bus have individual Node-ID</li>
+<li>Double-check Navitrol parameters in this document</li>
+<li>Make sure that you have also done CAN-bus grounding
+<ul>
+<li>If CAN-bus GND is not grounded, there might occur error frames in the CAN-bus</li>
+<li>Higher baud rates require CAN-bus grounding because they require more accurate voltage levels</li>
+</ul>
+</li>
+<li>More information about CAN-bus related errors can be found from <a href="../../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html#troubleshooting-can-communication">Navitrol CANOpen Communication Troubleshooting</a>.</li>
+</ul>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<p><a href="https://en.kinco.cn/download/download.html">Kinco Download site</a></p>
+<ul>
+<li>KincoServo+</li>
+<li>Kinco Low-Voltage User Manual</li>
+<li>Models OD1X4S and FD1X4S</li>
+</ul>
+<p><a href="https://www.peak-system.com/PCAN-USB.199.0.html?L=1">PEAK PCAN-USB Adapter</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

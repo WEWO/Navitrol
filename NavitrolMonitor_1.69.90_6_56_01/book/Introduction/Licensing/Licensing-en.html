@@ -1,0 +1,530 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Licensing - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html" class="active"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="navitrol-licensing"><a class="header" href="#navitrol-licensing">Navitrol Licensing</a></h1>
+<p>Updated 11.06.2024</p>
+<h2 id="glossary"><a class="header" href="#glossary">Glossary</a></h2>
+<table><thead><tr><th>Term</th><th>Description</th></tr></thead><tbody>
+<tr><td>Fingerprinting</td><td>A method for uniquely identifying the target where application runs.</td></tr>
+<tr><td>Device-locked license</td><td>Device-locked licensing uses target fingerprinting and locks the license to the target.</td></tr>
+<tr><td>Floating license</td><td>Floating license is not locked to any specific target/HW. When a licensed software is started it leases a license from the License Server and frees the license when it shuts down. With Floating license the number of simultaneously running instances is limited by the license.</td></tr>
+<tr><td>Lease duration</td><td>A time that a Floating license lease is valid without renewal.</td></tr>
+<tr><td>License Server</td><td>Navitec Systems application that manages creation and updates of all licenses.</td></tr>
+<tr><td>Server sync interval</td><td>The interval for server syncs by a licensed software when using online (Floating license) licensing model.</td></tr>
+<tr><td>Trusted Platform Module (TPM)</td><td>TPM is an international standard for a secure crypto-processor, and it is designed to provide hardware-based, security-related functions.</td></tr>
+</tbody></table>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>Navitrol supports two different licensing methods, <a href="#legacy-license">Legacy license</a> and <a href="#regular-license">Regular license</a>. Legacy licensing model has been used from the early days of Navitrol. It does however have multiple practical limitations, and therefore new licensing method, Regular licensing, has been introduced. </p>
+<p>Regular licensing is the recommended future-proof solution. Existing Legacy licenses are still supported, but all new (or future) licensed features are not supported by Legacy licensing method.</p>
+<h3 id="current-license-details"><a class="header" href="#current-license-details">Current license details</a></h3>
+<p>Detailed information about Navitrol license for a connected Navitrol can be seen in Monitor by selecting &quot;Help-About&quot; from menu.</p>
+<p><img src="./media-en/MonitorAbout.png" alt="" /></p>
+<p>All this information is also logged in the beginning of each text log file (startlog.txt and log.txt). Examples of logged data are shown in the following chapters.</p>
+<p><strong>NOTE</strong>: Hardware and license details are different in each case, as they depend on the hardware, licensing model and licensed options in use. Therefore, any license details shown in this document are just examples of one specific case.</p>
+<h3 id="licensing-method-selection"><a class="header" href="#licensing-method-selection">Licensing method selection</a></h3>
+<p>Licensing method (Regular vs. Legacy) used is selected at run-time by Navitrol. Regular licensing is prioritized, and it is used if license file <code>LicenseDetails.json</code> exists on the system. See <a href="#regular-license">Regular license</a> below for details. If there is no <code>LicenseDetails.json</code> file, Navitrol switches to Legacy licensing method for backward compatibility. It is only the existence of this file that matters. If license file exists, but has invalid data or format, then Navitrol still sticks to Regular licensing and raises a related error.</p>
+<p>In the beginning of each text log file there is some information about run-time system and licensing method used. The section that shows license information is referred here as a <code>license section</code>. </p>
+<p>In case of Regular licensing being used, text logs starts with:</p>
+<pre><code>Mon May 27 10:36:26 2024
+
+Navitrol 6.53.02 99083666 2024-05-27T07:31:25+00:00 for machine type 440001
+Debian GNU/Linux 11 (bullseye)
+RT Kernel 5.10.0-23-rt-amd64
+
+Board SMB-2600 by Sintrones Technology Corp.
+BIOS by American Megatrends Inc.
+CPU Intel(R) Celeron(R) 2980U @ 1.60GHz
+CPU 2 cores, clock 1596.38 MHz
+TotalMem 7869 MiB, TotalSwap 3905 MiB, TotalStorage 52.56 GiB
+
+REGULAR licensing used (LibVer 3.21.2) - Activation mode DeviceLocked
+Normal Fingerprint
+LicenseKey 0744E5-925FE1-40BCAB-0D53DE-1207EB-614120
+</code></pre>
+<p>In case of Legacy licensing being used, <code>license section</code> starts with:</p>
+<pre><code>LEGACY licensing used
+License id,key 4091113304772258577,13541695821371515033
+</code></pre>
+<h3 id="license-models"><a class="header" href="#license-models">License models</a></h3>
+<p>Regular licensing supports different licensing models. The currently available ones are </p>
+<ul>
+<li>Offline Device-locked license</li>
+<li>Floating license</li>
+</ul>
+<p>Legacy licensing supports only Offline Device-locked licenses. </p>
+<h3 id="backward-and-forward-compatibility"><a class="header" href="#backward-and-forward-compatibility">Backward and forward compatibility</a></h3>
+<p>Navitrol can use any license created for older SW version, assuring full backward compatibility.</p>
+<p>Regular licensing provides full forward compatibility as well. Legacy licensing on the other hand has limitations with forward compatibility. It is not guaranteed that license created for a specific Navitrol version would be usable with older Navitrol versions. </p>
+<h3 id="basic-license"><a class="header" href="#basic-license">Basic license</a></h3>
+<p>A basic license is simply a license to run Navitrol without additional licensed options.</p>
+<h3 id="license-with-options"><a class="header" href="#license-with-options">License with options</a></h3>
+<p>A license with options is a license to run Navitrol with predefined additional licensed options. A license in this case includes information about all enabled licensed options/features.</p>
+<p>In Legacy licensing all licensed features are enabled by specific parameters. </p>
+<p>Regular licensing uses the same parameters and mechanisms for old license options, but licensed option can also be tied to something else than parameter values (like kinematic type of the machine).</p>
+<p>All enabled license options are logged into beginning of the text log files in <code>license section</code>:</p>
+<pre><code>LEGACY licensing used
+License id,key 9439414948331747385,14605972011522150860
+Valid license with options in use
+License for option &quot;Dynamic Mapping Server&quot; in use
+License for option &quot;Route Driver&quot; in use
+License for option &quot;Precision Positioning&quot; in use
+License for option &quot;Target Detection&quot; in use
+License for option &quot;External Localization&quot; in use
+License for option &quot;Obstacle Avoidance&quot; in use
+License for option &quot;Warehouse Racking&quot; in use
+License for option &quot;3D Object detection&quot; in use
+</code></pre>
+<hr />
+<h2 id="regular-license"><a class="header" href="#regular-license">Regular license</a></h2>
+<p>Regular licensing has several benefits over Legacy licensing from user point of view, like:</p>
+<ul>
+<li>More license models - supports currently Offline Device-locked license and Floating license. More options available later.</li>
+<li>All current and future license options/features are supported.</li>
+<li>Full forward and backward compatibility for licenses created for other SW version.</li>
+<li>License validation time is quite deterministic, typically instant. Time may vary with Online licensing models (Floating license).</li>
+<li>Possibility for time limited trial licenses.</li>
+<li>Possibility for more tailored licensing models and fingerprinting methods in the future.</li>
+</ul>
+<h3 id="activation-mode"><a class="header" href="#activation-mode">Activation mode</a></h3>
+<p>License models in Regular license concept are called <code>activation modes</code>. The two Regular license activation modes at the moment are:</p>
+<ul>
+<li><strong>DeviceLocked</strong> - Uses Offline Device-locked license. Device-locked license uses target fingerprinting and locks the license to the target.</li>
+<li><strong>Floating</strong> - Floating license is not locked to any specific target/HW. When a licensed software is started it leases a license from the License Server. The License Server allocates a license for that instance (or target) if there is a free license available. Licensed software needs to renew the lease periodically, and finally free the license when it shuts down. This method limits the number of instances that can run at the same time. All licensed software instances need an Internet connection for communicating with the License Server at run time.</li>
+</ul>
+<h3 id="files"><a class="header" href="#files">Files</a></h3>
+<p>Files related to the use of a Regular license are described in the table below.</p>
+<table><thead><tr><th>File</th><th>Content and scope</th><th>Offline<br>activation</th><th>Online<br>activation</th></tr></thead><tbody>
+<tr><td>License file<br><strong>LicenseDetails.json</strong></td><td>Provides information to Navitrol for license activation and validation.<br>Required for all licensing models. Format and content shown below.</td><td>X</td><td>X</td></tr>
+<tr><td>Offline activation request file<br><strong>LicenseOfflineRequest.gz</strong></td><td>Created by Navitrol on user request.<br>Content used by License Server for offline activation.</td><td>X</td><td>-</td></tr>
+<tr><td>Offline activation response file<br><strong>LicenseOfflineResponse.dat</strong></td><td>Created by the License Server when making offline activation on the server side.<br>Navitrol uses this file as input for offline activation at target.</td><td>X</td><td>-</td></tr>
+</tbody></table>
+<p><strong>NOTE:</strong> All of these files are automatically generated and should never be modified manually. Regular licensing has cross-checks for all the relevant information built-in. If information in these files is modified, license activation or validation fails.</p>
+<h4 id="license-file-licensedetailsjson"><a class="header" href="#license-file-licensedetailsjson">License file LicenseDetails.json</a></h4>
+<p>A license file in a target system is mandatory for Regular licensing to work. License file is required for all licensing models. This JSON formatted file provides information for license activation and validation, most important ones being the <code>LicenseKey</code> and <code>ActivationMode</code>.</p>
+<p>Mandatory license file information from Navitrol point of view include:</p>
+<ul>
+<li><strong>Product</strong> – Shall be <code>NavigationSoftware</code>. Anything else results in license file rejection as license is not meant to be used with Navitrol.</li>
+<li><strong>LicenseKey</strong> – Created by the License Server. License key is used for license activation and validation.</li>
+<li><strong>ActivationMode</strong> – Activation mode to be used by Navitrol (shall be one of the predefined values: <code>DeviceLocked</code>, <code>Floating</code>).</li>
+</ul>
+<p>An example license file content having mandatory information only is shown below.</p>
+<pre><code class="language-json">  {
+    &quot;LicenseKey&quot;: &quot;3A432A-E840E3-42F7AB-A35E2E-6D0317-F69792&quot;,
+    &quot;ActivationMode&quot; : &quot;DeviceLocked&quot;,
+    &quot;Product&quot;: &quot;NavigationSoftware&quot;
+  }
+</code></pre>
+<p>A license file may contain additional information as well. Optional license file information includes:</p>
+<ul>
+<li><strong>FileGenerationDate</strong> - License generation date is typically included, but not regarded as mandatory information by Navitrol.</li>
+<li>Custom fingerprinting - License can be defined by the License Server to use a specific custom fingerprinting method. In such a case, details are defined in a license file.</li>
+</ul>
+<h3 id="how-to-set-up-a-regular-license"><a class="header" href="#how-to-set-up-a-regular-license">How to set up a Regular license</a></h3>
+<p>Steps to set up a Regular license are:</p>
+<ul>
+<li>Order a license from Navitec Systems. Process starts with creating the license in the License Server. Basic information needed in this phase are:
+<ul>
+<li>License options that shall be included in the license, including machine kinematics.</li>
+<li>Target system - Navitrol running on a bare HW, a Virtual machine or a Container. <strong>NOTE</strong>: Navitec Systems may limit the target options available. Trying to activate license in a VM/Container if that is not allowed, results in an error.</li>
+<li>Other things to decide at this phase are
+<ul>
+<li>Fingerprinting method - Valid for Node-Locked licenses only.</li>
+<li>Validity 
+<ul>
+<li>Time - By default a license is perpetual, like in Legacy licensing. There is a possibility to define a limited Validity time.</li>
+<li>SW versions - By default a license is not version limited. License can be limited up to a specific SW release version only. </li>
+</ul>
+</li>
+<li>Possible trial license and trial period </li>
+<li>+ more</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>When detailed license information is known, license can be created in the License Server.</li>
+<li>License Server provides the license file <code>LicenseDetails.json</code>.</li>
+<li>License file <code>LicenseDetails.json</code> is copied to target system sub-folder <code>./license</code> (/home/navitec/license).</li>
+<li>After that license needs to be activated and validated. Steps required for activation depend on a license activation mode used. See <a href="#license-activation">License activation</a> and <a href="#license-validation">License validation</a> below for details.</li>
+</ul>
+<h3 id="license-activation"><a class="header" href="#license-activation">License activation</a></h3>
+<p>Unlike in the Legacy licensing method, each license must be activated before being valid. License activation always involves the License Server which keeps track of created and activated licenses.</p>
+<p>Prerequisite is the license file <code>LicenseDetails.json</code> existing in target system sub-folder <code>./license</code> (/home/navitec/license).</p>
+<h4 id="activating-offline-device-locked-license"><a class="header" href="#activating-offline-device-locked-license">Activating Offline Device-locked license</a></h4>
+<p>Offline Device-locked license activation is clearly separated from validation. Creating offline request file and offline activation are done only on user request using commands shown below. Running these commands requires root privileges. </p>
+<p>Steps are:</p>
+<ol>
+<li>
+<p>Generate offline request file <code>LicenseOfflineRequest.gz</code> file on sub-folder <code>./license</code> by issuing the command </p>
+<pre><code>root@navitec:~$ ./Navitrol licreq
+</code></pre>
+<p>On successful command one should see on the console:</p>
+<pre><code>Packed license request files to: &quot;./license/LicenseOfflineRequest.gz&quot;
+DeviceLocked license request file creation SUCCESSFUL
+</code></pre>
+</li>
+<li>
+<p>Provide the <code>LicenseOfflineRequest.gz</code> file generated in target HW for license generation.</p>
+</li>
+<li>
+<p>Offline response file <code>LicenseOfflineResponse.dat</code> is generated on the License Server using offline request file as input. </p>
+</li>
+<li>
+<p>Offline response file is transferred/copied to Navitrol <code>./license</code> folder.</p>
+</li>
+<li>
+<p>Activate license in Navitrol by issuing command </p>
+<pre><code>root@navitec:~$ ./Navitrol licact
+</code></pre>
+<p>This command uses the license file and the offline response file as input. On successful activation one should see on the console:</p>
+<pre><code>DeviceLocked license activation SUCCESSFUL
+</code></pre>
+</li>
+</ol>
+<h4 id="activating-floating-license"><a class="header" href="#activating-floating-license">Activating Floating license</a></h4>
+<p>Floating license activation (license leasing) is performed automatically at each startup. After successful activation/lease, Navitrol periodically validates and renews the license.</p>
+<h4 id="license-deactivation"><a class="header" href="#license-deactivation">License deactivation</a></h4>
+<p>Floating licenses are automatically deactivated by Navitrol at each exit/shut-down, which frees the leased license for someone else to lease. If Navitrol for any reason fails to do that (like communication not working), license re-activation or leasing is not possible until lease time is over. When lease time expires without client sync to server, license lease will be freed by the License Server. Server sync interval is defined in the license by the License Server.</p>
+<p>Other than Floating licenses are never deactivated by Navitrol.</p>
+<h3 id="license-validation"><a class="header" href="#license-validation">License validation</a></h3>
+<p>Successful license activation already means that license itself is valid at that time. At run-time Navitrol periodically validates the license and in case of Floating license renews the license. License validation may fail at any time for example if some license option is used without having such an option included in the license. Floating license validation may fail also if connection to License Server is lost for too long time.</p>
+<p>There are more possibilities why validation can fail, like license expiry in case of time limited license.</p>
+<h4 id="validity---time"><a class="header" href="#validity---time">Validity - time</a></h4>
+<p>By default licenses are created perpetual, i.e. for unlimited time. If a license has a limited Validity time, that is checked by Navitrol at run-time. Navitrol logs validity information and expiration time in text log, and optionally raises a warning WARNING_LICENSE_EXPIRATION when a time limited license is about to expire soon. This warning period is defined with a parameter <strong>license_warning_period_days</strong>. Warning can be disabled by setting this parameter to 0.</p>
+<h4 id="validity---sw-version"><a class="header" href="#validity---sw-version">Validity - SW version</a></h4>
+<p>If a license has SW release version limitation, that is checked by Navitrol at start-up. Navitrol uses two digit version number (MAJOR.MINOR) to check this, which means that hotfixes are always allowed even if SW version limitation is defined.</p>
+<h3 id="system-time"><a class="header" href="#system-time">System time</a></h3>
+<p>System time being wrong or being tampered with, may result in license activation or validation to fail.</p>
+<p>Navitrol checks and monitors also system time on target to</p>
+<ul>
+<li>be close enough the network time (Online).</li>
+<li>not being tampered with, like time moved backwards.</li>
+</ul>
+<p>Time is allowed to move backwards only a limited amount to allow time changes related to day-time saving. If substantially larger time adjustments are detected, this is indicated as an error when activating or validating the license.</p>
+<h3 id="trial-license"><a class="header" href="#trial-license">Trial license</a></h3>
+<p>Trial licenses can be created for testing purposes. </p>
+<p><strong>NOTE:</strong> Navitrol requires that each Trial license is time limited. If a Validity time is not defined (unlimited) in a Trial license, Navitrol raises an error ERROR_LICENSE_CONTENT.</p>
+<h3 id="parameter-summary"><a class="header" href="#parameter-summary">Parameter summary</a></h3>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>license_server_addr</td><td>String</td><td>&quot;&quot;</td><td>License Server URL used for Floating license - ask for correct setting from Navitec Systems support</td></tr>
+<tr><td>license_warning_period_days</td><td>Int</td><td>0</td><td>Defines pre-warning time for time limited license expiry</td></tr>
+<tr><td>ads_enabled</td><td>Int</td><td>0</td><td>Enables ADS feature -  see note below</td></tr>
+<tr><td>ads_server_ip</td><td>String</td><td>0</td><td>IP adress for remote ADS Server -  see note below</td></tr>
+<tr><td>ads_server_netid</td><td>String</td><td>0</td><td>NetID for remote ADS server -  see note below</td></tr>
+</tbody></table>
+<p><strong>NOTE: ads_*</strong> parameters are relevant from licensing point of view only if Navitrol is run in Beckhoff IPC. Contact Navitec support for detailed information.</p>
+<hr />
+<h2 id="legacy-license"><a class="header" href="#legacy-license">Legacy license</a></h2>
+<p>Legacy licensing method is supported for now for backwards compatibility. Missing license will result in immediate ERROR_NO_LICENSE_CODE, so there is no more option to drive without a license.</p>
+<p>Legacy licensing has some practical limitations and short-comings from user point of view, like:</p>
+<ul>
+<li>Limited license models - supports only Offline Device-locked license.</li>
+<li>Limited amount of license options/features supported. Any recently created or future license options are not supported.</li>
+<li>Limited forward compatibility for licenses created for other SW version.</li>
+<li>License validation time can be rather long - in the worst case validation can take minutes.</li>
+<li>No trial licenses.</li>
+</ul>
+<h3 id="how-to-set-up-a-legacy-license"><a class="header" href="#how-to-set-up-a-legacy-license">How to set up a Legacy license</a></h3>
+<p>Steps to set up a Legacy license are:</p>
+<ul>
+<li>After Navitrol has run once successfully, a <code>license.txt</code> file is generated in folder <code>/home/navitec</code>.</li>
+<li>When ordering a license, one needs to define all the license options shall be included in the license.</li>
+<li>Provide the <code>license.txt</code> file generated in target HW for license generation.</li>
+<li>License is generated by the License Server and license is provided as a <code>licensekey.txt</code> file.</li>
+<li>File <code>licensekey.txt</code> is copied to Navitrol run folder (/home/navitec).</li>
+<li>License is validated each time Navitrol is restarted.</li>
+</ul>
+<hr />
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="logging-and-console-output"><a class="header" href="#logging-and-console-output">Logging and console output</a></h3>
+<p>All details related to logging and console output are subject to change. The basic principles will not however change.</p>
+<h4 id="text-log-license-section"><a class="header" href="#text-log-license-section">Text log license section</a></h4>
+<p>Licensing method, license options enabled, and other relevant license information are logged in the <code>license section</code> beginning of each text log file. </p>
+<p>Invalid license</p>
+<pre><code>REGULAR licensing used - License model DeviceLocked
+Normal Fingerprint
+LicenseKey 3A432A-E830E3-42FFAB-A35E2E-6D0317-F69792
+License validation error: The release version is not allowed.
+No valid license or license not validated
+</code></pre>
+<p>Valid license without options and limitations</p>
+<pre><code>REGULAR licensing used - License model Floating
+LicenseKey 258487-493DB4-4E0797-0896F5-4BA43D-988381
+License is not time limited
+License is not limited by SW version
+Valid license with no options in use
+</code></pre>
+<p>Valid license with options and limitations</p>
+<pre><code>REGULAR licensing used - License model Floating
+LicenseKey 258487-493DB4-4E0797-0896F5-4BA43D-988381
+License Expiry 2024.10.30
+License is limited to SW version 6.58
+Valid license with options in use
+License for option &quot;WarehouseRacking&quot; in use
+License for option &quot;DrivingDiffSteer&quot; in use
+</code></pre>
+<h4 id="logging-prefix"><a class="header" href="#logging-prefix">Logging prefix</a></h4>
+<p>License related logging in text logs has a prefix &quot;LIC:&quot;, making search for license related log lines easier.</p>
+<pre><code>0.7046 [-1:6]  LIC: License file read OK (status 1), KEY &quot;3A432A-E830E3-42FFAB-A35E2E-6D0317-F69792&quot;
+0.7050 [-1:2]  LIC: SetProductData - Success
+0.7056 [-1:2]  LIC: SetProductId - Success
+0.7061 [-1:2]  LIC: SetLicenseKey - Success
+0.7061 [-1:2]  LIC: SetReleaseVersion - Success
+0.7340 [-1:2]  LIC: IsLicenseGenuine - The release version is not allowed.
+0.7340 [-1:6]  LIC: License is not valid or not activated
+</code></pre>
+<p>This prefix is not used on console commands, like <code>./Navitrol licact</code>. </p>
+<pre><code>0.1363 [-9:2]  SetProductData - Success
+0.1369 [-9:2]  SetProductId - Success
+0.1376 [-9:2]  SetLicenseKey - Success
+0.1376 [-9:2]  SetReleaseVersion - Success
+</code></pre>
+<h4 id="license-method"><a class="header" href="#license-method">License method</a></h4>
+<p>License method used is logged in <code>license section</code> of text logs:</p>
+<p>In case of Regular licensing being used this <code>license section</code> starts with:</p>
+<pre><code>REGULAR licensing used (LibVer 3.21.2) - Activation mode DeviceLocked
+Normal Fingerprint
+LicenseKey 0744E5-925FE1-40BCAB-0D53DE-1207EB-614120
+</code></pre>
+<p>In case of Legacy licensing being used this <code>license section</code> starts with:</p>
+<pre><code>LEGACY licensing used
+License id,key 4091113304772258577,13541695821371515033
+</code></pre>
+<h4 id="enabled-license-options"><a class="header" href="#enabled-license-options">Enabled license options</a></h4>
+<p>All enabled license options are logged in <code>license section</code> of text log files. All options are logged in same style, regardless whether they are tied to parameters or something else:</p>
+<pre><code>LEGACY licensing used
+License id,key 9439414948331747385,14605972011522150860
+Valid license with options in use
+License for option &quot;Dynamic Mapping Server&quot; in use
+License for option &quot;Route Driver&quot; in use
+License for option &quot;Precision Positioning&quot; in use
+License for option &quot;Target Detection&quot; in use
+License for option &quot;External Localization&quot; in use
+License for option &quot;Obstacle Avoidance&quot; in use
+License for option &quot;Warehouse Racking&quot; in use
+License for option &quot;3D Object detection&quot; in use
+</code></pre>
+<h4 id="obsolete-license-options"><a class="header" href="#obsolete-license-options">Obsolete license options</a></h4>
+<p>License may contain obsolete options. Those are logged as shown below, telling also which option should be used instead.</p>
+<pre><code>LEGACY licensing used
+License id,key 9439414948331747385,14605972011522150860
+Valid license with options in use
+License for obsolete option &quot;Line Following&quot; defined - license for option &quot;External Localization&quot; is expected instead
+License for obsolete option &quot;External Localization - Docking&quot; defined - license for option &quot;External Localization&quot; is expected instead
+</code></pre>
+<h4 id="missing-license-options"><a class="header" href="#missing-license-options">Missing license options</a></h4>
+<p>Logging/console output for missing license options based on parameters looks like</p>
+<pre><code>1.4530 [-1:1]  LIC: Required License Option missing for StandAlone – parameter: I,route_driver_enabled
+</code></pre>
+<p>There is same kind of output for options not based on parameters</p>
+<pre><code>0.7627 [-1:1]  LIC: Required License Option missing for DrivingDiffSteer
+</code></pre>
+<h3 id="errors-and-warnings"><a class="header" href="#errors-and-warnings">Errors and Warnings</a></h3>
+<h4 id="351-warning_license_expiration"><a class="header" href="#351-warning_license_expiration">351 WARNING_LICENSE_EXPIRATION</a></h4>
+<p>Time limited license is about to expire soon. Time period is defined with parameter <strong>license_warning_period_days</strong>. Warning can be disabled by setting this parameter to 0.</p>
+<h4 id="106-error_no_license_code"><a class="header" href="#106-error_no_license_code">106 ERROR_NO_LICENSE_CODE</a></h4>
+<p>No valid license or license not yet activated.</p>
+<h4 id="217-error_license_option_missing"><a class="header" href="#217-error_license_option_missing">217 ERROR_LICENSE_OPTION_MISSING</a></h4>
+<p>License doesn't include permission to use a feature that has been activated.</p>
+<h4 id="228-error_license_file"><a class="header" href="#228-error_license_file">228 ERROR_LICENSE_FILE</a></h4>
+<p>License file invalid - missing or conflicting data in license file. Typical reason is:</p>
+<ul>
+<li>License file is manually manipulated.</li>
+</ul>
+<h4 id="229-error_license_content"><a class="header" href="#229-error_license_content">229 ERROR_LICENSE_CONTENT</a></h4>
+<p>License file information conflicts with the license content or license content is inconsistent. Possible reasons are:</p>
+<ul>
+<li>License file is manually manipulated.</li>
+<li>Trial license defined without validity.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../Introduction/OdometrySource/OdometrySource-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../Introduction/OdometrySource/OdometrySource-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

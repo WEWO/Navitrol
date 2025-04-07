@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Environment guidelines - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html" class="active"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="guidelines-for-the-environment"><a class="header" href="#guidelines-for-the-environment">Guidelines for the Environment</a></h1>
+<p>Updated 17.05.2024</p>
+<hr />
+<h2 id="navitrol-basic-positioning-principle"><a class="header" href="#navitrol-basic-positioning-principle">Navitrol basic positioning principle</a></h2>
+<p>Navitrol determines the machine position by using the odometry data from the wheels and correcting it with the data that is received from the laser scanners. The data from the laser scanners is matched with the map and this information is used for correcting the position. For the map, Navitrol can use both natural features and reflectors or either of them.
+There are different requirements for reflectors and natural features.</p>
+<p>Navitrol supports also other positioning methods and aids; like matrix codes, magnetic line, GPS (outdoor), IMU. Some of these methods are more like options for basic positioning, while some add accuracy and robustness. This document however focuses only on environment guidelines to be used for laser scanner position corrections.</p>
+<h2 id="scanner-features-and-their-effect-to-the-performance"><a class="header" href="#scanner-features-and-their-effect-to-the-performance">Scanner features and their effect to the performance</a></h2>
+<p>Different scanners have different performance. The features of the scanner affect both the accuracy of the positioning and the distance where the natural features can be seen.</p>
+<p>Modern laser scanners have a long measurement range with good data quality. For example laser scanners like:</p>
+<ul>
+<li>
+<p>Pepperl&amp;Fuchs R2000UHD</p>
+</li>
+<li>
+<p>Leuze RSL400 series</p>
+</li>
+<li>
+<p>Sick MicroScan/NanoScan</p>
+</li>
+</ul>
+<p>would be considered modern.</p>
+<p>For laser scanners that are not considered modern, a good rule of thumb is that they do not reliably see natural features from longer distances than 10 meters. Laser scanners like:</p>
+<ul>
+<li>
+<p>Sick S300</p>
+</li>
+<li>
+<p>Omron OS32C</p>
+</li>
+</ul>
+<p>can still be used but are not considered modern.</p>
+<h2 id="supported-reflector-types"><a class="header" href="#supported-reflector-types">Supported reflector types</a></h2>
+<p>Navitrol supports two reflector types, flat and round reflectors.
+Triangle (two flat reflectors together) shaped reflectors are not supported. Reflectors should be minimum 50 cm from each other.</p>
+<p>The reflectivity material matters also. The best one that is recommended especially to flat reflectors is 3M™ Diamond Grade™ DG Reflective Sheeting 4090 White. It is important that the microstructure / grooves are vertical; if not, the reflector will not work right.</p>
+<h2 id="what-are-the-criteria-that-result-in-a-map-with-good-environment"><a class="header" href="#what-are-the-criteria-that-result-in-a-map-with-good-environment">What are the criteria that result in a map with good environment</a></h2>
+<p><strong>Overview</strong></p>
+<p>Best results are achieved when the laser scanner can see static natural features, the more, the better. Also, the surface structure/finish, structure size and shape as well as the arrangement of the static features are important.</p>
+<p>When recording a map with a vehicle (AGV), one typically drives the vehicle through the area where the AGV will later drive on a route. It is not important that the route driven when mapping is identical to the production routing system. The critical part is that the route driven during mapping can see all the environment needed for navigation in the production route system and that the recorded map can be processed in the easiest way possible. Putting some thought into the mapping process will make life a lot easier, especially when mapping large areas. To be able to close the map, it is critical that the laser can see the identical environment points at the starting point and ending point of the mapping drive. Typically, one would overlap start and end a little bit. It is not important to exactly hit the same spot, just for the laser to see the same environment points. And in this area, it is very beneficial to have good static environment as this will allow for an easy and exact closing / of the map.</p>
+<p><strong>Good environment</strong></p>
+<p>When doing map matching, the easiest is to match the laser view to static features. When the static features are not blocked, close enough and have features in all directions, it is a good environment. In these cases, Navitrol can provide an accuracy that is +- 1 cm in position and +- 1 degree in heading.</p>
+<h3 id="natural-features"><a class="header" href="#natural-features">Natural features</a></h3>
+<p><img src="./media-en/GoodEnvironment.png" alt="" /></p>
+<blockquote>
+<p>Good environment.</p>
+</blockquote>
+<p>The example above shows a good environment if the AGV has two scanners, one facing forwards and the other facing backwards.
+A single 360 degree scanner would have the same benefits. Even if there is not that much environment, both scanners have 2 meters of wall visible in both directions - longitudinal and transversal. There are enough features to be seen even if one scanner gets blocked.</p>
+<p>All static natural features do not however perform the same, some type of features being totally unusable. It is quite typical that laser scanner view(s) tilt slightly while driving, due to uneven floor for example. When the scanner view is tilted, the laser beams at certain view angles may hit something else than expected. In case of longitudinal tilt</p>
+<ul>
+<li>
+<p>laser beams on the left/right sides are not considerably affected</p>
+</li>
+<li>
+<p>laser beams in front/rear directions are affected with full tilt angle -- hitting the target lower or higher than expected</p>
+</li>
+<li>
+<p>other beams then with varying amount depending on the direction of the beam</p>
+</li>
+</ul>
+<p>In the figure below some scenarios are presented.</p>
+<p><img src="./media-en/TiltedScanner.png" alt="" /></p>
+<blockquote>
+<p>Tilted scanner view with different natural features.</p>
+</blockquote>
+<p>In case A (optimal vertical feature, like a straight wall) small tilt angles causing the scanner beams to hit higher have no effect at all. For example at a 10 m distance the distance error would be &lt;2mm. On the other hand, when tilted downwards, the laser beams at longer distances start to hit the floor.
+When the scanner is mounted very low (as safety scanners typically are), the laser measurements start to deviate from the taught environment really heavily. This is actually a good thing as measurements that do not hit close to the environment are not used at all. If the measurements would hit the floor very close to the actual environment, then they might cause erroneous corrections. So, typically measurements hitting the floor result in &quot;lost&quot; measurements rather than wrong data being used. Whether this is a problem or not, depends on the amount and quality of the measurements not hitting the floor.</p>
+<p>In cases B, C and D, the tilting of the scanner may cause erroneous position corrections. Even minor tilt angles might make an impact at certain distances.</p>
+<p>It should be noted that issues in cases B, C and D are encountered also when the distance to the measured feature/target changes. So, a &quot;bad&quot; environment feature can cause issues even if there is a perfectly even floor and no tilting. Whenever possible, those kinds of features should not be included in the environment data at all or be covered by vertical artificial objects.</p>
+<h3 id="reflectors"><a class="header" href="#reflectors">Reflectors</a></h3>
+<p><img src="./media-en/Reflectors.png" alt="" /></p>
+<blockquote>
+<p>Reflectors</p>
+</blockquote>
+<p>The figure above shows an example of optimal reflector positioning.
+The scanners can see 4 reflectors and the reflectors are spread around the vehicle in such a way that blocking either scanner still leaves 2 reflectors visible. 2 reflectors is a minimum for positioning the vehicle with reflectors only.</p>
+<p>Reflectors are visible on longer distances than natural features. However, the accuracy that reflectors provide is not as good as from natural features because of the small amount of measurement points received from the reflectors.</p>
+<p>It should however be noted that if reflectors shall be used for automatic position initialization, symmetrical reflector positions like in the example above, is not a good solution as it can produce multiple equivalent vehicle positions.</p>
+<h2 id="what-are-the-minimum-requirements-for-the-environment-using-natural-features"><a class="header" href="#what-are-the-minimum-requirements-for-the-environment-using-natural-features">What are the minimum requirements for the environment using natural features</a></h2>
+<p>Navitrol uses odometer as a primary source for position update. The position from the odometry however drifts depending on wheel slippage and vehicle calibration errors. This is the reason why laser scanner data is used to define the vehicle position in global coordinates and correct the drift that accumulates.</p>
+<p>Navitrol can drive with odometry only. Because of the drift the position needs to be updated from features every now and then. In practice, the maximum distance the vehicle is capable to drive without scanner corrections is 15 meters in a straight path. When the vehicle is turning, the amount of error from the odometer is higher and in turns correction should always be possible in order not to lose position.</p>
+<h3 id="minimum-requirements-for-natural-features"><a class="header" href="#minimum-requirements-for-natural-features">Minimum requirements for natural features</a></h3>
+<p>Navitrol is capable to use very little of environment for matching.</p>
+<p><img src="./media-en/MinimumAmountFeatures.png" alt="" /></p>
+<blockquote>
+<p>Minimum amount of features needed for natural features navigation</p>
+</blockquote>
+<p>Figure above shows a situation where the AGV route is driven through an environment with pillars sized 1m*1m. These pillars are situated every 15 meters (spacing). When seeing a pillar, Navitrol can correct the position in both longitudinal and transversal direction. Depending on laser scanner measuring distance capability and angular resolution
+and/or temporary blocking of a pillar by a non-static object (human, cart, another vehicle, etc.), a single pillar only maybe visible to the AGV at times. In this case, XY position will not be a problem if any one of these features is able to give both longitudinal and transversal correction. However, heading can only be corrected when two of these features are visible at the same time.</p>
+<p>The environment described above should be considered a minimum environment for the common suitable laser scanner. 1 meter of natural features in both directions every 15 meters. With a high resolution laser, meaning a device with an angular resolution of 0.1 degree or better, positioning will be possible with further reduced environment.
+Please consult Navitec for such applications.</p>
+<h3 id="minimum-requirements-for-reflectors"><a class="header" href="#minimum-requirements-for-reflectors">Minimum requirements for reflectors</a></h3>
+<p>Navitrol needs to see minimum of 2 reflectors in order to define the position. In practice the amount of 3 reflectors should be visible when navigating using reflectors. These reflectors need to be installed so that they can be seen from different angles. Just seeing two reflectors in front of the machine does not provide the position accurately.</p>
+<h3 id="minimum-requirements-for-the-environment-with-both-reflectors-and-natural-features"><a class="header" href="#minimum-requirements-for-the-environment-with-both-reflectors-and-natural-features">Minimum requirements for the environment with both reflectors and natural features</a></h3>
+<p>Reflectors can be used in order to be able to define position in a case when there are not enough static features. Typical cases are for example corridors like in figure below. It is sufficient if one reflector at a time is visible. The transversal position and heading can be calculated from the corridor walls. Reflectors are however the only source for longitudinal correction.</p>
+<p><img src="./media-en/CorridorWithReflectors.png" alt="" /></p>
+<blockquote>
+<p>Corridor with reflectors</p>
+</blockquote>
+<h3 id="double-walls"><a class="header" href="#double-walls">Double walls</a></h3>
+<p>Double (or multiple) walls can occur in the environment for the following reasons:</p>
+<ul>
+<li>Problems in teaching and/or poorly matched teach data in Navithor Tools can result in features, like straight walls, being multiplied close to each other. A map including such multiplied features does not work properly for localization purposes. Those issues should be fixed in Navithor Tools by making a better teach file or being more careful in merging or erasing excessive environment – or any other corrective means.</li>
+<li>Some areas in the working environment are separated by a wall and the environment on both sides of that wall has been taught. In this case the double wall in the map is representing a real wall seen from opposite directions. See figure below.</li>
+</ul>
+<p><img src="./media-en/DoubleWall.png" alt="" /></p>
+<blockquote>
+<p>Double wall in the environment - indicated by a red rectangle.</p>
+</blockquote>
+<p>Even if these double walls in the map would represent a real wall seen from two directions, localization can be severely disturbed. As there are two more or less identical features close to each other, there is a possibility that localization locks to the wrong one. Issues can be expected especially if the wall is very thin, or if there are few or no other features aligned with the orientation of the wall (green rectangles). </p>
+<p>If double walls cause localization issues, and they are not essentially important for the localization, it is reasonable to remove those walls altogether from Navitrol map. Each case with double walls in the map is however unique. Therefore, there is no single clear guideline what to do, other than paying special attention to how localization works in such areas - remembering that in any position on the route it should be possible to detect sufficiently separated features providing both longitudinal and transversal position correction.</p>
+<h2 id="dynamic-mapping-lite"><a class="header" href="#dynamic-mapping-lite">Dynamic mapping lite</a></h2>
+<p>Dynamic mapping lite is a special feature, where Navitrol builds a local map adding on to previous measurements in the static map that was originally recorded. This local dynamic map is stored in the local memory in the IPC of the AGV for the last 15 meters (can be changed by parameters). Dynamic mapping lite does not make position more accurate.
+It helps in cases where the AGV needs to drive through an area where there are very little static contours, but enough dynamic features. Navitrol is able to correct position from these dynamic features. As a dynamic map can always drift, static features or reflectors are needed to lock the dynamic part to the original static map.</p>
+<h2 id="dynamic-mapping-full"><a class="header" href="#dynamic-mapping-full">Dynamic mapping full</a></h2>
+<p>Dynamic mapping full is an extension to dynamic mapping lite. It means that all the AGVs send the dynamic map lite data to a dynamic mapping server that combines the data and sends update to map to all the AGVs.
+This allows to navigate through an area that is gradually changing. When one AGV has mapped the area and another one drives to the same area, it can use the map that was stored by the first one. Repeating this, the map keeps changing all the time and will always be up to date assuming that there is a sufficient number of AGVs to record the changes.</p>
+<p>Dynamic mapping full needs also static features or reflectors. These are the only ones that lock the map to right coordinates. Otherwise, updating the map dynamically could cause drift that is not corrected.</p>
+<p>Dynamic mapping full cannot work in an environment where everything changes at once. If an AGV drives to a location where dynamic objects have moved and their locations have not been updated to the map, using dynamic mapping does not help, unless the area is sufficiently small.
+There is a requirement that position needs to be trusted in order to update the map. Therefore, a sufficient amount of features need to be in same location in order to be able to update the map. For example: If dynamic mapping is in a factory where there is a cleaning day, and on this day all the trolleys would be moved, the map would be out of date after that.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../Localization/ScannerCalibration/ScannerCalibration-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../Localization/ScannerCalibration/ScannerCalibration-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

@@ -1,0 +1,867 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Obstacle avoidance V2 - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html" class="active"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="obstacle-avoidance-v2"><a class="header" href="#obstacle-avoidance-v2">Obstacle avoidance V2</a></h1>
+<p>Updated 19.08.2024</p>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
+<p>Obstacle avoidance V2 is a feature which allows the AGV to detect obstacles and create bypass routes around them. The obstacle detection is performed using measurements from 2D laser scanners.
+When an obstacle has been detected, the bypass route is planned based on the measurements from the obstacle detection scanners, borders of obstacle avoidance zones and taught environment, so that the AGV does not collide with any of them.</p>
+<p>Obstacle avoidance can be helpful in production environments having dynamic objects, such as parked trucks, momentarily blocking the routes defined for the AGVs. In such case, AGV can bypass the obstacle instead of stopping and waiting it to be cleared.</p>
+<p><img src="./media-en/overviewCaseScaled.png" alt="" /></p>
+<blockquote>
+<p>An AGV having a drive order going trough the yellow wooden obstacles blocking the route drawn in blue</p>
+</blockquote>
+<p><img src="./media-en/overviewMonitor.png" alt="" /></p>
+<blockquote>
+<p>The violet bypass route that has been generated around the detected obstacles from the image above. <br/> The obstacle avoidance zone is rendered in light blue. Bypass routes are by default limited to be generated only within these areas.</p>
+</blockquote>
+<p><strong>Typical use case</strong>
+In a typical use case the AGV drives on a route in an area where obstacle avoidance is allowed. These areas are called obstacle avoidance zones. A box has been left farther away partly blocking the nominal route. When AGV approaches the box, obstacle detection sensors gets measurements from it and obstacle detection feature detects the approaching collision. At this point, AGV will slow down and continue driving closer. If the collision is still detected when the AGV arrives within a few meters from it, a bypass route around the obstacle is created starting from and ending to the original route.* If a new obstacle is detected on the bypass route, the AGV will replan the route to bypass it as well. When the AGV has successfully bypassed the obstacle(s), it will continue driving to the original destination.</p>
+<p>* When Navithor fleet control is used, Navitrol will wait for Navithor's bypass permission before starting a bypass to make sure that the bypass route does not collide with other AGVs in the fleet.</p>
+<p>Obstacle avoidance V2 utilizes the Navigation2 package of ROS2 (Robot Operating System).</p>
+<p>The Obstacle avoidance V2 feature is an improved solution compared to the <a href="../ObstacleAvoidance/ObstacleAvoidance-en.html">original obstacle avoidance feature</a>. The ROS version is capable of creating more advanced collision free routes in tighter spaces while also supporting curved route sections, as seen in the example image above. It is strongly recommended to use this new feature instead of the original one.</p>
+<h3 id="requirements"><a class="header" href="#requirements">Requirements</a></h3>
+<ul>
+<li>Obstacle avoidance license</li>
+<li>Position controlled AGV (e.g., position only is not supported)
+<ul>
+<li>All kinematic types are supported</li>
+</ul>
+</li>
+<li>Docker Engine &amp; Docker Compose to be installed
+<ul>
+<li>The installation requires internet connection</li>
+</ul>
+</li>
+<li>10GB of free hard disk space
+<ul>
+<li>5GB for the Obstacle avoidance V2 base Docker image</li>
+<li>5GB or more for storing (binary) logs</li>
+</ul>
+</li>
+<li>At least 1 2D scanner (connected either to Navitrol or ROS)
+<ul>
+<li>Up to maximum of 4 Navitrol scanners and 4 ROS scanners</li>
+<li>Scanner(s) must be installed so that they have line of sight to any possible obstacles that shall be avoided</li>
+<li>Navitrol's navigation scanners can be simultaneously used for positioning and obstacle avoidance</li>
+</ul>
+</li>
+<li>Environment with sufficient space for bypassing obstacles</li>
+<li>An IPC powerful enough to run ROS at the same time with Navitrol
+<ul>
+<li>For example VBOX-3121-i3</li>
+</ul>
+</li>
+</ul>
+<h3 id="limitations"><a class="header" href="#limitations">Limitations</a></h3>
+<p>The obstacle avoidance does not currently support</p>
+<ul>
+<li>Bypass routes starting with a direction change (e.g. current driving direction is completely blocked)</li>
+<li>Bypass routes starting from or ending in a route sections with a defined frame heading</li>
+<li>Defining a preferred bypass side (left / right) with respect to the obstacle</li>
+<li>Parameter change on-the-fly
+<ul>
+<li>When updating parameters, ROS Docker container must be manually restarted for the changes to take effect</li>
+</ul>
+</li>
+<li>Returning early to the nominal route in case the bypassed obstacle would disappear</li>
+<li>Multilevel production areas</li>
+</ul>
+<p>The feature is not fully optimized with</p>
+<ul>
+<li>Extremely large production environments
+<ul>
+<li>Recommend maximum size is 40 000 square meters (200m x 200m), which is suitable for e.g. VBOX-3121-i3 IPC hardware</li>
+<li>Production areas up to 250 000 square meter (500m x 500m) require at least 8 GB of memory</li>
+<li>Production areas up to maximum 1 000 000 square meter (1km x 1km) require at least 16 GB of memory</li>
+</ul>
+</li>
+<li>Moving obstacles</li>
+<li>Noisy sensor data</li>
+<li>Obstacles entering the very edge of the collision zone of the AGV</li>
+<li>Other fleet control types than Navithor (with standard communication)
+<ul>
+<li>With other fleet control types (e.g. VDA), the feature behaves like there is no fleet control enabled</li>
+</ul>
+</li>
+</ul>
+<p>The consequences in forementioned cases might cause</p>
+<ul>
+<li>Bypass route planning to be triggered too easily, too early or too late</li>
+<li>Unnecessarily long or complex bypass trajectories</li>
+<li>Being unable to bypass the obstacle</li>
+</ul>
+<p>Obstacle avoidance V2 is incompatible with following features</p>
+<ul>
+<li>Original obstacle avoidance</li>
+<li>Wall monitor</li>
+</ul>
+<p>Additionally, Obstacle avoidance V2 Docker container must be run on the same computer as the Navitrol software is running.</p>
+<h3 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h3>
+<ul>
+<li>Navithor or <a href="../Standalone/Standalone-en.html">Standalone</a> system</li>
+<li><a href="https://docs.docker.com/engine/install/debian/">Docker Engine &amp; Compose</a></li>
+<li>ROS interface</li>
+</ul>
+<hr />
+<h2 id="set-up"><a class="header" href="#set-up">Set up</a></h2>
+<h3 id="quick-start"><a class="header" href="#quick-start">Quick start</a></h3>
+<ol>
+<li><a href="#docker-engine-and-docker-compose-installation">Install Docker Engine and Docker Compose</a></li>
+<li><a href="#ros2-navigation2-installation">Install ROS2 Navigation2 libraries</a></li>
+<li><a href="#obstacle-avoidance-v2-docker-layer-installation">Install Obstacle avoidance V2 Docker layer</a></li>
+<li><a href="#set-ros-to-start-automatically-on-boot">Set ROS to start automatically on boot</a></li>
+<li><a href="#obstacle-avoidance-zones">Define obstacle avoidance zones</a></li>
+<li>Set <a href="#required-parameters">required parameters</a></li>
+<li>Reboot the IPC to launch Navitrol and ROS</li>
+</ol>
+<p>Note: When any changes to parameter, environment or segment file is made, <a href="#launching-obstacle-avoidance-v2">restart ROS Docker container</a>. Otherwise the changes won't be effective for ROS.</p>
+<h3 id="docker-engine-and-docker-compose-installation"><a class="header" href="#docker-engine-and-docker-compose-installation">Docker Engine and Docker Compose installation</a></h3>
+<p>Docker installations are required only on systems that do not have them already. For example, Navitec's official Bullseye Linux image has them preinstalled.</p>
+<p><strong>Checking the installation</strong></p>
+<p>To check, whether Docker Engine &amp; Docker Compose are installed, use commands</p>
+<pre><code>docker --version
+docker compose --version
+</code></pre>
+<p><strong>Note</strong>: Older versions of Docker require the command <code>docker compose</code> to be written as <code>docker-compose</code>.</p>
+<p>If they are installed the command output should be similar to:</p>
+<pre><code>Docker version &lt;version&gt;, build &lt;version&gt;
+docker compose version &lt;version&gt;, build &lt;version&gt;
+</code></pre>
+<p>If they are not installed the output looks similar to:</p>
+<pre><code>Command 'docker' not found
+</code></pre>
+<p>If they are installed, you can skip the &quot;Installing Docker Engine and Docker Compose&quot; instructions below and move to <a href="#ros2-navigation2-installation">ROS2 Navigation2 installation</a>.</p>
+<p><strong>Installing Docker Engine and Docker Compose</strong></p>
+<p>Instructions on how Docker Engine and Docker Compose can be installed following the &quot;Set up the repository&quot; &amp; &quot;Install Docker Engine&quot; sections from <a href="https://docs.docker.com/engine/install/debian/#set-up-the-repository">https://docs.docker.com/engine/install/debian/#set-up-the-repository</a></p>
+<p>Internet connection is highly recommended for the installation. Alternatively, an offline Debian package can be used, but managing the dependencies might require some effort.</p>
+<h3 id="ros2-navigation2-installation"><a class="header" href="#ros2-navigation2-installation">ROS2 Navigation2 installation</a></h3>
+<p>After Docker has been installed, deploy the Docker base image provided by Navitec for ROS2 Humble distribution &amp; ROS2 Navigation2 package:</p>
+<ol>
+<li>Transfer <code>ros2_navigation2_humble.tar.gz</code> Docker image to Navigation IPC (into any directory)</li>
+<li>In that directory, run command <code>docker load -i ros2_navigation2_humble.tar.gz</code></li>
+<li>Optionally, after successful installation, the <code>ros2_navigation2_humble.tar.gz</code> file can be removed from the IPC to free around 1GB of disk space</li>
+</ol>
+<p>To verify ROS2 Navigation2 Docker base image being installed successfully, run command <code>docker images</code>. The following line should exist in the output:</p>
+<pre><code>  REPOSITORY                       TAG                     IMAGE ID            CREATED                   SIZE
+  ros2_navigation2                 humble                  &lt;image-id&gt;          &lt;time-of-installation&gt;    &lt;image-size&gt;
+</code></pre>
+<p>This step is required to be performed only once (until a new Docker base image is provided by Navitec). There is <strong>no need</strong> to reinstall the ROS2 Navigation2 Docker base image everytime again when a new Navitrol Debian package is installed, as described in the <a href="#obstacle-avoidance-v2-docker-layer-installation">next step</a> below.</p>
+<h3 id="obstacle-avoidance-v2-docker-layer-installation"><a class="header" href="#obstacle-avoidance-v2-docker-layer-installation">Obstacle avoidance V2 Docker layer installation</a></h3>
+<p><strong>If the ROS2 Navigation2 Docker base image is successfully installed</strong> as described in the <a href="#ros2-navigation2-installation">previous step</a>, the Obstacle avoidance V2 Docker layer is installed automatically by the Debian installer package <code>Navitrol_&lt;version&gt;.deb</code>. The Navitrol Debian package is installed by running command</p>
+<pre><code>  dpkg -i Navitrol_&lt;version&gt;.deb
+</code></pre>
+<p>This will install</p>
+<ul>
+<li>Navitrol software</li>
+<li>Obstacle avoidance V2 Docker layer <code>nav_sw_ros_obstacle_avoidance</code></li>
+<li><code>ros_config/</code> directory</li>
+</ul>
+<p>To verify Obstacle avoidance V2 Docker layer being installed successfully, run command <code>docker images</code>. The following line should exist in the output:</p>
+<pre><code>  REPOSITORY                       TAG                     IMAGE ID            CREATED                   SIZE
+  nav_sw_ros_obstacle_avoidance    latest                  &lt;image-id&gt;          &lt;time-of-installation&gt;    &lt;image-size&gt;
+</code></pre>
+<p><strong>Note:</strong> After the <code>Navitrol_&lt;version&gt;.deb</code> package is installed, the script <code>startNavitrol.sh</code> is run automatically, which starts the Navitrol software. See the <a href="#set-ros-to-start-automatically-on-boot">next step</a> below to configure Obstacle avoidance V2 to be launched also automatically along the start up of Navitrol/IPC.</p>
+<h3 id="set-ros-to-start-automatically-on-boot"><a class="header" href="#set-ros-to-start-automatically-on-boot">Set ROS to start automatically on boot</a></h3>
+<p>To launch Obstacle avoidance V2 automatically when the IPC is booted, the <code>startNavitrol.sh</code> script located in <code>/home/navitec/</code> folder must be modified. Add the following line at the end of the <code>startNavitrol.sh</code> file:</p>
+<pre><code>$AGV_INSTALL_PATH/ros_config/scripts/startRos.sh
+</code></pre>
+<h3 id="obstacle-avoidance-zones"><a class="header" href="#obstacle-avoidance-zones">Obstacle avoidance zones</a></h3>
+<p>Obstacle avoidance is by default limited to be allowed only inside obstacle avoidance zones, which are defined in Tools.
+By default, obstacle avoidance (= bypass trajectory generation) is active only inside the zones, whereas obstacle detection (= stopping the AGV before obstacle) is active both inside and outside the zones.</p>
+<ul>
+<li>Check parameter <code>ros_obst_av_zone_mode</code> for further configuration</li>
+</ul>
+<p>The obstacle avoidance zones must have sufficient space to bypass obstacles while considering also the safety zones around the AGV.</p>
+<p>Following instructions assume that environment and routes are already defined.</p>
+<p><strong>Adding obstacle avoidance zones:</strong></p>
+<ol>
+<li>Select obstacle avoidance zone tool
+<ul>
+<li>From the left side menu, select <strong>Zones</strong> -&gt; <strong>Zones</strong> -&gt; <strong>Zone type</strong> -&gt; <strong>ObstacleAvoidanceZone</strong></li>
+</ul>
+</li>
+<li>Draw desired zone(s)</li>
+<li>Upload the environment to Navitrol/Navithor from <strong>Export | Upload</strong> menu</li>
+</ol>
+<p><img src="./media-en/complexBypassTools2.png" alt="" />
+&gt;Obstacle avoidance zone defined in an example Tools project around a simple route <br/> <strong>Note:</strong> The circles of static environment are added to represent obstacles. In reality, the locations of the obstacles are not known and the routes should never be drawn through known static environment.</p>
+<p><strong>Important notes:</strong></p>
+<ul>
+<li>&quot;Zone options&quot; are not effective
+<ul>
+<li>The &quot;zone options&quot; seen in the bottom left corner of the image above are relics related to the original obstacle avoidance feature.</li>
+<li>For example, setting a priority for bypassing direction is not possible. However, it is possible to limit the bypass direction by defining the zones so that there is room to bypass only from one side.</li>
+</ul>
+</li>
+<li>Route sections with defined frame heading are not supported. They can exist inside obstacle avoidance zones but bypass routes starting from or ending in those sections are discarded, possibly preventing a bypass.</li>
+</ul>
+<h3 id="required-parameters"><a class="header" href="#required-parameters">Required parameters</a></h3>
+<p>These are the minimum parameters that must be set in <code>params.txt</code> file to enable and use the feature.</p>
+<ul>
+<li><strong>Note:</strong> Use of <code>params_override.txt</code> file is <strong>not</strong> supported at the moment</li>
+</ul>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ros_enabled</td><td>Int</td><td>1</td><td>Enable ROS communication (min: 0, max: 1)</td></tr>
+<tr><td>ros_obst_av_mode</td><td>Int</td><td>1</td><td>Enable Obstacle avoidance V2 feature (min: 0, max: 1)</td></tr>
+<tr><td>ros_send_scan_data</td><td>Int</td><td>non zero</td><td>A bitmap value defining which scanners are used for ROS obstacle detection. Navitrol sends scanner data from the selected scanners to ROS <br/>The value is bitmapped, which means that e.g. sending rear &amp; front scanner data corresponds to value 3 in decimal, which is 0011 in binary<br/>- Bit 0: Rear<br/>- Bit 1: Front<br/>- Bit 2: Measurement 0<br/>- Bit 3: Measurement 1 <br/>(min: 0, max: 15)<br>See <a href="#navitrol-scanners-to-select-for-obstacle-detection">Appendix</a> section for full table of the possible combinations</td></tr>
+</tbody></table>
+<p><strong>Other parameters to check:</strong></p>
+<ul>
+<li>If the AGV has limited curvature (for example due to steer wheel angle limitations), <code>ros_obst_av_min_turning_radius</code> should be tuned accordingly.</li>
+<li>If obstacle detection (and avoidance) should be active only inside obstacle avoidance zones, set <code>ros_obst_av_zone_mode</code> to 2.</li>
+<li>If obstacle avoidance is desired to be used without obstacle avoidance zones (or outside them), set <code>ros_obst_av_zone_mode</code> to 0.</li>
+</ul>
+<h3 id="fine-tuning"><a class="header" href="#fine-tuning">Fine tuning</a></h3>
+<p>In addition to the required parameters there are several ways to fine tune the behavior of the obstacle avoidance feature. However, before fine tuning, it is recommend to test the feature first with only the required parameters.</p>
+<p>Note: If a parameter is not defined in the <code>params.txt</code>, its default value will be in use.</p>
+<h4 id="obstacle-detection"><a class="header" href="#obstacle-detection">Obstacle detection</a></h4>
+<p>Obstacle detection is a sub-feature responsible for detecting upcoming collisions on a driven route. An obstacle is detected when the algorithm detects one or more sensor measurements that would collide with the AGVs collision frame, if the AGV would keep driving the current route. Note that taught environment is not detected as an obstacle, unless sensor measurements are received from it.</p>
+<p>The collision frame is an obstacle free zone around the AGV, i.e. an extra safety area in addition to the AGV dimensions. Anything inside this frame is considered to collide with the AGV for purposes of obstacle detection.</p>
+<p>Smaller collision frame allows bypassing in tighter spaces while larger frame leaves more room between the AGV and an obstacle while bypassing.</p>
+<p><img src="./media-en/agvDimensions.png" alt="" /></p>
+<blockquote>
+<p>Collision frame and the parameters to define it</p>
+</blockquote>
+<p>Note, that <strong>dim_front</strong> &amp; <strong>dim_left</strong> are positive values, and <strong>dim_rear</strong> &amp; <strong>dim_right</strong> are negative values, whereas all the <strong>ros_obst_free_zone_</strong> values are positive.</p>
+<p><strong>Collision frame parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ros_obst_free_zone_front</td><td>Float</td><td>0.1</td><td>Extra safety area around the AGV added to the <strong>dim_front</strong> value used for obstacle detection and bypass route planning [m] (min: 0.0, max: 2.0)</td></tr>
+<tr><td>ros_obst_free_zone_rear</td><td>Float</td><td>0.1</td><td>Extra safety area around the AGV added to the <strong>dim_rear</strong> value used for obstacle detection and bypass route planning [m] (min: 0.0, max: 2.0)</td></tr>
+<tr><td>ros_obst_free_zone_left</td><td>Float</td><td>0.1</td><td>Extra safety area around the AGV added to the <strong>dim_left</strong> value used for obstacle detection and bypass route planning [m] (min: 0.0, max: 2.0)</td></tr>
+<tr><td>ros_obst_free_zone_right</td><td>Float</td><td>0.1</td><td>Extra safety area around the AGV added to the <strong>dim_right</strong> value used for obstacle detection and bypass route planning [m] (min: 0.0, max: 2.0)</td></tr>
+</tbody></table>
+<p>Unlike obstacle avoidance, by default the obstacle detection is always active, even when driving outside of the defined obstacle avoidance zones. In addition, it is important to note that obstacle detection only works for automatic drive orders and not for manual driving.</p>
+<p>Once a collision is detected on the current route the AGV is following, the collision frame will be visualized in Navitrol Monitor. See the image below.</p>
+<p><img src="./media-en/complexBypass1.png" alt="" /></p>
+<blockquote>
+<p>Monitor view of an detected obstacle that is blocking the current path (violet). The detected collision point is rendered as yellow circle and the collision frame as orange box around it.</p>
+</blockquote>
+<p><strong>Obstacle detection parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ros_obst_av_zone_mode</td><td>Int</td><td>1</td><td>Defines how obstacle avoidance zones affect obstacle avoidance and detection. <br/>- 0: Obstacles are detected and avoided everywhere.<br/>- 1: Obstacles are always detected but avoided only within the zones.<br/>- 2: Obstacles are detected and avoided only within the zones.<br/>Note:<br/>- Mode 0 does not allow bypass routes to go through obstacle avoidance zone edges. The bypass routes are generated either fully inside or outside the zones.<br/>- AGV is considered to be within a zone when it's navigation point is inside it. In practice, this means that with mode 2 obstacles will not be detected before the AGV enters the zone, even if the obstacle itself would be inside the zone.<br/>- In mode 2, if AGV's navigation point is inside the zone, obstacles outside the zones are detected, if AGV's collision frame would collide with them.</td></tr>
+<tr><td>ros_obst_det_dist</td><td>Int</td><td>10</td><td>How far ahead to check for collisions along the active route [m]. This does not affect the bypass route planning (min: 1, max: 20)</td></tr>
+<tr><td>ros_obst_det_slow_dist</td><td>Float</td><td>5.0</td><td>How much before a detected collision the AGV will start slowing down to speed defined by parameter <strong>pc_soft_slow_wheel_speed</strong> [m] (min: 0.1, max: 100.0)<br/>Greater values cause the AGV to drive slower for longer distance before an obstacle, thus giving more time for the obstacle to disappear from the route.<br/>Lower values might cause the AGV to overshoot the start of the bypass route</td></tr>
+<tr><td>ros_obst_det_stop_dist</td><td>Float</td><td>2.0</td><td>How much before a detected collision the AGV will stop [m] (min: 0.1, max: 25.0)<br/>Small values might lead the AGV to stop too close to the obstacle, which will reduce the chance of finding a bypass route around it<br/>Greater values might require the obstacle avoidance zones to be extended from the entry side, otherwise the AGV might stop before being completely inside the zone, causing bypass route planning to fail<br/>The value <strong>must be</strong> smaller than <strong>ros_obst_av_bypass_planning_dist</strong></td></tr>
+<tr><td>ros_obst_det_max_scan_dist</td><td>Float</td><td>0.0</td><td>Maximum scanner range measurement to consider for obstacle detection [m] (min: 0.0, max: 40.0)<br/> - 0.0: Use value <code>ros_obst_det_dist</code> for collision detection and <code>ros_obst_av_max_plan_dist</code> for bypass route planning</td></tr>
+</tbody></table>
+<h4 id="bypass-route-calculation"><a class="header" href="#bypass-route-calculation">Bypass route calculation</a></h4>
+<p>Bypass route calculation is the part of obstacle avoidance feature responsible for generating the bypass routes around the obstacles.</p>
+<p>The bypass route calculation uses a larger <em>planning frame</em> instead of the <em>collision frame</em> for checking if planned bypass routes would collide with the static environment, the current sensor measurements or obstacle avoidance zone borders. This helps the AGV to avoid driving too close to the obstacles at its sides, as a bypass route will be calculated a bit further away from obstacles than the collision frame would require.</p>
+<p>The planning frame is defined by multiplying each of the collision frame's dimension with the value of <strong>ros_obst_free_zone_gain_for_planning</strong> parameter as seen in the figure below.</p>
+<p><img src="./media-en/planningFrame.png" alt="" /></p>
+<blockquote>
+<p>Planning frame and the parameter to define its size visualized</p>
+</blockquote>
+<p><strong>Basics of the bypass route calculation:</strong></p>
+<p>The bypass route calculation is based on five key points in relation to the navigation point of the agv:</p>
+<ol>
+<li><em>The first collision point</em> is the first point along the route where the planning frame would collide with the detected obstacle(s).</li>
+<li><em>The last collision point</em> is the last point along the route where the planning frame would collide with the detected obstacle(s).</li>
+<li><em>Bypass route planning point</em> is the point from where the bypass route calculation starts. In other words, when the AGV reaches this point, the feature tries to calculate a bypass. If a collision free route is found, the AGV will proceed to bypass the obstacle along it. The planning point is always located at <strong>ros_obst_av_bypass_planning_dist</strong> before the first collision point.</li>
+<li><em>Bypass route diverge point</em> is the point from where the bypass route will diverge from the current route. It is located <strong>ros_obst_av_bypass_start_dist</strong> distance from the first collision point. Note that the distance can be smaller, if the AGV is already closer than <strong>ros_obst_av_min_diverge_dist</strong> from the planned diverge point.</li>
+<li><em>Bypass route merging point</em> is the point where the bypass route will merge back to the nominal route. It is located <strong>ros_obst_av_bypass_end_dist</strong> ahead from the last collision point of a particular obstacle, but is moved further away in steps of <strong>ros_obst_av_plan_step_dist</strong> in case the merge point is not reachable. See more info a bit below in <strong>Active bypass route planning</strong>
+<ol>
+<li><strong>Note:</strong> Merge point is always set to the nominal route. In case of an obstacle appearing on currently driven bypass trajectory, the first possible merge point will be set <strong>ros_obst_av_bypass_start_dist</strong> + <strong>ros_obst_av_bypass_end_dist</strong> ahead from bypass route's diverge point projected to the nominal route (in case of no obstacles, otherwise further)</li>
+</ol>
+</li>
+</ol>
+<p><img src="./media-en/bypassPlanningSimple.png" alt="" /></p>
+<blockquote>
+<p>Bypass route calculation key points and parameters visualized:<br/>- The <em>first collision point</em> is defined by the navigation point location on the route where the red planning frame would collide with the detected obstacle<br/>- The <em>bypass route planning point</em> is located <strong>ros_obst_av_bypass_planning_dist</strong> from the first collision point. (Gray AGV)<br/>- The <em>bypass route diverge point</em> is located <strong>ros_obst_av_bypass_start_dist</strong> from the first collision point. (AGV silhouette on the left)<br/>- The <em>bypass route merging point</em> is located <strong>ros_obst_av_bypass_end_dist</strong> from last collision point (AGV silhouette on the right)</p>
+</blockquote>
+<p>In case of many obstacles, the merging point can be calculated between two obstacles, if the distance between two collision points is greater than the sum of the diverge and merging distances (<strong>ros_obst_av_bypass_start_dist</strong> + <strong>ros_obst_av_bypass_end_dist</strong>) as shown in the image below:</p>
+<p><img src="./media-en/bypassPlanningComplex.png" alt="" /></p>
+<blockquote>
+<p>The bypass route diverging before Obstacle 1 is calculated to merge between Obstacles 2 &amp; 3, as the available space between these obstacles is greater than the sum of the diverge and merging distances. In turn, the space between the Obstacles 1 &amp; 2 is not sufficient, meaning that the bypass route won't be merged there.</p>
+</blockquote>
+<p><strong>Active bypass route planning</strong></p>
+<p>When bypass route planning is active, this is indicated (in Navitrol Monitor) by</p>
+<ul>
+<li>Warning <code>WARNING_BYPASS_ROUTE_PLANNING_ACTIVE</code></li>
+<li>Green control points on the trajectory</li>
+</ul>
+<p><img src="./media-en/bypassControlPointsPlanning.png" alt="" /></p>
+<blockquote>
+<p>Bypass route over the obstacle is being calculated. The first green control point (closer to the AGV) indicates, from which point on the nominal route the bypass route is attempted to be diverged. The second green control point (behind the obstacle) indicates, to which point on the nominal route the bypass route is attempted to be merged. In this case, a valid bypass route will not be found (as there is not enough room for the AGV to squeeze through the small gap).</p>
+</blockquote>
+<p><img src="./media-en/bypassControlPointsPlanned.png" alt="" /></p>
+<blockquote>
+<p>If a valid bypass route can not be found for an attempted merge point (1.), a new merge point candidate (2.) will be taken further ahead by a distance defined with parameter <code>ros_obst_av_plan_step_dist</code>. This is repeated (3. &amp; 4.) until a valid bypass route is found (4.). If the distance between AGV's navigation point and the merge point candidate exceeds the limit defined with parameter <code>ros_obst_av_max_plan_dist</code>, the iteration starts again from the first merge point candidate (1.).</p>
+</blockquote>
+<blockquote>
+<p>Note: If parameter <code>ros_obst_av_max_plan_dist_prioritized</code> is set (value 1), the iteration order is reversed to start/go from point (4.) towards point (1.).</p>
+</blockquote>
+<p><strong>Effect of obstacle avoidance zones to bypass route calculation</strong></p>
+<p>The bypass route calculation is started when the navigation point of the AGV enters the zone, see <em>bypass route planning point</em>. However, It is important to note, that the <ins>borders of the obstacle avoidance zones are considered as obstacles</ins> when calculating bypass trajectories. This means, that the planning frame must be <ins>completely</ins> inside the zone before bypassing an obstacle is possible.</p>
+<p><img src="./media-en/bypassPlanningZoneEdge.png" alt="" /></p>
+<blockquote>
+<p>Bypass route calculation near the obstacle avoidance zone borders: <br/>- Green circle: AGV navigation point is inside the obstacle zone, so the bypass route planning is activated when withing the <em>bypass planning point</em> distance from the obstacle.<br/>- Red circle: Finding any valid bypass trajectories will fail, as the AGV won't fit completely inside the obstacle avoidance zone after the obstacle. Reducing the parameter <strong>ros_obst_av_bypass_end_dist</strong>, or increasing the obstacle avoidance zone could help in this case.<br/></p>
+</blockquote>
+<p>Known issue: Before end of the zone there has to be available space at least the sum of the parameter values <strong>ros_obst_av_bypass_end_dist</strong> &amp; <strong>ros_obst_av_bypass_start_dist</strong> even if only <strong>ros_obst_av_bypass_end_dist</strong> would be required in practice. See the image below.</p>
+<p><img src="./media-en/bypassPlanningZoneEnd.png" alt="" /></p>
+<blockquote>
+<p>Returning to route just before end of obstacle avoidance zone requires at least <strong>ros_obst_av_bypass_end_dist</strong> &amp; <strong>ros_obst_av_bypass_start_dist</strong> of free space.</p>
+</blockquote>
+<p><strong>Bypass route calculation parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ros_obst_av_min_turning_radius</td><td>Float</td><td>0.4</td><td>Minimum turning radius for the bypass routes [m] (min: 0.05, max: 10.0)<br/>Smaller values allow more tight turns during the bypass while larger values make the bypass routes smoother. Should not exceed the capabilities of a steer angle limited AGVs</td></tr>
+<tr><td>ros_obst_av_bypass_planning_dist</td><td>Float</td><td>3.0</td><td>How much before a <em>first collision point</em> to start planning for a new bypass route [m]. See <em>Bypass route planning point</em> (min: 0.0, max: 10.0)<br/>Larger values can cause unnecessary bypass routes to be calculated for moving obstacles<br/>Smaller values might lead the AGV to drive too close to the obstacle, which will reduce the chances of finding a bypass route<br/>The value <ins>must be</ins> greater than <strong>ros_obst_av_bypass_start_dist</strong> and <strong>ros_obst_det_stop_dist</strong></td></tr>
+<tr><td>ros_obst_av_bypass_start_dist</td><td>Float</td><td>1.0</td><td>Defines how much before the <em>first collision point</em> to diverge the bypass route from nominal route [m] See <em>Bypass route diverge point</em> (min: 0.0, max: 10.0)<br/>Larger values usually result in smoother start connections but can reduce the chance of finding bypass routes at the end of the obstacle avoidance zone<br/>Smaller values reduce the chance of finding bypass routes especially if <strong>ros_obst_av_min_turning_radius</strong> is large<br/>The value <ins>must be</ins> smaller than <strong>ros_obst_av_bypass_planning_dist</strong> and <strong>ros_obst_det_stop_dist</strong></td></tr>
+<tr><td>ros_obst_av_bypass_end_dist</td><td>Float</td><td>1.0</td><td>The minimum distance from the <em>last collision point</em> to merge the bypass route back to nominal route [m] See <em>Bypass route diverge point</em> (min: 0.0, max: 10.0)<br/>If this merging distance from the obstacle is not achievable, <strong>ros_obst_av_plan_step_dist</strong> will be incrementally added to the previous merging distance target up to <strong>ros_obst_av_max_plan_dist</strong> or the end of the current obstacle avoidance zone to search for potential return points<br/>Larger values can reduce the chance of finding bypass routes at the end of the obstacle avoidance zone<br/>Smaller values might cause looping bypass routes</td></tr>
+<tr><td>ros_obst_av_plan_step_dist</td><td>Float</td><td>1.0</td><td>How much to shift forward a new potential merging point on nominal route after a failed bypass route planning attempt [m] (min: 0.05, max: 10.0)<br/>Small values will the keep the bypass route's merging point more closer to the target <strong>ros_obst_av_bypass_end_dist</strong> value, but might increase the bypass route calculation time in general</td></tr>
+<tr><td>ros_obst_av_max_plan_dist</td><td>Float</td><td>20.0</td><td>How far ahead (along the nominal route) to check collisions and free space for a return point to nominal route [m] (min: 5.0, max: 40.0)<br/>Increasing this value will improve the success rate of calculating bypass routes over long/complex obstacles with slight performance reduction</td></tr>
+<tr><td>ros_obst_av_max_plan_dist_prioritized</td><td>Int</td><td>0</td><td>Prioritize calculating bypass routes directly to the maximum planning distance ahead</br>- 0: Disabled</br>- 1: Enabled</td></tr>
+<tr><td>ros_obst_av_min_diverge_dist</td><td>Float</td><td>0.3</td><td>Minimum distance to use for suggested diverge point from current AGV location [m] (min: 0.0, max: 1.0)<br/>Values close to zero might lead bypass route to drift away from AGVs current location in case of multiple route replannings and thus cause position errors<br/>Larger values decrease generally the success rate of finding valid bypass routes, when obstacle is close to the AGV</td></tr>
+<tr><td>ros_obst_free_zone_gain_for_planning</td><td>Float</td><td>1.3</td><td>AGV dimension multiplier for route planning, see <em>planning frame</em> (min: 1.0, max: 2.0) <br/>Increasing the value makes the route planner to calculate routes further away from the obstacle while reducíng the general success rate of finding bypass trajectories<br/>Smaller values might cause AGV ending up too close to an obstacle during the bypass and becoming unable to continue</td></tr>
+</tbody></table>
+<h4 id="scanner-data-filtering"><a class="header" href="#scanner-data-filtering">Scanner data filtering</a></h4>
+<p>Scanner data filtering is a sub feature that can be used to reduce the number of false positives in obstacle detection caused by noisy sensor data. The incorrectly detected obstacles can cause the AGV to stuck behind an obstacle that does not exist in reality or drive unnecessary or overly complex bypass routes.</p>
+<p><img src="./media-en/noisyData.png" alt="" /></p>
+<blockquote>
+<p>An example case of noisy sensor data causing the obstacle detection to react for a non-existing obstacle.</p>
+</blockquote>
+<p>There are two ways to filter out the scanner data:</p>
+<ol>
+<li>Limit certain scanner angles to be disabled
+<ul>
+<li>See Scanner Configurations document's <a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html#universal-scanner-parameters">Universal scanner parameters</a> chapter.</li>
+</ul>
+</li>
+<li>Filter single or group of scan points out
+<ul>
+<li>See &quot;Cluster filter&quot; and &quot;Intense filter&quot; below</li>
+</ul>
+</li>
+</ol>
+<p><strong>Cluster filter</strong></p>
+<p>The Cluster filter categorizes the scan points into groups, and deletes those which have less than <strong>ros_scan_filter_min_cluster_size</strong> amount of points in them. The filter compares current scan point's range value to previous scan points' ranges up to <strong>ros_scan_filter_sector_size</strong> points back. If the range difference distance (<strong>ros_scan_filter_max_range_diff</strong>) is less than the previous points' ranges, the scan point is grouped together with the point having the least range difference. In other case, the scan point creates a new group (= cluster).</p>
+<p><img src="./media-en/scanFilterClusterSector.png" alt="" /></p>
+<blockquote>
+<p>Cluster filter's <em>point ranges</em> and <em>sector size</em> visualized</p>
+</blockquote>
+<p><img src="./media-en/scanFilterClusterRange.png" alt="" /></p>
+<blockquote>
+<p>An example of cluster filtering done with values <em>sector size</em> = 1, <em>minimum cluster size</em> = 3 and <em>maximum range difference</em> as shown in the picture. The black points are filtered out. <br/>If the <em>minimum cluster size</em> was set to 4, the blue points would have been filtered out also.</p>
+</blockquote>
+<p>The recommended values to start with are</p>
+<ul>
+<li><strong>ros_scan_filter_max_range_diff</strong> = 0.1 (m)</li>
+<li><strong>ros_scan_filter_sector_size</strong> = 3</li>
+<li><strong>ros_scan_filter_min_cluster_size</strong> = 3</li>
+</ul>
+<p><strong>Intense filter</strong></p>
+<p>Intense filter compares each scan point's range value to it's neighbors' ranges. The amount of the selected neighbors points <strong>from each side</strong> of a particular scan point is defined with the parameter <strong>ros_scan_filter_sector_size</strong>. If any of the neighbors' ranges is greater than the <strong>ros_scan_filter_max_range_diff</strong>, the scan point is filtered out.</p>
+<p><img src="./media-en/scanFilterIntenseSector.png" alt="" /></p>
+<blockquote>
+<p>Intense filtering <em>point ranges</em> and <em>filter sector size</em> visualized</p>
+</blockquote>
+<p><img src="./media-en/scanFilterIntenseRange.png" alt="" /></p>
+<blockquote>
+<p>An example of intense filtering done with values <em>sector size</em> = 1 and <em>maximum range difference</em> as shown in the picture. The black points are filtered out.</p>
+</blockquote>
+<p>Intense filter is recommended only when there is a need for a really heavy filtering, and the tuning of the cluster filter does not seem to be effective enough. It is important to note that this filter will remove also the valid scan points around the noisy ones.</p>
+<p>The recommended values to start with are</p>
+<ul>
+<li><strong>ros_scan_filter_max_range_diff</strong> = 0.1 (m)</li>
+<li><strong>ros_scan_filter_sector_size</strong> = 1</li>
+</ul>
+<p><strong>Scanner data filtering parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ros_scan_filter_mode</td><td>Int</td><td>0</td><td>Selects the filtering mode for scanner measurements for noisy data <br/>0: Disabled<br/>1: Cluster filter - Recommended<br/>2: Intense filter<br/>See filter descriptions and images above<br/>Note that scanner data filtering is disabled by default as it is not needed if the scanner data is not noisy. The filtering takes more computation resources and can cause too much filtering for low resolution scanners.</td></tr>
+<tr><td>ros_scan_filter_max_range_diff</td><td>Float</td><td>0.1</td><td>How much an individual scan point's range can differ at max from the surrounding scan points to prevent filtering out [m]. Reducing the value increases the amount of total scan points being filtered out<br/>See filter descriptions and images above<br/> (min: 0.01, max: 10.0)</td></tr>
+<tr><td>ros_scan_filter_sector_size</td><td>Int</td><td>3</td><td>Amount of surrounding scan points (from one side) to take into comparison with the current scan point.<br/>Increasing the value decreases the amount of points filtered out for the cluster filter and increases it for the intense filter.<br/> For intense filter recommended start value is 1<br/>See filter descriptions and images above<br/> (min: 1, max: 10)</td></tr>
+<tr><td>ros_scan_filter_min_cluster_size</td><td>Int</td><td>3</td><td>Minimum amount of scan points needed in a cluster group to prevent filtering out. Increasing the value increases the amount of total scan points being filtered out. <br/>This is effective only with the Cluster filter mode<br/>See filter descriptions and images above<br/> (min: 2, max: 30)</td></tr>
+</tbody></table>
+<h4 id="driving-on-a-bypass-route"><a class="header" href="#driving-on-a-bypass-route">Driving on a bypass route</a></h4>
+<p>The driving during the bypass and before it can be adjusted with following parameters.</p>
+<p><strong>Bypass driving parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ros_obst_av_soft_stop_enabled</td><td>Int</td><td>1</td><td>Defines whether soft or hard stop should be used when the obstacle avoidance feature stops the AGV (for example when a close obstacle is detected). The soft stop is generally better for the hardware and hard stop stops the AGV faster as Navitrol sets the speed references instantly to zero without ramping them down.<br/>0:  Use hard stop <br/>1:  Use soft stop</td></tr>
+<tr><td>ros_obst_av_bypass_start_slow_dist</td><td>Float</td><td>1.5</td><td>The distance [m] how far before the <em>bypass diverge point</em> to start slow down to <strong>pc_soft_slow_wheel_speed</strong> (min: 0.1, max: 30.0)<br/>Distance is calculated along the route from navigation point to a route point, in which the first obstacle would violate the <em>collision frame</em>. Larger values leave more time to calculate the bypass path without stopping</td></tr>
+<tr><td>ros_obst_av_bypass_velocity</td><td>Float</td><td>0.3</td><td>AGV's maximum velocity on bypass route [m] (min: 0.01, max: 3.0)<br/>Smaller values increase navigation accuracy and safety in general during bypasses</td></tr>
+</tbody></table>
+<h4 id="reverting-a-bypass"><a class="header" href="#reverting-a-bypass">Reverting a bypass</a></h4>
+<p>When the AGV is bypassing an obstacle, it is possible that the planned bypass route proves blocked as well. If a new bypass route cannot be calculated around the blockage, the options are to either wait for the obstacles to move or return back to nominal by reverting the bypass.</p>
+<p><strong>Bypass revert parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ros_obst_av_reverse_to_nominal_mode</td><td>Int</td><td>0</td><td>Whether to backtrack back to nominal route in case AGV got stuck on bypass route<br/>0: Do not reverse to nominal. Wait for obstacles to move <br/> 1: Reverse to nominal by backtracking the driven bypass route</td></tr>
+<tr><td>ros_obst_av_max_wait_time_before_reversing_sec</td><td>Int</td><td>10</td><td>How long to wait in seconds before starting to backtrack (min: 1, max: 900)<br/>- Has no effect if <strong>ros_obst_av_reverse_to_nominal_mode</strong> is set to zero<br/>- Countdown starts after <strong>ros_obst_av_bypass_trigger_wait_time</strong> has elapsed</td></tr>
+<tr><td>ros_obst_av_return_to_nominal_max_dist_diff</td><td>Float</td><td>0.05</td><td>Defines the distance [m] from target point when the backtracking is considered completed. Adjust only if instructed to</td></tr>
+<tr><td>ros_obst_av_return_to_nominal_max_angle_diff_deg</td><td>Float</td><td>5.0</td><td>Defines the angle [deg] from target point when the backtracking is considered completed (min: 0.1, max: 180.0) Adjust only if instructed to</td></tr>
+</tbody></table>
+<h4 id="logging"><a class="header" href="#logging">Logging</a></h4>
+<p>See general <a href="../../Miscellaneous/Logging/Logging-en.html">Logging</a> document for Navitrol logging.</p>
+<p>Obstacle avoidance V2 has a separate logging system for ROS data in addition to the to normal Navitrol logging.</p>
+<ul>
+<li>ROS binary logs are saved into <code>/home/navitec/ros_logs/</code> directory and are helpful for solving more complex ROS side issues. The ROS binary data can be visualized e.g. with RViz of Foxglove Studio software. Note, that binary logging uses significant amount of computer's computational resources, and should not be enabled if not needed.</li>
+<li>ROS text logs are handled by Docker's JSON log driver, which are kept on temporarily files in Docker system during the run.</li>
+</ul>
+<p>Both the text and binary logs can be compressed to a single <code>ros_logs.tar.gz</code> by running <code>/home/navitec/scripts/takeRosLogs.sh</code> script. The file will be saved into Navitrol's log <code>/home/navitec/logs/</code> directory.</p>
+<p>ROS logging mode is defined with the parameter <strong>ros_log_mode</strong>, which is by default set to 1 (= log detailed text logs). The <code>start_log.txt</code> is always created in the <code>/home/navitec/ros_logs/</code> directory, which can be used for troubleshooting an unsuccessful start up of the Obstacle avoidance V2.</p>
+<p>It is important to note, that the <code>ros_logs/</code> directory is cleared on every new ROS launch, and the compressed <code>ros_logs.tar.gz</code> file is replaced by new logs when <code>takeRosLogs.sh</code> script is run. <strong>Please remember to rename/copy the compressed log file before running the script again.</strong></p>
+<p>The amount of used hard disk space for ROS logging is defined mostly by two factors:</p>
+<ul>
+<li>The environment/map size and the length of the binary data recording (<strong>ros_log_duration_s</strong>), if binary logging is enabled. This can be up to gigabytes.</li>
+<li>Text logging is limited by default to 100 megabytes (10 * 10MB files), which covers about 10 minutes of detailed level logging. This can be tuned by changing the values for <code>max-size</code> and <code>max-file</code> variables in <code>ros_config/docker/docker-compose.yml</code> file under <code>logging: options:</code>.</li>
+</ul>
+<p><strong>Navitrol logging parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>log_ros</td><td>Int</td><td>0</td><td>Defines the level of obstacle avoidance logging. Should be 0 in production and 2 when taking a log for bypass route calculation related issue.<br/>0: Minimum logging level<br/>1: Detailed logging enabled<br/>2: Detailed route logging enabled.</td></tr>
+<tr><td>log_get_traj</td><td>Int</td><td>0</td><td>Defines the logging level for general trajectory generation. Should be increased when taking a log about trajectory related errors related to obstacle avoidance<br/>0: Minimum level<br/>1: Detailed logging</td></tr>
+</tbody></table>
+<p><strong>ROS logging parameters</strong></p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ros_log_mode</td><td>Int</td><td>1</td><td>Defines if ROS text and binary logs are recorded<br/>0: Simple text logs<br/>1: Detailed text logs<br/>2: Detailed text and binary data logs</td></tr>
+<tr><td>ros_log_duration_s</td><td>Int</td><td>100</td><td>Maximum duration [s] for ROS binary logs. Larger values will make the binary logs cover more history but use more hard drive space (min: 30, max: 300)</td></tr>
+<tr><td>ros_obst_av_publish_map</td><td>Int</td><td>1</td><td>Defines if ROS global costmap is published. Recorded to binary logs if <code>ros_log_mode</code> is set to 2<br/>0: Disabled<br/>1: Only costmap updates <em>(recommended)</em><br/>2: Full costmap <em>(not recommended due to performance issues)</em></td></tr>
+</tbody></table>
+<h4 id="timers"><a class="header" href="#timers">Timers</a></h4>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ros_obst_av_bypass_trigger_wait_time</td><td>Float</td><td>0.0</td><td>How long to wait before triggering bypass route calculation once the distance to the obstacle is less than <strong>ros_obst_av_bypass_planning_dist</strong> [s] (min: 0.0, max: 60.0)<br/>- Disabled by value 0.0</td></tr>
+<tr><td>ros_obst_av_bypass_trigger_reset_time</td><td>Float</td><td>0.0</td><td>How long to wait before resetting the bypass route calculation trigger [s] (min: 0.0, max: 60.0)<br/>- Prevents the <strong>ros_obst_av_bypass_trigger_wait_time</strong> countdown from starting again, if the obstacle disappears from the route momentarily e.g. due to movement or noise<br/>- Disabled by value 0.0</td></tr>
+<tr><td>ros_obst_av_max_wait_time_sec</td><td>Int</td><td>10</td><td>Maximum waiting time [s] for bypass route calculation before raising the WARNING_UNABLE_TO_BYPASS_OBSTACLE (min: 0, max: 18000)<br/>- This warning is only an indication for the operator that the AGV might be unable to bypass an obstacle and manual intervention might be needed to clear the obstacle<br/>- Warning can be disabled by value 0<br/>- Countdown starts after <strong>ros_obst_av_bypass_trigger_wait_time</strong> has elapsed</td></tr>
+<tr><td>ros_obst_av_fleet_control_request_timeout_s</td><td>Int</td><td>10</td><td>Maximum waiting time [s] for bypass request for fleet control before raising WARNING_CANNOT_BYPASS_DID_NOT_GET_FLEET_CONTROL_PERMISSION and retrying (min: 1, max: 60). <br/> In general should not need to be adjusted but increasing the value can help, if communication delays between Navitrol and the Fleet Control are common</td></tr>
+</tbody></table>
+<h4 id="advanced---ros-scanners"><a class="header" href="#advanced---ros-scanners">Advanced - ROS scanners</a></h4>
+<p>For obstacle detection, up to 4 ROS scanners can be used along with the Navitrol scanners.</p>
+<p>Setting up the ROS scanners and related Navitrol parameters requires basic knowledge of ROS, and expert level understanding the concepts of ROS topics and ROS TF. For these reasons, <ins>it is recommended to use Navitrol scanners</ins>, see <strong>ros_send_scan_data</strong>.</p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ros_obst_det_scanner_enabled_arr[]</td><td>Int</td><td>0</td><td>Enable external ROS scanner for obstacle detection (min: 0, max: 1)</td></tr>
+<tr><td>ros_obst_det_scanner_topic_arr[]</td><td>String</td><td>&quot;&quot;</td><td>ROS scanner topic</td></tr>
+<tr><td>ros_obst_det_scanner_frame_arr[]</td><td>String</td><td>&quot;&quot;</td><td>ROS scanner frame</td></tr>
+<tr><td>ros_obst_det_scanner_x_arr[]</td><td>Float</td><td>0.0</td><td>ROS scanner x position [m] with respect to navigation point</td></tr>
+<tr><td>ros_obst_det_scanner_y_arr[]</td><td>Float</td><td>0.0</td><td>ROS scanner y position [m]  with respect to navigation point</td></tr>
+<tr><td>ros_obst_det_scanner_h_arr[]</td><td>Float</td><td>0.0</td><td>ROS scanner orientation [deg] with respect to navigation point</td></tr>
+<tr><td>ros_obst_det_scanner_upside_down_arr[]</td><td>Int</td><td>0</td><td>ROS scanner is installed upside down (flipped over Y-axis) (min: 0, max: 1)</td></tr>
+<tr><td>ros_obst_det_create_scanner_frame_arr[]</td><td>Int</td><td>1</td><td>Create and publish automatically ROS scanner coordinate frame and transform based on<br/>- <strong>ros_obst_det_scanner_frame_arr</strong><br/>- <strong>ros_obst_det_scanner_&lt;x/y/h&gt;_arr</strong><br/>- <strong>ros_obst_det_scanner_upside_down_arr</strong><br/>parameters (min: 0, max: 1)</td></tr>
+</tbody></table>
+<h4 id="advanced---general"><a class="header" href="#advanced---general">Advanced - General</a></h4>
+<p>ROS specific configuration settings, which are <strong>not</strong> needed to be modified usually. Requires basic/expert level knowledge of ROS concepts, such as</p>
+<table><thead><tr><th>Concept</th><th>Description</th></tr></thead><tbody>
+<tr><td>Topic</td><td>Data channel</td></tr>
+<tr><td>TF</td><td>Coordinate transform</td></tr>
+<tr><td>Costmap</td><td>Environment representation</td></tr>
+<tr><td>URDF</td><td>Robot model description</td></tr>
+</tbody></table>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>ros_auto_config</td><td>Integer</td><td>1</td><td>Defines if Navitrol parameter, environment and segment files are automatically converted for ROS (into <code>ros_config/</code> folder). The modified/generated files are<br/>- <code>ros_params.yaml</code><br/>- <code>agv/agv.urdf</code><br/>- <code>map/map.yaml</code><br/>- <code>map/map.pgm</code><br/>Disabling the auto configuration allows defining the parameters manually for ROS. <ins>Adjust only if instructed to</ins><br/>0: Do not convert anything<br/>1: Convert all data<br/>2: Convert all data except URDF (<code>ros_config/agv/agv.urdf</code>)</td></tr>
+</tbody></table>
+<hr />
+<h2 id="how-to-use"><a class="header" href="#how-to-use">How to use</a></h2>
+<h3 id="example-use-case"><a class="header" href="#example-use-case">Example use case</a></h3>
+<p>Following figures describe an example obstacle avoidance case where the AGV is given an drive order but on the route there is three (round) obstacles which the AGV must bypass to be able to reach the destination.</p>
+<p>First the obstacle detection detects the first two obstacles and starts the bypass route calculation:</p>
+<p><img src="./media-en/complexBypass1.png" alt="" /></p>
+<blockquote>
+<p>Obstacle detection detects the obstacle based on the green scanner points and renders the collision frame (orange rectangle) and (yellow) collision point.</p>
+</blockquote>
+<p>Bypass route calculation generates a bypass path to avoid the detected obstacles.</p>
+<p><img src="./media-en/complexBypass2.png" alt="" /></p>
+<blockquote>
+<p>The bypass route around the first two obstacles. It was calculated to merge back to the nominal route after the second obstacle, as there was not enough space available between the first two obstacles.</p>
+</blockquote>
+<p>The third obstacle is detected while bypassing the second.</p>
+<p><img src="./media-en/complexBypass3.png" alt="" /></p>
+<blockquote>
+<p>When a new obstacle is detected either on the nominal or bypass route, the collision frame will be again visualized.</p>
+</blockquote>
+<p>The bypass route around the third obstacle is calculated when the distance <ins>along the current route</ins> to the collision point from AGV's current location is below the <strong>ros_obst_av_bypass_planning_dist</strong>.</p>
+<p><img src="./media-en/complexBypass4.png" alt="" /></p>
+<blockquote>
+<p>Bypass route around the third obstacle</p>
+</blockquote>
+<h3 id="launching-obstacle-avoidance-v2"><a class="header" href="#launching-obstacle-avoidance-v2">Launching Obstacle avoidance V2</a></h3>
+<p>If the setup is done correctly, Obstacle avoidance V2 launches automatically with Navitrol whenever the IPC is powered up / rebooted. For manual launch, see <a href="#manual-control-of-ros-docker">Manual control of ROS Docker</a> chapter.</p>
+<h3 id="taking-ros-logs"><a class="header" href="#taking-ros-logs">Taking ROS logs</a></h3>
+<p>See <a href="#logging">Logging</a> for taking ROS text and binary logs. Shortly, run script <code>/home/navitec/scripts/takeRosLogs.sh</code> and pick up the created <code>ros_logs.tar.gz</code> from <code>/home/navitec/logs</code> directory.</p>
+<hr />
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<p>This chapter explains the most common issues, errors and warnings related to the issue.
+If you cannot resolve your issue by following these instructions please</p>
+<ol>
+<li>Set <strong>log_ros</strong> to value 2, <strong>log_get_traj</strong> to value 3, and <strong>ros_log_mode</strong> to value 2</li>
+<li>Reboot the IPC</li>
+<li>Reproduce the issue</li>
+<li>Take <a href="../../Miscellaneous/Logging/Logging-en.html">Navitrol</a> and <a href="#taking-ros-logs">ROS</a> log</li>
+<li>Deliver the logs and issue description to Navitec support</li>
+</ol>
+<p>Note: Please prefer setting the three aforementioned parameters back to their default values before putting the AGV back to production to save some hardware resources</p>
+<h3 id="most-common-issues"><a class="header" href="#most-common-issues">Most common issues</a></h3>
+<h4 id="a-script-does-not-work"><a class="header" href="#a-script-does-not-work">A script does not work</a></h4>
+<p>Typically this is caused by missing execution rights. Try running the script again after giving <code>sudo chmod +x &lt;script_name&gt;</code> command.
+Make sure that the script exists in the correct folder and the name and the commands are correctly written.</p>
+<h4 id="updated-parameters-or-environment-have-no-effect"><a class="header" href="#updated-parameters-or-environment-have-no-effect">Updated parameters or environment have no effect</a></h4>
+<p>Typically this is caused by forgetting to restart the ROS Docker container after updating the parameter/environment/segment files. Easiest way to restart the Docker is to boot the IPC but it can be also restarted <a href="#manual-control-of-ros-docker">manually</a>.</p>
+<h4 id="agv-does-not-detect-an-obstacle"><a class="header" href="#agv-does-not-detect-an-obstacle">AGV does not detect an obstacle</a></h4>
+<p>If the obstacle is not detected make sure that:</p>
+<ol>
+<li>The feature is enabled, see <a href="#required-parameters">required parameters</a></li>
+<li>The detection scanners are selected and installed so that they see the obstacles</li>
+<li>If <code>ros_obst_av_zone_mode</code> is set to 2, AGV will detect obstacles only when it's navigation point is inside an obstacle avoidance zone</li>
+</ol>
+<h4 id="agv-does-not-bypass-an-obstacle"><a class="header" href="#agv-does-not-bypass-an-obstacle">AGV does not bypass an obstacle</a></h4>
+<p>There is several reasons why AGV might not bypass the detected obstacle:</p>
+<ul>
+<li>
+<p><strong>The defined obstacle avoidance zone is too small</strong></p>
+<ul>
+<li>Note, that the <em>planning frame</em> must fit completely inside the zone borders.</li>
+<li>Increase the size of the obstacle avoidance zone if feasible</li>
+<li>Or decrease the size of <em>planning frame</em></li>
+</ul>
+</li>
+<li>
+<p><strong>The obstacle is too close</strong></p>
+<ul>
+<li>AGV is too close to the detected obstacle to bypass it. Typically this occurs only if the obstacle is detected too late, obstacle moves closer after detection or the stop and planning distances are set too small. Note that the obstacle avoidance does not support starting the bypass with a direction change. For the first two issues the only solution is to clear the obstacles from the route.</li>
+<li>For the planning distance check that:
+<ul>
+<li><code>ros_obst_det_stop_dist</code> is not unnecessarily small</li>
+<li><code>ros_obst_av_min_turning_radius</code> is not larger than it has to be</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>No obstacle avoidance zone is defined</strong></p>
+<ul>
+<li>If parameter <code>ros_obst_av_zone_mode</code> is greater than 0, bypass trajectory planning can occur only when AGV's navigation point is inside obstacle avoidance zone</li>
+</ul>
+</li>
+</ul>
+<p>Check also if any of the <a href="#errors-and-warnings">Errors and warnings</a> are active for more information.</p>
+<h4 id="agv-cannot-reach-a-target-point-near-static-environment"><a class="header" href="#agv-cannot-reach-a-target-point-near-static-environment">AGV cannot reach a target point near static environment</a></h4>
+<p>By default, obstacle detection is always enabled also outside obstacle avoidance zones, meaning that obstacle detection might stop the AGV e.g. in situation where AGV is trying to dock to a charging station. Obstacle detection can be disabled outside obstacle detection zones by setting parameter <code>ros_obst_av_zone_mode</code> to 2.</p>
+<h3 id="errors-and-warnings"><a class="header" href="#errors-and-warnings">Errors and warnings</a></h3>
+<h4 id="835---error_ros_no_connection"><a class="header" href="#835---error_ros_no_connection">835 - ERROR_ROS_NO_CONNECTION</a></h4>
+<p>This error indicates that the connection between ROS and Navitrol is not working. It is set when Navitrol does not get any messages over ROS interface in 500 ms.</p>
+<p>Check file <code>/home/navitec/ros_logs/start_log.txt</code>, for hints why ROS Docker container is not starting correctly.</p>
+<p>The error is automatically reset when the communication resumes.</p>
+<h4 id="837---error_obstacle_avoidance_v2_communication_timeout"><a class="header" href="#837---error_obstacle_avoidance_v2_communication_timeout">837 - ERROR_OBSTACLE_AVOIDANCE_V2_COMMUNICATION_TIMEOUT</a></h4>
+<p>This error indicates delays in the communication between Navitrol and Obstacle avoidance V2 node. The error is set when Navitrol does not receive data from the obstacle avoidance node for over 1 second.</p>
+<p>Check file <code>/home/navitec/ros_logs/start_log.txt</code>, which might give a hint of incorrect configuration. In addition to that, check that</p>
+<ul>
+<li>Parameter <strong>ros_enabled</strong> is set to 1</li>
+<li>Parameter <strong>ros_log_mode</strong> is set lower than 2</li>
+<li>There exist only one environment file (<code>env_*.nte</code>) and one segment file (<code>seg*.xml</code>)</li>
+</ul>
+<p>The error is automatically reset when the communication resumes.</p>
+<p>If the error appears often, the IPC might lack of sufficient amount of performance resources. See more info from warning <a href="#623---warning_obstacle_avoidance_v2_high_dt">623 - WARNING_OBSTACLE_AVOIDANCE_V2_HIGH_DT</a></p>
+<h4 id="622---warning_obstacle_detected"><a class="header" href="#622---warning_obstacle_detected">622 - WARNING_OBSTACLE_DETECTED</a></h4>
+<p>This warning informs the operator that the obstacle detection has detected an obstacle on current route. The point on a route where the collision would happen is visualized in Navitrol Monitor.</p>
+<p>The warning is automatically reset when there is no longer obstacles on the current route. The reset typically happens when the obstacle either moves away or a bypass route is created around it.</p>
+<p>If the warning remains active and the AGV is stopped for a longer time, check other active errors and warnings for more information.</p>
+<h4 id="936---warning_unable_to_bypass_obstacle"><a class="header" href="#936---warning_unable_to_bypass_obstacle">936 - WARNING_UNABLE_TO_BYPASS_OBSTACLE</a></h4>
+<p>This warning indicates that creating an bypass route around the obstacle has taken longer than expected and it is likely that the obstacle cannot be bypassed without manual intervention.
+If WARNING_OBSTACLE_TOO_CLOSE or WARNING_OBST_AV_V2_PATH_REJECTED_DUE_FRAME_HEADING is also active, try to solve them first as they are more specific reasons for the AGV not being able to bypass an obstacle.</p>
+<p>The expected time is defined by <strong>ros_obst_av_max_wait_time_sec</strong> + <strong>ros_obst_av_bypass_trigger_wait_time</strong> parameters by default. If reversing to nominal is enabled with  <strong>ros_obst_av_reverse_to_nominal_mode</strong> parameter, this warning is also set when the reverse starts after <strong>ros_obst_av_max_wait_time_before_reversing_sec</strong> + <strong>ros_obst_av_bypass_trigger_wait_time</strong>.</p>
+<p>This warning is automatically reset in case the detected obstacle or dynamic environment around the AGV changes so that a bypass becomes possible. However, it is recommended that the operator manually checks and resolves the situation in case the route is blocked for a long time.</p>
+<h4 id="628---warning_obstacle_too_close"><a class="header" href="#628---warning_obstacle_too_close">628 - WARNING_OBSTACLE_TOO_CLOSE</a></h4>
+<p>This warning indicates that the detected collision point is closer than 10cm from AGVs current position and bypassing it will not be possible</p>
+<p>The warning is automatically cleared if the obstacle is cleared or moves further from the AGV.</p>
+<h4 id="937---warning_obst_av_v2_path_rejected_due_frame_heading"><a class="header" href="#937---warning_obst_av_v2_path_rejected_due_frame_heading">937 - WARNING_OBST_AV_V2_PATH_REJECTED_DUE_FRAME_HEADING</a></h4>
+<p>This warning indicates that Navitrol rejects a route provided by ROS because it would start from or end to a route with a defined frame heading, which is not supported.</p>
+<p>If the warning remains active while the AGV is stopped for a longer time, bypassing is most likely prevented by the route sections with frame heading. In which case the either the detected obstacle must be cleared from the route or the frame headings removed from those routes using Navithor Tools.</p>
+<p>The warning is automatically reset if a suitable route is found or when the obstacle is cleared.</p>
+<h4 id="936---warning_obst_av_v2_path_ended"><a class="header" href="#936---warning_obst_av_v2_path_ended">936 - WARNING_OBST_AV_V2_PATH_ENDED</a></h4>
+<p>This warning indicates that the AGV has reached the end of the active route while on a bypass route instead of nominal. This is caused by route handling issue between Navitrol and ROS.</p>
+<p>To fix this error drive the AGV manually back to nominal route. Additionally, take a log and send it to Navitec support.</p>
+<h4 id="623---warning_obstacle_avoidance_v2_high_dt"><a class="header" href="#623---warning_obstacle_avoidance_v2_high_dt">623 - WARNING_OBSTACLE_AVOIDANCE_V2_HIGH_DT</a></h4>
+<p>This warning indicates that the hardware lacks of sufficient computational resources. The main factors for a higher performance usage are</p>
+<ul>
+<li>Large environments / production areas</li>
+<li>Large AGV frame size</li>
+<li>Long scanner measurements</li>
+<li>Collision checking for a long part of the trajectory</li>
+</ul>
+<p>Methods for saving computational resources by adjusting parameters is to reduce the value of the following ones:</p>
+<ul>
+<li><code>ros_obst_av_max_plan_dist</code> -&gt; Reduce collision checking distance ahead</li>
+<li><code>ros_obst_det_max_scan_dist</code> -&gt; Reduce scanner measurement range for obstacle avoidance - less environment area is needed to update</li>
+<li><code>ros_obst_av_publish_map</code> (to 0) -&gt; Disable publishing costmap data for logging purposes</li>
+</ul>
+<h4 id="624---warning_waiting_obstacle_bypass_permission"><a class="header" href="#624---warning_waiting_obstacle_bypass_permission">624 - WARNING_WAITING_OBSTACLE_BYPASS_PERMISSION</a></h4>
+<p>This warning indicates that Navitrol is waiting for a permission from Navithor fleet control before starting a bypass.</p>
+<p>The warning is automatically reset when an answer is received from Navithor either approving or rejecting the offered bypass route or if time defined by <strong>ros_obst_av_fleet_control_request_timeout</strong> parameter has been passed without an answer.</p>
+<h4 id="630---warning_cannot_bypass_did_not_get_fleet_control_permission"><a class="header" href="#630---warning_cannot_bypass_did_not_get_fleet_control_permission">630 - WARNING_CANNOT_BYPASS_DID_NOT_GET_FLEET_CONTROL_PERMISSION</a></h4>
+<p>This warning indicates that the fleet control has rejected a suggested bypass route. One reason for rejection is that the bypass route would collide with another AGV of the fleet.</p>
+<p>Obstacle avoidance V2 will continue to suggest new bypass routes until one is accepted by the fleet control. However, if the warning stays active for long, manual intervention might be required.</p>
+<h4 id="659---warning_obstacle_avoidance_v2_suspended"><a class="header" href="#659---warning_obstacle_avoidance_v2_suspended">659 - WARNING_OBSTACLE_AVOIDANCE_V2_SUSPENDED</a></h4>
+<p>This warning indicates that obstacle avoidance has been suspended due to other feature being active. The conflicting features are</p>
+<ul>
+<li>SLAM</li>
+</ul>
+<h4 id="662---warning_bypass_route_planning_active"><a class="header" href="#662---warning_bypass_route_planning_active">662 - WARNING_BYPASS_ROUTE_PLANNING_ACTIVE</a></h4>
+<p>This warning indicates that obstacle avoidance has activated bypass route planning, making the AGV to not trespass the planned diverge point until</p>
+<ul>
+<li>Bypass route is found (and accepted by Navithor)</li>
+<li>Finding a bypass route failed</li>
+</ul>
+<h2 id="advanced-troubleshooting"><a class="header" href="#advanced-troubleshooting">Advanced troubleshooting</a></h2>
+<h3 id="log-keywords"><a class="header" href="#log-keywords">Log keywords</a></h3>
+<p>Following keywords can be used to search more information from Navitrol logs on specific points of interest. They are case sensitive.</p>
+<table><thead><tr><th>Point of interest</th><th>Keyword</th><th>Use case</th></tr></thead><tbody>
+<tr><td>Everything</td><td>&quot;[ROS_OA]&quot;</td><td>Works as a start point if not quite sure what goes wrong</td></tr>
+<tr><td>Messages between Navitrol and ROS</td><td>&quot;ros_inte&quot;</td><td>Helpful when suspecting that something goes wrong in Navitrol - ROS communication</td></tr>
+</tbody></table>
+<h3 id="manual-control-of-ros-docker"><a class="header" href="#manual-control-of-ros-docker">Manual control of ROS Docker</a></h3>
+<p>Typically ROS Docker does not need manual interaction after it has been set to start automatically on system boot. However, it can be launched and stopped manually using terminal commands with superuser privileges:</p>
+<p><strong>Manual launch</strong></p>
+<ul>
+<li><code>cd /home/navitec/ros_config/scripts/</code></li>
+<li><code>./startRos.sh</code></li>
+</ul>
+<p><strong>Manual stop</strong></p>
+<ul>
+<li><code>cd /home/navitec/ros_config/scripts/</code></li>
+<li><code>./stopNavitrolAndRos.sh</code></li>
+</ul>
+<p><strong>Checking Docker status</strong>
+To check running containers and their statuses and IDs, run command <code>docker ps -a</code>
+<img src="./media-en/dockerPsCommand.png" alt="" /></p>
+<p><strong>Viewing output of ROS Docker container</strong>
+The Docker container output can be printed into terminal to e.g. troubleshoot Obstacle avoidance V2 issues. There are few ways to achieve this:</p>
+<ul>
+<li>At runtime (non-active): See container output by typing command <code>docker logs --follow ros_obstacle_avoidance</code></li>
+<li>At runtime (active): Attach to the container running in the background by typing command <code>docker attach ros_obstacle_avoidance</code></li>
+<li>At launch (active): Remove argument <code>-d</code> from <code>docker compose up -d -V --force-recreate</code> command in <code>/home/navitec/ros_config/scripts/startRos.sh</code> script, and run <code>/home/navitec/startNavitrol.sh</code> script again</li>
+</ul>
+<p>Methods tagged with</p>
+<ul>
+<li><em>non-active</em> will only follow the container output, and pressing e.g. command <code>Ctrl + C</code> to exit the container will <strong>not</strong> shutdown the container</li>
+<li><em>active</em> will have an active keyboard control to the container. This means, that pressing e.g. command <code>Ctrl + C</code> to exit the container will also shutdown the container from running</li>
+</ul>
+<p><strong>ROS Docker container status is Exited</strong>
+If the status of the obstacle avoidance container is &quot;Exited&quot;, the Obstacle avoidance V2 is not running. Check that</p>
+<ul>
+<li>There is no invalid configuration set (see file <code>ros_logs/start_log.txt</code>)</li>
+<li>ROS container itself has not countered an error
+<ul>
+<li>Run script <code>ros_config/scripts/takeRosLogs.sh</code></li>
+<li>Open file <code>ros_logs/*-json.log</code> (without trailing number)
+<ul>
+<li>For example, the following error might appear, if the used Docker (Compose) version is too old<br/>
+<img src="./media-en/dockerPermissionError.png" alt="" /><br/>
+The permission issue above has been encountered at least with the version shown below. Please update the <a href="#docker-engine-and-docker-compose-installation">Docker Engine &amp; Compose</a> versions to newest ones.<br/>
+<img src="./media-en/tooOldDockerVersion.png" alt="" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="appendix"><a class="header" href="#appendix">Appendix</a></h2>
+<h3 id="navitrol-scanners-to-select-for-obstacle-detection"><a class="header" href="#navitrol-scanners-to-select-for-obstacle-detection">Navitrol scanners to select for obstacle detection</a></h3>
+<p>Below is a complete list of all the possible value combinations for parameter <code>ros_send_scan_data</code>. This value defines, which Navitrol scanners are used for ROS obstacle detection</p>
+<table><thead><tr><th>Value for<br>the parameter</th><th>Value in<br>binary</th><th>Selected scanners for obstacle detection</th></tr></thead><tbody>
+<tr><td>0</td><td>0000</td><td>No scanner selected</td></tr>
+<tr><td>1</td><td>0001</td><td>Rear scanner selected</td></tr>
+<tr><td>2</td><td>0010</td><td>Front scanner selected</td></tr>
+<tr><td>3</td><td>0011</td><td>Front &amp; rear scanners selected</td></tr>
+<tr><td>4</td><td>0100</td><td>Measurement 0 scanner selected</td></tr>
+<tr><td>5</td><td>0101</td><td>Measurement 0 &amp; rear scanners selected</td></tr>
+<tr><td>6</td><td>0110</td><td>Measurement 0 &amp; front scanners selected</td></tr>
+<tr><td>7</td><td>0111</td><td>Measurement 0, front &amp; rear scanners selected</td></tr>
+<tr><td>8</td><td>1000</td><td>Measurement 1 scanner selected</td></tr>
+<tr><td>9</td><td>1001</td><td>Measurement 1 &amp; rear scanners selected</td></tr>
+<tr><td>10</td><td>1010</td><td>Measurement 1 &amp; front scanners selected</td></tr>
+<tr><td>11</td><td>1011</td><td>Measurement 1, front &amp; rear scanners selected</td></tr>
+<tr><td>12</td><td>1100</td><td>Measurement 1 &amp; measurement 0 scanners selected</td></tr>
+<tr><td>13</td><td>1101</td><td>Measurement 1, measurement 0 &amp; rear scanners selected</td></tr>
+<tr><td>14</td><td>1110</td><td>Measurement 1, measurement 0 &amp; front scanners selected</td></tr>
+<tr><td>15</td><td>1111</td><td>Measurement 1, measurement 0, front &amp; rear scanners selected</td></tr>
+</tbody></table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../DriveControl/ContainerDriving/ContainerDriving-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../DriveControl/ContainerDriving/ContainerDriving-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

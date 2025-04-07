@@ -1,0 +1,582 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Loading from a stack - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html" class="active"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="stack-loading-guide"><a class="header" href="#stack-loading-guide">Stack Loading Guide</a></h1>
+<p>Updated 13.09.2024</p>
+<hr />
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>Stackloading is a feature to pick up pallet from the top of the pallet stack. </p>
+<h3 id="requirements"><a class="header" href="#requirements">Requirements</a></h3>
+<ul>
+<li>Sensor to detect the pockets of the pallet
+<ul>
+<li>Scanner attached to the fork (See Figure 1 for sensor location).
+Required to scan the whole stack while increasing the fork. </li>
+<li>Possible to use any kind of sensor with <a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html">external target detection</a> </li>
+</ul>
+</li>
+<li>Possible safety sensors on the tip of the fork to stop the AGV if it is pushing something while driving in to the pocket. </li>
+</ul>
+<p><img src="./media-en/figure1.png" alt="" /></p>
+<blockquote>
+<p>Figure 1: Example picture</p>
+</blockquote>
+<h3 id="specification"><a class="header" href="#specification">Specification</a></h3>
+<p>This chapter describes the steps that AGV performs when doing the stackloading feature. This can be used as help to check what happens or what might go wrong. See also the end of this document about the pictures of the sequence.</p>
+<ul>
+<li>
+<p>AGV drives towards the Pickup symbolic point where StackLoading is enabled</p>
+</li>
+<li>
+<p>When the undermost pallet in the closest stack to AGV is detected, the stackloading sequence starts and the AGV drives with the forks at route height towards the pallet. At defined distance, the AGV is stopped for scanning the stack and warning <strong>WARNING_CHANGING_LOAD_OR_UNLOAD_HEIGHT</strong> is shown.</p>
+</li>
+<li>
+<p>AGV starts scanning the stack of pallets by increasing the fork height. This step and the next step are skipped with <strong>stack_loading_stop_increase</strong> 5. Then fork is only increased to the estimated height given with the drive order from Navithor and AGV waits for a response from <a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html">external target detection</a> before it can continue driving.</p>
+</li>
+<li>
+<p>AGV stop increasing the fork based on what method is used</p>
+<ul>
+<li>
+<p>Occupancy check: If the scanner doesn't see enough points on the area where the first pallet was detected, stop increasing the fork.</p>
+</li>
+<li>
+<p>Leg detection: Stop increase if legs are not detected for a while.</p>
+</li>
+<li>
+<p>Leg detection v2: Stop increase if legs are not detected for a certain height.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>AGV starts decreasing the fork to the top pallet pocket. The pocket positions and sizes are stored to the system while doing the increase. There is also parameter to define how much the fork can be decreased from this height. If the target pocket height is too low, error is set.</p>
+</li>
+<li>
+<p>If the top pocket is not large enough for the fork to drive in, the next suitable pocket will be chosen. The pocket min and max size can be set with parameters.</p>
+</li>
+<li>
+<p>When the fork height is set to pocket level, the AGV starts driving to the pallet and performs pickup.</p>
+</li>
+<li>
+<p>While lifting the pallet up, the load sensor can be used to check if the pallet is correctly placed on the fork.</p>
+</li>
+<li>
+<p>The assumption is that the pallets on the stack are aligned same way as the bottom pallet.</p>
+</li>
+<li>
+<p>After the load is complete, the AGV will start driving out from the stack.</p>
+</li>
+<li>
+<p>When it reaches the same position, where it was increasing the fork, it will decrease the fork to the route level.</p>
+</li>
+<li>
+<p>AGV continues driving to the unload symbolic point.</p>
+</li>
+</ul>
+<p>This warning is used when the scanning is active: <strong>WARNING_CHANGING_LOAD_OR_UNLOAD_HEIGHT</strong>.</p>
+<p>It is enabled when the fork is started to increase for scanning the pallets and reset after the fork is moved to the pocket height and the AGV is ready for driving in to the pocket.</p>
+<h3 id="limitations"><a class="header" href="#limitations">Limitations</a></h3>
+<ul>
+<li>
+<p>Stackloading feature depends a lot on the leg detection part of the <a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html">pallet detection</a> algorithm. Note that pallet detection includes linear model detection (straight line that has the same width as the pallet) and leg detection. If linear model is found, then leg detection is not done. This linear model detection can be used to filter out false positives on leg detection as leg detection might detect straight lines as legs. If the leg detection can't detect the legs properly, it will affect to the stackloading success rate. Exception is the external target detection, where Navitrol only relies on external sensor input and does not do the leg detection.</p>
+</li>
+<li>
+<p>At the moment, there is no proper way in Navitrol to detect if the AGV pushes the pallet while driving in to the pocket. This would require additional sensor (e.g., ultrasonic or laser) to detect if the pallet moves while driving in. However, it is possible to install some sensor to the tip of the fork and stop the AGV with an emergency stop on the PLC or with some other way without Navitrol.</p>
+</li>
+<li>
+<p>If the top pallet's heading differs too much from the bottom pallet, it would be hard to pick it up, with the steer or differential AGVs. These types of AGVs requires much space for adjusting the forks to correct position in sideways, so the fork would hit the pallet leg. However, the stackloading algorithm will try to load the pallet if it can detect the pallet properly.</p>
+</li>
+</ul>
+<h2 id="setup"><a class="header" href="#setup">Setup</a></h2>
+<h3 id="navithor-tools"><a class="header" href="#navithor-tools">Navithor Tools</a></h3>
+<p>Stackloading feature uses virtual tag on the symbolic point (and load detection). These features need to be set in Navithor Tools when creating the environment for the AGV.</p>
+<p>There are two options to setup the Stackloading:</p>
+<ul>
+<li>Regular symbolic point without buffer lane. Requires load detection tag.</li>
+<li>Load buffer. No load detection tag required, but buffer area tag and buffer distance are required.</li>
+</ul>
+<p>Note: Stackloading tag is not needed if Navithor can give the stacking command (see Navithor document Using Buffer Lanes). Then the stacking can be decided based on each drive order.</p>
+<p><img src="./media-en/ToolsConfig.png" alt="" /></p>
+<blockquote>
+<p>Figure 2: Setting up stackloading: 1. Select Pickup type. 2. Enable load detection (not necessary with buffer lanes if docking not needed). 3. Open Edit Tags window. 4. Enable StackLoading tag. 5. Enable buffer lane. 6. Set Buffer lane distance. </p>
+</blockquote>
+<h3 id="navitrol-parameters"><a class="header" href="#navitrol-parameters">Navitrol Parameters</a></h3>
+<table><thead><tr><th>Type</th><th>Name</th><th>Min</th><th>Default</th><th>Max</th><th>Description</th></tr></thead><tbody>
+<tr><td>I</td><td><em>stack_loading_enabled</em></td><td>0</td><td>0</td><td>1</td><td><em>1 = Enable stackloading feature. 0 = disabled</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_step_mm</em></td><td>1</td><td>1</td><td>5000</td><td><em>How much (in mm) the lift reference is changed in each step when scanning the stack. Recommended 20 or higher. Too low value might cause actuator to slow down and then speed up multiple times when it reaches close to the current target and before it has received the next reference.</em></td></tr>
+<tr><td>I</td><td><em>target_detection_actuator_offset_to_scanner_mm</em></td><td>-300</td><td>0</td><td>300</td><td><em>Scanner height offset relative to the actuator. Negative means that scanner is below the actuator. With this offset the fork should be at the correct height for loading.</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_occupancy_min_hits</em></td><td>0</td><td>0</td><td>100</td><td><em>0 = disable occupancy check. Defines the minimum hits allowed on the occupancy check area. If the area has more scanner points than this parameter value the fork starts increasing and scanning for the stack until there are less points. Not used anymore as the occupancy zone is not needed anymore, the <strong>occup_check_min_hits</strong> parameter is used instead to check scanner points at the stack location.</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_min_hits_top_legs</em></td><td>0</td><td>2</td><td>30</td><td><em>How many times the legs are required to detect before stopping at the top pallet level. Used only if <strong>stack_loading_stop_increase</strong> is 1 or 2.</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_min_hits_false</em></td><td>0</td><td>7</td><td>30</td><td><em>How many false detections are required before stopping increasing the fork.</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_stop_increase</em></td><td>0</td><td>3</td><td>5</td><td><em>What method is used for stopping increase and defining the stack height. <br>0 = none <br>1 = leg detection. The top of the stack is found when the legs are not detected for <strong>stack_loading_min_hits_false</strong> amount. <br>2 = line model and leg detection. The top of the stack is found when the legs or the linear model is not detected for <strong>stack_loading_min_hits_false</strong> amount. <br>3 = occupancy check. The top of the stack is found when scanner points are seen less than <strong>occup_check_min_hits</strong> inside the area of the first detected pallet. <br>4 = 3D camera. The top of the stack is found when point density is less than <strong>obj_reg_3d_empty_space_max_cluster_density</strong> inside the detected volume at stack location. <br>5 = fork is moved to estimated height. E.g. external target detection can be used to detect the pallet and give final docking height after the fork is increase to estimated height</em></td></tr>
+<tr><td>F</td><td><em>stack_loading_max_dist_to_pallet_m</em></td><td>0.0</td><td>1.0</td><td>10.0</td><td><em>Discard found pallets if they are further than this value. Calculated from the scanner to the pallet front side. Used only with target_detection_type_selection = 2</em></td></tr>
+<tr><td>F</td><td><em>stack_loading_dist_to_start_increase_m</em></td><td>0.0</td><td>1.0</td><td>10.0</td><td><em>Distance from navigation point to target stopping point to start increasing the fork</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_min_pocket_size_mm</em></td><td>0</td><td>10</td><td>500</td><td><em>Minimum vertical pocket height in mm. If pocket is smaller, choose the next pocket. This parameter and the next one is used to avoid the AGV to drive to the pocket that is broken or not detected correctly. Ensures that the pocket size is large enough for the fork.</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_max_pocket_size_mm</em></td><td>0</td><td>150</td><td>500</td><td><em>Maximum vertical pocket height to allow docking, in mm. If pocket is higher, choose the next pocket</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_min_false_hits_legs</em></td><td>0</td><td>2</td><td>30</td><td><em>How many times the legs are required to false detect before detecting it as a false.</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_enable_soft_stop</em></td><td>0</td><td>0</td><td>1</td><td><em>0 = Softstop is used only when increasing the fork to the top pallet level, 1 = Enable softstop also when decreasing the fork back to route level after driving out</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_max_height_mm</em></td><td>0</td><td>3000</td><td>10000</td><td><em>The maximum fork height for the scan. If the fork is still increased when reached this value, error is set.</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_max_height_raises_error</em></td><td>0</td><td>1</td><td>1</td><td><em>If the fork height goes over the maximum allowed height 0 = stop increasing the fork and decrease to found pocket, 1 = set error.</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_max_height_to_load_from_floor_mm</em></td><td>0</td><td>2000</td><td>10000</td><td><em>The maximum fork height after scan is ready where the fork can still decrease to floor. If the fork is higher than this value and the pocket is found on the floor, error is set. Used to avoid picking multiple pallets.</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_stop_increase_height_mm</em></td><td>0</td><td>0</td><td>10000</td><td><em>Additional method for the stopping the increase. If this is 0, the <strong>stack_loading_min_hits_false</strong> is used to define when the increase is stopped. If this has some value, the increase is stopped when the legs are not detected while the fork is increased to the defined height. Every time the legs are detected, the target height is increased by this parameter.</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_max_decrease_val_after_scan_mm</em></td><td>0</td><td>0</td><td>10000</td><td><em>Maximum allowed decrease when the scan is done. Used to avoid selecting pocket from too low height. Recommended value is the maximum pallet height + some error. 0 not used</em></td></tr>
+<tr><td>I</td><td><em>stack_loading_max_retry_if_scanning_fails</em></td><td>0</td><td>0</td><td>5</td><td><em>Maximum number of retries if scanning doesn't find the pocket.</em></td></tr>
+<tr><td>F</td><td><em>stack_loading_dist_from_stack_to_move_actuator</em></td><td>0.0</td><td>1.5</td><td>5.0</td><td><em>Distance from navigation point to the detected pallet front line where actuator can be controlled safely without hitting the stack.</em></td></tr>
+<tr><td>F</td><td><em>block_stacking_reset_distance_from_increase_location</em></td><td>0.0</td><td>0.5</td><td>10.0</td><td><em>Distance to reset the state machine if AGV is far enough from the location where the increase starts.</em></td></tr>
+</tbody></table>
+<h2 id="example-set-of-navitrol-parameters"><a class="header" href="#example-set-of-navitrol-parameters">Example set of Navitrol parameters</a></h2>
+<p>Stackloading requires that pallet detection is enabled. If occupancy check is used as the increase method, then pallet detection is still used to define the stopping distance before starting to increase the fork. It is recommended to check first that the pallet can be detected before trying stackloading.</p>
+<h3 id="pallet-detection-parameters"><a class="header" href="#pallet-detection-parameters">Pallet detection parameters</a></h3>
+<p>This chapter describes the required pallet detection and docking parameters.
+The pallet model parameters are based on EUR-pallet and the detection is to be done to the side defined with <strong>pallet_model_width_y</strong> parameter.</p>
+<pre><code class="language-bash">I,target_detection_type_selection,                                 3
+I,target_detection_scan_selection,                                 1
+I,docking_to_target_enabled,                                       1
+F,docking_max_start_distance,                                   3.00
+F,docking_stop_distance,                                        0.19
+F,docking_approach_dist,                                        1.25
+I,pallet_model_enabled[0],                                         1
+F,pallet_model_width_y[0],                                      0.80
+F,pallet_model_length_x[0],                                     1.25
+I,pallet_model_n_legs_x[0],                                        3
+I,pallet_model_n_legs_y[0],                                        3
+F,pallet_model_mid_leg_width_y[0],                             0.075
+F,pallet_model_mid_leg_length_x[0],                             0.19
+F,pallet_model_side_leg_width_y[0],                             0.09
+F,pallet_model_side_leg_length_x[0],                           0.165
+</code></pre>
+<h3 id="stackloading-parameters"><a class="header" href="#stackloading-parameters">Stackloading parameters</a></h3>
+<p>Stackloading parameters for a fork that provides scanner data to Navitrol. Scanner is used for detection. </p>
+<pre><code class="language-bash">I,stack_loading_enabled,                                           1 
+I,stack_loading_step_mm,                                          20 
+I,stack_loading_min_hits_top_legs,                                 2 
+I,stack_loading_min_hits_false,                                   30 
+I,stack_loading_stop_increase,                                     3 
+F,stack_loading_dist_to_start_increase_m,                   2.000000 
+I,stack_loading_min_pocket_size_mm,                               10 
+I,stack_loading_max_pocket_size_mm,                              150 
+I,stack_loading_min_false_hits_legs,                               2 
+I,stack_loading_max_height_mm,                                  3000 
+I,stack_loading_max_height_raises_error,                           1 
+I,stack_loading_max_height_to_load_from_floor_mm,               2000 
+I,stack_loading_stop_increase_height_mm,                        1000
+F,stack_loading_dist_from_stack_to_move_actuator,                3.7
+I,occup_check_min_hits,                                            1
+</code></pre>
+<h3 id="additional-information-of-parameters"><a class="header" href="#additional-information-of-parameters">Additional information of parameters</a></h3>
+<p><em>stack_loading_min_hits_top_legs</em> 0</p>
+<p>How many times the pallet legs are required to detect before the leg bottom height is stored. The idea is that the leg bottom and top height are stored and the fork is controlled between those. Increasing this value decreases the possibility of false detection. The detection count can be something between 2 and 20 with one pallet and this depends on the detection angle and distance, lifting speed and scanner measurement speed.</p>
+<p><em>stack_loading_stop_increase</em> 3</p>
+<p>3 = occupancy check. Check area is square with side length of <strong>pallet_model_width_y</strong> located on the center of the detected target front line.</p>
+<p><em>stack_loading_max_dist_to_pallet_m</em> 2.0</p>
+<p>Discards detected pallets if they are further than this value from the scanner. Used to avoid detecting pallets too far away. Calculated from the scanner to the pallet front side (in meters). Used only if <strong>target_detection_type_selection</strong> is 2.</p>
+<p><em>stack_loading_max_retry_if_scanning_fails</em> 0</p>
+<p>Defines how many times the scanning can be retried if suitable pocket is not found. The suitable pocket is checked each time when the fork is increased and the scanning is ready. If there is no suitable pocket, the fork is decreased back to the route level and then the increase and scanning is done again. Then this is repeated by the amount of this parameter. If the retry succeeds and there is a valid pocket, the fork is decreased to the pocket level. If all the retries are done without any suitable pocket, fatal error is set.</p>
+<h2 id="user-notes"><a class="header" href="#user-notes">User notes</a></h2>
+<ul>
+<li>
+<p>Pallet detection is used with stackloading, so it is recommended to test first. There are few pallet detection parameters listed on the Example set, but it is not full list. However, using those parameters would be enough in most cases to get started.</p>
+</li>
+<li>
+<p>Stackloading feature needs Navithor to properly perform the loading sequence. Without Navithor, e.g. with Monitor drive orders, the stackloading can be run until it drives under the pallet, but it cannot load the pallet automatically. However, there is Load button on Client and on Monitor Actuator Control that can be used to Load the pallet.</p>
+</li>
+<li>
+<p>NavitrolMonitor is good tool when the parameters are adjusted at the first time. It is easier to adjust the parameters with Monitor to get the fork to correct level.</p>
+</li>
+<li>
+<p>When starting the production with Navithor, the resource is needed on the symbolic point and the stackloading feature is automatically started when the AGV drives close enough to the detected target.</p>
+</li>
+<li>
+<p>Before starting stackloading, test first with Monitor that the pallet can be detected by setting the <strong>target_detection_always_enabled</strong> to 1.</p>
+</li>
+<li>
+<p>If the stack is high, it might be possible that the drive is aborted by Navithor while increasing the fork. Then this Navithor parameter  TrafficController_ABORT_WAIT_TIME_SECONDS should be increased. Generally, the abort shouldn't be happening when the AGV is searching for the top pallet. The parameter should be at least a time how much the AGV is standing still when doing the scan.</p>
+</li>
+<li>
+<p>Searching &quot;<strong>StackLoading1</strong>&quot; from the log shows the scanning results. The &quot;<strong>Legs detected</strong>&quot; line shows the height of the actuator when the legs are detected with the scanner. The &quot;<strong>Legs false detected</strong>&quot; shows where the legs are not detected. This is very useful to see if there are any valid pockets and what are the sizes. See Chapter <a href="#agv-found-pocket-too-high">Pocket found too high</a> as an example.</p>
+</li>
+<li>
+<p>Searching &quot;<strong>StackLoading: Pocket height saved</strong>&quot; from the log shows what are the heights of stored pockets. The <em>ActVal</em> is actuator height of that detection and <em>level</em> defines if it is the pocket bottom height (1) or top height (2). The pocket height is calculated from those bottom and top values. Even though there might be consecutive bottom heights on the log, they are not used for anything.</p>
+</li>
+</ul>
+<h3 id="aborting-the-state-machine"><a class="header" href="#aborting-the-state-machine">Aborting the state machine</a></h3>
+<p>If the AGV got stuck and customer wants to abort the mission and try again, the sequence can be aborted by driving AGV far enough from the stack. If the state machine is active it can be seen from terminal with logging &quot;STACK_LOADING_STATE_&quot;. If there is no logging, the state machine is not active.</p>
+<p>The state machine is aborted if</p>
+<ul>
+<li>
+<p>AGV has already started the scanning phase, but hasn't picked the pallet up and new drive order is given to route or symbolic point without Stack loading tag. Actuator is controlled automatically to the route height when AGV has driven <strong>stack_loading_dist_from_stack_to_move_actuator</strong> distance away from the stack. </p>
+</li>
+<li>
+<p>AGV has already started the scanning phase and AGV is driven (manually or with drive order) further away from the stack front than <strong>stack_loading_dist_from_stack_to_move_actuator</strong> + <strong>block_stacking_reset_distance_from_increase_location</strong>. For example, taking the AGV into Manual mode with Monitor keyboard command and drive few meters backwards. The actuator should be controlled automatically to the route height as soon as AGV has received new drive order, if it isn't controlled manually.</p>
+</li>
+<li>
+<p>AGV hasn't started the scanning phase yet and it is outside the load buffer area and docking is not active. For example, driving AGV with drive order out from the buffer area. Actuator is already at route height when this happens.</p>
+</li>
+</ul>
+<h2 id="laser-scanner-view"><a class="header" href="#laser-scanner-view">Laser scanner view</a></h2>
+<p><img src="./media-en/image5.png" alt="" /></p>
+<blockquote>
+<p>Figure 4: Laser scanner view of the stack</p>
+</blockquote>
+<p>If the last found pocket is too small or too large, error is set. The size of the pocket can be set with parameters. Also, if the actuator reaches the maximum allowed height, error is set.</p>
+<p>The scan is always done to the top of the stack and the assumption is that the pallets are quite well aligned to the same location. The general stackloading idea is to just set the fork to the highest legs that are detected, so Navitrol doesn't know anything about the independent pallet heights on the stack beforehand or how many pallets there are on the stack. If there is only one pallet, the scanning is still done.</p>
+<h2 id="errors"><a class="header" href="#errors">Errors</a></h2>
+<h3 id="error_stackloading_pocket_found_too_low"><a class="header" href="#error_stackloading_pocket_found_too_low">ERROR_STACKLOADING_POCKET_FOUND_TOO_LOW</a></h3>
+<p>Triggered if pocket height is below
+<strong>stack_loading_max_decrease_val_after_scan_mm</strong> from the current actuator height.</p>
+<h3 id="error_pallet_pocket_not_found"><a class="header" href="#error_pallet_pocket_not_found">ERROR_PALLET_POCKET_NOT_FOUND</a></h3>
+<p>Triggered if there is no valid pocket and actuator height is higher than <strong>stack_loading_max_height_to_load_from_floor_mm</strong>.</p>
+<h3 id="error_stackloading_target_too_high"><a class="header" href="#error_stackloading_target_too_high">ERROR_STACKLOADING_TARGET_TOO_HIGH</a></h3>
+<p>Triggered if the actuator reaches the <strong>stack_loading_max_height_mm</strong> while scanning the stack (<strong>stack_loading_max_height_raises_error</strong> has to be 1).</p>
+<h2 id="example-sequence-with-pictures"><a class="header" href="#example-sequence-with-pictures">Example sequence with pictures</a></h2>
+<p>These following figures shows the basic sequence when the stackloading is used on load buffer.</p>
+<p><img src="./media-en/image6.png" alt="" /></p>
+<p><img src="./media-en/image7.png" alt="" /></p>
+<p><img src="./media-en/image8.png" alt="" /></p>
+<p><img src="./media-en/image9.png" alt="" /></p>
+<p><img src="./media-en/image10.png" alt="" /></p>
+<p><img src="./media-en/image11.png" alt="" /></p>
+<p><img src="./media-en/image12.png" alt="" /></p>
+<p><img src="./media-en/image13.png" alt="" /></p>
+<p><img src="./media-en/image14.png" alt="" /></p>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="agv-found-pocket-too-high"><a class="header" href="#agv-found-pocket-too-high">AGV found pocket too high</a></h3>
+<p>The <em>StackLoading1</em> logging will show the actuator heights where the scanner is detecting legs of the pallet that are defined as the pocket (<em>Legs detected</em>) or something else (<em>Legs false detected</em>) that is usually the stringer board or some noise. On this case the issue was that after the last pocket, the scanner points are scattered and that caused the system to find legs -&gt; this will cause the system to find small pocket at the very top of the stack. When the scanner scans the stack from bottom to top, the pockets are usually seen really well and the usual pocket height for normal pallet is something between 85-115mm. </p>
+<ul>
+<li>The <strong>stack_loading_min_pocket_size_mm</strong> is used to discard pockets that are too small after all pockets have been found. </li>
+<li>The <strong>stack_loading_min_hits_top_legs</strong> parameter is used to store <strong>pocket low</strong> heights to the system when the pocket is seen this parameter amount in consecutive cycles.</li>
+<li>The <strong>stack_loading_min_false_hits_legs</strong> parameter is used to store <strong>pocket high</strong> heights to the system when the pocket is not seen this parameter amount in consecutive cycles. </li>
+</ul>
+<p>On this example, the <strong>stack_loading_min_pocket_size_mm</strong> was on default value 10. <strong>stack_loading_min_hits_top_legs</strong> and <strong>stack_loading_min_false_hits_legs</strong> was 2.</p>
+<pre><code class="language-bash">12453.5109 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 86
+12453.5748 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 86
+12453.6419 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 86
+12453.7132 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 86
+12453.7750 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 86
+12453.8430 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 86
+12453.9105 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 86
+12453.9744 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 86
+12454.0427 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 86
+12454.1116 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 86
+12454.1743 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 86
+12454.2415 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 86
+12454.3121 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 87
+12454.3747 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 88
+12454.4415 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 88
+12454.5096 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 89
+12454.5750 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 90
+12454.6411 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 91
+12454.7099 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 92
+12454.7753 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 92
+12454.8427 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 94
+12454.9116 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 94
+12454.9747 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 95
+12455.0419 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 96
+12455.1113 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 97
+12455.1748 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 97
+12455.2423 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 98
+12455.3119 [03:6] StackLoading1: Legs false detected (top line): 1, actval: 99
+12455.3748 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 100
+12455.4415 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 101
+12455.5119 [03:6] StackLoading1: Legs false detected (no pallet): 0, actval: 102
+12455.5745 [03:6] StackLoading1: Legs detected: 1, actval: 103
+12455.6419 [03:6] StackLoading1: Legs detected: 0, actval: 103                      -&gt; First pocket low height is 103. Two consecutive leg detections.
+12455.7097 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 104
+12455.7750 [03:6] StackLoading1: Legs false detected (no pallet): 0, actval: 105    -&gt; First pocket high height is 104. Two consecutive false leg detections.
+12455.8428 [03:6] StackLoading1: Legs detected: 1, actval: 106
+12455.9118 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 106
+12455.9750 [03:6] StackLoading1: Legs detected: 1, actval: 107
+12456.0425 [03:6] StackLoading1: Legs detected: 0, actval: 109                      -&gt; Second pocket low height is 107. Two consecutive leg detections.
+12456.1133 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 109
+12456.1753 [03:6] StackLoading1: Legs false detected (no pallet): 0, actval: 110    -&gt; Second pocket high height is 109. Two consecutive false leg detections.
+12456.2409 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 111
+12456.3108 [03:6] StackLoading1: Legs false detected (no pallet): 0, actval: 112
+12456.3758 [03:6] StackLoading1: Legs detected: 1, actval: 112
+12456.4424 [03:6] StackLoading1: Legs detected: 0, actval: 113                      -&gt; Third pocket low height is 112. Two consecutive leg detections.
+12456.5121 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 114
+12456.5761 [03:6] StackLoading1: Legs detected: 1, actval: 116
+12456.6416 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 116
+12456.7127 [03:6] StackLoading1: Legs false detected (no pallet): 0, actval: 117    -&gt; Third pocket high height is 116. Two consecutive false leg detections.
+12456.7753 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 118
+12456.8429 [03:6] StackLoading1: Legs detected: 1, actval: 119
+12456.9111 [03:6] StackLoading1: Legs detected: 0, actval: 120                      -&gt; Fourth pocket low height is 119. Two consecutive leg detections.
+12456.9754 [03:6] StackLoading1: Legs detected: 1, actval: 122
+12457.0431 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 125
+12457.1129 [03:6] StackLoading1: Legs detected: 1, actval: 129
+12457.1748 [03:6] StackLoading1: Legs detected: 0, actval: 133                      -&gt; Fifth pocket low height is 129. Two consecutive leg detections.
+12457.2437 [03:6] StackLoading1: Legs detected: 1, actval: 137
+12457.3130 [03:6] StackLoading1: Legs detected: 0, actval: 142
+12457.3752 [03:6] StackLoading1: Legs detected: 1, actval: 145
+12457.4426 [03:6] StackLoading1: Legs detected: 0, actval: 149
+12457.5117 [03:6] StackLoading1: Legs detected: 1, actval: 156
+12457.5750 [03:6] StackLoading1: Legs detected: 0, actval: 161
+12457.6427 [03:6] StackLoading1: Legs detected: 1, actval: 168
+12457.7124 [03:6] StackLoading1: Legs detected: 0, actval: 179
+12457.7753 [03:6] StackLoading1: Legs detected: 1, actval: 186
+12457.8422 [03:6] StackLoading1: Legs detected: 0, actval: 192
+12457.9127 [03:6] StackLoading1: Legs detected: 1, actval: 199
+12457.9746 [03:6] StackLoading1: Legs detected: 0, actval: 204
+12458.0407 [03:6] StackLoading1: Legs detected: 1, actval: 210
+12458.1104 [03:6] StackLoading1: Legs detected: 0, actval: 217
+12458.1751 [03:6] StackLoading1: Legs detected: 1, actval: 223
+12458.2428 [03:6] StackLoading1: Legs detected: 0, actval: 230
+12458.3115 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 236
+12458.3763 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 249    -&gt; Fifth pocket high height is 236. Two consecutive false leg detections.
+12458.4411 [03:6] StackLoading1: Legs detected: 1, actval: 254
+12458.5127 [03:6] StackLoading1: Legs detected: 0, actval: 262                     -&gt; Sixth pocket low height is 254. Two consecutive leg detections.
+12458.5755 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 267
+12458.6424 [03:6] StackLoading1: Legs false detected (no pallet): 0, actval: 272   -&gt; Sixth pocket high height is 267. Two consecutive false leg detections.
+12458.7110 [03:6] StackLoading1: Legs detected: 1, actval: 280
+12458.7761 [03:6] StackLoading1: Legs detected: 0, actval: 285                     -&gt; Seventh pocket low height is 280. Two consecutive leg detections.
+12458.8426 [03:6] StackLoading1: Legs detected: 1, actval: 293
+12458.9118 [03:6] StackLoading1: Legs detected: 0, actval: 298
+12458.9752 [03:6] StackLoading1: Legs detected: 1, actval: 311
+12459.0424 [03:6] StackLoading1: Legs detected: 0, actval: 316
+12459.1119 [03:6] StackLoading1: Legs detected: 1, actval: 324
+12459.1744 [03:6] StackLoading1: Legs detected: 0, actval: 329
+12459.2427 [03:6] StackLoading1: Legs detected: 1, actval: 337
+12459.3123 [03:6] StackLoading1: Legs detected: 0, actval: 342
+12459.3747 [03:6] StackLoading1: Legs detected: 1, actval: 347
+12459.4426 [03:6] StackLoading1: Legs detected: 0, actval: 355
+12459.5129 [03:6] StackLoading1: Legs detected: 1, actval: 360
+12459.5744 [03:6] StackLoading1: Legs detected: 0, actval: 373
+12459.6417 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 378
+12459.7130 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 386    -&gt; Seventh pocket high height is 378. Two consecutive false leg detections.
+12459.7751 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 391
+12459.8419 [03:6] StackLoading1: Legs detected: 1, actval: 399
+12459.9106 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 404
+12459.9753 [03:6] StackLoading1: Legs detected: 1, actval: 409
+12460.0424 [03:6] StackLoading1: Legs detected: 0, actval: 417                     -&gt; Eight pocket low height is 409. Two consecutive leg detections.
+12460.1130 [03:6] StackLoading1: Legs detected: 1, actval: 422
+12460.1759 [03:6] StackLoading1: Legs detected: 0, actval: 435
+12460.2423 [03:6] StackLoading1: Legs detected: 1, actval: 440
+12460.3141 [03:6] StackLoading1: Legs detected: 0, actval: 448
+12460.3755 [03:6] StackLoading1: Legs detected: 1, actval: 453
+12460.4418 [03:6] StackLoading1: Legs detected: 0, actval: 461
+12460.5119 [03:6] StackLoading1: Legs detected: 1, actval: 466
+12460.5753 [03:6] StackLoading1: Legs detected: 0, actval: 471
+12460.6425 [03:6] StackLoading1: Legs detected: 1, actval: 479
+12460.7114 [03:6] StackLoading1: Legs detected: 0, actval: 484
+12460.7752 [03:6] StackLoading1: Legs detected: 1, actval: 497
+12460.8426 [03:6] StackLoading1: Legs detected: 0, actval: 503
+12460.9130 [03:6] StackLoading1: Legs detected: 1, actval: 510
+12460.9745 [03:6] StackLoading1: Legs detected: 0, actval: 516
+12461.0431 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 523
+12461.1116 [03:6] StackLoading1: Legs false detected (top line): 0, actval: 529    -&gt; Eight pocket high height is 523. Two consecutive false leg detections.
+12461.1746 [03:6] StackLoading1: Legs detected: 1, actval: 534
+12461.2422 [03:6] StackLoading1: Legs detected: 0, actval: 541                     -&gt; Ninth pocket low height is 534. Two consecutive leg detections.
+12461.3134 [03:6] StackLoading1: Legs detected: 1, actval: 547
+12461.3741 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 560
+12461.4418 [03:6] StackLoading1: Legs false detected (no pallet): 0, actval: 565   -&gt; Ninth pocket high height is 560. Two consecutive false leg detections.
+12461.5137 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 573
+12461.5742 [03:6] StackLoading1: Legs false detected (no pallet): 0, actval: 578
+12461.6415 [03:6] StackLoading1: Legs false detected (no pallet): 1, actval: 586
+12461.7125 [03:6] StackLoading1: Legs false detected (no pallet): 0, actval: 591
+</code></pre>
+<p>From this case the pockets are stored like this (from bottom to top):</p>
+<ol>
+<li>Low height 103, high height 104 -&gt; pocket size 1. Noise</li>
+<li>Low height 107, high height 109 -&gt; pocket size 2. Noise</li>
+<li>Low height 112, high height 116 -&gt; pocket size 4. Noise</li>
+<li>The fourth pocket didn't have high value, because there was only one high measurement and two was required by parameter <strong>stack_loading_min_false_hits_legs</strong>. Pocket is not stored.</li>
+<li>Low height 129, high height 236 -&gt; pocket size 107. Real pocket</li>
+<li>Low height 254, high height 267 -&gt; pocket size 13. Noise</li>
+<li>Low height 280, high height 378 -&gt; pocket size 98. Real pocket</li>
+<li>Low height 409, high height 523 -&gt; pocket size 114. Real pocket</li>
+<li><strong>Low height 534, high height 560 -&gt; pocket size 26</strong>. This was noise from top of the stack.</li>
+</ol>
+<p>After the scan there are 9 pockets (number four not valid) and the system will select the top-most pocket that's height is between the <strong>stack_loading_min_pocket_size_mm</strong> and <strong>stack_loading_max_pocket_size_mm</strong>. Here the top-most pocket is the 9th pocket that's low height is 534 and high height is 560 -&gt; pocket height is 560-534=26mm. If the <strong>stack_loading_min_pocket_size_mm</strong> would have been larger than this 26, then the second top-most pocket would have been selected (that is the correct pocket in this case) and that is 409 and 523 -&gt; pocket height 523-409=114mm.</p>
+<h3 id="fork-is-always-too-high-or-too-low-when-driving-in-to-the-pallet-after-scanning-the-stack"><a class="header" href="#fork-is-always-too-high-or-too-low-when-driving-in-to-the-pallet-after-scanning-the-stack">Fork is always too high or too low when driving in to the pallet after scanning the stack</a></h3>
+<p>The <strong>target_detection_actuator_offset_to_scanner_mm</strong> parameter is wrong.
+This parameter defines how much the fork height needs to be changed from the detected pocket height. If the forklift cannot drive under the pallet, when the final height is set, this parameter should be adjusted. The positive value increases the fork and negative one decreases.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../LoadHandling/BufferLanes/BufferLanes-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../LoadHandling/BlockStacking/BlockStacking-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../LoadHandling/BufferLanes/BufferLanes-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../LoadHandling/BlockStacking/BlockStacking-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

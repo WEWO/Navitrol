@@ -1,0 +1,856 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Omni steer limit - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html" class="active"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="omni-steer-limit"><a class="header" href="#omni-steer-limit">Omni Steer Limit</a></h1>
+<p>Updated 26.01.2024</p>
+<hr />
+<h2 id="lightly-steer-limited-omni----total-range-over-180-degrees"><a class="header" href="#lightly-steer-limited-omni----total-range-over-180-degrees">Lightly steer limited omni -- total range over 180 degrees</a></h2>
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
+<p><strong>Overview</strong></p>
+<p>Steer limit functionality for omni drives that do not have freely turning wheels because of physical limitation, such as connected wires.</p>
+<p><strong>Functionality</strong></p>
+<p>The omni steer limit limits steer angles of omni AGV between the given maximum and minimum angles.</p>
+<p>1. When omni's steer wheel is approaching the steer limit AGV slows down</p>
+<p>2. After certain limit is reached the AGV performs wheel adjustment</p>
+<ul>
+<li>
+<p>Performs soft stop</p>
+</li>
+<li>
+<p>Turns wheels to the as middle of the total allowed angle range as possible</p>
+</li>
+<li>
+<p>Resumes driving</p>
+</li>
+</ul>
+<p>Note 1: If the steer angle gets within 5 degrees of the minimum or maximum limit the AGV will perform a hard stop instead of soft stop.</p>
+<p><strong>Applicability</strong></p>
+<p>Omni steer limit can be used only with omni AGV systems where Navitrol has direct control over all steer limited steering wheels.
+Typical examples of such cases are AGVs with Schwarchmueller motor controllers.</p>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li>
+<p><strong>I, omni_steer_limit_enable[i]</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>Enables/Disables the use of omni steer limit for defined wheel
+index</p>
+</li>
+<li>
+<p>Other three parameters do not matter if this one is disabled</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Values</p>
+<ul>
+<li>
+<p>Min: 0 - Omni steer limit disabled</p>
+</li>
+<li>
+<p>Max: 1 - Omni steer limit enabled</p>
+</li>
+<li>
+<p>Default: 0</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F, omni_steer_limit_CCW_angle_deg[i]</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>Defines the CounterClockWise hard limit for a single wheel</li>
+</ul>
+</li>
+<li>
+<p>Values</p>
+<ul>
+<li>
+<p>Min: 0</p>
+</li>
+<li>
+<p>Max: 179.9 (degrees)</p>
+</li>
+<li>
+<p>Default: 179.9 (degrees)</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F, omni_steer_limit_CW_angle_deg[i]</strong></p>
+</li>
+<li>
+<p>Functionality</p>
+<ul>
+<li>Defines the ClockWise hard limit for a single wheel</li>
+</ul>
+</li>
+<li>
+<p>Values</p>
+<ul>
+<li>See <strong>omni_steer_limit_CCW_angle_deg[i]</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F, omni_steer_limit_angle_tolerance_deg</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>Defines the size of a buffer that triggers the wheel adjustment</p>
+</li>
+<li>
+<p>Leaves some room for control so that the wheel can be adjusted before it reaches any hard limits</p>
+</li>
+<li>
+<p>If the parameter is decreased below the default value, it is not guaranteed that the wheel never reaches the hard limits.</p>
+</li>
+<li>
+<p>Bigger the buffer the smoother the stop to adjust the wheels will be.</p>
+</li>
+<li>
+<p>At minimum value there will be only hard stop</p>
+</li>
+<li>
+<p>Same value is used for all steer limited wheels</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Values (degrees)</p>
+<ul>
+<li>
+<p>Min: 0</p>
+</li>
+<li>
+<p>Max: 90</p>
+</li>
+<li>
+<p>Default: 20</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F, omni_steer_limit_swap_turn_tolerance_deg</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>Determines how close to the swap target angle the wheel must be turned before wheel adjusting is considered as done</p>
+</li>
+<li>
+<p>Smaller values are more reliable.</p>
+</li>
+<li>
+<p>Larger values can be used for AGV:s with fast and accurate steering as they reduce some potentially redundant control.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Values (degrees)</p>
+<ul>
+<li>
+<p>Min: 0.1</p>
+</li>
+<li>
+<p>Max: 90</p>
+</li>
+<li>
+<p>Default: 2</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F, omni_steer_limit_hard_stop_buffer_deg</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>Determines how close to the min and max steer limits measured angle must be before activating hard stop</p>
+<ul>
+<li>
+<p>Min max limits defined by</p>
+<ul>
+<li>
+<p><strong>omni_steer_limit_CCW_angle_deg</strong></p>
+</li>
+<li>
+<p><strong>omni_steer_limit_CW_angle_deg</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Activating hard stop can prevent the AGV from drifting out of route and losing position.</p>
+</li>
+<li>
+<p>Should be adjusted only for machines with very limited total range as generally it would be better use larger <strong>omni_steer_limit_angle_tolerance_deg</strong> values so that AGV has enough time to perform slow stop.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Values (degrees)</p>
+<ul>
+<li>
+<p>Min: 0</p>
+</li>
+<li>
+<p>Max: 90</p>
+</li>
+<li>
+<p>Default: 5</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F, omni_steer_limit_active_control_before_stopping_buffer_deg</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>Determines how close to the min and max steer limits measured
+angle must be before the steer reference is repelled from the
+limit even if still moving</p>
+</li>
+<li>
+<p>Using this parameter is a tradeoff for protecting the set limits and staying on the route as when the measured angle is over this limit is a strong steer reference is given away from the limit. This will cause the AGV lose position in most cases so this should be used only as last resort.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Values (degrees)</p>
+<ul>
+<li>
+<p>Min: 0</p>
+</li>
+<li>
+<p>Max: 90</p>
+</li>
+<li>
+<p>Default: 3</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F, omni_steer_limit_adjust_additional_wheels_buffer_deg</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>When one wheel has reached the limit. This value will be added to <strong>omni_steer_limit_angle_tolerance_deg</strong> to check if multiple wheels should be adjusted simultaneously during a single stop.</p>
+</li>
+<li>
+<p>This will not be done if the check limit would go over the defined angle range.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Values (degrees)</p>
+<ul>
+<li>
+<p>Min: 0</p>
+</li>
+<li>
+<p>Max: 90</p>
+</li>
+<li>
+<p>Default: 20</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F, omni_steer_limit_max_reference_diff_deg</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>Determines how close to the min and max steer limits the reference can ever be.</p>
+</li>
+<li>
+<p>Example: limit 180, value 1, max reference is 179</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Values (degrees)</p>
+<ul>
+<li>
+<p>Min: 0</p>
+</li>
+<li>
+<p>Max: 90</p>
+</li>
+<li>
+<p>Default: 1</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F, omni_steer_limit_soft_slow_buffer_deg</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>This value will be added to <strong>omni_steer_limit_angle_tolerance_deg</strong> to slow down when nearing the limit.</p>
+</li>
+<li>
+<p>This value could be increased when using very small total angle ranges (&lt; 200 deg) as the buffer sizes have to be smaller so steer limit would be met at slower speed and hard stop and active adjustment limits would not be met.</p>
+<ul>
+<li>The slow down target speed can be defined with parameter: pc_soft_slow_wheel_speed (default value 0.3m/s).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Values (degrees)</p>
+<ul>
+<li>
+<p>Min: 0</p>
+</li>
+<li>
+<p>Max: 90</p>
+</li>
+<li>
+<p>Default: 10</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F, omni_steer_limit_max_control_difference_deg</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>Determines the maximum difference between reference and measured
+angle.</p>
+</li>
+<li>
+<p>The reference angle will never exceed this difference.</p>
+</li>
+<li>
+<p>Example:</p>
+<ul>
+<li>
+<p>Navitrol would like to control a wheel to angle of 90 degrees.</p>
+</li>
+<li>
+<p>Current angle is 0 degrees.</p>
+</li>
+<li>
+<p>For any reason, the wheel does not follow reference and stays in zero degrees.</p>
+</li>
+<li>
+<p>Reference angle will be increased based on <strong>mot_ctrl_max_steer_rate_deg_p_s</strong> until the defined control difference has been reached and then stays there.</p>
+</li>
+<li>
+<p>With default value the reference would stay in 30 degrees until wheel starts to move again.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Values (degrees)</p>
+<ul>
+<li>
+<p>Min: 0</p>
+</li>
+<li>
+<p>Max: 90</p>
+</li>
+<li>
+<p>Default: 30</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Recommended minimum total range for smooth performance is 270 degrees.</p>
+<p>Minimum total range is 180 degrees in theory. (In practice &gt; 200 degrees)</p>
+<p>Total range = <strong>omni_steer_limit_CCW_angle_deg + omni_steer_limit_CW_angle_deg</strong></p>
+<p>Other parameters are recommended to be kept in their default values unless instructed otherwise by Navitec Systems.</p>
+<h3 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h3>
+<ul>
+<li>
+<p><strong>Defined steer limit is exceeded</strong></p>
+<ol>
+<li>
+<p>Check that the limits are defined correctly</p>
+<ul>
+<li>
+<p>Right limits for each wheel</p>
+</li>
+<li>
+<p>CCW and CW limits are not mixed</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Is CCW limit or CW limit over 180 degrees?</p>
+<ul>
+<li>
+<p>It is possible that the value stored into startinfo.bin is out of sync</p>
+<ul>
+<li>
+<p>Shutdown Navitrol</p>
+</li>
+<li>
+<p>Turn all wheels manually to the zero angle</p>
+</li>
+<li>
+<p>Remove the startinfo.bin</p>
+</li>
+<li>
+<p>Restart Navitrol</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>If steps above do not help</p>
+<ul>
+<li>Take a log and contact Navitec support</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>AGV loses position when the steer limit is reached or stops too hard</p>
+<ol>
+<li>
+<p>Increase value of <strong>omni_steer_limit_angle_tolerance_deg</strong></p>
+</li>
+<li>
+<p>If steps above do not help</p>
+<ul>
+<li>Take a log and contact Navitec support</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="heavily-steer-limited-omni----total-range-less-than-180-degrees"><a class="header" href="#heavily-steer-limited-omni----total-range-less-than-180-degrees">Heavily steer limited omni -- total range less than 180 degrees</a></h2>
+<h3 id="introduction-1"><a class="header" href="#introduction-1">Introduction</a></h3>
+<p>Overview</p>
+<p>Steer limit functionality for omni drives that are heavily limited. A heavily limited omni drive can only turn a wheel less than 180-degree range.</p>
+<h3 id="functionality"><a class="header" href="#functionality">Functionality</a></h3>
+<p>The omni steer limit limits steer angles of omni AGV between the given maximum and minimum angles. It has two step protection:</p>
+<p>1. In route generation</p>
+<ul>
+<li>
+<p>Paths with higher curvature than what given limits are discarded</p>
+</li>
+<li>
+<p>ERROR_CURVATURE_TOO_HIGH is set</p>
+</li>
+<li>
+<p>If this happens when giving drive orders on a defined path, the path must be manually adjusted</p>
+</li>
+</ul>
+<p>2. When calculating final references</p>
+<ul>
+<li>
+<p>With generated routes this is only failsafe. However, driving AGV manually will use only this.</p>
+</li>
+<li>
+<p>If required curvature would exceed the allowed limits. Maximum curvature to same direction will be used.</p>
+<ul>
+<li>WARNING_LIMITED_STEERING_ACTIVE is set to indicate this</li>
+</ul>
+</li>
+<li>
+<p>Waning - when curvature has been limited the AGV will drift out of the route. If it limited only briefly the AGV will be able to recover. Otherwise AGV will eventually stop with ERROR_POS_CONT_POS_ERR</p>
+</li>
+</ul>
+<h3 id="applicability"><a class="header" href="#applicability">Applicability</a></h3>
+<p>Can be used with any omni drive. However, if Navitrol does not control the wheels directly, it is user's responsibility to follow the given references.</p>
+<h3 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h3>
+<ul>
+<li>
+<p><strong>I,omni_steer_limit_enable[i]</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>Enables/Disables the use of omni steer limit for defined wheel index</p>
+</li>
+<li>
+<p>Other parameters do not matter if this one is disabled</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Value: 1 = enable</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F,omni_steer_limit_CCW_angle_deg[i]</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>Defines the CounterClockWise limit for a single wheel</li>
+</ul>
+</li>
+<li>
+<p>Values</p>
+<ul>
+<li>
+<p>Min: 0</p>
+</li>
+<li>
+<p>Max: 180</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F,omni_steer_limit_CW_angle_deg[i]</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>Defines the ClockWise limit for a single wheel</li>
+</ul>
+</li>
+<li>
+<p>Values</p>
+<ul>
+<li>See <strong>omni_steer_limit_CCW_angle_deg[i]</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F,omni_steer_limit_angle_tolerance_deg</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>Defines the maximum angle tolerance left when checking the trajectory</p>
+</li>
+<li>
+<p>Leaves some room for correcting position error while driving</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Values (degrees)</p>
+<ul>
+<li>
+<p>Min: 0</p>
+</li>
+<li>
+<p>Max: 90</p>
+</li>
+<li>
+<p>Default: 20</p>
+</li>
+<li>
+<p><strong>Recommended: 5</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F,</strong> <strong>omni_steer_limit_max_reference_diff_deg</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>Determines how close to the min and max steer limits the reference can ever be.</p>
+</li>
+<li>
+<p>Example: limit 180, value 1, max reference is 179</p>
+</li>
+<li>
+<p>Is used to activate limited steering</p>
+</li>
+<li>
+<p>Used to prevent breaking the reference if the steering control might overshoot from the given references</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Values (degrees)</p>
+<ul>
+<li>
+<p>Min: 0</p>
+</li>
+<li>
+<p>Max: 90</p>
+</li>
+<li>
+<p>Default: 1</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>F, omni_steer_limit_swap_turn_tolerance_deg</strong></p>
+<ul>
+<li>
+<p>Functionality</p>
+<ul>
+<li>
+<p>Activates soft stop the difference between measured and reference values during wheel adjustment is larger than given value.</p>
+</li>
+<li>
+<p>The parameter is used, and the soft stop can be activated only when the WARNING_LIMITED_STEERING_ACTIVE -warning is active.</p>
+</li>
+<li>
+<p>The goal is to prevent driving before all wheels are adjusted
+right angles.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Values (degrees)</p>
+<ul>
+<li>
+<p>Min: 0.1</p>
+</li>
+<li>
+<p>Max: 90</p>
+</li>
+<li>
+<p>Default: 2</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

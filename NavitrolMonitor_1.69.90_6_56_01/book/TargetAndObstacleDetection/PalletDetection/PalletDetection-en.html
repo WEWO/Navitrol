@@ -1,0 +1,837 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pallet detection - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html" class="active"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="pallet-detection"><a class="header" href="#pallet-detection">Pallet Detection</a></h1>
+<p>Updated 03.07.2024</p>
+<hr />
+<h2 id="pallet-detection-requirements"><a class="header" href="#pallet-detection-requirements">Pallet detection requirements</a></h2>
+<p><strong>Detecting the pallet -- field of view:</strong></p>
+<p>At least one of the legs of the pallet is assumed to be in front of the laser scanner within a field of view of 30 degrees</p>
+<p>The algorithm assumes the pallet will be located directly in front of the laser scanner.</p>
+<p><img src="./media-en/figure1.png" alt="" /></p>
+<blockquote>
+<p>Field of view explained.</p>
+</blockquote>
+<p><strong>Detecting the pallet -- maximum error:</strong></p>
+<ul>
+<li>
+<p>The angle of the pallet relative to the laser scanner must be less than 20 degrees.</p>
+</li>
+<li>
+<p>The maximum error for the pallet's nominal location is about +-15 cm (depending on the pallet dimensions).</p>
+<ul>
+<li>In good circumstances the pallet can be correctly detected even if the displacement is larger, but it can't be always guaranteed.</li>
+</ul>
+</li>
+<li>
+<p>The space between the pallets next to each other should differ from the distance between the legs of the pallet.</p>
+</li>
+</ul>
+<p><img src="./media-en/figure2.png" alt="" /></p>
+<blockquote>
+<p>Distance between pallets.</p>
+</blockquote>
+<p><strong>Detecting from stringer board</strong></p>
+<ul>
+<li>The pallet can be also detected based on the top part of a pallet called stringer board. If the pallet is detected from the stringer board, the pallets must be separated from each other at least by 10 cm.</li>
+</ul>
+<h2 id="using-pallet-detection"><a class="header" href="#using-pallet-detection">Using pallet detection</a></h2>
+<p>Pallet detection can be used to drive the AGV accurately under a pallet, even if the pallet is not perfectly on the location defined as a symbolic point in Navithor Tools. Pallet detection detects the target and corrects the AGVs driving according to it.</p>
+<p>Using pallet detection requires Navitrol license which includes the feature, otherwise Navitrol will stop in an error, if the pallet detection is activated without the proper license.</p>
+<p>Pallet detection can be used in combination with 'Load' or 'Load, Unload' symbolic point. If pallet detection is enabled for such a location and the AGV is heading towards the location, Navitrol activates pallet detection and tries to find the target. If the target is found and certain restrictions are met, the AGV starts a docking procedure and corrects the trajectory to drive precisely under the pallet. For more information on docking, see <a href="../../PositionControl/Docking/Docking-en.html">Docking</a>.</p>
+<p>Pallet detection can be enabled with a quick selection in Navithor Tools under the Symbolic Points tool -&gt; Edit Symbolic Points -&gt; 'Enable pallet detection':</p>
+<p><img src="./media-en/image5.png" alt="" /></p>
+<blockquote>
+<p>Enabling pallet detection in Navithor Tools</p>
+</blockquote>
+<p>If pallet detection is not enabled with this checkbox, AGV will drive to the location blindly.</p>
+<p>There are several warnings, that can show up, if something goes wrong with pallet detection. If detecting the target fails, Navitrol will show up target detection error. If pallet is found, but the restrictions for starting the docking are not met, Navitrol shows instead a target approach error. If docking is started, but the error is too big to correct when AGV is closer to the pallet, Navitrol will show up the same warning. More detailed explanation about these errors are given in Chapter 8.2. The exact warnings are following:</p>
+<p>612, WARNING_TARGET_NOT_DETECTED, &quot;Target for docking not detected&quot;</p>
+<p>613, WARNING_TARGET_APPROACH_ERROR, &quot;Target location differs too
+much from expected&quot;</p>
+<p>Some parameters, which are discussed later in this document, need to be also changed in Navitrol to activate pallet detection.</p>
+<h2 id="mounting-laser-scanner-for-pallet-detection"><a class="header" href="#mounting-laser-scanner-for-pallet-detection">Mounting laser scanner for pallet detection</a></h2>
+<p>Scanner angle related to the floor is important to consider when the scanner is mounted to the AGV. In ideal case, the scanner can see the legs of the pallet from the distance and also on close range.</p>
+<p><img src="./media-en/image6.png" alt="" /></p>
+<blockquote>
+<p>Generic options for mounting laser scanner for pallet detection.</p>
+</blockquote>
+<h2 id="calibrating-laser-scanner-for-pallet-detection"><a class="header" href="#calibrating-laser-scanner-for-pallet-detection">Calibrating laser scanner for pallet detection</a></h2>
+<p><strong>NOTE!</strong> If the pallet detection scanner is used only for detecting pallets and not for localization, this method should be used to calibrate the scanner. If it is used also on localization, then it should be calibrated in normal way.</p>
+<p>The angle of the pallet detection scanner (<strong>scan_rear_sen_ang</strong> or <strong>scan_front_sen_ang</strong> depending which scanner is used) plays a key role in the pallet detection accuracy. A clear sign of wrong scanner angle is a sidewise drifting pallet position during the approaching drive.</p>
+<p>A good method to calibrate the scanner is to do it in a controlled pallet detection drive as follows:</p>
+<ul>
+<li>
+<p>Plan a straight route of approximately 4 meters in an environment with good positioning confidence. Mark a symbolic point with pallet detection tag at the end of the route.</p>
+</li>
+<li>
+<p>Set the pallet detection parameters so that the pallet detection is active during the entire route (<strong>target_detection_type_selection</strong> = 3,     <strong>target_detection_always_enabled</strong> = 1) and disable the docking to keep the AGV on the route (<strong>docking_to_target_enabled</strong> = 0).</p>
+</li>
+<li>
+<p>Place a pallet accurately on the AGV fork and give the AGV a drive order to the symbolic point so that it unloads the pallet accurately at the symbolic point location. The idea is just to have the pallet on the symbolic point.</p>
+</li>
+<li>
+<p>Give the AGV a drive order to the other end of the route.</p>
+</li>
+<li>
+<p>Give the AGV a drive order to the symbolic point where the pallet is and verify that the pallet detection is active during the drive.</p>
+</li>
+<li>
+<p>When the drive is ready, disconnect the Monitor from the navigation so that the drive can be analyzed by sliding back and forth with the progress bar (see below)</p>
+</li>
+</ul>
+<p><img src="./media-en/image7.png" alt="" /></p>
+<blockquote>
+<p>Monitor Progress bar.</p>
+</blockquote>
+<ul>
+<li>Slide backwards until the first pallet detection visualizations in the beginning of the drive (green pallet square on the map) and freeze the view as shown in the figure below.</li>
+</ul>
+<p><img src="./media-en/image8.png" alt="" /></p>
+<blockquote>
+<p>Frozen initial pallet position at start of drive.</p>
+</blockquote>
+<ul>
+<li>
+<p>Slide forwards again until the AGV reaches the pallet and monitor how the pallet position is drifting while the AGV approaches the pallet.</p>
+</li>
+<li>
+<p>If the pallet position is constantly drifting sideways in one direction, this is caused by an error in the scanner angle, see the second figure below.</p>
+</li>
+<li>
+<p>Adjust the scanner angle in the parameter file, unfreeze the Monitor view, reconnect the Monitor and request Navitrol to update the parameters.</p>
+</li>
+<li>
+<p>Repeat the pallet detection drive, analyzing the pallet drift during the drive and adjusting the scanner angle until the drift is small and randomly to both sides of the route.</p>
+</li>
+<li>
+<p>Now the scanner angle should be accurately calibrated.</p>
+</li>
+</ul>
+<p><img src="./media-en/image9.png" alt="" /></p>
+<blockquote>
+<p>Frozen pallet position and current pallet position mismatch.</p>
+</blockquote>
+<h2 id="required-navitrol-parameters"><a class="header" href="#required-navitrol-parameters">Required Navitrol parameters</a></h2>
+<p>Following parameters have to be always set to use pallet detection:</p>
+<p><em>I,target_detection_type_selection, 3</em></p>
+<p># Enables reflector-based docking or pallet detection, 0 = disabled, 1 = reflector docking, 2 = pallet detection, 3 = pallet detection v2, 4 = external target detection, 5 = supervisor controlled;</p>
+<p><strong>NOTE!</strong> There are two pallet detection versions, but version 2 (target_detection_type_selection = 3) should be used from now on. The first version of pallet detection (parameter value 2) should not be used anymore. Navitec Systems have not updated this version anymore since 2018.</p>
+<p>Main difference is that version 2 supports using more than 1 scanner for pallet detection, can detect the pallet in any driving direction and works with all omni headings.</p>
+<p><em>I,target_detection_scan_selection, 1 or 2</em></p>
+<p># Defines which scanners are used for target detection: 1 = rear scanner only, 2 = front scanner only, 3 = both scanners (supported only in reflector-based detection!), 4 = use scanner in driving direction, 5 = alternate between scanners</p>
+<p><strong>NOTE!</strong> More than two scanners are supported with target_detection_multi_scan_selection parameter. target_detection_scan_selection has to be 0 to activate that parameter.</p>
+<p><em>I,docking_to_target_enabled, 1</em></p>
+<p># 1 = Enables docking to target. 2 = docking with custom route. If target_detection_type_selection == 0, won't do anything</p>
+<p>F,docking_max_start_distance, 3.5 # Beyond maximum distance docking won't be triggered</p>
+<p>Differences between these two docking types are explained in Chapters 8.4 and 8.5.</p>
+<p>Pallet models used for the detection has to be defined as Navitrol parameters. They are array parameters and maximum number of models used is 5. The algorithm tries to detect the best match from the different models given. At least one models has to be always defined.</p>
+<p>An example of EUR-pallet in Navitrol parameters:</p>
+<table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>
+<tr><td>I,pallet_model_enabled[0],</td><td>1</td></tr>
+<tr><td>S,pallet_model_description[0],</td><td>&quot;EUR-pallet&quot;</td></tr>
+<tr><td>F,pallet_model_width_y[0],</td><td>0.800</td></tr>
+<tr><td>F,pallet_model_length_x[0],</td><td>1.200</td></tr>
+<tr><td>I,pallet_model_n_legs_x[0],</td><td>3</td></tr>
+<tr><td>I,pallet_model_n_legs_y[0],</td><td>3</td></tr>
+<tr><td>F,pallet_model_mid_leg_width_y[0],</td><td>0.145</td></tr>
+<tr><td>F,pallet_model_mid_leg_length_x[0],</td><td>0.145</td></tr>
+<tr><td>F,pallet_model_side_leg_width_y[0],</td><td>0.100</td></tr>
+<tr><td>F,pallet_model_side_leg_length_x[0],</td><td>0.145</td></tr>
+</tbody></table>
+<p>The second model can be given by changing the array index to [1], the third model with [2] and so on. Individual models can be temporarily disabled by changing the <strong>pallet_model_enabled</strong> to 0, so you don't need to remove the whole model from parameter file to disable it. At least one model has to be enabled all the time.</p>
+<p><strong>NOTE!</strong> Pallet detection algorithm tries to find the best fitting model from these, but if the models are too similar to each other, false positives can happen.</p>
+<ul>
+<li>
+<p>Larger differences between pallet models is always better.</p>
+</li>
+<li>
+<p>Additional models should be avoided, if not necessary</p>
+</li>
+</ul>
+<p><img src="./media-en/figure7.png" alt="" /></p>
+<blockquote>
+<p>Pallet dimensions</p>
+</blockquote>
+<h2 id="scanner-modes"><a class="header" href="#scanner-modes">Scanner modes</a></h2>
+<p>The <strong>target_detection_scan_selection</strong> parameter has different options for the scanner use. This parameter is only meant to define what scanner data is used for pallet detection. The scanner has to be enabled with this parameter: <strong>scan_rear_front_selection.</strong></p>
+<ul>
+<li>
+<p>Mode 1: Uses scanner that is defined with <strong>scanner_model_rear</strong> parameter.</p>
+</li>
+<li>
+<p>Mode 2: Uses scanner that is defined with <strong>scanner_model_front</strong> parameter.</p>
+</li>
+<li>
+<p>Mode 3: Uses data from both front and rear scanners. Not supported with <strong>target_detection_type_selection</strong> = 2, the scanner mode 4 should be used instead.</p>
+</li>
+<li>
+<p>Mode 4: Uses data from scanner based on the driving direction. When driving forward, using front scanner, when driving backwards use the rear scanner. Uses wheel speed to define the driving direction (positive forwards, negative backwards). For example: Steer wheel for steer drive, fastest wheel of diff drive. If the AGV is standing still, using the last scanner.</p>
+</li>
+</ul>
+<p>The <strong>target_detection_multi_scan_selection</strong> parameter supports more scanners. If the <strong>target_detection_scan_selection is 0</strong>, this parameter is used instead. This parameter is array parameter and each array index matches to the scanner:</p>
+<p><strong>target_detection_multi_scan_selection[0] = Rear scanner</strong></p>
+<p><strong>target_detection_multi_scan_selection[1] = Front scanner</strong></p>
+<p><strong>target_detection_multi_scan_selection[2] = Measurement 0 scanner</strong></p>
+<p><strong>target_detection_multi_scan_selection[3] = Measurement 1 scanner</strong></p>
+<p>Then the parameter values define what mode is used.</p>
+<ul>
+<li>
+<p>Mode 1: Uses this scanner only. For example, <strong>target_detection_multi_scan_selection[2] = 1</strong> uses only measurement 0 scanner for target detection.</p>
+</li>
+<li>
+<p>Mode 2: Uses all defined scanners. For example, <strong>target_detection_multi_scan_selection[2] = 2</strong> and <strong>target_detection_multi_scan_selection[3] = 2</strong> both     measurement 0 and measurement 1 scanners are used for target detection.</p>
+</li>
+<li>
+<p>Mode 3: Alternate primary scanner. The idea is that target detection uses only data from the received scanner (primary or secondary). Mainly used on pattern detection (target_detection_type_selection = 1 and refl_det_version = 2).</p>
+</li>
+<li>
+<p>Mode 4: Alternate secondary scanner.</p>
+</li>
+<li>
+<p>Mode 5: Use this scanner when driving forwards. For example, <strong>target_detection_multi_scan_selection[1] = 5.</strong> Front scanner is used only when AGV is driving forwards.</p>
+</li>
+<li>
+<p>Mode 6: Use this scanner when driving backwards. For example, <strong>target_detection_multi_scan_selection[1] = 6.</strong> Front scanner is used only when AGV is driving backwards.</p>
+</li>
+<li>
+<p>Mode 7: Use this scanner when driving sideways to the right (should be used only with omni).</p>
+</li>
+<li>
+<p>Mode 8: Use this scanner when driving sideways to the left (should be used only with omni).</p>
+</li>
+</ul>
+<h2 id="pallet-detection-1"><a class="header" href="#pallet-detection-1">Pallet detection</a></h2>
+<h3 id="search-area"><a class="header" href="#search-area">Search area</a></h3>
+<p>The search area is an area that defines what scanner points are included in pallet detection algorithm. </p>
+<ul>
+<li>For non-buffer lane symbolic points with load detection enabled, the search area is defined first as a circle and then limited based on the pallet width we are searching for (see two figures below). The circle radius comes from pallet model dimension and <strong>pallet_det_2_initial_search_model_width_add</strong> parameter. If there are multiple pallet models defined, then the pallet model that has the largest dimension is used.</li>
+</ul>
+<p><img src="./media-en/SearchArea.png" alt="" /></p>
+<blockquote>
+<p>Circle shaped search area around the symbolic point, marked as dashed blue line. </p>
+</blockquote>
+<ul>
+<li>For buffer lanes, the circle is not used, but the search area is defined initially based on the first pallet model width defined on params.txt file and the <strong>pallet_det_2_initial_search_model_width_add</strong> parameter as on the figure below. If there are multiple pallet models, then the search area is first limited based on the first model width and later limited based on the model we are searching for. </li>
+</ul>
+<p><img src="./media-en/image11.png" alt="" /></p>
+<blockquote>
+<p>Search area based on pallet width. The area between the blue dashed lines is defined from route to the pallet width + <strong>pallet_det_2_initial_search_model_width_add</strong>.</p>
+</blockquote>
+<h3 id="start-point-for-clustering"><a class="header" href="#start-point-for-clustering">Start point for clustering</a></h3>
+<p>The start point for clustering is usually the closest point in AGV coordinate frame. If this point is not found from the closest legs of the pallet, the detection cannot find the pallet. There are two values that are used to select the start point:</p>
+<ul>
+<li>Distance from scanner point to AGV navigation pose</li>
+<li>Scanner point angle relative to the symbolic point. This angle is a difference between line that goes from AGV navigation pose to scanner point, and line that goes from AGV navigation pose to symbolic point</li>
+</ul>
+<p>Parameter <strong>pallet_det_first_leg_ang_weight</strong> can be used to define the weight between these two values. The bigger the parameter value, the more important is the small angle. The smaller the value, the more important is the small distance.</p>
+<p>Parameter <strong>pallet_det_use_dynamic_search_ang</strong> defines how the maximum angle for the start point is calculated. </p>
+<ul>
+<li>If <strong>pallet_det_use_dynamic_search_ang</strong> is 1, then the angle is calculated with distance from AGV to the symbolic point + <strong>docking_stop_distance</strong> and the half pallet width + <strong>pallet_det_2_initial_search_model_width_add</strong>. The idea is that the angle is little bit higher than the closest corner of the pallet. See figure below. </li>
+</ul>
+<p><img src="./media-en/DynamicAngle.png" alt="" /></p>
+<blockquote>
+<p>Maximum angle for the start point, illustrated as red line. The angle changes dynamically based on the AGV distance to the symbolic point. 1. <strong>docking_stop_distance</strong> parameter, 2. Pallet half width, 3. <strong>pallet_det_2_initial_search_model_width_add</strong> parameter, 4. Maximum angle, 5. Distance from AGV to symbolic point.</p>
+</blockquote>
+<ul>
+<li>If <strong>pallet_det_use_dynamic_search_ang</strong> is 0, then <strong>pallet_det_limit_initial_search_ang</strong> is used to define the max angle. See figure below.</li>
+</ul>
+<p><img src="./media-en/ClosestPointAngleParam.png" alt="" /></p>
+<blockquote>
+<p>Maximum angle for the start point, illustrated as red line. The angle is static and it does not change based on distance to the symbolic point. 1. Angle is defined only with <strong>pallet_det_limit_initial_search_ang</strong> parameter.</p>
+</blockquote>
+<h3 id="linear-model"><a class="header" href="#linear-model">Linear model</a></h3>
+<p>Linear model is a detection feature that matches straight line for the pallet width. The idea is to detect the stringer board of the pallet or the load on the pallet if it has the width of the pallet.</p>
+<p>Linear model can be enabled with parameter <strong>pallet_det_linear_models_enabled.</strong></p>
+<p>The parameter <strong>pallet_det_lin_mod_point_threshold</strong> define what is the maximum distance between consecutive points to create the straight line.</p>
+<p>The parameter <strong>pallet_det_linear_model_max_err</strong> is maximum error between the model width (<strong>pallet_model_width_y paramater</strong>) and the detected line.</p>
+<p><img src="./media-en/image12.png" alt="" /></p>
+<blockquote>
+<p>Example of the linear model. The pallet is detected based on the line width.</p>
+</blockquote>
+<h3 id="asymmetric-pallets"><a class="header" href="#asymmetric-pallets">Asymmetric pallets</a></h3>
+<p>An asymmetric pallet is a pallet that is shaped like an isosceles trapezoid, meaning it is symmetric along one axis and asymmetric along the other. Each pallet is assumed to have four legs, visualized below:</p>
+<p><img src="./media-en/AsymmetricPalletDetection.PNG" alt="" /></p>
+<blockquote>
+<p>Dimensions of an asymmetric pallet</p>
+</blockquote>
+<p>An asymmetric pallet will create four models, from each possible direction of detection. The models are obtained as 0, 90, 180 and 270 degree rotations of the pallet around its axis.</p>
+<p><img src="./media-en/AsymmetricModels.PNG" alt="" /></p>
+<blockquote>
+<p>Models obtained from an asymmetric pallet </p>
+</blockquote>
+<p>The pose estimate (x, y, h) of an asymmetric pallet is obtained as the centre of the facade for the symmetric side or in line with the pallet leg that is nominally closer to the AGV. The side leg angle offset Y is used to compensate the computed heading, visualized in the Figure above. The position of the pallet is visualized as a blue circle in the below Figures</p>
+<p><img src="./media-en/AsymmetricPoseEstimation1.PNG" alt="" /><br />
+<img src="./media-en/AsymmetricPoseEstimation2.PNG" alt="" /></p>
+<blockquote>
+<p>Pose estimation of an asymmetric pallet</p>
+</blockquote>
+<p>For asymmetric pallets a heading distinction of 180 degrees must be made. This is done by the sign of the side leg angle offset Y weighted by parameter <strong>pallet_det_fitness_weight[7]</strong>. Asymmetric pallet detection logging has prefix <em>Pallet detection: asymmetric</em> that is visible, when parameter <strong>log_pallet_detection</strong> is set to 1.</p>
+<h3 id="locking-the-target"><a class="header" href="#locking-the-target">Locking the target</a></h3>
+<p>The target is locked (meaning its position is not updated anymore) after the distance to target is close enough.</p>
+<ul>
+<li>
+<p>If <strong>target_detection_type_selection = 2</strong>, the distance parameter is <strong>pallet_det_min_dist_from_scanner.</strong></p>
+</li>
+<li>
+<p>If <strong>target_detection_type_selection = 3</strong>, the distance parameter is <strong>pallet_det_2_min_dist_from_nav_point_to_traj_end.</strong></p>
+</li>
+</ul>
+<p>There is also model-based parameter <strong>pallet_model_min_dist_from_nav_point_to_traj_end[model index]</strong> that is used if the target should be locked in different distance for different pallet models.</p>
+<h3 id="locking-the-model"><a class="header" href="#locking-the-model">Locking the model</a></h3>
+<p>This can be used if there are different pallet models. If the target is found multiple times in a row the algorithm can be locked to search only that specific model by setting the parameter <strong>pallet_det_2_lock_model_if_found_number_of_times</strong> to some reasonable value (e.g. 10 times). However, it is important to check if the old target is reset between different symbolic points. This can be tested by driving between two pallet detection points that has different pallet models and see which model is locked. If the last pallet model seems to be detected also on the next location, it indicates that the model is not reset between those locations. The old result is reset after there is no detection in number of times set by this parameter: <strong>target_max_n_times_missing</strong> (e.g. start with 100 times missing and decrease if still detect the model from the last symbolic point).</p>
+<h3 id="wall-check"><a class="header" href="#wall-check">Wall check</a></h3>
+<p><img src="./media-en/image13.png" alt="" /></p>
+<blockquote>
+<p>Wall check example shows where the holes and walls are checked.</p>
+</blockquote>
+<table><thead><tr><th>Parameter</th><th>Values</th><th>Description</th></tr></thead><tbody>
+<tr><td>I,pallet_det_wall_check[0],</td><td>0 to 2</td><td></td></tr>
+<tr><td>I,pallet_det_wall_check[1], </td><td>0 or 1 </td><td></td></tr>
+<tr><td>I,pallet_det_wall_check_points, </td><td>3</td><td>How many points at maximum from the leg are checked in the wall checks, before a decision is made that if there is empty space or not</td></tr>
+<tr><td>F,pallet_det_wall_point_dist_threshold,</td><td>0.01, 0.05, 0.20</td><td>Maximum distance (meters) between points, that they are estimated to be linked together in the wall checks</td></tr>
+</tbody></table>
+<p>There are three modes on the wall check:</p>
+<p><em>Mode 1:</em> <strong>pallet_det_wall_check[0] = 1</strong></p>
+<p>Check that there is empty space <strong>between</strong> the legs. If the space is not empty, solution is discarded.</p>
+<p><em>Mode 2:</em> <strong>pallet_det_wall_check[0] = 2</strong></p>
+<p>Check if there is a wall <strong>next</strong> to the legs. If found wall, discard the solution.</p>
+<p><em>Mode 3:</em> <strong>pallet_det_wall_check[1] = 1</strong></p>
+<p>Additional check that if there are pallets next to each other and the pallet detected is actually <strong>bigger model</strong> than should be (outer legs detected instead of the inner ones)</p>
+<p><img src="./media-en/image14.png" alt="" /></p>
+<blockquote>
+<p>Example of wall check. The points circled with red are considered as leg and blue ones are included to the wall check. Here the pallet_det_wall_check_points is 6 and it means that if there are 6 scanner points next to the leg, the wall check will discard that result. The pallet_det_wall_point_dist_threshold is 0.05 so the purple point is too far from the blue points, so it is not included and then the blue ones below doesn't have enough points to be considered as wall.</p>
+</blockquote>
+<h3 id="search-only-front-legs"><a class="header" href="#search-only-front-legs">Search only front legs</a></h3>
+<p>If the rear legs are not visible with the scanner or if they don't match with the pallet model parameters (e.g. the leg shape is not rectangle), it is possible to use only front legs for the detection. There might be also something else on the rear that doesn't give any reasonable results for the algorithm. For example, on the figure down below, the rear legs are different size than the front legs so it does not make sense to try to detect the rear legs.</p>
+<p><img src="./media-en/image15.png" alt="" /></p>
+<blockquote>
+<p>Example of poor pallet detection scanner data on the rear legs.</p>
+</blockquote>
+<p>If <strong>pallet_det_2_detect_only_front_legs</strong> is set to 1, the algorithm detects only front legs.</p>
+<h3 id="object-detection"><a class="header" href="#object-detection">Object detection</a></h3>
+<p>Object detection is a sub feature of pallet detection in which instead of a pallet any group of scanner points that are close to each other and within the search area can be detected as the target. If several groups are found, the closest one is selected as the target.</p>
+<p>The downsides of the object detection is that it can detect anything on the route, so the accuracy might vary and that it does not provide the angle of the target. The downsides makes object detection only compatible with docking methods, that do not use the target angle, such as docking with only distance control. </p>
+<table><thead><tr><th>Name</th><th>Type</th><th>Required value</th><th>Description</th></tr></thead><tbody>
+<tr><td>pallet_det_object_det_enabled</td><td>Int</td><td>1</td><td>Enables object detection so that instead of pallets any cluster of scanner points inside the search area is detected as a target. target_detection_type_selection must have value 3 for this parameter to have an effect.</td></tr>
+</tbody></table>
+<p>As a sub feature of pallet detection many of the parameters affecting pallet detection affect object detection as well with some differences. For example, <strong>pallet_model_width_y[0]</strong> is used to visualize the width of the found target.</p>
+<p>Related parameters that can be adjusted:</p>
+<ul>
+<li><strong>target_detection_min_search_radius</strong></li>
+<li><strong>target_detection_type_selection</strong></li>
+<li><strong>pallet_det_min_points_close_to_first_point</strong></li>
+<li><strong>pallet_det_2_max_dist_to_first_point</strong></li>
+<li><strong>pallet_det_use_dynamic_search_ang</strong></li>
+<li><strong>pallet_det_limit_initial_search_ang</strong></li>
+<li><strong>target_detection_max_dist_to_symbolic_point</strong></li>
+</ul>
+<h3 id="unwanted-cluster-between-legs"><a class="header" href="#unwanted-cluster-between-legs">Unwanted cluster between legs</a></h3>
+<p>The unwanted cluster is a feature that tries to find object between the two-legged pallet on the first row. The main idea is to add cost to model that has something between its legs or to discard that model. On the picture down below is an example case where there are two small pallets next to each other and larger model (the green box) is detected instead. This has been created mainly to avoid detecting large two-legged models, if there are also smaller models. For example, if the picture down below would have large model (the green box) that would fit to the outer legs, but we want to detect only the smaller one this would be useful.</p>
+<p>The parameter <strong>pallet_det_2_fitness_cost_percentage_for_unwanted_cluster</strong> defines if the fitness of that result is only decreased by some percentage value or if the model is discarded (negative value) when unwanted cluster is found between the legs.</p>
+<p>The parameter <strong>pallet_det_2_min_points_to_create_unwanted_cluster</strong> define how many points is needed between the legs to create cluster. On the
+figure down below, the unwanted cluster is circled with red.</p>
+<p>The parameter
+<strong>pallet_det_2_max_point_diff_for_unwanted_cluster</strong> define the
+point difference related to the side legs. The idea is to detect only
+similar size clusters as the outer legs.</p>
+<p><img src="./media-en/image16.png" alt="" /></p>
+<blockquote>
+<p>Unwanted cluster example. The pallet has unwanted cluster (the red circle), between the front legs. Depending on the case, the result can be discarded or the fitness value can be decreased to add more weight to other results.</p>
+</blockquote>
+<h2 id="target-filtering"><a class="header" href="#target-filtering">Target filtering</a></h2>
+<p>Target detection results are filtered, before they are given for route planner to calculate a docking path.</p>
+<p>Target detection filtering parameters:</p>
+<p><strong>F,target_detection_results_dampening, (0.30 by default)</strong></p>
+<p>Dampening value for the results; min = 0.0, max = 1</p>
+<p>Filters as a low pass filter, so bigger value means that location is updated faster, lower means more filtering is done</p>
+<p><strong>I, target_min_n_times_detected, (20 by default)</strong></p>
+<p>Minimum number of times target must be detected successfully before target is approved as found.</p>
+<p><strong>I, target_max_n_times_missing, (300 by default)</strong></p>
+<p>Maximum number of times last known location of target is given if no target detected</p>
+<p>This means that, if the target was detected successfully <strong>target_min_n_times_detected</strong> -times, the algorithm still uses the last known location for route planning, even if the target is not detected in less than <strong>target_max_n_times_missing</strong> -cycles. If target is not detected for larger amount of cycles, it is considered lost.</p>
+<h2 id="navitrol-monitor-pallet-detection-form"><a class="header" href="#navitrol-monitor-pallet-detection-form">Navitrol Monitor Pallet Detection form</a></h2>
+<p>Navitrol Pallet Detection form can be opened in Navitrol Monitor from the menu Navitrol -&gt; Pallet Detection Form, when the Monitor is connected to an AGV. It can be used for testing and debugging the pallet detection and the docking procedure it should execute.</p>
+<p><img src="./media-en/image43.png" alt="" /></p>
+<blockquote>
+<p>The pallet detection form in Navitrol Monitor</p>
+</blockquote>
+<p>All the Navitrol parameters shown on the form can be changed to Navitrol params.txt by changing the value on the field manually and pressing the button 'Upload &amp; Save parameters'. It saves the new parameters and reloads them into use. If the checkbox 'Save new params to file' is unchecked, parameters are only loaded into use for current run, but are not saved to the params.txt. 'Reload current parameters' can be then used to use again the parameters on the params.txt.</p>
+<p><strong>Short explanations for the fields shown on the form:</strong></p>
+<p><em>Driving to location with pallet det enabled</em></p>
+<p>When the end location of the current driving order has the pallet detection enabled from Navithor Tools, this box turns green and shows 1.
+Otherwise it is red and 0 and the docking procedure will never start.</p>
+<p><em>Pallet detection algorithm started</em></p>
+<p>If pallet detection is activated in Navitrol parameters, the AGV is driving into a location with pallet detection enabled and we are close enough to the symbolic point (on default 6 meters), the AGV starts to search for the pallet and this box turns green and shows 1. The algorithm can be also always activated with Navitrol parameters, but
+that should be usually used only for debugging purposes.</p>
+<p><em>Target found</em></p>
+<p>This box turns green and shows 1, when the target is found.</p>
+<p><em>Target detected n times</em></p>
+<p>Shows how many times in a row the target is properly seen. There is a parameter to limit for how many times the target has to be first send, before the target is locked and docking can be started.</p>
+<p>The parameter is shown on the right side:
+<strong>target_min_n_times_detected</strong></p>
+<p><em>Target missing n times</em></p>
+<p>If the target is already locked (the target is seen enough, so that the limit above is fulfilled), the old location for the target is used even if the algorithm doesn't detect the pallet every calculation round. Only after the target is missing for too long time, the docking procedure is cancelled. The parameter for how many times the target can be missing is shown on the right side: <strong>target_max_n_times_missing</strong></p>
+<p><em>Distance from scanner to the target</em></p>
+<p>Minimum distance from the scanner to the <em>calculated stopping point</em> for the target location to be updated. Scanners usually have more error in close ranges, so this parameter can be used to just use the last known location for the target, after it is closer than the distance specified in <strong>pallet_det_min_dist_from_scanner.</strong></p>
+<p><strong>NOTE:</strong> If <strong>target_detection_type_selection</strong> is 3, <strong>pallet_det_2_min_dist_from_nav_point_to_traj_end</strong> is used instead for the same purpose.</p>
+<p><em>Docking started</em></p>
+<p>The box will stay red until all the 5 restrictions below are met and the docking can be started. After that the box will turn green.</p>
+<p><strong>Limits for starting the docking procedure</strong></p>
+<p><em>Distance from navigation point to the target stopping point</em></p>
+<p>Parameter to change: <strong>docking_max_start_distance</strong></p>
+<p><em>Angle difference between symbolic point heading and angle from navigation point to the symbolic point</em></p>
+<p>Parameter to change: <strong>docking_max_start_angle</strong></p>
+<p><em>Angle difference between symbolic point's and AGV's headings</em></p>
+<p>Parameter to change: <strong>docking_max_start_heading</strong></p>
+<p><em>Angle difference between target angle and symbolic point's heading</em></p>
+<p>Parameter to change: <strong>docking_max_target_angle</strong></p>
+<p><em>Distance error between symbolic point and the calculated target stopping point (stopping offset included)</em></p>
+<p>Parameter to change: <strong>docking_max_dist_error_from_end_point</strong></p>
+<p><strong>Other Navitrol parameters shown on the form:</strong></p>
+<p><strong>docking_stop_distance</strong></p>
+<p><strong>docking_y_offset</strong></p>
+<p><strong>pallet_det_heading_offset (used only with target_detection_type_selection = 2)</strong></p>
+<p><strong>docking_dist_gain</strong></p>
+<p><strong>docking_heading_gain</strong></p>
+<p>Below is shown two example screenshots, how the Pallet Detection Form looks like in Navitrol Monitor and how the target is visualized. In the first screenshot the target is found, but all restrictions for starting the docking procedure are not yet met, so the AGV is not yet correcting its path according to the target found.</p>
+<p>On the second screenshot docking is started. The new stopping point is visualized with a blue arrow and the green arrow shows the trajectory, where the AGV is currently trying to correct its path.</p>
+<p><img src="./media-en/image44.png" alt="" /></p>
+<blockquote>
+<p>Target is detection, but docking is not yet started, because the distance to target is too high, the heading is not within allowed limits and start angle is not within limits.</p>
+</blockquote>
+<p><img src="./media-en/image45.png" alt="" /></p>
+<blockquote>
+<p>Docking procedure started when the start conditions are met.</p>
+</blockquote>
+<h2 id="troubleshoot"><a class="header" href="#troubleshoot">Troubleshoot</a></h2>
+<p>This chapter introduces some issues that customer might face with pallet detection or docking and how to resolve them.</p>
+<h3 id="pallet-detection-is-not-started-when-driving-to-symbolic-point"><a class="header" href="#pallet-detection-is-not-started-when-driving-to-symbolic-point">Pallet detection is not started when driving to symbolic point</a></h3>
+<p>When driving to Symbolic point, there is <strong>no green box</strong> on the Monitor or Client that indicates that pallet has been found. There might be several reasons, but here are the most common ones.</p>
+<h3 id="tag-missing"><a class="header" href="#tag-missing">Tag missing</a></h3>
+<p><strong>Problem</strong>: In this case, there is no warning or error, because the pallet detection or docking is not activated.</p>
+<p><strong>What to do</strong>: Check that the symbolic point has pallet detection tag on Tools.</p>
+<p><img src="./media-en/image5.png" alt="" /></p>
+<blockquote>
+<p>Pallet detection tag for symbolic point on Tools.</p>
+</blockquote>
+<h3 id="target-detection-not-enabled"><a class="header" href="#target-detection-not-enabled">Target detection not enabled</a></h3>
+<p><strong>Problem:</strong> On this case, there is no error or warning, because the feature is not enabled. Even if there is the pallet detection tag.</p>
+<p><strong>What to do:</strong> Check that <strong>target_detection_type_selection</strong> has 2 or 3.</p>
+<h3 id="closest-point-not-found"><a class="header" href="#closest-point-not-found">Closest point not found</a></h3>
+<p><strong>Problem:</strong> The AGV stops with TARGET_APPROACH_ERROR and on the log just before this error there is a line &quot;<em>Pallet detection ERROR: Closest point for lin mod</em>&quot; or &quot;<em>Pallet det: Closest point for legs not found.</em>&quot;</p>
+<p><strong>What to do:</strong></p>
+<ul>
+<li>If <strong>pallet_det_use_dynamic_search_ang</strong> is set to 1, check that <strong>pallet_det_2_initial_search_model_width_add</strong> has large enough value. It is used to calculate the search area for the closest point.</li>
+</ul>
+<p><img src="./media-en/image46.png" alt="" /></p>
+<blockquote>
+<p>Dynamic search angle calculation for two-legged and three-legged pallet. It is calculated based on distance to target and model width +  pallet_det_2_initial_search_model_width_add parameter.</p>
+</blockquote>
+<ul>
+<li>
+<p>If <strong>pallet_det_use_dynamic_search_ang</strong> is set to 0, check that <strong>pallet_det_limit_initial_search_ang</strong> has large enough search angle.</p>
+</li>
+<li>
+<p>Check that <strong>pallet_det_min_points_close_to_first_point</strong> has smaller value than scanner points in the smallest cluster on the front row.</p>
+</li>
+</ul>
+<p><img src="./media-en/image47.png" alt="" /></p>
+<blockquote>
+<p>The middle leg has only two scanner points and the value for the pallet_det_min_points_close_to_first_point parameter was 2.
+Meaning that there should be total of three points in a distance of pallet_det_2_max_dist_to_first_point.</p>
+</blockquote>
+<h3 id="scanner-points-are-discarded"><a class="header" href="#scanner-points-are-discarded">Scanner points are discarded</a></h3>
+<p><strong>Problem:</strong> If <strong>target_detection_type_selection</strong> is 3, the parameter <strong>pallet_det_min_dist_from_scanner</strong> is used to discard scanner points that are too close to the scanner. One indication for this case is on the log print where the pallet detection is started. If there is this kind of log print: &quot;<em>Starting pallet det v2 algorithm, pointsnbr 0</em>&quot;, it means that there are no scanner points for the algorithm.</p>
+<p><strong>What to do:</strong> Set this <strong>pallet_det_min_dist_from_scanner</strong> parameter to small value, so it doesn't discard points in too far distance.</p>
+<h3 id="pallet-model-parameters-are-incorrect"><a class="header" href="#pallet-model-parameters-are-incorrect">Pallet model parameters are incorrect</a></h3>
+<p><strong>Problem:</strong> The model is not found, because the width and length are incorrect or the number of legs is not correct. In many cases it is better to verify the actual leg size and pallet width from Monitor (using the Measurement tape button on the top bar), because the sizes depend on the scanner resolution and the distance. The longer the distance to the target, the less accurate scanner data is, because of the scanner resolution.</p>
+<p>The <strong>pallet_model_width_y</strong> parameters is always the front side where the AGV is approaching to the pallet and <strong>pallet_model_length_x</strong> is the side. For example, when picking the EUR-pallet from normal direction, the width is 0.8 m and the length is 1.2 m. If this same EUR-pallet can be picked up from the side (approaching from the 1.2 m side), then there has to be other model that defines its dimensions. Then that model width is 1.2 m and length is 0.8 m. Also, the leg dimensions have to be set accordingly.</p>
+<p><img src="./media-en/image48.png" alt="" /></p>
+<blockquote>
+<p>Here the pallet dimensions are same, but there has to be different model based on approaching direction.</p>
+</blockquote>
+<p><strong>What to do:</strong> Check Chapter 5 to verify that the model parameters are okay in general.</p>
+<h3 id="pallet-detected-in-wrong-location"><a class="header" href="#pallet-detected-in-wrong-location">Pallet detected in wrong location</a></h3>
+<h4 id="pallet-is-too-much-on-the-side"><a class="header" href="#pallet-is-too-much-on-the-side">Pallet is too much on the side</a></h4>
+<p><strong>Problem</strong>: There are several pallets next to each other. The pallet is found too much to the side, based on the pallet next to the desired one.</p>
+<p><img src="./media-en/image49.png" alt="" /></p>
+<blockquote>
+<p>Pallet detected on side. The desired result is the two-legged one close to the symbolic point.</p>
+</blockquote>
+<p><strong>What to do:</strong> Decrease <strong>pallet_det_2_initial_search_model_width_add</strong> to decrease the search area or decrease <strong>pallet_det_2_max_dist_to_route</strong> to discard pallets that are found too far from the route.</p>
+<h3 id="pallet-angle-changes-during-drive"><a class="header" href="#pallet-angle-changes-during-drive">Pallet angle changes during drive</a></h3>
+<p><strong>Problem:</strong> AGV drives towards the pallet, but the target angle changes suddenly. This causes AGV to turn off the route, because it will try to reach the changed target. On the three example pictures down below, the scanner sees first the stringer board, then some part between the legs and the stringer board and finally the legs of the pallet. The main problem here is that the scanner is lifted during the docking procedure.
+In general, during the pallet detection, the scanner should only see points that can be detected as a pallet (for example not the floor in front of the pallet).</p>
+<p><img src="./media-en/image50.png" alt="" /></p>
+<blockquote>
+<p>Pallet is seen from the stringer board. Docking is not started yet.</p>
+</blockquote>
+<p><img src="./media-en/image51.png" alt="" /></p>
+<blockquote>
+<p>Pallet is seen a bit below the stringer board or the scanner sees something below the pallet. This part of the pallet is not very reasonable for the detection and causes wrong angle. The docking is started based on this detection.</p>
+</blockquote>
+<p><img src="./media-en/image52.png" alt="" /></p>
+<blockquote>
+<p>Pallet is seen from the legs.</p>
+</blockquote>
+<p><strong>What to do:</strong></p>
+<ul>
+<li>
+<p>Change the <strong>docking_start_distance</strong> so the docking starts only after the pallet is detected correctly.</p>
+</li>
+<li>
+<p>Check tilt of the scanner. The scanner should see only the legs or the stringer board of the pallet.</p>
+</li>
+<li>
+<p>Decrease <strong>pallet_det_2_max_pallet_angle_error</strong> to discard pallets that have too high angle error.</p>
+</li>
+</ul>
+<h2 id="most-common-parameters"><a class="header" href="#most-common-parameters">Most common parameters</a></h2>
+<p>This list includes most commonly used parameters that are often changed in normal use. On this list there are three values for each parameter:
+min, default and max. If there is only one value, that is the default value. If the parameter is not set on the params.txt file, the default value is used. The first letter states the type of the parameter (I = Integer, F = Float, S = String).</p>
+<h3 id="target-detection-parameters"><a class="header" href="#target-detection-parameters">Target detection parameters</a></h3>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>I,target_detection_type_selection, 0, 0, 5</strong></td><td>Enables reflector-based docking or pallet detection, 0 = disabled, 1 = reflector docking, 2 = pallet detection, 3 = pallet detection v2, 4 = external target detection, 5 = supervisor controlled;</td></tr>
+<tr><td><strong>I,target_detection_scan_selection, 0, 1, 5</strong></td><td>Defines which scanners are used for target detection: 0 = enable target_detection_multi_scan_selection, 1 = rear scanner only, 2 = front scanner only, 3 = both scanners (supported only in reflector-based detection!), 4 = use scanner in driving direction, 5 = alternate between scanners target_detection_multi_scan_selection is used only when target_detection_scan_selection is 0!</td></tr>
+<tr><td><strong>I,target_detection_multi_scan_selection[Indexes 0-3], 0, 0, 8</strong></td><td>Indexes: 0=rear, 1=front, 2=meas0, 3=meas1. 1 = use as only scanner, 2 = together with others (all at once), 3 = alternating with other as primary, 4 = alternating with other as secondary, 5 = use when driving forwards, 6 = use when driving backwards, 7 = use when driving transversal right, 8 = use when driving transversal left</td></tr>
+<tr><td><strong>I,target_detection_always_enabled, 0, 0, 1</strong></td><td>1 = Enables target detection algorithm always. Note! Should be used only for initial test or calibration and disabled after that! 0 = detect target only when close to target detection tagged symbolic point.</td></tr>
+<tr><td><strong>F,target_detection_max_dist_to_symbolic_point, 6.0</strong></td><td>Max distance to the end point to start the algorithm</td></tr>
+<tr><td><strong>F,target_detection_maximum_iterations, 1, 10, 50</strong></td><td>The maximum number of target detection iterations before responding to target detection query</td></tr>
+<tr><td><strong>F,target_detection_min_search_radius, 0, 0, 100</strong></td><td>Defines the minimum search radius around the expected target location, such as symbolic point, from which the target is searched. </br>For pallet detection see also model widths and pallet_det_2_initial_search_model_width_add parameter.</br>For reflector detection see also docking_max_dist_error_from_end_point.</td></tr>
+</tbody></table>
+<h4 id="docking-parameters"><a class="header" href="#docking-parameters">Docking parameters</a></h4>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>I,docking_to_target_enabled, 0, 0, 2</strong></td><td>1 = Enables docking to target. 2 = docking with custom route. If target_detection_type_selection == 0, won't do anything</td></tr>
+<tr><td><strong>F,docking_max_start_distance, 3.5</strong></td><td>Beyond maximum distance docking won't be triggered</td></tr>
+<tr><td><strong>F,docking_max_start_angle, 15.0</strong></td><td>Max angle difference from navigation point to the target compared to trajectory's end point's heading, when starting to dock [-degrees fov]</td></tr>
+<tr><td><strong>F,docking_max_start_heading, 5.0</strong></td><td>Max angle diff for vehicle heading and trajectory's end point heading, when starting to dock [+-degrees fov]</td></tr>
+<tr><td><strong>F,docking_max_dist_error_from_end_point, 0.5</strong></td><td>Maximum distance difference for the stopping point compared to the symbolic point</td></tr>
+<tr><td><strong>F,docking_max_target_angle, 15.0</strong></td><td>Maximum difference between target and end point's headings</td></tr>
+<tr><td><strong>F,docking_stop_distance, 0.50</strong></td><td>Defines how close to the target vehicle tries to drive (calculated from navigation point to target)</td></tr>
+<tr><td><strong>F,docking_y_offset, 0.0</strong></td><td>Offset in y-coordinate for docking (in machine coordinates)</td></tr>
+<tr><td><strong>F,docking_approach_dist, 1.25</strong></td><td>When approaching target closer than this distance, vehicle stops if the approach error is too big</td></tr>
+<tr><td><strong>F,docking_dist_gain, 1.0</strong></td><td>Dist gain while docking, 0 = use pc_pid_dist_p</td></tr>
+<tr><td><strong>F,docking_heading_gain, 1.0</strong></td><td>Heading gain while docking, 0 = use pc_pid_heading_p</td></tr>
+<tr><td><strong>I,docking_ref_v_source, 0, 0, 2</strong></td><td>Speed source when doing docking, 0 = calculated from distance to target, 1 = using route velocity value, 2 = use fixed parameter docking_speed</td></tr>
+<tr><td><strong>F, docking_speed, 0.3</strong></td><td>Speed while docking, if docking_ref_v_source == 2. If it is 0, this is minimum starting speed for the docking drive.</td></tr>
+<tr><td><strong>I,docking_leave_unload_loc_straight, 0</strong></td><td>Limit curvature after unload if set to 1</td></tr>
+<tr><td><strong>F,docking_leave_unload_loc_straight_dist, 1.0</strong></td><td>Limit curvature after unload if set to 1</td></tr>
+</tbody></table>
+<p><em><strong>// Docking with custom route. docking_to_target_enabled = 2</strong></em></p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,docking_control_point_1_dist_from_machine, 0.0, 0.20, 10.0</strong></td><td>Minimum distance for the node straight to the AGV heading.</td></tr>
+<tr><td><strong>F,docking_control_point_2_dist_from_target, 0.0, 0.80, 10.0</strong></td><td>Distance for the node to create straight route before target.</td></tr>
+<tr><td><strong>I,docking_allow_custom_route_update, 0, 0, 1</strong></td><td>0 = custom route is locked after it is created, 1 = custom route is updated if the target changes.</td></tr>
+<tr><td><strong>F,docking_custom_route_min_xy_diff, -1.0, 0.02, 0.50</strong></td><td>Minimum distance difference (in meters) between the old pallet and the new to update the last part of the custom route. If set to positive, custom route is updated. Also uses target_detection_max_diff_in_xy_results to check that the difference is not too large.</td></tr>
+<tr><td><strong>F,docking_custom_route_min_angle_diff, -1.0, 2.0, 20.0</strong></td><td>Minimum angle difference (in degrees) between the old pallet and the new to update the last part of the custom route. If set to positive, custom route is updated. Also uses target_detection_max_diff_in_angle_results to check that the difference is not too large.</td></tr>
+<tr><td><strong>F,docking_custom_route_max_allowed_xy_diff_for_target, 0.0, 0.2, 1.0</strong></td><td>Maximum limit (in meters) for the custom route update related to the initial target. The custom route is not updated if the new target is further away than this parameter from the initial target (target location when the custom route is created for the first time).</td></tr>
+</tbody></table>
+<h3 id="pallet-model-parameters"><a class="header" href="#pallet-model-parameters">Pallet model parameters</a></h3>
+<p>These parameters define the pallet model we are searching for. These are array parameters and the maximum number of models is 5 (indexes from 0 to 4).
+Example set for EUR-pallet can be found from Chapter 5</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>I,pallet_model_enabled[index], -1</strong></td><td>0 = pallet model is currently not used for detection, 1 = model enabled</td></tr>
+<tr><td><strong>S,pallet_model_description[index], &quot;&quot;</strong></td><td>Description of the pallet (for example 'EUR-pallet')</td></tr>
+<tr><td><strong>F,pallet_model_width_y[index], 0.0</strong></td><td>Total width of the pallet (measured from stringer board)</td></tr>
+<tr><td><strong>F,pallet_model_length_x[index], 0.0</strong></td><td>Total length of the pallet</td></tr>
+<tr><td><strong>I,pallet_model_n_legs_x[index], 0</strong></td><td>Number of legs (2 or 3) in X-direction (lengthwise)</td></tr>
+<tr><td><strong>I,pallet_model_n_legs_y[index], 0</strong></td><td>Number of legs (2 or 3) in Y-direction (widthwise)</td></tr>
+<tr><td><strong>F,pallet_model_mid_leg_width_y[index], 0.0</strong></td><td>Width (y-dimension) of the legs in middle column</td></tr>
+<tr><td><strong>F,pallet_model_mid_leg_length_x[index], 0.0</strong></td><td>Length (x-dimension) of the legs in middle column</td></tr>
+<tr><td><strong>F,pallet_model_side_leg_width_y[index], 0.0</strong></td><td>Width (y-dimension) of the legs on both side columns</td></tr>
+<tr><td><strong>F,pallet_model_side_leg_length_x[index], 0.0</strong></td><td>Length (x-dimension) of the legs on both side columns</td></tr>
+</tbody></table>
+<h3 id="pallet-detection-parameters"><a class="header" href="#pallet-detection-parameters">Pallet detection parameters</a></h3>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>I,pallet_det_linear_models_enabled, 0, 1, 1</strong></td><td>Enables pallet detection from stringer board (top part of the pallet), which can be seen as a line</td></tr>
+<tr><td><strong>I,pallet_det_min_points_in_cluster[index from 0 to 1], 5</strong></td><td>Minimum num of meas points in leg, second limit for a smaller leg, recommended values 5 for first and 4 for second</td></tr>
+<tr><td><strong>F,pallet_det_linear_model_max_err, 0.001, 0.07, 0.25</strong></td><td>Maximum difference (in meters) between the found line model and width of the pallet model for solution to be accepted</td></tr>
+<tr><td><strong>F,pallet_det_min_dist_from_scanner, 0.00, 0.20, 5.00</strong></td><td>Minimum distance from scanner to pallet that pallet position is updated (on ver2, the scanner points that are closer than this parameter are discarded)</td></tr>
+<tr><td><strong>F,pallet_det_2_min_dist_from_nav_point_to_traj_end, 0.00, 0.50, 25.0</strong></td><td>Minimum distance from navigation point to trajectory end that pallet position is still updated. This parameter is ignored, if model specific distances are defined.</td></tr>
+<tr><td><strong>F,pallet_det_2_initial_search_model_width_add, -0.50, 0.50, 2.00</strong></td><td>Increase the search area by adding this value to the model width.</td></tr>
+<tr><td><strong>I,pallet_det_2_detect_only_front_legs, 0, 0, 1</strong></td><td>If set to 1, algorithm detects only first legs and calculates target position based on this. Sometimes increases accuracy, because front legs are seen most accurately.</td></tr>
+<tr><td><strong>F,pallet_det_2_max_dist_to_route, 0.0, 0.2, 2.0</strong></td><td>Maximum distance to the route (line that is aligned to the route heading). Calculated from the pallet center. If the pallet is found further that this parameter, that result is discarded.</td></tr>
+<tr><td><strong>F,pallet_det_maximum_target_pose_error,  0.05, 0.2, 3.0</strong></td><td>Maximum target distance deviation between estimated centre point and target. Applicable to supervisor target detection.</td></tr>
+</tbody></table>
+<h2 id="advanced-parameters"><a class="header" href="#advanced-parameters">Advanced parameters</a></h2>
+<p>This list includes more advanced parameters that are not necessarily needed in normal use.</p>
+<p><strong>NOTE!</strong> If need to change some of these parameters, make sure to understand what these parameters do or contact Navitec for more information.</p>
+<p>On this list there are three values for each parameter: min, default and max. If there is only one value, that is the default value. If the parameter is not set on the params.txt file, the default value is used. The first letter states the type of the parameter (I = Integer, F = Float, S = String).</p>
+<h3 id="target-detection-parameters-1"><a class="header" href="#target-detection-parameters-1">Target detection parameters</a></h3>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,target_detection_results_dampening, 0.0, 0.3, 1.0</strong></td><td>Dampening value for the results</td></tr>
+<tr><td><strong>F,target_detection_max_diff_in_xy_results, 0.20</strong></td><td>How much difference (meters) is allowed in xy-location before the new result is updated without dampening</td></tr>
+<tr><td><strong>F,target_detection_max_diff_in_angle_results, 5.0</strong></td><td>How much difference (degrees) is allowed in angle before the new result is updated without dampening</td></tr>
+<tr><td><strong>I,target_min_n_times_detected, 20</strong></td><td>Minimum number of times target must be detected before giving results</td></tr>
+<tr><td><strong>I,target_max_n_times_missing, 300</strong></td><td>Max num of times last known location for target is given if no target detected; min = 0</td></tr>
+<tr><td><strong>I,target_detection_supervisor_update_message_enabled, 0, 1, 2</strong></td><td>0 = Disabled, 1 = Use message 4101, 2 = Use message 4104 (contains more info)</td></tr>
+</tbody></table>
+<h3 id="docking-parameters-1"><a class="header" href="#docking-parameters-1">Docking parameters</a></h3>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,docking_approach_max_dist_err, 0.10</strong></td><td>If distance between reference and navigation point is bigger than this in approach area, vehicle stops</td></tr>
+<tr><td><strong>F,docking_approach_max_h_err, 5.0</strong></td><td>If heading error between reference and AGV heading is bigger than this (degrees) in approach area, vehicle stops</td></tr>
+<tr><td><strong>F,docking_limit_curv_on_leave, 0.05</strong></td><td>Limit curvature on leave (approach distance)</td></tr>
+<tr><td><strong>F,docking_small_gains_dist, 0.50</strong></td><td>The distance to limit curvature on approach</td></tr>
+<tr><td><strong>F,docking_limit_corr_dist, 0.50</strong></td><td>The distance before stopping which is driven only with odometry (docking_max_xy_corr and docking_max_h_corr used instead of normal gains)</td></tr>
+<tr><td><strong>I,docking_small_gains, 1</strong></td><td>Limit curvature on approach</td></tr>
+<tr><td><strong>F,docking_max_xy_corr, 0.0001</strong></td><td>Max loc xy corr while approaching target</td></tr>
+<tr><td><strong>F,docking_max_h_corr, 0.003</strong></td><td>Max loc h corr while approaching target</td></tr>
+<tr><td><strong>F,docking_limit_curv_on_approach, 0.1</strong></td><td>Limit curvature on approach after small gains dist</td></tr>
+<tr><td><strong>F,docking_limit_leave_speed, 0.0, 0.2, 1.0</strong></td><td>Limit speed while driving out from docking location, if docking_limit_leave_speed_and_actuator_height_dist &gt; 0. If it is below 0, speed is not limited.</td></tr>
+<tr><td><strong>F,docking_limit_leave_speed_and_actuator_height_dist, -2.0, -1.0, 20.0</strong></td><td>Distance from the unload location, where the speed and fork height is limited to the actuator_min_val. If negative, they are not limited. If enabled, had to be smaller than docking_mode_to_fleet_control_dist parameter.</td></tr>
+<tr><td><strong>F,docking_mode_to_fleet_control_dist, 2.5</strong></td><td>Inform fleet control of docking mode after leaving the location</td></tr>
+<tr><td><strong>F,docking_notify_approach_dist, 0.50</strong></td><td>Distance from docking target when a notification is sent to the AGV control</td></tr>
+<tr><td><strong>I,docking_stopping_point_offset_mode, 0, 0, 1</strong></td><td>0 = Use general stopping offsets, 1 = offsets are defined individually for each pallet model with parameters</td></tr>
+<tr><td><strong>I,docking_follow_route_properties, 0, 1, 1</strong></td><td>Use defined properties on the route while docking to target</td></tr>
+<tr><td><strong>F,docking_refpoint_max_err, -1.0, -0.5, 10.0</strong></td><td>Max error (in m) for the docking point after started docking. Indicate pushing pallet. If negative, not used.</td></tr>
+</tbody></table>
+<p><em><strong>// P-controller These are array parameters with indexes from 0 to 2.</strong></em></p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,pc_pid_docking_dist_limit[index], 0.0</strong></td><td>Change PID settings after the distance to docking target is smaller than given here (0.0 == disabled)</td></tr>
+<tr><td><strong>F,pc_pid_docking_dist_p[index], 0.0, 0.0, 100.0</strong></td><td>distance gain</td></tr>
+<tr><td><strong>F,pc_pid_docking_heading_p[index], 0.0, 0.0, 100.0</strong></td><td>heading gain</td></tr>
+</tbody></table>
+<h3 id="pallet-model-parameters-1"><a class="header" href="#pallet-model-parameters-1">Pallet model parameters</a></h3>
+<p>These parameters define the pallet model we are searching for. These are array parameters and the maximum number of models is 5 (indexes from 0 to 4).
+Example set for EUR-pallet can be found from Chapter 5</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,pallet_model_y_offset[index], 0.0</strong></td><td>Offset in y-coordinate for docking (in machine coordinates)</td></tr>
+<tr><td><strong>F,pallet_model_stop_distance[index], 0.0</strong></td><td>Defines how close to the target vehicle tries to drive (calculated from navigation point to target)</td></tr>
+<tr><td><strong>F,pallet_model_min_dist_from_nav_point_to_traj_end[index], -1.0</strong></td><td>Model specific minimum distance from navigation point to trajectory end that pallet position is still updated. -1.0 = disabled and the generic parameter pallet_det_2_min_dist_from_nav_point_to_traj_end is used instead.</td></tr>
+<tr><td><strong>I,pallet_model_discard_outlier_points[index], 0, 0, 1</strong></td><td>Discard outlier points on leg cluster. Uses average distance on cluster to detect outliers. Might be useful if the leg length is small and there are no points to see on the side.</td></tr>
+</tbody></table>
+<h3 id="pallet-detection-parameters-1"><a class="header" href="#pallet-detection-parameters-1">Pallet detection parameters</a></h3>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>F,pallet_det_lin_mod_point_threshold, 0.01, 0.07, 0.20</strong></td><td>Max distance between points (meters), when detecting a pallet from stringer board</td></tr>
+<tr><td><strong>F,pallet_det_limit_initial_search_ang, 5.0, 20.0, 135.0</strong></td><td>Limits the search field of view in front of the scanner for the first leg (+-degrees)</td></tr>
+<tr><td><strong>I,pallet_det_use_dynamic_search_ang, 0, 1, 1</strong></td><td>If set to 1, algorithm dynamically makes the search fov bigger, if the target to be detected is closer and vice versa.</td></tr>
+<tr><td><strong>F,pallet_det_limit_search_space, 0.30, 3.00, 10.0</strong></td><td>Limits the searching space in front of the laser scanner. Maximum distance (meters) sideways for points to be  considered for pallet.</td></tr>
+<tr><td><strong>F,pallet_det_first_leg_ang_weight, 0.10, 0.75, 5.00</strong></td><td>The two factors deciding the location for the first leg of the pallet we try to detect are angle and distance compared to the expected location. If parameter is bigger, having small angle errors is more important than distance error.</td></tr>
+<tr><td><strong>F,pallet_det_point_filter_dist, 0.02, 0.10, 0.30</strong></td><td>Filters all the points away from calculations, which don't have any close neighbors within this (meters)</td></tr>
+<tr><td><strong>F,pallet_det_leg_dist_err, 0.2, 0.5, 2.0</strong></td><td>Scales how much error is allowed for the points in the side legs (measured from the supposed center points). Allowed distance error is this parameter multiplied with pallet leg width, so the dimensions of the model also affect the result.</td></tr>
+<tr><td><strong>F,pallet_det_leg_dist_err_back, 0.01, 0.07, 0.15</strong></td><td>How much distance error (meters) is allowed for points in clusters behind the first row</td></tr>
+<tr><td><strong>F,pallet_det_leg_ang_err, 1.0, 7.0, 15.0</strong></td><td>How many degrees of error is allowed for individual points in the first row of legs</td></tr>
+<tr><td><strong>F,pallet_det_leg_ang_err_back, 0.5, 2.5, 10.0</strong></td><td>After detecting the legs and correcting the cluster locations, how many degrees of errors is allowed for the cluster location compared to expected for the legs behind the first row to be valid.</td></tr>
+<tr><td><strong>F,pallet_det_max_leg_dist_err, 0.01, 0.07, 0.20</strong></td><td>How many meters of distance error is allowed for the cluster locations compared to expected in the first row of legs for the whole solution to be valid. If error is bigger, solution is not accepted at all.</td></tr>
+<tr><td><strong>F,pallet_det_max_leg_ang_err, 1.0, 7.0, 15.0</strong></td><td>How many degrees of error is allowed for the cluster locations compared to expected in the first row of legs for the whole solution to be valid. If error is bigger, solution is not accepted at all.</td></tr>
+<tr><td><strong>I,pallet_det_wall_check[index from 0 to 1], 0</strong></td><td>Enable wall checks, can be 0, 1 or 2, recommended values 1 for first and 0 for second. Depending on the mode, the algorithm discards the solution, if between the legs the holes are not seen, or if on the sides of the legs it looks like there is a wall instead of empty space.</td></tr>
+<tr><td><strong>I,pallet_det_wall_check_points, 1, 6, 100</strong></td><td>Affects how many points at maximum from the leg are checked in the wall checks, before a decision is made that if there is empty space or not</td></tr>
+<tr><td><strong>F,pallet_det_wall_point_dist_threshold, 0.01, 0.05, 0.20</strong></td><td>Maximum distance (meters) between points, that they are estimated to be linked together in the wall checks</td></tr>
+<tr><td><strong>I,pallet_det_new_validity_check, 0, 1, 1</strong></td><td>New check for pallet validity. Pallet model is discarded if at least validity_check_discard_ratio of points is further away than pallet_det_wall_point_dist_threshold * 10</td></tr>
+<tr><td><strong>F,pallet_det_new_validity_check_min_discard_ratio, 0.0, 0.3, 1.0</strong></td><td>How many outlier points are required before pallet model is discarded</td></tr>
+<tr><td><strong>I,pallet_det_correction_recursion_enabled, 0, 1, 1</strong></td><td>If set to 1, if cluster correction algorithm doesn't find points that could be used for correcting the location, the function can be called recursively (for max 10 times) with a wider search angle. If 0, the search angles are always fixed and wider.</td></tr>
+<tr><td><strong>F,pallet_det_cluster_correction_angle_offset, -45.0, 0.0, 45.0</strong></td><td>On default no offset given, but if the shape of the leg requires this (some non-standard non-square shape). Changing off the offset requires in most case testing with different values to see how it exactly behaves, so no clear instructions can't be given for how to use it.</td></tr>
+<tr><td><strong>I,pallet_det_cluster_corr_mode, 0, 0, 1</strong></td><td>On default setting of 0 tries to correct X- and Y- directions independently. On 1, tries to check point's only on the nearest corner to the scanner and corrects both directions based on this.</td></tr>
+<tr><td><strong>F,pallet_det_y_corr_threshold_ang, 0.0, 4.0, 15.0</strong></td><td>If the angle difference from laser to the leg compared to leg heading is really small (smaller than this parameter), we don't really see either side of the leg so it's better to just calculate an average of the Y-direction.</td></tr>
+<tr><td><strong>I,pallet_det_cluster_corr_min_points, 1, 1, 20</strong></td><td>Minimum number of points used when correcting pallet legs. If 0 points found, making a correction is not possible. If there is a lot of variance and noise in individual points, should be set higher than 1.</td></tr>
+<tr><td><strong>F,pallet_det_cluster_dist[index from 0 to 2], 0.90</strong></td><td>Distance check multiplier for leg points in first row of legs</td></tr>
+<tr><td><strong>F,pallet_det_front_row_weight, 0.5, 3.0, 15.0</strong></td><td>How much weight is given for the front row of legs compared to other legs, when calculating the final result of XYH for pallet. Front row is usually seen more accurately, so on default it has more weight.</td></tr>
+<tr><td><strong>F,pallet_det_fitness_weight[index from 0 to 7], 1.0</strong></td><td>Array to change weight of the different parts for how good a solution is considered to be, if several are found (bigger scale means bigger weight). <br> Fit0 is the first found leg on the middle? fit1 how many legs found in the first row? fit2 number of legs in the back rows, solutions with more found legs are preferred. fit3 the difference between center of the pallet compared to the expected location. fit4 angle of the target compared to the expected (symbolic point heading basically). fit5 cluster width compared to model leg width. fit6 cluster outer distance compared to model width. fit7 is for determining the heading ambiguity of asymmetric pallets.</td></tr>
+<tr><td><strong>I,pallet_det_allow_only_middle_leg, 0, 0, 1</strong></td><td>If set to 1, accept only solutions for 3-leg pallets, where the closest leg to a line drawn from the navigation point towards the direction of the scanner (straight fw or bw) is the middle leg instead of a side leg</td></tr>
+<tr><td><strong>F,pallet_det_split_threshold, 0.02, 0.06, 0.50</strong></td><td>Used for deciding, if one cluster should be splitted into separate clusters. A line is calculated between start and end point and then the distance of cluster points is compared to this line. If there is a point with longer distance from the line defined by this parameter (in meters), cluster is splitted.</td></tr>
+<tr><td><strong>I,pallet_det_min_points_close_to_first_point, 1, 3, 50</strong></td><td>Min number of points next to the first point we are searching for.</td></tr>
+<tr><td><strong>F,pallet_det_heading_offset, -45.0, 0.0, 45.0</strong></td><td>Heading offset in degrees added to the target angle. Used only with target_detection_type_selection = 2.</td></tr>
+<tr><td><strong>F,pallet_det_2_max_dist_to_first_point, 0.01, 0.05, 0.30</strong></td><td>Max difference between consecutive closest points.</td></tr>
+<tr><td><strong>I,pallet_det_2_cluster_only_based_on_distance_and_index, 0, 0, 1,</strong></td><td>Create clusters based on distance between points (pallet_det_lin_mod_point_threshold) and index.</td></tr>
+<tr><td><strong>F,pallet_det_2_min_leg_cluster_coverage, 0.0, 0.7, 1.0</strong></td><td>Minimum average percentage for legs to cover the cluster. If the percentage is lower, that model is discarded. Uses fit5 value as the percentage. Used only if pallet_det_2_cluster_only_based_on_distance_and_index is set to 1</td></tr>
+<tr><td><strong>F,pallet_det_2_max_pallet_width_error, 0.0, 0.2, 5.0</strong></td><td>Maximum error between pallet width compared to side legs outer distance (in meters). If the error is higher, that model is discarded. Uses fit6 value as the error. Used only if pallet_det_2_cluster_only_based_on_distance_and_index is set to 1</td></tr>
+<tr><td><strong>F,pallet_det_2_fitness_cost_percentage_for_unwanted_cluster, -1.0, 0.8, 1.0</strong></td><td>Percentage cost for the total fitness if found cluster between the side legs. Used only with two-legged pallets and only on the front row. If set to negative, discards the model.</td></tr>
+<tr><td><strong>I,pallet_det_2_min_points_to_create_unwanted_cluster, 0, 4, 30</strong></td><td>How many scanner points are required between the side legs to try creating unwanted cluster.</td></tr>
+<tr><td><strong>I,pallet_det_2_max_point_diff_for_unwanted_cluster, 0, 4, 30</strong></td><td>How many points less are needed on the cluster on the middle related to the amount on the side legs. Used to find only similar size cluster as the side legs.</td></tr>
+<tr><td><strong>F,pallet_det_2_max_pallet_angle_error, 0.00, 30.00, 360.00</strong></td><td>Maximum angle (in degrees) for the pallet related to the symbolic point heading.</td></tr>
+<tr><td><strong>F,pallet_det_2_max_error_for_outlier_point, 0.0, 1.4, 5.0</strong></td><td>Maximum error allowed for outlier points. Used to discard points from cluster if pallet_model_discard_outlier_points is enabled.</td></tr>
+<tr><td><strong>I,pallet_det_2_lock_model_if_found_enough_times, 0, 10, 1000</strong></td><td>How many times same model is required to detect in a row before searching only that model. Cause issues if last pallet model is not reset between consecutive pallet detections (if target_max_n_times_missing is too high, the last pallet is not reset)</td></tr>
+</tbody></table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

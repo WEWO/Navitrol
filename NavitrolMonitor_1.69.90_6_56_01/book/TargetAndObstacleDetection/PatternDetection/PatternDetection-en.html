@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pattern detection - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html" class="active"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="pattern-detection"><a class="header" href="#pattern-detection">Pattern Detection</a></h1>
+<p>Updated 04.06.2024</p>
+<hr />
+<h2 id="pattern-detection-versions"><a class="header" href="#pattern-detection-versions">Pattern detection versions</a></h2>
+<p>This document describes the interface between Navitrol and an AGV controller in the special application of reflector target detection.
+It is designed for measuring the position and angle of a target marked with reflectors or the relative position between two AGVs.
+The measuring is based on reflectors mounted in a known configuration on a station, carrier or AGV, which are detected with one or two scanners on the controlled AGV.</p>
+<p>The measuring is based on reflectors mounted in a known configuration on a station, carrier or AGV, which are detected with one or two scanners on the controlled AGV. The position, angle and height of the marked target  can be used for docking to stations or another AGV, picking an object or driving AGV's in synchronized motion (coupled drive).</p>
+<p>Version 1 of the system is using two or preferably four reflectors on the target and one scanner on the measuring AGV. It assumes full visibility between the AGV and the target at all times, i.e. all target reflectors need to be detected every time.
+If the line of sight is broken the measurement is not giving any result.</p>
+<p>The reflectors are positioned in a simple pattern defined by two distances A and B. The reflectors also must have a defined width Rw.</p>
+<p><img src="./media-en/image1.png" alt="" /></p>
+<p>Version 2 of the target detection is based on a more complex reflector pattern enabling detection also when only a part of the reflectors are detected.
+In this version up to 8 reflectors can be used.
+All reflectors must have the same width Rw and the distances between all reflectors must differ from each other with at least 70 mm.
+A pattern example is shown below.</p>
+<p><img src="./media-en/image2.png" alt="" /></p>
+<p>Version 2 also supports detection with two scanners.
+In case the line of sight is obstructed, each scanner can give a separate result if at least 3 reflectors are detected, but the detections can also be combined from both scanners to give a common solution.</p>
+<p>Version 3 of the target detection is a combination of pattern detection for position determination with an addition of one angled reflector used for height detection. The angled reflector is added into the middle of the pattern of vertical reflectors to form a gap between two opposite triangles. Due to the angle, this reflector is detected in a different location relative to the vertical reflectors depending on the height position of the laser field. Since there are two different measurements within one pattern, all reflectors need to be detected every time, else the detection is undefined. The pattern is shown below.</p>
+<p><img src="./media-en/heightPattern.png" alt="" /></p>
+<p>As in the other detection versions, the distances A,B,C,.. between reflectors and their widths Rw must be defined. The distances between vertical reflectors may differ from each other, but the angled reflector must be symmetrically positioned between its neighbouring vertical reflectors. Also, the width of the angled reflector shall be calculated to give a similar detection width as the vertical reflectors, and therefore it must be somewhat narrower. Define its widt by calculating Rwa = Rw*cos(ang) where ang is its angle CCW from vertical. The height of the reflectors must also be defined as it defines the available height detection range.</p>
+<p>The height detection requires some additional scanner position and reflector position parameters in order to give a defined position from ground or relative position to a moving target with variable height. In case of a fixed target with constant height, the height of the vehicle reference point (in this case the platform height) is defined as in the figure below:
+<img src="./media-en/fixed_target.png" alt="" /></p>
+<p>If the target is another vehicle with variable height, the parameters can be defined as in the figure below. By giving a negative height for the Pattern offset (Platform down to pattern base), the offset calculation results in the height difference between the reference levels on the machines (in this case the platform surfaces). Adding half the Range to the Pattern offset moves the zero point to the middle of the reflector target, giving a +/- value range to the height difference.</p>
+<p><img src="./media-en/leveling_target.png" alt="" /></p>
+<p>If both Pattern offset and Scanner offset are set to zero, the raw Height detection value is reported and can be used as a relative measurement without binding to the platform dimensions.</p>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<h3 id="general-parameters"><a class="header" href="#general-parameters">General parameters</a></h3>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value (suggestion for v2)</th><th>Description</th></tr></thead><tbody>
+<tr><td>target_detection_type_selection</td><td>I</td><td>0 (1)</td><td>Enables reflector docking or pallet detection  0 = disabled 1 = reflector docking 2 = pallet detection</td></tr>
+<tr><td>target_detection_always_enabled</td><td>I</td><td>0</td><td>0 = detect target only when docking 1 = enables target detection algorithm always (AGV to AGV positioning)</td></tr>
+<tr><td>target_detection_scan_selection</td><td>I</td><td>0 (any selection except for 3)</td><td>Defines which scanners are used for target detection:  <br> 1 = rear scanner only <br> 2 = front scanner only <br>3 = both scanners simultaneously <br> 4 = use scanner in driving direction <br>5 = both scanners alternately (only version 2 reflector detection)  Note! selection 3 does not work with V2 and V3 detection.</td></tr>
+<tr><td>target_detection_results_dampening</td><td>F</td><td>0.3</td><td>Dampening value for the results; min = 0, max = 1</td></tr>
+<tr><td>target_detection_max_diff_in_xy_results</td><td>F</td><td>0.2</td><td>How big difference is allowed in xy-location (metres) before the new result is updated without dampening</td></tr>
+<tr><td>target_detection_max_diff_in_angle_results</td><td>F</td><td>5.0</td><td>How big difference is allowed in angle (degrees) before the new result is updated without dampening</td></tr>
+<tr><td>target_min_n_times_detected</td><td>I</td><td>20</td><td>Minimum number of times target must be detected before giving results</td></tr>
+<tr><td>target_max_n_times_missing</td><td>I</td><td>300</td><td>Max number of times the last known target location is given if no target is detected; min = 0</td></tr>
+</tbody></table>
+<h3 id="reflector-detection-parameters"><a class="header" href="#reflector-detection-parameters">Reflector detection parameters</a></h3>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value (version note)</th><th>Description</th></tr></thead><tbody>
+<tr><td>refl_det_version</td><td>I</td><td>0</td><td>1 - reflector detection ver 1  <br> 2 - reflector pattern for ver 2 <br> 3 - reflector pattern with height detection</td></tr>
+<tr><td>refl_det_refl_width</td><td>F</td><td>0.15</td><td>Width of the reflectors used for docking purposes (in metres)</td></tr>
+<tr><td>refl_det_refl_dist_A</td><td>F</td><td>0.55 (ver 1 only)</td><td>The distance between the reflectors in the middle (in metres, from centre point to centre point) (in metres)</td></tr>
+<tr><td>refl_det_refl_dist_B</td><td>F</td><td>0.65 (ver 1 only)</td><td>The distance between the reflectors on the sides (not used with 2 refs, with 4 refs left and right pair) (in metres)</td></tr>
+<tr><td>refl_det_num_of_reflectors</td><td>I</td><td>4 (ver 1 only)</td><td>Number of reflectors used for detection. <br> Version 1: 2 or 4 <br> Version 2: not needed <br> Version 3: not needed</td></tr>
+<tr><td>refl_det_refl_dist_pattern[7]</td><td>F</td><td>0.0 (ver 2, 3)</td><td>max 7 distance values (m) for max eight reflectors. The distance is measured from center to center of the reflectors. The parameters should contain distances from    leftmost [0] to rightmost [6] (the first zero distance cuts the pattern). The distances on each side of the angled height reflector are equal and half of the distance between the neighbouring vertical refelectors.</td></tr>
+<tr><td>refl_det_refl_dist_max_error</td><td>F</td><td>0.06</td><td>Maximum allowed error for the distance between reflectors (in metres)</td></tr>
+<tr><td>refl_det_refl_width_max_error</td><td>F</td><td>0.05</td><td>Maximum allowed error for the width of the reflector (in metres)</td></tr>
+<tr><td>refl_max_dist_from_line</td><td>F</td><td>0.1 (ver 2, 3)</td><td>Maximum deviation from reflector line for discarding a reflector detection from the reflector pattern</td></tr>
+<tr><td>refl_discard_undersized</td><td>I</td><td>0 (ver 2, 3)</td><td>1 to discard undersized reflector detections from the reflector pattern</td></tr>
+<tr><td>scanner_heading_offset_gain</td><td>F</td><td>0.02 (ver 2 only)</td><td>Heading auto correction gain for right scanner when using two scanners for reflector pattern detection</td></tr>
+<tr><td>scanner_pos_x_offset_gain</td><td>F</td><td>0.02 (ver 2 only)</td><td>Scanner x-position auto correction gain for right scanner when using two scanners for reflector pattern detection</td></tr>
+<tr><td>scanner_pos_y_offset_gain</td><td>F</td><td>0.02 (ver 2 only)</td><td>Scanner y-position auto correction gain for right scanner when using two scanners for reflector pattern detection</td></tr>
+<tr><td>refl_det_min_points_in_cluster</td><td>I</td><td>5</td><td>Minimum number of measurement points in reflector clusters, recommended value 5</td></tr>
+</tbody></table>
+<h3 id="reflector-detection-height-parameters"><a class="header" href="#reflector-detection-height-parameters">Reflector detection height parameters</a></h3>
+<table><thead><tr><th>Name</th><th>Type</th><th>Default value</th><th>Description</th></tr></thead><tbody>
+<tr><td>refl_height_detection_gap_reflector_angle_deg</td><td>F</td><td>45.0</td><td>The angle of the gap reflector CCW from vertical</td></tr>
+<tr><td>refl_height_detection_gap_reflector_width</td><td>F</td><td>0.05</td><td>The width Rw [m] of the vertical reflectors and the gap angle ang from vertical, gives the gap reflector width Rwa = Rw * cos(ang)</td></tr>
+<tr><td>refl_height_detection_gap_reflector_index</td><td>I</td><td>2</td><td>Index of the gap reflector in the reflector pattern (indexes start with 0)</td></tr>
+<tr><td>refl_height_detection_reflector_height</td><td>F</td><td>0.4</td><td>The height of the vertical reflectors and the vertical height of the gap angle reflector. Gives the range of use in height detection. The height detection zero point is in the low end of the reflectors.</td></tr>
+<tr><td>refl_height_detection_pattern_height_offset</td><td>F</td><td>0.0</td><td>The height offset between the low end of the reflector pattern and the ground for fixed objects or a reference plane on a vehicle. Positive distance when pattern above the reference level, else negative.</td></tr>
+<tr><td>refl_height_detection_scanner_height_offset</td><td>F</td><td>0.0</td><td>The height offset between the scanner and the reference plane on the vehicle. Positive if the scanner is above the reference plane.</td></tr>
+<tr><td>target_detection_height_result_dampening</td><td>F</td><td>0.3</td><td>Low pass filtering gain to dampen the variation of the output value of the target height detection: minimum = 0 (using old value), maximum = 1 (using new value).</td></tr>
+<tr><td>target_detection_max_diff_in_height_results</td><td>F</td><td>0.15</td><td>How much difference [m] is allowed in height before the new result is updated without dampening.</td></tr>
+</tbody></table>
+<h3 id="general-parameters-to-calibrate"><a class="header" href="#general-parameters-to-calibrate">General parameters to Calibrate</a></h3>
+<p>See <a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html">initial calibration guide</a> on how to configure scanners correctly.</p>
+<h2 id="calibrating-the-continuous-output-version-2-system"><a class="header" href="#calibrating-the-continuous-output-version-2-system">Calibrating the continuous output version 2 system</a></h2>
+<p>Manual calibration of the scanner positions and headings so that both units give the same result from the same reflector target is very difficult. Therefore the target detection calculation has an automatic calibration function, which is continuously calculating offsets between the results of the scanners. The offsets are uppdated only when both scanners see the entire reflector target. As soon as a part of the target is hidden from either scanner the offsets are frozen and used for correction of the calculation results to give the best fit between the scanners.</p>
+<p>The front (left) scanner is the master scanner in the sense, that the detection result is always output without offset correction. The detection result of the rear (right) scanner is auto calibrated based on the offsets. Therefore, the front scanner shall first be calibrated manually to give the correct position of a target in a known location. When the front scanner has been calibrated to a satisfying accuracy, the rear scanner can be calibrated based on the offsets calculated to match the front scanner. This sequence is described stepwise below.</p>
+<ul>
+<li>Put a target on a 5-10 m distance from the scanners with the target point (center point between the outmost reflectors) on the extension of the center line of the vehicle.</li>
+</ul>
+<p><img src="./media-en/calibration_sequence_1.png" alt="calibration1" /></p>
+<ul>
+<li>
+<p>Adjust the front scanner x,y-position parameters and angle parameter until the target position result matches the real position and angle.</p>
+</li>
+<li>
+<p>Adjust the rear scanner x,y-position parameters and angle parameter until the target detections with both scanners are approximately in the same position in the Monitor view.</p>
+</li>
+<li>
+<p>Let both scanners detect the entire target for a few minutes. If you are running Navitrol from the console, you will see the calibration result <em>FinalScanPosOffsets</em> every now and then. If you are running Navitrol from boot, you must open an extra console (e.g. Putty) and start a navitrol application in dump line mode to see the offset values. Use command <code>./Navitrol dumpl 10 ”FinalScanPosOffsets:” </code> to get 10 lines of logged offsets, or use 0 instead of 10 to get continuous output. Quit the continuous logging by a Ctrl-C command.</p>
+</li>
+<li>
+<p>Pick the offset values from the log lines <code>FinalScanPosOffsets: ang -0.266 X -0.015 Y 0.024</code> and subtract them from the currrent parameter values of <strong>scan_rear_sen_ang</strong>, <strong>scan_rear_x</strong> and <strong>scan_rear_y</strong> in the params.txt file. Then command Navitrol to read in the updated parameter file. If the values are added correctly, the target detections of both scanners should be in the same location on the Monitor screen and the FinalScanPosOffsets should be remarkably smaller than before.</p>
+</li>
+<li>
+<p>The parameter values can be updated a few times to get the best result.</p>
+</li>
+<li>
+<p>The scanner calibration can be verified by changing the parameters <strong>scanner_heading_offset_gain</strong>, <strong>scanner_pos_x_offset_gain</strong> and <strong>scanner_pos_y_offset_gain</strong> all to 0.0 to prevent offset calibration, restart Navitrol and verify that the target detection result from front and rear scanners are approximately the same (below a centimetre from each other). <em>NOTE</em>, that Navitrol must be restarted here to zero the initial offsets. Remember to reset the parameter values back to original if you have zeroed them!</p>
+</li>
+</ul>
+<p>The calibration is now ready and the system can be run in production.</p>
+<h2 id="normal-operation-of-the-continuous-output-version-2-system"><a class="header" href="#normal-operation-of-the-continuous-output-version-2-system">Normal operation of the continuous output version 2 system</a></h2>
+<p>When using the system in production, always start Navitrol so that the reflector target is visible for both scanners to ensure that the position offset calculation can calibrate itself.</p>
+<p>When the common data field in the data output contains position data, the calibration is ready and the system will give offset corrected position data even when a part of the reflector pattern is hidden.</p>
+<p>Drive the AGV’s under the load and use the reflector detection results with the following priority:</p>
+<ol>
+<li>
+<p>Prioritize the common data field. The common data is a combination of the separate detections and therefore has the best accuracy and fitness. It is also somewhat filtered for flickering as it is a mean of two detections. If the separate scanners give diverging results, the common data reports the data with better fitness, so also in this case it is better.</p>
+</li>
+<li>
+<p>If the auto calibration has not worked or goes off because of too big differences in the separate scanner positions, the common data gets empty (all values zero).</p>
+<ul>
+<li>
+<p>In this case the front (left) scanner is the master and should preferably be used.</p>
+</li>
+<li>
+<p>If the front (left) scanner has a very low fitness and the rear scanner (right) has a very high fitness the rear scanner data can be used until both scanners see the entire pattern again and the auto calibration can correct the offset. <strong>NOTE</strong>, that in this case there is an offset between front and rear scanner and it must be taken into account in the AGV control and the rear scanner must then be used until auto calibration can correct the offset again.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>The separate front and rear data fields will be zero when less than 3 reflectors are detected with that scanner.</p>
+<h2 id="target-detection-output-of-the-version-2-system-in-continuous-mode"><a class="header" href="#target-detection-output-of-the-version-2-system-in-continuous-mode">Target detection output of the version 2 system in continuous mode</a></h2>
+<p>Positioning result from two scanners with a common part with combined data.</p>
+<p>The combined data is empty if only one scanner is used. When two scanners are used, the common data contains a combination of both scanners’ results always, when the separate results match with a certain accuracy.</p>
+<p>There is an automatic offset calibration between the scanners, which is removing small scanner position parameter errors. It is active when both scanners see the whole reflector pattern. When the offset has tuned in, so that both scanners give the same result the common data is filled, even when the scanners are not detecting the entire reflector pattern.</p>
+<table><thead><tr><th><strong>Data field</strong></th><th><strong>Type</strong></th><th><strong>Length (bytes)</strong></th><th><strong>Value / Explanation</strong></th></tr></thead><tbody>
+<tr><td>Protocol version</td><td>Uint</td><td>2</td><td>4</td></tr>
+<tr><td>Message ID</td><td>Uint</td><td>2</td><td>4104</td></tr>
+<tr><td>Message length</td><td>Uint</td><td>4</td><td>52</td></tr>
+<tr><td>Scanner1 Target X</td><td>Float</td><td>4</td><td>Target X-coordinate in world coordinates</td></tr>
+<tr><td>Scanner1 Target Y</td><td>Float</td><td>4</td><td>Target Y-coordinate in world coordinates</td></tr>
+<tr><td>Scanner1 Target Angle</td><td>Float</td><td>4</td><td>Target Angle in radians in world coordinates</td></tr>
+<tr><td>Scanner1 Target found</td><td>Byte</td><td>1</td><td>0 - Target not found, N[3…8] reflectors detected</td></tr>
+<tr><td>Scanner1 Fitness</td><td>Byte</td><td>1</td><td>0…100 %   <br> 0 - target not found  <br> 100 - all reflectors detected, ideal match</td></tr>
+<tr><td>Scanner1 comms</td><td>Byte</td><td>1</td><td>Scanner communication status	: 1 OK <br> 0 Not OK</td></tr>
+<tr><td>Scanner2 Target X</td><td>Float</td><td>4</td><td>Target X-coordinate in world coordinates</td></tr>
+<tr><td>Scanner2 Target Y</td><td>Float</td><td>4</td><td>Target Y-coordinate in world coordinates</td></tr>
+<tr><td>Scanner2 Target Angle</td><td>Float</td><td>4</td><td>Target Angle in radians in world coordinates</td></tr>
+<tr><td>Scanner2 Target found</td><td>Byte</td><td>1</td><td>0 - Target not found, N[3…8] reflectors detected</td></tr>
+<tr><td>Scanner2 Fitness</td><td>Byte</td><td>1</td><td>0…100 %   <br> 0 - target not found  <br> 100 - all reflectors detected, ideal match</td></tr>
+<tr><td>Scanner2 comms</td><td>Byte</td><td>1</td><td>Scanner communication status	: 1 OK <br> 0 Not OK</td></tr>
+<tr><td>Combined Target X</td><td>Float</td><td>4</td><td>Target X-coordinate in world coordinates</td></tr>
+<tr><td>Combined Target Y</td><td>Float</td><td>4</td><td>Target Y-coordinate in world coordinates</td></tr>
+<tr><td>Combined Target Angle</td><td>Float</td><td>4</td><td>Target Angle in radians in world coordinates</td></tr>
+<tr><td>Combined Target found</td><td>Byte</td><td>1</td><td>0 - Target not found, N[3…8] reflectors detected</td></tr>
+<tr><td>Combined Fitness</td><td>Byte</td><td>1</td><td>0…100 %   <br> 0 - target not found  <br> 100 - all reflectors detected, ideal match</td></tr>
+</tbody></table>
+<h2 id="setting-up-and-calibrating-a-version-2-system-for-target-detection-and-docking"><a class="header" href="#setting-up-and-calibrating-a-version-2-system-for-target-detection-and-docking">Setting up and calibrating a version 2 system for target detection and docking</a></h2>
+<p>In normal target detection applications for localizing and docking to a target, the version 2 system is set up as the continuous one, except for the measurement mode</p>
+<p><strong>I,target_detection_always_enabled,	0 for docking</strong></p>
+<p>defining that detection is only activated when approaching a symbolic point with target detection enabled. For more information on docking, see <a href="../../PositionControl/Docking/Docking-en.html">Docking</a>.</p>
+<p>Since the target is normally approached with one scanner directed towards the target, the scanner selection is set to one scanner use:</p>
+<p><strong>I,target_detection_scan_selection,	1 - rear scanner only, 2 - front scanner only</strong></p>
+<p>Since the detection scanner is normally also used for navigation, the scan data should be more extensively used.</p>
+<p><strong>I,scan_pef_use_nth_meas,	2 to maximize the scan points for positioning</strong></p>
+<p>In this mode the detection data is used internally for controlling the vehicle to the target marked with the reflectors. The extensive detection data is not output to the PLC.</p>
+<p>The scanner calibration is done as in the pallet detection case.</p>
+<p>The detection range is approximately as below</p>
+<p><img src="./media-en/detection_range.png" alt="detection range" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

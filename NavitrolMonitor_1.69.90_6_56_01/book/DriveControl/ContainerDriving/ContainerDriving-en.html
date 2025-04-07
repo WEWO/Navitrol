@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Container driving - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html" class="active"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="unmapped-areacontainer-driving"><a class="header" href="#unmapped-areacontainer-driving">Unmapped area/container driving</a></h1>
+<p>Updated 26.01.2024</p>
+<hr />
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>Navitrol offers a feature where it can drive to an unmapped area without
+routes. The area where Navitrol should drive the AGV into is required to
+have straight-line features on both sides of the AGV. Navitrol uses
+these features to compute the center line. The center line is then used
+to create the trajectory and drive the AGV into the area following the
+center line.</p>
+<h2 id="feature-details"><a class="header" href="#feature-details">Feature details</a></h2>
+<p>This feature is specially designed for the scenario in which the
+unmapped environment's exact position might not be known or might change
+slightly during the production process. Hence, Navitrol will detect the
+environment every time the AGV arrives at the start of the area which
+may be called the entry point. The AGV must stop at the entry point and
+detect the straight-line features that can be sensed by the scanners.
+The Navitrol can then determine the center line and continue driving. An
+example scenario is presented in Figure 1.</p>
+<p><img src="./media-en/image3.PNG" alt="" /></p>
+<blockquote>
+<p>Figure 1 - Mapped environment leading to the unmapped container</p>
+</blockquote>
+<p>The AGV uses natural feature navigation until the container's entry
+point. Once at Pre-container (11) symbolic point, Navitrol initiates the
+unmapped area navigation and once the straight-line features are
+detected, Navitrol commands the AGV to drive into the area. Navitrol
+keeps the AGV in the centre of the side walls. This is shown in Figure
+2.</p>
+<p><img src="./media-en/image4.PNG" alt="" /></p>
+<blockquote>
+<p>Figure 2 - AGV driving inside the unmapped area</p>
+</blockquote>
+<h2 id="setup"><a class="header" href="#setup">Setup</a></h2>
+<p>The setup for this feature requires the setting and tuning of several
+parameters. These parameters are explained in the following table.</p>
+<table><thead><tr><th>Parameter</th><th>Explanation</th></tr></thead><tbody>
+<tr><td>unmapped_reefer_nav_enable</td><td>Enable the feature</td></tr>
+<tr><td>unmapped_reefer_nav_dist_two_cons_scan_pts_meters</td><td>Distance between 2 consecutive points used for reefer scanner data segmentation. It should be less than unmapped_reefer_nav_line_detection_point_dist_threshold_meters</td></tr>
+<tr><td>unmapped_reefer_nav_use_scanner</td><td>Scanner to be used for navigation. 0: rear scanner; 1: front scanner; -1: use both</td></tr>
+<tr><td>unmapped_reefer_nav_container_width_meters</td><td>Half the reefer's internal width in meters. Used to consider points within this distance from the route</td></tr>
+<tr><td>unmapped_reefer_nav_scanner_min_ind</td><td>Minimum scanner index to consider for including scanner points in calculations</td></tr>
+<tr><td>unmapped_reefer_nav_scanner_max_ind</td><td>Maximum scanner index to consider for including scanner points in calculations</td></tr>
+<tr><td>unmapped_reefer_nav_scanner_min_points_close_to_first_point</td><td>Minimum number of points close</td></tr>
+<tr><td></td><td>to the closest point such that the cluster can be formed of these points</td></tr>
+<tr><td>unmapped_reefer_nav_max_dist_to_first_point_meters</td><td>The max distance to the wall farther away from the scanner. Used to find the closest point as the starting point</td></tr>
+<tr><td>unmapped_reefer_side_wall_reference_length_to_match_meters</td><td>The length of the reefer to match with the scanner data points</td></tr>
+<tr><td>unmapped_reefer_length_err_tolerance_meters</td><td>The difference in the specified length to match in unmapped_reefer_side_wall_reference_length_to_match_meters and cluster length</td></tr>
+<tr><td>unmapped_reefer_end_wall_length_err_tolerance_meters</td><td>The difference between side wall length and end wall to accept the endwall</td></tr>
+<tr><td>unmapped_reefer_min_pts_in_cluster</td><td>How many points should there be in the cluster to consider it</td></tr>
+<tr><td>unmapped_reefer_min_dist_bw_clusters</td><td>Minimum distance between side wall clusters</td></tr>
+<tr><td>unmapped_reefer_max_dist_bw_clusters</td><td>Maximum distance between side wall clusters</td></tr>
+<tr><td>unmapped_reefer_max_angle_bw_side_walls_deg</td><td>The maximum angle that is allowed for two clusters to be considered the reefer's side walls</td></tr>
+<tr><td>unmapped_reefer_dist_to_create_traj_for_meters</td><td>The distance for which the trajectory is initially created for</td></tr>
+<tr><td>unmapped_reefer_driving_velocity</td><td>The velocity for the AGV while driving in the reefer [m/s]</td></tr>
+<tr><td>unmapped_reefer_dist_from_end_wall</td><td>The distance to the end wall where the trajectory should end</td></tr>
+<tr><td>unmapped_reefer_dist_from_traj_end_to_extend_drive_meters</td><td>In the case that the end wall is found, the drive is extended when the AGV is within this distance to the end of current trajectory</td></tr>
+<tr><td>unmapped_reefer_max_dist_from_endWall_to_adjust_traj_to_wall</td><td>If the distance to the end wall is less than this parameter then trajectory is extended to (wall - offset from wall)</td></tr>
+<tr><td>unmapped_reefer_nav_filter_outlier_points</td><td>Filter the outliers in the cluster</td></tr>
+<tr><td>unmapped_reefer_use_prev_sol_if_new_not_fnd</td><td>Use the prev solution if new not found provided a previous solution already exists</td></tr>
+<tr><td>unmapped_reefer_dist_to_drive_back_meters</td><td>Distance to drive backwards</td></tr>
+<tr><td>unmapped_reefer_percentage_of_new_sol_to_use</td><td>The percentage of the new solution to use</td></tr>
+<tr><td>unmapped_reefer_det_lines_every_iter</td><td>Specifies whether to determine side walls and fit lines every time or not. 0 = just once, 1 = every time a new trajectory is to be created</td></tr>
+<tr><td>unmapped_reefer_cluster_max_length</td><td>Maximum length of cluster for reefer driving</td></tr>
+<tr><td>unmapped_reefer_drive_from_terminal</td><td>1 = Send drive command from terminal, 0 = drive from supervisor interface via msg ID 3041</td></tr>
+<tr><td>unmapped_reefer_d_to_end_to_set_arrived_flag</td><td>distance to container end wall to set arrived flag</td></tr>
+<tr><td>unmapped_reefer_d_to_end_to_set_finished_seq_flag</td><td>distance to initial start point to set finished sequence to 1</td></tr>
+<tr><td>unmapped_reefer_end_pt_offset</td><td>offset for adjusting the end point inside the container</td></tr>
+</tbody></table>
+<h2 id="control-via-supervisor-ethernet-interface"><a class="header" href="#control-via-supervisor-ethernet-interface">Control via supervisor ethernet interface</a></h2>
+<p>The supervisor can send the following message, ID 3041, to Navitrol to
+initiate the driving process.</p>
+<h3 id="3041----request-drive-to-area-with-parallel-side-walls-without-environment-mapping"><a class="header" href="#3041----request-drive-to-area-with-parallel-side-walls-without-environment-mapping">3041 -- Request drive to area with parallel side walls without environment mapping</a></h3>
+<p>The AGV supervisor can request Navitrol to drive to the area by
+providing the following information and triggering drive initiation.</p>
+<table><thead><tr><th>Data field</th><th>Type</th><th>Length (bytes)</th><th>Comment</th></tr></thead><tbody>
+<tr><td>Protocol Version = 4</td><td>Unsigned Short</td><td>2</td><td></td></tr>
+<tr><td>Message ID = 3041</td><td>Unsigned Short</td><td>2</td><td></td></tr>
+<tr><td>Message length = 23</td><td>Unsigned Integer</td><td>4</td><td>Message length in bytes including all data fields (including Protocol Version and Message ID)</td></tr>
+<tr><td>Drive forwards/backwards</td><td>Unsigned Char</td><td>1</td><td>1 = drive forwards, 0 = drive backwards</td></tr>
+<tr><td>Distance from end wall to drive to</td><td>Float</td><td>4</td><td>AGV drives to this distance (meters) from the end wall</td></tr>
+<tr><td>Distance to drive backwards</td><td>Float</td><td>4</td><td>When driving backwards (meters), this is required so the AGV drives back this distance</td></tr>
+<tr><td>Enable driving</td><td>Unsigned Char</td><td>1</td><td>1 = start driving<br>0 = stop driving</td></tr>
+<tr><td>Container length</td><td>Float</td><td>4</td><td>Container length (in meters)</td></tr>
+<tr><td>Clear Data</td><td>Unsigned char</td><td>1</td><td>1 = clear previous container data stored in memory<br>0 = Do not clear previous container data stored in memory<br>The data is always cleared on leaving container</td></tr>
+</tbody></table>
+<p>The drive must start with forward driving because that is how the area
+is mainly mapped. The route is calculated as the AGV drives into the
+area. The end of the route is determined when the AGV detects an end
+wall or principally a straight-line feature perpendicular to the side
+walls as specified by the parameters. However, once a straight-line
+feature is detected in front of the AGV then the AGV stops at some
+distance to the straight-line feature. This is specified by the field
+'Distance from end wall to drive to'.</p>
+<p>The whole process can be initiated by setting the 'Enable driving' field
+to one. Setting it to zero at any particular instant will stop the AGV.
+The data collected and used for localization and control will stay in
+the memory until it is commanded to be cleared by setting 'Clear Data'
+field to one.</p>
+<p>The AGV stops once it has driven to the end wall. To drive it out of the
+area, the driving direction has to be changed to zero and the AGV will
+start to drive backwards the specified distance at a time. The backwards
+driving distance is specified in the field 'Distance to drive backwards'
+in message 3041.</p>
+<h3 id="3102----supervisor-status-message-section-for-unmapped-container-driving"><a class="header" href="#3102----supervisor-status-message-section-for-unmapped-container-driving">3102 -- Supervisor status message section for unmapped container driving</a></h3>
+<p>Navitrol keeps updating the supervisor of its status using a specific
+section of the status message. The AGV supervisor can request Navitrol
+to send the status message and the unmapped area driving section. This
+section contains all the status information for the drive to the
+unmapped area.</p>
+<p>When starting the drive and once the side walls are detected then the
+field 'Side walls detected' is set to 1 in status message. Similarly,
+when the AGV drives into the container and detects the end wall then the
+field 'End wall detected' is set to one otherwise it stays at zero.
+While driving forwards into the container, the field 'Driving in/out' is
+set to 1 otherwise to zero. As the AGV arrives at the distance from the
+end wall to which AGV should drive to, Navitrol sets the field 'At end
+of container' to one otherwise it is zero.</p>
+<p>Once the AGV is at the end of the container, it can be commanded to
+drive backwards and out of the container whenever needed.</p>
+<p>When a backwards driving command is sent to Navitrol and the AGV has
+driven back the specified distance then the field 'Current backward
+driving segment driven' will be set to one.</p>
+<p>The status message also provides the means to monitor if Navitrol has
+detected the end wall and whether the AGV has already driven 2/3^rd^ of
+the container length. If the 'Passed two thirds of the container' is set
+to one and 'End wall detected' is set to zero then the PLC should set
+'Enable driving' to zero to stop the AGV.</p>
+<table><thead><tr><th>Data field</th><th>Type</th><th>Length (bytes)</th><th>Comment</th></tr></thead><tbody>
+<tr><td>Section ID = 17</td><td>Unsigned Short</td><td>2</td><td></td></tr>
+<tr><td>Section length = 17</td><td>Unsigned Integer</td><td>4</td><td>Length of the section including all data fields of the section</td></tr>
+<tr><td>Side walls detected</td><td>Unsigned char</td><td>1</td><td>1 = side walls are detected and Navitrol can calculate the center<br>0 = side walls not detected</td></tr>
+<tr><td>End wall detected</td><td>Unsigned char</td><td>1</td><td>1 = End wall detected<br>0 = End wall not detected</td></tr>
+<tr><td>Driving in/out</td><td>signed Short</td><td>2</td><td>1 = Driving in<br>0 = Driving out</td></tr>
+<tr><td>At end of container</td><td>Unsigned char</td><td>1</td><td>1 = at the end of container<br>0 = not at the end</td></tr>
+<tr><td>Sequence</td><td>Unsigned char</td><td>1</td><td>1 = finished sequence<br>0 = not finished</td></tr>
+<tr><td>Passed two thirds of the container</td><td>Unsigned char</td><td>1</td><td>1 = already travelled two thirds of container<br>0 = has not yet travelled two thirds of container</td></tr>
+<tr><td>Current backward riving segment driven</td><td>Unsigned char</td><td>1</td><td>1 = at end of current backward driving distance<br>0 = current backward driving distance not driven</td></tr>
+<tr><td>Reserved byte</td><td>Unsigned char</td><td>1</td><td>N/A</td></tr>
+<tr><td>Reserved bytes</td><td>Unsigned Integer</td><td>4</td><td>N/A</td></tr>
+</tbody></table>
+<h2 id="limitations"><a class="header" href="#limitations">Limitations</a></h2>
+<ol>
+<li>
+<p>The drive should start when the AGV is driving forwards into the
+container area.</p>
+</li>
+<li>
+<p>Once the area is mapped, there is no limitation on how many times
+the AGV can drive back and forth using the same data until the
+'Clear Data' command is received and the data is cleared.</p>
+</li>
+<li>
+<p>If the end wall is not detected, the AGV will continue driving until
+either the wall is detected or an abort signal is received.</p>
+</li>
+<li>
+<p>At the beginning, if the scan points are not enough to detect the
+side walls as straight lines as specified by the parameters, the
+driving will never be started. Because, the side walls are the only
+reference available in such a driving scenario.</p>
+</li>
+<li>
+<p>Navitrol will keep all the data from one particular drive until the
+data is cleared using the 'Clear Data' field in message 3041.</p>
+</li>
+<li>
+<p>The data should be cleared from the memory before driving to a
+different area than the one mapped earlier.</p>
+</li>
+</ol>
+<h2 id="commands-and-status-monitoring-sequence-for-an-example-use-case"><a class="header" href="#commands-and-status-monitoring-sequence-for-an-example-use-case">Commands and status monitoring sequence for an example use case</a></h2>
+<p>The following flowgraph in Figure 3 and Figure 4 show the example
+execution sequence. The environment and the setup considered and used
+for the development of the flowgraph is the same as shown in Figure 1.</p>
+<p><img src="./media-en/image5.png" alt="" /></p>
+<blockquote>
+<p>Figure 3 - Execution sequence based on commands and status message interchange between Navitrol and supervisor</p>
+</blockquote>
+<p><img src="./media-en/image6.png" alt="" /></p>
+<blockquote>
+<p>Figure 4 - continuation of the sequence flowgraph</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

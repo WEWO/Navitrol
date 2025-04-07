@@ -1,0 +1,872 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>External localization - NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../MdBook/MdbookFrontPage.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../Introduction/NavitrolUserInstructions/NavitrolUserInstructions-en.html"><strong aria-hidden="true">1.</strong> Navitrol user instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/Licensing/Licensing-en.html"><strong aria-hidden="true">2.</strong> Licensing</a></li><li class="chapter-item expanded "><a href="../../Introduction/OdometrySource/OdometrySource-en.html"><strong aria-hidden="true">3.</strong> Odometry source</a></li><li class="chapter-item expanded "><a href="../../Introduction/InitialCalibrationGuide/InitialCalibrationGuide-en.html"><strong aria-hidden="true">4.</strong> Initial calibration guide</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterReconfiguration/ParameterReconfiguration-en.html"><strong aria-hidden="true">5.</strong> Parameter reconfiguration</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/Parameters.html"><strong aria-hidden="true">6.</strong> Parameter listing</a></li><li class="chapter-item expanded "><a href="../../Introduction/Parameters/JsonConfigurationFile-en.html"><strong aria-hidden="true">7.</strong> JSON configuration file</a></li><li class="chapter-item expanded "><a href="../../Introduction/TeachingInstructions/TeachingInstructions-en.html"><strong aria-hidden="true">8.</strong> Teaching instructions</a></li><li class="chapter-item expanded "><a href="../../Introduction/FeatureMatrix/FeatureMatrix-en.html"><strong aria-hidden="true">9.</strong> Feature Matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Device interfaces</li><li class="chapter-item expanded "><a href="../../AgvInterfaces/SupportedDevices/SupportedDevices-en.html"><strong aria-hidden="true">10.</strong> Supported devices</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/GenericInterfacesHeading.html"><strong aria-hidden="true">11.</strong> Generic interfaces</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthernetSupervisorInterface/EthernetSupervisorInterface-en.html"><strong aria-hidden="true">11.1.</strong> Ethernet Supervisor</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanCommunication/CanCommunication-en.html"><strong aria-hidden="true">11.2.</strong> CAN communication</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/CanSupervisorInterface/CanSupervisorInterface-en.html"><strong aria-hidden="true">11.2.1.</strong> CAN Supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/EthercatCommunication/EthercatCommunication-en.html"><strong aria-hidden="true">11.3.</strong> EtherCAT Communication</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/GenericInterfaces/Simove/SimoveInterface-en.html"><strong aria-hidden="true">11.4.</strong> SIMOVE</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersHeading.html"><strong aria-hidden="true">12.</strong> Motor controllers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MotorControllersCommon/MotorControllersCommon-en.html"><strong aria-hidden="true">12.1.</strong> Motor controller common</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerSetupInstructions/SchwarzmuellerSetupInstructions-en.html"><strong aria-hidden="true">12.2.</strong> Schwarzmueller setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerParameterSetupInstructions/SchwarzmuellerParameterSetupInstructions-en.html"><strong aria-hidden="true">12.2.1.</strong> Schwarzmueller parameters</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Schwarzmueller/SchwarzmuellerTroubleshooting/SchwarzmuellerTroubleshooting-en.html"><strong aria-hidden="true">12.2.2.</strong> Schwarzmueller troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Curtis/CurtisMotorController-en.html"><strong aria-hidden="true">12.3.</strong> Curtis</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Engel/EngelMotorController-en.html"><strong aria-hidden="true">12.4.</strong> Engel</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Kinco/KincoMotorController-en.html"><strong aria-hidden="true">12.5.</strong> Kinco</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Nanotec/NanotecMotorController-en.html"><strong aria-hidden="true">12.6.</strong> Nanotec</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Oriental/OrientalMotorController-en.html"><strong aria-hidden="true">12.7.</strong> Oriental</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Synapticon/SynapticonMotorController-en.html"><strong aria-hidden="true">12.8.</strong> Synapticon</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqOpenLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.9.</strong> Roboteq Open loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/Roboteq/RoboteqClosedLoopControllerConfiguration-en.html"><strong aria-hidden="true">12.10.</strong> Roboteq Closed loop</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/MotorControllers/MiControl/MiControlMotorController-en.html"><strong aria-hidden="true">12.11.</strong> MiControl</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerHeading.html"><strong aria-hidden="true">13.</strong> Laser scanners</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerConfigurations/ScannerConfigurations-en.html"><strong aria-hidden="true">13.1.</strong> Scanner configurations</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/ScannerCommunicationTroubleshoot/ScannerCommunicationTroubleshoot-en.html"><strong aria-hidden="true">13.2.</strong> Scanner communication troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/OpticalCodeReader/OpticalCodeReader.html"><strong aria-hidden="true">14.</strong> Optical code reader</a></li><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EncoderHeading.html"><strong aria-hidden="true">15.</strong> Encoders</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../AgvInterfaces/Encoders/EthercatEncoders/EthercatEncoders-en.html"><strong aria-hidden="true">15.1.</strong> EtherCAT encoders</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">User interfaces</li><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor/NavitrolMonitor-en.html"><strong aria-hidden="true">16.</strong> Navitrol Monitor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CustomerUis/NavitrolMonitor3rdPartyLicenses/NavitrolMonitor3rdPartyLicenses-en.html"><strong aria-hidden="true">16.1.</strong> Navitrol Monitor third party licenses</a></li></ol></li><li class="chapter-item expanded "><a href="../../CustomerUis/WebInterface/WebInterface-en.html"><strong aria-hidden="true">17.</strong> Navitrol web interface</a></li><li class="chapter-item expanded "><a href="../../CustomerUis/Parameter Tool/ParameterTool-en.html"><strong aria-hidden="true">18.</strong> Parameter Tool Beta</a></li><li class="chapter-item expanded affix "><li class="part-title">Localization</li><li class="chapter-item expanded "><a href="../../Localization/PositionConfidence/PositionConfidence-en.html"><strong aria-hidden="true">19.</strong> Position confidence</a></li><li class="chapter-item expanded "><a href="../../Localization/ScannerCalibration/ScannerCalibration-en.html"><strong aria-hidden="true">20.</strong> Scanner calibration</a></li><li class="chapter-item expanded "><a href="../../Localization/EnvironmentGuidelines/EnvironmentGuidelines-en.html"><strong aria-hidden="true">21.</strong> Environment guidelines</a></li><li class="chapter-item expanded "><a href="../../Localization/AutomaticOdometryCorrection/AutomaticOdometryCorrection-en.html"><strong aria-hidden="true">22.</strong> Automatic odometry correction</a></li><li class="chapter-item expanded "><a href="../../Localization/ReflectorBasedPositionInitialization/ReflectorBasedPositionInitialization-en.html"><strong aria-hidden="true">23.</strong> Reflector based position initialization</a></li><li class="chapter-item expanded "><a href="../../Localization/PrecisionPositioning/PrecisionPositioning-en.html"><strong aria-hidden="true">24.</strong> Precision positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/LocalizationScannerChangeOnTheFly/LocalizationScannerChangeOnTheFly-en.html"><strong aria-hidden="true">25.</strong> Changing scanner on the fly</a></li><li class="chapter-item expanded "><a href="../../Localization/RampZones/RampZones-en.html"><strong aria-hidden="true">26.</strong> Ramp zones</a></li><li class="chapter-item expanded "><a href="../../Localization/GpsPositioning/GpsPositioning-en.html"><strong aria-hidden="true">27.</strong> GPS Positioning</a></li><li class="chapter-item expanded "><a href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html"><strong aria-hidden="true">28.</strong> IMU and sensor fusion</a></li><li class="chapter-item expanded "><a href="../../Localization/ExternalLocalization/ExternalLocalization-en.html" class="active"><strong aria-hidden="true">29.</strong> External localization</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html"><strong aria-hidden="true">30.</strong> Dynamic mapping server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerAndClientCompatibility/DynamicMappingServerAndClientCompatibility-en.html"><strong aria-hidden="true">30.1.</strong> Dynamic mapping client/server compatibility</a></li><li class="chapter-item expanded "><a href="../../Localization/DynamicMapping/DynamicMappingServerHardwareRequirements/DynamicMappingServerHardwareRequirements.html"><strong aria-hidden="true">30.2.</strong> Dynamic mapping client/server hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../Localization/WheelSlipping/WheelSlipping-en.html"><strong aria-hidden="true">31.</strong> Wheel slipping diagnostic</a></li><li class="chapter-item expanded "><a href="../../Localization/3dPositioning/3dPositioning-en.html"><strong aria-hidden="true">32.</strong> 3D positioning</a></li><li class="chapter-item expanded affix "><li class="part-title">Position control</li><li class="chapter-item expanded "><a href="../../PositionControl/StartOffsetSlowdown/StartOffsetSlowdown-en.html"><strong aria-hidden="true">33.</strong> Start offset slowdown</a></li><li class="chapter-item expanded "><a href="../../PositionControl/CoupledDriving/CoupledDrivingFeature-en.html"><strong aria-hidden="true">34.</strong> Coupled driving</a></li><li class="chapter-item expanded "><a href="../../PositionControl/MagneticLineFollowing/MagneticLineFollowing-en.html"><strong aria-hidden="true">35.</strong> Magnetic line following</a></li><li class="chapter-item expanded "><a href="../../PositionControl/TrailerTransport/TrailerTransport-en.html"><strong aria-hidden="true">36.</strong> Trailer transport</a></li><li class="chapter-item expanded "><a href="../../PositionControl/BarrierStop/BarrierStop-en.html"><strong aria-hidden="true">37.</strong> Barrier stop</a></li><li class="chapter-item expanded "><a href="../../PositionControl/DataMatrixDocking/DataMatrixDockingDMC-en.html"><strong aria-hidden="true">38.</strong> Data Matrix Code Docking V2</a></li><li class="chapter-item expanded "><a href="../../PositionControl/Docking/Docking-en.html"><strong aria-hidden="true">39.</strong> Docking</a></li><li class="chapter-item expanded affix "><li class="part-title">Drive control</li><li class="chapter-item expanded "><a href="../../DriveControl/DrivingOptions/DrivingOptions-en.html"><strong aria-hidden="true">40.</strong> Driving options</a></li><li class="chapter-item expanded "><a href="../../DriveControl/Standalone/Standalone-en.html"><strong aria-hidden="true">41.</strong> Standalone</a></li><li class="chapter-item expanded "><a href="../../DriveControl/StopAndHold/StopAndHold-en.html"><strong aria-hidden="true">42.</strong> Stop-and-hold</a></li><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050-en.html"><strong aria-hidden="true">43.</strong> VDA 5050</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DriveControl/VDA5050/VDA5050FeatureMatrix-en.html"><strong aria-hidden="true">43.1.</strong> VDA 5050 Support status</a></li></ol></li><li class="chapter-item expanded "><a href="../../DriveControl/ReturnToRoute/ReturnToRoute-en.html"><strong aria-hidden="true">44.</strong> Return to route</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidance/ObstacleAvoidance-en.html"><strong aria-hidden="true">45.</strong> Obstacle avoidance</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ObstacleAvoidanceV2/ObstacleAvoidanceV2-en.html"><strong aria-hidden="true">46.</strong> Obstacle avoidance V2</a></li><li class="chapter-item expanded "><a href="../../DriveControl/ContainerDriving/ContainerDriving-en.html"><strong aria-hidden="true">47.</strong> Container driving</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RecordAndPlay/RecordAndPlay-en.html"><strong aria-hidden="true">48.</strong> Record and Play</a></li><li class="chapter-item expanded "><a href="../../DriveControl/RouteFreeNavigation/RouteFreeNavigation-en.html"><strong aria-hidden="true">49.</strong> Route free navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Kinematics</li><li class="chapter-item expanded "><a href="../../Kinematics/OmniSteerLimit/OmniSteerLimit-en.html"><strong aria-hidden="true">50.</strong> Omni steer limit</a></li><li class="chapter-item expanded "><a href="../../Kinematics/OneDriveWheelOmni/OneDriveWheelOmni-en.html"><strong aria-hidden="true">51.</strong> Omni one drive wheel</a></li><li class="chapter-item expanded affix "><li class="part-title">Pickup and drop-off</li><li class="chapter-item expanded "><a href="../../LoadHandling/ActuatorControl/ActuatorControl-en.html"><strong aria-hidden="true">52.</strong> Actuator control</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/ScannerLiftActuator/ScannerLiftActuator-en.html"><strong aria-hidden="true">53.</strong> Scanner lift actuator</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/Racking/Racking-en.html"><strong aria-hidden="true">54.</strong> Racking</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BufferLanes/BufferLanes-en.html"><strong aria-hidden="true">55.</strong> Buffer lanes</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/StackLoading/StackLoading-en.html"><strong aria-hidden="true">56.</strong> Loading from a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/BlockStacking/BlockStacking-en.html"><strong aria-hidden="true">57.</strong> Unloading to a stack</a></li><li class="chapter-item expanded "><a href="../../LoadHandling/DistanceToTarget/DistanceToTarget-en.html"><strong aria-hidden="true">58.</strong> Distance to target estimation</a></li><li class="chapter-item expanded affix "><li class="part-title">Target and obstacle detection</li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PalletDetection/PalletDetection-en.html"><strong aria-hidden="true">59.</strong> Pallet detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/3dTargetDetection/3dTargetDetection-en.html"><strong aria-hidden="true">60.</strong> 3D Target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/PatternDetection/PatternDetection-en.html"><strong aria-hidden="true">61.</strong> Pattern detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ObstacleDetection/ObstacleDetection-en.html"><strong aria-hidden="true">62.</strong> Obstacle detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/ExternalTargetDetection/ExternalTargetDetection-en.html"><strong aria-hidden="true">63.</strong> External target detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/TableDetection/TableDetection-en.html"><strong aria-hidden="true">64.</strong> Table detection</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/Wallmonitoring/Wallmonitoring-en.html"><strong aria-hidden="true">65.</strong> Wall monitoring</a></li><li class="chapter-item expanded "><a href="../../TargetAndObstacleDetection/OccupancyCheck/OccupancyCheck-en.html"><strong aria-hidden="true">66.</strong> Occupancy check</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../Miscellaneous/ErrorDescriptions/ErrorDescriptions-en.html"><strong aria-hidden="true">67.</strong> Error descriptions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Logging/Logging-en.html"><strong aria-hidden="true">68.</strong> Logging</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/LinuxImagesHeading.html"><strong aria-hidden="true">69.</strong> Linux image installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/CanDrivers/CanDrivers-en.html"><strong aria-hidden="true">69.1.</strong> CAN drivers</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/Clonezilla/ClonezillaInstallation-en.html"><strong aria-hidden="true">69.2.</strong> Clonezilla</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBuster/DebianBusterInstallation-en.html"><strong aria-hidden="true">69.3.</strong> Debian Buster</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/LinuxImageInstallation/DebianBullseye/DebianBullseyeInstallation-en.html"><strong aria-hidden="true">69.4.</strong> Debian Bullseye</a></li></ol></li><li class="chapter-item expanded "><a href="../../Miscellaneous/ParameterZones/ParameterZones-en.html"><strong aria-hidden="true">70.</strong> Parameter zones</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Reflectors/Reflectors-en.html"><strong aria-hidden="true">71.</strong> Reflectors</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/SslCertificates/SslCertificates-en.html"><strong aria-hidden="true">72.</strong> SSL Certificate configuration</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/BatteryOvertemperatureActions/BatteryOvertemperatureActions.html"><strong aria-hidden="true">73.</strong> Battery overtemperature actions</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/Charging/Charging-en.html"><strong aria-hidden="true">74.</strong> Charging and battery management</a></li><li class="chapter-item expanded "><a href="../../Miscellaneous/HardwareRequirements/HardwareRequirements-en.html"><strong aria-hidden="true">75.</strong> Hardware requirements</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">NAVITROL USER INSTRUCTIONS - Navitec Systems Oy CONFIDENTIAL</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="external-localization"><a class="header" href="#external-localization">External localization</a></h1>
+<p>Updated 26.01.2024</p>
+<hr />
+<h2 id="positioning-and-docking"><a class="header" href="#positioning-and-docking">Positioning and docking</a></h2>
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
+<p>External localization feature introduces positioning on data matrix lines using a camera-based system. It can be used for locating vehicle's position on areas where laser scanners cannot be used. The feature also provides accurate docking since the cameras can provide sub millimeter X,Y position on the data matrix.</p>
+<p>The system works so that camera(s) read absolute position from the data matrix tape. Then, using coordinate transformations, the position of the vehicle is located on the map, thus avoiding the need for natural feature positioning with laser scanners. Vehicle will correct its position to the center of data matrix line and simultaneously correct
+its heading to be aligned with the line. The stopping point is determined by the given end position on the route, the same way as in normal navigation.</p>
+<p>Hardware requirements for the feature include Position Guided Vision sensor(s) and Data matrix code tape from Pepperl+Fuchs. Navitrol can read data directly from sensors using CAN Open. For other type of sensors, the customer is required to read the data from the sensors and send the data to Navitrol via Ethernet TCP/IP connection (see Appendix).</p>
+<h3 id="teaching-of-data-matrix-lines-into-a-map"><a class="header" href="#teaching-of-data-matrix-lines-into-a-map">Teaching of data matrix lines into a map</a></h3>
+<p>There are multiple reasons why data matrix lines are needed in the global map.</p>
+<ul>
+<li>
+<p>Enable localization of the vehicle based on the camera measurements.</p>
+</li>
+<li>
+<p>Determine when the vehicle should start and stop using the data matrix positioning.</p>
+</li>
+<li>
+<p>Detecting error situations when the camera is unable to read measurements from the line.</p>
+</li>
+<li>
+<p>Driving offsets can be added to individual lines in Navithor Tools.</p>
+</li>
+</ul>
+<h3 id="storing-line-positions"><a class="header" href="#storing-line-positions">Storing line positions</a></h3>
+<p>Teaching of a data matrix line is done by driving over the line in teaching mode and storing the position of the line into the teach data at certain intervals. Positions that are needed to teach are the start point and end point of the line, but sometimes also the points where it is planned that an AGV can enter or leave the line for easier drawing of the routes.</p>
+<p>The most convenient way to teach these points is to do it manually, i.e., a position is saved by pushing the <strong>Save Pos</strong> button on the teaching interface (See Figure 1). This results in a convenient number of taught points in the teach file. Manual saving is selected by setting the <strong>ext_loc_teach_mode</strong> parameter to 2. There are also two options
+for automatically saving the points. If mode 1 is selected, a time interval for saving is defined in parameter <strong>ext_loc_teach_interval_ms.</strong> If mode 3 is selected, a distance interval for saving is defined in parameter <strong>ext_loc_teach_interval_dist</strong> (see external localization parameters in section 1.4).</p>
+<p><img src="./media-en/image3.png" alt="" /></p>
+<blockquote>
+<p>Figure 1: Web interface screen</p>
+</blockquote>
+<p><strong>Observe!</strong></p>
+<p>When teaching lines in big environments it is vital that the map is built from the same teach data as the line, because this guarantees the best accuracy between the line and the map. If a line is added to an old map from a new teach file it is very important that the new teach data is carefully shifted and rotated to accurately match the old map.
+Otherwise, the scanner positioning and line positioning will not match, and it will be difficult to draw the routes accurately onto the line.</p>
+<p>Before teaching it is important to calibrate the vehicle, so that all tapes are correctly aligned with the scanner environment. The calibration process is described in the end of this document.</p>
+<p><strong>The teaching process</strong>:</p>
+<ul>
+<li>
+<p>Start the teaching mode from the WEB interface</p>
+</li>
+<li>
+<p>Drive through the environment that shall be taught</p>
+</li>
+<li>
+<p>When coming to a data matrix line, drive the sensor indexed 0 in parameter file (ext_loc_x_offset[0] etc.) to the beginning of the line and stop. In this document we use front camera to denote the 0 indexed sensor.</p>
+</li>
+<li>
+<p>Verify that the camera sees the line (green detection led on camera, or if the Monitor is used measurements from camera appear on the map starting with &quot;Ext0&quot;) and save the position by pushing the Save Pos button on the WEB interface</p>
+</li>
+<li>
+<p>Continue along the line to the next line position to save (the vehicle does not need to follow the line accurately while driving, but the camera must detect the line when stopping to save the position). Stop the vehicle, verify that the camera detects the line and save the position.</p>
+</li>
+<li>
+<p>Repeat driving to all desired line positions and save them</p>
+</li>
+<li>
+<p>Save a final point at the end of the line (where the vehicles shall exit the line or stop to station)</p>
+</li>
+<li>
+<p>Continue environment teaching until the desired part of the environment is taught</p>
+</li>
+<li>
+<p>Turn off the teaching from the WEB interface</p>
+</li>
+</ul>
+<p>The preferable way of teaching a data matrix line is in the normal driving direction and along growing distance values of the line.</p>
+<h3 id="processing-the-teach-file-in-navithor-tools"><a class="header" href="#processing-the-teach-file-in-navithor-tools">Processing the teach file in Navithor Tools</a></h3>
+<p>The data matrix line must be built into the scanned map by drawing the line according to the saved line positions. The saved line positions represent vehicle navigation points.
+Positions are not directly usable as they are in the teach file since they are not recorded exactly at the center of the line. A specific position shifting tool is used to
+transform the points as if the vehicle would be in an ideal position along the tape line at the saved point. This work is done in the following steps:</p>
+<ul>
+<li>
+<p>Normal matching and finalizing of the teach data and generation of the map (see Figure 2)</p>
+<ul>
+<li>If a map is already built, it is not necessary to finalize this teach data but matching it to the existing map is still necessary</li>
+</ul>
+</li>
+<li>
+<p>Go to the External Localization tab (see Figure 3)</p>
+</li>
+<li>
+<p>Select the first saved line point and push the Transform Point button</p>
+</li>
+<li>
+<p>A transformation window opens, containing three sets of data:</p>
+<ul>
+<li>
+<p>The camera position on tape when the point was saved</p>
+</li>
+<li>
+<p>The position where the camera position should be shifted so that it's on the center of the line and aligned with the tape</p>
+</li>
+<li>
+<p>The camera position on-board the vehicle (vehicle parameter values for reference)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="./media-en/image4.png" alt="" /></p>
+<blockquote>
+<p>Figure 2: Matching and finalizing the measurements</p>
+</blockquote>
+<p><img src="./media-en/image5.png" alt="" /></p>
+<blockquote>
+<p>Figure 3: External Localization tab (red arrow).</p>
+</blockquote>
+<ul>
+<li>
+<p>Set the target pose values according to the teaching situation: The X-value should be the same as in the saved pose because it is the tape position</p>
+</li>
+<li>
+<p>The Y-value should be 0 so that the position is shifted to the middle of the tape (as if the camera would detect it ideally centered)</p>
+</li>
+</ul>
+<p><img src="./media-en/image6.png" alt="" /></p>
+<blockquote>
+<p>Figure 4: Transformation window for shifting the saved point data.</p>
+</blockquote>
+<ul>
+<li>The heading shall be according to how the vehicle shall detect the tape when driving the route (see Figure 5 Cases 1-3).</li>
+</ul>
+<ol>
+<li>
+<p>If the AGV follows the tape longitudinally as it was taught into the map, the heading is the camera offset (-90 degrees in the example in Figure 6)</p>
+</li>
+<li>
+<p>If the AGV follows the route in the opposite direction than it was taught into the map, the heading shall be the camera offset ±180</p>
+</li>
+<li>
+<p>If the route shall be driven transversally, the heading shall be the camera offset ±90 degrees depending on which side of the tape the route shall be. When two tapes are used, transform the line points so that the route points between the tapes are transformed from the route on which the front camera shall be when driving the route. The route points of the other tape can be transformed with the same angle, making the transformed points outside the tapes. Only the point pair of the front camera is used for route generation, but both need to be transformed anyway.</p>
+</li>
+</ol>
+<p><img src="./media-en/image7.png" alt="" /></p>
+<blockquote>
+<p>Figure 5: Transforming line points. Green point 1 is original saved position. Red point 1 is transformed saved position. Blue rectangles are the PGV camera positions.</p>
+</blockquote>
+<ul>
+<li>When the values are set, push the <strong>Transform</strong> button in the Transformation window and close the window (see Figure 6 and Figure 7).</li>
+</ul>
+<p><img src="./media-en/image8.png" alt="" />
+<img src="./media-en/image9.png" alt="" /></p>
+<ul>
+<li>
+<p>Transform all the saved line points in the same manner</p>
+</li>
+<li>
+<p>Select Define Connection and combine start and end point of line to form the data matrix in to the map (see Figure 8). <strong>Note:</strong> Before NavithorTools v. 4.05.00 it is necessary to select first the line point with smaller X-value.</p>
+</li>
+<li>
+<p>Select the Routes and Symbolic Points tab and draw the routes into the map.</p>
+</li>
+<li>
+<p>Draw the route from point to point through all transformed line points, then add small straights at both ends to avoid affecting the line straightness by connecting curved segments to it (see Figure 9). The route needs to be straight for data matrix following.</p>
+</li>
+<li>
+<p>Finally combine the line route to the rest of the route network.</p>
+</li>
+<li>
+<p>When planning routes where cameras are along two different data matrix lines, the route needs to be marked with a route property tag Enable line docking along the entire data matrix line length. <strong>Need for tag will be obsolete from Navitrol 6.32 onwards</strong>.</p>
+</li>
+</ul>
+<p><img src="./media-en/image10.png" alt="" /></p>
+<blockquote>
+<p>Figure 8: Defining the connection between the shifted points to form the line into the map.</p>
+</blockquote>
+<p><img src="./media-en/image11.png" alt="" /></p>
+<blockquote>
+<p>Figure 9: Drawing the route through the transformed line position points.</p>
+</blockquote>
+<p><strong>Note!</strong></p>
+<p>If driving along two lines, it is important that the lengthwise coordinates of the lines match each other so that the heading of the machine is calculated correctly relative to the tapes from X-measurements (see Figure 10). If the vehicle is not driving in correct angle to the tapes, start point of one of the lines must be shifted lengthwise using the Transform Point function (see Figure 11). The start point is the saved point with a smaller data matrix X-value. The shifting is done to the start point by changing the X-value of the point. When driving along two lines, teach only the start and end positions of the line.</p>
+<p><img src="./media-en/image12.png" alt="" /></p>
+<blockquote>
+<p>Figure 10: If the tape position detections are not giving a correct angle of the vehicle the saved positions starting the tape must be shifted.</p>
+</blockquote>
+<p><img src="./media-en/image13.png" alt="" /></p>
+<blockquote>
+<p>Figure 11: Shifting of the saved start point of a tape. a) Saved point (red) before shifted forwards on data matrix tape b) Saved point after being shifted 22mm forwards (27.118-26.898 = 0.022). The starting points of both connections are now at the same level.</p>
+</blockquote>
+<h3 id="calibration-of-camera-positions"><a class="header" href="#calibration-of-camera-positions">Calibration of camera positions</a></h3>
+<p>In external localization, the navigation controls the vehicle so that the cameras are as accurately as possible on a data matrix line. In the line following two things need to be calibrated.</p>
+<ol>
+<li>
+<p>Parameters adjusting the reported position of the AGV relative to the map.</p>
+</li>
+<li>
+<p>Parameters adjusting the AGV position relative to the line.</p>
+</li>
+</ol>
+<p>The calibration is preferably done so that vehicle is standing with both cameras on the same tape and tape X-coordinates growing towards the front of vehicle.</p>
+<h3 id="adjust-camera-positions-relative-to-machine"><a class="header" href="#adjust-camera-positions-relative-to-machine">Adjust camera positions relative to machine</a></h3>
+<p>The position of the AGV's navigation point is prioritized to be calculated from the front camera detection, i.e. X-position on the tape and Y-offset from the tape centre line. These values are combined with the tape position in the map, which is defined by transformation points saved during teach-in of the environment and the data matrix tape. If
+only rear camera is on tape, then it is used for localizing navigation position.</p>
+<p>If only one camera is used for data matrix following, the angle detection of the camera is used to get the heading of the AGV. If two cameras are used, the heading is calculated from the front camera detection point and the rear camera detection point. The latter is much more precise since the point detections are more precise than the angle
+resolution of the camera. However, heading accuracy will depend also on the calibration of the camera positions.</p>
+<p>These parameters below represent the nominal positions of the cameras in meters which should be ideally equal in all the machines. Check that these parameters are valid before teaching any of the lines.</p>
+<p>e.g. front camera:</p>
+<p>ext_loc_x_offset[0] which is the X offset of the front camera from the navigation point to the sensor in machine coordinate system, positive forwards. Should be the full camera distance from navigation point in x-direction, which is easy to get from front and rear camera readings when both cameras are on the same tape.</p>
+<p>ext_loc_y_offset[0] which is the Y offset of the front camera from the navigation point to the sensor in machine coordinate system, positive to the left. If one camera is used, this is the full camera distance from navigation point in y-direction, but when two cameras are used, they should be on the centre line and this value should be 0.</p>
+<p>ext_loc_h_offset_deg[0] which is the heading offset between the machine coordinate system and the sensor coordinate system, positive CCW. Note that this is effective only when a single camera is detecting the line, since else the heading is calculated from front/rear camera positions.</p>
+<p><strong>Note: From Navitrol 6.32 onwards, two cameras can be mounted also to the left and right side of navigation point.</strong></p>
+<h3 id="calibrating-the-agv-position-relative-to-the-data-matrix-line"><a class="header" href="#calibrating-the-agv-position-relative-to-the-data-matrix-line">Calibrating the AGV position relative to the data matrix line</a></h3>
+<p>In case the cameras are not accurately positioned to the nominal positions (ext_loc_*_offset parameters) on the AGV body the AGV will not drive completely aligned with the tape. To correct this, the transversal camera positions can be adjusted with a small offset so that the tape line is followed accurately. This is done using the below offset parameters:</p>
+<p>pgv_y_offset[0] for the front camera. This offset is positive to the left of the tape, seen in the growing value direction of the tape.</p>
+<p>pgv_y_offset[1] for the rear camera. This offset is positive to the left of the tape, seen in the growing value direction of the tape.</p>
+<p>It is important to note, that offsets must be so small that there is not a risk that the camera loses the tape from its view. The reading area of the camera is typically around 3-5 cm from the center of tape.</p>
+<p>Longitudinal offsets can be adjusted using parameters below:</p>
+<p>pgv_x_offset[0] for the front camera. This offset is positive to the growing value of the tape, seen in the growing value direction of the tape.</p>
+<p>pgv_x_offset[1] for the rear camera. This offset is positive to the growing value of the tape, seen in the growing value direction of the tape.</p>
+<p>The heading of the cameras can be adjusted using parameters:</p>
+<p>pgv_angle_offset_deg[0] for the front camera. Positive value rotates camera's measurement to clockwise direction. Note: Monitor shows camera's measurement so that positive is to counter-clockwise in machine coordinates.</p>
+<p>pgv_angle_offset_deg[1] for the rear camera. Positive value is to clockwise direction.</p>
+<p>These should be adjusted so that the tape measurement is 0 degrees when the tape is aligned with the vehicle and the tape values are growing in the forward direction of the AGV. Let ext_loc_h_offset_deg[] parameters to be zero if using pgv_angle_offset_deg[] parameters.</p>
+<p>In Appendix section 3.2, proposed calibration method for omni vehicle with two PGVs is represented.</p>
+<h3 id="when-to-adjust-line-position-on-map-and-when-to-calibrate-the-vehicle-parameters"><a class="header" href="#when-to-adjust-line-position-on-map-and-when-to-calibrate-the-vehicle-parameters">When to adjust line position on map and when to calibrate the vehicle parameters</a></h3>
+<p>If the scanner points do not match to the environment when the vehicle comes to a line, check if this happens for the AGV that was used for teaching the line. If true, check that the camera parameters have been calibrated properly and try to reteach the line, carefully following the teaching process. When the AGV is positioning well, calibrate then the camera parameters for the rest of the AGVs so that each AGV's scanner measurements match equally to the map. <strong>Note:</strong> Laser scanner positions should be calibrated before calibrating camera parameters.</p>
+<p>Following one line: If all vehicles are driving on the side of the route and the scanner measurements match with the map, the route shall be adjusted. If the tape is sidewise offset to the desired position, the tape can be adjusted in Tools by setting an offset to it (add offset in the transform window). Offsets must be small to keep the cameras above the tape.</p>
+<p>Following two lines: If all AGVs are driving in a wrong angle to the route, the transformation points of the tapes shall be adjusted. If individual AGVs are driving with different angles to the tape, return to calibrations of the vehicles.</p>
+<h3 id="parameters-for-external-localization-pgv-camera"><a class="header" href="#parameters-for-external-localization-pgv-camera">Parameters for External localization (PGV camera)</a></h3>
+<table><thead><tr><th>Type</th><th>Name</th><th>Description</th></tr></thead><tbody>
+<tr><td>int</td><td>teach_file_format</td><td>Only teach file format 5 enables to save line positions</td></tr>
+<tr><td>int</td><td>ext_loc_enabled</td><td>External localization<br>0 = disabled<br>1 = enabled</td></tr>
+<tr><td>int     ext_loc_teach_mode                            Teach mode<br>0 = pose not saved<br>1 = save pose with time interval<br>2 = save pose only when Save <strong>Pos</strong> is pressed (recommended)</td><td></td><td></td></tr>
+<tr><td>int</td><td>ext_loc_teach_interval_ms</td><td>Interval for position storing of line position when automatic storing is selected (ext_loc_teach_mode is 1)</td></tr>
+<tr><td>float</td><td>ext_loc_x_offset[0...3]</td><td>Nominal X offset from the navigation point to sensor in machine coordinate system, positive forwards</td></tr>
+<tr><td>float</td><td>ext_loc_y_offset[0...3]</td><td>Nominal Y offset from the navigation point to sensor in machine coordinate system, positive to the left</td></tr>
+<tr><td>float</td><td>ext_loc_h_offset_deg[0...3]</td><td>Nominal heading offset between machine coordinate system and sensor coordinate system, positive CCW</td></tr>
+<tr><td>float</td><td>pgv_x_offset[0...3]</td><td>X-offset in meters from nominal position, only small correction values</td></tr>
+<tr><td>float</td><td>pgv_y_offset[0...3]</td><td>Y-offset in meters from nominal position, only small correction values</td></tr>
+<tr><td>float</td><td>pgv_angle_offset_deg[0...3]</td><td>Angle offset in degrees from nominal heading</td></tr>
+<tr><td>float</td><td>ext_loc_dist_from_line</td><td>Distance from line when external localization is enabled</td></tr>
+<tr><td>int</td><td>ext_loc_for_pos_ctrl_mode</td><td>External localization used directly for position control (e.g. in case of line following)<br>0 = disabled<br>1 = using only one sensor<br>2 = using two sensors when applicable<br>3 = require always two sensors (Navitrol 6.32 onwards)</td></tr>
+<tr><td>int</td><td>ext_loc_pos_ctrl_dist_err_only</td><td>Position control option to use only distance error from line, when just one sensor is reading the data matrix. Intended for non-omni type vehicles that have sensor(s) outside of navigation point (Navitrol 6.32 onwards).</td></tr>
+<tr><td>int</td><td>ext_loc_pos_ctrl_axis</td><td>Axis where the offset to the route is calculated:<br>0 = y-axis,1 = x-axis</td></tr>
+<tr><td>int</td><td>ext_loc_pos_ctrl_max_h_err</td><td>Max heading error to continue line following</td></tr>
+<tr><td>int</td><td>ext_loc_max_time_since_last_meas_ms</td><td>Maximum time in ms since last valid measurement when inside external localization area</td></tr>
+<tr><td>float</td><td>ext_loc_max_dist_since_last_meas</td><td>Maximum travelled distance since last valid measurement when inside external localization area (Navitrol 6.32 onwards). Recommended to use this instead of ...time_since_last_meas_ms. Set 0 to disable one or the other.</td></tr>
+<tr><td>float</td><td>ext_loc_heading_filt_alpha</td><td>Filtering gain for heading measurement from sensor (0.1 -- 1.0), default 1.0</td></tr>
+<tr><td>int</td><td>ext_loc_pos_ctrl_only</td><td>Driving line following but not using data matrix for localization of the AGV</td></tr>
+<tr><td>float</td><td>ext_loc_max_h_err_deg</td><td>Maximum heading difference between previous and newly calculated AGV heading. External localization pose is ignored if change is too much.</td></tr>
+<tr><td>float</td><td>ext_loc_max_xy_err</td><td>Maximum difference between new and previous xy-position. External localization pose is ignored if change is too much. (Navitrol 6.32 onwards).</td></tr>
+<tr><td>int</td><td>ext_loc_localize_without_pos_ctrl_checks</td><td>Option to keep localizing when position control sanity checks prevent use of data matrix for driving corrections (Navitrol 6.32 onwards).</td></tr>
+<tr><td>float</td><td>ext_loc_pid_heading_p</td><td>Position control gain for heading when external localization is active<br>&lt;= 0.1 use normal pc_pid values&lt;br&gt;&gt; 0.1 use this parameter</td></tr>
+<tr><td>float</td><td>ext_loc_pid_dist_p</td><td>Position control gain for distance when external localization is active<br>&lt;= 0.1 use normal pc_pid values&lt;br&gt;&gt; 0.1 use this parameter</td></tr>
+<tr><td>int</td><td>ext_loc_stop_point_enabled</td><td>Stop point is given in data matrix coordinates for sensor (X-position) instead of driving to route end position.</td></tr>
+<tr><td>float</td><td>ext_loc_stop_point</td><td>Stop point value for sensor (X-position)</td></tr>
+<tr><td>float</td><td>ext_loc_check_path_ready_dist</td><td>Distance from stop point inside of which the stopping check starts. After drive is ready and before next stop can be checked, a measurement must be outside of this distance from stop value.</td></tr>
+<tr><td><strong>Communication parameters</strong></td><td></td><td></td></tr>
+<tr><td>uint</td><td>pgv_enabled</td><td>PGV sensor enabled (CAN only)</td></tr>
+<tr><td>int</td><td>pgv_can_node_id[0...3]</td><td>CAN node ID of camera</td></tr>
+<tr><td>int</td><td>pgv_model[0...3]</td><td>0 = default<br>1 = safePGV</td></tr>
+<tr><td>int</td><td>pgv_max_missing_msg</td><td>Number of missing messages for error to be triggered (Ethernet only)</td></tr>
+<tr><td>float</td><td>pgv_cam_res_x</td><td>The x-axis resolution of the PGV cameras in meters, default 0.0001</td></tr>
+<tr><td>float</td><td>pgv_cam_res_y</td><td>The y-axis resolution of the PGV cameras in meters, default 0.0001</td></tr>
+<tr><td>float</td><td>pgv_cam_res_h</td><td>The heading resolution (deg) of the PGV cameras, default 0.1</td></tr>
+<tr><td>int</td><td>ext_loc_eth_model[0...3]</td><td>Linefollowing config for ethernet comms<br>-1 = disabled<br>0 = PGV (custom message)</td></tr>
+<tr><td>int</td><td>ext_loc_eth_port[0...3]</td><td>Linefollowing port (5333)</td></tr>
+<tr><td>int</td><td>ext_loc_eth_swap_bytes</td><td>0 = little endian<br>1 = big endian</td></tr>
+<tr><td>int</td><td>ext_loc_eth_protocol</td><td>1 = Stream<br>2 = DGRAM</td></tr>
+</tbody></table>
+<p><strong>Example parameters to get started for two PGV (CAN Open) cameras</strong></p>
+<table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>
+<tr><td>I,ext_loc_enabled,</td><td>1</td></tr>
+<tr><td>I,ext_loc_teach_mode,</td><td>2</td></tr>
+<tr><td>F,ext_loc_x_offset[0],</td><td>0.5</td></tr>
+<tr><td>F,ext_loc_y_offset[0],</td><td>0.0</td></tr>
+<tr><td>F,ext_loc_h_offset_deg[0],</td><td>0.0</td></tr>
+<tr><td>F,ext_loc_x_offset[1],</td><td>-0.5</td></tr>
+<tr><td>F,ext_loc_y_offset[1],</td><td>0.0</td></tr>
+<tr><td>F,ext_loc_h_offset_deg[1],</td><td>0.0</td></tr>
+<tr><td>F,ext_loc_dist_from_line,</td><td>0.05</td></tr>
+<tr><td>I,ext_loc_for_pos_ctrl_mode,</td><td>2</td></tr>
+<tr><td>F,ext_loc_heading_filt_alpha,</td><td>0.3</td></tr>
+<tr><td>U, pgv_enabled,</td><td>1</td></tr>
+<tr><td>I,pgv_can_node_id[0],</td><td>3</td></tr>
+<tr><td>I,pgv_can_node_id[1],</td><td>4</td></tr>
+<tr><td>F, pgv_x_offset[0],</td><td>0.0</td></tr>
+<tr><td>F,pgv_y_offset[0],</td><td>0.0</td></tr>
+<tr><td>F,pgv_x_offset[1],</td><td>0.0</td></tr>
+<tr><td>F,pgv_y_offset[1],</td><td>0.0</td></tr>
+<tr><td>F,pgv_angle_offset_deg[0],</td><td>90.0</td></tr>
+<tr><td>F,pgv_angle_offset_deg[1],</td><td>-90.0</td></tr>
+</tbody></table>
+<h3 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h3>
+<ul>
+<li>
+<p><em>External localization does not start even though PGV gets readings from the tape</em></p>
+<ul>
+<li>
+<p>Check that you have properly transformed teach points and defined the connection in Navithor Tools.</p>
+</li>
+<li>
+<p>Check that your camera parameters are correct. Typical issue is that heading of the camera is wrong and a sanity check rejects the measurement (ext_loc_max_h_err_deg).</p>
+</li>
+<li>
+<p>From Navitrol 6.32 onwards there is a possibility to show the location of the data matrix on the map and PGV positions in Navitrol Monitor (see Figure 12). The position difference from the center of the line to the PGV can't differ more than distance defined by parameter ext_loc_dist_from_line.</p>
+</li>
+<li>
+<p>Check that the camera parameters for the position and for the connection have the same index. In other words, the measurements come from the correct camera.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>ERROR_EXT_LOC_TOO_LONG_SINCE_MEASUREMENT is shown</em></p>
+<ul>
+<li>
+<p>This means that based on AGVs position, the PGV should be able to read measurements from the data matrix but it is not. The distance which defines if the PGV should be able to read the data matrix is ext_loc_dist_from_line. This is the distance between the PGV's center position to the closest line point on the map. The Error is triggered after a timeout expires without getting valid measurements (ext_loc_max_time_since_last_meas_ms).
+<strong>Note:</strong> From Navitrol 6.32 onwards it is recommended to use ext_loc_max_dist_since_last_meas instead of the timer to avoid situation when AGV stops at the edge of the start/end of tape, thus triggering error when AGV is not moving.</p>
+</li>
+<li>
+<p>Check what is the reason for not receiving measurements from the PGV</p>
+</li>
+<li>
+<p>To get AGV out of the error situation, move the AGV manually so that PGV is able to get measurements or move the AGV to route point that is far enough from the data matrix.</p>
+</li>
+<li>
+<p>If the AGV stops just before or after the data matrix starts, this error might be triggered unwanted. Adjust ext_loc_dist_from_line to a smaller value to diminish these situations (e.g. 0.05). This parameter is also used as a search area to identify from which data matrix the PGV is getting measurements, so the value of the parameter cannot be arbitrarily small. <strong>Note:</strong> When using parameter ext_loc_max_dist_since_last_meas, ext_loc_dist_from_line can be left a bit higher value (e.g. 0.08) but set then ext_loc_max_dist_since_last_meas to a bigger value (e.g. 0.15).</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>AGV position jumps when changing to external localization and scanners don't match to environment</em></p>
+<ul>
+<li>
+<p>If this happens to the AGV that was used to teach the line, check that you followed the calibration and teaching process.
+<strong>Note:</strong> In case the taught data matrix line is very short (less than a meter), the heading inaccuracies of the PGV sensors and other inaccuracies in the teaching process might generate a poor result. Try to get PGV sensors center point to be close to center of the line and aligned with the tape when saving the teach positions. The less it is needed to transform the points in Navithor Tools the better the result. It's also always better if the map in this area can be built from the same teach file that is used to teach the line positions.</p>
+</li>
+<li>
+<p>If this happens to other AGVs, ensure first that you have calibrated the laser scanner positions. Then, calibrate the camera parameters (see section 1.3.2)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="./media-en/image14.png" alt="" /></p>
+<blockquote>
+<p>Figure 12: View external localization on Monitor. Grey line is data matrix and blue rectangle represents the PGV.</p>
+</blockquote>
+<h2 id="data-matrix-code-dmc-docking"><a class="header" href="#data-matrix-code-dmc-docking">Data Matrix Code (DMC) Docking</a></h2>
+<h3 id="introduction-1"><a class="header" href="#introduction-1">Introduction</a></h3>
+<p>In context of External localization, docking is a separate feature that requires its own license. The idea is to use the data matrix tape for line following only and leave out the positioning with the PGV camera.
+This means that data matrices are not taught to the environment nor will their exact position on the map be known. Instead, symbolic points on the route network will hold the needed information about the data matrix lines.</p>
+<p>In short, the AGV is given a drive order to a destination symbolic point which has data matrix information defined. When the AGV is close enough to the symbolic point and receives a valid measurement from the PGV camera, it goes to a docking state and uses from here on only the data matrix as a reference for the drive. The AGV will stop based on a predefined value on the data matrix tape. After it gets a drive order to leave the location, it will follow the data matrix tape until the sensor(s) stop receiving valid measurements from the tape.</p>
+<p><strong>Feature is available from Navitrol 6.34 onwards.</strong></p>
+<h3 id="configuration"><a class="header" href="#configuration">Configuration</a></h3>
+<p>The DMC docking has following requirements for its configuration:</p>
+<ul>
+<li>The Data matrix tape must be placed so that data matrix X-values grow towards the symbolic point the AGV is driving to (See Figure 13).
+<ul>
+<li>This means that the stop point cannot be approached from both sides along the data matrix</li>
+</ul>
+</li>
+<li>AGV can drive both forwards and reversing to the symbolic point. The route should be straight and without branches whenever the AGV is driving along the data matrix tape.
+<ul>
+<li>Only one heading per QR docking symbolic point is supported</li>
+</ul>
+</li>
+<li>Symbolic point must have QR docking enabled. In addition, symbolic point must be placed so that it is close to the location that the AGV is needed to be stopped.</li>
+</ul>
+<p><img src="./media-en/image15.png" alt="" /></p>
+<blockquote>
+<p>Figure 13: Orientation of data matrix tape to the route</p>
+</blockquote>
+<p>There can be only one data matrix line that the AGV follows but there can be one or two PGVs used for driving. However, mainly the PGV camera that is 0-indexed in the parameter file will be used for stopping the AGV (ext_loc_x_offset[0] etc.). Only when the 0-indexed PGV camera is not on the tape, the other camera would be used for stopping the AGV.</p>
+<p>In Navithor Tools, symbolic point should be filled with the data matrix tape information. These include the start point, end point and stop point (X-coordinate). Start and end point will determine the valid range for the PGV measurement when driving in or out of the symbolic point.
+Stop point will naturally trigger stopping of the AGV. It is incorporated with stopping offsets (pc_stop_distance_offset &amp; ext_loc_stop_distance_offset) for targeting that PGV reading would be close to the stop point value at the end.</p>
+<p>There can be also a driving offset defined for the symbolic point which will be activated when the AGV starts following the data matrix line.
+Positive transversal offset will drive the AGV to the left side from the route heading. Positive frame heading offset will drive the AGV rotated to counter-clockwise direction. Offsets should be kept small.</p>
+<p><img src="./media-en/image16.PNG" alt="" /></p>
+<blockquote>
+<p>Figure 14: Docking configuration</p>
+</blockquote>
+<h3 id="logic-and-error-detection"><a class="header" href="#logic-and-error-detection">Logic and error detection</a></h3>
+<h4 id="main-logic"><a class="header" href="#main-logic">Main logic</a></h4>
+<p>When the AGV is approaching the symbolic point that has data matrix values defined, it will change the driving reference point from route to data matrix line as soon as following conditions are met:</p>
+<ul>
+<li>
+<p>PGV X-measurement is between defined start and end point.</p>
+</li>
+<li>
+<p>Distance between the AGV and symbolic point is less than data matrix length + PGV offset from navigation point (Euclidean distance) + small tolerance (0.1m)</p>
+</li>
+<li>
+<p>Heading of the AGV relative to the tape is close enough to the target heading (parameter ext_loc_docking_max_h_err_deg).</p>
+</li>
+</ul>
+<p>Once the AGV changes to follow data matrix line, it will not switch to follow route in the same drive order anymore.</p>
+<p>The AGV starts to calculate when to stop after the PGV X-measurement is closer than &quot;Check path ready dist&quot; from the stop point value. Trigger to stop, as mentioned, is determined by the PGV X-measurement and stopping offsets.</p>
+<p>After finishing the stop and executing possible tasks at the location, the AGV will be given a drive order away from the symbolic point. The AGV will be following the data matrix line until it stops receiving valid measurements from the PGV sensor(s) for small driven distance (ext_loc_strict_max_dist_since_last_meas).</p>
+<h4 id="error-detection"><a class="header" href="#error-detection">Error detection</a></h4>
+<p>As it is desired to drive to the data matrix stop point accurately, it will be constantly supervised that the AGV is receiving valid PGV measurements while approaching or leaving the symbolic points.</p>
+<ol>
+<li><strong>Approaching the symbolic point</strong></li>
+</ol>
+<ul>
+<li>
+<p>The AGV must get at least one valid PGV measurement before it is closer than &quot;Check path ready dist&quot; from symbolic point, otherwise error ERROR_EXT_LOC_NOT_SAFE_TO_DRIVE is triggered.</p>
+</li>
+<li>
+<p>After getting first valid measurement and changing to data matrix line follow, it is checked that the AGV does not travel without valid measurement for more than ext_loc_max_dist_since_last_meas while outside &quot;Check path ready dist&quot; from the symbolic point.
+ERROR_EXT_LOC_TOO_LONG_SINCE_MEASUREMENT.
+<strong>Note:</strong> If AGV stops to this error at very start of data matrix line, it is likely that the heading validation has failed.</p>
+</li>
+<li>
+<p>While inside &quot;Check path ready dist&quot; from symbolic point, a stricter limit is used ext_loc_strict_max_dist_since_last_meas.
+ERROR_EXT_LOC_TOO_LONG_SINCE_MEASUREMENT</p>
+</li>
+</ul>
+<ol start="2">
+<li><strong>Leaving the symbolic point</strong></li>
+</ol>
+<ul>
+<li>
+<p>The AGV must get valid PGV measurements also when leaving the symbolic point while inside &quot;Check path ready dist&quot; from symbolic point. Parameter ext_loc_strict_max_dist_since_last_meas will be used for error detection.
+ERROR_EXT_LOC_TOO_LONG_SINCE_MEASUREMENT</p>
+</li>
+<li>
+<p>After the AGV is further than &quot;Check path ready dist&quot; distance from symbolic point, it will change to route following once there is no more valid PGV measurements for travelled distance of ext_loc_strict_max_dist_since_last_meas.</p>
+</li>
+</ul>
+<ol start="3">
+<li>
+<p><strong>After software reboot</strong></p>
+<ul>
+<li>
+<p>If the AGV is closer than &quot;Check path ready dist&quot; from the symbolic point that is target for a new drive order (or there is some other ambiguity from which direction the AGV is approaching the stop point), it will be checked whether the drive is ok to be ready.</p>
+<p>i.  Drive is ready if PGV X-measurement is closer than ext_loc_path_ready_max_dist_err from the stop point.</p>
+<p>ii. Error ERROR_EXT_LOC_NOT_SAFE_TO_DRIVE will be triggered if the first condition is not true</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Note!</strong>
+Some of the errors are persistent. Put the AGV to Manual state and possibly drive away from the error location. Turn off the Manual state and wait for the error to be cleared.</p>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<p>Main parameter for enabling the feature is <strong>ext_loc_docking_enabled</strong>. Enabling the feature also requires a license (External Localization -- Docking). Other parameters that are required to be set are:</p>
+<ul>
+<li>
+<p>ext_loc_stop_point_enabled, 1</p>
+</li>
+<li>
+<p>ext_loc_max_dist_since_last_meas &gt; 0</p>
+</li>
+<li>
+<p>ext_loc_strict_max_dist_since_last_meas &gt; 0</p>
+</li>
+</ul>
+<p>List of docking related parameters can be seen in the table below:</p>
+<table><thead><tr><th>Type</th><th>Name</th><th>Description</th></tr></thead><tbody>
+<tr><td>Int</td><td>ext_loc_docking_enabled</td><td>Enable docking<br>0 = Disabled<br>1 = Enabled</td></tr>
+<tr><td>Int</td><td>ext_loc_stop_point_enabled</td><td>Enable stop point<br>0 = Disabled<br>1 = Enabled</td></tr>
+<tr><td>Float</td><td>ext_loc_max_dist_since_last_meas</td><td>Maximum distance in meters since last valid measurement when data matrix following is active but the AGV outside &quot;Check path ready dist&quot;</td></tr>
+<tr><td>Float</td><td>ext_loc_strict_max_dist_since_last_meas</td><td>Maximum distance in meters since last valid measurement when data matrix following is active and the AGV inside &quot;Check path ready dist&quot;</td></tr>
+<tr><td>Float</td><td>ext_loc_check_path_ready_dist</td><td>&quot;Check path ready dist&quot; is a multipurpose distance parameter. It is used in error detection. It is also used for starting to check when to stop the AGV.</td></tr>
+<tr><td>Float</td><td>ext_loc_path_ready_max_dist_err</td><td>Max distance between PGV measurement and stop point to determine drive to be instantly ready at the start of new drive order.</td></tr>
+<tr><td>Float</td><td>ext_loc_docking_max_h_err_deg</td><td>Maximum heading error to the target heading when data matrix line follow is active</td></tr>
+<tr><td>Float</td><td>ext_loc_stop_distance_offset</td><td>Additional offset for stopping (pc_stop_distance_offset in general use) on data matrix. Positive value if the AGV stops too early.</td></tr>
+<tr><td>Int</td><td>ext_loc_for_pos_ctrl_mode</td><td>Position control parameter<br>1 = use always only one PGV<br>2 = use two PGVs when applicable<br>3 = require always two PGVs</td></tr>
+</tbody></table>
+<p>Same PGV position and communication parameters are needed to be set as when using the positioning and line following feature ext_loc_enabled (see section 1.4). It is also necessary to calibrate the position of the PGV cameras to achieve accurate driving from the whole fleet of AGVs (see Chapter 1.3 and 3.2).</p>
+<h2 id="appendix"><a class="header" href="#appendix">Appendix</a></h2>
+<h3 id="ethernet-communication-protocol"><a class="header" href="#ethernet-communication-protocol">Ethernet communication protocol</a></h3>
+<p>Navitrol can directly communicate with CAN Open PGVs. For all other type of PGVs, the customer is required first to read the data from the sensors and send the data to Navitrol via TCP/IP Ethernet connection.
+Navitrol will act as a server and can be configured to receive data to STREAM sockets or DGRAM (UDP) sockets. UDP is recommended. The port is configurable with parameter (see section 1.4). Default port is 5333 and default byte order is little endian. The customer should send the message periodically, for example with 30ms interval.</p>
+<table><thead><tr><th>Module</th><th>Content</th><th>Type</th><th>Byte count</th><th>Comments</th></tr></thead><tbody>
+<tr><td></td><td>Counter</td><td>UINT32</td><td>0.0</td><td>Running number 0, 1, 2...</td></tr>
+<tr><td>PGV_Module 2</td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Status ERR</td><td>UINT16</td><td>4.0</td><td>Error message present</td></tr>
+<tr><td></td><td>Status NP</td><td>4.1</td><td>No position information/OUT</td><td></td></tr>
+<tr><td></td><td>Status WRN</td><td>4.2</td><td>Warnings present</td><td></td></tr>
+<tr><td></td><td>Status RES</td><td>4.3</td><td>Reserved</td><td></td></tr>
+<tr><td></td><td>Position data Y</td><td>INT32</td><td>6.0</td><td>Default resolution 0.1mm</td></tr>
+<tr><td></td><td>Angle data</td><td>UINT16</td><td>10.0</td><td>Default resolution 0.1 deg</td></tr>
+<tr><td></td><td>Position data X</td><td>UINT32</td><td>12.0</td><td>Default resolution 0.1 mm</td></tr>
+<tr><td></td><td>Speed</td><td>INT16</td><td>16.0</td><td>Default resolution 0.1 m/s</td></tr>
+<tr><td></td><td>Position data Z</td><td>UINT16</td><td>18.0</td><td>Default resolution 1mm</td></tr>
+<tr><td></td><td></td><td></td><td>20</td><td></td></tr>
+</tbody></table>
+<h3 id="proposed-calibration-method-for-vehicle-with-two-pgvs"><a class="header" href="#proposed-calibration-method-for-vehicle-with-two-pgvs">Proposed calibration method for vehicle with two PGVs</a></h3>
+<h4 id="calibration-setup"><a class="header" href="#calibration-setup">Calibration setup</a></h4>
+<ul>
+<li>
+<p>Attach a QR tape to the floor in a testing area, where calibration markers can be permanently attached to the floor for later use.</p>
+</li>
+<li>
+<p>Teach-in the tape line and make a map in Tools.</p>
+</li>
+<li>
+<p>Draw short routes with target symbolic points along the tape line, one forwards and the other reversing from the same direction. The route should be parallel to the tape at a distance of ext_loc_y_offset from the tape and the symbolic points should be on equal positions along the tape. One route on the tape is enough if the sensors are on the vehicle centre line.</p>
+</li>
+<li>
+<p>Mark the route lines on the floor, i.e. lines parallel with the tape on a ext_loc_y_offset distance from the tape.</p>
+</li>
+<li>
+<p>Mount laser pointers pointing towards the floor in both ends of the AGV. The laser points should be exactly on the centre line of the AGV -- or the tape line, i.e. the sensor line. They should also be lengthwise on equal distance from the vehicle navigation point, else the calibration will not work.</p>
+</li>
+</ul>
+<p><strong>[NOTE]</strong>: Any inaccuracy in line marking, mounting the laser pointers and subsequent calibration evaluation all directly influence the final driving accuracy and equality between AGVs.</p>
+<p><img src="./media-en/image17.PNG" alt="" /></p>
+<blockquote>
+<p>Figure 15: Calibration setup. Green and red circles represent the laser scanners and green rectangles represent the PGV cameras.</p>
+</blockquote>
+<h4 id="calibration-sequence"><a class="header" href="#calibration-sequence">Calibration sequence</a></h4>
+<ul>
+<li>
+<p>Give the AGV a forward's drive order to the symbolic point (Test drive fwd in Figure 16)</p>
+</li>
+<li>
+<p>When the AGV stops at the symbolic point:</p>
+<ul>
+<li>
+<p>Read the x-readings from both sensors and set initial pgv_x_offset values so that they form the correct distance between the sensors according to the equation below</p>
+<p><em>x<sub>meas</sub>[0] - x<sub>meas</sub>[1] = ext_loc_offset[0] + pgv_x_offset[0] - ext_loc_offset[1] - pgv_x_offset[1] #(1)</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p>As an initial guess, set zero values to pgv_x_offset[0] and pgv_x_offset[1].</p>
+</li>
+<li>
+<p>Measure how far sideways the laser points are from the marked route line (or QR tape) and adjust the pgv_y_offset values to align the vehicle with the line and side shift it onto the line.</p>
+</li>
+<li>
+<p>Give the AGV a backwards drive order to the start of the test route and then a new drive order to the symbolic point.</p>
+</li>
+<li>
+<p>When the AGV stops at the symbolic point:</p>
+<ul>
+<li>
+<p>Measure how far the laser points are from the marked route line and re-adjust the pgv_y_offset values to align the vehicle with the route line and tape.</p>
+</li>
+<li>
+<p>If the laser points are on equal distances from the line, adjust both pgv_y_offsets equally to side shift the vehicle to the line.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Repeat the test drives until both laser points are on the route line.</p>
+</li>
+<li>
+<p>When both laser points are on the line, mark the laser point positions on the floor with movable laser targets.</p>
+</li>
+</ul>
+<p>At this stage the pgv_y_offsets should be correct, the pgv_x_offsets are only adjusted for correct distance between sensors according to Equation 1. Thus, longitudinally the sensors are on a correct distance from each other but may still need shifting relative to the vehicle navigation point.</p>
+<p>Since vehicle position is calculated from the front sensor, the calibration must be done alternately forwards and backwards until the stopping point is the same in both directions.</p>
+<ul>
+<li>
+<p>Turn the AGV 180 degrees, so that it now reverses to the symbolic point from the same direction as it previously drove forwards (Test drive rew, in Figure 16).</p>
+</li>
+<li>
+<p>Give the AGV a backwards drive order to the symbolic point</p>
+</li>
+<li>
+<p>When the AGV stops at the symbolic point:</p>
+<ul>
+<li>
+<p>Verify that the laser points are on the marked route line, no adjustments to the pgv_y_offset should be necessary at this stage. Any transversal errors will depend on line setup inaccuracy, difference in vehicle control between forwards and reverse driving or other such reasons.</p>
+</li>
+<li>
+<p>Measure how far the laser points are longitudinally from the laser targets and adjust both front and rear sensor pgv_x_offset by half of the error, keeping in mind the relation described in Equation 1 should still be valid, i.e. if pgv_x_offset[0] must be increased to stop earlier, the pgv_x_offset[1] must be reduced accordingly.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Make a new test drive and mark the laser positions on the floor</p>
+</li>
+<li>
+<p>Turn the vehicle 180 degrees and repeat the Test drive fwd.</p>
+<ul>
+<li>
+<p>Verify that the laser points are on the marked route line.</p>
+</li>
+<li>
+<p>Measure how far the laser points are longitudinally from the laser targets and adjust both front and rear sensor pgv_x_offset by half of the error, remembering that the relation in Equation 1 should still be valid.</p>
+</li>
+<li>
+<p>If the laser points match with the laser targets, the parameter calibration is ready for repetitive verification drives alternating between forwards and backwards driving.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="./media-en/image18.PNG" alt="" /></p>
+<blockquote>
+<p>Figure 16: Calibration sequence</p>
+</blockquote>
+<p>Repeat this testing by adjusting the laser point markers and alternating between forwards and backwards driving until the laser points match with the laser targets in both forwards and backwards driving.</p>
+<p>Finally, verify that the repetition accuracy at the laser points is less than the required accuracy in production, every time in both directions.
+Mark the laser spots from several tests and make master targets from the mean results of the tests. These master targets shall be used in the calibration of all other AGVs in the fleet.</p>
+<p><img src="./media-en/image19.PNG" alt="" /></p>
+<blockquote>
+<p>Figure 17: Coordinates, parameters and readings. L = distance to laser target from stop position.</p>
+</blockquote>
+<p><img src="./media-en/image20.png" alt="" /></p>
+<blockquote>
+<p>Figure 18: Calibration sequence visualized.</p>
+</blockquote>
+<h4 id="calibrating-next-agvs"><a class="header" href="#calibrating-next-agvs">Calibrating next AGVs</a></h4>
+<p>Follow the calibration sequence of the first vehicle. In this calibration temporary movable laser targets can be used for the sake of the calibration sequence, but finally the calibration must result in accurate positioning to the original master targets from the first vehicle calibration. Otherwise, the vehicles will not drive accurately to the same position.</p>
+<p>NOTE: Even though the calibration is done only in longitudinal driving, the calibration values are valid also in transversal driving. Calibration values should not be changed in any other case than in this calibration sequence.</p>
+<p><strong>Longitudinal driving:</strong></p>
+<ul>
+<li>
+<p>A transversal position error can be solved by adding a transversal offset to the line transformation of the tape in Navithor Tools.
+This is naturally affecting the driving of all vehicles, so individual differences cannot be corrected. Currently, the transversal offset can be only used when approaching the stop point always from the same side. Positive offset will make the AGV drive to left of the route heading.</p>
+</li>
+<li>
+<p>A heading error can be solved by adding a heading offset to the line transformation of the tape in Navithor Tools. Positive heading offset will make the AGV drive with a counter-clockwise heading offset.</p>
+</li>
+<li>
+<p>If there are differences in position or heading between individual machines, the only means to correct the situation (except for recalibration) is to give drive orders with different transversal offsets to each machine.</p>
+</li>
+</ul>
+<p><img src="./media-en/image21.png" alt="" /></p>
+<blockquote>
+<p>Figure 19: Transversal offset</p>
+</blockquote>
+<ul>
+<li>
+<p>For longitudinal stop position errors, the route end must be corrected, since the navigation point position is calculated from the tape, but then compared to the route end.</p>
+</li>
+<li>
+<p>If there are differences in longitudinal position between individual machines, the only means to correct the situation (except for recalibration) is to give drive orders with longitudinal offset.</p>
+</li>
+</ul>
+<p><strong>Driving onto or away from a tape</strong></p>
+<ul>
+<li>Any transversal offset between the planned route and the actual line following trajectory causes a driving action to correct the offset when the tape line is entered or left. This is corrected by moving the route transversally to match the line once the line following has been finally adjusted.</li>
+</ul>
+<p><strong>Do not attempt to</strong></p>
+<ul>
+<li>
+<p>Change the starting point of a tape by moving the transformation x-point value forwards. This works, but it can cause heading errors as it changes the x,y-relation in the tape line transformation.
+Therefore, always set a teach point at a location where the line following shall be started.</p>
+</li>
+<li>
+<p>Change the tape line angle by modifying the transformation y-point value.</p>
+</li>
+</ul>
+<p><strong>Transversal driving</strong></p>
+<p>If the sensors have been calibrated on the longitudinal line, and alignment and stopping behaviour are consistent in all directions, the calibration values should not be adjusted anymore. It is tempting to change calibrations if the transversal behaviour is incorrect, but it will only destroy the results of the structured calibration sequence.</p>
+<p>NOTE: vehicle dependent line following behaviour cannot be calibrated separately for longitudinal and transversal driving!</p>
+<p>In transversal driving the transversal error is calculated from the rear sensor position on the tape. The calculation utilizes positions from both front and rear sensor to get the heading of the machine and uses this heading and the ext_loc_x_offset[1] distance to calculate the vehicle navigation point relative to the rear sensor position.</p>
+<p>This must be remembered when adjusting a vehicle to drive equally and stop at the same location irrespective of heading direction (vehicle heading +90° or -90 ° to the route).</p>
+<p>The first thing to calibrate is the vehicle heading. If the vehicle heading is not perpendicular to the tapes, the transformation points of either tape must be adjusted along the tape direction. In the example Figure 20 the rear tape transformation must be shifted in +x direction or the front tape transformation in the --x direction. The calibration
+is correct when the vehicle is in the same direction in both driving directions, i.e. driving with vehicle heading +90° or -90 ° to the route.</p>
+<p><img src="./media-en/image22.PNG" alt="" /></p>
+<blockquote>
+<p>Figure 20: Transform X-position of the start teach point to adjust heading.</p>
+</blockquote>
+<p>When the vehicle drives in a correct angle to the tapes, the transversal position of the vehicle can be calibrated. The reason for transversal difference when driving with the heading in different directions is that the position is calculated from the rear sensor as base point. If the tapes are not exactly on the correct distance from each other, this
+distance difference will cause a position error. This is illustrated by X-diff in Figure 21.</p>
+<p><img src="./media-en/image23.PNG" alt="" /></p>
+<blockquote>
+<p>Figure 21: Transversal errors when driving with different orientations.</p>
+</blockquote>
+<p><strong>Also note</strong>, that PGV sensors must be on equal distance (within PGV offset calibration range) from the navigation point. Otherwise, the vehicle will not drive along the same line with heading in opposite directions.</p>
+<ul>
+<li>
+<p>The transversal position error can be solved by adding a transversal offset to the line transformations of the tapes in Navithor Tools.
+This is affecting the driving of all vehicles, so individual differences cannot be corrected.</p>
+</li>
+<li>
+<p>If there are differences in transversal position between individual machines, the only means to correct the situation (except for recalibration) is to give drive orders with different transversal offset to each machine.</p>
+</li>
+<li>
+<p>For longitudinal stop position errors, the route ends must be corrected since the navigation point position is compared to the route end. Since there are different routes for heading +90° and -90° the route ends must be moved longitudinally to match each other. They are correct when the vehicle stops equally in both directions (see Figure 22).</p>
+</li>
+<li>
+<p>If there are differences in longitudinal position between individual machines, the only means to correct the situation (except for recalibration) is to give drive orders with longitudinal offset.</p>
+</li>
+</ul>
+<p>NOTE: that the route stopping offset is not for adjusting the stopping position on individual routes as it acts equally on all stop situations.</p>
+<p><img src="./media-en/image24.PNG" alt="" /></p>
+<blockquote>
+<p>Figure 22: Stopping points for transversal driving.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../Localization/ImuAndSensorFusion/ImuAndSensorFusion-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../Localization/DynamicMapping/DynamicMappingServer/DynamicMappingServer-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
