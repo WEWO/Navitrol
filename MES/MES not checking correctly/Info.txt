@@ -1,0 +1,4 @@
+Order 207.
+
+AGV send to IC205 (and IC206) but after one check got stuck in wrong check, or performed wrong check.
+System does not continue now. AGV is not asked to check and will not send any check info to MES.
