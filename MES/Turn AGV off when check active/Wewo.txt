@@ -1,0 +1,9 @@
+order: 168
+target: IC922
+
+AGV turned off after starting check
+
+situation:
+AGV was not in production after restart. but MES did not properly continue.
+
+No issues detected this time.
