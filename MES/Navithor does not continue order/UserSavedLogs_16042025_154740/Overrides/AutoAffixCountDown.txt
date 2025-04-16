@@ -1,0 +1,14 @@
+# File for automatic affix countdown to trigger different resource type and a pickup request.
+# Each line should contain 6 to 9 items (7-9 are optional) separated with : 
+# Countdown is active when a specific resource type is at location and location is enabled.
+# 
+# Example line:
+# TargetSymPointID:ResourceTypeID_countDown:ResourceTypeID_ResultType:AffixAtStart:AffixMax:AffixDropRate:DisableLocRule:enableLocIDs:InitWithRes
+# 
+# DisableLocRule: 0 = do not disable, 1 = disable loc when ResourceTypeID_countDown is received, 2 = disable loc also initially
+# enableLocIDs: These locations will be enabled, when the resource transforms into ResourceTypeID_ResultType.
+# Multiple symbolic point IDs can be defined by separating them with ,
+# InitWithRes: 1 = initialize location with ResourceTypeID_countDown, 0 = don't change existing status.
+
+SetAGVsEmptyAtStartUp: 0
+

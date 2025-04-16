@@ -1,0 +1,45 @@
+{
+  "ServerSettings": {
+    "EnableMQTTBroker": false,
+    "Port": 1883,
+    "UseTLS": false,
+    "CertificateCommonName": null,
+    "Base": "uagv",
+    "Version": "v2",
+    "Username": "",
+    "Password": ""
+  },
+  "Machines": [
+    {
+      "MachineId": 999,
+      "SerialNumber": "0999",
+      "FileUploadMethod": 0,
+      "SupportedActions": [
+        "initPosition",
+        "startPause",
+        "stopPause",
+        "startCharging",
+        "stopCharging",
+        "stateRequest",
+        "logReport",
+        "pick",
+        "drop",
+        "detectObject",
+        "finePositioning",
+        "waitForTrigger",
+        "cancelOrder",
+        "initSimulation",
+        "actuating",
+        "getFileVersions",
+        "reloadAreaFiles",
+        "returnToRoute"
+      ],
+      "OrderType": 0,
+      "CoordinateTransformation": {
+        "DeltaX": 0.0,
+        "DeltaY": 0.0,
+        "DeltaH": 0.0
+      }
+    }
+  ]
+}
