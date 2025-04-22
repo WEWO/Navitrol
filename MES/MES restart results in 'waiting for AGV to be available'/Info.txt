@@ -1,0 +1,3 @@
+Situation 1:
+MES was stuck in the cargo check, but no longer asked the AGV to check. I restarted the MES as i saw in the log that excecution order for agv (huge hexadecimal value) was running into an error
+After the restart, the strange error with the AGV number was gone, but ordee was still stuck.
