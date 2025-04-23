@@ -1,6 +1,0 @@
-# File for linking MES clients to symbolic points.
-# When linked, all messages of the configured type related to the specified symbolic point will only be sent to the given MES clients.
-# Format: SymbolicPointId:LinkingType:ClientId1,...,ClientId2
-# where LinkingType: QRVerification = 1 << 0, RequestResourceStatus = 1 << 1
-# Example: 3:1:2,5,6
-

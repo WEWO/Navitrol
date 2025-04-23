@@ -1,6 +1,0 @@
-Server save time: 16.04.2025 15:47:40
-Selected time:
-16.04.2025 15:47:27
-Incidents: Navigation error
-AGVS: Wewo1
-not continue
