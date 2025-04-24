@@ -1,6 +1,0 @@
-# Format: SymbolicPointID; AlarmID1,...,AlarmID2; MachineCount
-# All alarms are defined by default and Default MachineCount is 1
-# Examples:
-# 5;1,2,3;2 (Symbolic point can queue 2 machines for alarms 1,2,3)
-# 3 (Symbolic point 3 is an exit location available for all alarms and single machine)
-

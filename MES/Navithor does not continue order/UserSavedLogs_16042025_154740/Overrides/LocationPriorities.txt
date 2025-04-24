@@ -1,4 +1,0 @@
-# File for specifying the priorities of locations.
-# Format: SymbolicPointId,Priority,ProductionBreakReleasedPriority
-# Example: 3,2,4
-
