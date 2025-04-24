@@ -1,5 +1,0 @@
-Situation 1:
-Order was 3x a double position with each two tyres.
-first 2 worked well with only 1 push of the button. very nice
-Last one was empty, and had to check again.
-But when i gave it cargo, it fully cleared the order and went to the next assignment.
