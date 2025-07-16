@@ -1,0 +1,2136 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>System Overview and user instructions for Client UI - NAVITHOR USER INSTRUCTIONS</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="Installation_NavithorHardwareRequirements.html"><strong aria-hidden="true">1.</strong> System Hardware Requirement Specifications</a></li><li class="chapter-item expanded "><a href="Installation_SQLServerAndDatabaseInstallationGuide.html"><strong aria-hidden="true">2.</strong> Configuring database</a></li><li class="chapter-item expanded "><a href="fleetSim.html"><strong aria-hidden="true">3.</strong> Fleet Simulator - Setup and Configuration</a></li><li class="chapter-item expanded "><a href="Installation_NavithorServerAsAService.html"><strong aria-hidden="true">4.</strong> Server as a service</a></li><li class="chapter-item expanded "><a href="Installation_ConfiguringHotSwap.html"><strong aria-hidden="true">5.</strong> Server Hot Swap with Failover Cluster</a></li><li class="chapter-item expanded "><a href="Installation_RebrandingNavithor.html"><strong aria-hidden="true">6.</strong> Server and Client Rebranding</a></li><li class="chapter-item expanded "><a href="Machinetool.html"><strong aria-hidden="true">7.</strong> Machine Tool</a></li><li class="chapter-item expanded "><a href="MesTester3.html"><strong aria-hidden="true">8.</strong> MES Tester</a></li><li class="chapter-item expanded affix "><li class="part-title">Desktop client</li><li class="chapter-item expanded "><a href="navithorServerAndClientMegaDocument.html" class="active"><strong aria-hidden="true">9.</strong> System Overview and user instructions for Client UI</a></li><li class="chapter-item expanded "><a href="Feature_ClientUpdater.html"><strong aria-hidden="true">10.</strong> Client Updater</a></li><li class="chapter-item expanded affix "><li class="part-title">Web client</li><li class="chapter-item expanded "><a href="Installation_SettingUpNavithorWebServer.html"><strong aria-hidden="true">11.</strong> Setting up Web server to enable Web client</a></li><li class="chapter-item expanded "><a href="webClient.html"><strong aria-hidden="true">12.</strong> Web Client - User Instructions</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="bestProductionPractices.html"><strong aria-hidden="true">13.</strong> Best Practices for Creating Production Area</a></li><li class="chapter-item expanded affix "><li class="part-title">Logs</li><li class="chapter-item expanded "><a href="Navithor logs.html"><strong aria-hidden="true">14.</strong> Navithor Logs</a></li><li class="chapter-item expanded "><a href="Feature_VisualReplay.html"><strong aria-hidden="true">15.</strong> Visual Replay</a></li><li class="chapter-item expanded "><a href="Feature_DownloadManager.html"><strong aria-hidden="true">16.</strong> Log Download Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">Users</li><li class="chapter-item expanded "><a href="Installation_UsingActiveDirectoryForAuthentication.html"><strong aria-hidden="true">17.</strong> User authentication against Active Directory</a></li><li class="chapter-item expanded "><a href="userRoles.html"><strong aria-hidden="true">18.</strong> User Management</a></li><li class="chapter-item expanded "><a href="userRolesRightsMatrix.html"><strong aria-hidden="true">19.</strong> Default User roles and User rights matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Features</li><li class="chapter-item expanded "><a href="symbolicPointGroups.html"><strong aria-hidden="true">20.</strong> Symbolic Point Groups</a></li><li class="chapter-item expanded "><a href="ResourceHandling.html"><strong aria-hidden="true">21.</strong> Resource handling</a></li><li class="chapter-item expanded "><a href="hold-release.html"><strong aria-hidden="true">22.</strong> Hold-Release reasoning and production order lists</a></li><li class="chapter-item expanded "><a href="transfer requests.html"><strong aria-hidden="true">23.</strong> Transfer requests</a></li><li class="chapter-item expanded "><a href="racking.html"><strong aria-hidden="true">24.</strong> Using warehouse racking feature</a></li><li class="chapter-item expanded "><a href="bufferLanes.html"><strong aria-hidden="true">25.</strong> Using Buffer Lanes</a></li><li class="chapter-item expanded "><a href="Feature_ChargingManagement.html"><strong aria-hidden="true">26.</strong> Managing Battery Levels</a></li><li class="chapter-item expanded "><a href="oneMachineZones.html"><strong aria-hidden="true">27.</strong> Using One Machine Zones</a></li><li class="chapter-item expanded "><a href="distanceControlZones.html"><strong aria-hidden="true">28.</strong> Distance Control Zones</a></li><li class="chapter-item expanded "><a href="FireAlarmZones.html"><strong aria-hidden="true">29.</strong> Fire Alarm Zones</a></li><li class="chapter-item expanded "><a href="Zone status use cases.html"><strong aria-hidden="true">30.</strong> Zone status use cases</a></li><li class="chapter-item expanded "><a href="tagStatuses.html"><strong aria-hidden="true">31.</strong> Tag Statuses</a></li><li class="chapter-item expanded "><a href="Trafficlights.html"><strong aria-hidden="true">32.</strong> Traffic Lights</a></li><li class="chapter-item expanded "><a href="Feature_Elevators.html"><strong aria-hidden="true">33.</strong> Elevators</a></li><li class="chapter-item expanded "><a href="ProductionBreak.html"><strong aria-hidden="true">34.</strong> Production Break</a></li><li class="chapter-item expanded "><a href="DynamicSafetyBounds.html"><strong aria-hidden="true">35.</strong> Virtual Dynamic Safety Bounds</a></li><li class="chapter-item expanded "><a href="WaitingSlots.html"><strong aria-hidden="true">36.</strong> Wait Queue Locations</a></li><li class="chapter-item expanded "><a href="CoupledDrive.html"><strong aria-hidden="true">37.</strong> Coupled Drive</a></li><li class="chapter-item expanded "><a href="Feature_StoppingPointOffsetsForSymbolicPoints.html"><strong aria-hidden="true">38.</strong> Stopping Point Offsets</a></li><li class="chapter-item expanded "><a href="TCStopPoint.html"><strong aria-hidden="true">39.</strong> Safe stopping point calculation</a></li><li class="chapter-item expanded "><a href="Navithor statistics.html"><strong aria-hidden="true">40.</strong> System Statistics</a></li><li class="chapter-item expanded "><a href="MachineInterfaces.html"><strong aria-hidden="true">41.</strong> Machine Interfaces</a></li><li class="chapter-item expanded affix "><li class="part-title">Interfaces</li><li class="chapter-item expanded "><a href="Communication specification between Navithor and MES.html"><strong aria-hidden="true">42.</strong> MES Interface</a></li><li class="chapter-item expanded "><a href="NavithorHttpApi.html"><strong aria-hidden="true">43.</strong> HTTP API</a></li><li class="chapter-item expanded "><a href="NavithorWebApi.html"><strong aria-hidden="true">44.</strong> WebSocket API</a></li><li class="chapter-item expanded "><a href="opcuadoc.html"><strong aria-hidden="true">45.</strong> OPC UA Server interface</a></li><li class="chapter-item expanded affix "><li class="part-title">Alarms</li><li class="chapter-item expanded "><a href="Fleet Control Alarms.html"><strong aria-hidden="true">46.</strong> Alarms</a></li><li class="chapter-item expanded "><a href="Alarms configuration override.html"><strong aria-hidden="true">47.</strong> Alarms configuration override</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NAVITHOR USER INSTRUCTIONS</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="system-overview-and-user-instructions-for-client-ui"><a class="header" href="#system-overview-and-user-instructions-for-client-ui">System Overview and user instructions for Client UI</a></h1>
+<p>This document contains an Overview of the Navithor Client/Server</p>
+<p>Updated 13.10.2022</p>
+<h2 id="version-history"><a class="header" href="#version-history">Version History</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead><tbody>
+<tr><td>0.1</td><td>09.11.2012</td><td>Jouni Sievelä</td><td>Document created</td></tr>
+<tr><td>1.0</td><td>29.06.2015</td><td>Joni Sundholm</td><td>Document updated, reflecting Navithor version 1.2.0.0</td></tr>
+<tr><td>1.1</td><td>04.01.2016</td><td>Jouni Sievilä</td><td>Document updated, reflecting Navithor version 1.3</td></tr>
+<tr><td>1.2</td><td>30.06.2016</td><td>Joni Sundholm</td><td>Document updated and renamed, reflecting Navithor version 1.5</td></tr>
+<tr><td>1.3</td><td>05.09.2016</td><td>Joni Sundholm</td><td>Document updated, reflecting Navithor version 1.6</td></tr>
+<tr><td>1.3.1</td><td>27.09.2016</td><td>Joni Sundholm</td><td>Hold release reasoning update -- Hold-state now allowed to be released to any destination. Navithor version 1.6.2.</td></tr>
+<tr><td>1.4</td><td>06.03.2017</td><td>Joni Sundholm</td><td>Document updated, reflecting Navithor version 1.7</td></tr>
+<tr><td>1.4.1</td><td>21.03.2017</td><td>Joni Sundholm</td><td>Minor updates to Client user instructions</td></tr>
+<tr><td>1.4.2</td><td>06.10.2017</td><td>Joni Sundholm</td><td>Minor updates to production order list-production. Reflecting Navithor version 1.8</td></tr>
+<tr><td>1.5</td><td>06.02.2018</td><td>Tommi Kärki</td><td>Multiple resource types added, reflecting Navithor version 1.9</td></tr>
+<tr><td>1.5.1</td><td>16.03.2018</td><td>Tommi Kärki</td><td>Minor corrections to document.</td></tr>
+<tr><td>1.5.2</td><td>15.05.2018</td><td>Joni Sundholm</td><td>Updated chapter 3.1.3. Charging manager. Added chapter 6. System Parameters</td></tr>
+<tr><td>2.0</td><td></td><td>Tommi Kärki</td><td>Converted to markdown style</td></tr>
+<tr><td>2.1</td><td>03.12.2019</td><td>Joni Sundholm</td><td>Document updated to reflect Navithor version 2.10</td></tr>
+<tr><td>2.2</td><td>14.12.2020</td><td>Joni Sundholm</td><td>Document updated to reflect Navithor version 2.20</td></tr>
+<tr><td>2.3</td><td>19.04.2021</td><td>Toni Liski</td><td>Renamed charging related parameters.</td></tr>
+<tr><td>2.4</td><td>11.06.2021</td><td>Aleksi Ålander</td><td>Renamed title and minor corrections.</td></tr>
+<tr><td>2.4.1</td><td>16.06.2021</td><td>Elena Sgonova</td><td>Updated images. Minor corrections.</td></tr>
+<tr><td>2.5</td><td>30.06.2021</td><td>Simon Clement</td><td>Added charging behavior with parameter DriveToChargeIfNoProduction for single AGV systems</td></tr>
+<tr><td>2.6</td><td>12.07.2021</td><td>Elena Sgonova</td><td>Added information on Alarms visualization configuration in Client</td></tr>
+<tr><td>2.7</td><td>04.03.2022</td><td>Elena Sgonova</td><td>Added reference for Managing Battery Levels documents to Battery Monitor chapter</td></tr>
+<tr><td>2.8</td><td>11.05.2022</td><td>Elena Sgonova</td><td>Updated Navithor Client screenshots</td></tr>
+<tr><td>2.9</td><td>13.10.2022</td><td>Aleksi Ålander</td><td>Updated chapter about Alarms</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="motivation"><a class="header" href="#motivation">Motivation</a></h2>
+<p>This document will introduce Navithor Fleet Control System, its components and different features. Additionally Client user instructions are also find for basic understanding of controlling the Fleet Control System through Navithor Client. System parameters are important part of configuring the system for different types of production areas - most important parameters are described also in this document.</p>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>Navithor Fleet Control System is a software suite for controlling a
+fleet of autonomous work machines. The machines are typically called as AGVs (Autonomous Guided Vehicles). The AGVs typically execute logistical transports of different kinds of goods. The role of the Navithor Fleet Control System is to control the drive tasks of the AGVs and give commands to move actuators onboard the AGVs to perform pickups or dropoffs of carried items. The fleet of AGVs can contain multiple different types of machines. The AGVs commonly are:</p>
+<ul>
+<li>Flat AGV
+<ul>
+<li>Actuator(s) on top, e.g. lifting table, pin or grabber unit</li>
+<li>Normally Omni-, mechanum- or differential-driven AGVs</li>
+</ul>
+</li>
+<li>Fork AGV
+<ul>
+<li>Fork - or grabber actuator</li>
+<li>Normally steer-drive, fixed wheels on fork-end and turning drive wheel(s) in front, are used. Also omni-platforms are used.</li>
+</ul>
+</li>
+<li>Tugger AGV
+<ul>
+<li>Quad steer-trailers are pulled behind</li>
+<li>Normally steer-driven AGVs</li>
+</ul>
+</li>
+</ul>
+<p>The role of the AGV is to perform the movement commands and other task related actions. One AGV only knows the position of itself thus the coordinated movement of the fleet is managed by Navithor. The software also manages order assignment and battery charging control. The AGV is responsible for reporting it's status and position while connected to Navithor over WIFI. It also needs to follow given drive paths and execute stationary tasks when ordered or report failure if given command cannot be executed.</p>
+<p>Navithor Software suite contains following individual executable programs:</p>
+<ul>
+<li>Navithor Server
+<ul>
+<li>Traffic Control</li>
+<li>Mission Management</li>
+<li>Battery Management</li>
+<li>Production Management</li>
+<li>Interfaces to other parts of the system
+<ul>
+<li>Database for storing data</li>
+<li>Manufacturing Execution System (MES)</li>
+<li>AGVs</li>
+<li>Clients</li>
+<li>Web Server</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Navithor Client
+<ul>
+<li>Map view of production area</li>
+<li>Access to system parameters</li>
+<li>Area files upload, activation</li>
+<li>AGV Control</li>
+</ul>
+</li>
+<li>Navithor Tools
+<ul>
+<li>Creating and editing of production area map.</li>
+</ul>
+</li>
+</ul>
+<p>Components are described in more detail in section <a href="#Software-Components">Software Components</a></p>
+<h2 id="used-definitions"><a class="header" href="#used-definitions">Used definitions</a></h2>
+<p>Before further introduction, following definitions are shortly described as they are referenced in this document later.</p>
+<h3 id="navitrol-states"><a class="header" href="#navitrol-states">Navitrol states</a></h3>
+<p>Navitrol state informs the current operation mode of the AGV. For example Standby (STBY) means the AGV is ready and waiting for commands.</p>
+<div class="table-wrapper"><table><thead><tr><th>State</th><th>Description</th></tr></thead><tbody>
+<tr><td>IDLE</td><td>AGV not operational yet - Navitrol in pre-operational state.</td></tr>
+<tr><td>STBY</td><td>AGV is stationary and ready for tasks</td></tr>
+<tr><td>AUTO</td><td>AGV is executing drive task</td></tr>
+<tr><td>HOLD</td><td>AGV is stationary waiting for signal to release it from  HOLD-state to STBY. Navithor will not order any tasks while AGV is on hold-task</td></tr>
+<tr><td>MANUAL</td><td>AGV is in manual control, Navithor will not command the AGV</td></tr>
+<tr><td>FSTOP</td><td>AGV is fast stopped (emergency stop)</td></tr>
+<tr><td>ACTUATOR_CONTROL</td><td>AGV is performing control or monitoring of the actuator</td></tr>
+</tbody></table>
+</div>
+<p>Navithor receives AGVStatus-messages periodically from each enabled AGV in the system. Default report interval is 0.1 seconds. If status-messages are not received in defined timeout (parameter TrafficController_MACHINE_STATUS_TRUST_LIMIT_SECONDS) or if socket communication closes then UNKNOWN-state is forced in Navithor.</p>
+<h3 id="agv-production-state"><a class="header" href="#agv-production-state">AGV production state</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>State</th><th>Description</th></tr></thead><tbody>
+<tr><td>In production</td><td>AGV is controlled by Traffic Controller, all tasks are generated by Mission Manager</td></tr>
+<tr><td>Not in production</td><td>AGV may be operated by Client user, Mission Manager does not generate orders</td></tr>
+</tbody></table>
+</div>
+<p>When AGV is in production it executes production orders that have been created for the specific vehicle. Production order can be created from any interface to Navithor Server: MES-, Navitrol-, Client- or even database. When AGV is in production Navithor Client will not let give any operator drive commands to the AGV. AGV may still be operated from interfaces that are connected to Navitrol (e.g. Navitrol Monitor, Supervisor interface, WebUI) as the production state is purely Navithor definition.</p>
+<h3 id="orders-and-tasks-in-system"><a class="header" href="#orders-and-tasks-in-system">Orders and Tasks in System</a></h3>
+<p>As normal order handled by one AGV contains normally multiple executable tasks, e.g. drive, pickup, drive, drop off Navithor separates different levels of actions into following definitions:</p>
+<h4 id="machine-order"><a class="header" href="#machine-order">Machine Order</a></h4>
+<p>Machine Order is a single executable order for an AGV.
+They are generated and controlled by Navithor Traffic Controller.
+Traffic controller gives executable order from current active Task of machine.</p>
+<div class="table-wrapper"><table><thead><tr><th>Order</th><th>Description</th></tr></thead><tbody>
+<tr><td>Start drive</td><td>Starts a drive to location</td></tr>
+<tr><td>Extend a drive</td><td>Extends ongoing drive to new location</td></tr>
+<tr><td>Load</td><td>Start actuator control for loading resource on board</td></tr>
+<tr><td>Unload</td><td>Start actuator control for unloading resource</td></tr>
+<tr><td>Abort</td><td>Abort current order</td></tr>
+<tr><td>Set speed</td><td>Sets target speed for AGV</td></tr>
+<tr><td>Fast stop</td><td>Orders AGV to stop (speed reference set to 0)</td></tr>
+<tr><td>Start hold</td><td>Orders AGV to go into Hold state (external signal required to release from HOLD)</td></tr>
+<tr><td>Charge command</td><td>Orders AGV to start charging</td></tr>
+<tr><td>Wait for production</td><td>AGV is idle and waiting for next Task</td></tr>
+</tbody></table>
+</div>
+<p>Difference between Aborting a drive and Fast Stopping a drive is that Navitrol applies a slowdown ramp when drive is aborted to make the stopping smooth. Fast stopped AGV sets speed reference to 0 and stops as fast as possible. Fast stop also needs to be released manually via Release FSTOP-button.</p>
+<h4 id="task"><a class="header" href="#task">Task</a></h4>
+<p>Tasks are processes executed by the AGVs. One task may be for example to drive from A to B or set fork position to X to pickup pallet. Navithor MissionManager generates tasks from Production Orders or tasks can be triggered from Navithor Client by e.g. commanding AGV to drive to a X,Y-point (Goto XY).</p>
+<div class="table-wrapper"><table><thead><tr><th>Task type</th><th>Description</th></tr></thead><tbody>
+<tr><td>Wait for production</td><td>AGV is idle and waiting for next Task</td></tr>
+<tr><td>Idle</td><td>AGV not in production and no given commands</td></tr>
+<tr><td>Drive</td><td>Task with route, needs to be scheduled. Succeeds when target reached.</td></tr>
+<tr><td>Load Resource</td><td>Stationary task that succeeds when resource has been successfully put onboard</td></tr>
+<tr><td>Unload Resource</td><td>Stationary task that succeeds when resource has been successfully moved away from AGV</td></tr>
+<tr><td>Hold</td><td>Stationary task that succeeds when hold release signal is received from any interface available</td></tr>
+<tr><td>Charge battery</td><td>Stationary task that succeeds latest when battery level reaches full level</td></tr>
+</tbody></table>
+</div>
+<h4 id="production-order"><a class="header" href="#production-order">Production Order</a></h4>
+<p>Production order is a high level goal given or generated by Production Manager.
+Production order will be split into one or multiple Tasks for AGVs to execute. Production Orders are stored in database.</p>
+<h4 id="unhandled-order"><a class="header" href="#unhandled-order">Unhandled Order</a></h4>
+<p>In resource based production Unhandled Orders are requests for item (resources) transfer. These items can be informed to the System and Navithor finds a valid AGV for the transfers. A Production Order is created for the AGV and the order execution completes when AGV has unloaded the item to a valid unload location. The valid unload location can be reasoned with configurations done in Navithor Tools and Navithor parameters affect the selection method.</p>
+<h4 id="transfer-request"><a class="header" href="#transfer-request">Transfer Request</a></h4>
+<p>Transfer Request is an order to move an item from one location to another or to valid destination within a group of given destinations. Difference between Transfer Request and Unhandled Order is that Transfer Request specifies the destination(s) and Unhandled Order does not. In both production types the AGV assign is done by Navithor.</p>
+<h4 id="goto-order"><a class="header" href="#goto-order">GOTO Order</a></h4>
+<p>System operator has possibility to send a drive command from Navithor Client or Web Client (Goto XY-button). This command is stored only in Server memory and the drive command is neither managed by MissionManager nor Production Manager like the all the order-types above. Goto-order is a drive task to a location along the route network. GOTO order does not automatically continue in case of automatic abort or AGV error that stops the AGV. A new GOTO order needs to be given in these cases.</p>
+<h4 id="examples-of-order-execution"><a class="header" href="#examples-of-order-execution">Examples of order execution</a></h4>
+<p>Example 1</p>
+<ul>
+<li>Client User gives a GOTO order for machine</li>
+<li>Drive task with following data is created:
+<ul>
+<li>Machine - Selected AGV in Client</li>
+<li>Target location - Clicked location on map</li>
+<li>Drive route - List of drive segments that create a path from AGVs current location to target location</li>
+</ul>
+</li>
+<li>Traffic controller will roughly generate following Machine orders:
+<ul>
+<li>Start drive</li>
+<li>Set speed</li>
+<li>Extend drive (until we reach drive target)</li>
+</ul>
+</li>
+</ul>
+<p>Example 2</p>
+<ul>
+<li>MES interface requests 1 Pallet to be moved from LoadA1 to UnloadB1</li>
+<li>This will generate a transfer request</li>
+<li>MES-interface signals also the resource to be at LOA location when it is available for</li>
+<li>Production Manager attempts to find suitable machine to execute transfer request</li>
+<li>Production order gets generated with following data
+<ul>
+<li>Machine (picked by Production Manager)</li>
+<li>Source location (LoadA1)</li>
+<li>Target location (UnloadB1)</li>
+<li>Resource type (Pallet)</li>
+<li>Resource amount (1)</li>
+</ul>
+</li>
+<li>Traffic controller will roughly generate following Tasks
+<ul>
+<li>Drive task (to drive AGV to pickup location). Machine orders:
+<ul>
+<li>Start drive</li>
+<li>Extend drive (until we reach drive target: LoadA1)</li>
+</ul>
+</li>
+<li>Load Resource
+<ul>
+<li>Actuator control (Load resource onboard)</li>
+</ul>
+</li>
+<li>Drive task (to drive AGV to target)
+<ul>
+<li>Start drive</li>
+<li>Extend drive (until we reach drive target: UnloadB1)</li>
+</ul>
+</li>
+<li>Unload Resource
+<ul>
+<li>Actuator control</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="production-area-related-definitions"><a class="header" href="#production-area-related-definitions">Production area related definitions</a></h3>
+<h4 id="segment"><a class="header" href="#segment">Segment</a></h4>
+<p>Segment is a set of points following each other to create a drivable
+path. One segment can contain from 2 to unlimited amount of coordinate
+points. All segments together in the production area form the route network.
+Point interval is usually between 50 mm to 500 mm.</p>
+<p>Segment is always directional: AGV is allowed to drive through the
+segment in point index order. AGV cannot drive from the tail end of the
+segment to the start. Speed direction of the segment (negative speed
+denotes reversing) sets the required AGV pose for the segment.</p>
+<p>Segments are generated automatically with Tools. Lane definitions affect how many segments will be created to a single route path. 0-4 Segments are possible.</p>
+<h4 id="symbolic-point"><a class="header" href="#symbolic-point">Symbolic Point</a></h4>
+<p>Symbolic Points are production locations used in production orders. Symbolic Points are edited and configured with Navithor Tools. There are multiple Symbolic Point types available in the system.</p>
+<div class="table-wrapper"><table><thead><tr><th>Symbolic point type</th><th>Description</th><th>Usage</th></tr></thead><tbody>
+<tr><td>Load</td><td>Loading location</td><td>Target for Loading actions</td></tr>
+<tr><td>Unload</td><td>Unload location</td><td>Target for Unloading actions</td></tr>
+<tr><td>LoadUnload</td><td>Loading and unloading location</td><td>Target for Loading and Unloading actions</td></tr>
+<tr><td>WaitLoad</td><td>Wait location for Load tasks</td><td>Automatically driven to when AGV is empty and has no Production Orders</td></tr>
+<tr><td>WaitUnload</td><td>Wait location for Unload tasks</td><td>Optional location before going to Unload target</td></tr>
+<tr><td>Stop</td><td>Location where AGV can be commanded to stop at</td><td>Target for drive orders. Used mainly in <a href="#hold-release-reasoning">Hold-Release production</a></td></tr>
+<tr><td>NoStop</td><td>Location that is can be targeted and continued to next target without stopping</td><td>Symbolic point used to alter how scheduling works or forcing specific route to be used in Hold-release-production</td></tr>
+<tr><td>Charge</td><td>Charging location</td><td>Location where AGV can charge battery</td></tr>
+<tr><td>StopAndHold</td><td>Invisible stop point for Navithor - AGV stops when reaching this and waits for signal to continue</td><td>Force AGV to stop when driving past and transition to HOLD-state</td></tr>
+<tr><td>Rack</td><td>LoadUnload point with multiple levels for pickup and drop-off</td><td>Warehouse production</td></tr>
+</tbody></table>
+</div>
+<p>Using correct Symbolic Point Types is essential when setting up Production environment because they affect how Navithor Server generates Production Orders. Some actions are also restricted to certain Symbolic Point types only.</p>
+<div class="table-wrapper"><table><thead><tr><th>Symbolic point action</th><th>Applicable Symbolic point types</th></tr></thead><tbody>
+<tr><td>Wait</td><td>WaitUnload, WaitLoad, Wait, Charge(parameter)</td></tr>
+<tr><td>Hold/Release</td><td>Stop, Load, Unload, LoadUnload, WaitUnload, WaitLoad, Wait, NoStop</td></tr>
+<tr><td>Loading and unloading</td><td>Load, Unload, LoadUnload</td></tr>
+</tbody></table>
+</div>
+<p>Symbolic point usage is explained later in <a href="#production-manager">Production Manager</a> and <a href="#scheduling-of-drive-tasks">Scheduling</a></p>
+<h4 id="waypoint"><a class="header" href="#waypoint">Waypoint</a></h4>
+<p>Waypoints are area definitions that are used for drive task scheduling
+and traffic controlling. Waypoints are constructed from segments: one
+waypoint can contain multiple segments and its area is calculated from
+the segment points and from a parameter value defining the width of the
+waypoint.</p>
+<p><img src="./Images/media/image3.png" alt="" /></p>
+<blockquote>
+<p>Figure: Waypoint visualization</p>
+</blockquote>
+<p>Waypoints visualized in Client -&gt; AreaControl. Some Nodes are locked (orange), one Link (also
+orange) is reserved and one Link is set forbidden by user.</p>
+<p>There are two types of Waypoints in Navithor: Nodes and Links. Nodes are waypoints
+that have crossing paths with other waypoint (i.e. intersections). Links
+are waypoints connecting two nodes together with no crossing paths with
+any other waypoint. Waypoints are generated automatically in Navithor Tools.</p>
+<p>When traffic controller reserves path for an AGV to drive along Nodes,
+they are always locked: by default no other AGV can enter or move in the same or
+crossing nodes.</p>
+<div class="table-wrapper"><table><thead><tr><th>Waypoint State</th><th>Description</th></tr></thead><tbody>
+<tr><td>Free</td><td>No AGVs moving inside or entering waypoint</td></tr>
+<tr><td>Reserved</td><td>Segment(s) owned by the waypoint are released for AGV(s) to drive (Link)</td></tr>
+<tr><td>Locked</td><td>Segment(s) owned by the waypoint are released for a single AGV (Node)</td></tr>
+<tr><td>Forbidden</td><td>No traffic allowed in waypoint (automatically set by traffic controller or manually by Client user)</td></tr>
+</tbody></table>
+</div><br>
+<h4 id="production-zones"><a class="header" href="#production-zones">Production Zones</a></h4>
+<p>Navithor supports multiple production zone types starting from release version 1.9.50.x.</p>
+<div class="table-wrapper"><table><thead><tr><th>Zone name</th><th>Description</th></tr></thead><tbody>
+<tr><td>One machine zone</td><td>AGV entering the zone (when drive path is given inside the zone or when AGV's navigation point is inside the bounds of the zone) has exclusive right to move inside this area. No other AGV can enter the area until it becomes empty</td></tr>
+<tr><td>Distance Control Zone</td><td>Machines entering this zone are taken into distance control. By changing the drive speeds of the machines Navithor will pursue to gain constant distances between all the machines that are within the same zone and same drive path. This feature is targeted to be used in situations when AGVs needs to move very slowly in an assembly line production</td></tr>
+<tr><td>Fire alarm zone</td><td>Supported by Navithor version 2.20 and above. Zone marks the area that needs to be clear in case of fire alarm. Navithor will drive AGVs out of the Zone automatically in case of alarm being raised for the specific Zone</td></tr>
+<tr><td>Feature enable Zone</td><td>This zone contains multiple 'rules'. Navithor 2.20 version supports 'FC_Forbidden'-rule. That will mark Zone as forbidden to drive into/through on MES signal to Navithor</td></tr>
+</tbody></table>
+</div>
+<h2 id="software-components"><a class="header" href="#software-components">Software Components</a></h2>
+<p>Following diagram defines the relationships between software components.</p>
+<p><img src="./Images/media/NavitecSoftware.png" alt="System structure" /></p>
+<blockquote>
+<p>Figure: System Structure</p>
+</blockquote>
+<h3 id="navithor-fleet-control-system-components"><a class="header" href="#navithor-fleet-control-system-components">Navithor Fleet Control System Components</a></h3>
+<h4 id="navithor-server"><a class="header" href="#navithor-server">Navithor Server</a></h4>
+<p>The Navithor Server is main software component of the system. It stores and manages all the data that is used for mission control. Navithor Server can be run as Windows application with a minimalistic user interface or it can be set up to run as a service.</p>
+<h5 id="navithor-server-agents"><a class="header" href="#navithor-server-agents">Navithor Server Agents</a></h5>
+<p>Navithor Server operates through many agents that take responsibility over the full production flow. They are:</p>
+<ul>
+<li>
+<p>Production Manager</p>
+<ul>
+<li>Generates production orders for AGVs from input data
+<ul>
+<li>Unhandled Orders</li>
+<li>Transfer Requests</li>
+<li>Hold-release data</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Charging manager</p>
+<ul>
+<li>Reasons who should be charged</li>
+<li>Generates automatic charging requests</li>
+</ul>
+</li>
+<li>
+<p>Mission Manager</p>
+<ul>
+<li>Generates executable Tasks for AGVs from production orders</li>
+<li>Reasons what should AGV do next if AGV is in production</li>
+<li>Handles execution of Tasks</li>
+</ul>
+</li>
+<li>
+<p>Route Planner</p>
+<ul>
+<li>Finds minimum cost (time) routes for drive-tasks or alternative routes when traffic in priority route</li>
+</ul>
+</li>
+<li>
+<p>Traffic Controller</p>
+<ul>
+<li>Gives commands to AGV from current Task</li>
+<li>Collision avoidance</li>
+<li>Dynamic stop zones
+<ul>
+<li>Virtual safety stop zone around AGV</li>
+</ul>
+</li>
+<li>Dynamic speed zones
+<ul>
+<li>Virtual warning zone around AGV</li>
+</ul>
+</li>
+<li>Intersection locking</li>
+<li>Segment reservation</li>
+<li>Safe stop point assign
+<ul>
+<li>AGVs have no overlapping paths - AGVs allowed to drive even during communication losses</li>
+</ul>
+</li>
+<li>Drive task deadlock detection
+<ul>
+<li>Ordering alternative routes</li>
+<li>Ordering AGV out from deadlock zone</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Scheduler</p>
+<ul>
+<li>Schedules drive tasks</li>
+<li>Orders rerouting if needed</li>
+</ul>
+</li>
+</ul>
+<h5 id="interfaces"><a class="header" href="#interfaces">Interfaces</a></h5>
+<ul>
+<li>
+<p>Manufacturing Execution System (MES) interface</p>
+<ul>
+<li>Data input for Production Manager (MES to Navithor)
+<ul>
+<li>Resource transfer-based production requires external MES Client to feed resource data and possibly transfer request data to Navithor</li>
+</ul>
+</li>
+<li>Reporting (Navithor to MES)</li>
+</ul>
+</li>
+<li>
+<p>Database Interface</p>
+<ul>
+<li>Storing and retrieving production area state</li>
+<li>Production order state</li>
+<li>Transfer request state</li>
+<li>Machine configuration</li>
+<li>Resource configuration</li>
+<li>Statistics data</li>
+</ul>
+</li>
+<li>
+<p>Client Interface (desktop)</p>
+<ul>
+<li>Communication between Server and Client</li>
+<li>Controlling AGVS</li>
+<li>Monitoring production</li>
+<li>Triggering manual production</li>
+</ul>
+</li>
+<li>
+<p>Client interface (web client)</p>
+<ul>
+<li>Same functionalities as desktop interface</li>
+</ul>
+</li>
+</ul>
+<h5 id="navithor-server-user-interface"><a class="header" href="#navithor-server-user-interface">Navithor Server User interface</a></h5>
+<p><img src="./Images/media/image5.png" alt="" /></p>
+<blockquote>
+<p>Figure: Navithor Server UI</p>
+</blockquote>
+<p>Navithor Server user interface. Interface is used for certain administrative tasks. Navithor Server can also be run as service without user interface.</p>
+<p>Menu selections:</p>
+<ul>
+<li>Settings
+<ul>
+<li>Import old TCC (v1) parameter file
+<ul>
+<li>Used to convert old TCC parameter file to V2 format</li>
+</ul>
+</li>
+<li>Reload production area
+<ul>
+<li>Manually command server to reload production area</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Statistics
+<ul>
+<li>Enabled
+<ul>
+<li>Whether verbose statistics collection is enabled</li>
+<li>Generates a ProductionAreaData order with logs</li>
+</ul>
+</li>
+<li>Print statistics
+<ul>
+<li>Triggers statistical data to be saved to files. (Obsolete)</li>
+</ul>
+</li>
+<li>Open directory
+<ul>
+<li>Open log folder</li>
+</ul>
+</li>
+<li>Save logs
+<ul>
+<li>Copy current logs to separate folder</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Tools
+<ul>
+<li>Database tool
+<ul>
+<li>Open Tool for configuring Database connection</li>
+</ul>
+</li>
+<li>Open MES status tool
+<ul>
+<li>Open Tool for monitoring server side of MES communication</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>About
+<ul>
+<li>Show version information of Software and database/MES-interfaces</li>
+</ul>
+</li>
+</ul>
+<h4 id="navithor-client"><a class="header" href="#navithor-client">Navithor Client</a></h4>
+<p><img src="./Images/clientUI/NavithorClient2.50.png" alt="" /></p>
+<blockquote>
+<p>Figure: Navithor Client</p>
+</blockquote>
+<p>Navithor Client is a Windows OS-based graphical user interface for
+Navithor Fleet Control System. Its main features are:</p>
+<ul>
+<li>Monitoring the production of a fleet of autonomous machines controlled by Navithor Server</li>
+<li>Commanding AGVs: driving, loading, unloading, creating production orders</li>
+<li>Changing production area configuration (system administrator)
+<ul>
+<li>AGV configuration</li>
+<li>Production area files configuration</li>
+<li>System parameter configuration</li>
+<li>Global settings</li>
+</ul>
+</li>
+</ul>
+<p>See chapter <a href="#navithor-client-user-instructions">Navithor Client User Instructions</a> for more information.</p>
+<h5 id="map-rendering---opengl"><a class="header" href="#map-rendering---opengl">Map Rendering - OpenGL</a></h5>
+<p>Navithor Client uses OpenGL-rendering for all shown features in map
+views.</p>
+<p>For this reason it is not advised to use virtual Windows-environment for Navithor Client. Virtual environment has poor support for OpenGL-rendering thus CPU load will increase significantly when Navithor Client is running.</p>
+<p>It is also not recommended to use Navithor Client over Windows remote desktop. Remote desktop has poor support for Modern OpenGL and will default to OpenGL 1.1. This can be circumvented by starting a Client on PC before establishing a remote connection. There are alternative remote access softwares without this restriction.</p>
+<p>Some parts of Client use OpenGL 3.x feature for performance reasons. There is fallback support for older OpenGL but performance is heavily impacted.</p>
+<h5 id="manufacturing-execution-system-mes-status-tool-server-side"><a class="header" href="#manufacturing-execution-system-mes-status-tool-server-side">Manufacturing Execution System (MES) Status Tool (Server side)</a></h5>
+<p><img src="./Images/media/image13.png" alt="" /></p>
+<blockquote>
+<p>Figure: MES Tool</p>
+</blockquote>
+<p>MES communication interface can be tested and monitored with MES Status Tool. Status Tool shows ongoing communication between Server and MES client(s). Status tool can also be used to configure server MES port.</p>
+<p>MES Status Tool can be accessed from Servers main menu selection <strong>Tools -&gt; MES
+Tool.</strong> Also it can be requested from Navitec as a standalone executable for MES related signal testing.</p>
+<h4 id="navithor-tools"><a class="header" href="#navithor-tools">Navithor Tools</a></h4>
+<p><img src="./Images/media/image7.png" alt="" /></p>
+<blockquote>
+<p>Figure: Navithor Tools</p>
+</blockquote>
+<p>Navithor Tools is a standalone software for generating a Production Area. Production Area as a concept means single area where production takes place. Once the production area is defined in Navithor Tools it needs to be uploaded to Navithor's database or if no connection to database is available then files can be exported for later database upload through Navithor Client. The files that are required for a single production area are:</p>
+<ul>
+<li>
+<p>Definition file</p>
+<ul>
+<li>Defines a production area (traffic areas)</li>
+<li>Zones</li>
+<li>Pairs machinetype, environment and segment files together</li>
+<li>.xml-file</li>
+</ul>
+</li>
+<li>
+<p>Environment file(s)</p>
+<ul>
+<li>Environment model used by machines</li>
+<li>Environment file is used in Navithor for visualization purposes only</li>
+<li>.nte-file (binary)</li>
+</ul>
+</li>
+<li>
+<p>Route file(s)</p>
+<ul>
+<li>Also known as segment files</li>
+<li>Route network</li>
+<li>Segment properties i.e. omni heading</li>
+<li>Symbolic point information
+<ul>
+<li>Id, Name, Location</li>
+<li>Type</li>
+<li>Tags</li>
+<li>Allowed resources for Symbolic Point</li>
+</ul>
+</li>
+<li>.xml-file</li>
+</ul>
+</li>
+</ul>
+<p>Machine type Parameter file(s)</p>
+<ul>
+<li>Generated with MachineTool and exported to Tools</li>
+<li>Machine dimensions</li>
+<li>Machine rendering information</li>
+<li>Allowed resources for machine</li>
+<li>Machine configuration (Navithor specific configuration)</li>
+<li>.xml-file</li>
+</ul>
+<p>If multiple machine types are defined for the production area then the fileset would contain:</p>
+<ul>
+<li>1 * definition file</li>
+<li>n * segment file</li>
+<li>n * environment file</li>
+<li>n * machine type file</li>
+</ul>
+<h4 id="navitrol"><a class="header" href="#navitrol">Navitrol</a></h4>
+<p>Navitrol is the control software running in each AGV. There are three
+different Navitrol solutions:</p>
+<ul>
+<li>
+<p>Navitrol Positioning</p>
+<ul>
+<li>Navitrol provides corrected X, Y, H - information</li>
+<li>Navithor connection disabled</li>
+</ul>
+</li>
+<li>
+<p>Navitrol Driving</p>
+<ul>
+<li>Drive orders from Navithor</li>
+<li>Navithor connection enabled or disabled (external drive orders)</li>
+</ul>
+</li>
+<li>
+<p>Navitrol Standalone</p>
+<ul>
+<li>Navithor not required</li>
+<li>Single machine system</li>
+<li>Route finding</li>
+<li>Hold-release reasoning production</li>
+</ul>
+</li>
+</ul>
+<h5 id="navitrol-monitor"><a class="header" href="#navitrol-monitor">Navitrol Monitor</a></h5>
+<p>Navitrol Monitor is a diagnostics tool for Navitrol. It is used to
+configure and diagnose AGV controlled by Navitrol.</p>
+<h2 id="navithor-fleet-control-system-overview"><a class="header" href="#navithor-fleet-control-system-overview">Navithor Fleet Control System Overview</a></h2>
+<p>Navithor Server contains multiple agents that have certain roles in the
+fleet management system. The Main agents are <em>production</em> <em>manager</em>,
+<em>mission</em> <em>manager</em>, <em>traffic</em> <em>controller</em>, <em>scheduler</em> and <em>route</em>
+<em>planner</em>. The system is highly configurable for different kinds of
+production environments. In this section the main tasks of the agents
+are described.</p>
+<h3 id="production-manager"><a class="header" href="#production-manager">Production Manager</a></h3>
+<p>Production Manager has main responsibility over generation of production
+orders for requesting AGVs. Production Manager uses external data
+sources and symbolic point statuses to create new production orders.</p>
+<h4 id="production-triggering-methods"><a class="header" href="#production-triggering-methods">Production triggering methods</a></h4>
+<p>Production manager can handle multiple ways to run production.
+Different methods are designed for different production
+needs.</p>
+<h4 id="production-orders-for-a-specific-machine"><a class="header" href="#production-orders-for-a-specific-machine">Production orders for a specific machine</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>Information</th><th>Required?</th><th>Purpose</th></tr></thead><tbody>
+<tr><td>Target</td><td>Yes</td><td>Where AGV should drive last</td></tr>
+<tr><td>Machine</td><td>Yes</td><td>Which AGV should execute this task</td></tr>
+<tr><td>Pickup/Source</td><td>No</td><td>Where to pick up resource</td></tr>
+<tr><td>ResourceType</td><td>No</td><td>Which resource type this order is for</td></tr>
+<tr><td>ResourceAmount</td><td>No</td><td>For how many resources this production order is for</td></tr>
+</tbody></table>
+</div>
+<p>Production orders are turned into Tasks by Mission Manager to be executed by the machine. There are mainly 2 different categories for production orders.</p>
+<div class="table-wrapper"><table><thead><tr><th>Type of production order</th><th>Purpose</th><th>Completion requirement</th></tr></thead><tbody>
+<tr><td>GOTO</td><td>Drive AGV to location</td><td>Machine arrives at target location</td></tr>
+<tr><td>Resource linked</td><td>Move resources from Source to Target</td><td>Requested amount of resources has been moved to target</td></tr>
+</tbody></table>
+</div>
+<p>If production order has linked resources AGV is first ordered to drive
+to pick up location and perform a loading task there. Then it is ordered
+to drive to target location and perform an unload task. If the resource
+amount is bigger than the AGV can carry the cycle is repeated until all
+resources are transported to target. Production order is finished when
+last required unload task is performed.</p>
+<p>This production method is good for systems where MES has worklist for
+each AGV. Navithor's responsibility is to execute the orders and solve
+traffic situations between the AGVs.</p>
+<h4 id="hold-release-reasoning"><a class="header" href="#hold-release-reasoning">Hold release reasoning</a></h4>
+<p>In 'Hold release reasoning' production the symbolic points are defined
+as hold-locations with rules of where it is allowed to go from the
+location. Figure below shows the hold-rules in Navithor Tools.</p>
+<p><img src="./Images/media/image14.png" alt="" /></p>
+<blockquote>
+<p>Figure: Hold Rules</p>
+</blockquote>
+<p>Defining hold-rules in Navithor Tools. Tick 'Enable hold
+state at symbolic point'-check box to set symbolic point as
+hold-location. At least 'Default destination' must be defined for a
+Hold-location and other selections are optional.</p>
+<p>From the above picture, we can see that symbolic point (429) has 2 Hold-Release destinations, (130) and (158). By default when AGV is released from Hold at this location it will drive to (130) but if (130) is unavailable for one reason or another, the AGV will be ordered to drive to (158) instead.</p>
+<p><img src="./Images/media/agvcandrivethroughstop.png" alt="" /></p>
+<blockquote>
+<p>Figure: Driving through a Stop-Point</p>
+</blockquote>
+<p>Hold Symbolic Points do not require stopping when driving past. By default, AGV's are allowed to drive through Hold locations to reach their target without going to HOLD-state. In Figure 13 the AGV would be allowed to drive through (5) to reach their destination (1). Defining (5) as StopAndHold instead of Hold location would force AGV to stop and transition to HOLD-state when driving through. It is also possible to add penalty for driving through Hold-Locations.</p>
+<p>AGV will then remain in HOLD-state until state is released from specific inputs. Inputs can
+be:</p>
+<div class="table-wrapper"><table><thead><tr><th>Input source</th><th>Description</th></tr></thead><tbody>
+<tr><td>Button</td><td>Press on AGV - UI onboard shows possible destinations from current location (maximum of 4 defined destinations) or physical buttons (e.g. 'Next', 'Alternative1', 'Alternative2', 'Alternative3'). Since Navithor version 1.6.2.0 it is possible to release HOLD-state to any of the symbolic points in production area. i.e. destinations are not limited to 4.</td></tr>
+<tr><td>Timer</td><td>If timer is enabled AGV can release HOLD-state by itself. Timer triggers default destination.</td></tr>
+<tr><td>MES</td><td>External release (e.g. panel at work station near symbolic point).</td></tr>
+<tr><td>Navithor Client</td><td>User can send hold release commands from Symbolic Point Status-form when AGV is executing hold-task at the symbolic point (Client v. 1.5.1.0 onwards).</td></tr>
+</tbody></table>
+</div>
+<p><img src="./Images/media/HoldNoAGVAtSymbol.png" alt="" /></p>
+<blockquote>
+<p>Figure: Symbolic Point Status-view when no AGV at location</p>
+</blockquote>
+<p>Hold Symbolic Point with no AGV at location. Symbolic Point (9) is configured as default destination. Default destination is highlighted (when hovering over Symbolic Point, optional setting on Client).</p>
+<p><img src="./Images/media/HoldAGVAtSymbol.png" alt="" /></p>
+<blockquote>
+<p>Figure: Symbolic Point Status-view when AGV standing at location</p>
+</blockquote>
+<p>Hold Symbolic Point with AGV at location. Symbolic Point(8) is configured as default destination. Symbolic Point (7) is configured as first alternative destination.</p>
+<p>When AGV is commanded to drive to any Symbolic Point with Hold enabled, it will go to HOLD-state. In the above picture(s) SteerDrive1 is waiting for ReleaseHold signal from any source. After receiving signal AGV will drive to next target.</p>
+<div class="table-wrapper"><table><thead><tr><th>Signal</th><th>Target</th><th>Symbolic Point</th></tr></thead><tbody>
+<tr><td>Release</td><td>Default</td><td>(9)</td></tr>
+<tr><td>Release with timer</td><td>Default</td><td>(9)</td></tr>
+<tr><td>Release Alt1</td><td>Alt1</td><td>(7)</td></tr>
+<tr><td>Release Custom</td><td>Custom</td><td>Given with signal</td></tr>
+</tbody></table>
+</div>
+<p>HoldRelease production also supports loading and unloading. This can be enabled by setting <strong>ProductionManager_PerformLoadOrUnloadAtSymPointWhenArrivingWithOrderRule</strong> to <em>True</em>. This also requires Symbolic Points to be of Load or Unload type instead of Stop type. With these settings, when AGV arrives at Symbolic Point it will perform Load or Unload Task before going into HOLD-state.</p>
+<div class="table-wrapper"><table><thead><tr><th>Symbolic Point type</th><th>Result</th></tr></thead><tbody>
+<tr><td>Stop</td><td>Stop does not support Load/Unload. AGV will go to HOLD-state without loading or unloading</td></tr>
+<tr><td>Load</td><td>AGV will perform Load-task and transition to HOLD-state after finishing.</td></tr>
+<tr><td>Unload</td><td>AGV will perform Unload-task and transition to HOLD-state after finishing.</td></tr>
+<tr><td>LoadUnload</td><td>AGV will perform the valid operation based on resource onboard info. Always Unload-task if AGV has resources and Load-task if AGV is empty</td></tr>
+</tbody></table>
+</div>
+<p>Parameter <strong>MissionManager_HoldReleaseRules</strong> can be used to make resource related checks after HOLD-state has been released.</p>
+<p>Running production by Hold release reasoning makes it possible to have a fully operable production system without need for external signals (ie. PLC). Hold release reasoning is a good for production environments where AGVs run production in loop(s) with predetermined locations to stop at.</p>
+<h5 id="custom-hold-release-target"><a class="header" href="#custom-hold-release-target">Custom hold release target</a></h5>
+<p>AGV can be released from HOLD-state to any symbolic point in the
+production area. When released the default and possible alternative
+destinations of the current symbolic point are ignored. Releasing to
+custom destination is supported in MES-interface and in Navitrol's AGV
+supervisor interface.</p>
+<h5 id="charging-requests-from-hold-rules"><a class="header" href="#charging-requests-from-hold-rules">Charging requests from Hold-rules</a></h5>
+<p>In some production systems AGVs should be sent to charger only after a
+certain part of the production is completed by the AGV. Navithor can be
+set to generate charging requests based on hold rules only. A symbolic
+point with a charging location as alternative destination can be set to
+trigger charging requests if charging is needed.</p>
+<p>When AGV is released from a symbolic point to default destination and
+the symbolic point has also charging location as alternative destination
+Navithor will act as follows:</p>
+<ul>
+<li>
+<p>If charging is seen needed Navithor generates a charging request for
+the AGV and sends it to a free charger that is near the actual
+alternative target of the symbolic point.</p>
+</li>
+<li>
+<p>Also production order is generated to the default destination of the
+symbolic point so that the actual release target stays in memory</p>
+<ul>
+<li>If rule '<em>Pass production order to another machine when going to
+charge'</em> is enabled from system parameters (Rules-page,
+Production orders-group) the order is generated to another AGV
+that is in chargers and does not have any orders to perform. If
+no valid AGV is found the order is generated for the AGV itself.</li>
+</ul>
+</li>
+<li>
+<p>The generated production order is then executed when the AGV in the
+charger (production order passed to another) or the AGV going the
+charger is charged.</p>
+</li>
+</ul>
+<h4 id="production-order-lists"><a class="header" href="#production-order-lists">Production order lists</a></h4>
+<p>In some production systems the AGVs need to drive different production
+loops and stop at symbolic points along the route. The symbolic points
+may be common for different routes but the following destination from a
+symbolic point depends on the route given to the AGV. Then it is not
+possible to use fixed hold destinations. Triggering custom hold release
+targets can be automated with Production Order Lists.</p>
+<p>The different driving routes can be generated into production order list
+templates saved in database. One list contains a set of symbolic points
+that must be reached in correct order. A template can be activated
+either from MES-interface, Navitrol or from Navithor Client. Activated
+list is then assigned to an AGV waiting for production at a waiting
+location. Production order to the first location in the production order
+list is generated and AGV will be ordered to drive there. When arriving
+to the first target location AGV may perform loading/unloading
+operations if configured to do so and then AGV is ordered to HOLD-state.
+When released to default destination, the destination is picked from the
+production order list.</p>
+<p>When using production order lists following configurations to production
+area are required:</p>
+<ul>
+<li>
+<p>Waiting locations should not be defined as Hold-location --
+Production order lists are only assigned to AGVs that do not have
+anything to do</p>
+</li>
+<li>
+<p>All symbolic points that are used in production order lists should
+be defined as Hold-locations -- the default destination will be
+overridden with next item in the production order list</p>
+</li>
+<li>
+<p>Activate production order list-production by setting system
+parameter ProductionManager_POL_LIST_RULE_MODE to:</p>
+<ul>
+<li>
+<p>1 = Activated lists are assigned to machines at any waiting
+location</p>
+<ul>
+<li>
+<p>No requirements for production order list destinations</p>
+</li>
+<li>
+<p>Navithor assigns activated list to a machine that is waiting
+for orders in a waiting location</p>
+</li>
+</ul>
+</li>
+<li>
+<p>12 = Activated list is assigned to machine that is waiting at
+the first destination of the activated list</p>
+<ul>
+<li>
+<p>First destination in production order list should be a
+waiting location (not a hold location)</p>
+</li>
+<li>
+<p>Last destination in production order list should also be a
+waiting location (Normally the first and last destinations
+are the same)</p>
+</li>
+<li>
+<p>Navithor assigns activated list to machine that is at the
+first destination of the production order list</p>
+</li>
+</ul>
+</li>
+<li>
+<p>0 = Production order list-production is disabled. Hold-release
+reasoning is activated.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>When production order list -production is active hold-release
+reasoning-production is disabled thus using default or an alternative
+destination is not possible.</strong></p>
+<p><img src="./Images/media/image17.png" alt="" /></p>
+<blockquote>
+<p>Production Order List-view in Navithor Client</p>
+</blockquote>
+<p>Production order list data can be seen from Navithor Client's
+Production Order Lists -view (in Figure above). Template lists can be
+created/edited /removed and activated to be executed by available AGV.
+Active order lists are grouped in two views: orders not assigned to any
+AGV are in waiting_assign-state. Active and assigned order lists are
+shown with more detailed execution status.</p>
+<p><img src="./Images/media/image18.png" alt="" /></p>
+<blockquote>
+<p>Creating a new Production Order List template</p>
+</blockquote>
+<p>Creating new production order list in Navithor Client</p>
+<p>Pressing &quot;Add new template&quot;-button in Production Order Lists-view adds a
+data input-control to the templates-view. Name, id and locations are the
+required information for a new list. Destinations can be either selected
+from a dropdown list or by clicking symbolic points in Client's map.</p>
+<p>Navithor Server creates reports from completed or cancelled production
+order lists. In Navithor Servers main folder see
+&quot;\Picklists\reports&quot;-folder.</p>
+<h4 id="symbolic-point-resource-statuses"><a class="header" href="#symbolic-point-resource-statuses">Symbolic Point Resource Statuses</a></h4>
+<p>Running production based on symbolic point status (i.e. 'resource at
+location'-triggered production) is designed for production environments
+where AGVs transfer resources (e.g. pallets) from a number of loading
+locations to a set (1-&gt;unlimited) of valid unloading locations. These
+production locations should be able to report binary information about
+their resource statuses to Navithor. Information from production
+locations:</p>
+<ul>
+<li>
+<p><strong>Empty/resource at location</strong> (Required information) -- e.g. a
+light gate triggers 'resource at location' when pallet arrives at
+the end of a conveyor at a loading location</p>
+</li>
+<li>
+<p><strong>Enabled/disabled</strong> (optional information) -- e.g. a switch at the
+location informing Navithor whether the location is available for
+production use or not. Resources at disabled loading locations are
+ignored and disabled unloading locations are not used for
+production. If AGV is driving to a location that is being disabled,
+drive task is aborted and alternative destination is selected if
+found.</p>
+</li>
+</ul>
+<p>Navithor will generate production orders for free AGVs working in the
+same production zone. Good practice is to have a waiting location (a
+symbolic point of type WaitLoad) where AGVs can line to a queue to wait
+for orders. Navithor will command AGV's to drive to these waiting
+locations when AGV's are empty and do not have a current task.</p>
+<p>When 'resource at location' is triggered at some loading location a production
+order is generated automatically to the AGV that is first in line
+nearest to the loading location. Other AGVs in the same queue are
+ordered to move forward.</p>
+<p>Unload location for the resource is defined by Navithor -- valid
+unloading location:</p>
+<ul>
+<li>
+<p>Belongs to same production zone as the loading location</p>
+</li>
+<li>
+<p>Is Enabled (symbolic points can be enabled/disabled from Client or
+from external trigger)</p>
+</li>
+<li>
+<p>Is not located within Forbidden waypoint</p>
+</li>
+<li>
+<p>Is allowed to handle given resource type</p>
+</li>
+<li>
+<p>Is within allowed distance (optional, configurable from parameters)</p>
+</li>
+<li>
+<p>Is linked to loading location (optional, configurable from Tools)</p>
+</li>
+</ul>
+<p>If multiple unloading locations are found valid, Navithor has several possible strategies for selecting the target unloading location (Parameter <code>ProductionManager_UnloadLocationAssingRule</code>):</p>
+<ul>
+<li>
+<p><strong>balance</strong> - Unloading symbolic points are encumbered equally, i.e. equal priority between the locations. Balancing is based on the number of unload actions at the location.</p>
+</li>
+<li>
+<p><strong>balance_amount</strong> - Unloading symbolic points are encumbered equally based on the amount of the resources on the symbolicpoint. With the single resource symbolicpoints the resource quantity is considered. Active transports to each unload location are counted in to current incount.</p>
+</li>
+<li>
+<p><strong>focus</strong> - a single symbolic point is preferred, others are used
+if priority location is not available</p>
+<ul>
+<li>Priority is based on symbolic point id: lower id is higher
+priority</li>
+</ul>
+</li>
+<li>
+<p><strong>force focus</strong> - Single symbolic point use is forced, no other
+symbolic point is selected</p>
+<ul>
+<li>
+<p>Lowest <strong>Enabled</strong> symbolic point is the target</p>
+</li>
+<li>
+<p>Switching between selectable symbolic point is done by
+disabling/enabling symbolic points</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>buffer_balance</strong> - Prioritizes the location that has most buffer space. Valid mode if unloading symbolic points are Buffer lanes</p>
+</li>
+<li>
+<p><strong>unload_over_loadunload</strong> - An unloading symbolic point is prioritized over Load/Unload symbolic points.</p>
+</li>
+<li>
+<p><strong>shortest_distance</strong> - Nearest possible target is selected. Calculated distance is from the resource to possible targets.</p>
+</li>
+</ul>
+<p>Load capacities are used to configure allowed resource types for symbolic points. This can be used to limit Symbolic Points to handle only specific types of resources. This can also be used to control automatically generated production logic. Load capacity configuration for Machine Types and defining Resource Type is done with <a href="./Machinetool.html">Machine Tool</a>. Configuring Symbolic Point load capacity is done with Tools.</p>
+<p><img src="./Images/media/image20.png" alt="" /></p>
+<blockquote>
+<p>Resource types affecting target location selection</p>
+</blockquote>
+<h4 id="transfer-requests"><a class="header" href="#transfer-requests">Transfer requests</a></h4>
+<p>Transfer requests are production orders without dedicated AGV to handle
+the transfer of resource. Navithor will be responsible for assigning suitable AGV(s) to handle the transfer request. A transfer request-message (e.g. from MES) contains following data:</p>
+<ul>
+<li>
+<p>Pick-up symbolic point (Load)</p>
+</li>
+<li>
+<p>Target symbolic point (Unload)</p>
+</li>
+<li>
+<p>Resource type</p>
+</li>
+<li>
+<p>Amount of resources to transfer</p>
+</li>
+<li>
+<p>Optional: Target Symbolic Point group instead of single Symbolic Point</p>
+</li>
+</ul>
+<p>Transfer Request handling:</p>
+<ol>
+<li>Signal is received from outside source</li>
+<li>Transfer Request is validated by Navithor Server to contain valid data</li>
+<li>Suitable AGV for Transfer Request is selected</li>
+<li>AGV starts driving to location</li>
+<li>AGV waits at Pickup Location until there is a Resource of correct type at location. If Resource already exists at location the AGV will start Load operation</li>
+<li>AGV loads Resource on board</li>
+<li>AGV starts driving to Target Location</li>
+<li>AGV arrives at Target Location and starts Unload operation</li>
+<li>AGV finishes Unload and continues to next task (Charge, handling next transfer request, drive to wait...)</li>
+</ol>
+<p>Transfer request production method is designed for production
+environments where loading locations are known to produce a certain
+amount of resources that needs to be transported to a certain location
+(or to a set of locations). Navithor handles allocation of needed AGVs
+to perform the transfer. If multiple transfer requests from different
+locations are active at the same time Navithor allocates AGVs based on
+their minimum cost to each possible location.</p>
+<p>Examples of the locations from where AGVs picks and to where AGV drops resources:</p>
+<ul>
+<li>A conveyor, table or floor position - Load, Unload or LoadUnload -type symbolic point</li>
+<li>A shelf - Multiple shelf-positions.
+<ul>
+<li>See document * Using warehouse racking feature* for more information</li>
+</ul>
+</li>
+<li>Buffer lane - Navitrol handles stopping to correct position (pallet detection) inside buffer lane. Buffer can be for picking up or unloading of resources
+<ul>
+<li>See document * Using Buffer Lanes* for more information</li>
+</ul>
+</li>
+</ul>
+<h4 id="traffic-controller"><a class="header" href="#traffic-controller">Traffic Controller</a></h4>
+<h5 id="dynamic-speed-and-stop-zones"><a class="header" href="#dynamic-speed-and-stop-zones">Dynamic Speed and stop Zones</a></h5>
+<p>While AGVs operate in the production area traffic controller constantly
+calculates a safety zones around the AGV that needs to be clear of other
+AGVs. Zones expand in the direction of movement and towards assigned
+drive path.</p>
+<p>There are two types of zones calculated for AGV's:</p>
+<ol>
+<li>
+<p>Speed zones (green)</p>
+<p>a.  When colliding with other AGVs stop zone, AGVs speed is reduced in steps.</p>
+</li>
+<li>
+<p>Stop zones (gray)</p>
+<p>b.  When colliding with other AGVs stop zone, AGV is stopped (drive is aborted, soft stop).</p>
+</li>
+</ol>
+<h5 id="segment-release-overlapping"><a class="header" href="#segment-release-overlapping">Segment release overlapping</a></h5>
+<p>When releasing segments for driving (locking/reserving waypoints)
+segments needs to be clear to release meaning that no crossing segments
+are released for some other AGV.</p>
+<h5 id="safe-stopping-point-assign"><a class="header" href="#safe-stopping-point-assign">Safe stopping point assign</a></h5>
+<p>Traffic controller will calculate a stopping point for the AGV to where
+it is currently safe to drive i.e. no other AGVs are on the path. E.g.
+if AGV is following another AGV safe stopping point is always just
+behind the AGV ahead. If communication to AGVs is lost, they will never
+have a path given through another AGV.</p>
+<h5 id="waypoint-locking"><a class="header" href="#waypoint-locking">Waypoint locking</a></h5>
+<p>Nodes (intersections) are locked for a single AGV when drive order is
+given. Other AGVs cannot lock the Node until it is unlocked (AGV passed
+the Node or stopped inside it).</p>
+<h5 id="forbidden-waypoints"><a class="header" href="#forbidden-waypoints">Forbidden Waypoints</a></h5>
+<p>Waypoints are set forbidden automatically in following situations:</p>
+<ul>
+<li>
+<p>AGV within waypoint area goes offline</p>
+</li>
+<li>
+<p>Position confidence of an AGV within waypoint area drops below parameter TrafficController_POSITION_CONF_MIN_BOUND-value.</p>
+</li>
+<li>
+<p>Machine reports battery overtemperature</p>
+</li>
+<li>
+<p>AGV within waypoint area goes in FSTOP state</p>
+</li>
+<li>
+<p>AGV within waypoint area goes to REMOTE or MANUAL</p>
+<ul>
+<li>moving AGV manually stops other AGVs in AUTO if manually moved AGV goes within waypoint limits that are locked/reserved for other AGVs</li>
+</ul>
+</li>
+</ul>
+<p>It is also possible to set Waypoint forbidden manually from Navithor Client see <a href="#area-control-view">Navithor Client User Instructions - Area Control view</a></p>
+<h4 id="scheduling"><a class="header" href="#scheduling">Scheduling</a></h4>
+<p>Drive tasks are scheduled waypoint by waypoint. Task may not be required
+to be fully scheduled in order to AGV to execute it. E.g. target
+location is mutual with some other AGV and driving there is not
+possible. If path contains multiple waypoints and there are possible
+locations where waiting is possible, AGV can be released to execute the
+task. One way links are waypoints that are always considered as waiting
+locations so production area with one way traffic is always more
+efficient than production area without them.</p>
+<h5 id="task-priorities"><a class="header" href="#task-priorities">Task priorities</a></h5>
+<p>Navithor uses first come -- first served -principle as a basis for
+deciding who has the right to go in competing traffic situations. As
+this principle does not always result trouble free operation of the
+system, priorities are also compared task by task taking into account
+end location, mutual paths and others on path for example.</p>
+<h5 id="deadlock-avoidance"><a class="header" href="#deadlock-avoidance">Deadlock avoidance</a></h5>
+<p>When multiple AGVs are in a situation where none can execute their drive
+orders, scheduler and traffic controller release the situation by
+finding different routes or driving AGVs to locations that allow others
+to perform their tasks.</p>
+<h4 id="manufacturing-execution-system-mes"><a class="header" href="#manufacturing-execution-system-mes">Manufacturing Execution System (MES)</a></h4>
+<p>Manufacturing Execution System-interface can trigger production in
+multiple ways:</p>
+<ol>
+<li>
+<p>Production order with resource to a specific AGV</p>
+</li>
+<li>
+<p>Send AGV to a location (production order without resource)</p>
+</li>
+<li>
+<p>Transfer requests from location to another -- Navithor will allocate
+AGVs for execution, used together with (4)</p>
+</li>
+<li>
+<p>Symbolic Point Resource Status-triggers -- Navithor will allocate
+AGVs and find suitable unload location</p>
+</li>
+</ol>
+<p>Items 1 and 2 are transformed straight into production orders and added
+to execution list in added order. When triggering production with
+transfer requests (3) AGVs are driven to requested loading location.
+Resource at location-signal (4) is needed to be triggered to the
+requested loading location when there is physical resource to
+manipulate.</p>
+<p>In smaller production areas Resource at location (4) signaling can be
+used without transfer request (3). E.g. if there is always the same
+unloading location(s) for a single loading location Navithor is able to
+generate a production order from the triggered location to an available
+an valid unloading location.</p>
+<h2 id="navithor-client-user-instructions"><a class="header" href="#navithor-client-user-instructions">Navithor Client User Instructions</a></h2>
+<h3 id="main-view"><a class="header" href="#main-view">Main view</a></h3>
+<p><img src="./Images/clientUI/NavithorClient2.50_layout.png" alt="" /></p>
+<blockquote>
+<p>Figure: Navithor Client UI main components</p>
+</blockquote>
+<h3 id="user-interface-controls"><a class="header" href="#user-interface-controls">User interface controls</a></h3>
+<h4 id="machines-view"><a class="header" href="#machines-view">Machines-view</a></h4>
+<p><img src="./Images/clientUI/NavithorClient2.50_AGVList.png" alt="" /></p>
+<blockquote>
+<p>Figure: Machines-view lists all active AGVs and their operation statuses</p>
+</blockquote>
+<p>This part of the user interface shows all the machines that are defined
+in the system. User can select any of the machines from the list.
+Selecting a machine will open its control window to the left end of
+Client form by default.</p>
+<p><img src="./Images/clientUI/NavithorClient2.50_AGVStatus.png" alt="" /></p>
+<blockquote>
+<p>Figure: AGV's operational status</p>
+</blockquote>
+<p>AGV operational status can be visually seen from the Machines-list. First icon displays states that require attention (error state, position missing, connection broken). Second icon displays battery level and charging state. Third icon displays production status. See tables below for more detailed description.</p>
+<p><strong>State icons</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Icon</th><th>Description</th></tr></thead><tbody>
+<tr><td><img src="./Images/MachineListIcons/alert_critical_error.png" alt="" /></td><td>Errors active</td></tr>
+<tr><td><img src="./Images/MachineListIcons/alert_no_comms.png" alt="" /></td><td>No communication</td></tr>
+<tr><td><img src="./Images/MachineListIcons/alert_no_position.png" alt="" /></td><td>No position</td></tr>
+</tbody></table>
+</div>
+<p><strong>Battery icons</strong></p>
+<p>Battery icons levels represent levels defined by server parameters. See more in the document _ Managing Battery Levels_.</p>
+<div class="table-wrapper"><table><thead><tr><th>Icon</th><th>Description</th></tr></thead><tbody>
+<tr><td><img src="./Images/MachineListIcons/battery_state_none.png" alt="" /></td><td>Battery state unknown</td></tr>
+<tr><td><img src="./Images/MachineListIcons/battery_state_full.png" alt="" /></td><td>Battery level full</td></tr>
+<tr><td><img src="./Images/MachineListIcons/battery_state_high.png" alt="" /></td><td>Battery level high</td></tr>
+<tr><td><img src="./Images/MachineListIcons/battery_state_low.png" alt="" /></td><td>Battery level low</td></tr>
+<tr><td><img src="./Images/MachineListIcons/battery_state_alert.png" alt="" /></td><td>Battery level alert</td></tr>
+<tr><td><img src="./Images/MachineListIcons/battery_state_charging.png" alt="" /></td><td>White lighting icon indicates charging state</td></tr>
+</tbody></table>
+</div>
+<p><strong>Production status</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Icon</th><th>Description</th></tr></thead><tbody>
+<tr><td><img src="./Images/MachineListIcons/state_unknown.png" alt="" /></td><td>Production status unknown</td></tr>
+<tr><td><img src="./Images/MachineListIcons/not_in_production.png" alt="" /></td><td>AGV operational, not in production</td></tr>
+<tr><td><img src="./Images/MachineListIcons/in_production.png" alt="" /></td><td>AGV operational, in production</td></tr>
+<tr><td><img src="./Images/MachineListIcons/hold.png" alt="" /></td><td>AGV in Hold-state</td></tr>
+<tr><td><img src="./Images/MachineListIcons/manual.png" alt="" /></td><td>AGV in manual control</td></tr>
+</tbody></table>
+</div>
+<p>Clicking <img src="./Images/MachineListIcons/alert_critical_error.png" alt="" /> icon will open a view with error/warning descriptions:</p>
+<p><img src="./Images/clientUI/NavithorClient2.20_AGVErrors.png" alt="" /></p>
+<blockquote>
+<p>Figure: AGV Error/Warning view</p>
+</blockquote>
+<br>
+<h5 id="disablingenabling-agv-from-the-production-system"><a class="header" href="#disablingenabling-agv-from-the-production-system">Disabling/Enabling AGV from the production system</a></h5>
+<p>Clicking a selected AGV with right mouse button will bring a selection for enabling/disabling the AGV, When disabling AGV it must not be in production. By default, waypoint which has recently disabled AGV will be set forbidden.</p>
+<p>Disabling AGV will:</p>
+<ul>
+<li>Stop communication to AGV</li>
+<li>Remove current task data</li>
+<li>Set waypoint(s) machine occupies as forbidden
+<ul>
+<li>Parameter <strong>TrafficController_SetWPForbiddenWhenAGVDisabled</strong> defines if waypoints are set forbidden automatically or not. By default waypoints are set forbidden</li>
+</ul>
+</li>
+<li>Remove AGVs status panel from the Active Machines-list</li>
+<li>Adds AGVs status panel to Disabled Machines-list</li>
+</ul>
+<p>When enabling AGV, select the Disabled machines-tab page and click with
+left mouse an AGV that is being enabled. This selects the AGV. Now with
+right mouse button click the status control and Click &quot;Enable&quot;.</p>
+<p>Enabling AGV will:</p>
+<ul>
+<li>
+<p>Start communication to AGV</p>
+</li>
+<li>
+<p>Create idle-task</p>
+</li>
+<li>
+<p>Remove waypoints from forbidden state if still forbidden by the AGV</p>
+</li>
+</ul>
+<h4 id="map-tabs"><a class="header" href="#map-tabs">Map tabs</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>Tab</th><th>Purpose</th></tr></thead><tbody>
+<tr><td>Production view</td><td>General tab for production. State of entire production area is displayed visually</td></tr>
+<tr><td>AreaControl</td><td>Tab to view and manage route network in more detail</td></tr>
+</tbody></table>
+</div>
+<h4 id="map-controls"><a class="header" href="#map-controls">Map controls</a></h4>
+<p>Map can be panned around by clicking on map and dragging.</p>
+<p>Map can be zoomed with mouse wheel.</p>
+<h5 id="production-area-view"><a class="header" href="#production-area-view">Production Area-view</a></h5>
+<p><img src="./Images/clientUI/NavithorClient2.50_MapButtons.png" alt="" /></p>
+<blockquote>
+<p>Figure: Production Area-tab page of Map-view</p>
+</blockquote>
+<p>Selecting the Production tab shows environment model of the area (optional) and route segments. Symbolic
+points have icon and line pointing to the route segment. Machines are
+drawn to the map at the reported positions.</p>
+<h5 id="area-control-tab"><a class="header" href="#area-control-tab">Area Control tab</a></h5>
+<p><img src="./Images/clientUI/NavithorClient2.20_AreaView.png" alt="" /></p>
+<blockquote>
+<p>Figure: Area Control-tab page of Map view</p>
+</blockquote>
+<p>In area control view the user can monitor the current state of every
+waypoint. Waypoints are either intersections (network <strong>node</strong>s) or
+pathways between intersections (network <strong>link</strong>s). Following states are
+defined for waypoints:</p>
+<ul>
+<li>
+<p><strong>Free</strong>: waypoint is available for all traffic</p>
+</li>
+<li>
+<p><strong>Reserved</strong>: waypoint (always a link) is reserved for one or
+multiple machines for travelling</p>
+</li>
+<li>
+<p><strong>Locked</strong>: waypoint (always a node) is locked for one machine. No
+other machine can enter the node until the locker has either stopped
+or exited the node.</p>
+</li>
+<li>
+<p><strong>Forbidden</strong>: waypoint is not allowed for travelling.</p>
+</li>
+</ul>
+<p>From the area control view the user can manually set a waypoint as
+forbidden when needed. Traffic controller will not allow machines to use
+forbidden waypoints as a part of their drive routes. Also if a machine
+is about to travel to a waypoint that is set as forbidden its drive will
+be aborted.</p>
+<p>Clicking a waypoint in the map view adds the control of the selected waypoint into the list in the panel on the right side. If the clicked point overlaps with multiple waypoints, clicking it another time will select the next possibility. Once one Waypoint is selected, clicking the same waypoint with right mouse button will visualize the driving segments that belong to the waypoint. Right-clicking multiple times will loop through all the segments of the waypoint one by one.</p>
+<p><img src="./Images/clientUI/NavithorClient2.20_AreaViewSelections.png" alt="" /></p>
+<blockquote>
+<p>Figure: Controls for selected Waypoints</p>
+</blockquote>
+<p>Setting a waypoint forbidden is done by clicking the waypoint from the
+map view. Selected waypoint is then added top-most to the selections-list.
+Now the waypoint can be set forbidden by clicking the 'Set
+forbidden'-button of the highlighted panel. A waypoint will be in
+forbidden-state until the user returns the waypoint into allowed state
+by clicking 'Set Free'-button.</p>
+<p>Waypoints that are set forbidden by traffic controller cannot be set
+free by user. Reasons for area being set forbidden automatically are:</p>
+<ul>
+<li>Communication to AGV lost - Navithor may not know the exact position where AGV is during loss of communication</li>
+<li>No status updates from Navitrol for time defined with parameter <strong>TrafficController_MACHINE_STATUS_TRUST_LIMIT_SECONDS</strong></li>
+<li>Position confidence too low - Position confidence goes below <strong>TrafficController_POSITION_CONF_MIN_BOUND</strong>. By default the value is 30 (percent).</li>
+<li>AGV controlled remotely (e.g. via Navitrol Monitor) and speed is higher than <strong>TrafficController_NEAR_ZERO_SPEED_LIMIT</strong></li>
+<li>AGV not moving but position is jumping more than <strong>TrafficController_MACHINE_POS_MAX_CRAWL_BOUND</strong> metres between received status updates from Navitrol</li>
+</ul>
+<h4 id="alarms"><a class="header" href="#alarms">Alarms</a></h4>
+<p><img src="./Images/media/alarms.png" alt="" /></p>
+<blockquote>
+<p>Figure: Alarms view</p>
+</blockquote>
+<p>Navithor shows all the alarms in the alarm list. Alarms can be either System Alarms or Entity Alarms. System alarms are system wide alarms eg. ProductionAreaNotOperational while Entity Alarms are either Machine or Symbolic Point specific eg. NoMachineConnection.</p>
+<div class="table-wrapper"><table><thead><tr><th>Column</th><th>Description</th></tr></thead><tbody>
+<tr><td>Level</td><td>Alarm level. Warning, Error or Fatal Error</td></tr>
+<tr><td>Activation time</td><td>When alarm was activated</td></tr>
+<tr><td>Duration</td><td>How long the alarm has been active</td></tr>
+<tr><td>Origin</td><td>Origin that has triggered the error (Fleet control, Navigation software, Supervisor or Machine device)</td></tr>
+<tr><td>Source</td><td>Name of the alarm source (ie. machine name or server)</td></tr>
+<tr><td>Description</td><td>Alarm details</td></tr>
+</tbody></table>
+</div>
+<p>Alarm view supports searching alarm text or identifier for specific keyword. Alarm view also supports filtering to specific Machine errors, Alarm Levels, Alarm Sources or Priorities only.</p>
+<h5 id="alarms-visualization-configuration"><a class="header" href="#alarms-visualization-configuration">Alarms visualization configuration</a></h5>
+<p><strong>Alarms view</strong></p>
+<p>Navithor client supports setting a custom background and text color for displayed alarms. Different color options can be selected for different alarm levels and alarm sources.</p>
+<p>To set a custom color navigate to Settings-&gt;Configuration-&gt;Preferences and scroll to the alarms visualization section.</p>
+<p><img src="./Images/AlarmConfigurationOverride/visualization_1.png" alt="" /></p>
+<blockquote>
+<p>Figure: Alarms visualization settings</p>
+</blockquote>
+<p>Choose preferred custom colors and press Save. Changes will be applied immediately.</p>
+<p><img src="./Images/AlarmConfigurationOverride/visualization_2.png" alt="" /></p>
+<blockquote>
+<p>Figure: Alarms view with custom color settings applied</p>
+</blockquote>
+<p><strong>Machine Control panel and Map view</strong></p>
+<p>To enable the visualization of AGV errors navigate to Settings-&gt;Configuration-&gt;Preferences. In Preferences tab navigate to Highlight section.</p>
+<p>Following parameters can be adjusted to set up AGV errors visualization:</p>
+<ul>
+<li><strong>Highlight machine on all errors</strong> - set to true to highlight AGV in the Machine Control panel with red color when there are any active errors for this AGV;</li>
+<li><strong>Highlight machine on supervisor errors</strong> - set to true to highlight AGV in the Machine Control panel with red color when there are active supervisor errors for this AGV;</li>
+<li><strong>Blink red alarm on low battery</strong> - set to true to highlight AGV in the Machine Control panel with blinking red color when there is active <em>AGV battery level low</em> alarm for this AGV;</li>
+<li><strong>Size of the circle around the machine, that has an active error</strong> - set to 0 to hide the circle. Set to positive number to adjust the size of the circle.</li>
+</ul>
+<p>In case a fatal error occurred for AGV, the red arrow pointing to this AGV is always displayed on the map. If AGV is out of the view, the arrow points to the direction of AGV's position on the map. On pictures below are demonstrated examples of highlighting AGV in the Machine Control panel with red color and highlighting AGV on the map with a red circle and red arrow.</p>
+<p><img src="./Images/media/ClientFatalError_View.png" alt="" /></p>
+<blockquote>
+<p>Figure: AGV with an active fatal error is inside the view</p>
+</blockquote>
+<p><img src="./Images/media/ClientFatalError_OutOfView.png" alt="" /></p>
+<blockquote>
+<p>Figure: AGV with an active fatal error is out of the view</p>
+</blockquote>
+<h4 id="production-buttons"><a class="header" href="#production-buttons">Production buttons</a></h4>
+<p>Navithor Client has few buttons for fast executing certain operations:</p>
+<p>Start Production-button will take all machines that are in auto-mode
+into production. Machines should start executing production orders
+automatically. Button will change background color based on current 'in
+production'-status:</p>
+<p><img src="./Images/media/image32.png" alt="" /></p>
+<blockquote>
+<p>Figure: None of the machines in auto-mode are in production</p>
+</blockquote>
+<p><img src="./Images/media/image33.png" alt="" /></p>
+<blockquote>
+<p>Figure: Some of the machines in auto-mode are in production</p>
+</blockquote>
+<p><img src="./Images/media/image34.png" alt="" /></p>
+<blockquote>
+<p>Figure: All machines in auto-mode are in production</p>
+</blockquote>
+<p>Stop Production will take all machines out of production.</p>
+<p>Save logs will open Save Logs window where you can describe incident and store logs for later review.</p>
+<p>FSTOP-button sends <em>FSTOP</em> (fast stop) command to all machines whether
+they are selected or not. Releasing machine from fast stop-state is done
+individually from Machine control-window.</p>
+<h3 id="navithor-client-main-menu"><a class="header" href="#navithor-client-main-menu">Navithor Client Main Menu</a></h3>
+<h4 id="login"><a class="header" href="#login">Login</a></h4>
+<p>Login has two options: Login and logout. Selecting login will open the
+login window.</p>
+<p><img src="./Images/media/image36.png" alt="" /></p>
+<blockquote>
+<p>Figure: Login-view</p>
+</blockquote>
+<p>Enter correct username and password and press Login button. If username
+is not found or password is incorrect the login will fail. Username and password can also be AD configured.</p>
+<p>Selecting logout will log the current user out of the client.</p>
+<h4 id="machines"><a class="header" href="#machines">Machines</a></h4>
+<p>Machines menu item has following items:</p>
+<ul>
+<li>
+<p>Release all from FSTOP - this sends release FastStop-commad to all
+active AGVs</p>
+</li>
+<li>
+<p>Clear all machine errors - this clears all errors and warnings of
+AGVs from database</p>
+</li>
+</ul>
+<h4 id="views"><a class="header" href="#views">Views</a></h4>
+<p>Views menu item has following items:</p>
+<ul>
+<li>
+<p>Production Orders - selection will open Production orders window (view production orders)</p>
+</li>
+<li>
+<p>Production Order Lists - selection will open the Production Order List window (grayed out if feature not in use, configurable from parameters)</p>
+</li>
+<li>
+<p>Inventory - selection will open Inventory window (view resources)</p>
+</li>
+<li>
+<p>Battery Monitor - selection will open Battery Monitor window (hidden if Navithor not responsible for battery, configurable from parameters)</p>
+</li>
+<li>
+<p>Show</p>
+<ul>
+<li>Grid lines - show or hide gridlines from map view</li>
+<li>Machine
+<ul>
+<li>Resource type - Whether to show type of held resource below name</li>
+<li>Affixes -- Whether to show affixes for held resource below name</li>
+</ul>
+</li>
+<li>Symbolic point
+<ul>
+<li>Resource type - Whether to show type of held resource below name</li>
+<li>Affixes - Whether to show affixes for held resource below name</li>
+</ul>
+</li>
+<li>Area control - Enable or disable AreaControl tab</li>
+</ul>
+</li>
+<li>
+<p>OnHover - Options for when mouse is hovering over something</p>
+<ul>
+<li>Machine
+<ul>
+<li>Show info - Whether to show additional information or not</li>
+</ul>
+</li>
+<li>Symbolic Point
+<ul>
+<li>Show info - Whether to show additional information or not</li>
+<li>Draw line to possible destinations - Whether to draw line to possible destinations from symbolic point. These can be either default hold release locations or filtered based on allowed resource types</li>
+<li>Highlight possible destinations -  Whether to highlight possible destinations from symbolic point. These can be either default hold release locations or filtered based on allowed resource types</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Camera</p>
+<ul>
+<li>Follow selected machine - Whether to lock camera to selected machine or not</li>
+</ul>
+</li>
+<li>
+<p>Rendering</p>
+<ul>
+<li>Machine type resource rendering offsets apply to Symbolic Points - Whether to apply offsets defined for machine type to all symbolic points. Note: Only works when there is single machine type only</li>
+<li>Symbolic Point Icons
+<ul>
+<li>PictureMinPixPerMeter</li>
+<li>TextMinPixPerMeter</li>
+</ul>
+</li>
+<li>MapRenderInterval - How often map should be refreshing in milliseconds. 100 =&gt; 10 fps. 18 =&gt; ~60 fps</li>
+<li>MachineControlRenderInterval - How often machine panel should be refreshed in milliseconds</li>
+</ul>
+</li>
+<li>
+<p>Settings</p>
+<ul>
+<li>Configuration - Open configuration settings</li>
+<li>Production settings - Open production settings</li>
+<li>Affixes - Configure affixes</li>
+</ul>
+</li>
+<li>
+<p>Language - Change language. Note: Requires restart</p>
+</li>
+<li>
+<p>About - Show version information</p>
+</li>
+</ul>
+<h4 id="production-orders-view"><a class="header" href="#production-orders-view">Production Orders view</a></h4>
+<p><img src="Images/media/productionOrdersView.png" alt="" /></p>
+<blockquote>
+<p>Figure: Production Orders view</p>
+</blockquote>
+<p>Overview for all current Production Orders. Supports ordering and filtering.</p>
+<div class="table-wrapper"><table><thead><tr><th>Component</th><th>Description</th></tr></thead><tbody>
+<tr><td>View columns</td><td>Change which columns to show</td></tr>
+<tr><td>Sort by</td><td>Change in which order the production orders are shown</td></tr>
+<tr><td>Filters</td><td>Filter shown orders</td></tr>
+<tr><td>Continue</td><td>Continues selected order (from paused state)</td></tr>
+<tr><td>Pause</td><td>Pauses execution of selected order</td></tr>
+<tr><td>Delete</td><td>Deletes order</td></tr>
+<tr><td>Create manual order</td><td>Open window to create manual Production Order</td></tr>
+</tbody></table>
+</div>
+<p>All of the columns are not visible by default and depending on type of production order, some of columns might be empty.</p>
+<div class="table-wrapper"><table><thead><tr><th>Column</th><th>Description</th></tr></thead><tbody>
+<tr><td>Id</td><td>Id in database</td></tr>
+<tr><td>PlannerId</td><td>Who planned this production order. Related to TransferRequests</td></tr>
+<tr><td>Name</td><td>Name of production order</td></tr>
+<tr><td>OrderType</td><td>Type of production order</td></tr>
+<tr><td>Status</td><td>Status of production order</td></tr>
+<tr><td>MachineName</td><td>Name of machine assigned to production order. Empty if no machine assigned</td></tr>
+<tr><td>PickUpLocation</td><td>Where resource was picked up. Not used in HoldRelease production</td></tr>
+<tr><td>TargetLoctation</td><td>Destination for production order</td></tr>
+<tr><td>ResourceName</td><td>Name of resource related to production order</td></tr>
+<tr><td>StartTime</td><td>When execution of this production order started</td></tr>
+<tr><td>PlannedPickupTime</td><td>Estimation for resource pickup time. Can be empty</td></tr>
+<tr><td>PlannedDeliveryTime</td><td>Estimation when resource will arrive at target. Can be empty</td></tr>
+<tr><td>EstimateTotalExecutionTime</td><td>Estimation for total time required for order. Can be empty</td></tr>
+</tbody></table>
+</div>
+<h5 id="manual-production-order-view"><a class="header" href="#manual-production-order-view">Manual Production Order view</a></h5>
+<p><img src="Images/media/manualorder.png" alt="" /></p>
+<blockquote>
+<p>Figure: Creating manual Production Order for a specific AGV</p>
+</blockquote>
+<div class="table-wrapper"><table><thead><tr><th>Section</th><th>Option</th><th>Description</th></tr></thead><tbody>
+<tr><td>Required</td><td>Machine</td><td>Which machine should execute order</td></tr>
+<tr><td>Required</td><td>Pickup</td><td>Where to pick up resource. Defining this also requires filling Resources section</td></tr>
+<tr><td>Required</td><td>Target</td><td>Where machine should drive. When only Machine and Target are given, GOTO order will be generated instead of resource transfer.</td></tr>
+<tr><td>Optional</td><td>Scheduled start time</td><td>When to start executing this production order. Defaults to now</td></tr>
+<tr><td>Optional</td><td>Priority</td><td>Numerical priority for order. Defaults to no priority over other orders</td></tr>
+<tr><td>Optional</td><td>Planner</td><td>If planner ID is given, it can be used as order ID instead of ID generated by Navithor</td></tr>
+<tr><td>Optional</td><td>Execution Flags</td><td>Special flags related to production order. Affects behaviour</td></tr>
+<tr><td>Resources</td><td>Type</td><td>Which resource type to transfer from pickup</td></tr>
+<tr><td>Resources</td><td>Quantity</td><td>How many of given resource type to transfer</td></tr>
+<tr><td>Resources</td><td>Add</td><td>Adds selection to list. List can contain multiple resource types of varying quantities. How this will be actually executed depends on configuration. Most simple option is to make separate Production Order for each transfer</td></tr>
+</tbody></table>
+</div>
+<p>Execution flag explanations:</p>
+<div class="table-wrapper"><table><thead><tr><th>Execution Flag</th><th>Description</th></tr></thead><tbody>
+<tr><td>None</td><td>No flag given</td></tr>
+<tr><td>LoadWholeStack</td><td>When arriving at Pickup we will Load all resource objects at once</td></tr>
+<tr><td>UnloadWholeStack</td><td>When arriving at Target we will Unload all resource objects at once</td></tr>
+<tr><td>LoadFromBottom</td><td>Load resource object from bottom of stack</td></tr>
+<tr><td>LoadFromTop</td><td>Load resource object from top of stack</td></tr>
+<tr><td>UnloadToBottom</td><td>Unload resource object to bottom of stack</td></tr>
+<tr><td>UnloadToTop</td><td>Unload resource object to top of stack</td></tr>
+</tbody></table>
+</div>
+<p>Check section <a href="#resource-manager">Resource manager</a> for more information about resource handling</p>
+<h4 id="battery-monitor"><a class="header" href="#battery-monitor">Battery Monitor</a></h4>
+<p><img src="./Images/clientUI/NavithorClient2.20_BattControl.png" alt="" /></p>
+<blockquote>
+<p>Figure: Battery Monitor</p>
+</blockquote>
+<p>Battery monitor window is for view of the current statuses of all
+battery powered machines in the production system. Battery monitor is available if charging control is enabled in Navithor server. See the document ' Managing Battery Levels', chapter 'Enabling charging management' for more information.</p>
+<p>Charging can be requested for machines that are in production by
+clicking 'Request Charging' button of the machines data panel.</p>
+<p>'Set battery level' button opens a numeric value box for setting the
+time-based battery level (calculated by Navithor Server) to a given
+level (0-100).</p>
+<h3 id="configuration"><a class="header" href="#configuration">Configuration</a></h3>
+<p>Configuration window has all the settings that are used for configuring Navithor Server and Client. Some tabs might be hidden without sufficient user rights.</p>
+<div class="table-wrapper"><table><thead><tr><th>Tab</th><th>Description</th></tr></thead><tbody>
+<tr><td>Client settings</td><td>Server connection configuration</td></tr>
+<tr><td>Preferences</td><td>User preferences</td></tr>
+<tr><td>Server settings</td><td>Configure Server settings</td></tr>
+<tr><td>Parameters</td><td>Manage system parameters</td></tr>
+</tbody></table>
+</div>
+<h4 id="client-settings"><a class="header" href="#client-settings">Client settings</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>Settings</th><th>Description</th></tr></thead><tbody>
+<tr><td>Server IP-Address</td><td>IP address of the Navithor server</td></tr>
+<tr><td>Server port</td><td>Port for regular communication with server</td></tr>
+<tr><td>Server stream port</td><td>Port for file transfer with server</td></tr>
+<tr><td>US units</td><td>Affects data shown in AGV Status panel. Changes speed from m/s to feet/sec and actuator position mm to inch</td></tr>
+<tr><td>Disable log download prompt</td><td>If True, saving server logs does not bring a pop-up for log download possibility</td></tr>
+</tbody></table>
+</div>
+<h4 id="preferences"><a class="header" href="#preferences">Preferences</a></h4>
+<p>This tab allows to change visualization preferences like information to display, map rendering rate, environment and routes colors, text size and so on.</p>
+<h4 id="server-settings"><a class="header" href="#server-settings">Server settings</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>Settings</th><th>Description</th></tr></thead><tbody>
+<tr><td>Use Simulator</td><td>Whether to override machine configurations to connect to simulator instead. This require Fleet Simulator license</td></tr>
+<tr><td>Simulator address</td><td>IP address for Fleet Simulator</td></tr>
+<tr><td>Simulator port</td><td>Port for Fleet Simulator</td></tr>
+<tr><td>Use Active Directory authentication</td><td>If true Login to Client is automatically against windows authentication based on active directory users. See <em>Using Active Directory for authentication</em>-document for more information</td></tr>
+<tr><td>SFTP username</td><td>Username for the SFTP server running onboard machine</td></tr>
+<tr><td>SFTP password</td><td>Password for the SFTP server running onboard machine</td></tr>
+<tr><td>SFTP port</td><td>Port on which machine has SFTP server running (SSH port)</td></tr>
+<tr><td>Safety signal interval</td><td>Time in milliseconds how often Navithor ends safety signals to AGVs</td></tr>
+<tr><td>Client HeartBeat Timeout</td><td>Time in milliseconds how often Navithor server expects to receive heartbeats from Navithor Client(s)</td></tr>
+<tr><td>PLC Adress</td><td>Deprecated</td></tr>
+<tr><td>Use FSTP for file transfer</td><td>Deprecated. Always true</td></tr>
+<tr><td>FStop-button text</td><td>Text entered here replaces &quot;FSTOP&quot;-button text</td></tr>
+<tr><td>Fstop machine-button text</td><td>Text entered here replaces &quot;FSTOP machine&quot;-buttons text located in AGV control panel</td></tr>
+<tr><td>Release FStop-button text</td><td>Text entered here replaces &quot;Release FSTOP&quot;-buttons text (same button as &quot;FSTOP machine&quot;</td></tr>
+</tbody></table>
+</div>
+<h4 id="parameters"><a class="header" href="#parameters">Parameters</a></h4>
+<p><img src="./Images/clientUI/NavithorClient2.20_SysParams.png" alt="" /></p>
+<blockquote>
+<p>Figure: System Parameters</p>
+</blockquote>
+<p>Since version 1.9.55.0 all system parameters are accessed from Client
+user interface. This change is part of supporting running Server as a
+service (without own user interface). All parameters are listed in this
+view. All parameters are also grouped to one or multiple filter-groups. Parameters can also be searched by typing into &quot;Keyword search&quot;-text box.
+For example all MES Interface-related parameters can be listed by
+checking &quot;MES Interface&quot;-check box. Then typing &quot;status&quot; will further limit the matching parameters.</p>
+<p>Clicking any row in parameter list will open a control on right side of
+the list. This control has buttons and input-fields for editing the
+selected parameter. Three value-fields are listed:</p>
+<div class="table-wrapper"><table><thead><tr><th>Column</th><th>Description</th></tr></thead><tbody>
+<tr><td>Name</td><td>Name of parameter</td></tr>
+<tr><td>Default</td><td>This is the system default value for the parameter. It can be taken into use by pressing &quot;Reset to default&quot;-button</td></tr>
+<tr><td>Stored</td><td>This is the value that is always read from default.tcc2-file (located under Server's main working folder) or from database when production area is loaded in Navithor Server. This value gets also written as current value for the parameter. I.e. at Server startup or after production area loading Stored value is equal current value. Current value can be reset to stored value by pressing &quot;Reset to stored&quot;-button</td></tr>
+<tr><td>Current</td><td>This is the active value that system uses. Current value can be changed in parameter control by editing the &quot;New value&quot;-field(s) of the parameter and then pressing &quot;Apply change&quot;-button. This does not save anything to default.tcc2 or database.</td></tr>
+</tbody></table>
+</div>
+<p>After parameter changes have been made and found good then the current
+values needs to be saved in order to keep them after Server restart or
+production area update. Pressing &quot;Save&quot;-button in the bottom-left corner of the window will save the current parameter values to file and also to database.</p>
+<p>Pressing &quot;Reset to defaults&quot;-button will set all current values to
+default values. Stored values will not be affected.</p>
+<p>Pressing &quot;Revert&quot;-button will set all current values to stored
+values.</p>
+<h3 id="production-settings"><a class="header" href="#production-settings">Production settings</a></h3>
+<p>Production settings window contains settings that are used for configuring production related parameters. Some tabs might be hidden without sufficient user rights.</p>
+<div class="table-wrapper"><table><thead><tr><th>Tab</th><th>Description</th></tr></thead><tbody>
+<tr><td>User management</td><td>Manage users</td></tr>
+<tr><td>Area files</td><td>Manage active area files, machine type parameter files, TCParameter files. Upload files</td></tr>
+<tr><td>Machines</td><td>Manage machines</td></tr>
+</tbody></table>
+</div>
+<h4 id="user-management"><a class="header" href="#user-management">User management</a></h4>
+<p><img src="./Images/clientUI/NavithorClient2.20_Users.png" alt="" /></p>
+<blockquote>
+<p>Figure: System Users</p>
+</blockquote>
+<p>Navithor version 2.20 contains major update to user management. This update makes it possible to create custom user roles that have specific user rights to the system. There are 4 roles pre-defined in the system:</p>
+<div class="table-wrapper"><table><thead><tr><th>Userlevel</th><th>Description</th></tr></thead><tbody>
+<tr><td>Operator</td><td>System operator, has access to everything except administrative functions</td></tr>
+<tr><td>Admin</td><td>System Administrator. Access to everything</td></tr>
+<tr><td>Production manager</td><td>Rights to view production but can't select machine or view some parts of settings</td></tr>
+<tr><td>Guest</td><td>Has viewing rights only. Cannot affect production</td></tr>
+</tbody></table>
+</div>
+<p>Roles can be edited or new ones can be created in Roles-tab page:</p>
+<p><img src="./Images/clientUI/NavithorClient2.20_UserRoleConfiguration.png" alt="" /></p>
+<blockquote>
+<p>Figure: Configuring User roles</p>
+</blockquote>
+<p>Document * User management* contains more information about user management.</p>
+<p>Navithor also supports Active Directory (AD) users. Document <em>Using Active Directory for authentication</em> contains more information of how to activate AD authentication.</p>
+<h4 id="area-files"><a class="header" href="#area-files">Area Files</a></h4>
+<p><img src="Images/media/settings_areafiles_main.png" alt="" /></p>
+<blockquote>
+<p>Figure: Area files</p>
+</blockquote>
+<p>User interface for viewing currently active files, changing active files, uploading new files to server. Tools can generate and upload all of the required files automatically when 'Upload to Database' is used.</p>
+<div class="table-wrapper"><table><thead><tr><th>Term</th><th>Description</th></tr></thead><tbody>
+<tr><td>Production area file bundle</td><td>Definition, Segment and Env file bundled together. Valid for single machine type</td></tr>
+<tr><td>Definition file</td><td>Area definition file. Defines production area. Shared for all machine types</td></tr>
+<tr><td>Segment file</td><td>File containing segments for single machine type. If there are multiple machine types the segments get combined to form route network. Also contains symbolic points definition and load capacities</td></tr>
+<tr><td>Env file</td><td>File containing environment</td></tr>
+<tr><td>Machine type parameter file</td><td>File containing definition for machine type. Also contains resource types and load capacities for machine type</td></tr>
+<tr><td>Server parameter file</td><td>File containing production area parameters</td></tr>
+<tr><td>Request server to reload files</td><td>For optimization reasons, server will not load the files in right away. Taking files into use requires either server restart or manual request from Client</td></tr>
+<tr><td>Production Area</td><td>Single area of operation. Can contain multiple machine types</td></tr>
+</tbody></table>
+</div>
+<h4 id="uploading-new-files"><a class="header" href="#uploading-new-files">Uploading new files</a></h4>
+<p>Before uploading new area files ensure that server has machine types for the area. Otherwise upload will fail!</p>
+<p>If you pick a wrong file by mistake select the file on 'Pending files' and press 'Delete' key to remove it.</p>
+<p>Machine type</p>
+<ul>
+<li>Automatically created when Tools 'Upload to database' is used</li>
+<li>Can be generated manually by uploading machine type parameters</li>
+</ul>
+<p>Uploading file bundle for production area</p>
+<ol>
+<li>Click 'Definition file' and choose definition file from file system. Only single definition file per upload</li>
+<li>Click 'Environment file' and choose environment file from file system. Repeat for every machine type in production area</li>
+<li>Click 'Segment file' and choose segment file from file system. Repeat for every machine type in production area</li>
+<li>Click 'Upload'</li>
+</ol>
+<p>Generating machine type and uploading bundle at same time</p>
+<ol>
+<li>Click 'Machine type parameters' and choose Machine type parameter file from file system. Repeat for every machine type in production area.</li>
+<li>Upload the rest of files</li>
+</ol>
+<h4 id="activating-file-bundle"><a class="header" href="#activating-file-bundle">Activating file bundle</a></h4>
+<p><img src="Images/media/settings_areafiles_main.png" alt="" /></p>
+<blockquote>
+<p>Figure: Activating file bundle</p>
+</blockquote>
+<p>Active file bundles are colored green while inactive ones are white. Active file bundle refers to active set of files for specific machine type. This includes definition-, route- and environment-file.</p>
+<p>Activating bundle can be done by double clicking row. If there was a bundle active for given machine type earlier, it will get deselected and be replaced by newly selected bundle.</p>
+<p>Multiple active production areas are not supported. There will be a warning popup if this is attempted.</p>
+<p>Changes are not applied immediately. To apply changes, click on &quot;Send request&quot;. This will tell server to reload entire production area.</p>
+<p>If some column does not fit into screen, hover over cell to show text inside.</p>
+<div class="table-wrapper"><table><thead><tr><th>Column</th><th>Explanation</th></tr></thead><tbody>
+<tr><td>ProductionAreaname</td><td>Name of production area this bundle belongs to</td></tr>
+<tr><td>MachineTypeName</td><td>Name of machine type this bundle belongs to</td></tr>
+<tr><td>DefinitionFileName</td><td>Name of definition file. Should be shared among all machine types for production area</td></tr>
+<tr><td>Version</td><td>Version of bundle for given production area. When working with multiple machinetypes, they should always use same version</td></tr>
+<tr><td>SegmentFileName</td><td>Name of segment file for given machine type for Production Area</td></tr>
+<tr><td>EnvFileName</td><td>Name of environment file for given machine type for Production Area</td></tr>
+<tr><td>Created</td><td>When this bundle was created and uploaded</td></tr>
+<tr><td>Active</td><td>Whether this bundle is active or not</td></tr>
+</tbody></table>
+</div>
+<h4 id="file-management"><a class="header" href="#file-management">File management</a></h4>
+<p><img src="Images/media/SettingsEraFiles.png" alt="" /></p>
+<blockquote>
+<p>Figure: Area files management</p>
+</blockquote>
+<p>Era file is a single binary file in Navithor database. These files are bound together to form a bundle. This tab gives fine control over individual files.</p>
+<div class="table-wrapper"><table><thead><tr><th>Row color</th><th>Meaning</th></tr></thead><tbody>
+<tr><td>White</td><td>Not selected</td></tr>
+<tr><td>Blue</td><td>Selected row</td></tr>
+<tr><td>Green</td><td>File that belongs to active bundle</td></tr>
+<tr><td>Orange</td><td>File that is orphaned, does not belong to any bundle</td></tr>
+<tr><td>Red</td><td>File that is pending removal</td></tr>
+</tbody></table>
+</div>
+<p>Double clicking a row will mark specified file as &quot;To be deleted&quot;. File can be marked to be deleted also by selecting a row and pressing 'Delete' key on keyboard.</p>
+<p>Clicking 'Delete selected' will command Server to delete these files permanently. There might be warnings when removing, read the warning carefully before proceeding.</p>
+<p>Clicking 'Reset' will unmark files that were marked &quot;To be deleted&quot;</p>
+<div class="table-wrapper"><table><thead><tr><th>Column</th><th>Explanation</th></tr></thead><tbody>
+<tr><td>EraFileId</td><td>Id of Era file in database</td></tr>
+<tr><td>EraFileTypeEnum</td><td>Type of era file</td></tr>
+<tr><td>EraFileName</td><td>Name of era file</td></tr>
+<tr><td>Version</td><td>Version of era file</td></tr>
+<tr><td>IsOrphaned</td><td>Whether this file is orphaned, does not belong to any bundle</td></tr>
+<tr><td>IsInUse</td><td>Whether bundle this file is associated with is in use</td></tr>
+</tbody></table>
+</div>
+<p>Deleting files becomes important if SQL Database becomes too large. Normally old area versions are not needed in the system thus deleting the oldest files is a good routine to free up space from database and also keep the Area files-view clean.</p>
+<h4 id="activating-parameters-for-machine-type"><a class="header" href="#activating-parameters-for-machine-type">Activating parameters for machine type</a></h4>
+<p><img src="Images/media/SettingsEraMtParameters.png" alt="" /></p>
+<blockquote>
+<p>Figure: Machine type parameters</p>
+</blockquote>
+<p>Active machine type parameters are colored green while inactive ones are white.</p>
+<p>Activating a machine type parameter file can be done by double clicking row. If there was a parameter file active for given machine type earlier, it will get deselected and be replaced by newly selected parameter file. Production area cannot be operational if there is no machine type parameter file as activated.</p>
+<p>Changes are not applied immediately. To apply changes, click on &quot;Send request&quot;. This will tell server to reload entire production area.</p>
+<h4 id="activating-system-parameters"><a class="header" href="#activating-system-parameters">Activating System parameters</a></h4>
+<p>To select server parameter file to activate go to Area Files tab of Production settings window.</p>
+<p><img src="Images/media/SettingsServerParameterFiles.png" alt="" /></p>
+<blockquote>
+<p>Figure: System parameter file selection</p>
+</blockquote>
+<p>Active server parameter file (System parameters) will be colored green while inactive ones are white. New entry to the list is created every time the system parameters have been changed and stored to database.</p>
+<p>Activating a server parameter file can be done by double clicking row.</p>
+<p>Changes are not applied immediately. Changing server parameter file requires Server restart to ensure all parameters get loaded in properly.</p>
+<h2 id="controlling-machines"><a class="header" href="#controlling-machines">Controlling machines</a></h2>
+<h3 id="selecting-a-machine"><a class="header" href="#selecting-a-machine">Selecting a machine</a></h3>
+<p>A machine can be selected from the machine list or from the map by
+clicking the machine name. Clicking machine again once machine is selected causes map to focus
+on that specific machine.</p>
+<p>Selecting a machine opens up Machine controls panel.</p>
+<p>If machine does not have it's position initialized yet,
+it might not be visible on the map.</p>
+<h3 id="machine-controls"><a class="header" href="#machine-controls">Machine controls</a></h3>
+<p>The machine controls show some live measurements from the machine. It
+also has buttons for commanding the machine.</p>
+<p><img src="./Images/media/image51.png" alt="" /></p>
+<blockquote>
+<p>Figure: AGV task control</p>
+</blockquote>
+<h3 id="statuses"><a class="header" href="#statuses">Statuses</a></h3>
+<p><strong>Communication</strong>: Shows the communication status between Navithor and
+Navitrol. Possible statuses are <em>Connecting</em>, <em>OK</em> and <em>Updating files</em>.</p>
+<p><strong>Position confidence</strong>: Shows the position confidence level in
+percentage received from navigation. If the machine position is not
+initialized this is shown as well with an additional text &quot;not
+initialized&quot;.</p>
+<p><strong>Control</strong>: Shows the Auto / Manual state of the machine. Navithor can
+only command machines that are in Auto-mode.</p>
+<p><strong>State</strong>: Shows the navigation state, possible states are (IDLE, STBY,
+AUTO, REMOTE, INI_POS, FSTOP, LOAD, UNLOAD, ACTUATOR_CONTROL, HOLD)</p>
+<p><strong>Transport status</strong>: Shows the type of the resource the machine is
+transporting.</p>
+<p><strong>Battery level:</strong> Battery level in percentage. Visible if battery is
+enabled in machine type parameters.</p>
+<h3 id="commands"><a class="header" href="#commands">Commands</a></h3>
+<h4 id="fstop-machine"><a class="header" href="#fstop-machine">FSTOP Machine</a></h4>
+<p>Send <em>FSTOP</em> command to the selected machine. Machine state goes to
+FSTOP.</p>
+<h4 id="release-fstop"><a class="header" href="#release-fstop">Release FSTOP</a></h4>
+<p>Send <em>release FSTOP</em> command to the selected machine. Releasing FSTOP
+will also take the machine out of production.</p>
+<h4 id="initialize-position-send-posinit"><a class="header" href="#initialize-position-send-posinit">Initialize position/ Send PosInit</a></h4>
+<p><img src="./Images/media/image52.png" alt="" /></p>
+<blockquote>
+<p>Figure: Position init in map view with Scanner view from AGV received</p>
+</blockquote>
+<p>Position of a machine can be (re)initialized whenever it is in stand
+by-state (STBY). Initialization can be done in two ways: either defining
+navigation point and machine heading or setting machine position into
+any of the predefined locations where position initialization is
+enabled. Command flow is following:</p>
+<p><strong>To initialize machine position anywhere in map:</strong></p>
+<ol>
+<li>
+<p>Press 'Initialize position'-button</p>
+</li>
+<li>
+<p>Click location on map near machine's navigation point</p>
+</li>
+<li>
+<p>Move mouse away from clicked location to see current scanner view of
+the machine transformed to the location first clicked and rotated to
+the direction the mouse is now pointing from the clicked location</p>
+</li>
+<li>
+<p>Click second time on the map when desired heading for the machine is
+pointed</p>
+<p>a.  If clicked location (list item 2) for the machine does not match the environment you can continue sequence by clicking the map again. Click mode changes between position and heading</p>
+</li>
+<li>
+<p>Press 'Send Posinit'-button when the map shows the black arrow
+indicating position and heading are set. Machine starts position
+initialization sequence.</p>
+</li>
+</ol>
+<p><strong>To symbolic point with position initialization enabled:</strong></p>
+<p>When 'Initialize position'-button is pressed only symbolic points that
+are defined as position init locations will remain visible and will show
+index number for the location -- all other symbolic points are set
+hidden. The user can initialize machines position into these locations
+when he/she is sure that the machine is parked into the selected
+position init location.</p>
+<p><img src="./Images/media/image53.png" alt="" /></p>
+<blockquote>
+<p>Figure: Position intialization Symbolic Point</p>
+</blockquote>
+<h4 id="set-position-to-last-saved"><a class="header" href="#set-position-to-last-saved">Set position to last saved</a></h4>
+<p>Pressing 'Set position to last saved' when machine's position is not
+initialized results Navithor to get the last saved position from
+database as the reference location for position initialization. Machines
+position is saved to database in regular intervals (Server parameter
+Machine_STATUS_STORE_INTERVAL_MS) and if machine was moving when
+position was lost the last saved location may be at some distance from
+actual location.</p>
+<h4 id="return-to-route"><a class="header" href="#return-to-route">Return to route</a></h4>
+<p>Sends command to Navitrol to use &quot;Return to route&quot; functionality. AGV will drive to closest route. Does not work with Fleet Simulator.</p>
+<h4 id="goto-xy"><a class="header" href="#goto-xy">GOTO XY</a></h4>
+<p>After pressing GOTO XY button, the user can select a point from the map
+where he wants the machine to move. The machine starts driving to the
+given point when it has been selected on the map. If the right mouse
+button is pressed onto a location a GotoXY Route review-window will
+appear. While window is visible the user can view the route that is
+calculated for the machine with minimum travel time.</p>
+<p>From the GotoXY Route review-window the user can either 'Execute route',
+'Find next best' route or 'Close' the window. Clicking 'Find next
+best'-button will result Navithor to find different route solution if
+non-optimal route is needed.</p>
+<p><img src="./Images/media/image54.png" alt="" /></p>
+<blockquote>
+<p>Figure: Goto XY with right mouse button - route selection</p>
+</blockquote>
+<p>GoToXY Route review</p>
+<h4 id="abort"><a class="header" href="#abort">Abort</a></h4>
+<p>Sends <em>abort</em> command to Navitrol. The machine stops driving and
+Navitrol transits into STBY state. If the machine was in production mode
+it is taken out of production.</p>
+<h4 id="load-unload"><a class="header" href="#load-unload">Load /Unload</a></h4>
+<p>Sends <em>load</em> or <em>unload</em> command to machine.</p>
+<h4 id="take-machine-into-production"><a class="header" href="#take-machine-into-production">Take machine into production</a></h4>
+<p>When AGV is taken into production it will start driving production
+orders if they exist. When the machine is in production it is not
+possible to send drive/load/unload-orders from Client. Aborting
+machine's task is possible and it will take automatically the machine
+out of production.</p>
+<p>If production is triggered by hold-release reasoning, AGVs that occupy
+hold symbolic point will be ordered to Hold-state by Navithor when taken
+into production. If AGV is not parked to any hold location, it is driven
+automatically to a wait location if wait location is found and is
+reachable (waitLoad or wait if AGV is empty, waitUnload or wait).</p>
+<p>Machine can be taken into production when it is driving a GOTO XY-drive.
+Machine will execute the drive to the destination and next task is then
+generated by Navithor based on production data.</p>
+<h4 id="show-task-log"><a class="header" href="#show-task-log">Show task log</a></h4>
+<p>Shows the log of the task control messages for a selected machine.</p>
+<p><img src="./Images/media/image55.png" alt="" /></p>
+<blockquote>
+<p>Figure: Task log of AGV</p>
+</blockquote>
+<h2 id="quick-start-guide"><a class="header" href="#quick-start-guide">Quick Start Guide</a></h2>
+<h3 id="setup-server"><a class="header" href="#setup-server">Setup server</a></h3>
+<p>Start Navithor Server as application. If there is no ntconn defined the Server will generate popup for configuring one.</p>
+<p><img src="Images/media/ntconnGeneration.png" alt="" /></p>
+<blockquote>
+<p>Figure: No database configured - missing configuration file</p>
+</blockquote>
+<p>Click on Use default. If everything goes well the Server will resume booting.</p>
+<p><img src="Images/media/ntconnGeneration_DefaultFail.png" alt="" /></p>
+<blockquote>
+<p>Figure: Configuration file is read but making connection to Navithor database fails</p>
+</blockquote>
+<p>Default connection string was not valid. Click on Customize and follow instructions on <a href="#configuring-database">Database configuration</a> section.</p>
+<p><img src="Images/media/validntconn.png" alt="" /></p>
+<blockquote>
+<p>Figure: Database connection OK</p>
+</blockquote>
+<p>Valid database configuration. Server continues booting.</p>
+<p>After server is up and running start Navithor Client.</p>
+<h3 id="setting-up-client"><a class="header" href="#setting-up-client">Setting up Client</a></h3>
+<p><img src="Images/media/quickstart_login.png" alt="" /></p>
+<blockquote>
+<p>Figure: Client login prompt shows only if Server is reached</p>
+</blockquote>
+<p>After starting client login prompt should pop up. If Server is located at same PC proceed to login with administrator credentials and proceed to <a href="#configuring-production-area">Configuring production area</a>. Otherwise proceed to <a href="#configuring-server-ip">Configuring Server ip</a>.</p>
+<h4 id="configuring-server-ip"><a class="header" href="#configuring-server-ip">Configuring Server ip</a></h4>
+<p>To configure Server IP select Cancel in Login form. This will allow using Navithor Client in offline mode for configuring server ip.</p>
+<p><img src="Images/media/quickstart_ClientSettings.png" alt="" /></p>
+<blockquote>
+<p>Figure: Navigate to Settings-&gt;Configuration</p>
+</blockquote>
+<p><img src="Images/media/quickstart_ClientSettings_ServerIp.png" alt="" /></p>
+<blockquote>
+<p>Figure: Server IP address can be changed here</p>
+</blockquote>
+<p>Write Server IP and Port. Click Save changes.</p>
+<p>Connectivity to server is always visible on bottom-left corner of Navithor Client. Updating connectivity status after changing ip may take few minutes. If the connection fails, then the possible reason is the firewall settings. By default Client-Server communication uses port 9000 for data signals and 9001 for file transfer. Both ports need to be allowed in firewall.</p>
+<p><img src="Images/media/quickstart_server_disconnect.png" alt="" /></p>
+<blockquote>
+<p>Figure: Client bottom status bar when Server is not connected</p>
+</blockquote>
+<p><img src="Images/media/quickstart_server_connected.png" alt="" /></p>
+<blockquote>
+<p>Figure: Client bottom status bar when Server is connected</p>
+</blockquote>
+<h4 id="configuring-production-area"><a class="header" href="#configuring-production-area">Configuring production area</a></h4>
+<p><img src="Images/media/quickstart_notConfiguredClient.png" alt="" /></p>
+<blockquote>
+<p>Figure: Area not operational error</p>
+</blockquote>
+<p>On fresh install there is no Production Area or machines yet. There should be errors about production area not being operational yet. If production area was already uploaded from NavithorTools proceed to <a href="#configuring-machines">Configuring machines</a>.</p>
+<p><img src="Images/media/quickstart_filesUploadedFromTools.png" alt="" /></p>
+<blockquote>
+<p>Figure: Area files view with buttons to upload individual files</p>
+</blockquote>
+<p>Active files can be verified by Navigating to Settings -&gt; Production settings -&gt; Area files. If there are no entries visible it means there are no files yet and they need to be uploaded first. Easiest way to upload files correctly is by using Navithor Tools to upload files to database. Otherwise continue to <a href="#uploading-files-manually">Uploading files manually</a></p>
+<h4 id="uploading-files-manually"><a class="header" href="#uploading-files-manually">Uploading files manually</a></h4>
+<p>Navigate to Settings -&gt; Production settings -&gt; Area Files</p>
+<p><img src="Images/media/quickstart_manualUpload_filesSelected.png" alt="" /></p>
+<blockquote>
+<p>Figure: List of files ready to be uploaded to Navithor database</p>
+</blockquote>
+<p>Click on 'Definition file' to pick Definition file for area.</p>
+<p>Click on 'Environment file' to pick Environment file for machines to use.</p>
+<p>Click on 'Segment file' to pick Segment file defining routenetwork.</p>
+<p>Click on 'Machine type parameters&quot; to pick parameters for machine type.</p>
+<p>Click 'Upload'.</p>
+<p>Files should now appear on right. The files are not activated yet, double click row to activate.</p>
+<p><img src="Images/media/quickstart_manualUpload_AfterUpload.png" alt="" /></p>
+<blockquote>
+<p>Figure: File bundles view with new entry after successful file set upload</p>
+</blockquote>
+<p>This warning will popup. This means that there are files active for Production Area but machine type does not have active parameters. Navigate to Machine type params.</p>
+<p><img src="Images/media/quickstart_manualUpload_AfterActiveSelect.png" alt="" /></p>
+<blockquote>
+<p>Figure: A warning about missing machine type parameters</p>
+</blockquote>
+<p>Double click row to activate machine type parameters.</p>
+<p><img src="Images/media/quickstart_manualUpload_activatingMachineTypeParams.png" alt="" /></p>
+<blockquote>
+<p>Figure: No machine type parameters active</p>
+</blockquote>
+<p>The selected row should now say &quot;True&quot; for 'IsActive'.</p>
+<p><img src="Images/media/quickstart_manualUpload_activatingMachineTypeParams_after.png" alt="" /></p>
+<blockquote>
+<p>Figure: Machine type parameter file activated</p>
+</blockquote>
+<p>We have all of the files needed for Production Area configured but they are not loaded in yet. To load files in, click on 'Send request'. Production area is not yet fully operational, next step is configuring Machines. Proceed to <a href="#configuring-machines">Configuring machines</a> to finish setting up.</p>
+<h4 id="configuring-machines"><a class="header" href="#configuring-machines">Configuring machines</a></h4>
+<p>Navigate to Settings -&gt; Production settings -&gt; Machines</p>
+<p><img src="Images/media/quickstart_machine_empty.png" alt="" /></p>
+<blockquote>
+<p>Figure: Fresh Machines view</p>
+</blockquote>
+<p>Currently there shouldn't be any machines listed here yet. To create new machine click on 'Create'. Click on create multiple times if you need to add more than 1 machine.</p>
+<p><img src="Images/media/quickstart_machine_added.png" alt="" /></p>
+<blockquote>
+<p>Figure: Creating machines</p>
+</blockquote>
+<p>Newly created machines are in 'pending' state, they are not stored to database yet. Fill in correct information for all Machines and click on 'Save' to save changes.</p>
+<p>If you get error about missing production area, discard all changes and navigate back to Area files. Ensure there is active Production Area file bundle and that machine type has parameters. Afterwards Click on 'Request area reload' to command server to load files in.</p>
+<p><img src="Images/media/quickstart_machine_saveerr.png" alt="" /></p>
+<blockquote>
+<p>Figure: Machines cannot be saved in case there is no active production area</p>
+</blockquote>
+<p>When saving was successful the background for row should be white.</p>
+<p><img src="Images/media/quickstart_machine_saved.png" alt="" /></p>
+<blockquote>
+<p>Figure: Machine configured successfully</p>
+</blockquote>
+<p>After adding all of the machines click on 'Request area reload' one more time. The machine(s) should appear on very left on main view.</p>
+<p><img src="Images/media/quickstart_productionAreaIsActive.png" alt="" /></p>
+<blockquote>
+<p>Figure: Main view after successful area- and machine-configuration</p>
+</blockquote>
+<p>Proceed to <a href="#basic-testing">Basic testing</a> for basic testing.</p>
+<h4 id="basic-testing"><a class="header" href="#basic-testing">Basic testing</a></h4>
+<p>After setting up Production Area for first time it is good to do some basic testing. Click on Machine on MachineList to bring up machine controls. Active routes should be highlighted on blue. Initially the machine does not have a position and it need's to be set.</p>
+<p><img src="Images/media/quickstart_basicTesting_MachineControl.png" alt="" /></p>
+<blockquote>
+<p>Figure: AGV selected</p>
+</blockquote>
+<p>Click on 'Initialize Position' and then click a spot on map where you think the machine is. After first click the AGV will start sending scanner data. Use the scanner data to figure out correct location for machine. Right click to reset and pick position again.</p>
+<p><img src="Images/media/quickstart_basicTesting_posinit_step1.png" alt="" /></p>
+<blockquote>
+<p>Figure: Initializing position</p>
+</blockquote>
+<p>Set roughly correct heading for machine and click on map second time to initialize position.</p>
+<p><img src="Images/media/quickstart_basicTesting_posinit_step2.png" alt="" /></p>
+<blockquote>
+<p>Figure: Position initialization done</p>
+</blockquote>
+<p>Most simple test is to give GOTO-order for machine. Click on 'Goto XY' in MachineControl and then click on some Symbolic Point.</p>
+<p><img src="Images/media/quickstart_basicTesting_goto_givingOrder.png" alt="" /></p>
+<blockquote>
+<p>Figure: Giving Goto-order</p>
+</blockquote>
+<p>The AGV should start driving towards given Symbolic Point.</p>
+<p><img src="Images/media/quickstart_basicTesting_goto_agvDriving.png" alt="" /></p>
+<blockquote>
+<p>Figure: AGV driving</p>
+</blockquote>
+<p>Congratulations. You have successfully setup basic Production Area and executed a simple production order. Next steps would be to <a href="#changing-system-parameters">Configure system parameters</a> and start incorporating production logic.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="MesTester3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="Feature_ClientUpdater.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="MesTester3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="Feature_ClientUpdater.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

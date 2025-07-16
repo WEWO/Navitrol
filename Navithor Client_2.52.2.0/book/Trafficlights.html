@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Traffic Lights - NAVITHOR USER INSTRUCTIONS</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="Installation_NavithorHardwareRequirements.html"><strong aria-hidden="true">1.</strong> System Hardware Requirement Specifications</a></li><li class="chapter-item expanded "><a href="Installation_SQLServerAndDatabaseInstallationGuide.html"><strong aria-hidden="true">2.</strong> Configuring database</a></li><li class="chapter-item expanded "><a href="fleetSim.html"><strong aria-hidden="true">3.</strong> Fleet Simulator - Setup and Configuration</a></li><li class="chapter-item expanded "><a href="Installation_NavithorServerAsAService.html"><strong aria-hidden="true">4.</strong> Server as a service</a></li><li class="chapter-item expanded "><a href="Installation_ConfiguringHotSwap.html"><strong aria-hidden="true">5.</strong> Server Hot Swap with Failover Cluster</a></li><li class="chapter-item expanded "><a href="Installation_RebrandingNavithor.html"><strong aria-hidden="true">6.</strong> Server and Client Rebranding</a></li><li class="chapter-item expanded "><a href="Machinetool.html"><strong aria-hidden="true">7.</strong> Machine Tool</a></li><li class="chapter-item expanded "><a href="MesTester3.html"><strong aria-hidden="true">8.</strong> MES Tester</a></li><li class="chapter-item expanded affix "><li class="part-title">Desktop client</li><li class="chapter-item expanded "><a href="navithorServerAndClientMegaDocument.html"><strong aria-hidden="true">9.</strong> System Overview and user instructions for Client UI</a></li><li class="chapter-item expanded "><a href="Feature_ClientUpdater.html"><strong aria-hidden="true">10.</strong> Client Updater</a></li><li class="chapter-item expanded affix "><li class="part-title">Web client</li><li class="chapter-item expanded "><a href="Installation_SettingUpNavithorWebServer.html"><strong aria-hidden="true">11.</strong> Setting up Web server to enable Web client</a></li><li class="chapter-item expanded "><a href="webClient.html"><strong aria-hidden="true">12.</strong> Web Client - User Instructions</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="bestProductionPractices.html"><strong aria-hidden="true">13.</strong> Best Practices for Creating Production Area</a></li><li class="chapter-item expanded affix "><li class="part-title">Logs</li><li class="chapter-item expanded "><a href="Navithor logs.html"><strong aria-hidden="true">14.</strong> Navithor Logs</a></li><li class="chapter-item expanded "><a href="Feature_VisualReplay.html"><strong aria-hidden="true">15.</strong> Visual Replay</a></li><li class="chapter-item expanded "><a href="Feature_DownloadManager.html"><strong aria-hidden="true">16.</strong> Log Download Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">Users</li><li class="chapter-item expanded "><a href="Installation_UsingActiveDirectoryForAuthentication.html"><strong aria-hidden="true">17.</strong> User authentication against Active Directory</a></li><li class="chapter-item expanded "><a href="userRoles.html"><strong aria-hidden="true">18.</strong> User Management</a></li><li class="chapter-item expanded "><a href="userRolesRightsMatrix.html"><strong aria-hidden="true">19.</strong> Default User roles and User rights matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Features</li><li class="chapter-item expanded "><a href="symbolicPointGroups.html"><strong aria-hidden="true">20.</strong> Symbolic Point Groups</a></li><li class="chapter-item expanded "><a href="ResourceHandling.html"><strong aria-hidden="true">21.</strong> Resource handling</a></li><li class="chapter-item expanded "><a href="hold-release.html"><strong aria-hidden="true">22.</strong> Hold-Release reasoning and production order lists</a></li><li class="chapter-item expanded "><a href="transfer requests.html"><strong aria-hidden="true">23.</strong> Transfer requests</a></li><li class="chapter-item expanded "><a href="racking.html"><strong aria-hidden="true">24.</strong> Using warehouse racking feature</a></li><li class="chapter-item expanded "><a href="bufferLanes.html"><strong aria-hidden="true">25.</strong> Using Buffer Lanes</a></li><li class="chapter-item expanded "><a href="Feature_ChargingManagement.html"><strong aria-hidden="true">26.</strong> Managing Battery Levels</a></li><li class="chapter-item expanded "><a href="oneMachineZones.html"><strong aria-hidden="true">27.</strong> Using One Machine Zones</a></li><li class="chapter-item expanded "><a href="distanceControlZones.html"><strong aria-hidden="true">28.</strong> Distance Control Zones</a></li><li class="chapter-item expanded "><a href="FireAlarmZones.html"><strong aria-hidden="true">29.</strong> Fire Alarm Zones</a></li><li class="chapter-item expanded "><a href="Zone status use cases.html"><strong aria-hidden="true">30.</strong> Zone status use cases</a></li><li class="chapter-item expanded "><a href="tagStatuses.html"><strong aria-hidden="true">31.</strong> Tag Statuses</a></li><li class="chapter-item expanded "><a href="Trafficlights.html" class="active"><strong aria-hidden="true">32.</strong> Traffic Lights</a></li><li class="chapter-item expanded "><a href="Feature_Elevators.html"><strong aria-hidden="true">33.</strong> Elevators</a></li><li class="chapter-item expanded "><a href="ProductionBreak.html"><strong aria-hidden="true">34.</strong> Production Break</a></li><li class="chapter-item expanded "><a href="DynamicSafetyBounds.html"><strong aria-hidden="true">35.</strong> Virtual Dynamic Safety Bounds</a></li><li class="chapter-item expanded "><a href="WaitingSlots.html"><strong aria-hidden="true">36.</strong> Wait Queue Locations</a></li><li class="chapter-item expanded "><a href="CoupledDrive.html"><strong aria-hidden="true">37.</strong> Coupled Drive</a></li><li class="chapter-item expanded "><a href="Feature_StoppingPointOffsetsForSymbolicPoints.html"><strong aria-hidden="true">38.</strong> Stopping Point Offsets</a></li><li class="chapter-item expanded "><a href="TCStopPoint.html"><strong aria-hidden="true">39.</strong> Safe stopping point calculation</a></li><li class="chapter-item expanded "><a href="Navithor statistics.html"><strong aria-hidden="true">40.</strong> System Statistics</a></li><li class="chapter-item expanded "><a href="MachineInterfaces.html"><strong aria-hidden="true">41.</strong> Machine Interfaces</a></li><li class="chapter-item expanded affix "><li class="part-title">Interfaces</li><li class="chapter-item expanded "><a href="Communication specification between Navithor and MES.html"><strong aria-hidden="true">42.</strong> MES Interface</a></li><li class="chapter-item expanded "><a href="NavithorHttpApi.html"><strong aria-hidden="true">43.</strong> HTTP API</a></li><li class="chapter-item expanded "><a href="NavithorWebApi.html"><strong aria-hidden="true">44.</strong> WebSocket API</a></li><li class="chapter-item expanded "><a href="opcuadoc.html"><strong aria-hidden="true">45.</strong> OPC UA Server interface</a></li><li class="chapter-item expanded affix "><li class="part-title">Alarms</li><li class="chapter-item expanded "><a href="Fleet Control Alarms.html"><strong aria-hidden="true">46.</strong> Alarms</a></li><li class="chapter-item expanded "><a href="Alarms configuration override.html"><strong aria-hidden="true">47.</strong> Alarms configuration override</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NAVITHOR USER INSTRUCTIONS</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="trafficlights"><a class="header" href="#trafficlights">Trafficlights</a></h1>
+<p>This document contains information on how to use the trafficlights feature.</p>
+<p>Updated 27.01.2021</p>
+<h2 id="version-history"><a class="header" href="#version-history">Version History</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead><tbody>
+<tr><td>1.0</td><td>27.01.2021</td><td>Samuli Vaara</td><td>Initial documentation</td></tr>
+<tr><td>1.1</td><td>11.06.2021</td><td>Aleksi Ålander</td><td>Renamed title, minor formating corrections.</td></tr>
+<tr><td>1.2</td><td>16.08.2022</td><td>Samuli Vaara</td><td>QueueCount and PassCount information added</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="quick-overview"><a class="header" href="#quick-overview">Quick Overview</a></h2>
+<p>Trafficlights provides a way to control traffic with external commands at intersections. Navithor will request a status for the trafficlight and provide information on how many AGVs are waiting to pass the trafficlight and also report a priority based on the the AGVs current task and state. The external system that controls has the authority over the control of the trafficlights, Navithor cannot control the state of the trafficlights on its own. There are three MES messages that are used by this feature. TrafficLightStatus, TrafficLightStatusRequest and MESMessageSubscription.</p>
+<h2 id="adding-trafficlights"><a class="header" href="#adding-trafficlights">Adding trafficlights</a></h2>
+<p><img src="./Images/Trafficlights/TrafficlightSymbol.png" alt="" /></p>
+<blockquote>
+<p>Trafficlight Symbolic Point</p>
+</blockquote>
+<p>Trafficlights are defined as symbolicpoints and they are added the same way as any other symbolicpoint. They must be placed on a route where only one lane is enabled as moving against the traffic light is not allowed.</p>
+<p><img src="./Images/Trafficlights/TrafficlightDist.png" alt="" /></p>
+<blockquote>
+<p>Trafficlight Distance</p>
+</blockquote>
+<p>Only addition with trafficlight symbolic points is that you are able to define a distance. The distance represent a distance before the trafficlight where Navithor will send requests to subscribed MES clients that controls the trafficlights when it detects AGVs waiting to pass. More about the functionality in the Functionality section.</p>
+<img src="./Images/Trafficlights/TrafficlightZone.png" style="zoom:80%;" />
+<blockquote>
+<p>Trafficlight Zone</p>
+</blockquote>
+<p>For trafficlights to properly work, you must also define a zone. The ID of the zone becomes the group ID for the traffic light. This zone should contain all trafficlights of an intersection along with the intersection area. After an AGV passes a trafficlight, Navithor will keep on requesting Green status for the trafficlight until the AGV leaves the zone.</p>
+<h3 id="limitations"><a class="header" href="#limitations">Limitations</a></h3>
+<p>There are currently two additional limitation for this feature.</p>
+<div class="table-wrapper"><table><thead><tr><th>Image</th><th>Description</th></tr></thead><tbody>
+<tr><td><img src="./Images/Trafficlights/NotAllowedOverlap.png" alt="" /></td><td>Single trafficlight must <strong>NOT</strong> be part of of multiple trafficlight zones.</td></tr>
+<tr><td><img src="./Images/Trafficlights/NotAllowedQueue.png" alt="" /></td><td>Queues of trafficlights must <strong>NOT</strong> overlap.</td></tr>
+</tbody></table>
+</div>
+<h2 id="functionality"><a class="header" href="#functionality">Functionality</a></h2>
+<h3 id="changing-status-of-a-trafficlight"><a class="header" href="#changing-status-of-a-trafficlight">Changing status of a trafficlight</a></h3>
+<p>AGVs are only allowed to pass through a trafficlight when the status is set green. This status is set by the MES message <strong>TrafficLightStatus</strong>. Navithor does not control the lights in any way. However, if the status message is not received within 20 seconds (default), the status of the light is considered None</p>
+<h3 id="subscribing-to-traffic-lights"><a class="header" href="#subscribing-to-traffic-lights">Subscribing to traffic lights</a></h3>
+<p>It is possible to subscribe to trafficlights with <strong>MESMessageSubscription</strong> message. Subscribing allows Navithor to send <strong>TrafficLightStatusRequest</strong> messages periodically to the subscribing client. You can define the interval in the subscription message with the fields <em>IntervalGreen</em> and <em>IntervalNone</em>. <em>IntervalGreen</em> is used when requested status is green, in all other cases <em>IntervalNone</em> is used. Setting <em>IntervalNone</em> also changes the status validity time (default 20 seconds) to 2 * <em>IntervaNone</em></p>
+<h3 id="trafficlight-status-requests"><a class="header" href="#trafficlight-status-requests">Trafficlight status requests</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Information</th><th>Description</th></tr></thead><tbody>
+<tr><td>ID</td><td>ID of the trafficlight.</td></tr>
+<tr><td>Group</td><td>Group ID of the trafficlight.</td></tr>
+<tr><td>RequestedStatus</td><td>Status navithor is requesting.</td></tr>
+<tr><td>Priority</td><td>Highest priority of AGVs in queue to the trafficlight.</td></tr>
+<tr><td>QueueCount</td><td>Amount of AGVs behind the trafficlight, waiting to pass.</td></tr>
+<tr><td>PassCount</td><td>Amount of AGVs that have passed the trafficlight but are still inside the intersection area.</td></tr>
+</tbody></table>
+</div>
+<p>The status requests provide information about how many AGVs are waiting behind the trafficlights, amount of AGVs that have passed but are still within the intersection area, highest Priority of the AGVs in queue, and what status is requested. Once an AGV enters the queuing area of a trafficlight, Navithor will request the status to be set green. It will continue to do so until there are no AGVs in the queue. After the status is set green, AGVs will move past the trafficlight. Navithor will keep on requesting status green until the AGV has moved out of the trafficlight area.</p>
+<h2 id="modifying-trafficlight-icons"><a class="header" href="#modifying-trafficlight-icons">Modifying trafficlight icons</a></h2>
+<p>If you wish to modify how the trafficlights look like, it can easily be done by replacing the trafficlight icons in the clients Icons folder. Same goes for other symbolic point icons.</p>
+<div class="table-wrapper"><table><thead><tr><th>TrafficLightNone</th><th>TrafficlightGreen</th><th>TrafficLightYellow</th><th>TrafficLightRed</th></tr></thead><tbody>
+<tr><td><img src="./Images/Trafficlights/TrafficLightNone.png" alt="" /></td><td><img src="./Images/Trafficlights/TrafficLightGreen.png" alt="" /></td><td><img src="./Images/Trafficlights/TrafficLightYellow.png" alt="" /></td><td><img src="./Images/Trafficlights/TrafficLightRed.png" alt="" /></td></tr>
+</tbody></table>
+</div>
+<h2 id="mes-messages"><a class="header" href="#mes-messages">MES Messages</a></h2>
+<p>See more detailed explanations from the document  Communication specification between Navithor and MES.</p>
+<h3 id="trafficlightstatusrequest-id--346"><a class="header" href="#trafficlightstatusrequest-id--346">TrafficLightStatusRequest (ID = 346)</a></h3>
+<p>Trafficlight status request sent to all subscribed MES clients. Informs AGV count, priority and the status requested.</p>
+<h3 id="trafficlightstatus-id--347"><a class="header" href="#trafficlightstatus-id--347">TrafficLightStatus (ID = 347)</a></h3>
+<p>This message is used to control the status of a trafficlight.</p>
+<h3 id="mesmessagesubscription-id--348"><a class="header" href="#mesmessagesubscription-id--348">MESMessageSubscription (ID = 348)</a></h3>
+<p>This message is used to subscribe to various messages.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="tagStatuses.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="Feature_Elevators.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="tagStatuses.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="Feature_Elevators.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

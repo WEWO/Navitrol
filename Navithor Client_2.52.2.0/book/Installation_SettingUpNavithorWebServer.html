@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Setting up Web server to enable Web client - NAVITHOR USER INSTRUCTIONS</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="Installation_NavithorHardwareRequirements.html"><strong aria-hidden="true">1.</strong> System Hardware Requirement Specifications</a></li><li class="chapter-item expanded "><a href="Installation_SQLServerAndDatabaseInstallationGuide.html"><strong aria-hidden="true">2.</strong> Configuring database</a></li><li class="chapter-item expanded "><a href="fleetSim.html"><strong aria-hidden="true">3.</strong> Fleet Simulator - Setup and Configuration</a></li><li class="chapter-item expanded "><a href="Installation_NavithorServerAsAService.html"><strong aria-hidden="true">4.</strong> Server as a service</a></li><li class="chapter-item expanded "><a href="Installation_ConfiguringHotSwap.html"><strong aria-hidden="true">5.</strong> Server Hot Swap with Failover Cluster</a></li><li class="chapter-item expanded "><a href="Installation_RebrandingNavithor.html"><strong aria-hidden="true">6.</strong> Server and Client Rebranding</a></li><li class="chapter-item expanded "><a href="Machinetool.html"><strong aria-hidden="true">7.</strong> Machine Tool</a></li><li class="chapter-item expanded "><a href="MesTester3.html"><strong aria-hidden="true">8.</strong> MES Tester</a></li><li class="chapter-item expanded affix "><li class="part-title">Desktop client</li><li class="chapter-item expanded "><a href="navithorServerAndClientMegaDocument.html"><strong aria-hidden="true">9.</strong> System Overview and user instructions for Client UI</a></li><li class="chapter-item expanded "><a href="Feature_ClientUpdater.html"><strong aria-hidden="true">10.</strong> Client Updater</a></li><li class="chapter-item expanded affix "><li class="part-title">Web client</li><li class="chapter-item expanded "><a href="Installation_SettingUpNavithorWebServer.html" class="active"><strong aria-hidden="true">11.</strong> Setting up Web server to enable Web client</a></li><li class="chapter-item expanded "><a href="webClient.html"><strong aria-hidden="true">12.</strong> Web Client - User Instructions</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="bestProductionPractices.html"><strong aria-hidden="true">13.</strong> Best Practices for Creating Production Area</a></li><li class="chapter-item expanded affix "><li class="part-title">Logs</li><li class="chapter-item expanded "><a href="Navithor logs.html"><strong aria-hidden="true">14.</strong> Navithor Logs</a></li><li class="chapter-item expanded "><a href="Feature_VisualReplay.html"><strong aria-hidden="true">15.</strong> Visual Replay</a></li><li class="chapter-item expanded "><a href="Feature_DownloadManager.html"><strong aria-hidden="true">16.</strong> Log Download Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">Users</li><li class="chapter-item expanded "><a href="Installation_UsingActiveDirectoryForAuthentication.html"><strong aria-hidden="true">17.</strong> User authentication against Active Directory</a></li><li class="chapter-item expanded "><a href="userRoles.html"><strong aria-hidden="true">18.</strong> User Management</a></li><li class="chapter-item expanded "><a href="userRolesRightsMatrix.html"><strong aria-hidden="true">19.</strong> Default User roles and User rights matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Features</li><li class="chapter-item expanded "><a href="symbolicPointGroups.html"><strong aria-hidden="true">20.</strong> Symbolic Point Groups</a></li><li class="chapter-item expanded "><a href="ResourceHandling.html"><strong aria-hidden="true">21.</strong> Resource handling</a></li><li class="chapter-item expanded "><a href="hold-release.html"><strong aria-hidden="true">22.</strong> Hold-Release reasoning and production order lists</a></li><li class="chapter-item expanded "><a href="transfer requests.html"><strong aria-hidden="true">23.</strong> Transfer requests</a></li><li class="chapter-item expanded "><a href="racking.html"><strong aria-hidden="true">24.</strong> Using warehouse racking feature</a></li><li class="chapter-item expanded "><a href="bufferLanes.html"><strong aria-hidden="true">25.</strong> Using Buffer Lanes</a></li><li class="chapter-item expanded "><a href="Feature_ChargingManagement.html"><strong aria-hidden="true">26.</strong> Managing Battery Levels</a></li><li class="chapter-item expanded "><a href="oneMachineZones.html"><strong aria-hidden="true">27.</strong> Using One Machine Zones</a></li><li class="chapter-item expanded "><a href="distanceControlZones.html"><strong aria-hidden="true">28.</strong> Distance Control Zones</a></li><li class="chapter-item expanded "><a href="FireAlarmZones.html"><strong aria-hidden="true">29.</strong> Fire Alarm Zones</a></li><li class="chapter-item expanded "><a href="Zone status use cases.html"><strong aria-hidden="true">30.</strong> Zone status use cases</a></li><li class="chapter-item expanded "><a href="tagStatuses.html"><strong aria-hidden="true">31.</strong> Tag Statuses</a></li><li class="chapter-item expanded "><a href="Trafficlights.html"><strong aria-hidden="true">32.</strong> Traffic Lights</a></li><li class="chapter-item expanded "><a href="Feature_Elevators.html"><strong aria-hidden="true">33.</strong> Elevators</a></li><li class="chapter-item expanded "><a href="ProductionBreak.html"><strong aria-hidden="true">34.</strong> Production Break</a></li><li class="chapter-item expanded "><a href="DynamicSafetyBounds.html"><strong aria-hidden="true">35.</strong> Virtual Dynamic Safety Bounds</a></li><li class="chapter-item expanded "><a href="WaitingSlots.html"><strong aria-hidden="true">36.</strong> Wait Queue Locations</a></li><li class="chapter-item expanded "><a href="CoupledDrive.html"><strong aria-hidden="true">37.</strong> Coupled Drive</a></li><li class="chapter-item expanded "><a href="Feature_StoppingPointOffsetsForSymbolicPoints.html"><strong aria-hidden="true">38.</strong> Stopping Point Offsets</a></li><li class="chapter-item expanded "><a href="TCStopPoint.html"><strong aria-hidden="true">39.</strong> Safe stopping point calculation</a></li><li class="chapter-item expanded "><a href="Navithor statistics.html"><strong aria-hidden="true">40.</strong> System Statistics</a></li><li class="chapter-item expanded "><a href="MachineInterfaces.html"><strong aria-hidden="true">41.</strong> Machine Interfaces</a></li><li class="chapter-item expanded affix "><li class="part-title">Interfaces</li><li class="chapter-item expanded "><a href="Communication specification between Navithor and MES.html"><strong aria-hidden="true">42.</strong> MES Interface</a></li><li class="chapter-item expanded "><a href="NavithorHttpApi.html"><strong aria-hidden="true">43.</strong> HTTP API</a></li><li class="chapter-item expanded "><a href="NavithorWebApi.html"><strong aria-hidden="true">44.</strong> WebSocket API</a></li><li class="chapter-item expanded "><a href="opcuadoc.html"><strong aria-hidden="true">45.</strong> OPC UA Server interface</a></li><li class="chapter-item expanded affix "><li class="part-title">Alarms</li><li class="chapter-item expanded "><a href="Fleet Control Alarms.html"><strong aria-hidden="true">46.</strong> Alarms</a></li><li class="chapter-item expanded "><a href="Alarms configuration override.html"><strong aria-hidden="true">47.</strong> Alarms configuration override</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NAVITHOR USER INSTRUCTIONS</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="setting-up-web-server-to-enable-web-client"><a class="header" href="#setting-up-web-server-to-enable-web-client">Setting up Web server to enable Web client</a></h1>
+<p>This document contains information on how to install and configure Web Server for Navithor Web Client.</p>
+<p>Updated 28.07.2022</p>
+<h2 id="version-history"><a class="header" href="#version-history">Version history</a></h2>
+<div class="table-wrapper"><table><thead><tr><th><strong>Version</strong></th><th><strong>Date</strong></th><th><strong>Author</strong></th><th><strong>Description</strong></th></tr></thead><tbody>
+<tr><td>1.0</td><td>15.01.2021</td><td>Tommi Kärki</td><td>Migrated from another document</td></tr>
+<tr><td>1.1</td><td>15.04.2021</td><td>Tero Laakso</td><td>Instructions for easy installation</td></tr>
+<tr><td>1.2</td><td>11.06.2021</td><td>Aleksi Ålander</td><td>Renamed title</td></tr>
+<tr><td>1.3</td><td>04.02.2022</td><td>Tero Laakso-Pitkäkoski</td><td>Navithor Server.exe configuration moved to ServerSettings.json</td></tr>
+<tr><td>1.4</td><td>28.07.2022</td><td>Elena Sgonova</td><td>Updated instructions with troubleshooting hints</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="navithor-web-client-installation"><a class="header" href="#navithor-web-client-installation">Navithor Web Client installation</a></h2>
+<p>Navithor Web Client installation package is delivered as a ZIP file, with content similar to this:
+<img src="Images/navithorWebServer-required-files.png" alt="" /></p>
+<p>Extract this package to the Navithor Server folder. Making sure that the index.html file is in same folder as Navithor Server executable.</p>
+<h3 id="general-configurations"><a class="header" href="#general-configurations">General configurations</a></h3>
+<p>Configure web server ports and encryption in <strong>ConfigFiles/ServerSettings.json</strong>. Default settings are listed below. If <em><strong>UseWebServer</strong></em> is false the other settings don't affect anything and Web Client can't be reached.</p>
+<pre><code class="language-json">{  
+    &quot;UseWebServer&quot;: true,  
+    &quot;UseHttps&quot;: false,  
+    &quot;WebClientPort&quot;: 1234,  
+    &quot;WebSocketPort&quot;: 8083,  
+    &quot;WebClientCertCommonName&quot;: &quot;MCSServer&quot;  
+}  
+</code></pre>
+<p>After configurations are saved, start Navithor Server executable. First execution after Web Client configuration changes will run automatic HTTP server configurations. Server will ask for Administrator permissions to do so and it will restart once done. It is advisable to turn off <em><strong>RunAsService</strong></em> configuration while setting up Web Client or changing its settings.</p>
+<p>If <em><strong>UseHttps</strong></em> is set to true, both the request-response communication and web socket communication will use SSL (https and wss). Using SSL requires that a valid certificate is configured to the system certificate manager, see next chapter. <em><strong>SSL is highly encouraged since otherwise username and password will go through the network in plaintext.</strong></em></p>
+<h3 id="steps-to-configure-ssl"><a class="header" href="#steps-to-configure-ssl">Steps to configure SSL</a></h3>
+<h4 id="ssl-certificate-generation"><a class="header" href="#ssl-certificate-generation">SSL certificate generation</a></h4>
+<h5 id="generate-a-certificate-if-one-does-not-already-exist"><a class="header" href="#generate-a-certificate-if-one-does-not-already-exist">Generate a certificate if one does not already exist</a></h5>
+<p>A tool for generating self-signed certificate is OpenSSL. A windows version can be downloaded from https://slproweb.com/products/Win32OpenSSL.html</p>
+<p>The certificate is generated using the following steps:</p>
+<ol>
+<li>Navigate to openssl.exe folder (Default path: ...\Program Files\OpenSSL\bin)</li>
+<li>From command line run the following command: <code>openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem</code></li>
+<li>Fill in needed information for your organization</li>
+<li>From command line run the following command: <code>openssl pkcs12 -export -in cert.pem -inkey key.pem -out mycert.pfx</code></li>
+</ol>
+<h5 id="import-the-certificate-with-windows-certificate-manager"><a class="header" href="#import-the-certificate-with-windows-certificate-manager">Import the certificate with Windows Certificate Manager</a></h5>
+<ol>
+<li>Type &quot;<strong>manage computer certificates</strong>&quot; to windows search and click the search result to open &quot;certlm&quot;-window</li>
+<li>Right click Personal-&gt;All tasks-&gt;Import.</li>
+</ol>
+<p><img src="Images/navithorWebServer-importCertificates.png" alt="" /></p>
+<ol start="3">
+<li>Browse for the created certificate.</li>
+<li>Don't set password and just click next until the final.</li>
+</ol>
+<h4 id="navithor-ssl-configuration"><a class="header" href="#navithor-ssl-configuration">Navithor SSL configuration</a></h4>
+<p>Set <em><strong>WebClientCertCommonName</strong></em> parameter in Navithor Server config file to match with the Common Name of the certificate you have imported (visible in &quot;certlm&quot;). Run Navithor Server, it will detect the changes in Web Client configuration and ask for elevated permissions to change the configuration.</p>
+<h2 id="manual-setup"><a class="header" href="#manual-setup">Manual setup</a></h2>
+<p>In environments where running Navithor Server as Administrator when doing the installation is not possible or something else prevents Navithor to automatically change the HTTP bindings to match the configuration, HTTP and SSL cert bindings require manual steps for the Web Client to work.</p>
+<h3 id="steps-to-configure-ssl-1"><a class="header" href="#steps-to-configure-ssl-1">Steps to configure SSL</a></h3>
+<p>After successfully importing the certificate following the steps in section &quot;SSL certificate generation&quot;, double click the created certificate from &quot;certlm&quot;-window: <em>Personal/Certificates</em>, select details page and click the thumbprint at the bottom of the list.</p>
+<p><img src="Images/navithorWebServer-thumbprint.png" alt="" /></p>
+<p>Copy the following commands to notepad and insert the certificate's <em>thumbprint</em> from details page to the <strong>certhash</strong> parameter. Also replace the <em>webClientPort</em> and <em>webSocketPort</em> with the configured <em>ports</em>.</p>
+<p><code>netsh http add sslcert ipport=0.0.0.0:</code><em>webClientPort</em>
+<code>certhash=</code><em>thumbprint</em>
+<code>appid=</code><em>{06aabebd-3a91-4b80-8a15-adfd3c8a0b14}</em></p>
+<p><code>netsh http add sslcert ipport=0.0.0.0:</code><em>webSocketPort</em>
+<code>certhash=</code><em>thumbprint</em>
+<code>appid=</code><em>{06aabebd-3a91-4b80-8a15-adfd3c8a0b14}</em></p>
+<p>An example:</p>
+<p>Run the following commands from command prompt as administrator:</p>
+<p><code>netsh http add sslcert ipport=0.0.0.0:1234 certhash=0d33e372be476ebd58f1c9e651fadabab40898da appid={06aabebd-3a91-4b80-8a15-adfd3c8a0b14}</code></p>
+<p><code>netsh http add sslcert ipport=0.0.0.0:8083 certhash=0d33e372be476ebd58f1c9e651fadabab40898da appid={06aabebd-3a91-4b80-8a15-adfd3c8a0b14}</code></p>
+<h3 id="steps-to-create-correct-url-reservations"><a class="header" href="#steps-to-create-correct-url-reservations">Steps to create correct url reservations</a></h3>
+<p>To use the web server, make sure that the correct urls are reserved for non-administrator users and accounts. Open command prompt with administrator privileges.</p>
+<p>Copy the following commands to notepad and replace ports with the configured ports. Replace also the user parameter with the correct user. <strong>Leave the</strong> <strong>port 8082</strong> and protocol as is since it is an internal communication port between Navithor and web server. Use https if you wish to use SSL encryption with the web server, but only for client and websocket ports. Port 8082 should always have http.</p>
+<p><code>netsh http add urlacl url=https://+:</code><em>webClientPort</em><code>/ user=</code><em>USER</em></p>
+<p><code>netsh http add urlacl url=https://+:</code><em>webSocketPort</em><code>/mcsserver/ user=</code><em>USER</em></p>
+<p><code>netsh http add urlacl url=http://+:8082/mcsserver/ user=</code><em>USER</em></p>
+<p>An example:</p>
+<p><code>netsh http add urlacl url=https://+:1234/ user=Everyone</code></p>
+<p>Note that the user has to be defined in the same language than the operating system. For example, the user in Denmark should be &quot;Alle&quot; instead of Everyone.</p>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="general-notes"><a class="header" href="#general-notes">General notes</a></h3>
+<p>Make sure url reservations were correct. Run <code>netsh http show urlacl</code> on command prompt and verify that correct ports and protocols were configured both in netsh and in the <strong>ConfigFiles/ServerSettings.json</strong>. Below an example without SSL.</p>
+<p><img src="Images/navithorWebServer-example-no-ssl.png" alt="" /></p>
+<pre><code class="language-json">{  
+    &quot;UseWebServer&quot;: true,  
+    &quot;UseHttps&quot;: false,  
+    &quot;WebClientPort&quot;: 1234,  
+    &quot;WebSocketPort&quot;: 8083,  
+    &quot;WebClientCertCommonName&quot;: &quot;MCSServer&quot;  
+}  
+</code></pre>
+<p>If <strong>useHttps</strong> is set to <em>true</em>, make sure that https is set on the netsh http reservations and check that the correct ports and certificate hash are shown in <code>netsh http show sslcert</code>. Below an example with SSL.</p>
+<p><img src="Images/navithorWebServer-example-ssl-enabled1.png" alt="" /></p>
+<p><img src="Images/navithorWebServer-example-ssl-enabled2.png" alt="" /></p>
+<p>As always <em><strong>make sure that the firewalls do not block connections</strong></em> to the configured web server ports.</p>
+<h3 id="fixing-wrong-configurations"><a class="header" href="#fixing-wrong-configurations">Fixing wrong configurations</a></h3>
+<p>Fixing wrong configurations can only be done by first deleting the wrong reservation and then adding the configuration again. Deleting http reservation is done with command:</p>
+<p><code>netsh http delete urlacl url=</code><em>protocol</em><code>://+:</code><em>port</em><code>/</code></p>
+<p>An example:</p>
+<p><code>netsh http delete urlacl url=https://+:1234/</code></p>
+<h3 id="fixing-error-183-cannot-create-a-file-when-that-file-already-exists"><a class="header" href="#fixing-error-183-cannot-create-a-file-when-that-file-already-exists">Fixing Error: 183 Cannot create a file when that file already exists</a></h3>
+<p>In case the error message &quot;SSL Certificate add failed, Error: 183 Cannot create a file when that file already exists&quot; is shown, run following commands:</p>
+<p><code>netsh http delete sslcert ipport=0.0.0.0:</code><em>WebClientPort</em></p>
+<p><code>netsh http delete sslcert ipport=0.0.0.0:</code><em>WebSocketPort</em></p>
+<p>An example:</p>
+<p><code>netsh http delete sslcert ipport=0.0.0.0:1234</code></p>
+<p><code>netsh http delete sslcert ipport=0.0.0.0:8083</code></p>
+<h3 id="fixing-websocket-not-receiving-data-from-server"><a class="header" href="#fixing-websocket-not-receiving-data-from-server">Fixing websocket not receiving data from server</a></h3>
+<p>One sign of websocket not receiving data is when user can successfully log in and Web Client UI is loaded but dynamic data (i.e. AGVs or symbolic points statuses) is not being updated and <em>&quot;Offline mode - No server connection&quot;</em> message is displayed <strong>but the server is running</strong>. This happens in some browsers when using HTTPS protocol and browser does not trust self signed certificate.</p>
+<p>Possible solution to this issue:</p>
+<ol>
+<li>
+<p>Import a certificate to <em>Trusted Root Certification Authorities</em> with Windows Certificate Manager</p>
+</li>
+<li>
+<p>Add an exception in the browser security settings. Server URL must contain websocket port as shown in the example:</p>
+</li>
+</ol>
+<p><img src="Images/certificateIssues1.png" alt="" /></p>
+<h2 id="running-web-server"><a class="header" href="#running-web-server">Running web server</a></h2>
+<p>Web server is hosted in the Navithor server application. If all steps in this chapter are successfully done, then starting Navithor server will also start the webserver and the Web Client can be reached. And if not, the server launcher will get stuck at &quot;Initializing connections...&quot; state. In that case - see the previous subchapter: Troubleshooting</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="Feature_ClientUpdater.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="webClient.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="Feature_ClientUpdater.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="webClient.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

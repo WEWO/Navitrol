@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Transfer requests - NAVITHOR USER INSTRUCTIONS</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="Installation_NavithorHardwareRequirements.html"><strong aria-hidden="true">1.</strong> System Hardware Requirement Specifications</a></li><li class="chapter-item expanded "><a href="Installation_SQLServerAndDatabaseInstallationGuide.html"><strong aria-hidden="true">2.</strong> Configuring database</a></li><li class="chapter-item expanded "><a href="fleetSim.html"><strong aria-hidden="true">3.</strong> Fleet Simulator - Setup and Configuration</a></li><li class="chapter-item expanded "><a href="Installation_NavithorServerAsAService.html"><strong aria-hidden="true">4.</strong> Server as a service</a></li><li class="chapter-item expanded "><a href="Installation_ConfiguringHotSwap.html"><strong aria-hidden="true">5.</strong> Server Hot Swap with Failover Cluster</a></li><li class="chapter-item expanded "><a href="Installation_RebrandingNavithor.html"><strong aria-hidden="true">6.</strong> Server and Client Rebranding</a></li><li class="chapter-item expanded "><a href="Machinetool.html"><strong aria-hidden="true">7.</strong> Machine Tool</a></li><li class="chapter-item expanded "><a href="MesTester3.html"><strong aria-hidden="true">8.</strong> MES Tester</a></li><li class="chapter-item expanded affix "><li class="part-title">Desktop client</li><li class="chapter-item expanded "><a href="navithorServerAndClientMegaDocument.html"><strong aria-hidden="true">9.</strong> System Overview and user instructions for Client UI</a></li><li class="chapter-item expanded "><a href="Feature_ClientUpdater.html"><strong aria-hidden="true">10.</strong> Client Updater</a></li><li class="chapter-item expanded affix "><li class="part-title">Web client</li><li class="chapter-item expanded "><a href="Installation_SettingUpNavithorWebServer.html"><strong aria-hidden="true">11.</strong> Setting up Web server to enable Web client</a></li><li class="chapter-item expanded "><a href="webClient.html"><strong aria-hidden="true">12.</strong> Web Client - User Instructions</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="bestProductionPractices.html"><strong aria-hidden="true">13.</strong> Best Practices for Creating Production Area</a></li><li class="chapter-item expanded affix "><li class="part-title">Logs</li><li class="chapter-item expanded "><a href="Navithor logs.html"><strong aria-hidden="true">14.</strong> Navithor Logs</a></li><li class="chapter-item expanded "><a href="Feature_VisualReplay.html"><strong aria-hidden="true">15.</strong> Visual Replay</a></li><li class="chapter-item expanded "><a href="Feature_DownloadManager.html"><strong aria-hidden="true">16.</strong> Log Download Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">Users</li><li class="chapter-item expanded "><a href="Installation_UsingActiveDirectoryForAuthentication.html"><strong aria-hidden="true">17.</strong> User authentication against Active Directory</a></li><li class="chapter-item expanded "><a href="userRoles.html"><strong aria-hidden="true">18.</strong> User Management</a></li><li class="chapter-item expanded "><a href="userRolesRightsMatrix.html"><strong aria-hidden="true">19.</strong> Default User roles and User rights matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Features</li><li class="chapter-item expanded "><a href="symbolicPointGroups.html"><strong aria-hidden="true">20.</strong> Symbolic Point Groups</a></li><li class="chapter-item expanded "><a href="ResourceHandling.html"><strong aria-hidden="true">21.</strong> Resource handling</a></li><li class="chapter-item expanded "><a href="hold-release.html"><strong aria-hidden="true">22.</strong> Hold-Release reasoning and production order lists</a></li><li class="chapter-item expanded "><a href="transfer requests.html" class="active"><strong aria-hidden="true">23.</strong> Transfer requests</a></li><li class="chapter-item expanded "><a href="racking.html"><strong aria-hidden="true">24.</strong> Using warehouse racking feature</a></li><li class="chapter-item expanded "><a href="bufferLanes.html"><strong aria-hidden="true">25.</strong> Using Buffer Lanes</a></li><li class="chapter-item expanded "><a href="Feature_ChargingManagement.html"><strong aria-hidden="true">26.</strong> Managing Battery Levels</a></li><li class="chapter-item expanded "><a href="oneMachineZones.html"><strong aria-hidden="true">27.</strong> Using One Machine Zones</a></li><li class="chapter-item expanded "><a href="distanceControlZones.html"><strong aria-hidden="true">28.</strong> Distance Control Zones</a></li><li class="chapter-item expanded "><a href="FireAlarmZones.html"><strong aria-hidden="true">29.</strong> Fire Alarm Zones</a></li><li class="chapter-item expanded "><a href="Zone status use cases.html"><strong aria-hidden="true">30.</strong> Zone status use cases</a></li><li class="chapter-item expanded "><a href="tagStatuses.html"><strong aria-hidden="true">31.</strong> Tag Statuses</a></li><li class="chapter-item expanded "><a href="Trafficlights.html"><strong aria-hidden="true">32.</strong> Traffic Lights</a></li><li class="chapter-item expanded "><a href="Feature_Elevators.html"><strong aria-hidden="true">33.</strong> Elevators</a></li><li class="chapter-item expanded "><a href="ProductionBreak.html"><strong aria-hidden="true">34.</strong> Production Break</a></li><li class="chapter-item expanded "><a href="DynamicSafetyBounds.html"><strong aria-hidden="true">35.</strong> Virtual Dynamic Safety Bounds</a></li><li class="chapter-item expanded "><a href="WaitingSlots.html"><strong aria-hidden="true">36.</strong> Wait Queue Locations</a></li><li class="chapter-item expanded "><a href="CoupledDrive.html"><strong aria-hidden="true">37.</strong> Coupled Drive</a></li><li class="chapter-item expanded "><a href="Feature_StoppingPointOffsetsForSymbolicPoints.html"><strong aria-hidden="true">38.</strong> Stopping Point Offsets</a></li><li class="chapter-item expanded "><a href="TCStopPoint.html"><strong aria-hidden="true">39.</strong> Safe stopping point calculation</a></li><li class="chapter-item expanded "><a href="Navithor statistics.html"><strong aria-hidden="true">40.</strong> System Statistics</a></li><li class="chapter-item expanded "><a href="MachineInterfaces.html"><strong aria-hidden="true">41.</strong> Machine Interfaces</a></li><li class="chapter-item expanded affix "><li class="part-title">Interfaces</li><li class="chapter-item expanded "><a href="Communication specification between Navithor and MES.html"><strong aria-hidden="true">42.</strong> MES Interface</a></li><li class="chapter-item expanded "><a href="NavithorHttpApi.html"><strong aria-hidden="true">43.</strong> HTTP API</a></li><li class="chapter-item expanded "><a href="NavithorWebApi.html"><strong aria-hidden="true">44.</strong> WebSocket API</a></li><li class="chapter-item expanded "><a href="opcuadoc.html"><strong aria-hidden="true">45.</strong> OPC UA Server interface</a></li><li class="chapter-item expanded affix "><li class="part-title">Alarms</li><li class="chapter-item expanded "><a href="Fleet Control Alarms.html"><strong aria-hidden="true">46.</strong> Alarms</a></li><li class="chapter-item expanded "><a href="Alarms configuration override.html"><strong aria-hidden="true">47.</strong> Alarms configuration override</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NAVITHOR USER INSTRUCTIONS</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="transfer-requests"><a class="header" href="#transfer-requests">Transfer requests</a></h1>
+<p>This document contains an overview of using transfer requsts to move items on the shop floor</p>
+<p>Updated 02.12.2020</p>
+<h2 id="version-history"><a class="header" href="#version-history">Version History</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead><tbody>
+<tr><td>1.0</td><td>16.10.2020</td><td>Antti Parkkonen</td><td>Document created</td></tr>
+<tr><td>1.1</td><td>02.12.2020</td><td>Tommi Karki</td><td>Clarified how to set ProductionManager_CALCULATE_UNHANDLED_ORDERS_PRIORITIES_MODE</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="transfer-requests-1"><a class="header" href="#transfer-requests-1">Transfer requests</a></h2>
+<h3 id="overview"><a class="header" href="#overview">Overview</a></h3>
+<p>Simply put transfer requests tell Navithor to move an item of certain type from a specific load symbolic point or group of load symbolic points to an unload symbolic point or group of unload symbolic points. The limitations to how items can be moved around on the shop floor are configured in Navithor Tools using allowed destinations, allowed resource types and routing. By default all locations are available destinations from all symbolic points and all resource types are allowed on all symbolic points. Transfer requests that conflict against the configuration or routing are accepted in Navithor, but they'll never get executed.</p>
+<p>In Navithor Client the transfer requests are shown in the production orders view. When an AGV is assigned for the transfer request a production order is generated and shown in the production orders view.</p>
+<p><img src="./Images/transferRequests/poView.png" alt="Production order view" /></p>
+<p>Deleting a production order linked to a transfer request does not delete the transfer request. Instead the transfer request will generate another production order based on the current situation. However, deleting the transfer request deletes all production orders linked to the specific transfer request.</p>
+<p>Charging checks for the AGVs are activated whenever the AGVs do not have any production orders. When an AGVV's battery level drops low enough (defined by a parameter), the AGV will be driven to a charger that is free. In case that no charging locations are available the AGV will continue executing production orders until a charger is free or until it the battery level drops to an alarm limit. After this the AGV will just wait for a charger to be freed. There are also rules that can force a certain percentage of the fleet to be always charging to avoid situations where too many AGVs would suddenly need charging simultaneously. Navithor prioritises charging AGVs with lowest battery levels first.</p>
+<h3 id="tuning-an-area-for-transfer-requests"><a class="header" href="#tuning-an-area-for-transfer-requests">Tuning an area for transfer requests</a></h3>
+<p>There are multiple ways to control how Navithor executes transfer requests and how Navithor reacts in different cases. The most common parameter changes are related to when an AGV is allowed to start execute a transfer request and how does the AGV react if it has already picked up an item but the transfer request is cancelled. In large environments it might also be required to limit how Navithor can select AGVs in different waiting locations to execute transfer requests. The most common parameters to tune and their descriptions are listed below.</p>
+<h4 id="symbolicpoint_waitinglocation_link_targets_mode"><a class="header" href="#symbolicpoint_waitinglocation_link_targets_mode">SymbolicPoint_WAITINGLOCATION_LINK_TARGETS_MODE</a></h4>
+<p>Has two different modes 0 and 1. Mode 1 is the default value and it  is recommended.</p>
+<p>Mode 0 means that waiting locations are only linked to load and unload locations that are reacheble without driving through other waiting locations.</p>
+<p>Mode 1 links all waiting locations to all load and unload locations that are connected in the route network.</p>
+<h4 id="productionmanager_maxdisttovalidlocations"><a class="header" href="#productionmanager_maxdisttovalidlocations">ProductionManager_MaxDistToValidLocations</a></h4>
+<p>Defines how far away Navithor can send an AGV from its current position to wait for production. This parameter affects only WaitLoad locations. </p>
+<p>Default value is -1, which means that there is no limit. The distance is calculated along the route in meters.</p>
+<h4 id="missionmanager_changewaittriggerrules"><a class="header" href="#missionmanager_changewaittriggerrules">MissionManager_ChangeWaitTriggerRules</a></h4>
+<p>Modes that define if an AGV should change waiting location on some condition. Multiple conditions can be set on simultaneously</p>
+<p>Default value is None. </p>
+<h4 id="missionmanager_waitinglocationselectrule"><a class="header" href="#missionmanager_waitinglocationselectrule">MissionManager_WaitingLocationSelectRule</a></h4>
+<p>Defines how Navithor decides to which waiting location an AGV drives to wait for production. Only one mode is on at a time.</p>
+<p>Default value is FastestDriveTime. This means that Navithor selects the closest available waiting location for each AGV.</p>
+<p>Other modes are:</p>
+<p>CurrentAvailableFreeSlots, where Navithor selects the waiting locations based on available free slots. When this mode is on Navithor will try to balance the AGVs in the waiting locations where AGVs can form a queue. If all queues are equally long Navithor will choose the closest queue for the AGV.</p>
+<p>LinkedLocationPriority, Navithor selects the AGV's next waiting location based on location priority.. Priorized waiting locations can be useful in small production areas. The mode is not suitable for large areas where driving distances are very long because Navithor does not consider driving times at all when this mode is on.</p>
+<h4 id="productionmanager_calculate_unhandled_orders_priorities_mode"><a class="header" href="#productionmanager_calculate_unhandled_orders_priorities_mode">ProductionManager_CALCULATE_UNHANDLED_ORDERS_PRIORITIES_MODE</a></h4>
+<p>Default is 1, (PriorityForFastestAGV). This parameter is configured as binary bitmask where each bit enables a feature. Add the numbers together to enable different options for unhandled order assign calculation.</p>
+<ul>
+<li>None = 0</li>
+<li>PriorityForFastestAGV = 1</li>
+<li>PriorizeLocsWithAvailableUnloads = 2</li>
+<li>PriorizeLocsWithDiffAllowedUnloads = 4</li>
+<li>ApplyHandlingToTransferRequests = 8</li>
+<li>UnhandledOrdersActiveOnlyWithTransferReq = 16</li>
+<li>IgnoreTargetLocationAvailability = 32</li>
+<li>DisableOrderGenerationForResOnboard = 64</li>
+<li>TargetLocationAvailabilityRequiredForTReqs = 128</li>
+</ul>
+<p>For example when:</p>
+<ul>
+<li>Fastest AGV should be prioritized</li>
+<li>and no production order should be generated when AGV has a resource on board without order</li>
+</ul>
+<p>Then the parameter has to be set to value: 65 (64 + 1) which in binary would be: 0100 0001</p>
+<h4 id="productionmanager_allownadditionalordersfromsameloadinglocation"><a class="header" href="#productionmanager_allownadditionalordersfromsameloadinglocation">ProductionManager_AllowNAdditionalOrdersFromSameLoadingLocation</a></h4>
+<p>Default  is -1 --&gt; rule not in use</p>
+<p>Additional number of orders that are allowed from same loading location, if wait locations are already reserved. If set to 1, allows one extra order when there is already a pickup order to take out the existing resource. (at the moment only viable options are -1, or 1).</p>
+<h4 id="productionmanager_transferrequestpriorityrule"><a class="header" href="#productionmanager_transferrequestpriorityrule">ProductionManager_TransferRequestPriorityRule</a></h4>
+<p>Default is UseTransferRequestPriority</p>
+<p>Determines what priorities to use for transfer requests. Effects only when ProductionManager_UnhandledOrderSortingRule has been set to UseTimeAndExternalPriorities.</p>
+<p>Options:</p>
+<ul>
+<li>UseTransferRequestPriority  (given in TransferRequest message)</li>
+<li>UsePickupLocationPriority  (location given in message, priority defined in LocationPriorities.txt)</li>
+<li>UseTargetLocationPriority  (location given in message , priority defined in LocationPriorities.txt)</li>
+<li>UseMaximumOfPickupOrTarget</li>
+<li>UseMaximumOfPickupOrTargetOrMessage</li>
+</ul>
+<h4 id="productionmanager_pickupreserverulemode"><a class="header" href="#productionmanager_pickupreserverulemode">ProductionManager_PickupReserveRuleMode</a></h4>
+<p>Rule that defines if a TransferRequest can reserve a pickup location without a resource:</p>
+<ul>
+<li>ResourceRequired: A resource at location is required</li>
+<li>AlwaysAllowed: Reserving a location is always allowed</li>
+<li>OneLocation: Reserving a location is allowed if there is only one possibility.</li>
+</ul>
+<p>With transfer requests AGVs can start to locations in advance, before the resource is there. This might be more efficient than waiting that the resource will be there, if future can be estimated properly.</p>
+<h4 id="productionmanager_allowunloadlocationassingtoreservedloadunloadloc_rule"><a class="header" href="#productionmanager_allowunloadlocationassingtoreservedloadunloadloc_rule">ProductionManager_AllowUnloadLocationAssingToReservedLoadUnloadLoc_Rule</a></h4>
+<p>Default is true.</p>
+<p>If true, it is allowed to assign unload location as a target location to a production order even if the unload location is already full of resources.</p>
+<p>If the unload locations will be cleared quickly then this can be set to true, otherwise false is recommended.</p>
+<h4 id="productionmanager_allowunloadlocationassigntoreservedlocwithactivepickuporder_rule"><a class="header" href="#productionmanager_allowunloadlocationassigntoreservedlocwithactivepickuporder_rule">ProductionManager_AllowUnloadLocationAssignToReservedLocWithActivePickupOrder_Rule</a></h4>
+<p>Default is true.</p>
+<p>If set to true, assigning unload location is allowed, if there is an active order for another AGV to pick up the resource from this location.</p>
+<h4 id="productionmanager_transferrequestpickupavailabilityrules"><a class="header" href="#productionmanager_transferrequestpickupavailabilityrules">ProductionManager_TransferRequestPickUpAvailabilityRules</a></h4>
+<p>Navithor decides if a pickup location can be reserved for a transfer request based on the flags set on this parameter.
+This parameter is used for checking the pickup location status.
+See ProductionManager_TransferRequestTargetAvailabilityRules for rules based on target location status.</p>
+<p>FullMachineBlocks - machine with a resource at location blocks selection
+OutOfProdMachineBlocks - machine not in production at location blocks selection
+FSTOPMachineBlocks - Machine in FSTOP state at location blocks selection.</p>
+<h4 id="productionmanager_transferrequesttargetavailabilityrules"><a class="header" href="#productionmanager_transferrequesttargetavailabilityrules">ProductionManager_TransferRequestTargetAvailabilityRules</a></h4>
+<p>Navithor decides if a pickup location can be reserved for a transfer request based on the flags set on this parameter.
+This parameter is used for checking the target location status.
+See ProductionManager_TransferRequestPickUpAvailabilityRules for rules based on pickup location status.</p>
+<p>There must be at least one valid target in order to select a pickup location.</p>
+<p>ResourceBlocks - Resource at target location blocks selection
+MachineBlocks - Machine at target location blocks selection
+ActiveOrderBlocks - Any active order to target blocks selection
+AllowIfWaitAvailable - Blocked location is allowed if there is a wait location available
+AllowIfOrderToPickup - Blocked location allowed if another order is going to pick up.</p>
+<h3 id="mes-messages-related-to-transfer-requests"><a class="header" href="#mes-messages-related-to-transfer-requests">MES messages related to transfer requests</a></h3>
+<p>See more detailed explanations from the document  Communication specification between Navithor and MES.</p>
+<h4 id="set-status-at-symbolic-point-id--20"><a class="header" href="#set-status-at-symbolic-point-id--20">Set status at symbolic point (ID = 20)</a></h4>
+<p>Sending this message will either enable or disable and set resource status to the Symbolic Point. Navithor will not order drives to disabled Symbolic Points. <strong>AffixNumber</strong> was added in Navithor 1.9.26.0, the old message format without the field is still supported. <strong>AffixNumber</strong> is set to 0 if it is not included in the message. <strong>RequestPickup</strong> field is supported since Navithor version 1.9.60.0 and above.</p>
+<h4 id="set-resources-to-symbolic-point-id--32"><a class="header" href="#set-resources-to-symbolic-point-id--32">Set resources to symbolic point (ID = 32)</a></h4>
+<p>Sets resources to location. If same data is being sent the resources at location will not change. If order of <em>MESResourceAtLocation</em> is changed or if any of data is different from what Navithor thinks then the resources will be regenerated.</p>
+<h4 id="transfer-request-id--21"><a class="header" href="#transfer-request-id--21">Transfer request (ID = 21)</a></h4>
+<p>Sending this message will result Navithor to create a production source to the pickup Symbolic Point. Navithor will assign machines that can carry the item type to the target Symbolic Point to fulfil the transfer request. Used together with <em>SetStatusAtSymbolicPoint</em> message. Start production from a symbolic with this message and inform the actual resource to be available at the location with message <em>SetStatusAtSymbolicPoint</em>. Fields <strong>Priority</strong> and <strong>RequestID</strong> are supported since Navithor version 1.9.62.X. MES interface updated to version 1.7. Older versions support only shorter form of
+the message. Version 2.4 supports both. Fields <strong>PickupIDType</strong> and <strong>TargetIDType</strong> are supported since Navithor Version 2.1.X.X.</p>
+<h4 id="transfer-request-status-id--323"><a class="header" href="#transfer-request-status-id--323">Transfer request status (ID = 323)</a></h4>
+<p>If <em>TransferRequest</em> message was sent with a <strong>RequestID</strong>, Navithor sends this message with the same <strong>RequstID</strong> when the status of <em>TransferRequest</em> changes. The message is sent first time, when production order is created and linked to the transfer request. This message is supported in Navithor version 2.0.2.X -&gt; MES interface updated to version 2.4.</p>
+<hr />
+<h2 id="practical-examples"><a class="header" href="#practical-examples">Practical examples</a></h2>
+<p>In practice transfer request can be used in a large number of different transfering cases where items are transported between different locations. In the simplest case a production area has only wait load locations and load and unload locations and AGVs transfer items from load locations to the unload locations. In order to address a bit more of the capabilities, the following example is slightly more complex.</p>
+<p><img src="./Images/transferRequests/ExampleArea.png" alt="Example area" /></p>
+<p>In demonstration unload locations 41, 42 and 43 are in a group called Conveyor (id 3), load/unload locations 21 and 22 are in a group called CellB (2) and load/unload stations 1, 2, 3 and 4 are in a group called Source (1). In addition to these locations there are multiple waiting locations in the area, and the allowed destinations for all the locations are configured carefully to allow creating feed buffers and faster emptying for the Cells. This area set up might not be practical in many situations but it is suitable for demonstrating the effects of some of the parameters above and how Navithor handles transfer requests.</p>
+<h3 id="case-1-transfer-requests-in-groups-and-the-effect-of-pickupreserverulemode"><a class="header" href="#case-1-transfer-requests-in-groups-and-the-effect-of-pickupreserverulemode">Case 1 Transfer requests in groups and the effect of PickupReserveRuleMode</a></h3>
+<p>Below is an example of how a transfer request from a group to another group looks like. In the case below the there are no boxes available in any of the source stations and ProductionManager_PickupReserveRuleMode is set to value resource required. In this situation Navithor will not assign the transfer request to any AGV even though there are two AGVs right next to the sources waiting for production. After adding a box to any of the possible pickup locations Navithor assigns an AGV for the transfer request.</p>
+<p><img src="./Images/transferRequests/reserveRuleModeResourceRequired.png" alt="Pickup reserve rule" /></p>
+<p><img src="./Images/transferRequests/reserveRuleModeResourceRequired2.png" alt="Pickup reserve rule" /></p>
+<p>When ProductionManager_PickupReserveRuleMode is set to value always allowed the transfer request will reserve one free pickup location even if there is no resource present. Then Navithor will assign an AGV for the transfer request and send the AGV to the reserved location to wait for a resource.</p>
+<p><img src="./Images/transferRequests/reserveRuleModeAlwaysAllowed.png" alt="Pickup reserve rule" /></p>
+<p>Having the pickup reserve rule mode in value one location would work the same way as having the value resource required in the above example as there are multiple possible pickup locations for the transfer request.</p>
+<h3 id="case-2-all-targets-taken"><a class="header" href="#case-2-all-targets-taken">Case 2 All targets taken</a></h3>
+<p>In case all of the target locations are taken Navithor will look for a wait unload location that is linked to the target locations and drive the AGV to wait there for any of the target locations to be freed. You can see in the picture below how the Wait unload location is placed close to the unload locations and the only allowed destinations of the wait unload location are CellB 1 and CellB 2.</p>
+<p><img src="./Images/transferRequests/WaitUnloadWhenTargetsNotAvailable.png" alt="Pickup reserve rule" /></p>
+<p>In the picture above Navithor shows the target location as CellB 1 (21) but as the transfer request was given with the whole group CellB as the target the AGV can also take the resource to CellB 2 (22) if it is freed first.</p>
+<p><img src="./Images/transferRequests/WaitUnloadWhenTargetBecomesAvailable.png" alt="Pickup reserve rule" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="hold-release.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="racking.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="hold-release.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="racking.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Visual Replay - NAVITHOR USER INSTRUCTIONS</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="Installation_NavithorHardwareRequirements.html"><strong aria-hidden="true">1.</strong> System Hardware Requirement Specifications</a></li><li class="chapter-item expanded "><a href="Installation_SQLServerAndDatabaseInstallationGuide.html"><strong aria-hidden="true">2.</strong> Configuring database</a></li><li class="chapter-item expanded "><a href="fleetSim.html"><strong aria-hidden="true">3.</strong> Fleet Simulator - Setup and Configuration</a></li><li class="chapter-item expanded "><a href="Installation_NavithorServerAsAService.html"><strong aria-hidden="true">4.</strong> Server as a service</a></li><li class="chapter-item expanded "><a href="Installation_ConfiguringHotSwap.html"><strong aria-hidden="true">5.</strong> Server Hot Swap with Failover Cluster</a></li><li class="chapter-item expanded "><a href="Installation_RebrandingNavithor.html"><strong aria-hidden="true">6.</strong> Server and Client Rebranding</a></li><li class="chapter-item expanded "><a href="Machinetool.html"><strong aria-hidden="true">7.</strong> Machine Tool</a></li><li class="chapter-item expanded "><a href="MesTester3.html"><strong aria-hidden="true">8.</strong> MES Tester</a></li><li class="chapter-item expanded affix "><li class="part-title">Desktop client</li><li class="chapter-item expanded "><a href="navithorServerAndClientMegaDocument.html"><strong aria-hidden="true">9.</strong> System Overview and user instructions for Client UI</a></li><li class="chapter-item expanded "><a href="Feature_ClientUpdater.html"><strong aria-hidden="true">10.</strong> Client Updater</a></li><li class="chapter-item expanded affix "><li class="part-title">Web client</li><li class="chapter-item expanded "><a href="Installation_SettingUpNavithorWebServer.html"><strong aria-hidden="true">11.</strong> Setting up Web server to enable Web client</a></li><li class="chapter-item expanded "><a href="webClient.html"><strong aria-hidden="true">12.</strong> Web Client - User Instructions</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="bestProductionPractices.html"><strong aria-hidden="true">13.</strong> Best Practices for Creating Production Area</a></li><li class="chapter-item expanded affix "><li class="part-title">Logs</li><li class="chapter-item expanded "><a href="Navithor logs.html"><strong aria-hidden="true">14.</strong> Navithor Logs</a></li><li class="chapter-item expanded "><a href="Feature_VisualReplay.html" class="active"><strong aria-hidden="true">15.</strong> Visual Replay</a></li><li class="chapter-item expanded "><a href="Feature_DownloadManager.html"><strong aria-hidden="true">16.</strong> Log Download Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">Users</li><li class="chapter-item expanded "><a href="Installation_UsingActiveDirectoryForAuthentication.html"><strong aria-hidden="true">17.</strong> User authentication against Active Directory</a></li><li class="chapter-item expanded "><a href="userRoles.html"><strong aria-hidden="true">18.</strong> User Management</a></li><li class="chapter-item expanded "><a href="userRolesRightsMatrix.html"><strong aria-hidden="true">19.</strong> Default User roles and User rights matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Features</li><li class="chapter-item expanded "><a href="symbolicPointGroups.html"><strong aria-hidden="true">20.</strong> Symbolic Point Groups</a></li><li class="chapter-item expanded "><a href="ResourceHandling.html"><strong aria-hidden="true">21.</strong> Resource handling</a></li><li class="chapter-item expanded "><a href="hold-release.html"><strong aria-hidden="true">22.</strong> Hold-Release reasoning and production order lists</a></li><li class="chapter-item expanded "><a href="transfer requests.html"><strong aria-hidden="true">23.</strong> Transfer requests</a></li><li class="chapter-item expanded "><a href="racking.html"><strong aria-hidden="true">24.</strong> Using warehouse racking feature</a></li><li class="chapter-item expanded "><a href="bufferLanes.html"><strong aria-hidden="true">25.</strong> Using Buffer Lanes</a></li><li class="chapter-item expanded "><a href="Feature_ChargingManagement.html"><strong aria-hidden="true">26.</strong> Managing Battery Levels</a></li><li class="chapter-item expanded "><a href="oneMachineZones.html"><strong aria-hidden="true">27.</strong> Using One Machine Zones</a></li><li class="chapter-item expanded "><a href="distanceControlZones.html"><strong aria-hidden="true">28.</strong> Distance Control Zones</a></li><li class="chapter-item expanded "><a href="FireAlarmZones.html"><strong aria-hidden="true">29.</strong> Fire Alarm Zones</a></li><li class="chapter-item expanded "><a href="Zone status use cases.html"><strong aria-hidden="true">30.</strong> Zone status use cases</a></li><li class="chapter-item expanded "><a href="tagStatuses.html"><strong aria-hidden="true">31.</strong> Tag Statuses</a></li><li class="chapter-item expanded "><a href="Trafficlights.html"><strong aria-hidden="true">32.</strong> Traffic Lights</a></li><li class="chapter-item expanded "><a href="Feature_Elevators.html"><strong aria-hidden="true">33.</strong> Elevators</a></li><li class="chapter-item expanded "><a href="ProductionBreak.html"><strong aria-hidden="true">34.</strong> Production Break</a></li><li class="chapter-item expanded "><a href="DynamicSafetyBounds.html"><strong aria-hidden="true">35.</strong> Virtual Dynamic Safety Bounds</a></li><li class="chapter-item expanded "><a href="WaitingSlots.html"><strong aria-hidden="true">36.</strong> Wait Queue Locations</a></li><li class="chapter-item expanded "><a href="CoupledDrive.html"><strong aria-hidden="true">37.</strong> Coupled Drive</a></li><li class="chapter-item expanded "><a href="Feature_StoppingPointOffsetsForSymbolicPoints.html"><strong aria-hidden="true">38.</strong> Stopping Point Offsets</a></li><li class="chapter-item expanded "><a href="TCStopPoint.html"><strong aria-hidden="true">39.</strong> Safe stopping point calculation</a></li><li class="chapter-item expanded "><a href="Navithor statistics.html"><strong aria-hidden="true">40.</strong> System Statistics</a></li><li class="chapter-item expanded "><a href="MachineInterfaces.html"><strong aria-hidden="true">41.</strong> Machine Interfaces</a></li><li class="chapter-item expanded affix "><li class="part-title">Interfaces</li><li class="chapter-item expanded "><a href="Communication specification between Navithor and MES.html"><strong aria-hidden="true">42.</strong> MES Interface</a></li><li class="chapter-item expanded "><a href="NavithorHttpApi.html"><strong aria-hidden="true">43.</strong> HTTP API</a></li><li class="chapter-item expanded "><a href="NavithorWebApi.html"><strong aria-hidden="true">44.</strong> WebSocket API</a></li><li class="chapter-item expanded "><a href="opcuadoc.html"><strong aria-hidden="true">45.</strong> OPC UA Server interface</a></li><li class="chapter-item expanded affix "><li class="part-title">Alarms</li><li class="chapter-item expanded "><a href="Fleet Control Alarms.html"><strong aria-hidden="true">46.</strong> Alarms</a></li><li class="chapter-item expanded "><a href="Alarms configuration override.html"><strong aria-hidden="true">47.</strong> Alarms configuration override</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NAVITHOR USER INSTRUCTIONS</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="visual-replay"><a class="header" href="#visual-replay">Visual Replay</a></h1>
+<p>This document introduces Visual Replay feature.</p>
+<p>Updated 8.1.2021</p>
+<h2 id="version-history"><a class="header" href="#version-history">Version History</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead><tbody>
+<tr><td>1.0</td><td>01.04.2020</td><td>Tommi Kärki</td><td>Document created</td></tr>
+<tr><td>1.1</td><td>08.01.2021</td><td>Toni Liski</td><td>Minor spellchecking</td></tr>
+<tr><td>1.2</td><td>11.06.2021</td><td>Aleksi Ålander</td><td>Renamed title</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>Visual Replay is a feature that allows logs to be played back on Navithor Client. Navithor Server and Client have been supporting the visual replay since the version 2.18.0.0.</p>
+<h3 id="visual-replay-log-files"><a class="header" href="#visual-replay-log-files">Visual Replay log files</a></h3>
+<p>Currently Visual Replay requires specific binary log files to work. There is no support to read in plain text .log file.</p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Purpose</th></tr></thead><tbody>
+<tr><td>.ntstatic</td><td>Area information</td></tr>
+<tr><td>.ntlog</td><td>Binary log file used by VisualReplay. Compressed</td></tr>
+<tr><td>.ntlogtmp</td><td>Ongoing binary log file. Uncompressed</td></tr>
+</tbody></table>
+</div>
+<h3 id="configuring-visual-replay"><a class="header" href="#configuring-visual-replay">Configuring Visual Replay</a></h3>
+<p>By default Visual Replay log generation is enabled. To disable, change parameter <strong>VisualReplay_Enabled</strong> to <strong>false</strong>. Relevant parameters can be found by searching 'VisualReplay' on Navithor Client -&gt; Settings -&gt; TCParams</p>
+<p>Configuration options mainly affect how many files will be stored and how long files will be archived.</p>
+<h3 id="opening-visual-replay"><a class="header" href="#opening-visual-replay">Opening Visual Replay</a></h3>
+<p><img src="./Images/visualReplay/openingPlayback.gif" alt="" /></p>
+<blockquote>
+<p>Opening visual replay.</p>
+</blockquote>
+<p>Visual Replay can be opened by clicking &quot;Playback&quot; at Navithor Client top bar.</p>
+<h2 id="visual-replay-ui"><a class="header" href="#visual-replay-ui">Visual Replay UI</a></h2>
+<p><img src="./Images/visualReplay/visualReplay_MainMenuNoProductionAreaData.png" alt="" /></p>
+<blockquote>
+<p>Visual replay main screen. No production area information available.</p>
+</blockquote>
+<h3 id="loading-ntstatic"><a class="header" href="#loading-ntstatic">Loading .ntstatic</a></h3>
+<p>Before any binary log files can be played back Client requires information about production area. This information is stored inside .ntstatic file.</p>
+<p>This file is automatically generated every time you connect to Navithor Server. Next time you open Navithor Client, the .ntstatic is automatically available for previous production area.</p>
+<p>To load in different production area, Click on &quot;Browse .ntstatic&quot; and choose desired .ntstatic file. Generally it does not harm anything to always load the .ntstatic file before browsing the logs.</p>
+<h3 id="loading-binary-log-files"><a class="header" href="#loading-binary-log-files">Loading binary log files</a></h3>
+<p><img src="./Images/visualReplay/visualReplay_MainMenuDataAvailable.png" alt="" /></p>
+<blockquote>
+<p>Visual replay main screen. Production area information available. Log data not loaded in.</p>
+</blockquote>
+<p>After .ntstatic has been loaded Playback information should show which production area is loaded in.</p>
+<p>Next step is browsing for binary log files. These are either .ntlog or .ntlogtmp files. It is possible to mix and match these files, only difference is whether file is compressed or not.</p>
+<p>Server generates these under Logs/BinaryLogs folder automatically and they can be fetched by using SaveLogs functionality or Download Manager on Client.</p>
+<p>To select log files click on &quot;Browse logs&quot; to open file dialog. It's possible to open multiple files at once. Keep in mind though that processing binary log files takes time and playback will not be available before all files are loaded in.</p>
+<h3 id="enabling--disabling-playback-mode"><a class="header" href="#enabling--disabling-playback-mode">Enabling / disabling playback mode</a></h3>
+<p><img src="./Images/visualReplay/visualReplay_MainMenuLogsLoadedIn.png" alt="" /></p>
+<blockquote>
+<p>Visual Replay. Production area data and binary logs loaded in.</p>
+</blockquote>
+<p>After both production area info and binary log file are loaded in <em>Enable/Disable</em> playback becomes available.</p>
+<p>Clicking on <em>Enable</em> will change Client to function in Playback mode. This will disconnect Client from Server and use data on binary log files exclusively.</p>
+<p>Likewise, clicking on <em>Disable</em> will change Client back to normal mode. If Server is available then Client will prompt to login.</p>
+<h3 id="controlling-playback"><a class="header" href="#controlling-playback">Controlling playback</a></h3>
+<p><img src="./Images/visualReplay/visualReplay_PlaybackModeEnabled.png" alt="" /></p>
+<blockquote>
+<p>Navithor Client in playback mode. Notice how server connection is Disconnected and user is SuperAdmin (fake user).</p>
+</blockquote>
+<p>Initially the playback will be in paused state. To start playing back log files click on <em>Resume</em> button.</p>
+<p>To pause playback click on <em>Pause</em> button. This will stop reading new data from playback while Client will remain usable.</p>
+<p>Clicking <code>|&lt;&lt;</code> will jump time 30s backwards.</p>
+<p>Clicking <code>&gt;&gt;|</code> will jump time 30s forwards.</p>
+<p>Clicking and dragging on trackbar will <strong>PAUSE</strong> playback data sending while trackbar is being dragged. Playback will be unpaused after trackbar is no longer dragged.</p>
+<p>Time shown on CurrentTime and EndTime are in Server time. These time stamps can be used to further investigate issues on text log.</p>
+<h2 id="consideration-on-playback-mode"><a class="header" href="#consideration-on-playback-mode">Consideration on Playback mode</a></h2>
+<p>Playback is a new feature so some things might not work the same was in Live mode. For example anything that attempts to modify state, like adding resource to symbolic point, can cause unexpected behaviour. General rule-of-thumb is to NOT attempt to modify anything in Playback mode.</p>
+<p><strong>Available features:</strong></p>
+<ul>
+<li>Opening task log
+<ul>
+<li>New messages will appear with delay. Old messages not cleared.</li>
+<li>Timestamps can be out of sync</li>
+</ul>
+</li>
+<li>Viewing production orders</li>
+<li>AreaControl (view waypoints)
+<ul>
+<li>If AreaControl was disabled when playback was enabled -&gt; ClearLogs and load logs files again.</li>
+</ul>
+</li>
+<li>Viewing map</li>
+<li>Viewing pop-ups that happen when AGV is given a Task</li>
+<li>InventoryForm
+<ul>
+<li>View only</li>
+<li>Attempts to modify will disable modification buttons </li>
+</ul>
+</li>
+<li>Machine diagnostics</li>
+<li>Alarms
+<ul>
+<li>Resetting alarms does nothing </li>
+</ul>
+</li>
+</ul>
+<p><strong>Disabled features:</strong></p>
+<ul>
+<li>Changing Server settings</li>
+<li>Changing TC parameters</li>
+<li>Changing production area files</li>
+<li>Modifying machines</li>
+<li>Login
+<ul>
+<li>Can be opened but cannot Login</li>
+</ul>
+</li>
+<li>Start and Stop production
+<ul>
+<li>Might cause undefined behaviour</li>
+</ul>
+</li>
+</ul>
+<p><strong>Planned feature support:</strong></p>
+<ul>
+<li>
+<p>Selecting machine zooms to machine</p>
+</li>
+<li>
+<p>View affixes</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="Navithor logs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="Feature_DownloadManager.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="Navithor logs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="Feature_DownloadManager.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

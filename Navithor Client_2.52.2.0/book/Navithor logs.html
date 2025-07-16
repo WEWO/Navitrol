@@ -1,0 +1,436 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Navithor Logs - NAVITHOR USER INSTRUCTIONS</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="Installation_NavithorHardwareRequirements.html"><strong aria-hidden="true">1.</strong> System Hardware Requirement Specifications</a></li><li class="chapter-item expanded "><a href="Installation_SQLServerAndDatabaseInstallationGuide.html"><strong aria-hidden="true">2.</strong> Configuring database</a></li><li class="chapter-item expanded "><a href="fleetSim.html"><strong aria-hidden="true">3.</strong> Fleet Simulator - Setup and Configuration</a></li><li class="chapter-item expanded "><a href="Installation_NavithorServerAsAService.html"><strong aria-hidden="true">4.</strong> Server as a service</a></li><li class="chapter-item expanded "><a href="Installation_ConfiguringHotSwap.html"><strong aria-hidden="true">5.</strong> Server Hot Swap with Failover Cluster</a></li><li class="chapter-item expanded "><a href="Installation_RebrandingNavithor.html"><strong aria-hidden="true">6.</strong> Server and Client Rebranding</a></li><li class="chapter-item expanded "><a href="Machinetool.html"><strong aria-hidden="true">7.</strong> Machine Tool</a></li><li class="chapter-item expanded "><a href="MesTester3.html"><strong aria-hidden="true">8.</strong> MES Tester</a></li><li class="chapter-item expanded affix "><li class="part-title">Desktop client</li><li class="chapter-item expanded "><a href="navithorServerAndClientMegaDocument.html"><strong aria-hidden="true">9.</strong> System Overview and user instructions for Client UI</a></li><li class="chapter-item expanded "><a href="Feature_ClientUpdater.html"><strong aria-hidden="true">10.</strong> Client Updater</a></li><li class="chapter-item expanded affix "><li class="part-title">Web client</li><li class="chapter-item expanded "><a href="Installation_SettingUpNavithorWebServer.html"><strong aria-hidden="true">11.</strong> Setting up Web server to enable Web client</a></li><li class="chapter-item expanded "><a href="webClient.html"><strong aria-hidden="true">12.</strong> Web Client - User Instructions</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="bestProductionPractices.html"><strong aria-hidden="true">13.</strong> Best Practices for Creating Production Area</a></li><li class="chapter-item expanded affix "><li class="part-title">Logs</li><li class="chapter-item expanded "><a href="Navithor logs.html" class="active"><strong aria-hidden="true">14.</strong> Navithor Logs</a></li><li class="chapter-item expanded "><a href="Feature_VisualReplay.html"><strong aria-hidden="true">15.</strong> Visual Replay</a></li><li class="chapter-item expanded "><a href="Feature_DownloadManager.html"><strong aria-hidden="true">16.</strong> Log Download Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">Users</li><li class="chapter-item expanded "><a href="Installation_UsingActiveDirectoryForAuthentication.html"><strong aria-hidden="true">17.</strong> User authentication against Active Directory</a></li><li class="chapter-item expanded "><a href="userRoles.html"><strong aria-hidden="true">18.</strong> User Management</a></li><li class="chapter-item expanded "><a href="userRolesRightsMatrix.html"><strong aria-hidden="true">19.</strong> Default User roles and User rights matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Features</li><li class="chapter-item expanded "><a href="symbolicPointGroups.html"><strong aria-hidden="true">20.</strong> Symbolic Point Groups</a></li><li class="chapter-item expanded "><a href="ResourceHandling.html"><strong aria-hidden="true">21.</strong> Resource handling</a></li><li class="chapter-item expanded "><a href="hold-release.html"><strong aria-hidden="true">22.</strong> Hold-Release reasoning and production order lists</a></li><li class="chapter-item expanded "><a href="transfer requests.html"><strong aria-hidden="true">23.</strong> Transfer requests</a></li><li class="chapter-item expanded "><a href="racking.html"><strong aria-hidden="true">24.</strong> Using warehouse racking feature</a></li><li class="chapter-item expanded "><a href="bufferLanes.html"><strong aria-hidden="true">25.</strong> Using Buffer Lanes</a></li><li class="chapter-item expanded "><a href="Feature_ChargingManagement.html"><strong aria-hidden="true">26.</strong> Managing Battery Levels</a></li><li class="chapter-item expanded "><a href="oneMachineZones.html"><strong aria-hidden="true">27.</strong> Using One Machine Zones</a></li><li class="chapter-item expanded "><a href="distanceControlZones.html"><strong aria-hidden="true">28.</strong> Distance Control Zones</a></li><li class="chapter-item expanded "><a href="FireAlarmZones.html"><strong aria-hidden="true">29.</strong> Fire Alarm Zones</a></li><li class="chapter-item expanded "><a href="Zone status use cases.html"><strong aria-hidden="true">30.</strong> Zone status use cases</a></li><li class="chapter-item expanded "><a href="tagStatuses.html"><strong aria-hidden="true">31.</strong> Tag Statuses</a></li><li class="chapter-item expanded "><a href="Trafficlights.html"><strong aria-hidden="true">32.</strong> Traffic Lights</a></li><li class="chapter-item expanded "><a href="Feature_Elevators.html"><strong aria-hidden="true">33.</strong> Elevators</a></li><li class="chapter-item expanded "><a href="ProductionBreak.html"><strong aria-hidden="true">34.</strong> Production Break</a></li><li class="chapter-item expanded "><a href="DynamicSafetyBounds.html"><strong aria-hidden="true">35.</strong> Virtual Dynamic Safety Bounds</a></li><li class="chapter-item expanded "><a href="WaitingSlots.html"><strong aria-hidden="true">36.</strong> Wait Queue Locations</a></li><li class="chapter-item expanded "><a href="CoupledDrive.html"><strong aria-hidden="true">37.</strong> Coupled Drive</a></li><li class="chapter-item expanded "><a href="Feature_StoppingPointOffsetsForSymbolicPoints.html"><strong aria-hidden="true">38.</strong> Stopping Point Offsets</a></li><li class="chapter-item expanded "><a href="TCStopPoint.html"><strong aria-hidden="true">39.</strong> Safe stopping point calculation</a></li><li class="chapter-item expanded "><a href="Navithor statistics.html"><strong aria-hidden="true">40.</strong> System Statistics</a></li><li class="chapter-item expanded "><a href="MachineInterfaces.html"><strong aria-hidden="true">41.</strong> Machine Interfaces</a></li><li class="chapter-item expanded affix "><li class="part-title">Interfaces</li><li class="chapter-item expanded "><a href="Communication specification between Navithor and MES.html"><strong aria-hidden="true">42.</strong> MES Interface</a></li><li class="chapter-item expanded "><a href="NavithorHttpApi.html"><strong aria-hidden="true">43.</strong> HTTP API</a></li><li class="chapter-item expanded "><a href="NavithorWebApi.html"><strong aria-hidden="true">44.</strong> WebSocket API</a></li><li class="chapter-item expanded "><a href="opcuadoc.html"><strong aria-hidden="true">45.</strong> OPC UA Server interface</a></li><li class="chapter-item expanded affix "><li class="part-title">Alarms</li><li class="chapter-item expanded "><a href="Fleet Control Alarms.html"><strong aria-hidden="true">46.</strong> Alarms</a></li><li class="chapter-item expanded "><a href="Alarms configuration override.html"><strong aria-hidden="true">47.</strong> Alarms configuration override</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NAVITHOR USER INSTRUCTIONS</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="logs"><a class="header" href="#logs">Logs</a></h1>
+<p>This document contains information about logs created by Navithor.</p>
+<p>Updated 04.02.2022</p>
+<h2 id="version-history"><a class="header" href="#version-history">Version History</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead><tbody>
+<tr><td>1.0</td><td>12.05.2021</td><td>Elena Sgonova</td><td>Document created</td></tr>
+<tr><td>1.1</td><td>06.06.2021</td><td>Elena Sgonova</td><td>Updated name of referred document</td></tr>
+<tr><td>1.2</td><td>04.02.2022</td><td>Tero Laakso-Pitkäkoski</td><td>Navithor Server.exe configuration moved to ServerSettings.json</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>Following topics will be considered in this document:</p>
+<ul>
+<li>What kind of logs Navithor is saving;</li>
+<li>How to affect the length and number of logs;</li>
+<li>How to use visual replay;</li>
+<li>How to save and download logs.</li>
+</ul>
+<h2 id="logs-produced-by-navithor"><a class="header" href="#logs-produced-by-navithor">Logs produced by Navithor</a></h2>
+<p>Some Navithor logs are written into a single file, some - into multiple files. They can have text or binary format. Most of the logs are written also into the log package that can be saved and downloaded by the operators. More details about the log package can be found in the chapter &quot;Logs saving and downloading&quot;.</p>
+<h3 id="start-log"><a class="header" href="#start-log">Start log</a></h3>
+<p>Navithor Server prints events from the start up process. Start log is used to solve issues, if server does not start correctly.</p>
+<ul>
+<li>Saved automatically to <em>Navithor Server/startInfo.log</em>;</li>
+<li>History saved into <em>Navithor Server/LogsBackups/</em>;
+<ul>
+<li>File name has a timestamp: <em>2020_02_18_19_30_22_startInfo.log</em>;</li>
+</ul>
+</li>
+<li>Copied always into the log package;</li>
+<li>No parameters that affect the amount of logs.</li>
+</ul>
+<p>Example fragment of Start log:</p>
+<pre><code>8/01/2021 8:21:18 - Started Navithor Server version: 2.21.0.90
+8/01/2021 8:21:18 - StartupLog created
+8/01/2021 8:21:18 - After logger is setup
+8/01/2021 8:21:18 - After Application is setup
+8/01/2021 8:21:18 - After event linking
+8/01/2021 8:21:18 - After program creation
+8/01/2021 8:21:19 - 0 - Starting Navithor Server, please wait
+8/01/2021 8:21:20 - 1 - Starting Navithor Server, please wait. Directory: C:\Users\admin\Desktop\Navithor_Server_2.21.0.90\NavithorServer_2.21.0.90
+8/01/2021 8:21:20 - 2 - Starting Navithor Server, please wait
+8/01/2021 8:21:20 - 3 - Starting Navithor Server, please wait
+8/01/2021 8:21:20 - 4 - Starting Navithor Server, please wait
+8/01/2021 8:21:20 - 5 - Starting Navithor Server, please wait. Initializing logger.
+8/01/2021 8:21:20 - 6 - Setting up database...
+8/01/2021 8:21:20 - 7 - Setting database... Reading config file
+8/01/2021 8:21:21 - 8 - Setting database... Setup database. File successfully read
+</code></pre>
+<h3 id="area-information-log"><a class="header" href="#area-information-log">Area information log</a></h3>
+<p>This file is used to check how the current production area is configured.</p>
+<ul>
+<li>Current area information can be found in <em>Navithor Server/Logs/Production/ProductionAreaData.txt</em>;</li>
+<li>No history saved;</li>
+<li>Copied always into the log package as <em>areaInfo.txt</em>;</li>
+<li>No parameters that affect the amount of logs.</li>
+</ul>
+<p>Area information log contains information about:</p>
+<ul>
+<li>Navithor Server version;</li>
+<li>Database version;</li>
+<li>MES interface version;</li>
+<li>Name and version of the area files;</li>
+<li>Detailed information about the area files, i.e. waypoint, segment and symbolic point data, machine load capacities etc.;</li>
+<li>Machines defined in DB;</li>
+<li>Resource types;</li>
+<li>Area loading log which can be checked in case area loading fails.</li>
+</ul>
+<h3 id="parameter-files"><a class="header" href="#parameter-files">Parameter files</a></h3>
+<ul>
+<li>Active parameters are written in readable format to <em>Navithor Server/Logs/active.TCC.AREA_NAME.txt</em>;</li>
+<li>The same parameters are also written in binary format to <em>Navithor Server/AREA_NAME.tcc2</em>;
+<ul>
+<li>This .tcc2 file can be uploaded to another Navithor Server instance, for example from simulation to production server or vice versa;</li>
+<li>One file exists for each area used previously with the last parameters used on that area, so there can be multiple files;</li>
+</ul>
+</li>
+<li>Both files are copied always into the log package;</li>
+<li>No parameters affect writing of the files.</li>
+</ul>
+<h3 id="mes-logs"><a class="header" href="#mes-logs">MES logs</a></h3>
+<p>MES logs can be used for troubleshooting of common issues, for example:</p>
+<ul>
+<li>Sending data too frequently. It is quite common mistake that data is sent even 100 times a second;</li>
+<li>Data is sent in bad format;</li>
+<li>MES Client disconnecting and reconnecting frequently;</li>
+<li>Something unintended happened in the production;</li>
+</ul>
+<p>There are separate files for connection status and message logging:</p>
+<ul>
+<li>Connection status: <em>Navithor Server/Logs/MesLogs/StatusLogs/</em>;</li>
+<li>Messages: <em>Navithor Server/Logs/MesLogs/MessageLogs/</em>.</li>
+</ul>
+<p>To enable MES logging set parameter <strong>MES_EnableMesLogging_Rule</strong> to True.</p>
+<p>Maximum file size for one file is defined by <strong>MES_MesMaxSize</strong> (megabytes). The size of the log files affect the amount of actual time the message logs contain. The length of the file is limited by the size and not by any period of time.</p>
+<ul>
+<li>For message logs a history of 7 files is saved;</li>
+<li>For status logs a history of 30 files is saved (usually this is 30 days). The file is changed to a new one either by day changing or size limit.</li>
+</ul>
+<p>Set <strong>MES_LogRawBytes</strong> to True in order to see all the bytes received in MES logs.</p>
+<p>Automatic logging can be triggered by setting <strong>MES_AutomaticLoggingOnDisconnect</strong> to a Timespan value different from 0.  Timespan defines a required delay for MES client being disconnected for triggering logs writing.</p>
+<p>Example fragment of MES log:</p>
+<pre><code>2021-01-08 10:00:19.366 +01:00 [INF]   |     IN     |  MessageID: 24 - TagStatus SenderID: 1001  ReceiverID: 1000  TagID:175  Stat:4  TagType:1  Type:TagStatus
+2021-01-08 10:00:19.366 +01:00 [INF]   |    OUT     |  MessageID: 200 - AckOrReject SenderID: 1000  ReceiverID: 1001  AckReje:0  MessId:24  RespId:0  RespTimeOut:1000  Type:AckOrReject
+</code></pre>
+<h3 id="text-logs"><a class="header" href="#text-logs">Text logs</a></h3>
+<p>Detailed log of software events and errors. Used when other means are not enough to solve the issue.</p>
+<ul>
+<li>Text logs are saved in <em>Navithor Server/Logs/NavithorLog.txt.*</em>. Path can be configured in <em>Navithor Server/log4net.config</em> file;</li>
+<li>History of files is saved, typically covers production from one to few hours;</li>
+<li>10 last text logs are included in log package (not configurable);</li>
+<li>Amount of logs can be configured in <em>Navithor Server/log4net.config</em> with parameters <strong>maxSizeRollBackups</strong> and <strong>maximumFileSize</strong>. Parameter <strong>maxSizeRollBackups</strong> defines how many <em>NavithorLog.txt.*</em> files is kept simultaneously in the Navithor <em>Server/Logs</em> folder.</li>
+</ul>
+<p>Example settings in <em>log4net.config</em>:</p>
+<pre><code>&lt;maxSizeRollBackups value=&quot;10&quot; /&gt;
+&lt;maximumFileSize value=&quot;30MB&quot; /&gt;
+</code></pre>
+<p>Changes in in <em>Navithor Server/log4net.config</em> require restarting Navithor server.</p>
+<h3 id="audit-log"><a class="header" href="#audit-log">Audit log</a></h3>
+<blockquote>
+<p>The audit log is still in development - it does not yet record every single input from Navithor Client!</p>
+</blockquote>
+<p>Audit log records manual inputs from Navithor Client. It can be used to check if for example resources were manipulated manually, or if AGVs were driven manually.</p>
+<ul>
+<li>Audit logs are saved in <em>Navithor Server/audit_logs.log</em>;</li>
+<li>Copied always into the log package;</li>
+<li>No parameters that affect the audit log.</li>
+</ul>
+<p>Example fragment of Audit log:</p>
+<pre><code>{
+    &quot;auditId&quot;: 1459,
+    &quot;userId&quot;: 0,
+    &quot;userName&quot;: &quot;Unknown user&quot;,
+    &quot;actionType&quot;: &quot;ResourceCreated&quot;,
+    &quot;description&quot;: &quot;Resource created to AT2 G Nord_3 (10057) Type: 10018&quot;,
+    &quot;occuredTime&quot;: &quot;2021-01-08T09:05:14.58&quot;
+  },
+  {
+    &quot;auditId&quot;: 1458,
+    &quot;userId&quot;: 2,
+    &quot;userName&quot;: &quot;Unknown user&quot;,
+    &quot;actionType&quot;: &quot;RequestAreaReload&quot;,
+    &quot;description&quot;: &quot;Area reload requested&quot;,
+    &quot;occuredTime&quot;: &quot;2021-01-08T08:39:04.8&quot;
+  },
+</code></pre>
+<h3 id="binary-logs"><a class="header" href="#binary-logs">Binary logs</a></h3>
+<p>Binary logs are used for the visual replay.</p>
+<ul>
+<li>Binary logs are saved to <em>Navithor Server/Logs/BinaryLogs/</em>. Older files are compressed and saved under <em>/Logs/BinaryLogs/Archive/</em> with a timestamp on the name;</li>
+<li>Saving of logs and their size can be configured with parameters:
+<ul>
+<li><strong>VisualReplay_Enabled</strong> – Set to True to enable saving of binary logs for Visual Replay;</li>
+<li><strong>VisualReplay_MaximumFileSizeInBytesBeforeSwap</strong> – Maximum file size in bytes for a single binary log file;</li>
+<li><strong>VisualReplay_MaximumFileCountBeforeMoveToArchive</strong> – Maximum amount of files to keep in working directory before moving to archive;</li>
+<li><strong>VisualReplay_MaximumZippedFilesInArchive</strong> – Maximum amount of files to keep in archive before deleting oldest.</li>
+</ul>
+</li>
+</ul>
+<p>To be able to save binary logs static data file <em>Navithor Server/Logs/BinaryLogs/staticDataCache.ntstatic</em> is required. The file is included automatically in the log package. If it is not available, it can be generated by using exact same area files and machines in database.</p>
+<h4 id="visual-replay"><a class="header" href="#visual-replay">Visual replay</a></h4>
+<p>Visual Replay is a feature that allows logs to be played back on Navithor Client. All incoming events to Navithor Client are saved to a binary log and played back like they happened in the real time. This feature is similar to Navitrol log playback in Navitrol Monitor.</p>
+<p><img src="./Images/Logs/visualreplay.png" alt="" /></p>
+<blockquote>
+<p>Figure: Visual replay control window.</p>
+</blockquote>
+<p>Available features:</p>
+<ul>
+<li>Replay all events back and forth;</li>
+<li>Viewing map;</li>
+<li>Opening task log. <strong>Note:</strong> new messages will appear with delay and old messages will not be cleared;</li>
+<li>Viewing production orders;</li>
+<li>InventoryForm (view only);</li>
+<li>AreaControl (view waypoints);</li>
+<li>Viewing AGV event pop-ups;</li>
+<li>Machine diagnostics;</li>
+<li>Showing alarms;</li>
+<li>Selecting machine zooms to machine.</li>
+</ul>
+<p>Disabled features:</p>
+<ul>
+<li>Start and Stop production;</li>
+<li>Creating production orders or transfer requests;</li>
+<li>Resetting alarms does nothing;</li>
+<li>Changing Server settings;</li>
+<li>Changing TC parameters;</li>
+<li>Changing production area files;</li>
+<li>Modifying machines;</li>
+<li>Login - login form can be opened but cannot log in.</li>
+</ul>
+<h3 id="statistics"><a class="header" href="#statistics">Statistics</a></h3>
+<p>Statistics are stored either to a separate database or to text files in the <em>ProductionData</em> folder. Currently it is a raw data and there is no tool to display the statistics in a nice way. Development for this feature is planned.</p>
+<ul>
+<li>Statistics database default name is <em>NTDB_Statistics</em>. Statistics text files are located in <em>Navithor server/ProductionData</em> folder;</li>
+<li>Statistics files are not included into the log package.</li>
+</ul>
+<p>Statistics gathered from production:</p>
+<ul>
+<li>Error logging;</li>
+<li>Production order events;</li>
+<li>Resource transfer log;</li>
+<li>Machine visited statistics (which symbolic points machine visited);</li>
+<li>Resource and location status for every symbolic point;</li>
+<li>Battery level, communication status, machine state and position confidence for every machine.</li>
+</ul>
+<p>To enable writing of statistics go to Navithor Server-&gt;Statistics and check Enabled option.</p>
+<p>To set statistics output format(s) set following parameters in Navithor Client:</p>
+<ul>
+<li>Set <strong>Statistics_UseStatisticsDatabase</strong> to True to enable writing statistics to the database;</li>
+<li>Set <strong>Statistics_UseFleetControlStatisticsTextLogger</strong> to True to enable writing statistics to the text files. There are other statistics text file related parameters:
+<ul>
+<li><strong>Statistics_TextLoggerCSVSeparator</strong>;</li>
+<li><strong>Statistics_TextLoggerFormat</strong>;</li>
+<li><strong>Statistics_DaysToKeepFileLogs</strong>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> After statistics writing is enabled with parameters Navithor server restart is required.</p>
+<p>For more details on statistics see the document * Statistics*.</p>
+<h2 id="logs-saving-and-downloading"><a class="header" href="#logs-saving-and-downloading">Logs saving and downloading</a></h2>
+<p>Different sources for triggering logs are:</p>
+<ul>
+<li>Navithor Client;</li>
+<li>Navithor Server;</li>
+<li>MES interface;</li>
+<li>Automatic events, for example:
+<ul>
+<li>Events after startup;</li>
+<li>Exceptions;</li>
+<li>Events triggered when TC thread getting busy;</li>
+<li>MES client disconnected event;</li>
+</ul>
+</li>
+<li>From Client and MES it is possible to trigger Navitrol log dump to one or more AGVs and then Navithor can download the logs.</li>
+</ul>
+<p>All different log files except statistics are combined into an archive - log package. Log package includes also area files, active parameters and machine type parameters. These files can be used to set up a simulation.</p>
+<p><img src="./Images/Logs/logspackage.png" alt="" /></p>
+<blockquote>
+<p>Figure: Log package.</p>
+</blockquote>
+<p>All logs can be downloaded with Download Manager in Navithor Client 2.21.0.0.</p>
+<p><img src="./Images/Logs/downloadmanager.png" alt="" /></p>
+<blockquote>
+<p>Figure: Download manager.</p>
+</blockquote>
+<h2 id="configuring-amount-of-automatically-saved-logs"><a class="header" href="#configuring-amount-of-automatically-saved-logs">Configuring amount of automatically saved logs</a></h2>
+<p>Following parameters in the <em>ConfigFiles/ServerSettings.json</em> file can be used to limit amount of folders and logs:</p>
+<ul>
+<li><strong>RemoveLogsEnabled</strong> - set to True to enable automatic removal of logs when reaching a threshold which is set by parameters:
+<ul>
+<li><strong>RemoveLogsKeepDays</strong> - amount of days to keep logs;</li>
+<li><strong>RemoveLogsMaxFolders</strong> - amount of folders to keep logs.</li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-json">{
+  &quot;RemoveLogsEnabled&quot;: true,
+  &quot;RemoveLogsKeepDays&quot;: 30,
+  &quot;RemoveLogsMaxFolders&quot;: 25
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="bestProductionPractices.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="Feature_VisualReplay.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="bestProductionPractices.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="Feature_VisualReplay.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
