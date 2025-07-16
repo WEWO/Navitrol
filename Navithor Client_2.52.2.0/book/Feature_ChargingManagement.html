@@ -1,0 +1,518 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Managing Battery Levels - NAVITHOR USER INSTRUCTIONS</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="Installation_NavithorHardwareRequirements.html"><strong aria-hidden="true">1.</strong> System Hardware Requirement Specifications</a></li><li class="chapter-item expanded "><a href="Installation_SQLServerAndDatabaseInstallationGuide.html"><strong aria-hidden="true">2.</strong> Configuring database</a></li><li class="chapter-item expanded "><a href="fleetSim.html"><strong aria-hidden="true">3.</strong> Fleet Simulator - Setup and Configuration</a></li><li class="chapter-item expanded "><a href="Installation_NavithorServerAsAService.html"><strong aria-hidden="true">4.</strong> Server as a service</a></li><li class="chapter-item expanded "><a href="Installation_ConfiguringHotSwap.html"><strong aria-hidden="true">5.</strong> Server Hot Swap with Failover Cluster</a></li><li class="chapter-item expanded "><a href="Installation_RebrandingNavithor.html"><strong aria-hidden="true">6.</strong> Server and Client Rebranding</a></li><li class="chapter-item expanded "><a href="Machinetool.html"><strong aria-hidden="true">7.</strong> Machine Tool</a></li><li class="chapter-item expanded "><a href="MesTester3.html"><strong aria-hidden="true">8.</strong> MES Tester</a></li><li class="chapter-item expanded affix "><li class="part-title">Desktop client</li><li class="chapter-item expanded "><a href="navithorServerAndClientMegaDocument.html"><strong aria-hidden="true">9.</strong> System Overview and user instructions for Client UI</a></li><li class="chapter-item expanded "><a href="Feature_ClientUpdater.html"><strong aria-hidden="true">10.</strong> Client Updater</a></li><li class="chapter-item expanded affix "><li class="part-title">Web client</li><li class="chapter-item expanded "><a href="Installation_SettingUpNavithorWebServer.html"><strong aria-hidden="true">11.</strong> Setting up Web server to enable Web client</a></li><li class="chapter-item expanded "><a href="webClient.html"><strong aria-hidden="true">12.</strong> Web Client - User Instructions</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="bestProductionPractices.html"><strong aria-hidden="true">13.</strong> Best Practices for Creating Production Area</a></li><li class="chapter-item expanded affix "><li class="part-title">Logs</li><li class="chapter-item expanded "><a href="Navithor logs.html"><strong aria-hidden="true">14.</strong> Navithor Logs</a></li><li class="chapter-item expanded "><a href="Feature_VisualReplay.html"><strong aria-hidden="true">15.</strong> Visual Replay</a></li><li class="chapter-item expanded "><a href="Feature_DownloadManager.html"><strong aria-hidden="true">16.</strong> Log Download Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">Users</li><li class="chapter-item expanded "><a href="Installation_UsingActiveDirectoryForAuthentication.html"><strong aria-hidden="true">17.</strong> User authentication against Active Directory</a></li><li class="chapter-item expanded "><a href="userRoles.html"><strong aria-hidden="true">18.</strong> User Management</a></li><li class="chapter-item expanded "><a href="userRolesRightsMatrix.html"><strong aria-hidden="true">19.</strong> Default User roles and User rights matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Features</li><li class="chapter-item expanded "><a href="symbolicPointGroups.html"><strong aria-hidden="true">20.</strong> Symbolic Point Groups</a></li><li class="chapter-item expanded "><a href="ResourceHandling.html"><strong aria-hidden="true">21.</strong> Resource handling</a></li><li class="chapter-item expanded "><a href="hold-release.html"><strong aria-hidden="true">22.</strong> Hold-Release reasoning and production order lists</a></li><li class="chapter-item expanded "><a href="transfer requests.html"><strong aria-hidden="true">23.</strong> Transfer requests</a></li><li class="chapter-item expanded "><a href="racking.html"><strong aria-hidden="true">24.</strong> Using warehouse racking feature</a></li><li class="chapter-item expanded "><a href="bufferLanes.html"><strong aria-hidden="true">25.</strong> Using Buffer Lanes</a></li><li class="chapter-item expanded "><a href="Feature_ChargingManagement.html" class="active"><strong aria-hidden="true">26.</strong> Managing Battery Levels</a></li><li class="chapter-item expanded "><a href="oneMachineZones.html"><strong aria-hidden="true">27.</strong> Using One Machine Zones</a></li><li class="chapter-item expanded "><a href="distanceControlZones.html"><strong aria-hidden="true">28.</strong> Distance Control Zones</a></li><li class="chapter-item expanded "><a href="FireAlarmZones.html"><strong aria-hidden="true">29.</strong> Fire Alarm Zones</a></li><li class="chapter-item expanded "><a href="Zone status use cases.html"><strong aria-hidden="true">30.</strong> Zone status use cases</a></li><li class="chapter-item expanded "><a href="tagStatuses.html"><strong aria-hidden="true">31.</strong> Tag Statuses</a></li><li class="chapter-item expanded "><a href="Trafficlights.html"><strong aria-hidden="true">32.</strong> Traffic Lights</a></li><li class="chapter-item expanded "><a href="Feature_Elevators.html"><strong aria-hidden="true">33.</strong> Elevators</a></li><li class="chapter-item expanded "><a href="ProductionBreak.html"><strong aria-hidden="true">34.</strong> Production Break</a></li><li class="chapter-item expanded "><a href="DynamicSafetyBounds.html"><strong aria-hidden="true">35.</strong> Virtual Dynamic Safety Bounds</a></li><li class="chapter-item expanded "><a href="WaitingSlots.html"><strong aria-hidden="true">36.</strong> Wait Queue Locations</a></li><li class="chapter-item expanded "><a href="CoupledDrive.html"><strong aria-hidden="true">37.</strong> Coupled Drive</a></li><li class="chapter-item expanded "><a href="Feature_StoppingPointOffsetsForSymbolicPoints.html"><strong aria-hidden="true">38.</strong> Stopping Point Offsets</a></li><li class="chapter-item expanded "><a href="TCStopPoint.html"><strong aria-hidden="true">39.</strong> Safe stopping point calculation</a></li><li class="chapter-item expanded "><a href="Navithor statistics.html"><strong aria-hidden="true">40.</strong> System Statistics</a></li><li class="chapter-item expanded "><a href="MachineInterfaces.html"><strong aria-hidden="true">41.</strong> Machine Interfaces</a></li><li class="chapter-item expanded affix "><li class="part-title">Interfaces</li><li class="chapter-item expanded "><a href="Communication specification between Navithor and MES.html"><strong aria-hidden="true">42.</strong> MES Interface</a></li><li class="chapter-item expanded "><a href="NavithorHttpApi.html"><strong aria-hidden="true">43.</strong> HTTP API</a></li><li class="chapter-item expanded "><a href="NavithorWebApi.html"><strong aria-hidden="true">44.</strong> WebSocket API</a></li><li class="chapter-item expanded "><a href="opcuadoc.html"><strong aria-hidden="true">45.</strong> OPC UA Server interface</a></li><li class="chapter-item expanded affix "><li class="part-title">Alarms</li><li class="chapter-item expanded "><a href="Fleet Control Alarms.html"><strong aria-hidden="true">46.</strong> Alarms</a></li><li class="chapter-item expanded "><a href="Alarms configuration override.html"><strong aria-hidden="true">47.</strong> Alarms configuration override</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NAVITHOR USER INSTRUCTIONS</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="managing-battery-levels"><a class="header" href="#managing-battery-levels">Managing Battery Levels</a></h1>
+<p>This document describes how to use the charging manager and opportunity charging.</p>
+<p>Updated 13.12.2022</p>
+<h2 id="version-history"><a class="header" href="#version-history">Version History</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead><tbody>
+<tr><td>1.0</td><td>18.11.2021</td><td>Simon Clement</td><td>Document created</td></tr>
+<tr><td>1.1</td><td>27.01.2022</td><td>Simon Clement</td><td>Add warning related to defining a minimum amount of charging AGVs</td></tr>
+<tr><td>1.2</td><td>25.02.2022</td><td>Simon Clement</td><td>Update document to describe functionality of 2.50 release</td></tr>
+<tr><td>1.3</td><td>08.12.2022</td><td>Simon Clement</td><td>Update document to include information about AlternativeChargingRuleZone</td></tr>
+<tr><td>1.4</td><td>13.12.2022</td><td>Aleksi Ålander</td><td>Add new option of DriveAwayFromChargerIfChargingFails into parameters section</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="charging-manager"><a class="header" href="#charging-manager">Charging manager</a></h2>
+<p>Navithor's charging manager is used to intelligently control when AGVs are sent to charging locations based on a number of simple rules.
+Enabling battery charging management in Navithor will generate charging requests for AGVs when charging is needed.
+A charging request will result in a drive task to a free charging location (a symbolic point of type <em>Charge</em>).
+If no location is available, the AGV will continue working until a free charging location is available unless the battery level goes below the ALERT trigger (see <em>AGV battery levels</em>).</p>
+<h3 id="enabling-charging-management"><a class="header" href="#enabling-charging-management">Enabling charging management</a></h3>
+<p>Charging management is enabled by setting the parameter <strong>ProductionManager_ControlBatteryCharging</strong> to <strong>true</strong>.</p>
+<p>For AGVs with a battery monitoring system, the following machine type parameters should be enabled:</p>
+<ul>
+<li><strong>BATTERY_ENABLED</strong> = 1</li>
+<li><strong>BATT_CHARGING_STATE_KNOWN</strong> = 1</li>
+</ul>
+<h4 id="controlling-assignment-of-unhandled-orders-while-charging"><a class="header" href="#controlling-assignment-of-unhandled-orders-while-charging">Controlling assignment of unhandled orders while charging</a></h4>
+<p>By default, machines can be assigned unhandled orders while charging if the charging request allows it. 
+This can be disabled by including the flag value <strong>PreventWhileAtCharge</strong> in the parameter <strong>MissionManager_OrderAssignmentRules</strong>. 
+No unhandled orders will then be assigned to charging machines.</p>
+<blockquote>
+<p>Note that Navithor versions before 2.23 instead were relying on the flag value <strong>fromWaitToUnhandled</strong> to be included in the parameter <strong>Task_Extension_enable_mode</strong> before unhandled orders would be assigned to charging machines.</p>
+</blockquote>
+<h4 id="update-battery-levels-from-operation-times"><a class="header" href="#update-battery-levels-from-operation-times">Update battery levels from operation times</a></h4>
+<p>If no battery monitoring system exists or AGVs are needed to have a specified operate-charge-operate-cycle, the parameter <strong>ProductionManager_UpdateBattTimesFromOpeTimes</strong> should be set to <strong>true</strong>.
+When enabled, the battery level shown in the Client and monitored by the charging manager is the minimum of these two values: calculated battery level from operation times and battery level information from AGV.</p>
+<p>The battery levels of each AGV will then be calculated based on the operation times and required charging times that have been defined in the machine type parameter file.
+The relevant machine type parameters are the following:</p>
+<ul>
+<li><strong>BATT_CHARGE_TIME_MINUTES</strong></li>
+<li><strong>BATT_OPERATION_MAX_TIME_MINUTES</strong></li>
+<li><strong>BATT_OPERATION_NORM_TIME_MINUTES</strong></li>
+</ul>
+<p>These parameters create a value (0-100% ) that increases when AGV is charging and decreases when AGV is not charging.
+Note that only the greater number of <strong>BATT_OPERATION_MAX_TIME_MINUTES</strong> and <strong>BATT_OPERATION_NORM_TIME_MINUTES</strong> is used when calculating the battery level.
+The battery decrease rate when an AGV is moving is calculated from the system parameter <strong>Machine_BATTERY_STATUS_DROP_GAIN_AUTO</strong>.
+It is calculated as <strong>Machine_BATTERY_STATUS_DROP_GAIN_AUTO</strong> * <strong>x</strong>, where <strong>x</strong> is the amount of time the AGV has been moving.</p>
+<h3 id="charging-requests"><a class="header" href="#charging-requests">Charging requests</a></h3>
+<p>There are multiple types of charging requests in the system:</p>
+<ul>
+<li><strong>Rules request</strong>: Navithor has generated the request automatically based on charging management rules.
+A machine that is charging due to a rules request will never leave the charger until its battery level has reached HIGH (See <em>AGV battery levels</em>).</li>
+<li><strong>Idle request</strong>: Navithor has generated the request automatically when there is no production available, and <strong>ProductionManager_DriveToChargeIfNoProduction</strong> is set to TRUE in system parameters.
+A machine that is charging due to an idle request will leave a charger to do production as long as its battery level is above LOW (See <em>AGV battery levels</em>).
+In the machine task log, an Idle request is described as &quot;Rules - no production&quot;.</li>
+<li><strong>Machine request</strong>: The request has been triggered from an AGV (e.g., a button on board).</li>
+<li><strong>External request</strong>: An external source (e.g., MES or PLC connected to Server) triggered the request.
+Navithor cannot cancel this type of request.
+This means the AGV will drive and stay at a charging location as long as the external source keeps the request active.
+The MES message used to start and stop charging is ChargingCommand (ID = 9). See documentation related to communication between Navithor and MES for instructions on how to use this message.</li>
+<li><strong>Client operator request</strong>: Navithor Client user has pressed the 'Request Charging' button in the Battery monitor-view.</li>
+</ul>
+<p>When the battery level of an AGV has reached HIGH, it may stop charging if there is production available and the charging request is not <strong>External request</strong>.</p>
+<p>Production available means:</p>
+<ul>
+<li>There are production orders for the AGV or</li>
+<li>There are unhandled orders available and the AGV is priority to one of them or</li>
+<li>There are unhandled production order lists available or</li>
+<li>The charging location is also a HOLD-location</li>
+</ul>
+<p>Note that an AGV never will drive to charge if it is carrying a resource. No matter the type of charging request.
+It will first execute the charging request after the resource has been unloaded.</p>
+<h3 id="agv-battery-levels"><a class="header" href="#agv-battery-levels">AGV battery levels</a></h3>
+<p>The charging manager operates with four battery levels to trigger charging behavior:</p>
+<ul>
+<li>ALERT</li>
+<li>LOW</li>
+<li>HIGH</li>
+<li>FULL</li>
+</ul>
+<p>The image below shows an overview of the battery levels and the general charging behavior of AGVs.
+Each level is described in detail in the following sections.</p>
+<p><img src="./Images/ChargingManagement/BatteryLevelsOverview.png" alt="" />
+<em>Note: The colors used are only for illustrative purposes. The actual colors used in the clients varies between client.</em></p>
+<h4 id="alert-trigger"><a class="header" href="#alert-trigger">ALERT trigger</a></h4>
+<ul>
+<li><strong>Parameter:</strong> ProductionManager_BattAlertLevel</li>
+<li><strong>Default Value:</strong> 15 %</li>
+<li>Should be set to a level that ensures the AGV always has enough time to get into the charger in time before running out of battery.</li>
+</ul>
+<h5 id="behavior-in-production"><a class="header" href="#behavior-in-production">Behavior in production</a></h5>
+<p>When the battery level goes below ALERT, a rules charging request is generated for the AGV, and no unhandled orders can be assigned to it.
+If the AGV is executing an order, it will finish the order and drive to a charging location.
+If there are no free charging locations, an alarm is raised.</p>
+<h5 id="behavior-in-charge"><a class="header" href="#behavior-in-charge">Behavior in charge</a></h5>
+<p>The AGV will never leave the charger until the battery level reaches the HIGH limit.
+Any manual orders given to the AGV will be executed when the HIGH battery level has been reached.</p>
+<h4 id="low-trigger"><a class="header" href="#low-trigger">LOW trigger</a></h4>
+<ul>
+<li><strong>Parameter:</strong> ProductionManager_BattLowLevel</li>
+<li><strong>Default Value:</strong> 30 %</li>
+<li>Should be set to the minimum charge that is optimal for battery life.</li>
+</ul>
+<h5 id="behavior-in-production-1"><a class="header" href="#behavior-in-production-1">Behavior in production</a></h5>
+<p>When the battery level goes below LOW, a rules charging request is generated for the AGV, and it no longer accepts unhandled orders.
+If the AGV is executing an order when the battery level goes below LOW, it will finish the order and drive to a charging location.
+If there are no free charging locations, the AGV will continue running production. No alarm is raised in this case.</p>
+<h5 id="behavior-in-charge-1"><a class="header" href="#behavior-in-charge-1">Behavior in charge</a></h5>
+<p>The AGV will never leave the charger until the battery level reaches the HIGH limit.
+Any manual orders given to the AGV will be executed when the HIGH battery level has been reached.
+The AGV will not leave to execute production orders until the battery level reaches the HIGH level.</p>
+<h4 id="high-trigger"><a class="header" href="#high-trigger">HIGH trigger</a></h4>
+<ul>
+<li><strong>Parameter:</strong> ProductionManager_BattHighLevel</li>
+<li><strong>Default Value:</strong> 45 %</li>
+<li>Should be set depending on the availability of the charging stations and general process flow.</li>
+</ul>
+<h5 id="behavior-in-production-2"><a class="header" href="#behavior-in-production-2">Behavior in production</a></h5>
+<p>As long as the battery level is at or above the HIGH limit, the AGV will continue production and never charge.</p>
+<p>If the battery level goes below HIGH and no production orders exist, the default behavior is that the AGV will drive to a waiting position.
+This can be changed by setting the parameter  <strong>ProductionManager_DriveToChargeIfNoProduction</strong> to true.
+When <strong>ProductionManager_DriveToChargeIfNoProduction</strong> is true, an AGV with battery level below HIGH will drive to charge with an idle request if it isn't the priority for an unhandled order.
+If it becomes priority for new unhandled orders or is given a production order it will leave to execute the order right away.</p>
+<p>AGVs might also drive to charge if the charging manager has been configured to keep a certain number of AGVs in charge.
+See <em>Keeping a certain number of AGVs in charge</em> for details.</p>
+<h5 id="behavior-in-charge-2"><a class="header" href="#behavior-in-charge-2">Behavior in charge</a></h5>
+<p>The behavior of a charging AGV with battery level below HIGH depends on the charge request.
+If the AGV was sent to charge with a <strong>rules request</strong>, it will not leave to execute any orders until the battery level reaches HIGH.
+If the AGV was sent to charge with an <strong>idle request</strong>, it will leave to execute orders if it is the priority to any.</p>
+<p>When the battery level reaches the HIGH limit, the AGV will begin executing production orders if there are any.
+Otherwise, it will stay in the charger and continue charging unless another AGV needs the charger.
+If another AGV needs the charger, the AGV in the charger will leave the charger to make room for the other AGV under the following conditions:</p>
+<ol>
+<li>There is a free waiting location where the AGV can drive to.</li>
+<li>The charging location is not a combined wait and charge location.</li>
+<li>There are no other free charging locations.</li>
+<li>The incoming AGV has a battery level below the ALERT limit.</li>
+</ol>
+<p>An AGV will never leave the charger automatically if the charging request is an <strong>external request</strong>.</p>
+<h4 id="full-trigger"><a class="header" href="#full-trigger">FULL trigger</a></h4>
+<ul>
+<li><strong>Parameter:</strong> ProductionManager_BattFullLevel</li>
+<li><strong>Default Value:</strong> 98 %</li>
+<li>Should be set to the maximum charge that is optimal for battery life.</li>
+</ul>
+<h5 id="behavior-in-production-3"><a class="header" href="#behavior-in-production-3">Behavior in production</a></h5>
+<p>As long as the battery level is above the FULL limit, the AGV will continue production and never go to charge.</p>
+<h5 id="behavior-in-charge-3"><a class="header" href="#behavior-in-charge-3">Behavior in charge</a></h5>
+<p>By default, an AGV with battery level at or above the FULL limit will behave the same way as an AGV with battery level at or above the HIGH limit.
+This means that the charging request for the AGV continues to be active even after the battery reaches the FULL limit.
+If the AGV must stop charging when the FULL level is reached, it can be achieved in two ways:</p>
+<ol>
+<li>Set the parameter <strong>ProductionManager_BehaviorOnFullCharge</strong> to <strong>StopCharging</strong></li>
+<li>Set the priority of the charging location to at least HIGH (5) priority.</li>
+</ol>
+<p>In both cases, the AGV will stop charging when the FULL level is reached.
+If a waiting location is available, the AGV will drive there.
+Otherwise, the AGV will continue to occupy the charging location but will not be charging.
+If the charging location is a combined wait and charge location, the AGV will always stay at the location when charging is finished.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>Do not use high priority chargers or set <strong>ProductionManager_BehaviorOnFullCharge</strong> to <strong>StopCharging</strong> if either <strong>ProductionManager_KeepMachinesInChargeCount</strong> or <strong>ProductionManager_ForEveryMachineInProductionCount</strong> have values greater than zero.
+It is not supported, and will lead to unwanted behavior.</p>
+</blockquote>
+<h3 id="keeping-a-certain-number-of-agvs-in-charge"><a class="header" href="#keeping-a-certain-number-of-agvs-in-charge">Keeping a certain number of AGVs in charge</a></h3>
+<p>To help keep the production execution steady, it is possible to ensure that a part of the fleet is always in charge.
+By doing this, there will always be a charged machine ready to take over production from a machine that needs charging.</p>
+<p>Two parameters are used to control how many machines should be kept in charge:</p>
+<ul>
+<li><strong>ProductionManager_KeepMachinesInChargeCount</strong></li>
+<li><strong>ProductionManager_ForEveryMachineInProductionCount</strong></li>
+</ul>
+<p><strong>ProductionManager_KeepMachinesInChargeCount</strong> defines a constant number of machines to keep in charge.
+The charging manager will keep as many machines in charge as defined by this parameter.
+If this parameter has been set to, e.g., 2, then at least 2 machines are always kept in charge.</p>
+<p><strong>ProductionManager_ForEveryMachineInProductionCount</strong> defines a relative number of machines to keep in charge.
+The number of machines to keep in charge will scale together with the size of the active fleet.
+The value given to the parameter defines how many non-charging machines there should be per machine sent to charge.
+If fewer machines are in production than the parameter's value, then no machines will be kept in charge.</p>
+<p>If both <strong>ProductionManager_KeepMachinesInChargeCount</strong> and <strong>ProductionManager_ForEveryMachineInProductionCount</strong> have values greater than zero,
+the charging manager will keep the maximum amount of machines in charge based on the two values.
+There will always be at least one machine not in charge, regardless of fleet size and the parameter values.</p>
+<p>The rules related to keeping a certain number of AGVs in charge do not supersede the general charging rules.
+This means that even if there already are enough machines in charge, a machine that needs charging will still go to charge.
+If any of the current machines in charge has a battery level above HIGH, it will leave to begin executing production.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>Do not use high priority chargers or set <strong>ProductionManager_BehaviorOnFullCharge</strong> to <strong>StopCharging</strong> if either <strong>ProductionManager_KeepMachinesInChargeCount</strong> or <strong>ProductionManager_ForEveryMachineInProductionCount</strong> have values greater than zero.
+It is not supported, and will lead to unwanted behavior.</p>
+</blockquote>
+<p>The following table gives examples of how many machines will be kept in charge at different fleet sizes and parameter values.</p>
+<div class="table-wrapper"><table><thead><tr><th><strong>ProductionManager _KeepMachinesInChargeCount</strong></th><th><strong>ProductionManager _ForEveryMachineInProductionCount</strong></th><th>Fleet Size</th><th>AGVs in charge</th></tr></thead><tbody>
+<tr><td>2</td><td>0</td><td>5</td><td>2</td></tr>
+<tr><td>2</td><td>0</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>0</td><td>2</td><td>9</td><td>3</td></tr>
+<tr><td>0</td><td>2</td><td>8</td><td>2</td></tr>
+<tr><td>0</td><td>2</td><td>6</td><td>2</td></tr>
+<tr><td>0</td><td>2</td><td>3</td><td>1</td></tr>
+<tr><td>0</td><td>2</td><td>2</td><td>0</td></tr>
+<tr><td>3</td><td>2</td><td>8</td><td>3</td></tr>
+<tr><td>3</td><td>2</td><td>3</td><td>2</td></tr>
+</tbody></table>
+</div>
+<h3 id="choosing-a-charge-location"><a class="header" href="#choosing-a-charge-location">Choosing a charge location</a></h3>
+<p>By default, machines in need of charge will prioritize driving to the nearest free charging location.
+This behavior can be changed by the parameter <strong>ProductionManager_ChargeLocationPriorityRule</strong>, which can have the following values:</p>
+<ul>
+<li><strong>only_shortest_distance</strong> (default) - Prioritize free charging locations based on the distance from the machine.</li>
+<li><strong>highest_priority</strong> - Prioritize charging locations based on their location priority.</li>
+<li><strong>lowest_id</strong> - Prioritize charging locations based on their location id.</li>
+<li><strong>exclusive_charge_locations</strong> - Prioritize charging locations that only are charging locations and nothing else.</li>
+</ul>
+<p>If multiple free charging locations are equally good, the machine will choose between those based on the distance and drive to the nearest location.</p>
+<p>If all chargers are occupied or unavailable when an AGV needs to be charged, an error is raised for charging location not being available (<strong>ChargeLocationNotAvailable</strong>-error). The charging location is tried to be freed for TrafficController_ABORT_WAIT_TIME_SECONDS time by checking if any other AGV can be released from charger and driven away. If a charging location cannot be freed during this time, then AGV will be routed to a valid waiting symbolic point.</p>
+<h3 id="charging-with-hold-release"><a class="header" href="#charging-with-hold-release">Charging with Hold-Release</a></h3>
+<p>An AGV in need of charging released from a HOLD-location will only go to charge if at least one of the release locations is a charging location.
+If there are charging locations among the possible release destinations, the AGV will ignore the given release destination and instead drive to charge.</p>
+<p>The AGV will charge until its battery level reaches the HIGH limit.
+The AGV will then drive to the original release destination from the HOLD-location.</p>
+<p>If the charging location is also a HOLD-location, the parameter <strong>ProductionManager_DeleteProdOrdersWhenGoingToCharge_Rule</strong> should be set to <strong>true</strong>.
+Otherwise the machine will drive to the location it was released to from the initial hold location and not to the release location of the charger.
+See <strong>Deleting production orders when going to charge</strong> for details.</p>
+<p>The parameter <strong>MissionManager_GenerateChargingRequestsFromHoldRulesOnly_Rule</strong> should be enabled when using hold-release production to control when AGVs can drive to charge.
+Enabling that parameter will have the following consequences:</p>
+<ol>
+<li>Charging requests are only generated by Navithor when an AGV is released from a HOLD-location with at least one charging location as a possible release target. Charging requests will not be generated under any other circumstances.</li>
+<li>When charged, the AGV will continue production based on the hold release reason at the previous symbolic point.</li>
+</ol>
+<p>If another machine should take over for the machine being sent to charging, the parameter <strong>MissionManager_PassProductionOrderToAnotherMachineWhenGoingToCharge_Rule</strong> can be enabled.
+When this is enabled, any production order given to the AGV going to charge is transferred to another charging AGV with a higher battery level.
+That AGV will then begin executing the order when its battery level has reached the HIGH limit.
+The parameter <strong>MissionManager_PassProductionOrderToAnotherMachineWhenGoingToCharge_Rule</strong> is only taken into account in hold-release production.</p>
+<p>If chargers are hold locations you should enable the parameter for deleting orders when going to charge.
+Otherwise the machine will drive to the location it was released to from the initial hold location and not to the release location of the charger.</p>
+<h4 id="choosing-a-charge-location-after-hold-release"><a class="header" href="#choosing-a-charge-location-after-hold-release">Choosing a charge location after HOLD release</a></h4>
+<p>When deciding which charge location to drive to, the charge locations specified as alternative release locations will be prioritized.
+If all those charging locations are occupied, the AGV will be sent to any other charging location within a distance specified by the parameter <strong>ProductionManager_ALLOW_CHARGING_LOCATION_AUTOSELECT_RADIUS_BOUND</strong>.
+Valid charging locations are any free charging locations that fulfills the following requirements:</p>
+<ul>
+<li>The charging location is within a radius of <strong>ProductionManager_ALLOW_CHARGING_LOCATION_AUTOSELECT_RADIUS_BOUND</strong> meters from any of the alternative charge release locations ignoring the route network.</li>
+<li>The driving distance between the charging location and any of the alternative charge release locations must be at most <strong>ProductionManager_ALLOW_CHARGING_LOCATION_AUTOSELECT_RADIUS_BOUND</strong> * 3 meters.</li>
+</ul>
+<p>In the figure below, the charging locations (6) and (7) are specified as alternative release destinations from a HOLD location.
+In this example <strong>ProductionManager_ALLOW_CHARGING_LOCATION_AUTOSELECT_RADIUS_BOUND</strong> is 10.
+If both (6) and (7) are occupied, the AGV is allowed to drive to (8) since it is both within a radius of 10 m from (7) and the total driving distance is less than 30 meters.
+The AGV is not allowed to drive to (21) even though it is within a radius of 10 meters from (7). The driving distance is much more than 30 meters.</p>
+<p><img src="./Images/ChargingManagement/AllowedHoldChargingDestinations.png" alt="Allowed charging destinations from HOLD location" /></p>
+<h3 id="controlling-charge-time"><a class="header" href="#controlling-charge-time">Controlling charge time</a></h3>
+<p>To ensure that AGVs are not charging for too short a time, the charging manager will not stop charging a machine unless it has been charging for a certain minimum amount of time.
+The absolute minimum charge time is defined by the parameter <strong>BATT_CHARGE_MIN_TIME_MINUTES</strong> in the machine type parameter file.
+If it is necessary to keep machines charging for longer than this, then the charging manager parameter <strong>ProductionManager_KeepMachinesInChargeMinTime</strong> should be modified.
+The minimum charging time will always be the maximum time of <strong>BATT_CHARGE_MIN_TIME_MINUTES</strong> and <strong>ProductionManager_KeepMachinesInChargeMinTime</strong>.</p>
+<h3 id="deleting-production-orders-when-going-to-charge"><a class="header" href="#deleting-production-orders-when-going-to-charge">Deleting production orders when going to charge</a></h3>
+<p>If an AGV has a production order when it starts charging, it will keep that order and begin executing it when the battery level has reached the HIGH limit by default.
+That behavior can be changed by enabling the parameter  <strong>ProductionManager_DeleteProdOrdersWhenGoingToCharge_Rule</strong>.
+When enabled, any production order given to the AGV is deleted automatically when the AGV starts charging.</p>
+<p>This should be enabled when production is 'resource at location' triggered and waiting locations are defined in the area.
+By enabling this, other AGVs in the system can handle the order left undone by the AGV in the charging station.</p>
+<h3 id="controlling-where-charging-requests-are-generated-from"><a class="header" href="#controlling-where-charging-requests-are-generated-from">Controlling where charging requests are generated from</a></h3>
+<p>By default, a charging request can be generated for an AGV, when it is standing still at a waiting location, and when it is driving somewhere.</p>
+<p>To avoid charging requests being sent while the AGV is driving, the flag <strong>AllowChargeRequestOnlyFromWait</strong> can be enabled in the parameter <strong>ProductionManager_BatteryManagementRules</strong>.
+When this flag is enabled, charging requests can only be generated for machines currently at waiting locations.</p>
+<h3 id="aborting-charging-manually"><a class="header" href="#aborting-charging-manually">Aborting charging manually</a></h3>
+<p>Charging can be aborted from Navithor Client or Web Client by pressing Abort-button. Automatic charging requests generated by the system will be disabled for 30 seconds after charging request have been removed. This is to give time for manual operations to move AGV out of charger if needed. Unless nothing is done during the 30 seconds and AGV is at the charging station, then charging may restart - depending on AGVs battery level and parameters.</p>
+<h3 id="swapping-wait-and-charge-locations"><a class="header" href="#swapping-wait-and-charge-locations">Swapping wait and charge locations</a></h3>
+<p>Two machines can't swap locations if one is charging and another is waiting.
+This means that if there are no free waiting locations and a machine at a waiting location requires charging,
+it will not be able to go to charge since any fully charged machine in a charging location will not be able to leave.</p>
+<p>The opposite behavior can be forced by enabling the flag <strong>AllowOnlySwappingOfLocation</strong> in the parameter <strong>ProductionManager_BatteryManagementRules</strong>.
+When this flag is enabled, a machine at a dedicated charging location is only allowed to leave the charging location if it can swap locations with a machine at a waiting location currently in need of charging.
+This does mean that the charging machine will not leave the charger if there are no other AGVs it can swap position with even if there is production to execute.</p>
+<h3 id="only-allow-charging-requests-when-battery-level-is-below-alert"><a class="header" href="#only-allow-charging-requests-when-battery-level-is-below-alert">Only allow charging requests when battery level is below ALERT</a></h3>
+<p>By defining an Alternative Charging Rules Zone in Navithor Tools, it is possible to create areas where a machine will only receive a charging request if the battery level goes below ALERT.
+See documentation about feature zones in the Navithor Tools manual for details on how to create the zone. </p>
+<h3 id="all-charging-management-parameters"><a class="header" href="#all-charging-management-parameters">All charging management parameters</a></h3>
+<p>This section contains all parameters in the Client that influence how the charging manager works.
+Refer to the mentioned sections for a detailed description of how the related functionality works and can be configured.</p>
+<ul>
+<li><strong>ChargingManager_CHARGING_ERROR_WAIT_TIME_MINUTES</strong> - A charging error is triggered if charging does not start within this time after the AGV has arrived at a charger.</li>
+<li><strong>MissionManager_DriveAwayRules</strong> option <strong>DriveAwayFromChargerIfChargingFails</strong> - If AGV is requested to charge, but it fails to start charging within the time limit defined by the parameter mentioned above, it can be driven away from the charger and then back to the same charge, if this rule is enabled.</li>
+<li><strong>ProductionManager_ControlBatteryCharging</strong> - Enables the charging management. See <em>Enabling charging management</em>.</li>
+<li><strong>MissionManager_PassProductionOrderToAnotherMachineWhenGoingToCharge_Rule</strong> - In hold-release production this will enable transferring production orders to other charging machines. See <em>Charging with Hold-Release</em>.</li>
+<li><strong>ProductionManager_BattFullLevel</strong>, <strong>ProductionManager_BattHighLevel</strong>, <strong>ProductionManager_BattLowLevel</strong>, <strong>ProductionManager_BattAlertLevel</strong> - Defines the battery level limits used by the charging manager. See <em>AGV battery levels</em>.</li>
+<li><strong>ProductionManager_KeepMachinesInChargeCount</strong>, <strong>ProductionManager_ForEveryMachineInProductionCount</strong> - Controls the minimum amount of AGVs in charge at all times. See <em>Keeping a certain number of AGVs in charge</em>.</li>
+<li><strong>ProductionManager_KeepMachinesInChargeMinTime</strong> - The minimum time to keep an AGV in charge. See <em>Controlling charge time</em>.</li>
+<li><strong>ProductionManager_DriveToChargeIfNoProduction</strong> - When enabled, AGVs will drive to charge if there is no production and the battery level is below the HIGH limit. See <em>AGV battery levels - HIGH trigger</em>.</li>
+<li><strong>ProductionManager_ChargeAsWait</strong> - When enabled, AGVs can use charging locations as if they were wait locations.</li>
+<li><strong>ProductionManager_DeleteProdOrdersWhenGoingToCharge_Rule</strong> - Enabling this will delete the production order of an AGV when it arrives at a charger. See <em>Deleting production orders when going to charge</em>.</li>
+<li><strong>ProductionManager_UpdateBattTimesFromOpeTimes</strong> - When this is enabled, the operation times of AGVs are used to update battery levels. See <em>Enabling charging management</em>.</li>
+<li><strong>MissionManager_GenerateChargingRequestsFromHoldRulesOnly_Rule</strong> - When this is enabled, charging requests are only generated from HOLD-locations. See <em>Charging with Hold-Release</em>.</li>
+<li><strong>ProductionManager_ChargeLocationPriorityRule</strong> - Changes how charging locations are chosen for AGVs. See <em>Choosing a charge location</em>.</li>
+<li><strong>ProductionManager_BehaviorOnFullCharge</strong> - Changes how an AGV reacts when the battery has been fully charged. See <em>AGV battery levels - FULL trigger</em>.</li>
+<li><strong>Machine_BATTERY_STATUS_DROP_GAIN_AUTO</strong> - Controls how much battery level is decreased when an AGV moves, and operation times are used to control battery level. See <em>Base battery level on operation times</em>.</li>
+<li><strong>MissionManager_OrderAssignmentRules</strong> - Controls when unhandled orders are assigned to an AGV. See <em>Controlling assignment of unhandled orders while charging</em>.</li>
+<li><strong>ProductionManager_AllowChargeAbortInFSTOP_Rule</strong> - When true, an AGV can stop charging and be assigned unhandled orders if it has battery level above HIGH. 
+If false, it will never be assigned unhandled orders as long as it is in FSTOP.</li>
+<li><strong>ProductionManager_BatteryManagementRules</strong> - Different rules controlling how charging is managed. See <em>Swapping wait and charge locations</em> and <em>Swapping wait and charge locations</em>.</li>
+<li><strong>ProductionManager_ALLOW_CHARGING_LOCATION_AUTOSELECT_RADIUS_BOUND</strong> - Controls the area from which charging locations can be chosen when an AGV is released from HOLD and needs charging. See <strong>Choosing a charge location after HOLD release</strong>.</li>
+</ul>
+<h2 id="opportunity-charging"><a class="header" href="#opportunity-charging">Opportunity Charging</a></h2>
+<p>Opportunity charging feature has been introduced in Navithor version 2.10.0.0. Opportunity charging is standalone feature separate from charging manager. It is only effective when AGV is at Symbolic Point that is set as charging location and machine type parameter <strong>BATTERY_ENABLED</strong> is set to 1. Opportunity charging has following parameters to control:</p>
+<p><strong>ProductionManager_OpportunityChargingMode</strong> – mode-parameter to enable opportunity charging. This is independent from parameter ProductionManager_ControlBatteryCharging. Opportunity charging can be enabled even if normal charging manager is disabled. The parameter is a set of rules to configure the charging:</p>
+<ul>
+<li>Disabled</li>
+<li>Enabled</li>
+<li>ForceUntilHighBattLevel
+<ul>
+<li>Uses parameter <strong>ProductionManager_BattFullLevel</strong> to define when opportunity charging is forced</li>
+</ul>
+</li>
+<li>ForceUntilFullBattLevel
+<ul>
+<li>Uses parameter <strong>ProductionManager_BattHighLevel</strong> to define when opportunity charging is forced</li>
+</ul>
+</li>
+<li>ForceMinChargingTime
+<ul>
+<li>Uses parameter <strong>ProductionManager_KeepMachinesInChargeMinTime</strong> to define when opportunity charging is forced</li>
+</ul>
+</li>
+<li>ForceUntilMaxOpportunityChargeTime
+<ul>
+<li>Uses parameter <strong>ProductionManager_OpportunityCharging_MaxChargeTime</strong> to define time that opportunity charging is forced and then after this time forcing is disabled. Checking this rule will ignore other rules meaning that this rule should be used only if a specific time at charger needs to be spent.</li>
+</ul>
+</li>
+</ul>
+<p>When opportunity charging is forced then AGV is not allowed to move. Opportunity charging itself is not a task like charge_battery or drive so the AGV is trying to get new tasks while charging. WaitForProduction-task is returned in those cases when AGV should continue its production order execution with a drive task but the opportunity charging is still forced. Forcing will be stopped if AGV moves or Navitrol State is not valid for charging:</p>
+<p><strong>ProductionManager_OpportunityCharging_AllowedMachineStates</strong> – This defines allowed Navitrol States when opportunity charging is allowed. A flag parameter with currently following possibilities:</p>
+<ul>
+<li>None,</li>
+<li>STBY,</li>
+<li>FSTOP,</li>
+<li>ACTUATOR_CONTROL,</li>
+<li>HOLD,</li>
+<li>PAUSE,</li>
+<li>MANUAL.</li>
+</ul>
+<p>If AGV is at charger and the opportunity charging has been started but the charging is not forced or forcing time has ended then the charging process will stop when:</p>
+<ul>
+<li>Battery level has reached value defined by parameter <strong>ProductionManager_OpportunityCharging_StopCharginLevel</strong></li>
+<li>AGV moves</li>
+</ul>
+<p><strong>ProductionManager_OpportunityCharging_StopCharginLevel</strong> – Battery level when opportunity charging is set complete and charging command as 0 is sent to Navitrol.</p>
+<p><strong>ProductionManager_OpportunityCharging_MaxChargeTime</strong> – Used to force opportunity charging for a specific amount of time. Used if <strong>ProductionManager_OpportunityChargingMode</strong> has ForceUntilMaxOpportunityChargeTime-rule checked.</p>
+<p><strong>ProductionManager_OpportunityCharging_StartDelay</strong> – Time delay from the moment when charging could be started to the time when charging command with value as 2 (enable charging) is sent to Navitrol and OpportunityChargingState of AGV in Navithor changes to ChargingActive. If any of the forcing rules are enabled then AGV will spend the specified time in the charger before it can execute possible pending orders.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="bufferLanes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="oneMachineZones.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="bufferLanes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="oneMachineZones.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

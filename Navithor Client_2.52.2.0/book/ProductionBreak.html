@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Production Break - NAVITHOR USER INSTRUCTIONS</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="Installation_NavithorHardwareRequirements.html"><strong aria-hidden="true">1.</strong> System Hardware Requirement Specifications</a></li><li class="chapter-item expanded "><a href="Installation_SQLServerAndDatabaseInstallationGuide.html"><strong aria-hidden="true">2.</strong> Configuring database</a></li><li class="chapter-item expanded "><a href="fleetSim.html"><strong aria-hidden="true">3.</strong> Fleet Simulator - Setup and Configuration</a></li><li class="chapter-item expanded "><a href="Installation_NavithorServerAsAService.html"><strong aria-hidden="true">4.</strong> Server as a service</a></li><li class="chapter-item expanded "><a href="Installation_ConfiguringHotSwap.html"><strong aria-hidden="true">5.</strong> Server Hot Swap with Failover Cluster</a></li><li class="chapter-item expanded "><a href="Installation_RebrandingNavithor.html"><strong aria-hidden="true">6.</strong> Server and Client Rebranding</a></li><li class="chapter-item expanded "><a href="Machinetool.html"><strong aria-hidden="true">7.</strong> Machine Tool</a></li><li class="chapter-item expanded "><a href="MesTester3.html"><strong aria-hidden="true">8.</strong> MES Tester</a></li><li class="chapter-item expanded affix "><li class="part-title">Desktop client</li><li class="chapter-item expanded "><a href="navithorServerAndClientMegaDocument.html"><strong aria-hidden="true">9.</strong> System Overview and user instructions for Client UI</a></li><li class="chapter-item expanded "><a href="Feature_ClientUpdater.html"><strong aria-hidden="true">10.</strong> Client Updater</a></li><li class="chapter-item expanded affix "><li class="part-title">Web client</li><li class="chapter-item expanded "><a href="Installation_SettingUpNavithorWebServer.html"><strong aria-hidden="true">11.</strong> Setting up Web server to enable Web client</a></li><li class="chapter-item expanded "><a href="webClient.html"><strong aria-hidden="true">12.</strong> Web Client - User Instructions</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="bestProductionPractices.html"><strong aria-hidden="true">13.</strong> Best Practices for Creating Production Area</a></li><li class="chapter-item expanded affix "><li class="part-title">Logs</li><li class="chapter-item expanded "><a href="Navithor logs.html"><strong aria-hidden="true">14.</strong> Navithor Logs</a></li><li class="chapter-item expanded "><a href="Feature_VisualReplay.html"><strong aria-hidden="true">15.</strong> Visual Replay</a></li><li class="chapter-item expanded "><a href="Feature_DownloadManager.html"><strong aria-hidden="true">16.</strong> Log Download Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">Users</li><li class="chapter-item expanded "><a href="Installation_UsingActiveDirectoryForAuthentication.html"><strong aria-hidden="true">17.</strong> User authentication against Active Directory</a></li><li class="chapter-item expanded "><a href="userRoles.html"><strong aria-hidden="true">18.</strong> User Management</a></li><li class="chapter-item expanded "><a href="userRolesRightsMatrix.html"><strong aria-hidden="true">19.</strong> Default User roles and User rights matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Features</li><li class="chapter-item expanded "><a href="symbolicPointGroups.html"><strong aria-hidden="true">20.</strong> Symbolic Point Groups</a></li><li class="chapter-item expanded "><a href="ResourceHandling.html"><strong aria-hidden="true">21.</strong> Resource handling</a></li><li class="chapter-item expanded "><a href="hold-release.html"><strong aria-hidden="true">22.</strong> Hold-Release reasoning and production order lists</a></li><li class="chapter-item expanded "><a href="transfer requests.html"><strong aria-hidden="true">23.</strong> Transfer requests</a></li><li class="chapter-item expanded "><a href="racking.html"><strong aria-hidden="true">24.</strong> Using warehouse racking feature</a></li><li class="chapter-item expanded "><a href="bufferLanes.html"><strong aria-hidden="true">25.</strong> Using Buffer Lanes</a></li><li class="chapter-item expanded "><a href="Feature_ChargingManagement.html"><strong aria-hidden="true">26.</strong> Managing Battery Levels</a></li><li class="chapter-item expanded "><a href="oneMachineZones.html"><strong aria-hidden="true">27.</strong> Using One Machine Zones</a></li><li class="chapter-item expanded "><a href="distanceControlZones.html"><strong aria-hidden="true">28.</strong> Distance Control Zones</a></li><li class="chapter-item expanded "><a href="FireAlarmZones.html"><strong aria-hidden="true">29.</strong> Fire Alarm Zones</a></li><li class="chapter-item expanded "><a href="Zone status use cases.html"><strong aria-hidden="true">30.</strong> Zone status use cases</a></li><li class="chapter-item expanded "><a href="tagStatuses.html"><strong aria-hidden="true">31.</strong> Tag Statuses</a></li><li class="chapter-item expanded "><a href="Trafficlights.html"><strong aria-hidden="true">32.</strong> Traffic Lights</a></li><li class="chapter-item expanded "><a href="Feature_Elevators.html"><strong aria-hidden="true">33.</strong> Elevators</a></li><li class="chapter-item expanded "><a href="ProductionBreak.html" class="active"><strong aria-hidden="true">34.</strong> Production Break</a></li><li class="chapter-item expanded "><a href="DynamicSafetyBounds.html"><strong aria-hidden="true">35.</strong> Virtual Dynamic Safety Bounds</a></li><li class="chapter-item expanded "><a href="WaitingSlots.html"><strong aria-hidden="true">36.</strong> Wait Queue Locations</a></li><li class="chapter-item expanded "><a href="CoupledDrive.html"><strong aria-hidden="true">37.</strong> Coupled Drive</a></li><li class="chapter-item expanded "><a href="Feature_StoppingPointOffsetsForSymbolicPoints.html"><strong aria-hidden="true">38.</strong> Stopping Point Offsets</a></li><li class="chapter-item expanded "><a href="TCStopPoint.html"><strong aria-hidden="true">39.</strong> Safe stopping point calculation</a></li><li class="chapter-item expanded "><a href="Navithor statistics.html"><strong aria-hidden="true">40.</strong> System Statistics</a></li><li class="chapter-item expanded "><a href="MachineInterfaces.html"><strong aria-hidden="true">41.</strong> Machine Interfaces</a></li><li class="chapter-item expanded affix "><li class="part-title">Interfaces</li><li class="chapter-item expanded "><a href="Communication specification between Navithor and MES.html"><strong aria-hidden="true">42.</strong> MES Interface</a></li><li class="chapter-item expanded "><a href="NavithorHttpApi.html"><strong aria-hidden="true">43.</strong> HTTP API</a></li><li class="chapter-item expanded "><a href="NavithorWebApi.html"><strong aria-hidden="true">44.</strong> WebSocket API</a></li><li class="chapter-item expanded "><a href="opcuadoc.html"><strong aria-hidden="true">45.</strong> OPC UA Server interface</a></li><li class="chapter-item expanded affix "><li class="part-title">Alarms</li><li class="chapter-item expanded "><a href="Fleet Control Alarms.html"><strong aria-hidden="true">46.</strong> Alarms</a></li><li class="chapter-item expanded "><a href="Alarms configuration override.html"><strong aria-hidden="true">47.</strong> Alarms configuration override</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NAVITHOR USER INSTRUCTIONS</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="production-break"><a class="header" href="#production-break">Production Break</a></h1>
+<p>This document contains information on how to use the Production Break feature with Navithor Fleet Control.</p>
+<p>Updated 09.12.2022</p>
+<h2 id="version-history"><a class="header" href="#version-history">Version History</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead><tbody>
+<tr><td>1.0</td><td>18.11.2022</td><td>Toni Liski</td><td>Document created.</td></tr>
+<tr><td>1.1</td><td>09.12.2022</td><td>Simon Clement</td><td>Add warning about decision points in wait queues</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>The Production Break feature enables a more sophisticated way to control the longer breaks in the production, for instance, when the production is paused for the weekend. Once the Production Break mode is activated, the Fleet Control drives machines automatically to predefined locations and puts them in a sleep to save the battery.</p>
+<p>The Production Break considers active production, so the machines which are carrying the load are first dropping off the load, before driving to the break locations. Also machines are required to be charged up to the specified level before driving to the break locations.</p>
+<h2 id="sleep-mode"><a class="header" href="#sleep-mode">Sleep mode</a></h2>
+<p>The sleep mode is a special feature which any machine can support. Fleet Control will command machines to the sleep mode to save the battery during the production break, or sleep mode can be started manually from the Clients. The Sleep mode requires custom implementation on the supervisor interface (See Navitrol documentation for more details).</p>
+<p>If the machine supports the sleep mode, the machine is commanded automatically to sleep once it reaches the production break location. When production break is over, machines are woken up automatically and they should continue the normal production. The production break logic does not require that machine supports sleep mode.</p>
+<h2 id="navithor-tools"><a class="header" href="#navithor-tools">Navithor Tools</a></h2>
+<h3 id="defining-the-production-break-locations"><a class="header" href="#defining-the-production-break-locations">Defining the Production break locations</a></h3>
+<p>Enabling the production break feature requires that at least one symbolicpoint has a ProductionBreak type defined in Navithor Tools. Any pickup, dropoff, waitForPickup, or waitForDropoff location can be defined as a production break location. It means that when production break is activated, machines are allowed to use only those symbolicpoints for waiting.</p>
+<p>It is also possible to define symbolicpoint only as ProductionBreak. Then this symbolicpoint is not allowed for the normal production, but only when the production break is activated.</p>
+<p><img src="./Images/prodbreak/tools1.png" alt="Setting production break locations" /></p>
+<blockquote>
+<p>Figure 1: Each symbolicpoint where waiting is allowed during the production break should be marked with a ProductionBreak type in Navithor Tools.</p>
+</blockquote>
+<p>A typical use case would be to define a long wait queue on the one-way lane for production break purpose. This allows that all machines gather at the same, known places when break is activated, and are not scattered around the factory.</p>
+<p><img src="./Images/prodbreak/tools2.png" alt="Production break queue" /></p>
+<blockquote>
+<p>Figure 2: One typical use case is to define production break location as a wait queue.</p>
+</blockquote>
+<blockquote>
+<p>Note: Do not place decision points inside a wait queue. It is not supported and may lead to unwanted behavior.</p>
+</blockquote>
+<h3 id="limiting-locations-for-specific-machine-types"><a class="header" href="#limiting-locations-for-specific-machine-types">Limiting locations for specific machine types</a></h3>
+<p>Each symbolicpoint (production break location) can be defined to allow only specific machine types to drive to the location. The allowed machine types can be selected in Navithor Tools by selecting symbolicpoint and selecting types from the button <em>Select Enabled MachineTypes</em>.</p>
+<h3 id="backup-dropoff-locations"><a class="header" href="#backup-dropoff-locations">Backup dropoff locations</a></h3>
+<p>When the production break is activated and a machine has a load aboard, there might be situations that there is a machine or a load blocking the target location, and the location will not be available until the production break is over again. For this kind of situations it is possible to define a backup dropoff location in Navithor Tools, which is allowed for certain type of the loads and certain type of the machines. The backup dropoff must be defined as PickupDropoff location, as both actions must be allowed on the location.</p>
+<p>Defining the backup dropoff location is done from the <em>Destinations And Loads</em> menu, selecting <strong>Edit</strong> button under the <em>Load Types</em>. The opened dialog allows to specify certain load types for which the backup dropoff is allowed.</p>
+<p><img src="./Images/prodbreak/tools3.png" alt="Backup dropoff" /></p>
+<blockquote>
+<p>Figure 3: Defining location as a backup dropoff location in Navithor Tools.</p>
+</blockquote>
+<h2 id="activating-production-break"><a class="header" href="#activating-production-break">Activating Production Break</a></h2>
+<p>The production break mode can be activated either from Navithor Client or over the MES interface (see message <em>StartStopProductionBreak</em> (ID = 359) in the MES interface documentation). When starting or stopping the break from the Navithor Client, the user responsible must have the role <strong>&quot;Start or stop production break&quot;</strong> granted.</p>
+<p>A button to start a production break can be found from the main menu, Machines -&gt; Start production break. Confirm with <strong>Yes</strong> button.</p>
+<p><img src="./Images/prodbreak/client1.png" alt="Start production break" /></p>
+<blockquote>
+<p>Figure 4: Production break can be started from Navithor Client.</p>
+</blockquote>
+<p>Once production break is activated, the indicator <em>Production on break</em> can be seen on the bottom left corner of the map view.</p>
+<p><img src="./Images/prodbreak/client2.png" alt="Production break active" /></p>
+<blockquote>
+<p>Figure 5: Production break status is visualized on a bottom left corner of the map.</p>
+</blockquote>
+<h2 id="charging-rules"><a class="header" href="#charging-rules">Charging rules</a></h2>
+<p>There are currently two system parameters affecting the charging logic with production break:</p>
+<p><strong>BatteryLevelToAllowDrivingToProductionBreakWithoutCharging</strong></p>
+<ul>
+<li>The minimum battery level an AGV needs to have in order to drive directly to production break location without charging. If battery level is below this minimum level, charging is required. After the AGV has started driving towards a production break location, charging request will not be generated even if the battery level goes below this limit.</li>
+</ul>
+<p><strong>BatteryLevelToReleaseAGVFromChargerToProductionBreak</strong></p>
+<ul>
+<li>The parameter to control what battery level an AGV needs to reach before it can be released from the charger to the production break location in case the production break is active.</li>
+</ul>
+<p>These parameters override the normal battery levels defined in system. Even if the battery level would be high enough to execute normal production, it might be useful to set parameter <em>BatteryLevelToAllowDrivingToProductionBreakWithoutCharging</em> higher to force machines to charge a bit before entering the production break. While production break is active and machine is already at the production break location, the charging is never allowed, even if the battery level drops under the specified limits.</p>
+<p><strong>Note:</strong> During the production break, the rules defined for <em>AlternativeChargingRulesZone</em> are ignored.</p>
+<h2 id="production-rules-when-activating-production-break"><a class="header" href="#production-rules-when-activating-production-break">Production rules when activating production break</a></h2>
+<p>After production break mode is activated, the rules below are followed:</p>
+<p><strong>Machine does not have a load aboard and is not currently picking up anything</strong></p>
+<ul>
+<li>Machine can drive directly to a production break location.</li>
+</ul>
+<p><strong>Machine hasn't picked the load yet</strong></p>
+<ul>
+<li>The production order is removed and machine drives to production break location. <em>Unhandled orders</em> (transfer requests and pickup requests) are still kept, so when production break is over, new production orders are generated based on those.</li>
+</ul>
+<p><strong>Machine has a load aboard</strong></p>
+<ul>
+<li>Machine drives to assigned dropoff location and completes the current order. After dropoff it can continue to a production break location.</li>
+</ul>
+<p><strong>Machine has load aboard, but target location is not available</strong></p>
+<ul>
+<li>Machine is allowed to use the backup dropoff location. See Section <em>Using backup dropoff locations</em>.</li>
+</ul>
+<p><strong>Machine is not in production</strong></p>
+<ul>
+<li>Automatic production break mode requires that machine is in production. Machines out of production stay where they are.</li>
+</ul>
+<p><strong>Machine is charging</strong></p>
+<ul>
+<li>Machine is released when battery level reaches the parameter <em>BatteryLevelToReleaseAGVFromChargerToProductionBreak</em>. See Section <em>Charging rules</em>.</li>
+</ul>
+<p>Generally: Once the production break is activated, the active production orders are executed and completed if the machine has already picked up the load. If the load linked to the production order has not been picked yet, the production order is removed and machine drives to production break location.</p>
+<p><strong>Note:</strong> If production is executed only with <em>Production orders</em> (generated from over MES with <em>AddProductionOrder</em> message), they must be sent again once production break is over.</p>
+<h2 id="using-backup-dropoff-locations"><a class="header" href="#using-backup-dropoff-locations">Using backup dropoff locations</a></h2>
+<p>If a machine has a load aboard, but target location is occupied by a load or a machine, the machine is allowed to use the backup dropoff locations. The machine drives the load to the backup dropoff location, and after dropping it off, the machine continues to the nearest production break location. A new transfer request is automatically generated to transfer the load from the backup dropoff location to the original dropoff location. When the production break is over, closest machine drives back to the backup dropoff location, picks the load and continues to the original dropoff target with the load.</p>
+<p><strong>Note:</strong> Machine cannot drive to production break location until it has dropped off the load. If all backup dropoff locations are reserved, the machine must wait.</p>
+<h2 id="custom-rules-to-distribute-machines-after-the-break-is-over"><a class="header" href="#custom-rules-to-distribute-machines-after-the-break-is-over">Custom rules to distribute machines after the break is over</a></h2>
+<p>Once the production break is over, machines are distributed around the production area by assigning the available production orders for them automatically or by choosing the closest waiting location. There is also a way to define more sophisticated logic to spread the machines around the area by specifying a production break release priority for the waiting locations.</p>
+<p>The special priority is entered in the file <code>LocationPriorities.txt</code>, which can be found under <code>&lt;server root&gt;\Overrides\</code> folder. The format of the file is following:</p>
+<p><code>&lt;symbolicPointId&gt;,&lt;locationPriority&gt;,&lt;productionBreakReleasePriority&gt;</code> </p>
+<p>For example:</p>
+<pre><code class="language-text"># File for specifying the priorities of locations.
+# Format: SymbolicPointId,Priority,ProductionBreakReleasedPriority
+# Example: 3,2,4
+14,4,1
+17,4,3
+18,4,4
+21,4,1
+</code></pre>
+<p>which defines a custom production break release priority <code>3</code> for the location <code>(17)</code> and a priority <code>4</code> for the location <code>(18)</code>.</p>
+<p>After the production break is over, all the locations with <em>ProductionBreakReleasedPriority</em> higher than <code>1</code> are collected and location requests are generated for those locations. Machines will select the best location and fulfill the location requests one by one. The maximum amount of location requests that can be triggered is limited by amount of machines currently targeting the production break locations.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="Feature_Elevators.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="DynamicSafetyBounds.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="Feature_Elevators.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="DynamicSafetyBounds.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

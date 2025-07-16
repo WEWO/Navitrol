@@ -1,0 +1,582 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Alarms - NAVITHOR USER INSTRUCTIONS</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="Installation_NavithorHardwareRequirements.html"><strong aria-hidden="true">1.</strong> System Hardware Requirement Specifications</a></li><li class="chapter-item expanded "><a href="Installation_SQLServerAndDatabaseInstallationGuide.html"><strong aria-hidden="true">2.</strong> Configuring database</a></li><li class="chapter-item expanded "><a href="fleetSim.html"><strong aria-hidden="true">3.</strong> Fleet Simulator - Setup and Configuration</a></li><li class="chapter-item expanded "><a href="Installation_NavithorServerAsAService.html"><strong aria-hidden="true">4.</strong> Server as a service</a></li><li class="chapter-item expanded "><a href="Installation_ConfiguringHotSwap.html"><strong aria-hidden="true">5.</strong> Server Hot Swap with Failover Cluster</a></li><li class="chapter-item expanded "><a href="Installation_RebrandingNavithor.html"><strong aria-hidden="true">6.</strong> Server and Client Rebranding</a></li><li class="chapter-item expanded "><a href="Machinetool.html"><strong aria-hidden="true">7.</strong> Machine Tool</a></li><li class="chapter-item expanded "><a href="MesTester3.html"><strong aria-hidden="true">8.</strong> MES Tester</a></li><li class="chapter-item expanded affix "><li class="part-title">Desktop client</li><li class="chapter-item expanded "><a href="navithorServerAndClientMegaDocument.html"><strong aria-hidden="true">9.</strong> System Overview and user instructions for Client UI</a></li><li class="chapter-item expanded "><a href="Feature_ClientUpdater.html"><strong aria-hidden="true">10.</strong> Client Updater</a></li><li class="chapter-item expanded affix "><li class="part-title">Web client</li><li class="chapter-item expanded "><a href="Installation_SettingUpNavithorWebServer.html"><strong aria-hidden="true">11.</strong> Setting up Web server to enable Web client</a></li><li class="chapter-item expanded "><a href="webClient.html"><strong aria-hidden="true">12.</strong> Web Client - User Instructions</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="bestProductionPractices.html"><strong aria-hidden="true">13.</strong> Best Practices for Creating Production Area</a></li><li class="chapter-item expanded affix "><li class="part-title">Logs</li><li class="chapter-item expanded "><a href="Navithor logs.html"><strong aria-hidden="true">14.</strong> Navithor Logs</a></li><li class="chapter-item expanded "><a href="Feature_VisualReplay.html"><strong aria-hidden="true">15.</strong> Visual Replay</a></li><li class="chapter-item expanded "><a href="Feature_DownloadManager.html"><strong aria-hidden="true">16.</strong> Log Download Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">Users</li><li class="chapter-item expanded "><a href="Installation_UsingActiveDirectoryForAuthentication.html"><strong aria-hidden="true">17.</strong> User authentication against Active Directory</a></li><li class="chapter-item expanded "><a href="userRoles.html"><strong aria-hidden="true">18.</strong> User Management</a></li><li class="chapter-item expanded "><a href="userRolesRightsMatrix.html"><strong aria-hidden="true">19.</strong> Default User roles and User rights matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Features</li><li class="chapter-item expanded "><a href="symbolicPointGroups.html"><strong aria-hidden="true">20.</strong> Symbolic Point Groups</a></li><li class="chapter-item expanded "><a href="ResourceHandling.html"><strong aria-hidden="true">21.</strong> Resource handling</a></li><li class="chapter-item expanded "><a href="hold-release.html"><strong aria-hidden="true">22.</strong> Hold-Release reasoning and production order lists</a></li><li class="chapter-item expanded "><a href="transfer requests.html"><strong aria-hidden="true">23.</strong> Transfer requests</a></li><li class="chapter-item expanded "><a href="racking.html"><strong aria-hidden="true">24.</strong> Using warehouse racking feature</a></li><li class="chapter-item expanded "><a href="bufferLanes.html"><strong aria-hidden="true">25.</strong> Using Buffer Lanes</a></li><li class="chapter-item expanded "><a href="Feature_ChargingManagement.html"><strong aria-hidden="true">26.</strong> Managing Battery Levels</a></li><li class="chapter-item expanded "><a href="oneMachineZones.html"><strong aria-hidden="true">27.</strong> Using One Machine Zones</a></li><li class="chapter-item expanded "><a href="distanceControlZones.html"><strong aria-hidden="true">28.</strong> Distance Control Zones</a></li><li class="chapter-item expanded "><a href="FireAlarmZones.html"><strong aria-hidden="true">29.</strong> Fire Alarm Zones</a></li><li class="chapter-item expanded "><a href="Zone status use cases.html"><strong aria-hidden="true">30.</strong> Zone status use cases</a></li><li class="chapter-item expanded "><a href="tagStatuses.html"><strong aria-hidden="true">31.</strong> Tag Statuses</a></li><li class="chapter-item expanded "><a href="Trafficlights.html"><strong aria-hidden="true">32.</strong> Traffic Lights</a></li><li class="chapter-item expanded "><a href="Feature_Elevators.html"><strong aria-hidden="true">33.</strong> Elevators</a></li><li class="chapter-item expanded "><a href="ProductionBreak.html"><strong aria-hidden="true">34.</strong> Production Break</a></li><li class="chapter-item expanded "><a href="DynamicSafetyBounds.html"><strong aria-hidden="true">35.</strong> Virtual Dynamic Safety Bounds</a></li><li class="chapter-item expanded "><a href="WaitingSlots.html"><strong aria-hidden="true">36.</strong> Wait Queue Locations</a></li><li class="chapter-item expanded "><a href="CoupledDrive.html"><strong aria-hidden="true">37.</strong> Coupled Drive</a></li><li class="chapter-item expanded "><a href="Feature_StoppingPointOffsetsForSymbolicPoints.html"><strong aria-hidden="true">38.</strong> Stopping Point Offsets</a></li><li class="chapter-item expanded "><a href="TCStopPoint.html"><strong aria-hidden="true">39.</strong> Safe stopping point calculation</a></li><li class="chapter-item expanded "><a href="Navithor statistics.html"><strong aria-hidden="true">40.</strong> System Statistics</a></li><li class="chapter-item expanded "><a href="MachineInterfaces.html"><strong aria-hidden="true">41.</strong> Machine Interfaces</a></li><li class="chapter-item expanded affix "><li class="part-title">Interfaces</li><li class="chapter-item expanded "><a href="Communication specification between Navithor and MES.html"><strong aria-hidden="true">42.</strong> MES Interface</a></li><li class="chapter-item expanded "><a href="NavithorHttpApi.html"><strong aria-hidden="true">43.</strong> HTTP API</a></li><li class="chapter-item expanded "><a href="NavithorWebApi.html"><strong aria-hidden="true">44.</strong> WebSocket API</a></li><li class="chapter-item expanded "><a href="opcuadoc.html"><strong aria-hidden="true">45.</strong> OPC UA Server interface</a></li><li class="chapter-item expanded affix "><li class="part-title">Alarms</li><li class="chapter-item expanded "><a href="Fleet Control Alarms.html" class="active"><strong aria-hidden="true">46.</strong> Alarms</a></li><li class="chapter-item expanded "><a href="Alarms configuration override.html"><strong aria-hidden="true">47.</strong> Alarms configuration override</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NAVITHOR USER INSTRUCTIONS</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="alarms"><a class="header" href="#alarms">Alarms</a></h1>
+<p>This document contains the alarms that can be raised from fleet control.</p>
+<p>Updated 12.07.2022</p>
+<h2 id="version-history"><a class="header" href="#version-history">Version History</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead><tbody>
+<tr><td>1.0</td><td>21.06.2021</td><td>Simon Clement</td><td>Document created</td></tr>
+<tr><td>1.1</td><td>01.10.2021</td><td>Benard Gathimba</td><td>Added new alarm MESInvalidProductionOrderId</td></tr>
+<tr><td>1.2</td><td>11.01.2022</td><td>Tero Laakso</td><td>Missing errors added, error levels changed to match default levels</td></tr>
+<tr><td>1.3</td><td>07.02.2022</td><td>Aleksi Ålander</td><td>Added new ResourceVerificationError</td></tr>
+<tr><td>1.4</td><td>12.07.2022</td><td>Aleksi Ålander</td><td>Updated the document for Navithor 2.51.0.0 release</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="alarms-1"><a class="header" href="#alarms-1">Alarms</a></h2>
+<div class=wide-table-wrapper>
+<div class="table-wrapper"><table><thead><tr><th>Error Source</th><th>Error ID</th><th>Error identifier</th><th>Error type</th><th>Error level</th><th>Description</th></tr></thead><tbody>
+<tr><td>FLEET CONTROL</td><td>100</td><td>SQLConnectionFailure</td><td>System Alarm</td><td>FATAL ERROR</td><td>Problem with database connection.</td></tr>
+<tr><td>FLEET CONTROL</td><td>102</td><td>MESConnectionFailure</td><td>System Alarm</td><td>WARNING</td><td>MES Clients were disconnected.</td></tr>
+<tr><td>FLEET CONTROL</td><td>103</td><td>MESConnectionFailureExtended</td><td>System Alarm</td><td>ERROR</td><td>MES Client disconnected for longer than parameters allow, logs saved!</td></tr>
+<tr><td>FLEET CONTROL</td><td>104</td><td>MQNotConnected</td><td>System Alarm</td><td>ERROR</td><td>MQ Activated but not connected.</td></tr>
+<tr><td>FLEET CONTROL</td><td>105</td><td>FailedToOpenServiceHost</td><td>System Alarm</td><td>FATAL ERROR</td><td>Failed to open service host. Client communication not operational.</td></tr>
+<tr><td>FLEET CONTROL</td><td>106</td><td>FailedToOpenServiceStreamHost</td><td>System Alarm</td><td>FATAL ERROR</td><td>Failed to open service stream host. Unable to transfer files between Server and Client.</td></tr>
+<tr><td>FLEET CONTROL</td><td>107</td><td>FailedToStartOPCUA</td><td>System Alarm</td><td>ERROR</td><td>Failed to open OPC UA service.</td></tr>
+<tr><td>FLEET CONTROL</td><td>108</td><td>FailedToStartWebServerMissingStaticFiles</td><td>System Alarm</td><td>ERROR</td><td>Failed to start the web server. Static files are missing.</td></tr>
+<tr><td>FLEET CONTROL</td><td>109</td><td>FailedToStartWebServerBadConfiguration</td><td>System Alarm</td><td>ERROR</td><td>Failed to start the web server. Unable to reserve url.</td></tr>
+<tr><td>FLEET CONTROL</td><td>200</td><td>ProductionAreaNotOperational</td><td>System Alarm</td><td>ERROR</td><td>Production area not operational. Something wrong with loading area files.</td></tr>
+<tr><td>FLEET CONTROL</td><td>201</td><td>TaskGenerationDisabled</td><td>System Alarm</td><td>ERROR</td><td>Task generation disabled. Area not yet loaded.</td></tr>
+<tr><td>FLEET CONTROL</td><td>202</td><td>ProductionAreaHasWarnings</td><td>System Alarm</td><td>ERROR</td><td>Possible bad configuration with load capacity. Some symbolic points will not be able to handle specified resource types. See ProductionAreaInformation for more details.</td></tr>
+<tr><td>FLEET CONTROL</td><td>203</td><td>MachineTypesNotDefined</td><td>System Alarm</td><td>ERROR</td><td>Missing machine types. Check that there are active machines with valid and active machine type parameters.</td></tr>
+<tr><td>FLEET CONTROL</td><td>204</td><td>MachinesNotDefined</td><td>System Alarm</td><td>ERROR</td><td>No machines defined with valid machine type.</td></tr>
+<tr><td>FLEET CONTROL</td><td>205</td><td>NoProductionAreasDefined</td><td>System Alarm</td><td>ERROR</td><td>Area is not ok, because no production areas are defined or active.</td></tr>
+<tr><td>FLEET CONTROL</td><td>206</td><td>MultipleProductionAreasDefined</td><td>System Alarm</td><td>ERROR</td><td>Area is not ok, because multiple production areas are defined and active.</td></tr>
+<tr><td>FLEET CONTROL</td><td>207</td><td>NoSegmentsLoaded</td><td>System Alarm</td><td>ERROR</td><td>Area is not ok, because no segments were loaded.</td></tr>
+<tr><td>FLEET CONTROL</td><td>208</td><td>NoWaypointsLoaded</td><td>System Alarm</td><td>ERROR</td><td>Area is not ok, because no waypoints were loaded.</td></tr>
+<tr><td>FLEET CONTROL</td><td>209</td><td>SegmentOverlapsNotCalculated</td><td>System Alarm</td><td>ERROR</td><td>Overlaps not calculated. Check that all machine types are configured and active.</td></tr>
+<tr><td>FLEET CONTROL</td><td>210</td><td>MachineNotAllowedToHandleAnyResourceType</td><td>System Alarm</td><td>ERROR</td><td>Configuration issue: Machine not allowed to handle any resource type.</td></tr>
+<tr><td>FLEET CONTROL</td><td>300</td><td>MachineError</td><td>System Alarm</td><td>ERROR</td><td>Generic id for all Navitrol errors sent through MES message Errors (ID: 309)</td></tr>
+<tr><td>FLEET CONTROL</td><td>409</td><td>InvalidMachineTypeParameters</td><td>System Alarm</td><td>ERROR</td><td>Failed to parse all machine type parameters defined in the project.</td></tr>
+<tr><td>FLEET CONTROL</td><td>411</td><td>OverrideFileError</td><td>System Alarm</td><td>WARNING</td><td>Error parsing override files. Check logs for more details.</td></tr>
+<tr><td>FLEET CONTROL</td><td>412</td><td>MissingMachineTypeParameters</td><td>System Alarm</td><td>ERROR</td><td>Missing machine type parameters. Check that all machine types defined in the project are uploaded and active.</td></tr>
+<tr><td>FLEET CONTROL</td><td>413</td><td>InvalidTransferRequestLocations</td><td>System Alarm</td><td>WARNING</td><td>Transfer request has no valid locations.</td></tr>
+<tr><td>FLEET CONTROL</td><td>414</td><td>OverrideFileWarning</td><td>System Alarm</td><td>WARNING</td><td>Warnings raised while parsing override files. The override files where parsed successfully, but some lines where invalid and not read. Check logs for more details.</td></tr>
+<tr><td>FLEET CONTROL</td><td>500</td><td>SystemMonitorNotRunning</td><td>System Alarm</td><td>ERROR</td><td>Cannot start SystemStatusMonitor.</td></tr>
+<tr><td>FLEET CONTROL</td><td>501</td><td>ServiceHostFaulted</td><td>System Alarm</td><td>ERROR</td><td>Service host for Client communications faulted, trying to restart the service.</td></tr>
+<tr><td>FLEET CONTROL</td><td>503</td><td>FailedToStartChargingManager</td><td>System Alarm</td><td>ERROR</td><td>Unable to initialize charging manager.</td></tr>
+<tr><td>FLEET CONTROL</td><td>504</td><td>FailedToWriteStatistics</td><td>System Alarm</td><td>ERROR</td><td>Statistics writer thread was stopped and restarted.</td></tr>
+<tr><td>FLEET CONTROL</td><td>1014</td><td>MissionManagerNotReady</td><td>System Alarm</td><td>ERROR</td><td>Mission manager is not ready, production on hold!</td></tr>
+<tr><td>FLEET CONTROL</td><td>2000</td><td>LowDiskSpace</td><td>System Alarm</td><td>WARNING</td><td>Current Disk has below 10GB of free space left!</td></tr>
+<tr><td>FLEET CONTROL</td><td>2004</td><td>LogWriteNotDetected</td><td>System Alarm</td><td>WARNING</td><td>No writes detected to server text logs.</td></tr>
+<tr><td>FLEET CONTROL</td><td>3001</td><td>TargetSymbolicPointIdNotValid</td><td>System Alarm</td><td>WARNING</td><td>Not valid target given for TransferRequest, symbolic point not found.</td></tr>
+<tr><td>FLEET CONTROL</td><td>3004</td><td>PickupSymbolicPointIdNotValid</td><td>System Alarm</td><td>WARNING</td><td>Invalid symbolic point ID given.</td></tr>
+<tr><td>FLEET CONTROL</td><td>3007</td><td>SetRackStatusSymbolicPointIdNotValid</td><td>System Alarm</td><td>WARNING</td><td>SetRackStatus: Given symbolic point ID is not rack.</td></tr>
+<tr><td>FLEET CONTROL</td><td>3009</td><td>MESDriveMachineToSymbolicPoint</td><td>System Alarm</td><td>WARNING</td><td>Something wrong with MES message DriveMachineToSymbolicPoint.</td></tr>
+<tr><td>FLEET CONTROL</td><td>3013</td><td>MESEnableDisableSymbolicPoint</td><td>System Alarm</td><td>WARNING</td><td>Could not find symbolic point with the ID given in MES message to enable or disable location.</td></tr>
+<tr><td>FLEET CONTROL</td><td>3014</td><td>MESSymbolicPointIdNotValid</td><td>System Alarm</td><td>WARNING</td><td>Could not find symbolic point with given ID.</td></tr>
+<tr><td>FLEET CONTROL</td><td>3015</td><td>MESInvalidMessageReceived</td><td>System Alarm</td><td>WARNING</td><td>Invalid MES message received. Check logs or entity alarms for more detailed information.</td></tr>
+<tr><td>FLEET CONTROL</td><td>3016</td><td>MESInvalidProductionOrderId</td><td>System Alarm</td><td>WARNING</td><td>Could not find production order with given ID.</td></tr>
+<tr><td>FLEET CONTROL</td><td>3017</td><td>MESInitPositionToSymbolicPointNotValid</td><td>System Alarm</td><td>WARNING</td><td>MES init position: Given machine or symbolic point not found.</td></tr>
+<tr><td>FLEET CONTROL</td><td>5001</td><td>AttemptToOverridePermanentResourceServer</td><td>System Alarm</td><td>WARNING</td><td>Server is attempting to remove resource while permanent resources is on.</td></tr>
+<tr><td>FLEET CONTROL</td><td>5002</td><td>AttemptToOverridePermanentResourceClient</td><td>System Alarm</td><td>WARNING</td><td>Client user attempted to remove resource while permanent resources is on.</td></tr>
+<tr><td>FLEET CONTROL</td><td>5003</td><td>AttemptToOverridePermanentResourceSimulator</td><td>System Alarm</td><td>WARNING</td><td>Simulator attempted to remove resource while permanent resources is on.</td></tr>
+<tr><td>FLEET CONTROL</td><td>6001</td><td>InvalidChargingParametersLoaded</td><td>System Alarm</td><td>ERROR</td><td>Invalid charging manager parameters configured. Charging manager is not operational.</td></tr>
+<tr><td>FLEET CONTROL</td><td>7001</td><td>LicenseDoesNotCoverAllMachines</td><td>System Alarm</td><td>ERROR</td><td>License does not cover all enabled machines. Excess machines are forcefully disabled.</td></tr>
+<tr><td>FLEET CONTROL</td><td>7002</td><td>LicenseDoesNotCoverAllVDAMachines</td><td>System Alarm</td><td>ERROR</td><td>License does not cover all enabled VDA machines. Excess machines are forcefully disabled.</td></tr>
+<tr><td>FLEET CONTROL</td><td>7003</td><td>LicenseDoesNotAllowSingleLevelBlockStacking</td><td>System Alarm</td><td>ERROR</td><td>License does not allow single level block stacking.</td></tr>
+<tr><td>FLEET CONTROL</td><td>7004</td><td>LicenseDoesNotAllowMultiLevelBlockStacking</td><td>System Alarm</td><td>ERROR</td><td>License does not allow multi level block stacking.</td></tr>
+<tr><td>FLEET CONTROL</td><td>7005</td><td>LicenseDoesNotCoverAllVNAMachines</td><td>System Alarm</td><td>ERROR</td><td>License does not cover all machine with VNA machine type. Excess machines are forcefully disabled.</td></tr>
+<tr><td>FLEET CONTROL</td><td>7006</td><td>LicenseDoesNotCoverAllSideLoaderMachines</td><td>System Alarm</td><td>ERROR</td><td>License does not cover all machine with sideloader machine type. Excess machines are forcefully disabled.</td></tr>
+<tr><td>FLEET CONTROL</td><td>7007</td><td>LicenseDoesNotCoverWebClient</td><td>System Alarm</td><td>ERROR</td><td>License does not cover web client. Web client not in use.</td></tr>
+<tr><td>FLEET CONTROL</td><td>7008</td><td>LicenseDoesNotCoverFleetSimulator</td><td>System Alarm</td><td>ERROR</td><td>License does not cover fleet simulator. Fleet simulator not in use.</td></tr>
+<tr><td>FLEET CONTROL</td><td>100000</td><td>SimulatedMachineWarning</td><td>Machine Alarm</td><td>WARNING</td><td>Warning received from simulated machine.</td></tr>
+<tr><td>FLEET CONTROL</td><td>100001</td><td>NoMachineConnection</td><td>Machine Alarm</td><td>ERROR</td><td>No connection to the machine.</td></tr>
+<tr><td>FLEET CONTROL</td><td>100002</td><td>ReplyNotReceived</td><td>Machine Alarm</td><td>WARNING</td><td>Reply not received from machine.</td></tr>
+<tr><td>FLEET CONTROL</td><td>100003</td><td>MessageRejected</td><td>Machine Alarm</td><td>WARNING</td><td>Machine rejected message.</td></tr>
+<tr><td>FLEET CONTROL</td><td>100004</td><td>StartingSegNotFound</td><td>Machine Alarm</td><td>ERROR</td><td>Valid route not found. Machine has wrong heading or is too far away from the route.</td></tr>
+<tr><td>FLEET CONTROL</td><td>100005</td><td>MachineIdDoesNotMatch</td><td>Machine Alarm</td><td>WARNING</td><td>Received machine ID does not match with the expected ID.</td></tr>
+<tr><td>FLEET CONTROL</td><td>100007</td><td>BatteryTemperatureCritical</td><td>Machine Alarm</td><td>FATAL ERROR</td><td>Battery Temperature of the machine too high.</td></tr>
+<tr><td>FLEET CONTROL</td><td>100009</td><td>MachineTypeIdConflict</td><td>Machine Alarm</td><td>ERROR</td><td>Defined machine type ID does not match between the machine and the fleet control.</td></tr>
+<tr><td>FLEET CONTROL</td><td>100010</td><td>CommunicationVersionDoesNotMatch</td><td>Machine Alarm</td><td>ERROR</td><td>Communication protocol version between the machine and fleet control does not match.</td></tr>
+<tr><td>FLEET CONTROL</td><td>100011</td><td>FileTransferFailed</td><td>Machine Alarm</td><td>ERROR</td><td>Uploading files to the machine failed.</td></tr>
+<tr><td>FLEET CONTROL</td><td>101001</td><td>MachineIsNotAtLoadPoint</td><td>Machine Alarm</td><td>ERROR</td><td>Resource was not found because machine is not at symbolic point suitable for loading. System will try to create a new resource for loading.</td></tr>
+<tr><td>FLEET CONTROL</td><td>101002</td><td>MachineIsNotAtUnloadPoint</td><td>Machine Alarm</td><td>ERROR</td><td>Machine is not at symbolic point suitable for unloading. System will try to remove the resource after unloading.</td></tr>
+<tr><td>FLEET CONTROL</td><td>101003</td><td>MachineIsCarryingAnotherResource</td><td>Machine Alarm</td><td>ERROR</td><td>Machine is carrying a resource of different type and will try to unload it.</td></tr>
+<tr><td>FLEET CONTROL</td><td>101004</td><td>MachineIsNotCarryingAnyResource</td><td>Machine Alarm</td><td>ERROR</td><td>Machine is not carrying any resource. System will try to add a new resource or replace existing for unloading.</td></tr>
+<tr><td>FLEET CONTROL</td><td>101005</td><td>LoadingNotPossible</td><td>Machine Alarm</td><td>ERROR</td><td>Machine is not allowed to pick up the resource. Check that location has a resource and machine can load it.</td></tr>
+<tr><td>FLEET CONTROL</td><td>101006</td><td>UnloadingNotPossible</td><td>Machine Alarm</td><td>ERROR</td><td>Machine is not allowed to unload. Check that location is free and machine has a resource on board.</td></tr>
+<tr><td>FLEET CONTROL</td><td>102001</td><td>NoRouteFound</td><td>Machine Alarm</td><td>ERROR</td><td>Cannot find a valid route to the target location.</td></tr>
+<tr><td>FLEET CONTROL</td><td>102002</td><td>Deadlock</td><td>Machine Alarm</td><td>WARNING</td><td>Machine cannot advance the drive task, because of the traffic ahead.</td></tr>
+<tr><td>FLEET CONTROL</td><td>102003</td><td>MachineNotMovingInAuto</td><td>Machine Alarm</td><td>WARNING</td><td>Machine is not moving with drive order active.</td></tr>
+<tr><td>FLEET CONTROL</td><td>102004</td><td>TargetLocationBlocked</td><td>Machine Alarm</td><td>WARNING</td><td>Target location is blocked by another machine.</td></tr>
+<tr><td>FLEET CONTROL</td><td>102005</td><td>ObstAvoidanceNoProgress</td><td>Machine Alarm</td><td>WARNING</td><td>Machine is trying to bypass obstacle, but is not moving.</td></tr>
+<tr><td>FLEET CONTROL</td><td>103001</td><td>TargetLocationNotAvailable</td><td>Machine Alarm</td><td>ERROR</td><td>Task end location is not available for unload and no wait location available.</td></tr>
+<tr><td>FLEET CONTROL</td><td>103002</td><td>BadProductionOrderData</td><td>Machine Alarm</td><td>ERROR</td><td>Cannot execute production order.</td></tr>
+<tr><td>FLEET CONTROL</td><td>103003</td><td>ChargingError</td><td>Machine Alarm</td><td>ERROR</td><td>Something is wrong with charging of the battery.</td></tr>
+<tr><td>FLEET CONTROL</td><td>103004</td><td>CouplingNotPossibleNotAtSymbolicPoint</td><td>Machine Alarm</td><td>ERROR</td><td>Coupling not allowed, machine is not at coupling point.</td></tr>
+<tr><td>FLEET CONTROL</td><td>103005</td><td>CouplingNotPossibleErrorsActive</td><td>Machine Alarm</td><td>ERROR</td><td>Coupling not allowed, machine has active errors.</td></tr>
+<tr><td>FLEET CONTROL</td><td>103006</td><td>CouplingNotPossibleInvalidFormation</td><td>Machine Alarm</td><td>ERROR</td><td>Coupling not allowed, invalid formation arguments given.</td></tr>
+<tr><td>FLEET CONTROL</td><td>103007</td><td>CouplingNotPossibleMachineRejected</td><td>Machine Alarm</td><td>ERROR</td><td>Coupling not allowed, machine rejected request.</td></tr>
+<tr><td>FLEET CONTROL</td><td>103008</td><td>ChargeLocationNotAvailable</td><td>Machine Alarm</td><td>WARNING</td><td>No charging location available for the machine.</td></tr>
+<tr><td>FLEET CONTROL</td><td>120001</td><td>TargetShelfNotValidForMoveResource</td><td>Symbolic Point Alarm</td><td>ERROR</td><td>Tried to move resource to rack symbolic point without defining shelf.</td></tr>
+<tr><td>FLEET CONTROL</td><td>120002</td><td>ResourceMissingForLoading</td><td>Symbolic Point Alarm</td><td>ERROR</td><td>Resource is missing from symbolic point. System will try to add a new resource or replace existing for loading.</td></tr>
+<tr><td>FLEET CONTROL</td><td>120003</td><td>ResourceMissingForUnloading</td><td>Machine Alarm</td><td>ERROR</td><td>Resource is missing from AGV. No unload will be performed.</td></tr>
+<tr><td>FLEET CONTROL</td><td>120004</td><td>ResourceVerificationError</td><td>Machine Alarm</td><td>ERROR</td><td>Error in resource verification data. Check configuration file.</td></tr>
+<tr><td>FLEET CONTROL</td><td>150001</td><td>PickupShelfIdNotValid</td><td>Symbolic Point Alarm</td><td>WARNING</td><td>Could not find the pickup shelf ID given.</td></tr>
+<tr><td>FLEET CONTROL</td><td>150002</td><td>PickUpIsRackButNoShelfGiven</td><td>Symbolic Point Alarm</td><td>WARNING</td><td>Pickup location is a rack but no shelf ID was given.</td></tr>
+<tr><td>FLEET CONTROL</td><td>150003</td><td>PickUpIsNotRackButShelfWasGiven</td><td>Symbolic Point Alarm</td><td>WARNING</td><td>Pickup is not rack but shelf ID was given.</td></tr>
+<tr><td>FLEET CONTROL</td><td>150004</td><td>TargetShelfIdNotValid</td><td>Symbolic Point Alarm</td><td>WARNING</td><td>Could not find the target shelf ID given.</td></tr>
+<tr><td>FLEET CONTROL</td><td>150005</td><td>TargetIsRackButShelfNotGiven</td><td>Symbolic Point Alarm</td><td>WARNING</td><td>Target is rack but no shelf ID was given.</td></tr>
+<tr><td>FLEET CONTROL</td><td>150006</td><td>TargetIsNotRackButShelfWasGiven</td><td>Symbolic Point Alarm</td><td>WARNING</td><td>Target is not rack but shelf ID was given.</td></tr>
+<tr><td>FLEET CONTROL</td><td>150007</td><td>SetRackStatusShelfIdNotValid</td><td>Symbolic Point Alarm</td><td>WARNING</td><td>SetRackStatus: Given shelf ID not found for the symbolic point.</td></tr>
+<tr><td>FLEET CONTROL</td><td>150008</td><td>ResourceNotFoundAtSymbolicPoint</td><td>Symbolic Point Alarm</td><td>WARNING</td><td>Specified symbolic point is empty.</td></tr>
+<tr><td>FLEET CONTROL</td><td>150009</td><td>ResourceNotFoundAtPickUpShelf</td><td>Symbolic Point Alarm</td><td>WARNING</td><td>Shelf with specified ID is empty for specified rack symbolic point.</td></tr>
+<tr><td>FLEET CONTROL</td><td>150010</td><td>SetRackStatusNotRack</td><td>Symbolic Point Alarm</td><td>WARNING</td><td>The given symbolic point is not a rack.</td></tr>
+<tr><td>FLEET CONTROL</td><td>150011</td><td>SetRackStatusInvalidResource</td><td>Symbolic Point Alarm</td><td>WARNING</td><td>The given resource type is not valid for the symbolic point.</td></tr>
+<tr><td>FLEET CONTROL</td><td>151001</td><td>OverrideFileLocationError</td><td>Symbolic Point Alarm</td><td>ERROR</td><td>Parsing override file for this symbolic point failed, check the override files.</td></tr>
+<tr><td>FLEET CONTROL</td><td>151002</td><td>QRCodeNotVerified</td><td>Symbolic Point Alarm</td><td>ERROR</td><td>QR Code Not Verified</td></tr>
+<tr><td>AGV</td><td>101</td><td>ERROR_SCANNER_PROTOCOL_ERROR</td><td>Machine Alarm</td><td>ERROR</td><td>Sick S300 scanner protocol differs from 1.2 or 1.3</td></tr>
+<tr><td>AGV</td><td>102</td><td>ERROR_MAP_FILE_READ</td><td>Machine Alarm</td><td>ERROR</td><td>Could not read map file</td></tr>
+<tr><td>AGV</td><td>103</td><td>ERROR_MULTIPLE_MAPS_PER_FLOOR</td><td>Machine Alarm</td><td>ERROR</td><td>More than one map found for a floor</td></tr>
+<tr><td>AGV</td><td>104</td><td>ERROR_TOO_MANY_MAP_FILES</td><td>Machine Alarm</td><td>ERROR</td><td>More than supported number of map files</td></tr>
+<tr><td>AGV</td><td>105</td><td>ERROR_PARAM_PARSE</td><td>Machine Alarm</td><td>ERROR</td><td>Error parsing parameter file</td></tr>
+<tr><td>AGV</td><td>106</td><td>ERROR_NO_LICENSE_CODE</td><td>Machine Alarm</td><td>ERROR</td><td>License key is invalid</td></tr>
+<tr><td>AGV</td><td>107</td><td>ERROR_THREAD_NON_RESPONSIVE</td><td>Machine Alarm</td><td>ERROR</td><td>One of the threads is not responding as expected</td></tr>
+<tr><td>AGV</td><td>201</td><td>ERROR_VEH_INTE_MSG_PARSE</td><td>Machine Alarm</td><td>ERROR</td><td>Message parsing error in veh_inte</td></tr>
+<tr><td>AGV</td><td>202</td><td>ERROR_SCANNER_MSG_PARSE</td><td>Machine Alarm</td><td>ERROR</td><td>Scanner message parsing error</td></tr>
+<tr><td>AGV</td><td>203</td><td>ERROR_NO_SCAN_FROM_FRONT_SCANNER</td><td>Machine Alarm</td><td>ERROR</td><td>Front scanner hasn't received scans</td></tr>
+<tr><td>AGV</td><td>204</td><td>ERROR_NO_SCAN_FROM_REAR_SCANNER</td><td>Machine Alarm</td><td>ERROR</td><td>Rear scanner hasn't received scans</td></tr>
+<tr><td>AGV</td><td>205</td><td>ERROR_MEAS_CNT_MISMATCH_FRONT</td><td>Machine Alarm</td><td>ERROR</td><td>Measurement in single scan does not match MAX_LMS_POINTS, check configuration of the front scanner</td></tr>
+<tr><td>AGV</td><td>206</td><td>ERROR_MEAS_CNT_MISMATCH_REAR</td><td>Machine Alarm</td><td>ERROR</td><td>Measurement in single scan does not match MAX_LMS_POINTS, check configuration of the rear scanner</td></tr>
+<tr><td>AGV</td><td>207</td><td>ERROR_POSITION_CONFIDENCE_LOW</td><td>Machine Alarm</td><td>ERROR</td><td>Position confidence is too low</td></tr>
+<tr><td>AGV</td><td>208</td><td>ERROR_NOT_ENOUGH_REF_DET</td><td>Machine Alarm</td><td>ERROR</td><td>NotEnough reflectors detected</td></tr>
+<tr><td>AGV</td><td>209</td><td>ERROR_POSITION_NOT_INITIALIZED</td><td>Machine Alarm</td><td>ERROR</td><td>Position hasn't been initialized</td></tr>
+<tr><td>AGV</td><td>210</td><td>ERROR_LOCALIZE_NOT_READY</td><td>Machine Alarm</td><td>ERROR</td><td>Localization task is not ready</td></tr>
+<tr><td>AGV</td><td>211</td><td>ERROR_DEADREC_HIGH_DT</td><td>Machine Alarm</td><td>ERROR</td><td>Too long since last deadrec update</td></tr>
+<tr><td>AGV</td><td>212</td><td>ERROR_POSCONT_HIGH_DT</td><td>Machine Alarm</td><td>ERROR</td><td>Too long since last position control update</td></tr>
+<tr><td>AGV</td><td>213</td><td>ERROR_SCANNER_FRONT_HIGH_DT</td><td>Machine Alarm</td><td>ERROR</td><td>Interval between received front laser scans is too high</td></tr>
+<tr><td>AGV</td><td>214</td><td>ERROR_NO_SCAN_FROM_SAFETY_SCANNER</td><td>Machine Alarm</td><td>ERROR</td><td>Safety scanner hasn't received scans</td></tr>
+<tr><td>AGV</td><td>215</td><td>ERROR_MEAS_CNT_MISMATCH_SAFETY</td><td>Machine Alarm</td><td>ERROR</td><td>Measurement in single scan does not match MAX_LMS_POINTS, check configuration of the safety scanners</td></tr>
+<tr><td>AGV</td><td>216</td><td>ERROR_ENC_DATA</td><td>Machine Alarm</td><td>ERROR</td><td>Invalid encoder data</td></tr>
+<tr><td>AGV</td><td>217</td><td>ERROR_LICENSE_OPTION_MISSING</td><td>Machine Alarm</td><td>ERROR</td><td>Current license doesn't include permission to use a feature that is being activated</td></tr>
+<tr><td>AGV</td><td>218</td><td>ERROR_POS_INI_NOT_ENOUGH_REF_DET</td><td>Machine Alarm</td><td>ERROR</td><td>Not enough reflectors detected during position initialization</td></tr>
+<tr><td>AGV</td><td>219</td><td>ERROR_CONFIG_PARAMETER_VALUE</td><td>Machine Alarm</td><td>ERROR</td><td>Incorrect parameter value in verification</td></tr>
+<tr><td>AGV</td><td>220</td><td>ERROR_POS_INI_NOT_ENOUGH_REF_DET_DRIV</td><td>Machine Alarm</td><td>ERROR</td><td>Not enough reflectors detected after position initialization while driving</td></tr>
+<tr><td>AGV</td><td>221</td><td>ERROR_NO_DATA_FROM_EXT_LOC_SENSOR</td><td>Machine Alarm</td><td>ERROR</td><td>No data received from external localization sensor</td></tr>
+<tr><td>AGV</td><td>222</td><td>ERROR_EXT_LOC_SENSOR_MSG_PARSE</td><td>Machine Alarm</td><td>ERROR</td><td>Message parsing error in external localization sensor</td></tr>
+<tr><td>AGV</td><td>223</td><td>ERROR_EXT_LOC_TOO_LONG_SINCE_VALID_MEASUREMENT</td><td>Machine Alarm</td><td>ERROR</td><td>No valid measurement from external sensor when inside area</td></tr>
+<tr><td>AGV</td><td>224</td><td>ERROR_SCANNER_REAR_HIGH_DT</td><td>Machine Alarm</td><td>ERROR</td><td>Interval between received rear laser scans is too high</td></tr>
+<tr><td>AGV</td><td>225</td><td>ERROR_NO_DATA_FROM_LINE_FOLLOWING_SENSOR</td><td>Machine Alarm</td><td>ERROR</td><td>No data received from line following sensor</td></tr>
+<tr><td>AGV</td><td>226</td><td>ERROR_MSG_PARSE_LINE_FOLLOWING_SENSOR</td><td>Machine Alarm</td><td>ERROR</td><td>Error parsing line following sensor message</td></tr>
+<tr><td>AGV</td><td>227</td><td>ERROR_LINE_FOLLOWING_NO_MEASUREMENT</td><td>Machine Alarm</td><td>ERROR</td><td>No measurement received from sensor</td></tr>
+<tr><td>AGV</td><td>300</td><td>WARNING_UNAUTHORIZED_SETTING</td><td>Machine Alarm</td><td>WARNING</td><td>Parameter with authorized access changed</td></tr>
+<tr><td>AGV</td><td>301</td><td>WARNING_NO_LICENSE</td><td>Machine Alarm</td><td>WARNING</td><td>No license file or invalid license key</td></tr>
+<tr><td>AGV</td><td>302</td><td>WARNING_TOO_MANY_LOG_FILES</td><td>Machine Alarm</td><td>WARNING</td><td>There are too many log files in logs -directory, oldest was overwritten</td></tr>
+<tr><td>AGV</td><td>303</td><td>WARNING_LOG_DUMP</td><td>Machine Alarm</td><td>WARNING</td><td>Log dump failed</td></tr>
+<tr><td>AGV</td><td>304</td><td>WARNING_NOT_ENOUGH_FREE_SPACE</td><td>Machine Alarm</td><td>WARNING</td><td>Not enough free disk space</td></tr>
+<tr><td>AGV</td><td>305</td><td>WARNING_TEACHING_ALREADY_ON</td><td>Machine Alarm</td><td>WARNING</td><td>Teaching is already on</td></tr>
+<tr><td>AGV</td><td>306</td><td>WARNING_FRONT_SCANNER_PROTECTION_ZONE</td><td>Machine Alarm</td><td>WARNING</td><td>Front laser scanner protection zone violated</td></tr>
+<tr><td>AGV</td><td>307</td><td>WARNING_REAR_SCANNER_PROTECTION_ZONE</td><td>Machine Alarm</td><td>WARNING</td><td>Rear laser scanner protection zone violated</td></tr>
+<tr><td>AGV</td><td>308</td><td>WARNING_FRONT_SCANNER_WARNING_ZONE1</td><td>Machine Alarm</td><td>WARNING</td><td>Front laser scanner warning zone 1 violated</td></tr>
+<tr><td>AGV</td><td>309</td><td>WARNING_REAR_SCANNER_WARNING_ZONE1</td><td>Machine Alarm</td><td>WARNING</td><td>Rear laser scanner warning zone 1 violated</td></tr>
+<tr><td>AGV</td><td>310</td><td>WARNING_FRONT_SCANNER_WARNING_ZONE2</td><td>Machine Alarm</td><td>WARNING</td><td>Front laser scanner warning zone 2 violated</td></tr>
+<tr><td>AGV</td><td>311</td><td>WARNING_REAR_SCANNER_WARNING_ZONE2</td><td>Machine Alarm</td><td>WARNING</td><td>Rear laser scanner warning zone 2 violated</td></tr>
+<tr><td>AGV</td><td>312</td><td>WARNING_FRONT_SCANNER_DIRTY</td><td>Machine Alarm</td><td>WARNING</td><td>Front laser scanner reports dirty window</td></tr>
+<tr><td>AGV</td><td>313</td><td>WARNING_REAR_SCANNER_DIRTY</td><td>Machine Alarm</td><td>WARNING</td><td>Rear laser scanner reports dirty window</td></tr>
+<tr><td>AGV</td><td>314</td><td>WARNING_HIGH_LOGGING_RATE</td><td>Machine Alarm</td><td>WARNING</td><td>Text log write rate is high and may affect performance</td></tr>
+<tr><td>AGV</td><td>315</td><td>WARNING_TOO_LARGE_AUTO_ANG_RATE_CORR</td><td>Machine Alarm</td><td>WARNING</td><td>Too large odometry turning rate auto correction</td></tr>
+<tr><td>AGV</td><td>316</td><td>WARNING_TOO_LARGE_AUTO_ODO_CORR</td><td>Machine Alarm</td><td>WARNING</td><td>Too large odometry distance auto correction</td></tr>
+<tr><td>AGV</td><td>317</td><td>WARNING_TEACH_MODE_ENABLED</td><td>Machine Alarm</td><td>WARNING</td><td>Position correcting is disabled while teaching</td></tr>
+<tr><td>AGV</td><td>318</td><td>WARNING_TOO_LARGE_AUTO_ANG_CORR</td><td>Machine Alarm</td><td>WARNING</td><td>Too large odometry heading auto correction</td></tr>
+<tr><td>AGV</td><td>319</td><td>WARNING_INITIALIZING_POSITION</td><td>Machine Alarm</td><td>WARNING</td><td>Position is being initialized</td></tr>
+<tr><td>AGV</td><td>320</td><td>WARNING_LARGE_CUM_XY_CORRECTION</td><td>Machine Alarm</td><td>WARNING</td><td>Large cumulative position correction over last meter</td></tr>
+<tr><td>AGV</td><td>321</td><td>WARNING_LARGE_CUM_HEADING_CORRECTION</td><td>Machine Alarm</td><td>WARNING</td><td>Large cumulative heading correction over last meter</td></tr>
+<tr><td>AGV</td><td>322</td><td>WARNING_SAFETY_SCANNER_PROTECTION_ZONE</td><td>Machine Alarm</td><td>WARNING</td><td>Safety laser scanner protection zone violated</td></tr>
+<tr><td>AGV</td><td>323</td><td>WARNING_SAFETY_SCANNER_WARNING_ZONE1</td><td>Machine Alarm</td><td>WARNING</td><td>Safety laser scanner warning zone 1 violated</td></tr>
+<tr><td>AGV</td><td>324</td><td>WARNING_SAFETY_SCANNER_WARNING_ZONE2</td><td>Machine Alarm</td><td>WARNING</td><td>Safety laser scanner warning zone 2 violated</td></tr>
+<tr><td>AGV</td><td>325</td><td>WARNING_SAFETY_SCANNER_DIRTY</td><td>Machine Alarm</td><td>WARNING</td><td>Safety laser scanner reports dirty window</td></tr>
+<tr><td>AGV</td><td>326</td><td>WARNING_CANNOT_RUN_MONITOR</td><td>Machine Alarm</td><td>WARNING</td><td>No scanner and odometry data to update to monitoring software</td></tr>
+<tr><td>AGV</td><td>327</td><td>WARNING_DEADREC_HIGH_DT_STDEV</td><td>Machine Alarm</td><td>WARNING</td><td>Vehicle motor controller interface update interval standard deviance is too high</td></tr>
+<tr><td>AGV</td><td>328</td><td>WARNING_ODOMETRY_SLIPPING</td><td>Machine Alarm</td><td>WARNING</td><td>Wheels are slipping or odometry is incorrect, increasing correction gains temporarily</td></tr>
+<tr><td>AGV</td><td>329</td><td>WARNING_GENERIC</td><td>Machine Alarm</td><td>WARNING</td><td>Generic warning, check log for more details</td></tr>
+<tr><td>AGV</td><td>330</td><td>WARNING_FRONT_SCANNER_WRONG_MODE</td><td>Machine Alarm</td><td>WARNING</td><td>Front laser scanner in wrong operating mode</td></tr>
+<tr><td>AGV</td><td>331</td><td>WARNING_REAR_SCANNER_WRONG_MODE</td><td>Machine Alarm</td><td>WARNING</td><td>Rear laser scanner in wrong operating mode</td></tr>
+<tr><td>AGV</td><td>332</td><td>WARNING_FRONT_SCANNER_NO_ZONE_INFO</td><td>Machine Alarm</td><td>WARNING</td><td>Front laser scanner, no protection/warning zone info</td></tr>
+<tr><td>AGV</td><td>333</td><td>WARNING_REAR_SCANNER_NO_ZONE_INFO</td><td>Machine Alarm</td><td>WARNING</td><td>Rear laser scanner, no protection/warning zone info</td></tr>
+<tr><td>AGV</td><td>334</td><td>WARNING_NO_REMOTE_CONTROL</td><td>Machine Alarm</td><td>WARNING</td><td>Remote control via web not available - version mismatch</td></tr>
+<tr><td>AGV</td><td>335</td><td>WARNING_POSITION_NOT_INITIALIZED</td><td>Machine Alarm</td><td>WARNING</td><td>Position hasn't been initialized but vehicle can be driven as pos init not required</td></tr>
+<tr><td>AGV</td><td>336</td><td>WARNING_POS_INIT_TIMEOUT</td><td>Machine Alarm</td><td>WARNING</td><td>Position initialization stopped due to timout</td></tr>
+<tr><td>AGV</td><td>337</td><td>WARNING_CHARGER_FAULT</td><td>Machine Alarm</td><td>WARNING</td><td>Fault received from charger</td></tr>
+<tr><td>AGV</td><td>338</td><td>WARNING_BMS</td><td>Machine Alarm</td><td>WARNING</td><td>Warning received from BMS</td></tr>
+<tr><td>AGV</td><td>339</td><td>WARNING_NO_SCAN_FROM_FRONT_SCANNER</td><td>Machine Alarm</td><td>WARNING</td><td>Front scanner hasn't received scans</td></tr>
+<tr><td>AGV</td><td>340</td><td>WARNING_NO_SCAN_FROM_REAR_SCANNER</td><td>Machine Alarm</td><td>WARNING</td><td>Rear scanner hasn't received scans</td></tr>
+<tr><td>AGV</td><td>341</td><td>WARNING_SCANNER_FRONT_HIGH_DT</td><td>Machine Alarm</td><td>WARNING</td><td>Interval between received front laser scans is too high</td></tr>
+<tr><td>AGV</td><td>342</td><td>WARNING_SCANNER_REAR_HIGH_DT</td><td>Machine Alarm</td><td>WARNING</td><td>Interval between received rear laser scans is too high</td></tr>
+<tr><td>AGV</td><td>343</td><td>WARNING_DISTANCE_TO_TARGET</td><td>Machine Alarm</td><td>WARNING</td><td>AGV has driven too far away from unload point. Distance calculation is impossible</td></tr>
+<tr><td>AGV</td><td>344</td><td>WARNING_NO_SCAN_FROM_MEAS_SCANNER</td><td>Machine Alarm</td><td>WARNING</td><td>One of the measurement scanners hasn't received scans</td></tr>
+<tr><td>AGV</td><td>345</td><td>WARNING_LOADING_ENVIRONMENT</td><td>Machine Alarm</td><td>WARNING</td><td>Loading environment and segment file data. Loading has to be finished before driving can continue</td></tr>
+<tr><td>AGV</td><td>346</td><td>WARNING_COUPLED_FORMATION_OFFSET_DETECTION</td><td>Machine Alarm</td><td>WARNING</td><td>Coupled formation offset detection measurement failure</td></tr>
+<tr><td>AGV</td><td>347</td><td>WARNING_LARGE_FORMATION_ERR</td><td>Machine Alarm</td><td>WARNING</td><td>Formation error is larger than configured limits</td></tr>
+<tr><td>AGV</td><td>348</td><td>WARNING_EXT_LOC_DOCKING_POSITION_CONFIDENCE_LOW</td><td>Machine Alarm</td><td>WARNING</td><td>Position confidence is low while docking with external localization</td></tr>
+<tr><td>AGV</td><td>349</td><td>WARNING_PARAMETER_ZONE_PARAMETERS_NOT_FOUND</td><td>Machine Alarm</td><td>WARNING</td><td>AGV is inside parameter zone and but related params_zoneX.txt was not found</td></tr>
+<tr><td>AGV</td><td>401</td><td>ERROR_VEH_INTE_HIGH_DT</td><td>Machine Alarm</td><td>ERROR</td><td>Vehicle motor controller interface update interval is too high</td></tr>
+<tr><td>AGV</td><td>402</td><td>ERROR_MOTOR_CONTROL_FAULT</td><td>Machine Alarm</td><td>ERROR</td><td>Drive motor controller indicates fault</td></tr>
+<tr><td>AGV</td><td>403</td><td>ERROR_MOTOR_CONTROL_COMMS</td><td>Machine Alarm</td><td>ERROR</td><td>Drive motor controller communication fault</td></tr>
+<tr><td>AGV</td><td>404</td><td>ERROR_IO</td><td>Machine Alarm</td><td>ERROR</td><td>I/O interface is in error state</td></tr>
+<tr><td>AGV</td><td>405</td><td>ERROR_POS_CONT_SEG_FILE_PARSING_ERROR</td><td>Machine Alarm</td><td>ERROR</td><td>Pos cont segment file parsing failed</td></tr>
+<tr><td>AGV</td><td>501</td><td>ERROR_POS_CONT_HEADING_ERR</td><td>Machine Alarm</td><td>ERROR</td><td>Pos Cont too high heading error</td></tr>
+<tr><td>AGV</td><td>502</td><td>ERROR_POS_CONT_POS_ERR</td><td>Machine Alarm</td><td>ERROR</td><td>Pos cont too high position error</td></tr>
+<tr><td>AGV</td><td>503</td><td>ERROR_VEH_INTE_NOT_READY</td><td>Machine Alarm</td><td>ERROR</td><td>Vehicle motor interface task is not ready</td></tr>
+<tr><td>AGV</td><td>504</td><td>ERROR_VEH_INTE_CONNECTION</td><td>Machine Alarm</td><td>ERROR</td><td>Communication to vehicle motor controller not working</td></tr>
+<tr><td>AGV</td><td>505</td><td>ERROR_POS_CONT_FORK_TIME_ERR</td><td>Machine Alarm</td><td>ERROR</td><td>Pos Cont fork value did not reach reference value within time limit</td></tr>
+<tr><td>AGV</td><td>506</td><td>ERROR_POS_CONT_SPEED_HIGH</td><td>Machine Alarm</td><td>ERROR</td><td>Speed value difference too high above the reference value</td></tr>
+<tr><td>AGV</td><td>507</td><td>ERROR_POS_CONT_SPEED_LOW</td><td>Machine Alarm</td><td>ERROR</td><td>Speed value difference too high below the reference value</td></tr>
+<tr><td>AGV</td><td>508</td><td>ERROR_POS_CONT_FORK_LIMIT_ERR</td><td>Machine Alarm</td><td>ERROR</td><td>Pos Cont fork value outside of hard limits</td></tr>
+<tr><td>AGV</td><td>509</td><td>ERROR_POS_CONT_SEG_ERROR</td><td>Machine Alarm</td><td>ERROR</td><td>Pos cont segment error</td></tr>
+<tr><td>AGV</td><td>510</td><td>ERROR_ACTUATOR_DATA_MISSING_FROM_SEGMENTS</td><td>Machine Alarm</td><td>ERROR</td><td>Segment file does not actuator control values</td></tr>
+<tr><td>AGV</td><td>511</td><td>ERROR_MOTOR_TEMP_SENSOR</td><td>Machine Alarm</td><td>ERROR</td><td>Motor over temperature</td></tr>
+<tr><td>AGV</td><td>512</td><td>ERROR_SAFETY_CIRCUIT_COMMS</td><td>Machine Alarm</td><td>ERROR</td><td>Safety circuit communication fault</td></tr>
+<tr><td>AGV</td><td>513</td><td>ERROR_DEAD_RECK_JUMP</td><td>Machine Alarm</td><td>ERROR</td><td>Deadreckoning detected a jump in raw odometry</td></tr>
+<tr><td>AGV</td><td>514</td><td>ERROR_LOAD_POSITION_ERROR</td><td>Machine Alarm</td><td>ERROR</td><td>Actuator activation blocked, because AGV is too far away from the symbolic point</td></tr>
+<tr><td>AGV</td><td>515</td><td>ERROR_ACTUATOR_USE_NOT_ALLOWED</td><td>Machine Alarm</td><td>ERROR</td><td>Tried to activate actuator on wrong location,<br>E.g. load on unload symbolic point or load not detected when it should be</td></tr>
+<tr><td>AGV</td><td>516</td><td>ERROR_RACKING_WRONG_PARAMETERS</td><td>Machine Alarm</td><td>ERROR</td><td>Racking parameters are limiting drive mission to given height</td></tr>
+<tr><td>AGV</td><td>517</td><td>ERROR_ACTUATOR_SAFE_ZONE_VIOLATION</td><td>Machine Alarm</td><td>ERROR</td><td>Too high difference between target and measured value in actuator safe zone</td></tr>
+<tr><td>AGV</td><td>518</td><td>ERROR_RACKING_AGV_TOO_CLOSE_RACK</td><td>Machine Alarm</td><td>ERROR</td><td>AGV too close to rack to be able to move actuator</td></tr>
+<tr><td>AGV</td><td>519</td><td>ERROR_PALLET_DET_FOUND_AND_SEARCHED_MISMATCH</td><td>Machine Alarm</td><td>ERROR</td><td>Target detection - found target does not match the searched ones set in Supervisor message 3032</td></tr>
+<tr><td>AGV</td><td>520</td><td>ERROR_BATTERY_HIGH_TEMPERATURE</td><td>Machine Alarm</td><td>ERROR</td><td>Battery temperature has exeeded the error limit</td></tr>
+<tr><td>AGV</td><td>521</td><td>ERROR_CANNOT_CHANGE_RACKING_STATE</td><td>Machine Alarm</td><td>ERROR</td><td>AGV does not fulfill the required criteria to change the current state and move to next in racking drive order</td></tr>
+<tr><td>AGV</td><td>522</td><td>ERROR_RACKING_EMPTY_SPACE_NOT_DETECTED</td><td>Machine Alarm</td><td>ERROR</td><td>Unload area not free, cannot continue driving</td></tr>
+<tr><td>AGV</td><td>523</td><td>ERROR_PALLET_POCKET_NOT_FOUND</td><td>Machine Alarm</td><td>ERROR</td><td>Couldn't find suitable pocket</td></tr>
+<tr><td>AGV</td><td>524</td><td>ERROR_RACKING_BEAM_DETECTION_FAILED</td><td>Machine Alarm</td><td>ERROR</td><td>Couldn't find suitable beam for detecting the shelf height</td></tr>
+<tr><td>AGV</td><td>525</td><td>ERROR_PALLET_DET_FAILURE</td><td>Machine Alarm</td><td>ERROR</td><td>Couldn't find pallet or target is too far away from expected location</td></tr>
+<tr><td>AGV</td><td>526</td><td>ERROR_ACTUATOR_OUT_OF_TOLERANCES_CLOSE_RACK</td><td>Machine Alarm</td><td>ERROR</td><td>Too high difference between target and measured value close to rack</td></tr>
+<tr><td>AGV</td><td>527</td><td>ERROR_RACKING_PALLET_LOADING_UNLOADING_ISSUE</td><td>Machine Alarm</td><td>ERROR</td><td>The pallet is either being pushed or dragged during loading or unloading respectively</td></tr>
+<tr><td>AGV</td><td>528</td><td>ERROR_LOAD_SENSOR_CONFLICT_WITH_NAVITHOR</td><td>Machine Alarm</td><td>ERROR</td><td>Load sensor does not match with Navithor load status</td></tr>
+<tr><td>AGV</td><td>529</td><td>ERROR_VEHICLE_POSITION_NOT_CHANGING_WHILE_DRIVING</td><td>Machine Alarm</td><td>ERROR</td><td>Odometry data is indicating a change, but position is not changing</td></tr>
+<tr><td>AGV</td><td>530</td><td>ERROR_CURVATURE_TOO_HIGH</td><td>Machine Alarm</td><td>ERROR</td><td>AGV can't drive the curvature, because it has limited steer angle</td></tr>
+<tr><td>AGV</td><td>531</td><td>ERROR_RACKING_PALLET_DETECTION_DATA_NOT_UPDATED</td><td>Machine Alarm</td><td>ERROR</td><td>The pallet detection data is not available for detecting pushing/dragging of pallet</td></tr>
+<tr><td>AGV</td><td>532</td><td>ERROR_RACKING_DISABLED</td><td>Machine Alarm</td><td>ERROR</td><td>Received drive order to Rack point, but racking is disabled</td></tr>
+<tr><td>AGV</td><td>533</td><td>ERROR_MODBUS_COMMS</td><td>Machine Alarm</td><td>ERROR</td><td>Modbus connection error</td></tr>
+<tr><td>AGV</td><td>534</td><td>ERROR_STACKLOADING_TARGET_TOO_HIGH</td><td>Machine Alarm</td><td>ERROR</td><td>The scanning height is over the maximum limit</td></tr>
+<tr><td>AGV</td><td>535</td><td>ERROR_COUPLED_DRIVE_COMMS</td><td>Machine Alarm</td><td>ERROR</td><td>Communication error with one or more machines in coupled drive</td></tr>
+<tr><td>AGV</td><td>536</td><td>ERROR_LARGE_FORMATION_ERR</td><td>Machine Alarm</td><td>ERROR</td><td>Formation error is larger than configured limits</td></tr>
+<tr><td>AGV</td><td>537</td><td>ERROR_NAVI_COMM_VERSION</td><td>Machine Alarm</td><td>ERROR</td><td>Version mismatch in Navitrol-Navitrol communication, which is used for example in synchronous driving</td></tr>
+<tr><td>AGV</td><td>538</td><td>ERROR_COUPLED_DRIVE_CONFIG</td><td>Machine Alarm</td><td>ERROR</td><td>Invalid configuration for coupled drive</td></tr>
+<tr><td>AGV</td><td>539</td><td>ERROR_CANNOT_CREATE_CUSTOM_ROUTE</td><td>Machine Alarm</td><td>ERROR</td><td>AGV is too close to target to create custom route</td></tr>
+<tr><td>AGV</td><td>540</td><td>ERROR_LOAD_BUFFER_STOP_POINT_NOT_INSIDE_BUFFER_AREA</td><td>Machine Alarm</td><td>ERROR</td><td>Stop point is not calculated inside the buffer area, cannot perform load there</td></tr>
+<tr><td>AGV</td><td>541</td><td>ERROR_DRIVE_ORDER_TOO_CLOSE_TO_RACK</td><td>Machine Alarm</td><td>ERROR</td><td>Drive order given too close to rack, cannot drive closer</td></tr>
+<tr><td>AGV</td><td>542</td><td>ERROR_RACKING_SHELF_ID_NOT_VALID</td><td>Machine Alarm</td><td>ERROR</td><td>Received shelf id 0 from Navithor, cannot continue driving</td></tr>
+<tr><td>AGV</td><td>543</td><td>ERROR_COUPLED_DRIVE_ACTIVE_ERRORS</td><td>Machine Alarm</td><td>ERROR</td><td>Errors are active on one or more machines in coupled drive</td></tr>
+<tr><td>AGV</td><td>544</td><td>ERROR_EXT_LOC_NOT_SAFE_TO_DRIVE</td><td>Machine Alarm</td><td>ERROR</td><td>Driving safety using external localization is not guaranteed</td></tr>
+<tr><td>AGV</td><td>545</td><td>ERROR_EXT_LOC_STOP_POINT_NOT_REACHED</td><td>Machine Alarm</td><td>ERROR</td><td>AGV has not reached the external localization stop point</td></tr>
+<tr><td>AGV</td><td>546</td><td>ERROR_POCKET_DET_TARGET_TOO_HIGH</td><td>Machine Alarm</td><td>ERROR</td><td>Pocket detection target goes higher than actuator_max_val</td></tr>
+<tr><td>AGV</td><td>547</td><td>ERROR_BARRIER_STOP_FAILED</td><td>Machine Alarm</td><td>ERROR</td><td>Barrier stop failed</td></tr>
+<tr><td>AGV</td><td>548</td><td>ERROR_AGV_AT_RACK_AFTER_STARTUP</td><td>Machine Alarm</td><td>ERROR</td><td>AGV is too close to rack after start. Cannot do anything.</td></tr>
+<tr><td>AGV</td><td>549</td><td>ERROR_STACKLOADING_POCKET_FOUND_TOO_LOW</td><td>Machine Alarm</td><td>ERROR</td><td>The found pocket was found too low</td></tr>
+<tr><td>AGV</td><td>550</td><td>ERROR_LOAD_UNLOAD_HEIGHT_TOO_LOW</td><td>Machine Alarm</td><td>ERROR</td><td>The loading or unloading target height is too low. Cannot perform load or unload.</td></tr>
+<tr><td>AGV</td><td>551</td><td>ERROR_RTR_AND_VECTOR_DRIVE_CONFLICT</td><td>Machine Alarm</td><td>ERROR</td><td>Return to route is not possible when vector drive is used, turn off vector drive to use rerturn to route</td></tr>
+<tr><td>AGV</td><td>552</td><td>ERROR_OBSTACLE_DETECTED</td><td>Machine Alarm</td><td>ERROR</td><td>Detected an obstacle within zone</td></tr>
+<tr><td>AGV</td><td>601</td><td>WARNING_AGV_LOW_BATTERY</td><td>Machine Alarm</td><td>WARNING</td><td>AGV battery level low</td></tr>
+<tr><td>AGV</td><td>602</td><td>WARNING_POS_CONT_FORK_WAR</td><td>Machine Alarm</td><td>WARNING</td><td>Pos cont fork value not within limits. Move not allowed</td></tr>
+<tr><td>AGV</td><td>603</td><td>WARNING_ESTOP_ACTIVE</td><td>Machine Alarm</td><td>WARNING</td><td>Emergency stop is active</td></tr>
+<tr><td>AGV</td><td>604</td><td>WARNING_FW_OBSTACLE</td><td>Machine Alarm</td><td>WARNING</td><td>Obstacle detected in front of vehicle. Speed may be limited</td></tr>
+<tr><td>AGV</td><td>605</td><td>WARNING_BW_OBSTACLE</td><td>Machine Alarm</td><td>WARNING</td><td>Obstacle detected behind of vehicle. Speed may be limited</td></tr>
+<tr><td>AGV</td><td>606</td><td>WARNING_SLOWED_DOWN_EXTERNAL_SOURCE</td><td>Machine Alarm</td><td>WARNING</td><td>Slow down request received from External source (e.g. PLC or IO)</td></tr>
+<tr><td>AGV</td><td>607</td><td>WARNING_SAFETY_SCANNER_OBSTACLE</td><td>Machine Alarm</td><td>WARNING</td><td>Obstacle detected by one of safety scanners. Speed may be limited</td></tr>
+<tr><td>AGV</td><td>608</td><td>WARNING_VEH_INTE_HIGH_DT_STDEV</td><td>Machine Alarm</td><td>WARNING</td><td>Vehicle motor controller interface update interval standard deviance is too high</td></tr>
+<tr><td>AGV</td><td>609</td><td>WARNING_STANDALONE_DISABLED</td><td>Machine Alarm</td><td>WARNING</td><td>Standalone feature disabled. Possible reasons Fleet control is connected or Production simulation is Enabled in monitoring software</td></tr>
+<tr><td>AGV</td><td>610</td><td>WARNING_NO_SEG_FILE</td><td>Machine Alarm</td><td>WARNING</td><td>Segment file not found</td></tr>
+<tr><td>AGV</td><td>611</td><td>WARNING_AGV_NO_BATTERY_LEVEL</td><td>Machine Alarm</td><td>WARNING</td><td>AGV battery level unknown</td></tr>
+<tr><td>AGV</td><td>612</td><td>WARNING_TARGET_NOT_DETECTED</td><td>Machine Alarm</td><td>WARNING</td><td>Target for docking not detected</td></tr>
+<tr><td>AGV</td><td>613</td><td>WARNING_TARGET_APPROACH_ERROR</td><td>Machine Alarm</td><td>WARNING</td><td>Target location differs too much fromExpected</td></tr>
+<tr><td>AGV</td><td>614</td><td>WARNING_DRIVING_WITH_ONLY_ODOMETRY</td><td>Machine Alarm</td><td>WARNING</td><td>Location correction disabled, driving with only odometry</td></tr>
+<tr><td>AGV</td><td>615</td><td>WARNING_LOW_POS_CONF_SLOWED_DOWN</td><td>Machine Alarm</td><td>WARNING</td><td>Slowing down due to low position confidence</td></tr>
+<tr><td>AGV</td><td>616</td><td>WARNING_NAVITHOR_NOT_CONNECTED</td><td>Machine Alarm</td><td>WARNING</td><td></td></tr>
+<tr><td>AGV</td><td>617</td><td>WARNING_SPEED_LIMITED</td><td>Machine Alarm</td><td>WARNING</td><td>Speed limitedE.g. because of load status</td></tr>
+<tr><td>AGV</td><td>618</td><td>WARNING_LOAD_POSITION_ERROR</td><td>Machine Alarm</td><td>WARNING</td><td>Actuator activation was blocked, because AGV is too far away from the symbolic point</td></tr>
+<tr><td>AGV</td><td>619</td><td>WARNING_ACTUATOR_USE_NOT_ALLOWED</td><td>Machine Alarm</td><td>WARNING</td><td>Tried to activate actuator on wrong location, e.g. load on unload symbolic point</td></tr>
+<tr><td>AGV</td><td>620</td><td>WARNING_SYMBOL_POINT_OCCUPIED</td><td>Machine Alarm</td><td>WARNING</td><td>Object detected in occupancy check area</td></tr>
+<tr><td>AGV</td><td>621</td><td>WARNING_DRIVE_ORDER_DISABLED</td><td>Machine Alarm</td><td>WARNING</td><td>Drive order was disabled by an external source</td></tr>
+<tr><td>AGV</td><td>622</td><td>WARNING_OBSTACLE_DETECTED</td><td>Machine Alarm</td><td>WARNING</td><td>Detected an obstacle</td></tr>
+<tr><td>AGV</td><td>623</td><td>WARNING_OBSTACLE_BYPASS_FAILED</td><td>Machine Alarm</td><td>WARNING</td><td>Not enough free disk space</td></tr>
+<tr><td>AGV</td><td>624</td><td>WARNING_WAITING_OBSTACLE_BYPASS_PERMISSION</td><td>Machine Alarm</td><td>WARNING</td><td>Waiting for permission to bypass obstacles</td></tr>
+<tr><td>AGV</td><td>625</td><td>WARNING_NO_OBSTACLE_ZONES</td><td>Machine Alarm</td><td>WARNING</td><td>Cannot perform bypass because no obstacle zones have been defined</td></tr>
+<tr><td>AGV</td><td>626</td><td>WARNING_MOVING_OBSTACLE</td><td>Machine Alarm</td><td>WARNING</td><td>Cannot perform bypass because obstacle is moving. Stopping and waiting that it stops</td></tr>
+<tr><td>AGV</td><td>627</td><td>WARNING_BYPASS_ROUTE_OUT_OF_ZONE</td><td>Machine Alarm</td><td>WARNING</td><td>Cannot perform bypass because the trajectory would be outside obstacle avoidance zone. Trying the other side if possible</td></tr>
+<tr><td>AGV</td><td>628</td><td>WARNING_OBSTACLE_TOO_CLOSE</td><td>Machine Alarm</td><td>WARNING</td><td>Cannot drive around the obstacle because it is too close to the AGV</td></tr>
+<tr><td>AGV</td><td>629</td><td>WARNING_CANNOT_BYPASS_REVERSING_TO_NOMINAL_ROUTE</td><td>Machine Alarm</td><td>WARNING</td><td>Cannot drive around the obstacle. Reversing back to nominal route</td></tr>
+<tr><td>AGV</td><td>630</td><td>WARNING_CANNOT_BYPASS_DID_NOT_GET_FLEET_CONTROL_PERMISSION</td><td>Machine Alarm</td><td>WARNING</td><td>Cannot drive around the obstacle because fleet control did not give permission</td></tr>
+<tr><td>AGV</td><td>631</td><td>WARNING_BEGINNING_DRIVING_AROUND_OBSTACLE</td><td>Machine Alarm</td><td>WARNING</td><td>Beginning to drive around the obstacle. The AGV will drive outside the nominal route</td></tr>
+<tr><td>AGV</td><td>632</td><td>WARNING_COULD_NOT_CREATE_EXTEND_DRIVE_WHILE_BYPASSING</td><td>Machine Alarm</td><td>WARNING</td><td>Extend drive while bypassing failed</td></tr>
+<tr><td>AGV</td><td>633</td><td>WARNING_WRONG_AGV_STATUS_MESSAGE_VERSION</td><td>Machine Alarm</td><td>WARNING</td><td>Cannot use obstacle avoidance with fleet control because agv status message version is wrong</td></tr>
+<tr><td>AGV</td><td>634</td><td>WARNING_CANNOT_BYPASS_OBSTACLE_TOO_WIDE</td><td>Machine Alarm</td><td>WARNING</td><td>Cannot drive around the obstacle because it is too wide: the AGV would have to make too sharp turn and get too far away from the nominal trajectory</td></tr>
+<tr><td>AGV</td><td>635</td><td>WARNING_BATTERY_FULL_CHARGE_NEEDED</td><td>Machine Alarm</td><td>WARNING</td><td>Battery charge to full is needed to maintain battery</td></tr>
+<tr><td>AGV</td><td>636</td><td>WARNING_BATTERY_ERROR_OR_WARNING_ACTIVE</td><td>Machine Alarm</td><td>WARNING</td><td>Battery has an active error</td></tr>
+<tr><td>AGV</td><td>637</td><td>WARNING_LOAD_DETECTION_CONFLICT</td><td>Machine Alarm</td><td>WARNING</td><td>Load detection sensor conflicts with Navithor's loading status</td></tr>
+<tr><td>AGV</td><td>638</td><td>WARNING_SENSOR_FAILURE_IN_LOADING</td><td>Machine Alarm</td><td>WARNING</td><td>Load detection sensor did not recognise a load</td></tr>
+<tr><td>AGV</td><td>639</td><td>WARNING_CHARGING_ACTIVE</td><td>Machine Alarm</td><td>WARNING</td><td>Vehicle is stopped because of charging</td></tr>
+<tr><td>AGV</td><td>640</td><td>WARNING_INACCNAV_MODE_ACTIVE</td><td>Machine Alarm</td><td>WARNING</td><td>AGV changed to inaccurate navigation mode</td></tr>
+<tr><td>AGV</td><td>641</td><td>WARNING_PUSHING_PALLET</td><td>Machine Alarm</td><td>WARNING</td><td>AGV stopped due possible pushing of pallet</td></tr>
+<tr><td>AGV</td><td>642</td><td>WARNING_EXTERNAL_SPEED_LIMITATION</td><td>Machine Alarm</td><td>WARNING</td><td>Speed is limited below reference byExternal source</td></tr>
+<tr><td>AGV</td><td>643</td><td>WARNING_OBSTACLE_TOO_LONG</td><td>Machine Alarm</td><td>WARNING</td><td>Length of bypassed obstacle is limited</td></tr>
+<tr><td>AGV</td><td>644</td><td>WARNING_CHANGING_LOAD_OR_UNLOAD_HEIGHT</td><td>Machine Alarm</td><td>WARNING</td><td>The correct height is detected with sensor</td></tr>
+<tr><td>AGV</td><td>645</td><td>WARNING_LOAD_ABOARD_WHEN_DRIVING_TO_LOAD_BUFFER</td><td>Machine Alarm</td><td>WARNING</td><td>Navitrol load status is load aboard. Can't drive to load buffer with load.</td></tr>
+<tr><td>AGV</td><td>646</td><td>WARNING_BATTERY_HIGH_TEMPERATURE</td><td>Machine Alarm</td><td>WARNING</td><td>Battery temperature has exceeded the warning limit</td></tr>
+<tr><td>AGV</td><td>647</td><td>WARNING_DECREASING_FORK_TO_ROUTE_LEVEL</td><td>Machine Alarm</td><td>WARNING</td><td>Vehicle is stopped until fork reaches the route height</td></tr>
+<tr><td>AGV</td><td>648</td><td>WARNING_RACKING_PRECHECKS</td><td>Machine Alarm</td><td>WARNING</td><td>AGV stopped due to racking prechecks</td></tr>
+<tr><td>AGV</td><td>649</td><td>WARNING_BARRIER_STOP_FAILED</td><td>Machine Alarm</td><td>WARNING</td><td>Barrier stop failed</td></tr>
+<tr><td>AGV</td><td>650</td><td>WARNING_SLOWED_DOWN_SOURCE_MONITOR</td><td>Machine Alarm</td><td>WARNING</td><td>Slow down request received from monitoring software</td></tr>
+<tr><td>AGV</td><td>651</td><td>WARNING_SLOWED_DOWN_SOURCE_SUPERVISOR</td><td>Machine Alarm</td><td>WARNING</td><td>Slow down request received from supervisor interface</td></tr>
+<tr><td>AGV</td><td>652</td><td>WARNING_SLOWED_DOWN_SOURCE_FLEET_CONTROL</td><td>Machine Alarm</td><td>WARNING</td><td>Slow down request received from fleet control</td></tr>
+<tr><td>AGV</td><td>653</td><td>WARNING_SLOWED_DOWN_SOURCE_CONSOLE</td><td>Machine Alarm</td><td>WARNING</td><td>Slow down request received from console</td></tr>
+<tr><td>AGV</td><td>654</td><td>WARNING_SLOWED_DOWN_SOURCE_ACTIVE_ERROR</td><td>Machine Alarm</td><td>WARNING</td><td>Slow down request because of active error</td></tr>
+<tr><td>AGV</td><td>655</td><td>WARNING_SLOWED_DOWN_COUPLED_DRIVE_COMM</td><td>Machine Alarm</td><td>WARNING</td><td>Slow down because of coupled drive communication issues</td></tr>
+<tr><td>AGV</td><td>656</td><td>WARNING_SLOWED_DOWN_AUTO_MOVE_DELAY</td><td>Machine Alarm</td><td>WARNING</td><td>Slow down because of auto move delay</td></tr>
+<tr><td>AGV</td><td>657</td><td>WARNING_RETURN_TO_ROUTE_FAILED</td><td>Machine Alarm</td><td>WARNING</td><td>Return to route feature could not find a suitable return point or command was rejected as the AGV was not in standby state.</td></tr>
+<tr><td>AGV</td><td>701</td><td>ERROR_SCANNER_PARAMS_NOT_VALID</td><td>Machine Alarm</td><td>ERROR</td><td>Scanner parameters are not valid</td></tr>
+<tr><td>AGV</td><td>702</td><td>ERROR_FRONT_SCANNER_FAULT</td><td>Machine Alarm</td><td>ERROR</td><td>Front scanner reports internal hardware fault</td></tr>
+<tr><td>AGV</td><td>703</td><td>ERROR_REAR_SCANNER_FAULT</td><td>Machine Alarm</td><td>ERROR</td><td>Rear scanner reports internal hardware fault</td></tr>
+<tr><td>AGV</td><td>704</td><td>ERROR_LIFT_CTRL_NOCOMMS</td><td>Machine Alarm</td><td>ERROR</td><td>Lift motor controller communication failure</td></tr>
+<tr><td>AGV</td><td>705</td><td>ERROR_LIFT_CTRL_CONTROLLER_FAULT</td><td>Machine Alarm</td><td>ERROR</td><td>Lift motor controller indicates fault</td></tr>
+<tr><td>AGV</td><td>706</td><td>ERROR_LIFT_CTRL_CALIB_FAILED_OUT_OF_LIMITS</td><td>Machine Alarm</td><td>ERROR</td><td>Lift height measurement calibration failed to move lift so limit switches would be released</td></tr>
+<tr><td>AGV</td><td>707</td><td>ERROR_PLC_FAILURE</td><td>Machine Alarm</td><td>ERROR</td><td>PLC error</td></tr>
+<tr><td>AGV</td><td>708</td><td>ERROR_NO_PLC_DATA</td><td>Machine Alarm</td><td>ERROR</td><td>No communication to PLC</td></tr>
+<tr><td>AGV</td><td>709</td><td>ERROR_CAN_FAILURE</td><td>Machine Alarm</td><td>ERROR</td><td>CAN bus, hw or driver error</td></tr>
+<tr><td>AGV</td><td>710</td><td>ERROR_TOO_LARGE_STEER_ANGLE</td><td>Machine Alarm</td><td>ERROR</td><td>Measured Steering angle too large</td></tr>
+<tr><td>AGV</td><td>711</td><td>ERROR_SAFETY_SCANNER_FAULT</td><td>Machine Alarm</td><td>ERROR</td><td>Safety scanner reports internal hardware fault</td></tr>
+<tr><td>AGV</td><td>712</td><td>ERROR_SAFE_OUTPUTS_ACTIVE</td><td>Machine Alarm</td><td>ERROR</td><td>Safe outputs active - velocities set to zero</td></tr>
+<tr><td>AGV</td><td>713</td><td>ERROR_TRAILER_TRANSPORT_COUPLING</td><td>Machine Alarm</td><td>ERROR</td><td>Failure in trailer coupling or uncoupling sequence</td></tr>
+<tr><td>AGV</td><td>714</td><td>ERROR_TRAILER_STATUS_NOT_RECEIVED</td><td>Machine Alarm</td><td>ERROR</td><td>Valid trailer transport status not received</td></tr>
+<tr><td>AGV</td><td>715</td><td>ERROR_TRAILER_ANGLE_NOT_DETECTED</td><td>Machine Alarm</td><td>ERROR</td><td>Failed to detect the trailer angle</td></tr>
+<tr><td>AGV</td><td>716</td><td>ERROR_TRAILER_ANGLE_TOO_LARGE</td><td>Machine Alarm</td><td>ERROR</td><td>Detected trailer angle exceeds the set limits</td></tr>
+<tr><td>AGV</td><td>801</td><td>ERROR_PLC_COMMS_STOP</td><td>Machine Alarm</td><td>ERROR</td><td>PLC stopped machine due to communication break</td></tr>
+<tr><td>AGV</td><td>802</td><td>ERROR_GENERIC_IO_DEFINITIONS</td><td>Machine Alarm</td><td>ERROR</td><td>Error or problem in generic I/O definitions</td></tr>
+<tr><td>AGV</td><td>803</td><td>ERROR_ETH_ERROR</td><td>Machine Alarm</td><td>ERROR</td><td>Error on AGV</td></tr>
+<tr><td>AGV</td><td>804</td><td>ERROR_ETH_UNKNOWN_STATUS</td><td>Machine Alarm</td><td>ERROR</td><td>AGV sent unknown error status</td></tr>
+<tr><td>AGV</td><td>805</td><td>ERROR_CAN_ALL_NODES_NOT_OPER</td><td>Machine Alarm</td><td>ERROR</td><td>One or more nodes not operational or all receive messages not detected</td></tr>
+<tr><td>AGV</td><td>806</td><td>ERROR_CAN_RX_TIMEOUT</td><td>Machine Alarm</td><td>ERROR</td><td>Received timeout in one or more receive messages</td></tr>
+<tr><td>AGV</td><td>807</td><td>ERROR_CAN_DATA</td><td>Machine Alarm</td><td>ERROR</td><td>Invalid data in CAN msg</td></tr>
+<tr><td>AGV</td><td>808</td><td>ERROR_CAN_CONFIG</td><td>Machine Alarm</td><td>ERROR</td><td>CAN slave configuration failure</td></tr>
+<tr><td>AGV</td><td>809</td><td>ERROR_AGV_CONTROLLER</td><td>Machine Alarm</td><td>ERROR</td><td>AGV controller alarm</td></tr>
+<tr><td>AGV</td><td>810</td><td>ERROR_RLS_SENSOR</td><td>Machine Alarm</td><td>ERROR</td><td>RLS sensor failure</td></tr>
+<tr><td>AGV</td><td>811</td><td>ERROR_HITCH_TONGUE_PRESENT_TIMEOUT</td><td>Machine Alarm</td><td>ERROR</td><td>Hitch tongue wasn't detected within time limit</td></tr>
+<tr><td>AGV</td><td>812</td><td>ERROR_HITCH_OPEN_TIMEOUT</td><td>Machine Alarm</td><td>ERROR</td><td>Hitch error: Hitch Open not detected</td></tr>
+<tr><td>AGV</td><td>813</td><td>ERROR_HITCH_CLOSE_TIMEOUT</td><td>Machine Alarm</td><td>ERROR</td><td>Hitch error: Hitch Closed not detected</td></tr>
+<tr><td>AGV</td><td>814</td><td>ERROR_HITCH_TONGUE_NOT_DETECTED</td><td>Machine Alarm</td><td>ERROR</td><td>Hitch error: Tongue is not detected</td></tr>
+<tr><td>AGV</td><td>815</td><td>ERROR_HITCH_PIN_OPENED</td><td>Machine Alarm</td><td>ERROR</td><td>Hitch pin openedEven though it should stay closed</td></tr>
+<tr><td>AGV</td><td>816</td><td>ERROR_HITCH_PIN_CLOSED</td><td>Machine Alarm</td><td>ERROR</td><td>Hitch pin closedEven though it should stay open</td></tr>
+<tr><td>AGV</td><td>817</td><td>ERROR_HITCH_ALREADY_CLOSED</td><td>Machine Alarm</td><td>ERROR</td><td>Hitch pin was already closed when trying to close it</td></tr>
+<tr><td>AGV</td><td>818</td><td>ERROR_CAN_CONFIG_SYNC</td><td>Machine Alarm</td><td>ERROR</td><td>CAN error - no rx sync objects defined</td></tr>
+<tr><td>AGV</td><td>819</td><td>ERROR_PLC</td><td>Machine Alarm</td><td>ERROR</td><td>PLC error received</td></tr>
+<tr><td>AGV</td><td>820</td><td>ERROR_CAN_CONFIG_PARAM</td><td>Machine Alarm</td><td>ERROR</td><td>CAN configuration parameter failure</td></tr>
+<tr><td>AGV</td><td>821</td><td>ERROR_NO_SUPERVISOR_COMMS</td><td>Machine Alarm</td><td>ERROR</td><td>Safety scanner hasn't received scans</td></tr>
+<tr><td>AGV</td><td>822</td><td>ERROR_ETHERNET_FEEDBACK_DATA_ISNAN</td><td>Machine Alarm</td><td>ERROR</td><td>Ethernet vehicle feedback data is NAN or INF</td></tr>
+<tr><td>AGV</td><td>823</td><td>ERROR_ETHERNET_FEEDBACK_EXCEEDING_LIMIT</td><td>Machine Alarm</td><td>ERROR</td><td>Ethernet vehicle feedback data exceeds limits</td></tr>
+<tr><td>AGV</td><td>824</td><td>ERROR_CAN_SDO_FILE</td><td>Machine Alarm</td><td>ERROR</td><td>CAN SDO write configuration file failure</td></tr>
+<tr><td>AGV</td><td>825</td><td>ERROR_IMU_FAILURE</td><td>Machine Alarm</td><td>ERROR</td><td>IMU error or no connection</td></tr>
+<tr><td>AGV</td><td>826</td><td>ERROR_CAN_HIGH_DT</td><td>Machine Alarm</td><td>ERROR</td><td>Vehicle interface to CAN update interval is too high</td></tr>
+<tr><td>AGV</td><td>827</td><td>ERROR_STOPPED_BY_ULTRASONIC_SENSORS</td><td>Machine Alarm</td><td>ERROR</td><td>AGV stopped by ultrasonic sensors</td></tr>
+<tr><td>AGV</td><td>828</td><td>ERROR_EXTERNAL_TARGET_DETECTION_SENSOR</td><td>Machine Alarm</td><td>ERROR</td><td>External target detection sensor error</td></tr>
+<tr><td>AGV</td><td>829</td><td>ERROR_ETHERNET_FEEDBACK_INVALID</td><td>Machine Alarm</td><td>ERROR</td><td>Ethernet vehicle feedback data is regarded to be invalid</td></tr>
+<tr><td>AGV</td><td>830</td><td>ERROR_GPS_NO_CONNECTION</td><td>Machine Alarm</td><td>ERROR</td><td>Could not connect to the GPS receiver</td></tr>
+<tr><td>AGV</td><td>831</td><td>ERROR_COUPLED_FORMATION_OFFSET_DETECTION</td><td>Machine Alarm</td><td>ERROR</td><td>Coupled formation offset detection measurement failure</td></tr>
+<tr><td>AGV</td><td>832</td><td>ERROR_ETHERNET_CONTROL_MESSAGE_TIMEOUT</td><td>Machine Alarm</td><td>ERROR</td><td>Ethernet control data timeout</td></tr>
+<tr><td>AGV</td><td>833</td><td>ERROR_ACTUATOR_UPDATE_MEASUREMENT_TIMEOUT</td><td>Machine Alarm</td><td>ERROR</td><td>Actuator measurement timeout</td></tr>
+<tr><td>AGV</td><td>834</td><td>ERROR_HOMING_IN_PROCESS</td><td>Machine Alarm</td><td>ERROR</td><td>Homing in process. Driving is not yet possible</td></tr>
+<tr><td>AGV</td><td>835</td><td>ERROR_ROS_NO_CONNECTION</td><td>Machine Alarm</td><td>ERROR</td><td>No messages received from ROS</td></tr>
+<tr><td>AGV</td><td>836</td><td>ERROR_ROS_OBST_AV_NO_PATH</td><td>Machine Alarm</td><td>ERROR</td><td>Too long since valid path is received from ROS during bypass</td></tr>
+<tr><td>AGV</td><td>840</td><td>ERROR_ETHERCAT_NO_COMMS</td><td>Machine Alarm</td><td>ERROR</td><td>EtherCAT communication not working as expected</td></tr>
+<tr><td>AGV</td><td>841</td><td>ERROR_CAN_SUPERVISOR_INVALID_COMMAND</td><td>Machine Alarm</td><td>ERROR</td><td>Invalid command received from CAN supervisor interface</td></tr>
+<tr><td>AGV</td><td>842</td><td>ERROR_CONFIG_GENERIC</td><td>Machine Alarm</td><td>ERROR</td><td>Generic configuration error. Check log for more details</td></tr>
+<tr><td>AGV</td><td>843</td><td>ERROR_ETHERCAT_CONFIG</td><td>Machine Alarm</td><td>ERROR</td><td>Ethercat slave configuration failure</td></tr>
+<tr><td>AGV</td><td>901</td><td>WARNING_LIFT_CTRL_ENC_FILE_FAIL</td><td>Machine Alarm</td><td>WARNING</td><td>Lift height encoder configuration file parsing failed</td></tr>
+<tr><td>AGV</td><td>902</td><td>WARNING_LIFT_CTRL_CFG_FAILED</td><td>Machine Alarm</td><td>WARNING</td><td>Lift motor controller configuration failure</td></tr>
+<tr><td>AGV</td><td>903</td><td>WARNING_LIFT_CTRL_CALIB_FAILED</td><td>Machine Alarm</td><td>WARNING</td><td>Lift height measurement calibration failure</td></tr>
+<tr><td>AGV</td><td>904</td><td>WARNING_LIFT_CTRL_MOVE_TIMEOUT</td><td>Machine Alarm</td><td>WARNING</td><td>Lift movement timeout</td></tr>
+<tr><td>AGV</td><td>905</td><td>WARNING_LIFT_CTRL_CALIB_NOTDONE</td><td>Machine Alarm</td><td>WARNING</td><td>Lift height measurement not calibrated</td></tr>
+<tr><td>AGV</td><td>906</td><td>WARNING_LIFT_CTRL_DISABLED</td><td>Machine Alarm</td><td>WARNING</td><td>Lift height control disabled</td></tr>
+<tr><td>AGV</td><td>907</td><td>WARNING_UI_NOT_CONNECTED</td><td>Machine Alarm</td><td>WARNING</td><td>No connection to UI</td></tr>
+<tr><td>AGV</td><td>908</td><td>WARNING_PLC_SAFETY_SCANNER_STOP</td><td>Machine Alarm</td><td>WARNING</td><td>Safety scanner stop on PLC</td></tr>
+<tr><td>AGV</td><td>909</td><td>WARNING_PLC_SOFT_STOP</td><td>Machine Alarm</td><td>WARNING</td><td>Soft stop activated on PLC</td></tr>
+<tr><td>AGV</td><td>910</td><td>WARNING_PLC_SLOW_DOWN</td><td>Machine Alarm</td><td>WARNING</td><td>PLC slowing down due to obstacle</td></tr>
+<tr><td>AGV</td><td>911</td><td>WARNING_DEAD_RECK_HIGH_RATE</td><td>Machine Alarm</td><td>WARNING</td><td>Excessive movement rate detected</td></tr>
+<tr><td>AGV</td><td>912</td><td>WARNING_ETH_MANUAL_MODE</td><td>Machine Alarm</td><td>WARNING</td><td>AGV on manual mode</td></tr>
+<tr><td>AGV</td><td>913</td><td>WARNING_AGV_EM_STOP</td><td>Machine Alarm</td><td>WARNING</td><td>Emergency stop on AGV</td></tr>
+<tr><td>AGV</td><td>914</td><td>WARNING_AGV_CONTROLLER</td><td>Machine Alarm</td><td>WARNING</td><td>AGV controller warning</td></tr>
+<tr><td>AGV</td><td>915</td><td>WARNING_DYN_MAP_SERVER_NOT_CONNECTED</td><td>Machine Alarm</td><td>WARNING</td><td>No connection to dynamic mapping server</td></tr>
+<tr><td>AGV</td><td>916</td><td>WARNING_DYN_MAP_SERVER_MAP_MISMATCH</td><td>Machine Alarm</td><td>WARNING</td><td>Dynamic mapping server map doesn't match Fleet control map</td></tr>
+<tr><td>AGV</td><td>917</td><td>WARNING_DYN_MAP_SERVER_STORAGE_ERROR</td><td>Machine Alarm</td><td>WARNING</td><td>Dynamic mapping server storage read/write error</td></tr>
+<tr><td>AGV</td><td>918</td><td>WARNING_RLS_SENSOR</td><td>Machine Alarm</td><td>WARNING</td><td>RLS sensor warning</td></tr>
+<tr><td>AGV</td><td>919</td><td>WARNING_NO_SUPERVISOR_COMS</td><td>Machine Alarm</td><td>WARNING</td><td>No communication to Supervisor</td></tr>
+<tr><td>AGV</td><td>920</td><td>WARNING_UI_PARSING_ERROR</td><td>Machine Alarm</td><td>WARNING</td><td>UI data parsing failed</td></tr>
+<tr><td>AGV</td><td>921</td><td>WARNING_EXT_BATTERY</td><td>Machine Alarm</td><td>WARNING</td><td>No external battery status available</td></tr>
+<tr><td>AGV</td><td>922</td><td>WARNING_PLC</td><td>Machine Alarm</td><td>WARNING</td><td>PLC Warning received</td></tr>
+<tr><td>AGV</td><td>923</td><td>WARNING_CAN2_FAILURE</td><td>Machine Alarm</td><td>WARNING</td><td>CAN secondary bus, hw or driver error</td></tr>
+<tr><td>AGV</td><td>924</td><td>WARNING_IMU_FAILURE</td><td>Machine Alarm</td><td>WARNING</td><td>IMU error or no connection</td></tr>
+<tr><td>AGV</td><td>925</td><td>WARNING_NO_SUPERVISOR_SEC_COMS</td><td>Machine Alarm</td><td>WARNING</td><td>No communication to secondary Supervisor</td></tr>
+<tr><td>AGV</td><td>926</td><td>WARNING_FSTOP_FLEET_CONTROL</td><td>Machine Alarm</td><td>WARNING</td><td>FSTOP activated by fleet control</td></tr>
+<tr><td>AGV</td><td>927</td><td>WARNING_DRIVE_MOTOR_CONTROL_LIMIT</td><td>Machine Alarm</td><td>WARNING</td><td>Motor controller operation/speed is limited</td></tr>
+<tr><td>AGV</td><td>928</td><td>WARNING_ETHERNET_FEEDBACK_EXCEEDING_LIMIT</td><td>Machine Alarm</td><td>WARNING</td><td>Warning vehicle feedback dataExceeds limits</td></tr>
+<tr><td>AGV</td><td>929</td><td>WARNING_SLOWED_DOWN_ULTRASONIC_SENSORS</td><td>Machine Alarm</td><td>WARNING</td><td>Slow down triggered by ultrasonic sensors facing forwards</td></tr>
+<tr><td>AGV</td><td>931</td><td>WARNING_OMNI_STEER_LIMIT_ADJUSTING_WHEELS</td><td>Machine Alarm</td><td>WARNING</td><td>Omni steer limit reached stopping and readjusting the wheel(s)</td></tr>
+<tr><td>AGV</td><td>932</td><td>WARNING_LIMITED_STEERING_ACTIVE</td><td>Machine Alarm</td><td>WARNING</td><td>Required steer angles exceed defined limits. AGV may drift out of the path.</td></tr>
+<tr><td>AGV</td><td>933</td><td>WARNING_CONFLICTING_MOTOR_CONTROLLER_TYPES</td><td>Machine Alarm</td><td>WARNING</td><td>Motor controller type given as a parameter conflicts with the one coming from the controller</td></tr>
+<tr><td>AGV</td><td>934</td><td>WARNING_NO_GPS_FIX</td><td>Machine Alarm</td><td>WARNING</td><td>Too long since last GPS fix, driving without it</td></tr>
+<tr><td>AGV</td><td>935</td><td>WARNING_CAN_ENCODER</td><td>Machine Alarm</td><td>WARNING</td><td>CAN encoder initialization error</td></tr>
+<tr><td>AGV</td><td>936</td><td>WARNING_ROS_OBST_AV_PATH_ENDED</td><td>Machine Alarm</td><td>WARNING</td><td>Reached the end of the ROS path during bypass, stopping and waiting for new one</td></tr>
+<tr><td>AGV</td><td>941</td><td>WARNING_CODE_READER_NO_COMMS</td><td>Machine Alarm</td><td>WARNING</td><td>Code reader communication is not working</td></tr>
+<tr><td>AGV</td><td>942</td><td>WARNING_CODE_READER_STATUS_NOT_OK</td><td>Machine Alarm</td><td>WARNING</td><td>Code reader reports a device problem</td></tr>
+<tr><td>SUPERVISOR (AGV PLC)</td><td>Custom</td><td>ERROR_PLC_XXX (XXX is the custom ID)</td><td>SUPERVISOR ERROR</td><td></td><td></td></tr>
+</tbody></table>
+</div></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="opcuadoc.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="Alarms configuration override.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="opcuadoc.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="Alarms configuration override.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

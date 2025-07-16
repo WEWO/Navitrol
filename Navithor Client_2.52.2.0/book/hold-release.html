@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Hold-Release reasoning and production order lists - NAVITHOR USER INSTRUCTIONS</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="Installation_NavithorHardwareRequirements.html"><strong aria-hidden="true">1.</strong> System Hardware Requirement Specifications</a></li><li class="chapter-item expanded "><a href="Installation_SQLServerAndDatabaseInstallationGuide.html"><strong aria-hidden="true">2.</strong> Configuring database</a></li><li class="chapter-item expanded "><a href="fleetSim.html"><strong aria-hidden="true">3.</strong> Fleet Simulator - Setup and Configuration</a></li><li class="chapter-item expanded "><a href="Installation_NavithorServerAsAService.html"><strong aria-hidden="true">4.</strong> Server as a service</a></li><li class="chapter-item expanded "><a href="Installation_ConfiguringHotSwap.html"><strong aria-hidden="true">5.</strong> Server Hot Swap with Failover Cluster</a></li><li class="chapter-item expanded "><a href="Installation_RebrandingNavithor.html"><strong aria-hidden="true">6.</strong> Server and Client Rebranding</a></li><li class="chapter-item expanded "><a href="Machinetool.html"><strong aria-hidden="true">7.</strong> Machine Tool</a></li><li class="chapter-item expanded "><a href="MesTester3.html"><strong aria-hidden="true">8.</strong> MES Tester</a></li><li class="chapter-item expanded affix "><li class="part-title">Desktop client</li><li class="chapter-item expanded "><a href="navithorServerAndClientMegaDocument.html"><strong aria-hidden="true">9.</strong> System Overview and user instructions for Client UI</a></li><li class="chapter-item expanded "><a href="Feature_ClientUpdater.html"><strong aria-hidden="true">10.</strong> Client Updater</a></li><li class="chapter-item expanded affix "><li class="part-title">Web client</li><li class="chapter-item expanded "><a href="Installation_SettingUpNavithorWebServer.html"><strong aria-hidden="true">11.</strong> Setting up Web server to enable Web client</a></li><li class="chapter-item expanded "><a href="webClient.html"><strong aria-hidden="true">12.</strong> Web Client - User Instructions</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="bestProductionPractices.html"><strong aria-hidden="true">13.</strong> Best Practices for Creating Production Area</a></li><li class="chapter-item expanded affix "><li class="part-title">Logs</li><li class="chapter-item expanded "><a href="Navithor logs.html"><strong aria-hidden="true">14.</strong> Navithor Logs</a></li><li class="chapter-item expanded "><a href="Feature_VisualReplay.html"><strong aria-hidden="true">15.</strong> Visual Replay</a></li><li class="chapter-item expanded "><a href="Feature_DownloadManager.html"><strong aria-hidden="true">16.</strong> Log Download Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">Users</li><li class="chapter-item expanded "><a href="Installation_UsingActiveDirectoryForAuthentication.html"><strong aria-hidden="true">17.</strong> User authentication against Active Directory</a></li><li class="chapter-item expanded "><a href="userRoles.html"><strong aria-hidden="true">18.</strong> User Management</a></li><li class="chapter-item expanded "><a href="userRolesRightsMatrix.html"><strong aria-hidden="true">19.</strong> Default User roles and User rights matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Features</li><li class="chapter-item expanded "><a href="symbolicPointGroups.html"><strong aria-hidden="true">20.</strong> Symbolic Point Groups</a></li><li class="chapter-item expanded "><a href="ResourceHandling.html"><strong aria-hidden="true">21.</strong> Resource handling</a></li><li class="chapter-item expanded "><a href="hold-release.html" class="active"><strong aria-hidden="true">22.</strong> Hold-Release reasoning and production order lists</a></li><li class="chapter-item expanded "><a href="transfer requests.html"><strong aria-hidden="true">23.</strong> Transfer requests</a></li><li class="chapter-item expanded "><a href="racking.html"><strong aria-hidden="true">24.</strong> Using warehouse racking feature</a></li><li class="chapter-item expanded "><a href="bufferLanes.html"><strong aria-hidden="true">25.</strong> Using Buffer Lanes</a></li><li class="chapter-item expanded "><a href="Feature_ChargingManagement.html"><strong aria-hidden="true">26.</strong> Managing Battery Levels</a></li><li class="chapter-item expanded "><a href="oneMachineZones.html"><strong aria-hidden="true">27.</strong> Using One Machine Zones</a></li><li class="chapter-item expanded "><a href="distanceControlZones.html"><strong aria-hidden="true">28.</strong> Distance Control Zones</a></li><li class="chapter-item expanded "><a href="FireAlarmZones.html"><strong aria-hidden="true">29.</strong> Fire Alarm Zones</a></li><li class="chapter-item expanded "><a href="Zone status use cases.html"><strong aria-hidden="true">30.</strong> Zone status use cases</a></li><li class="chapter-item expanded "><a href="tagStatuses.html"><strong aria-hidden="true">31.</strong> Tag Statuses</a></li><li class="chapter-item expanded "><a href="Trafficlights.html"><strong aria-hidden="true">32.</strong> Traffic Lights</a></li><li class="chapter-item expanded "><a href="Feature_Elevators.html"><strong aria-hidden="true">33.</strong> Elevators</a></li><li class="chapter-item expanded "><a href="ProductionBreak.html"><strong aria-hidden="true">34.</strong> Production Break</a></li><li class="chapter-item expanded "><a href="DynamicSafetyBounds.html"><strong aria-hidden="true">35.</strong> Virtual Dynamic Safety Bounds</a></li><li class="chapter-item expanded "><a href="WaitingSlots.html"><strong aria-hidden="true">36.</strong> Wait Queue Locations</a></li><li class="chapter-item expanded "><a href="CoupledDrive.html"><strong aria-hidden="true">37.</strong> Coupled Drive</a></li><li class="chapter-item expanded "><a href="Feature_StoppingPointOffsetsForSymbolicPoints.html"><strong aria-hidden="true">38.</strong> Stopping Point Offsets</a></li><li class="chapter-item expanded "><a href="TCStopPoint.html"><strong aria-hidden="true">39.</strong> Safe stopping point calculation</a></li><li class="chapter-item expanded "><a href="Navithor statistics.html"><strong aria-hidden="true">40.</strong> System Statistics</a></li><li class="chapter-item expanded "><a href="MachineInterfaces.html"><strong aria-hidden="true">41.</strong> Machine Interfaces</a></li><li class="chapter-item expanded affix "><li class="part-title">Interfaces</li><li class="chapter-item expanded "><a href="Communication specification between Navithor and MES.html"><strong aria-hidden="true">42.</strong> MES Interface</a></li><li class="chapter-item expanded "><a href="NavithorHttpApi.html"><strong aria-hidden="true">43.</strong> HTTP API</a></li><li class="chapter-item expanded "><a href="NavithorWebApi.html"><strong aria-hidden="true">44.</strong> WebSocket API</a></li><li class="chapter-item expanded "><a href="opcuadoc.html"><strong aria-hidden="true">45.</strong> OPC UA Server interface</a></li><li class="chapter-item expanded affix "><li class="part-title">Alarms</li><li class="chapter-item expanded "><a href="Fleet Control Alarms.html"><strong aria-hidden="true">46.</strong> Alarms</a></li><li class="chapter-item expanded "><a href="Alarms configuration override.html"><strong aria-hidden="true">47.</strong> Alarms configuration override</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NAVITHOR USER INSTRUCTIONS</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="hold-release-reasoning-and-production-order-lists"><a class="header" href="#hold-release-reasoning-and-production-order-lists">Hold-Release reasoning and production order lists</a></h1>
+<p>This document contains an overview of hold release reasoning and production order lists.</p>
+<p>Updated 18.01.2022</p>
+<h2 id="version-history"><a class="header" href="#version-history">Version History</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead><tbody>
+<tr><td>1.0</td><td>16.10.2020</td><td>Antti Parkkonen</td><td>Document created</td></tr>
+<tr><td>1.1</td><td>18.02.2021</td><td>Simon Clement</td><td>Document reviewed and updated reflecting Navithor version 2.21.0.0. Added part related to resource based hold-release logic and linking of production order lists.</td></tr>
+<tr><td>1.2</td><td>12.03.2021</td><td>Simon Clement</td><td>Add note about not being able to edit and delete templates with activated lists</td></tr>
+<tr><td>1.3</td><td>12.10.2021</td><td>Benard Gathimba</td><td>Minor document changes for clarification</td></tr>
+<tr><td>1.4</td><td>18.01.2022</td><td>Tero Laakso-Pitkäkoski</td><td>Add clarifications to Production Order List modes 12 and 14</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="hold-release-reasoning"><a class="header" href="#hold-release-reasoning">Hold release reasoning</a></h2>
+<h3 id="overview"><a class="header" href="#overview">Overview</a></h3>
+<p>In 'Hold release reasoning' production, the symbolic points are defined as hold-locations with rules of where it is allowed to go from the location. The figure below shows the hold-rules in Navithor Tools.</p>
+<p><img src="./Images/media/image14.png" alt="" /></p>
+<p>Defining hold-rules in Navithor Tools. Tick 'Enable hold state at symbolic point'-check box to set the symbolic point as a Hold-location. At least 'Default destination' must be defined for a Hold-location and other selections are optional.</p>
+<p>From the above picture, we can see that symbolic point (429) has two Hold-Release destinations, (130) and (158). By default, the AGV will drive to (130) when released from Hold at this location. But if (130) is unavailable for any reason, the AGV will be ordered to drive to (158) instead.</p>
+<p><img src="./Images/media/agvcandrivethroughstop.png" alt="" /></p>
+<p>By default, AGV's are allowed to drive through all locations to reach their target without going to HOLD-state unless driving past a StopAndHold location. In the figure above, the AGV would be allowed to drive through (5) to reach its destination (1). Defining (5) as StopAndHold instead of Hold location would force the AGV to stop and transition to HOLD-state when driving through. It is also possible to add a penalty for driving through Hold-Locations.</p>
+<p>The AGV will then remain in HOLD-state until the state is released from specific inputs. Inputs can be:</p>
+<div class="table-wrapper"><table><thead><tr><th>Input source</th><th>Description</th></tr></thead><tbody>
+<tr><td>Button</td><td>Press on AGV - UI onboard shows possible destinations from current location (maximum of 4 defined destinations) or physical buttons (e.g. 'Next', 'Alternative1', 'Alternative2', 'Alternative3'). Since Navithor version 1.6.2.0 it is possible to release HOLD-state to any of the symbolic points in the production area. i.e. destinations are not limited to 4.</td></tr>
+<tr><td>Timer</td><td>If timer is enabled AGV can release HOLD-state by itself. Timer triggers the default destination.</td></tr>
+<tr><td>MES</td><td>External release (e.g. panel at work station near symbolic point).</td></tr>
+<tr><td>Navithor Client</td><td>User can send hold release commands from the Symbolic Point Status-form when an AGV executes hold-task at the symbolic point (Client v. 1.5.1.0 onwards).</td></tr>
+</tbody></table>
+</div>
+<p><img src="./Images/media/HoldNoAGVAtSymbol.png" alt="" /></p>
+<p>Hold Symbolic Point with no AGV at the location. Symbolic Point (9) is configured as the default destination. The default destination is highlighted (when hovering over the Symbolic Point, optional setting on Client).</p>
+<p><img src="./Images/media/HoldAGVAtSymbol.png" alt="" /></p>
+<p>Hold Symbolic Point with AGV at the location. Symbolic Point(8) is configured as the default destination. Symbolic Point (7) is configured as the first alternative destination.</p>
+<p>When the AGV is commanded to drive to any Symbolic Point with Hold enabled, it will go to HOLD-state. In the above picture(s) SteerDrive1 is waiting for ReleaseHold signal from any source. After receiving a signal, the AGV will drive to the next target:</p>
+<div class="table-wrapper"><table><thead><tr><th>Signal</th><th>Target</th><th>Symbolic Point</th></tr></thead><tbody>
+<tr><td>Release</td><td>Default</td><td>(8)</td></tr>
+<tr><td>Release with timer</td><td>Default</td><td>(8)</td></tr>
+<tr><td>Release Alt1</td><td>Alt1</td><td>(7)</td></tr>
+<tr><td>Release Custom</td><td>Custom</td><td>Given with signal</td></tr>
+</tbody></table>
+</div>
+<p>Hold release production also supports loading and unloading. This can be enabled by setting the parameter <strong>ProductionManager_PerformLoadOrUnloadAtSymPointWhenArrivingWithOrderRule</strong> to <em>True</em> (this is also the default value). This requires Symbolic Points to be of Load or Unload type instead of Stop type. With these settings, when AGV arrives at Symbolic Point, it will perform a Load or Unload task before going into HOLD-state.</p>
+<div class="table-wrapper"><table><thead><tr><th>Symbolic Point type</th><th>Result</th></tr></thead><tbody>
+<tr><td>Stop</td><td>Stop does not support Load/Unload. AGV will go to HOLD-state without loading or unloading</td></tr>
+<tr><td>Load</td><td>AGV will perform Load-task and transition to HOLD-state after finishing.</td></tr>
+<tr><td>Unload</td><td>AGV will perform Unload-task and transition to HOLD-state after finishing.</td></tr>
+<tr><td>LoadUnload</td><td>AGV will perform the correct operation based on the resource onboard info. Always Unload-task if AGV has resources and Load-task if AGV is empty</td></tr>
+</tbody></table>
+</div>
+<p>Running production by Hold release reasoning makes it possible to have a fully operable production system without the need for external signals (i.e. PLC). Hold release reasoning is good for production environments where AGVs run production in loop(s) with predetermined locations to stop at.</p>
+<h3 id="resource-related-checks-after-releasing-hold-state"><a class="header" href="#resource-related-checks-after-releasing-hold-state">Resource-related checks after releasing HOLD-state</a></h3>
+<p>The parameter <strong>MissionManager_HoldReleaseRules</strong> can be used to make resource-related checks after HOLD-state has been released.
+Multiple values can be enabled and they will have the following effects:</p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter flag</th><th>Result when AGV is released from HOLD</th></tr></thead><tbody>
+<tr><td>UnhandledOrderRequired</td><td>If there is an unhandled order at the location, the AGV will deliver that resource to the hold release target. Otherwise the AGV will leave empty.</td></tr>
+<tr><td>ResumeHoldIfNoPickupReq</td><td>The AGV will resume hold in case there is no valid unhandled order and <strong>UnhandledOrderRequired</strong>  is true.</td></tr>
+<tr><td>UnloadingToPickupLocAllowed</td><td>AGV is allowed to unload a resource to the location where the resource was picked up from. This can be necessary in case the AGV picks up a resource, drives a loop and comes back to the pickup location with the resource.</td></tr>
+</tbody></table>
+</div>
+<p>Note that the parameter <strong>MissionManager_CheckResourceTranferAfterHoldRelease</strong> needs to be true for <strong>UnhandledOrderRequired</strong> and <strong>ResumeHoldIfNoPickupReq</strong> to take effect.</p>
+<h3 id="custom-hold-release-target"><a class="header" href="#custom-hold-release-target">Custom hold release target</a></h3>
+<p>An AGV can be released from HOLD-state to any symbolic point in the production area. When released the default and possible alternative destinations of the current symbolic point are ignored. Releasing to a custom destination is supported in MES-interface and in Navitrol's AGV
+supervisor interface.</p>
+<h3 id="charging-requests-from-hold-rules"><a class="header" href="#charging-requests-from-hold-rules">Charging requests from Hold-rules</a></h3>
+<p>In some production systems, AGVs should only be sent to a charger after the AGV completes a specific part of the production. Navithor can be set to generate charging requests based on hold rules only by setting the parameter <strong>MissionManager_GenerateChargingRequestsFromHoldRulesOnly_Rule</strong> to true.
+With this enabled a symbolic point with a charging location as an alternative destination can be set to trigger charging requests if charging is needed.</p>
+<p>When an AGV is released from a symbolic point to the default destination, and the symbolic point also has a charging location as an alternative destination, Navithor will act as follows:</p>
+<ul>
+<li>If charging is needed, Navithor generates a charging request for the AGV and sends it to a free charger near the actual alternative target of the symbolic point.</li>
+<li>A production order is also generated to the default destination of the  symbolic point so that the actual release target stays in memory</li>
+<li>If the system parameter <strong>MissionManager_PassProductionOrderToAnotherMachineWhenGoingToCharge_Rule</strong> is set to <em>True</em> the order is generated for another AGV that is charging and does not have any orders to perform. If no valid AGV is found the order is generated for the AGV itself.</li>
+<li>The generated production order is then executed when the AGV in the charger (production order passed to another) or the AGV going to the charger is charged.</li>
+</ul>
+<h3 id="mes-messages-related-to-the-hold-release-reasoning"><a class="header" href="#mes-messages-related-to-the-hold-release-reasoning">MES messages related to the hold release reasoning</a></h3>
+<p>See more detailed explanations from the document  Communication specification between Navithor and MES.</p>
+<h4 id="releasehold-id--18"><a class="header" href="#releasehold-id--18">ReleaseHold (ID = 18)</a></h4>
+<p>Sending this message will trigger Navithor to release a machine in the Symbolic Point from HOLD-state and generate a production order for the machine to the specified target location.</p>
+<h4 id="releaseholdtocustomtarget-id--29"><a class="header" href="#releaseholdtocustomtarget-id--29">ReleaseHoldToCustomTarget (ID = 29)</a></h4>
+<p>Sending this message will trigger Navithor to release a machine in the Symbolic Point from HOLD-state and generate a production order for the machine to a custom target location, which is given in the message.</p>
+<hr />
+<h2 id="production-order-lists"><a class="header" href="#production-order-lists">Production order lists</a></h2>
+<p>In some production systems, the AGVs need to drive different production loops and stop at symbolic points along the route. The symbolic points may be shared among different routes, but the following destination from a symbolic point depends on the route given to the AGV. In this case it is not possible to use fixed hold destinations. Triggering custom hold release targets can be automated with Production Order Lists.</p>
+<p>The different driving routes can be generated into production order list templates saved in the database. One list contains a set of symbolic points that must be reached in the correct order. A template can be activated either from the MES-interface, Navitrol or from Navithor Client. The activated list is then assigned to an AGV waiting for production at a waiting location. A production order to the first location in the production order list is generated, and the AGV will be ordered to drive there. When arriving at the first target location, the AGV may perform loading/unloading operations if configured to do so and then the AGV is ordered to HOLD-state. When released to default destination, the destination is picked from the production order list.</p>
+<h3 id="configuring-the-production-area"><a class="header" href="#configuring-the-production-area">Configuring the production area</a></h3>
+<p>The following configurations to the production area are required when using production order lists:</p>
+<ul>
+<li>
+<p>Waiting locations should not be defined as Hold-locations -- Production order lists are only assigned to AGVs that do not have anything to do</p>
+</li>
+<li>
+<p>Activate production order list-production by setting system parameter <strong>ProductionManager_POL_LIST_RULE_MODE</strong> to:</p>
+<ul>
+<li>
+<p>1 = Activated lists are assigned to machines at any waiting location</p>
+<ul>
+<li>
+<p>All locations in the production order list must be HOLD-locations except the last location.</p>
+</li>
+<li>
+<p>The last location does not need to be a HOLD-location. Thus the last location can be e.g:</p>
+<ul>
+<li>A waiting location where it can wait for the next activation of any production order list.</li>
+<li>A stopping location without hold-definitions – Navithor will then try to send the vehicle to one of the defined waiting location.</li>
+</ul>
+</li>
+<li>
+<p>Navithor assigns an activated list to a machine that is waiting for orders in a waiting location.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>12 = The activated list is assigned to a machine that is waiting at the first destination of the activated list</p>
+<ul>
+<li>
+<p>The first destination in the production order list must be a waiting location (not a hold location).</p>
+</li>
+<li>
+<p>The last destination in the production order list must also be a waiting location (Normally the first and last destinations are the same).</p>
+</li>
+<li>
+<p>All other locations in the production order list must be HOLD-locations.</p>
+</li>
+<li>
+<p>Navithor assigns the activated list to a machine that is at the first destination of the production order list.</p>
+</li>
+<li>
+<p>The vehicle with the assigned list must be carrying a resource before starting the list execution.</p>
+</li>
+<li>
+<p>The vehicle executing the list will reserve the location as long as it executes the list. If the list does not end up in different waiting location then the vehicle will return to the same waiting location after completing the list.</p>
+</li>
+<li>
+<p>If an AGV finds itself slipped past the next target in its production order list, it will mark the location as reached and continue on to the next location in the list.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>14 = Same effects as <strong>ProductionManager_POL_LIST_RULE_MODE</strong> 12 with a few exceptions</p>
+<ul>
+<li>
+<p>The AGV will not mark a location as reached if it has slipped past it. It will instead drive to the same location again.</p>
+</li>
+<li>
+<p>The vehicle is not required to carry a resource to start the list execution.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>0 = Production order list-production is disabled. Hold-release reasoning is activated.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>When production order list-production is active hold-release reasoning-production is disabled thus using default or an alternative destination is not possible.</strong></p>
+<h3 id="creating-and-managing-production-order-lists"><a class="header" href="#creating-and-managing-production-order-lists">Creating and managing Production Order Lists</a></h3>
+<p><img src="./Images/ProductionOrderLists/CreatingAndManagingPOLs.png" alt="" /></p>
+<p>New templates can be created in Navithor Client. Open the Production Order List view by selecting main menu item 'Views-&gt;Production Order List View'. This will open the view shown in the figure above.</p>
+<p>A new template can then be created by clicking the 'Add new template'-button. A new control is added to the list of all templates[1]. Enter a describing name and either generate or set a valid id for the new template. A valid ID is a numeric id that is currently not in use. The production locations can be either selected from the drop down list or by clicking symbolic points in the Client’s main map view. When pressing the 'Save'-button the entered information for the template is sent to Navithor Server and it will create a new template for the production area and synchronize the information back to the Client(s). </p>
+<p>Existing templates can be edited by pressing the 'Edit'-button or removed by pressing the 'Delete'-button. Activating a list can be done by pressing the 'Activate'-button [2]. To get the three buttons visible click the name and id box of the template [3]. A template cannot be edited or deleted if there are active production order lists based on that template.</p>
+<p>Activated templates are listed in two groups: </p>
+<ul>
+<li>
+<p>Active, not assigned [4] - This shows the production order lists that have been activated but has not yet been assigned for any vehicle. These lists are in priority order for assigning. Clicking the name panel for a not assigned list will reveal buttons for changing the priority (moving the control in the queue). </p>
+</li>
+<li>
+<p>Active and assigned - This shows the lists that are being executed by vehicles. The current target for the vehicle is highlighted with a bright green box [5]. When an active list is cancelled or finished the control will change to disabled state. It will disappear from the view after 20 seconds [6].</p>
+</li>
+</ul>
+<h3 id="production-order-lists-in-the-file-system"><a class="header" href="#production-order-lists-in-the-file-system">Production Order Lists in the file system</a></h3>
+<p>Navithor creates reports from completed and cancelled production order lists. The main directory of Navithor Server contains a subfolder named ‘Picklists’. Under this folder the following four directories are found:</p>
+<ul>
+<li>templates
+<ul>
+<li>Whenever templates are edited, created or deleted a new template file is created to this folder</li>
+<li>One file contains all templates that are in the system while the file was written</li>
+</ul>
+</li>
+<li>reports
+<ul>
+<li>Contains text-files for each completed or cancelled production order list</li>
+</ul>
+</li>
+<li>active
+<ul>
+<li>Contains text-files for currently active production order lists</li>
+</ul>
+</li>
+<li>input
+<ul>
+<li>Navithor reads this folder periodically</li>
+<li>Template-files (text-files found in the templates folder) can be dropped to this folder. Navithor will read the templates in and either update existing ones or create new ones if the same id was not found</li>
+<li>The name of the file dropped to this folder must start with “Template” or “picklist”</li>
+<li>A template will not be updated immediately If it has active production order lists when a file is added to the folder. It will first be updated when all activated lists related to the template have finished execution. The file will get the prefix &quot;PENDING_&quot; to show that it will be processed later</li>
+</ul>
+</li>
+</ul>
+<h3 id="linking-production-order-lists"><a class="header" href="#linking-production-order-lists">Linking Production Order Lists</a></h3>
+<p>It is possible to link multiple Production Order Lists together such that the completion of one list activates one or more other lists.</p>
+<p>This feature is enabled by adding a folder in Navithor Server's main folder called 'Overrides' and add a text file 'POLLinks.txt' there.
+In that file you create links between Production Order Lists by adding a line for each Production Order List that you want to link.</p>
+<p>Example:</p>
+<pre><code>1:2,3,4
+2:3
+</code></pre>
+<p>If the 'POLLinks.txt' looks like the above example it will have the following effects:</p>
+<ul>
+<li>Whenever a Production Order List with template id 1 is completed, templates 2,3 and 4 are activated</li>
+<li>Whenever a Production Order List with template id 2 gets completed, template 3 is activated</li>
+</ul>
+<p>The POLLinks.txt file is read by Navithor once every minute. When the config file has been read a file 'POLLinks_Active.txt' is automatically created in the 'Overrides'-folder. 
+From here you can see which Production Order List links currently are active.</p>
+<p>Note: With linking there is no way to assign a linked Production Order List to a specific AGV. The assigned AGV depends on the POL rule mode, how templates have been configured, and where waiting AGVs are located.</p>
+<h3 id="mes-messages-related-to-production-order-lists"><a class="header" href="#mes-messages-related-to-production-order-lists">MES Messages related to production order lists</a></h3>
+<p>See more detailed explanations from the document  Communication specification between Navithor and MES.</p>
+<h4 id="requestproductionorderlisttemplates-id--23"><a class="header" href="#requestproductionorderlisttemplates-id--23">RequestProductionOrderListTemplates (ID = 23)</a></h4>
+<p>MES can request current templates of production order lists with this message. Navithor replies with ProductionOrderListTemplateResult message.</p>
+<p>Templates can be created/edited and deleted from Navithor Client. Templates are saved in Navithor database.</p>
+<h4 id="activateproductionorderlist-id--22"><a class="header" href="#activateproductionorderlist-id--22">ActivateProductionOrderList (ID = 22)</a></h4>
+<p>MES can activate a production order list by sending this message.</p>
+<h4 id="cancelactiveproductionorderlist-id--28"><a class="header" href="#cancelactiveproductionorderlist-id--28">CancelActiveProductionOrderList (ID = 28)</a></h4>
+<p>Sending this message will command Navithor cancel specified active production order list(s).</p>
+<h4 id="productionorderlistactivatedresult-id--315"><a class="header" href="#productionorderlistactivatedresult-id--315">ProductionOrderListActivatedResult (ID = 315)</a></h4>
+<p>Navithor replies to message ActivateProductionOrderList with this message.</p>
+<h4 id="productionorderlistcompleted-id--316"><a class="header" href="#productionorderlistcompleted-id--316">ProductionOrderListCompleted (ID = 316)</a></h4>
+<p>Navithor replies to message ActivateProductionOrderList with this message.</p>
+<h4 id="activeproductionorderliststatus-id--317"><a class="header" href="#activeproductionorderliststatus-id--317">ActiveProductionOrderListStatus (ID = 317)</a></h4>
+<p>This message is sent when changes in statuses are reported or periodically if no changes detected.</p>
+<h4 id="productionorderlisttemplateresult-id--318"><a class="header" href="#productionorderlisttemplateresult-id--318">ProductionOrderListTemplateResult (ID = 318)</a></h4>
+<p>This message is as a reply to RequestProductionOrderListTemplates.</p>
+<h2 id="practical-examples"><a class="header" href="#practical-examples">Practical examples</a></h2>
+<h3 id="hold-release"><a class="header" href="#hold-release">Hold release</a></h3>
+<p>The most basic use case for hold release reasoning is a simple linear process where an AGV is loaded at the start of the process and then driven through various stopping points where workers or robots work on the loaded piece on top of the AGV. Finally, the AGV unloads the processed load at the end of the process. In the physical world, this process could be, for example, used to provide a more flexible alternative for a conveyor system.  Below is a simple example of such a scenario. The picture is taken from Navithor Tools.</p>
+<p><img src="./Images/holdRelease/hold-release-simple-prod-area.png" alt="" /></p>
+<p>In Navithor Tools, an area like this is configured so that all of the symbolic points are set up with hold enabled. For each symbolic point, the following stop is set as the default hold release destination. In the picture above the process starts at the wait load symbolic point, from which the AGVs are released to the load station. The load station is a load symbolic point which is required to make Navithor command load for the AGV as the AGV arrives at the symbolic point. After executing the load, the AGV goes into hold state. Release from the hold state will cause the AGV to drive to the first station. In the stations 1 to 4, the AGV stops, goes to hold state and waits until it is released before advancing in the process. All the stations are normal stop symbolic points, meaning that Navithor does not automatically perform any actions to the AGVs as they arrive. Finally, after the AGV has been released from Station 4, the AGV drives to the drop off station that's an unload symbolic point. Here Navithor commands the AGV to unload the load to this symbolic point.</p>
+<p>The actual realisation of the described system on the shop floor could be as simple as a button to release the AGV on each station. After finishing work on the product, the worker would hit the button and release the AGV to the next location. Each press on the button would send a release hold MES message to Navithor with the specific station's ID and default target location as the data. If the stations were robot cells, robots or a middleware could be programmed to send the release hold message after the robot finishes its process.</p>
+<p>To further automate the system, the load station, unload station, and the wait station could have timers for releasing the AGV. This timer could release the AGV from the load and unload stations immediately after finishing the task. The wait station could have a timer to release the AGVs in a suitable rhythm for the process.</p>
+<p>The basic logic introduced above can be expanded further to move AGVs in the same manner in more complex scenarios as well. Using different release options, it's possible to release the AGVs to multiple different processes. An example of a more complex use case for hold release reasoning is shown in the picture below. In this case, also charging, maintenance area, and three different assembly lines are in the same area.</p>
+<p><img src="./Images/holdRelease/hold-release-more-prod-area.png" alt="" /></p>
+<h3 id="production-order-lists-1"><a class="header" href="#production-order-lists-1">Production order lists</a></h3>
+<p>The above examples could also be run as production order lists. These two options overlap in the sense that almost all hold release cases thinkable could also be defined as production order lists. This stems from the fact that a production order list is a configurable override for hold release logic.</p>
+<p>As described earlier in this document, a common use case for the production order lists is when AGVs drive multiple different fixed routes but start from common waiting locations. For example, in the area below, the AGVs have three different loading / unloading areas and a final unload area.</p>
+<p><img src="./Images/holdRelease/pol-example.png" alt="" /></p>
+<p>Depending on which product is worked on, the AGVs get production order lists to execute. An example of such a list could be that the AGV should drive to Station1A to pick up a load. From there the AGV would need to drive to Drop location and leave the load there, continue to Pick location and wait there until the load dropped off has gone through a manufacturing process. After this, the AGV picks up the load again and drives the load to Station1B for finishing. Unloading the load to Station1B finishes the production order list, and the AGV drives back to the waiting location to wait for further production order lists to be activated.</p>
+<p>In each step of the process described above the AGV goes to hold state after performing the drive and the action defined by the symbolic point. The AGV always continues to the next location defined by the production order list after a release hold signal has been received. The release hold signal is used just as with the hold release logic, but the destination is always taken from the production order list and not from the logic defined in Tools.</p>
+<p>The advantages of the production order lists over basic hold release are configurability without reuploading the area from Navithor Tools and better status messages. MES Clients can monitor the MES messages shown above to follow each production order list's status or cancel a production order list at any given moment.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="ResourceHandling.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="transfer requests.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="ResourceHandling.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="transfer requests.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

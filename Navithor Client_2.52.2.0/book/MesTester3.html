@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>MES Tester - NAVITHOR USER INSTRUCTIONS</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="Installation_NavithorHardwareRequirements.html"><strong aria-hidden="true">1.</strong> System Hardware Requirement Specifications</a></li><li class="chapter-item expanded "><a href="Installation_SQLServerAndDatabaseInstallationGuide.html"><strong aria-hidden="true">2.</strong> Configuring database</a></li><li class="chapter-item expanded "><a href="fleetSim.html"><strong aria-hidden="true">3.</strong> Fleet Simulator - Setup and Configuration</a></li><li class="chapter-item expanded "><a href="Installation_NavithorServerAsAService.html"><strong aria-hidden="true">4.</strong> Server as a service</a></li><li class="chapter-item expanded "><a href="Installation_ConfiguringHotSwap.html"><strong aria-hidden="true">5.</strong> Server Hot Swap with Failover Cluster</a></li><li class="chapter-item expanded "><a href="Installation_RebrandingNavithor.html"><strong aria-hidden="true">6.</strong> Server and Client Rebranding</a></li><li class="chapter-item expanded "><a href="Machinetool.html"><strong aria-hidden="true">7.</strong> Machine Tool</a></li><li class="chapter-item expanded "><a href="MesTester3.html" class="active"><strong aria-hidden="true">8.</strong> MES Tester</a></li><li class="chapter-item expanded affix "><li class="part-title">Desktop client</li><li class="chapter-item expanded "><a href="navithorServerAndClientMegaDocument.html"><strong aria-hidden="true">9.</strong> System Overview and user instructions for Client UI</a></li><li class="chapter-item expanded "><a href="Feature_ClientUpdater.html"><strong aria-hidden="true">10.</strong> Client Updater</a></li><li class="chapter-item expanded affix "><li class="part-title">Web client</li><li class="chapter-item expanded "><a href="Installation_SettingUpNavithorWebServer.html"><strong aria-hidden="true">11.</strong> Setting up Web server to enable Web client</a></li><li class="chapter-item expanded "><a href="webClient.html"><strong aria-hidden="true">12.</strong> Web Client - User Instructions</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="bestProductionPractices.html"><strong aria-hidden="true">13.</strong> Best Practices for Creating Production Area</a></li><li class="chapter-item expanded affix "><li class="part-title">Logs</li><li class="chapter-item expanded "><a href="Navithor logs.html"><strong aria-hidden="true">14.</strong> Navithor Logs</a></li><li class="chapter-item expanded "><a href="Feature_VisualReplay.html"><strong aria-hidden="true">15.</strong> Visual Replay</a></li><li class="chapter-item expanded "><a href="Feature_DownloadManager.html"><strong aria-hidden="true">16.</strong> Log Download Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">Users</li><li class="chapter-item expanded "><a href="Installation_UsingActiveDirectoryForAuthentication.html"><strong aria-hidden="true">17.</strong> User authentication against Active Directory</a></li><li class="chapter-item expanded "><a href="userRoles.html"><strong aria-hidden="true">18.</strong> User Management</a></li><li class="chapter-item expanded "><a href="userRolesRightsMatrix.html"><strong aria-hidden="true">19.</strong> Default User roles and User rights matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Features</li><li class="chapter-item expanded "><a href="symbolicPointGroups.html"><strong aria-hidden="true">20.</strong> Symbolic Point Groups</a></li><li class="chapter-item expanded "><a href="ResourceHandling.html"><strong aria-hidden="true">21.</strong> Resource handling</a></li><li class="chapter-item expanded "><a href="hold-release.html"><strong aria-hidden="true">22.</strong> Hold-Release reasoning and production order lists</a></li><li class="chapter-item expanded "><a href="transfer requests.html"><strong aria-hidden="true">23.</strong> Transfer requests</a></li><li class="chapter-item expanded "><a href="racking.html"><strong aria-hidden="true">24.</strong> Using warehouse racking feature</a></li><li class="chapter-item expanded "><a href="bufferLanes.html"><strong aria-hidden="true">25.</strong> Using Buffer Lanes</a></li><li class="chapter-item expanded "><a href="Feature_ChargingManagement.html"><strong aria-hidden="true">26.</strong> Managing Battery Levels</a></li><li class="chapter-item expanded "><a href="oneMachineZones.html"><strong aria-hidden="true">27.</strong> Using One Machine Zones</a></li><li class="chapter-item expanded "><a href="distanceControlZones.html"><strong aria-hidden="true">28.</strong> Distance Control Zones</a></li><li class="chapter-item expanded "><a href="FireAlarmZones.html"><strong aria-hidden="true">29.</strong> Fire Alarm Zones</a></li><li class="chapter-item expanded "><a href="Zone status use cases.html"><strong aria-hidden="true">30.</strong> Zone status use cases</a></li><li class="chapter-item expanded "><a href="tagStatuses.html"><strong aria-hidden="true">31.</strong> Tag Statuses</a></li><li class="chapter-item expanded "><a href="Trafficlights.html"><strong aria-hidden="true">32.</strong> Traffic Lights</a></li><li class="chapter-item expanded "><a href="Feature_Elevators.html"><strong aria-hidden="true">33.</strong> Elevators</a></li><li class="chapter-item expanded "><a href="ProductionBreak.html"><strong aria-hidden="true">34.</strong> Production Break</a></li><li class="chapter-item expanded "><a href="DynamicSafetyBounds.html"><strong aria-hidden="true">35.</strong> Virtual Dynamic Safety Bounds</a></li><li class="chapter-item expanded "><a href="WaitingSlots.html"><strong aria-hidden="true">36.</strong> Wait Queue Locations</a></li><li class="chapter-item expanded "><a href="CoupledDrive.html"><strong aria-hidden="true">37.</strong> Coupled Drive</a></li><li class="chapter-item expanded "><a href="Feature_StoppingPointOffsetsForSymbolicPoints.html"><strong aria-hidden="true">38.</strong> Stopping Point Offsets</a></li><li class="chapter-item expanded "><a href="TCStopPoint.html"><strong aria-hidden="true">39.</strong> Safe stopping point calculation</a></li><li class="chapter-item expanded "><a href="Navithor statistics.html"><strong aria-hidden="true">40.</strong> System Statistics</a></li><li class="chapter-item expanded "><a href="MachineInterfaces.html"><strong aria-hidden="true">41.</strong> Machine Interfaces</a></li><li class="chapter-item expanded affix "><li class="part-title">Interfaces</li><li class="chapter-item expanded "><a href="Communication specification between Navithor and MES.html"><strong aria-hidden="true">42.</strong> MES Interface</a></li><li class="chapter-item expanded "><a href="NavithorHttpApi.html"><strong aria-hidden="true">43.</strong> HTTP API</a></li><li class="chapter-item expanded "><a href="NavithorWebApi.html"><strong aria-hidden="true">44.</strong> WebSocket API</a></li><li class="chapter-item expanded "><a href="opcuadoc.html"><strong aria-hidden="true">45.</strong> OPC UA Server interface</a></li><li class="chapter-item expanded affix "><li class="part-title">Alarms</li><li class="chapter-item expanded "><a href="Fleet Control Alarms.html"><strong aria-hidden="true">46.</strong> Alarms</a></li><li class="chapter-item expanded "><a href="Alarms configuration override.html"><strong aria-hidden="true">47.</strong> Alarms configuration override</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NAVITHOR USER INSTRUCTIONS</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="mes-tester"><a class="header" href="#mes-tester">MES Tester</a></h1>
+<p>This document contains information on how to use the Navitec FleetSimulator.</p>
+<p>Updated 05.07.2021</p>
+<h2 id="version-history"><a class="header" href="#version-history">Version History</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead><tbody>
+<tr><td>1.0</td><td>05.07.2021</td><td>Tommi Karki</td><td>Created</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>MES Tester is a testing utility to monitor and verify functionality of the MES interface. There are 2 different modes of operation available: Client and Server.</p>
+<p>In Server mode the MES Tester will host MES interface on the specific host and port. All of the TCP connections will be accepted and any successfully received and parsed MESMessages will be visualized. Sending a message will send MESMessage to all connected Clients.</p>
+<p>In Client mode the MES Tester will create a TCP connection to the specified host and port. After successful connection possible periodic messages will be visualized. It is also possible to send MESMessages to the Server for handling, the possible reply will also be visualized.</p>
+<h2 id="configuring-connection"><a class="header" href="#configuring-connection">Configuring connection</a></h2>
+<p><img src="./Images/mestester3/connection-configuration.png" alt="Connection configuration" /></p>
+<blockquote>
+<p>Example configuration</p>
+</blockquote>
+<p>Connection can be configured by specifying host and port. In server mode the host is ignored but the MESCommunication will be hosted on specified port. In Client mode the connection will be attempted to the specified host and port.</p>
+<hr />
+<h2 id="how-to-use-search"><a class="header" href="#how-to-use-search">How to use search</a></h2>
+<p><img src="./Images/mestester3/search.png" alt="Search UI" /></p>
+<blockquote>
+<p>Searching for messages with &quot;rack&quot; in name</p>
+</blockquote>
+<p>MES Tester supports 2 types of search for MESMessages:</p>
+<ul>
+<li>Name based search</li>
+<li>Id based search</li>
+</ul>
+<p>Typing the entire ID of message will filter the selection to single result only. The ID has to be precise match, there is no support for partial id search. This means inputting &quot;2&quot; will give matches only for &quot;message with id 2&quot; and NOT for &quot;2&quot;, &quot;22&quot;, &quot;122&quot;.</p>
+<p>Typing text into the search will start search based on the name of message. Currently there is no fuzzy search support but instead the search works on partial matches. Input of &quot;Rack&quot; would give results for &quot;DriveMachineToRack&quot;, &quot;GetRackSetup&quot;,  &quot;RackTransferRequest&quot;.</p>
+<h2 id="viewing-messages"><a class="header" href="#viewing-messages">Viewing messages</a></h2>
+<p><img src="./Images/mestester3/mainview.png" alt="Default view" /></p>
+<blockquote>
+<p>Received messages after server connection has been made</p>
+</blockquote>
+<p>In normal view the message fields are abbreviated to fit as many as possible into the view but if the message is long enough then it will not fit into the main view. To view full message with non-abbreviated names click on the message you want to view.</p>
+<p><img src="./Images/mestester3/detailed-view.png" alt="Detailed view" /></p>
+<blockquote>
+<p>Tooltip that pops up after clicking on message.</p>
+</blockquote>
+<hr />
+<h2 id="further-configuration"><a class="header" href="#further-configuration">Further configuration</a></h2>
+<p>Clicking on &quot;Preferences&quot; will open up further configuration options. The values here will be stored in plaintext in the same directory of the MES Tester in the file 'configuration.json'. These configurations might include some sensitive information like API tokens which should be cleared after testing has been done on production environments.</p>
+<h2 id="automatic-replies"><a class="header" href="#automatic-replies">Automatic replies</a></h2>
+<p>To make testing more automatic, MES Tester will reply to specific requests with randomized replies. This is to mock the behaviour of actual Navithor Server.</p>
+<p><img src="./Images/mestester3/randomized-reply.png" alt="Randomized reply" /></p>
+<blockquote>
+<p>Randomized reply to GetProductionAreaInformation (52) when querying for machine types</p>
+</blockquote>
+<h2 id="connected-clients-and-protocol-testing"><a class="header" href="#connected-clients-and-protocol-testing">Connected Clients and protocol testing</a></h2>
+<p>When MES Tester is in Server mode it is possible to see connected client and run tests to ensure correct implementation of MES protocol. Click on 'Clients' button to open this view.</p>
+<p><img src="./Images/mestester3/connected-clients.png" alt="Connected clients" /></p>
+<blockquote>
+<p>Connected clients UI. Clicking on button will send specified test message to client. Results of sent message(s) are not automatically analysed and has to be done manually.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="Machinetool.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="navithorServerAndClientMegaDocument.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="Machinetool.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="navithorServerAndClientMegaDocument.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

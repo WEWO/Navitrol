@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Machine Interfaces - NAVITHOR USER INSTRUCTIONS</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Front page</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="Installation_NavithorHardwareRequirements.html"><strong aria-hidden="true">1.</strong> System Hardware Requirement Specifications</a></li><li class="chapter-item expanded "><a href="Installation_SQLServerAndDatabaseInstallationGuide.html"><strong aria-hidden="true">2.</strong> Configuring database</a></li><li class="chapter-item expanded "><a href="fleetSim.html"><strong aria-hidden="true">3.</strong> Fleet Simulator - Setup and Configuration</a></li><li class="chapter-item expanded "><a href="Installation_NavithorServerAsAService.html"><strong aria-hidden="true">4.</strong> Server as a service</a></li><li class="chapter-item expanded "><a href="Installation_ConfiguringHotSwap.html"><strong aria-hidden="true">5.</strong> Server Hot Swap with Failover Cluster</a></li><li class="chapter-item expanded "><a href="Installation_RebrandingNavithor.html"><strong aria-hidden="true">6.</strong> Server and Client Rebranding</a></li><li class="chapter-item expanded "><a href="Machinetool.html"><strong aria-hidden="true">7.</strong> Machine Tool</a></li><li class="chapter-item expanded "><a href="MesTester3.html"><strong aria-hidden="true">8.</strong> MES Tester</a></li><li class="chapter-item expanded affix "><li class="part-title">Desktop client</li><li class="chapter-item expanded "><a href="navithorServerAndClientMegaDocument.html"><strong aria-hidden="true">9.</strong> System Overview and user instructions for Client UI</a></li><li class="chapter-item expanded "><a href="Feature_ClientUpdater.html"><strong aria-hidden="true">10.</strong> Client Updater</a></li><li class="chapter-item expanded affix "><li class="part-title">Web client</li><li class="chapter-item expanded "><a href="Installation_SettingUpNavithorWebServer.html"><strong aria-hidden="true">11.</strong> Setting up Web server to enable Web client</a></li><li class="chapter-item expanded "><a href="webClient.html"><strong aria-hidden="true">12.</strong> Web Client - User Instructions</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="bestProductionPractices.html"><strong aria-hidden="true">13.</strong> Best Practices for Creating Production Area</a></li><li class="chapter-item expanded affix "><li class="part-title">Logs</li><li class="chapter-item expanded "><a href="Navithor logs.html"><strong aria-hidden="true">14.</strong> Navithor Logs</a></li><li class="chapter-item expanded "><a href="Feature_VisualReplay.html"><strong aria-hidden="true">15.</strong> Visual Replay</a></li><li class="chapter-item expanded "><a href="Feature_DownloadManager.html"><strong aria-hidden="true">16.</strong> Log Download Manager</a></li><li class="chapter-item expanded affix "><li class="part-title">Users</li><li class="chapter-item expanded "><a href="Installation_UsingActiveDirectoryForAuthentication.html"><strong aria-hidden="true">17.</strong> User authentication against Active Directory</a></li><li class="chapter-item expanded "><a href="userRoles.html"><strong aria-hidden="true">18.</strong> User Management</a></li><li class="chapter-item expanded "><a href="userRolesRightsMatrix.html"><strong aria-hidden="true">19.</strong> Default User roles and User rights matrix</a></li><li class="chapter-item expanded affix "><li class="part-title">Features</li><li class="chapter-item expanded "><a href="symbolicPointGroups.html"><strong aria-hidden="true">20.</strong> Symbolic Point Groups</a></li><li class="chapter-item expanded "><a href="ResourceHandling.html"><strong aria-hidden="true">21.</strong> Resource handling</a></li><li class="chapter-item expanded "><a href="hold-release.html"><strong aria-hidden="true">22.</strong> Hold-Release reasoning and production order lists</a></li><li class="chapter-item expanded "><a href="transfer requests.html"><strong aria-hidden="true">23.</strong> Transfer requests</a></li><li class="chapter-item expanded "><a href="racking.html"><strong aria-hidden="true">24.</strong> Using warehouse racking feature</a></li><li class="chapter-item expanded "><a href="bufferLanes.html"><strong aria-hidden="true">25.</strong> Using Buffer Lanes</a></li><li class="chapter-item expanded "><a href="Feature_ChargingManagement.html"><strong aria-hidden="true">26.</strong> Managing Battery Levels</a></li><li class="chapter-item expanded "><a href="oneMachineZones.html"><strong aria-hidden="true">27.</strong> Using One Machine Zones</a></li><li class="chapter-item expanded "><a href="distanceControlZones.html"><strong aria-hidden="true">28.</strong> Distance Control Zones</a></li><li class="chapter-item expanded "><a href="FireAlarmZones.html"><strong aria-hidden="true">29.</strong> Fire Alarm Zones</a></li><li class="chapter-item expanded "><a href="Zone status use cases.html"><strong aria-hidden="true">30.</strong> Zone status use cases</a></li><li class="chapter-item expanded "><a href="tagStatuses.html"><strong aria-hidden="true">31.</strong> Tag Statuses</a></li><li class="chapter-item expanded "><a href="Trafficlights.html"><strong aria-hidden="true">32.</strong> Traffic Lights</a></li><li class="chapter-item expanded "><a href="Feature_Elevators.html"><strong aria-hidden="true">33.</strong> Elevators</a></li><li class="chapter-item expanded "><a href="ProductionBreak.html"><strong aria-hidden="true">34.</strong> Production Break</a></li><li class="chapter-item expanded "><a href="DynamicSafetyBounds.html"><strong aria-hidden="true">35.</strong> Virtual Dynamic Safety Bounds</a></li><li class="chapter-item expanded "><a href="WaitingSlots.html"><strong aria-hidden="true">36.</strong> Wait Queue Locations</a></li><li class="chapter-item expanded "><a href="CoupledDrive.html"><strong aria-hidden="true">37.</strong> Coupled Drive</a></li><li class="chapter-item expanded "><a href="Feature_StoppingPointOffsetsForSymbolicPoints.html"><strong aria-hidden="true">38.</strong> Stopping Point Offsets</a></li><li class="chapter-item expanded "><a href="TCStopPoint.html"><strong aria-hidden="true">39.</strong> Safe stopping point calculation</a></li><li class="chapter-item expanded "><a href="Navithor statistics.html"><strong aria-hidden="true">40.</strong> System Statistics</a></li><li class="chapter-item expanded "><a href="MachineInterfaces.html" class="active"><strong aria-hidden="true">41.</strong> Machine Interfaces</a></li><li class="chapter-item expanded affix "><li class="part-title">Interfaces</li><li class="chapter-item expanded "><a href="Communication specification between Navithor and MES.html"><strong aria-hidden="true">42.</strong> MES Interface</a></li><li class="chapter-item expanded "><a href="NavithorHttpApi.html"><strong aria-hidden="true">43.</strong> HTTP API</a></li><li class="chapter-item expanded "><a href="NavithorWebApi.html"><strong aria-hidden="true">44.</strong> WebSocket API</a></li><li class="chapter-item expanded "><a href="opcuadoc.html"><strong aria-hidden="true">45.</strong> OPC UA Server interface</a></li><li class="chapter-item expanded affix "><li class="part-title">Alarms</li><li class="chapter-item expanded "><a href="Fleet Control Alarms.html"><strong aria-hidden="true">46.</strong> Alarms</a></li><li class="chapter-item expanded "><a href="Alarms configuration override.html"><strong aria-hidden="true">47.</strong> Alarms configuration override</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NAVITHOR USER INSTRUCTIONS</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="machine-interfaces"><a class="header" href="#machine-interfaces">Machine interfaces</a></h1>
+<p>This document introduces available machine communication interfaces.</p>
+<p>Updated 08.03.2022</p>
+<h2 id="version-history"><a class="header" href="#version-history">Version History</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead><tbody>
+<tr><td>1.0</td><td>08.03.2022</td><td>Toni Liski</td><td>Document created</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>Navithor Fleet Control currently supports two different implementations of communication between Navithor Fleet Control and machines. Each implementation is called a channel. The default channel is the traditional Navitrol interface, which has been implemented specifically between Navithor Fleet Control and Navitrol controlled machine. From Fleet Control point of view this channel is called <code>Navitrol</code>.</p>
+<p>Another channel aimed for more generic use is the <code>VDA5050</code> channel. VDA 5050 is a standardized interface for AGV communication. The VDA 5050 standard is the result of a collaboration between the <em>German Association of the Automotive Industry (VDA)</em> and the <em>VDMA Materials handling and Intralogistics Association</em>. This document assumes that the reader has a basic understanding of the VDA5050 standard, topic structure and available actions.</p>
+<h2 id="navitrol-communication-channel"><a class="header" href="#navitrol-communication-channel">Navitrol Communication Channel</a></h2>
+<p>Setting up the Navitrol channel requires that the correct <em>Channel</em> type has been selected in the machine settings. See more details for making initial configuration for the system from the document * System Overview and user instructions for Client UI*.</p>
+<p><img src="./Images/comms/machine_settings_navitrol.png" alt="Setting up Navitrol channel in machine settings." /></p>
+<blockquote>
+<p>Figure: Setting up a Navitrol channel in machine settings.</p>
+</blockquote>
+<p>The Navitrol channel requires that the machine <strong>Id</strong> matches the MachineId set in the Navitrol parameters. Also IP address and port must match with machine IP and port configured in Navitrol. Other configuration for the Navitrol channel is not needed.</p>
+<h2 id="vda5050-communication-channel"><a class="header" href="#vda5050-communication-channel">VDA5050 Communication Channel</a></h2>
+<p>The VDA5050 communication is based on the MQTT protocol. In the MQTT protocol, all the participating clients will connect to a server, called Broker. This Broker is now implemented as part of the Navithor Server and can be enabled in the configuration file. More details of enabling it in the section <em>VDA configuration file</em>.</p>
+<p>Using the VDA channel requires that all the machines have access to the port configured, and that Broker is able to listen to the specified port.</p>
+<p><strong>Note:</strong> The currently implemented version of the VDA5050 specification is the version 1.1, even when standard refers to version as &quot;v2&quot; in the topic structure.</p>
+<h3 id="setting-up-the-vda-channel"><a class="header" href="#setting-up-the-vda-channel">Setting up the VDA channel</a></h3>
+<p>Setting up the VDA5050 channel requires that the correct channel is selected for each machine in machine settings.</p>
+<p><img src="./Images/comms/machine_settings_vda.png" alt="Setting up VDA channel in machine settings." /></p>
+<blockquote>
+<p>Figure: Setting up a VDA channel in machine settings.</p>
+</blockquote>
+<p>Machine Id and name must be unique for each machine, but the Id does not need to match with any machine identifier, as it can be overwritten (see next section). Machine IP address or port are not used with VDA communication, as the machine is responsible for connecting to Broker.</p>
+<p><strong>Note:</strong> When using Navitrol over the VDA channel, Fleet Control can automatically share the map to the machine. This requires that the machine IP is specified here.</p>
+<h3 id="vda-configuration-file"><a class="header" href="#vda-configuration-file">VDA configuration file</a></h3>
+<p>After launching Navithor Server for the first time, the file <em>vda.json</em> is generated in the <em>ConfigFiles</em> folder. By default the file contains a ServerSettings section and example machine configuration.</p>
+<pre><code class="language-json">  &quot;ServerSettings&quot;: {
+    &quot;EnableMQTTBroker&quot;: true,
+    &quot;Port&quot;: 1883,
+    &quot;Base&quot;: &quot;uagv&quot;,
+    &quot;Version&quot;: &quot;v2&quot;,
+    &quot;Username&quot;: &quot;vda&quot;,
+    &quot;Password&quot;: &quot;a4a03419f3b617917f9f677236501874&quot;,
+    &quot;UseTLS&quot;: true,
+    &quot;CertificateCommonName&quot;: &quot;MCSSystem&quot;
+  },
+</code></pre>
+<blockquote>
+<p>Figure: Enable MQTT Broker by enabling the corresponding parameter.</p>
+</blockquote>
+<p>To enable MQTT Broker inside Navithor Server, set parameter <em>EnableMQTTBroker</em> to <strong>true</strong>. You can also specify the port the Broker listens on and the base structure for the MQTT topic by changing <em>Base</em> or <em>Version</em> parameters.</p>
+<p>See authentication and encryption related parameters in the Section MQTT Authentication and Encryption.</p>
+<p><strong>Note!</strong> Changing the ServerSettings section requires that Navithor Server is restarted.</p>
+<h4 id="available-machine-parameters"><a class="header" href="#available-machine-parameters">Available machine parameters</a></h4>
+<p>Each machine operating over the VDA channel needs some machine specific configurations in the <em>vda.json</em> file.</p>
+<pre><code class="language-json">{
+	&quot;MachineId&quot;: 1,
+	&quot;SerialNumber&quot;: &quot;spot-BD-10040004&quot;,
+	&quot;FileUploadMethod&quot;: &quot;None&quot;,
+	&quot;OrderType&quot;: &quot;FreeNavigation&quot;,
+	&quot;SupportedActions&quot;: [
+		&quot;initPosition&quot;,
+		&quot;cancelOrder&quot;
+	],
+	&quot;CoordinateTransformation&quot;: {
+		&quot;DeltaX&quot;: -1.5244,
+		&quot;DeltaY&quot;: -1.83047,
+		&quot;DeltaH&quot;: 0.06469245
+	}
+},
+</code></pre>
+<blockquote>
+<p>Figure: Available VDA related machine parameters.</p>
+</blockquote>
+<p>The configuration entry in <em>vda.json</em> file is mapped to the actual machine handled by Navitrol by the machine <em>Id</em>, so it must match with the Id defined in the machine settings.</p>
+<p><em>SerialNumber</em> is the string representation of the serial number, which machine reports in each message posted to MQTT Broker, as well as in each topic. SerialNumber configured in <em>vda.json</em> must be the same which machine is using and it must be machine specific. If SerialNumber is not specified, MachineId is used as SerialNumber instead.</p>
+<p><em>FileUploadMethod</em> is currently not supported. See <em>Custom actions</em> Section for details to automatically share maps with Navitrol controlled machine.</p>
+<p><em>OrderType</em> specifies the type of the order which the machine is expecting. Currently two different types are supported:</p>
+<ul>
+<li>FreeNavigation: Fleet Control creates only two nodes in the drive order: start node and target node.</li>
+<li>SegmentsAsEdges: Navitrol original order type containing multiple segments as edges.</li>
+</ul>
+<p><em>SupportedActions</em> collection should contain all the actions the machine supports.</p>
+<p><em>CoordinateTransformation</em> allows to specify difference in machine coordinate system in relation to global coordinate system used by Fleet Control.</p>
+<p>To apply changes in the <em>Machines</em> section from the configuration file, use <em>Reload overrides</em> feature of Navithor Server or Client. The file is also reloaded when Navithor Server is restarted.</p>
+<h3 id="mqtt-authentication-and-encrypting"><a class="header" href="#mqtt-authentication-and-encrypting">MQTT Authentication and encrypting</a></h3>
+<p>To require authentication when establishing connection to MQTT Broker, specify <em>Username</em> and <em>Password</em> fields in ServerSettings. <em>Password</em> must be MD5 hash of the password string, for example <strong>a4a03419f3b617917f9f677236501874</strong>. Username and Password parameters can be left empty if no authentication is required.</p>
+<p><strong>Note!</strong> FleetSimulator does not require authentication.</p>
+<p>To enable encrypted communication, set parameter <em>UseTLS</em> to True. By default the Broker will search the valid certificate from the Local Machine certificate store which is matching to a common name CN=<strong>MCSServer</strong>. CommonName can be configured in ServerSettings with a parameter <em>CertificateCommonName</em>. Setting up certificates in more details is described in ** Setting up Web server to enable Web client** document.</p>
+<p>OpenSSL software can be used to create self-signed certificate for testing purposes:</p>
+<pre><code class="language-cmd">openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
+openssl pkcs12 -export -out certificate.pfx -inkey key.pem -in cert.pem
+</code></pre>
+<h3 id="vda-actions"><a class="header" href="#vda-actions">VDA Actions</a></h3>
+<p>Status of implemented actions and their relation to existing features:</p>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Description</th></tr></thead><tbody>
+<tr><td>initPosition</td><td>Initializes machine position. MapId is currently <em>AreaName</em> used by Navithor.</td></tr>
+<tr><td>cancelOrder</td><td>Cancels current machine order. Called <em>abort</em> functionality in Navithor Fleet Control.</td></tr>
+<tr><td>startPause</td><td>Stops machine. Currently bind to existing <em>FSTOP</em> feature.</td></tr>
+<tr><td>stopPause</td><td>Continues machine. Currently bind to existing <em>Release FSTOP</em> feature.</td></tr>
+<tr><td>startCharging</td><td>Starts charging.</td></tr>
+<tr><td>stopCharging</td><td>Stops charging.</td></tr>
+<tr><td>stateRequest</td><td>Request sending state message.</td></tr>
+<tr><td>logReport</td><td>Request machine to take log dump. Currently bind to existing Navithor LogSave functionality.</td></tr>
+<tr><td>pick</td><td>Pickup resource. Currently bind to existing <em>Load</em> functionality.</td></tr>
+<tr><td>drop</td><td>Drop off resource. Currently bind to existing <em>Unload</em> functionality.</td></tr>
+<tr><td>detectObject</td><td>Not implemented.</td></tr>
+<tr><td>finePositioning</td><td>Not implemented.</td></tr>
+<tr><td>waitForTrigger</td><td>Waits until machine is triggered. Currently bind to existing <em>HOLD</em> feature.</td></tr>
+</tbody></table>
+</div>
+<h3 id="custom-actions"><a class="header" href="#custom-actions">Custom actions</a></h3>
+<p>Custom actions can be developed for special needs. Currently a few custom actions are already implemented:</p>
+<div class="table-wrapper"><table><thead><tr><th>Custom action</th><th>Description</th></tr></thead><tbody>
+<tr><td>getFileVersions</td><td>Reports the current route file versions as part of the &quot;resultDescription&quot; of the Finished response. Used with Navitrol.</td></tr>
+<tr><td>reloadAreaFiles</td><td>Signals machine to reload the area files. Used with Navitrol.</td></tr>
+</tbody></table>
+</div>
+<h3 id="simulation-with-fleet-simulator"><a class="header" href="#simulation-with-fleet-simulator">Simulation with Fleet Simulator</a></h3>
+<p>Navithor Fleet Simulator can be used to simulate the VDA interface. To enable MQTT connection, go to Settings tab and change the parameter <em>UseMQTTCommunication</em> to <strong>True</strong>. FleetSim must be restarted after the parameter has been changed.</p>
+<p><img src="./Images/comms/fleetsim_enable_mqtt.png" alt="Enabling MQTT connection in Fleet Simulator." /></p>
+<blockquote>
+<p>Figure: Enabling MQTT connection in Fleet Simulator.</p>
+</blockquote>
+<p>After FleetSimulator has been restarted, press <em>Start</em> button to connect MQTT Broker.</p>
+<p>s<strong>Note:</strong> Broker must be running at the same machine where FleetSimulator is used.</p>
+<h2 id="logging"><a class="header" href="#logging">Logging</a></h2>
+<p>By default all the data transferred through the machine interface is logged to separate file per machine. Files can be found in</p>
+<pre><code>&lt;serverPath&gt;/Logs/MachineInterface/
+</code></pre>
+<p>Log file name is constructed based on the used interface, so that Navitrol channel communication channel creates log file <code>Navitrol_X.log</code> and VDA communication channel creates a log file <code>Vda_X.log</code>, where <code>X</code> is the configured machine ID.</p>
+<p>Configuration for logger is stored in <code>&lt;serverPath&gt;/ConfigFiles/ServerSettings.json</code> in the section <code>MachineLogging</code>.</p>
+<pre><code class="language-json">  &quot;MachineLogging&quot;: {
+    &quot;LogFileSize&quot;: 10,
+    &quot;LogFilesPerMachine&quot;: 2,
+    &quot;LogToSeparateFiles&quot;: true,
+    &quot;EnableMachineInterfaceLogging&quot;: true
+  }
+</code></pre>
+<p>The description of each parameter can be found from the table below.</p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody>
+<tr><td>LogFileSize</td><td>Maximum size of the created log file in megabytes before rolling. 10 megabytes by default.</td></tr>
+<tr><td>LogFilesPerMachine</td><td>Number of log files stored per machine. Only latest two are stored in Log Archive.</td></tr>
+<tr><td>LogToSeparateFiles</td><td>Indicates whether machine interface data should be written to separate files, or if all should be combined into single file.</td></tr>
+<tr><td>EnableMachineInterfaceLogging</td><td>Indicates whether detailed machine interface data should be written at all. Message subjects are written in normal <code>NavithorLog.txt</code> file apart from this parameter.</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="Navithor statistics.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="Communication specification between Navithor and MES.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="Navithor statistics.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="Communication specification between Navithor and MES.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
