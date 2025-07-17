@@ -1,2 +1,0 @@
-Both AGVs were ready for a new order, the agv on the other side of the area was called instead of the one 2.5m away from the pick.
-(agv1 was chosen, agv2 was at the pick area)
