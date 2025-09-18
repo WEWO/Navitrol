@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ClusterConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1</Version>
+  <SupportedConnectionConfigurationVersion>1</SupportedConnectionConfigurationVersion>
+  <ConnectionConfiguration>
+    <Version>1</Version>
+    <SupportedConnectionListVersion>1</SupportedConnectionListVersion>
+    <ConnectionType>Database</ConnectionType>
+    <Connections>
+      <Version>1</Version>
+      <SupportedConnectionDataVersion>1</SupportedConnectionDataVersion>
+      <ConnectionDataList>
+        <ClusterConnectionData>
+          <Version>1</Version>
+          <Identity>
+            <Id>41167bd4-d7fb-4402-abd5-65322d749405</Id>
+          </Identity>
+          <IpAddress>127.0.0.1</IpAddress>
+          <Port>4023</Port>
+        </ClusterConnectionData>
+      </ConnectionDataList>
+    </Connections>
+    <DatabaseConnectionString>Data Source=localhost\SQLEXPRESS;Initial Catalog=NTDB_Production;Integrated Security=True</DatabaseConnectionString>
+  </ConnectionConfiguration>
+  <Identity>
+    <Id>41167bd4-d7fb-4402-abd5-65322d749405</Id>
+  </Identity>
+</ClusterConfiguration>

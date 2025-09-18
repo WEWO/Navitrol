@@ -1,5 +1,0 @@
-# File for automatic triggering of TransferRequests.
-# Each line should contain 6 items separated with : . Multiple pickup locations are supported. Use , to separate pickup symbolic points from each other. Example line:
-# TargetSymPointID::ResourceTypeID:TransferName:TransferID:Trigger:PickupLoc1,PickupLoc2
-# where Trigger-field: TriggerWhenLocEmtpy = 1 << 0, TriggerWhenDefaultTypeReplaced = 1 << 1
-

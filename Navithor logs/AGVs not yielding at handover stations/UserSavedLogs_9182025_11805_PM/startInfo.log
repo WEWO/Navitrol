@@ -1,0 +1,1785 @@
+8/4/2025 1:43:17 PM - Started Navithor Server version: 2.52.15.0 commit: 7eb224fe0e65
+
+8/4/2025 1:43:17 PM - Licensed for hardware: 4747-5A32-E1B2-66FE-EAA9
+8/4/2025 1:43:19 PM - Operating system: Microsoft Windows Server 2022 Standard 20348
+CPU: AMD EPYC 7502 32-Core Processor                
+RAM: 15999 MB
+Virtual machine: True
+
+8/4/2025 1:43:19 PM - After logger is setup
+8/4/2025 1:43:19 PM - After Application is setup
+8/4/2025 1:43:19 PM - After event linking
+8/4/2025 1:43:19 PM - After program creation
+8/4/2025 1:43:19 PM - 0 - Starting Navithor Server, please wait
+8/4/2025 1:43:19 PM - 1 - Validating Licence...
+8/4/2025 1:43:19 PM - 2 - Starting Navithor Server, please wait. Directory: C:\Navitec\Navithor\Navithor_2.52.15.0\NavithorServer
+8/4/2025 1:43:19 PM - 3 - Starting Navithor Server, please wait
+8/4/2025 1:43:19 PM - 4 - Starting Navithor Server, please wait
+8/4/2025 1:43:19 PM - 5 - Starting Navithor Server, please wait
+8/4/2025 1:43:19 PM - 6 - Starting Navithor Server, please wait. Initializing logger.
+8/4/2025 1:43:19 PM - 7 - Setting up database...
+8/4/2025 1:43:19 PM - 8 - Setting database... Reading config file
+8/4/2025 1:43:20 PM - 9 - Setting database... Setup database. File successfully read
+8/4/2025 1:43:20 PM - 10 - Setting database... Database connection configuration successfully read
+8/4/2025 1:43:20 PM - 11 - Setting up main database...
+8/4/2025 1:43:20 PM - 12 - Setting database... Main db name: NTDB_Production
+8/4/2025 1:43:20 PM - 12 - Setting database... Database Manager created
+8/4/2025 1:43:20 PM - 12 - Setting database... Event handlers set
+8/4/2025 1:43:20 PM - 12 - Setting database... Setting up database manager ready
+8/4/2025 1:43:20 PM - 12 - Setting database... Main database manager set
+8/4/2025 1:43:20 PM - 12 - Setting database... Database version 2.25
+8/4/2025 1:43:20 PM - 13 - Setting database... Set db operations
+8/4/2025 1:43:20 PM - 14 - Setting database... Set indirect proxy
+8/4/2025 1:43:20 PM - 15 - Setting database... Initializing load capacities
+8/4/2025 1:43:22 PM - 16 - Setting database... Initializing EraFileHandler
+8/4/2025 1:43:22 PM - 17 - Setting database... Alarms and errors initialized
+8/4/2025 1:43:22 PM - 18 - Setting database... Active directory authentication initialized
+8/4/2025 1:43:22 PM - 19 - Setting database... Reseting alarms
+8/4/2025 1:43:23 PM - 33 - Initializing resource manager...
+8/4/2025 1:43:23 PM - 34 - Initializing resource manager...
+8/4/2025 1:43:23 PM - 35 - Initializing resource manager...
+8/4/2025 1:43:23 PM - 36 - Initializing resource manager...
+8/4/2025 1:43:23 PM - 37 - Initializing resource manager...
+8/4/2025 1:43:23 PM - 38 - Initializing resource manager...
+8/4/2025 1:43:23 PM - 39 - Reading area files... Creating AreaManager
+8/4/2025 1:43:23 PM - 40 - Reading area files into memory...
+8/4/2025 1:43:26 PM - 41 - Reading area files... Area files read
+8/4/2025 1:43:26 PM - 42 - Reading area files... Areas updated
+8/4/2025 1:43:26 PM - 43 - Reading area files... Gate updated
+8/4/2025 1:43:26 PM - 44 - Reading area files... Creating route planner
+8/4/2025 1:43:26 PM - 45 - Reading area files... Creating scheduler
+8/4/2025 1:43:26 PM - 46 - Initializing services...
+8/4/2025 1:43:26 PM - 47 - Initializing services...
+8/4/2025 1:43:26 PM - 48 - Initializing services...
+8/4/2025 1:43:26 PM - 49 - Initializing services...
+8/4/2025 1:43:26 PM - 50 - Initializing services...
+8/4/2025 1:43:26 PM - 51 - Initializing services...
+8/4/2025 1:43:26 PM - 52 - Initializing services...
+8/4/2025 1:43:26 PM - 53 - Initializing services...
+8/4/2025 1:43:26 PM - 54 - Initializing fleet simulator if allowed
+8/4/2025 1:43:26 PM - 55 - Initializing services...
+8/4/2025 1:43:26 PM - 56 - Initializing services...
+8/4/2025 1:43:26 PM - 57 - Initializing services...
+8/4/2025 1:43:26 PM - 58 - Initializing services... AD disabled
+8/4/2025 1:43:26 PM - 59 - Initializing services... ServerData
+8/4/2025 1:43:26 PM - 60 - Initializing services...
+8/4/2025 1:43:26 PM - 61 - Initializing services...
+8/4/2025 1:43:26 PM - 62 - Initializing services...
+8/4/2025 1:43:26 PM - 63 - Initializing services... Service events subscribed
+8/4/2025 1:43:26 PM - 64 - Initializing services...
+8/4/2025 1:43:26 PM - 65 - Initializing services... Service Data
+8/4/2025 1:43:26 PM - 66 - Initializing services... Starting resource manager
+8/4/2025 1:43:26 PM - 67 - Initializing services... Starting traffic controller
+8/4/2025 1:43:26 PM - 68 - Initializing services complete
+8/4/2025 1:43:26 PM - 69 - Area manager okProductionAreaNotOperational
+8/4/2025 1:43:26 PM - 70 - Initializing MES, port: 8015
+8/4/2025 1:43:26 PM - 71 - MES ready. Initializing other comms.
+8/4/2025 1:43:26 PM - 72 - Initializing WebSocket comms
+8/4/2025 1:43:26 PM - 73 - WebSockets ready. Initializing other comms.
+8/4/2025 1:43:26 PM - 74 - MQ comms created. Linking events.
+8/4/2025 1:43:26 PM - 75 - Initializing comms complete. Updating machines.
+8/4/2025 1:43:27 PM - 76 - Setup Wait locations
+8/4/2025 1:43:28 PM - 77 - Machines loaded from database - 2 machines enabled, 2 machines total
+8/4/2025 1:43:28 PM - 78 - Initializing resource manager...
+8/4/2025 1:43:28 PM - 79 - Binding resources.
+8/4/2025 1:43:31 PM - 80 - Initializing orders
+8/4/2025 1:43:31 PM - 81 - Loading POL templates from DB
+8/4/2025 1:43:31 PM - 82 - Loading Active POL from DB
+8/4/2025 1:43:31 PM - 83 - Set TC Parameter observer
+8/4/2025 1:43:31 PM - 84 - Setup cluster
+8/4/2025 1:43:31 PM - 85 - Setup statistics
+8/4/2025 1:43:31 PM - 86 - Setup Visual replay
+8/4/2025 1:43:31 PM - 87 - Setup ChargeManager
+8/4/2025 1:43:31 PM - 88 - Setup Elevators
+8/4/2025 1:43:31 PM - 89 - Starting MES
+8/4/2025 1:43:31 PM - 90 - Initializing services... Trying to open Server service host
+8/4/2025 1:43:32 PM - 91 - Initializing services... Trying to open Server Stream host
+8/4/2025 1:43:32 PM - 92 - Initializing services... Web Server enabled
+8/4/2025 1:43:32 PM - 93 - Initializing services... Web server configuration started asynchronously.
+8/4/2025 1:43:32 PM - 100 - Complete
+8/4/2025 1:43:33 PM - 94 - Initializing services... Web server host sockets open, all files written.
+8/4/2025 1:43:33 PM - 95 - Initializing services... Web server configured on address: http://+:1234/
+8/4/2025 2:11:18 PM - 0 - Starting Navithor Server, please wait
+8/4/2025 2:11:18 PM - 1 - Validating Licence...
+8/4/2025 2:11:18 PM - 2 - Starting Navithor Server, please wait. Directory: c:\Navitec\Navithor\Navithor_2.52.15.0\NavithorServer
+8/4/2025 2:11:18 PM - 3 - Starting Navithor Server, please wait
+8/4/2025 2:11:18 PM - 4 - Starting Navithor Server, please wait
+8/4/2025 2:11:18 PM - 5 - Starting Navithor Server, please wait
+8/4/2025 2:11:18 PM - 6 - Starting Navithor Server, please wait. Initializing logger.
+8/4/2025 2:11:18 PM - 7 - Setting up database...
+8/4/2025 2:11:18 PM - 8 - Setting database... Reading config file
+8/4/2025 2:11:19 PM - 9 - Setting database... Setup database. File successfully read
+8/4/2025 2:11:19 PM - 10 - Setting database... Database connection configuration successfully read
+8/4/2025 2:11:19 PM - 11 - Setting up main database...
+8/4/2025 2:11:19 PM - 12 - Setting database... Main db name: NTDB_Production
+8/4/2025 2:11:19 PM - 12 - Setting database... Database Manager created
+8/4/2025 2:11:19 PM - 12 - Setting database... Event handlers set
+8/4/2025 2:11:19 PM - 12 - Setting database... Setting up database manager ready
+8/4/2025 2:11:19 PM - 12 - Setting database... Main database manager set
+8/4/2025 2:11:19 PM - 12 - Setting database... Database version 2.25
+8/4/2025 2:11:19 PM - 13 - Setting database... Set db operations
+8/4/2025 2:11:19 PM - 14 - Setting database... Set indirect proxy
+8/4/2025 2:11:19 PM - 15 - Setting database... Initializing load capacities
+8/4/2025 2:11:21 PM - 16 - Setting database... Initializing EraFileHandler
+8/4/2025 2:11:21 PM - 17 - Setting database... Alarms and errors initialized
+8/4/2025 2:11:21 PM - 18 - Setting database... Active directory authentication initialized
+8/4/2025 2:11:21 PM - 19 - Setting database... Reseting alarms
+8/4/2025 2:11:22 PM - 33 - Initializing resource manager...
+8/4/2025 2:11:22 PM - 34 - Initializing resource manager...
+8/4/2025 2:11:22 PM - 35 - Initializing resource manager...
+8/4/2025 2:11:22 PM - 36 - Initializing resource manager...
+8/4/2025 2:11:22 PM - 37 - Initializing resource manager...
+8/4/2025 2:11:22 PM - 38 - Initializing resource manager...
+8/4/2025 2:11:22 PM - 39 - Reading area files... Creating AreaManager
+8/4/2025 2:11:22 PM - 40 - Reading area files into memory...
+8/4/2025 2:11:25 PM - 41 - Reading area files... Area files read
+8/4/2025 2:11:25 PM - 42 - Reading area files... Areas updated
+8/4/2025 2:11:25 PM - 43 - Reading area files... Gate updated
+8/4/2025 2:11:25 PM - 44 - Reading area files... Creating route planner
+8/4/2025 2:11:25 PM - 45 - Reading area files... Creating scheduler
+8/4/2025 2:11:25 PM - 46 - Initializing services...
+8/4/2025 2:11:25 PM - 47 - Initializing services...
+8/4/2025 2:11:25 PM - 48 - Initializing services...
+8/4/2025 2:11:25 PM - 49 - Initializing services...
+8/4/2025 2:11:25 PM - 50 - Initializing services...
+8/4/2025 2:11:25 PM - 51 - Initializing services...
+8/4/2025 2:11:25 PM - 52 - Initializing services...
+8/4/2025 2:11:25 PM - 53 - Initializing services...
+8/4/2025 2:11:25 PM - 54 - Initializing fleet simulator if allowed
+8/4/2025 2:11:25 PM - 55 - Initializing services...
+8/4/2025 2:11:25 PM - 56 - Initializing services...
+8/4/2025 2:11:25 PM - 57 - Initializing services...
+8/4/2025 2:11:25 PM - 58 - Initializing services... AD disabled
+8/4/2025 2:11:25 PM - 59 - Initializing services... ServerData
+8/4/2025 2:11:25 PM - 60 - Initializing services...
+8/4/2025 2:11:25 PM - 61 - Initializing services...
+8/4/2025 2:11:25 PM - 62 - Initializing services...
+8/4/2025 2:11:25 PM - 63 - Initializing services... Service events subscribed
+8/4/2025 2:11:25 PM - 64 - Initializing services...
+8/4/2025 2:11:25 PM - 65 - Initializing services... Service Data
+8/4/2025 2:11:25 PM - 66 - Initializing services... Starting resource manager
+8/4/2025 2:11:25 PM - 67 - Initializing services... Starting traffic controller
+8/4/2025 2:11:25 PM - 68 - Initializing services complete
+8/4/2025 2:11:25 PM - 69 - Area manager okProductionAreaNotOperational
+8/4/2025 2:11:25 PM - 70 - Initializing MES, port: 8015
+8/4/2025 2:11:25 PM - 71 - MES ready. Initializing other comms.
+8/4/2025 2:11:25 PM - 72 - Initializing WebSocket comms
+8/4/2025 2:11:25 PM - 73 - WebSockets ready. Initializing other comms.
+8/4/2025 2:11:25 PM - 74 - MQ comms created. Linking events.
+8/4/2025 2:11:25 PM - 75 - Initializing comms complete. Updating machines.
+8/4/2025 2:11:26 PM - 76 - Setup Wait locations
+8/4/2025 2:11:27 PM - 77 - Machines loaded from database - 2 machines enabled, 2 machines total
+8/4/2025 2:11:28 PM - 78 - Initializing resource manager...
+8/4/2025 2:11:28 PM - 79 - Binding resources.
+8/4/2025 2:11:30 PM - 80 - Initializing orders
+8/4/2025 2:11:30 PM - 81 - Loading POL templates from DB
+8/4/2025 2:11:30 PM - 82 - Loading Active POL from DB
+8/4/2025 2:11:30 PM - 83 - Set TC Parameter observer
+8/4/2025 2:11:30 PM - 84 - Setup cluster
+8/4/2025 2:11:30 PM - 85 - Setup statistics
+8/4/2025 2:11:30 PM - 86 - Setup Visual replay
+8/4/2025 2:11:30 PM - 87 - Setup ChargeManager
+8/4/2025 2:11:30 PM - 88 - Setup Elevators
+8/4/2025 2:11:30 PM - 89 - Starting MES
+8/4/2025 2:11:31 PM - 90 - Initializing services... Trying to open Server service host
+8/4/2025 2:11:31 PM - 91 - Initializing services... Trying to open Server Stream host
+8/4/2025 2:11:31 PM - 92 - Initializing services... Web Server enabled
+8/4/2025 2:11:31 PM - 93 - Initializing services... Web server configuration started asynchronously.
+8/4/2025 2:11:31 PM - 100 - Complete
+8/4/2025 2:11:32 PM - 94 - Initializing services... Web server host sockets open, all files written.
+8/4/2025 2:11:32 PM - 95 - Initializing services... Web server configured on address: http://+:1234/
+8/16/2025 2:01:33 AM - 0 - Starting Navithor Server, please wait
+8/16/2025 2:01:33 AM - 1 - Validating Licence...
+8/16/2025 2:01:33 AM - 2 - Starting Navithor Server, please wait. Directory: c:\Navitec\Navithor\Navithor_2.52.15.0\NavithorServer
+8/16/2025 2:01:33 AM - 3 - Starting Navithor Server, please wait
+8/16/2025 2:01:33 AM - 4 - Starting Navithor Server, please wait
+8/16/2025 2:01:33 AM - 5 - Starting Navithor Server, please wait
+8/16/2025 2:01:33 AM - 6 - Starting Navithor Server, please wait. Initializing logger.
+8/16/2025 2:01:33 AM - 7 - Setting up database...
+8/16/2025 2:01:33 AM - 8 - Setting database... Reading config file
+8/16/2025 2:01:34 AM - 9 - Setting database... Setup database. File successfully read
+8/16/2025 2:01:34 AM - 10 - Setting database... Database connection configuration successfully read
+8/16/2025 2:01:34 AM - 11 - Setting up main database...
+8/16/2025 2:01:34 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:01:34 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:01:34 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:01:39 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:01:39 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:01:39 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:01:44 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:01:44 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:01:44 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:01:48 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:01:48 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:01:48 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:01:53 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:01:53 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:01:53 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:01:53 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:01:53 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:01:53 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:01:58 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:01:58 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:01:58 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:02:03 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:02:03 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:02:03 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:02:08 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:02:08 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:02:08 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:02:08 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:02:08 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:02:08 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:02:13 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:02:13 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:02:13 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:02:13 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:02:13 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:02:13 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:02:18 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:02:18 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:02:18 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:02:18 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:02:18 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:02:18 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:02:23 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:02:23 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:02:23 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:02:28 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:02:28 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:02:28 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:02:33 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:02:33 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:02:33 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:02:33 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:02:33 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:02:33 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:02:38 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:02:38 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:02:38 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:02:38 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:02:38 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:02:38 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:02:43 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:02:43 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:02:43 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:02:43 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:02:43 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:02:43 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:02:48 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:02:48 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:02:48 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:02:48 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:02:48 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:02:48 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:02:53 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:02:53 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:02:53 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:02:53 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:02:53 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:02:53 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:02:58 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:02:58 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:02:58 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:02:58 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:02:58 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:02:58 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:03:03 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:03:03 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:03:03 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:03:03 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:03:03 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:03:03 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:03:08 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:03:08 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:03:08 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:03:13 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:03:13 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:03:13 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:03:18 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:03:18 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:03:18 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:03:18 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:03:18 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:03:18 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:03:23 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:03:23 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:03:23 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:03:23 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:03:23 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:03:23 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:03:28 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:03:28 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:03:28 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:03:28 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:03:28 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:03:28 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:03:33 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:03:33 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:03:33 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:03:33 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:03:33 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:03:33 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:03:38 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:03:38 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:03:38 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:03:38 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:03:38 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:03:38 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:03:43 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:03:43 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:03:43 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:03:43 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:03:43 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:03:43 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:03:48 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:03:48 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:03:48 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:03:48 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:03:48 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:03:48 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:03:53 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:03:53 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:03:53 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:03:53 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:03:53 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:03:53 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:03:58 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:03:58 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:03:58 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:03:58 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:03:58 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:03:58 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:04:03 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:04:03 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:04:03 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:04:03 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:04:03 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:04:03 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:04:08 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:04:08 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:04:08 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:04:08 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 2:04:08 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:04:08 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 2:04:13 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 2:04:13 AM - 12 - Setting database... Database Manager created
+8/16/2025 2:04:13 AM - 12 - Setting database... Event handlers set
+8/16/2025 2:04:13 AM - 12 - Setting database... Setting up database manager ready
+8/16/2025 2:04:13 AM - 12 - Setting database... Main database manager set
+8/16/2025 2:04:13 AM - 12 - Setting database... Database version 2.25
+8/16/2025 2:04:13 AM - 13 - Setting database... Set db operations
+8/16/2025 2:04:13 AM - 14 - Setting database... Set indirect proxy
+8/16/2025 2:04:13 AM - 15 - Setting database... Initializing load capacities
+8/16/2025 2:04:15 AM - 16 - Setting database... Initializing EraFileHandler
+8/16/2025 2:04:15 AM - 17 - Setting database... Alarms and errors initialized
+8/16/2025 2:04:15 AM - 18 - Setting database... Active directory authentication initialized
+8/16/2025 2:04:15 AM - 19 - Setting database... Reseting alarms
+8/16/2025 2:04:16 AM - 33 - Initializing resource manager...
+8/16/2025 2:04:16 AM - 34 - Initializing resource manager...
+8/16/2025 2:04:16 AM - 35 - Initializing resource manager...
+8/16/2025 2:04:16 AM - 36 - Initializing resource manager...
+8/16/2025 2:04:16 AM - 37 - Initializing resource manager...
+8/16/2025 2:04:16 AM - 38 - Initializing resource manager...
+8/16/2025 2:04:16 AM - 39 - Reading area files... Creating AreaManager
+8/16/2025 2:04:16 AM - 40 - Reading area files into memory...
+8/16/2025 2:04:20 AM - 41 - Reading area files... Area files read
+8/16/2025 2:04:20 AM - 42 - Reading area files... Areas updated
+8/16/2025 2:04:20 AM - 43 - Reading area files... Gate updated
+8/16/2025 2:04:20 AM - 44 - Reading area files... Creating route planner
+8/16/2025 2:04:20 AM - 45 - Reading area files... Creating scheduler
+8/16/2025 2:04:20 AM - 46 - Initializing services...
+8/16/2025 2:04:20 AM - 47 - Initializing services...
+8/16/2025 2:04:20 AM - 48 - Initializing services...
+8/16/2025 2:04:20 AM - 49 - Initializing services...
+8/16/2025 2:04:20 AM - 50 - Initializing services...
+8/16/2025 2:04:20 AM - 51 - Initializing services...
+8/16/2025 2:04:20 AM - 52 - Initializing services...
+8/16/2025 2:04:21 AM - 53 - Initializing services...
+8/16/2025 2:04:21 AM - 54 - Initializing fleet simulator if allowed
+8/16/2025 2:04:21 AM - 55 - Initializing services...
+8/16/2025 2:04:21 AM - 56 - Initializing services...
+8/16/2025 2:04:21 AM - 57 - Initializing services...
+8/16/2025 2:04:21 AM - 58 - Initializing services... AD disabled
+8/16/2025 2:04:21 AM - 59 - Initializing services... ServerData
+8/16/2025 2:04:21 AM - 60 - Initializing services...
+8/16/2025 2:04:21 AM - 61 - Initializing services...
+8/16/2025 2:04:21 AM - 62 - Initializing services...
+8/16/2025 2:04:21 AM - 63 - Initializing services... Service events subscribed
+8/16/2025 2:04:21 AM - 64 - Initializing services...
+8/16/2025 2:04:21 AM - 65 - Initializing services... Service Data
+8/16/2025 2:04:21 AM - 66 - Initializing services... Starting resource manager
+8/16/2025 2:04:21 AM - 67 - Initializing services... Starting traffic controller
+8/16/2025 2:04:21 AM - 68 - Initializing services complete
+8/16/2025 2:04:21 AM - 69 - Area manager okProductionAreaNotOperational
+8/16/2025 2:04:21 AM - 70 - Initializing MES, port: 8015
+8/16/2025 2:04:21 AM - 71 - MES ready. Initializing other comms.
+8/16/2025 2:04:21 AM - 72 - Initializing WebSocket comms
+8/16/2025 2:04:21 AM - 73 - WebSockets ready. Initializing other comms.
+8/16/2025 2:04:21 AM - 74 - MQ comms created. Linking events.
+8/16/2025 2:04:21 AM - 75 - Initializing comms complete. Updating machines.
+8/16/2025 2:04:22 AM - 76 - Setup Wait locations
+8/16/2025 2:04:23 AM - 77 - Machines loaded from database - 2 machines enabled, 2 machines total
+8/16/2025 2:04:24 AM - 78 - Initializing resource manager...
+8/16/2025 2:04:24 AM - 79 - Binding resources.
+8/16/2025 2:04:26 AM - 80 - Initializing orders
+8/16/2025 2:04:26 AM - 81 - Loading POL templates from DB
+8/16/2025 2:04:26 AM - 82 - Loading Active POL from DB
+8/16/2025 2:04:26 AM - 83 - Set TC Parameter observer
+8/16/2025 2:04:26 AM - 84 - Setup cluster
+8/16/2025 2:04:27 AM - 85 - Setup statistics
+8/16/2025 2:04:27 AM - 86 - Setup Visual replay
+8/16/2025 2:04:27 AM - 87 - Setup ChargeManager
+8/16/2025 2:04:27 AM - 88 - Setup Elevators
+8/16/2025 2:04:27 AM - 89 - Starting MES
+8/16/2025 2:04:27 AM - 90 - Initializing services... Trying to open Server service host
+8/16/2025 2:04:28 AM - 91 - Initializing services... Trying to open Server Stream host
+8/16/2025 2:04:28 AM - 92 - Initializing services... Web Server enabled
+8/16/2025 2:04:28 AM - 93 - Initializing services... Web server configuration started asynchronously.
+8/16/2025 2:04:28 AM - 100 - Complete
+8/16/2025 2:04:29 AM - 94 - Initializing services... Web server host sockets open, all files written.
+8/16/2025 2:04:29 AM - 95 - Initializing services... Web server configured on address: http://+:1234/
+8/16/2025 4:31:53 AM - 0 - Starting Navithor Server, please wait
+8/16/2025 4:31:53 AM - 1 - Validating Licence...
+8/16/2025 4:31:54 AM - 2 - Starting Navithor Server, please wait. Directory: c:\Navitec\Navithor\Navithor_2.52.15.0\NavithorServer
+8/16/2025 4:31:54 AM - 3 - Starting Navithor Server, please wait
+8/16/2025 4:31:54 AM - 4 - Starting Navithor Server, please wait
+8/16/2025 4:31:54 AM - 5 - Starting Navithor Server, please wait
+8/16/2025 4:31:54 AM - 6 - Starting Navithor Server, please wait. Initializing logger.
+8/16/2025 4:31:54 AM - 7 - Setting up database...
+8/16/2025 4:31:54 AM - 8 - Setting database... Reading config file
+8/16/2025 4:31:54 AM - 9 - Setting database... Setup database. File successfully read
+8/16/2025 4:31:54 AM - 10 - Setting database... Database connection configuration successfully read
+8/16/2025 4:31:54 AM - 11 - Setting up main database...
+8/16/2025 4:31:54 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:31:54 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:31:54 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:31:59 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:31:59 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:31:59 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:32:04 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:32:04 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:32:04 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:32:09 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:32:09 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:32:09 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:32:14 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:32:14 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:32:14 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:32:14 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:32:14 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:32:14 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:32:19 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:32:19 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:32:19 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:32:23 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:32:23 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:32:23 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:32:29 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:32:29 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:32:29 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:32:29 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:32:29 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:32:29 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:32:34 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:32:34 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:32:34 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:32:34 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:32:34 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:32:34 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:32:39 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:32:39 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:32:39 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:32:39 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:32:39 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:32:39 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:32:44 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:32:44 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:32:44 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:32:48 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:32:48 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:32:48 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:32:53 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:32:53 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:32:53 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:32:53 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:32:53 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:32:53 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:32:58 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:32:58 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:32:58 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:32:58 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:32:58 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:32:58 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:33:03 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:33:03 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:33:03 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:33:03 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:33:03 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:33:03 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:33:08 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:33:08 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:33:08 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:33:08 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:33:08 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:33:08 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:33:13 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:33:13 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:33:13 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:33:13 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:33:13 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:33:13 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:33:18 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:33:18 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:33:18 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:33:18 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:33:18 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:33:18 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:33:23 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:33:23 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:33:23 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:33:23 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:33:23 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:33:23 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:33:28 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:33:28 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:33:28 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:33:33 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:33:33 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:33:33 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:33:38 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:33:38 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:33:38 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:33:38 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:33:38 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:33:38 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:33:43 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:33:43 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:33:43 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:33:43 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:33:43 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:33:43 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:33:48 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:33:48 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:33:48 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:33:48 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:33:48 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:33:48 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:33:53 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:33:53 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:33:53 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:33:53 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:33:53 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:33:53 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:33:58 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:33:58 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:33:58 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:33:58 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:33:58 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:33:58 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:34:03 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:34:03 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:34:03 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:34:03 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:34:03 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:34:03 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:34:08 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:34:08 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:34:08 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:34:08 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:34:08 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:34:08 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:34:13 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:34:13 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:34:13 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:34:13 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:34:13 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:34:13 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:34:18 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:34:18 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:34:18 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:34:18 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:34:18 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:34:18 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:34:23 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:34:23 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:34:23 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:34:23 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:34:23 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:34:23 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:34:28 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:34:28 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:34:28 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:34:28 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/16/2025 4:34:28 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:34:28 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/16/2025 4:34:33 AM - 12 - Setting database... Main db name: NTDB_Production
+8/16/2025 4:34:33 AM - 12 - Setting database... Database Manager created
+8/16/2025 4:34:33 AM - 12 - Setting database... Event handlers set
+8/16/2025 4:34:33 AM - 12 - Setting database... Setting up database manager ready
+8/16/2025 4:34:33 AM - 12 - Setting database... Main database manager set
+8/16/2025 4:34:33 AM - 12 - Setting database... Database version 2.25
+8/16/2025 4:34:33 AM - 13 - Setting database... Set db operations
+8/16/2025 4:34:33 AM - 14 - Setting database... Set indirect proxy
+8/16/2025 4:34:33 AM - 15 - Setting database... Initializing load capacities
+8/16/2025 4:34:35 AM - 16 - Setting database... Initializing EraFileHandler
+8/16/2025 4:34:35 AM - 17 - Setting database... Alarms and errors initialized
+8/16/2025 4:34:35 AM - 18 - Setting database... Active directory authentication initialized
+8/16/2025 4:34:35 AM - 19 - Setting database... Reseting alarms
+8/16/2025 4:34:36 AM - 33 - Initializing resource manager...
+8/16/2025 4:34:36 AM - 34 - Initializing resource manager...
+8/16/2025 4:34:36 AM - 35 - Initializing resource manager...
+8/16/2025 4:34:36 AM - 36 - Initializing resource manager...
+8/16/2025 4:34:36 AM - 37 - Initializing resource manager...
+8/16/2025 4:34:36 AM - 38 - Initializing resource manager...
+8/16/2025 4:34:36 AM - 39 - Reading area files... Creating AreaManager
+8/16/2025 4:34:36 AM - 40 - Reading area files into memory...
+8/16/2025 4:34:39 AM - 41 - Reading area files... Area files read
+8/16/2025 4:34:39 AM - 42 - Reading area files... Areas updated
+8/16/2025 4:34:39 AM - 43 - Reading area files... Gate updated
+8/16/2025 4:34:39 AM - 44 - Reading area files... Creating route planner
+8/16/2025 4:34:39 AM - 45 - Reading area files... Creating scheduler
+8/16/2025 4:34:40 AM - 46 - Initializing services...
+8/16/2025 4:34:40 AM - 47 - Initializing services...
+8/16/2025 4:34:40 AM - 48 - Initializing services...
+8/16/2025 4:34:40 AM - 49 - Initializing services...
+8/16/2025 4:34:40 AM - 50 - Initializing services...
+8/16/2025 4:34:40 AM - 51 - Initializing services...
+8/16/2025 4:34:40 AM - 52 - Initializing services...
+8/16/2025 4:34:40 AM - 53 - Initializing services...
+8/16/2025 4:34:40 AM - 54 - Initializing fleet simulator if allowed
+8/16/2025 4:34:40 AM - 55 - Initializing services...
+8/16/2025 4:34:40 AM - 56 - Initializing services...
+8/16/2025 4:34:40 AM - 57 - Initializing services...
+8/16/2025 4:34:40 AM - 58 - Initializing services... AD disabled
+8/16/2025 4:34:40 AM - 59 - Initializing services... ServerData
+8/16/2025 4:34:40 AM - 60 - Initializing services...
+8/16/2025 4:34:40 AM - 61 - Initializing services...
+8/16/2025 4:34:40 AM - 62 - Initializing services...
+8/16/2025 4:34:40 AM - 63 - Initializing services... Service events subscribed
+8/16/2025 4:34:40 AM - 64 - Initializing services...
+8/16/2025 4:34:40 AM - 65 - Initializing services... Service Data
+8/16/2025 4:34:40 AM - 66 - Initializing services... Starting resource manager
+8/16/2025 4:34:40 AM - 67 - Initializing services... Starting traffic controller
+8/16/2025 4:34:40 AM - 68 - Initializing services complete
+8/16/2025 4:34:40 AM - 69 - Area manager okProductionAreaNotOperational
+8/16/2025 4:34:40 AM - 70 - Initializing MES, port: 8015
+8/16/2025 4:34:40 AM - 71 - MES ready. Initializing other comms.
+8/16/2025 4:34:40 AM - 72 - Initializing WebSocket comms
+8/16/2025 4:34:40 AM - 73 - WebSockets ready. Initializing other comms.
+8/16/2025 4:34:40 AM - 74 - MQ comms created. Linking events.
+8/16/2025 4:34:40 AM - 75 - Initializing comms complete. Updating machines.
+8/16/2025 4:34:41 AM - 76 - Setup Wait locations
+8/16/2025 4:34:42 AM - 77 - Machines loaded from database - 2 machines enabled, 2 machines total
+8/16/2025 4:34:42 AM - 78 - Initializing resource manager...
+8/16/2025 4:34:42 AM - 79 - Binding resources.
+8/16/2025 4:34:45 AM - 80 - Initializing orders
+8/16/2025 4:34:45 AM - 81 - Loading POL templates from DB
+8/16/2025 4:34:45 AM - 82 - Loading Active POL from DB
+8/16/2025 4:34:45 AM - 83 - Set TC Parameter observer
+8/16/2025 4:34:45 AM - 84 - Setup cluster
+8/16/2025 4:34:45 AM - 85 - Setup statistics
+8/16/2025 4:34:45 AM - 86 - Setup Visual replay
+8/16/2025 4:34:45 AM - 87 - Setup ChargeManager
+8/16/2025 4:34:45 AM - 88 - Setup Elevators
+8/16/2025 4:34:45 AM - 89 - Starting MES
+8/16/2025 4:34:46 AM - 90 - Initializing services... Trying to open Server service host
+8/16/2025 4:34:46 AM - 91 - Initializing services... Trying to open Server Stream host
+8/16/2025 4:34:46 AM - 92 - Initializing services... Web Server enabled
+8/16/2025 4:34:46 AM - 93 - Initializing services... Web server configuration started asynchronously.
+8/16/2025 4:34:46 AM - 100 - Complete
+8/16/2025 4:34:47 AM - 94 - Initializing services... Web server host sockets open, all files written.
+8/16/2025 4:34:47 AM - 95 - Initializing services... Web server configured on address: http://+:1234/
+8/28/2025 10:32:04 AM - 0 - Starting Navithor Server, please wait
+8/28/2025 10:32:04 AM - 1 - Validating Licence...
+8/28/2025 10:32:04 AM - 2 - Starting Navithor Server, please wait. Directory: c:\Navitec\Navithor\Navithor_2.52.15.0\NavithorServer
+8/28/2025 10:32:04 AM - 3 - Starting Navithor Server, please wait
+8/28/2025 10:32:04 AM - 4 - Starting Navithor Server, please wait
+8/28/2025 10:32:04 AM - 5 - Starting Navithor Server, please wait
+8/28/2025 10:32:04 AM - 6 - Starting Navithor Server, please wait. Initializing logger.
+8/28/2025 10:32:04 AM - 7 - Setting up database...
+8/28/2025 10:32:04 AM - 8 - Setting database... Reading config file
+8/28/2025 10:32:05 AM - 9 - Setting database... Setup database. File successfully read
+8/28/2025 10:32:05 AM - 10 - Setting database... Database connection configuration successfully read
+8/28/2025 10:32:05 AM - 11 - Setting up main database...
+8/28/2025 10:32:05 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:32:05 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:32:05 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:32:09 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:32:09 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:32:09 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:32:14 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:32:14 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:32:14 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:32:19 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:32:19 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:32:19 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:32:24 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:32:24 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:32:24 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:32:24 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:32:24 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:32:24 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:32:29 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:32:29 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:32:29 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:32:34 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:32:34 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:32:34 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:32:39 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:32:39 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:32:39 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:32:39 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:32:39 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:32:39 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:32:44 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:32:44 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:32:44 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:32:44 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:32:44 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:32:44 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:32:49 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:32:49 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:32:49 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:32:49 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:32:49 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:32:49 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:32:54 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:32:54 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:32:54 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:32:58 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:32:58 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:32:58 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:33:03 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:33:03 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:33:03 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:33:03 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:33:03 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:33:03 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:33:08 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:33:08 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:33:08 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:33:08 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:33:08 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:33:08 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:33:13 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:33:13 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:33:13 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:33:13 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:33:13 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:33:13 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:33:18 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:33:18 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:33:18 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:33:18 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:33:18 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:33:18 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:33:24 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:33:24 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:33:24 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:33:24 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:33:24 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:33:24 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:33:29 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:33:29 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:33:29 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:33:29 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:33:29 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:33:29 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:33:34 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:33:34 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:33:34 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:33:34 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:33:34 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:33:34 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:33:39 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:33:39 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:33:39 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:33:43 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:33:43 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:33:43 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:33:48 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:33:48 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:33:48 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:33:48 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:33:48 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:33:48 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:33:53 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:33:53 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:33:53 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:33:53 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:33:53 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:33:53 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:33:58 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:33:58 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:33:58 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:33:58 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:33:58 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:33:58 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:34:03 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:34:03 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:34:03 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:34:03 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:34:03 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:34:03 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:34:08 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:34:08 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:34:08 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:34:08 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:34:08 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:34:08 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:34:14 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:34:14 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:34:14 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:34:14 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:34:14 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:34:14 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:34:19 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:34:19 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:34:19 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:34:19 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:34:19 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:34:19 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:34:24 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:34:24 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:34:24 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:34:24 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:34:24 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:34:24 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:34:29 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:34:29 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:34:29 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:34:29 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:34:29 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:34:29 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:34:34 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:34:34 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:34:34 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:34:34 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:34:34 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:34:34 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:34:39 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:34:39 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:34:39 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:34:39 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:34:39 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:34:39 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:34:44 AM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:34:44 AM - 12 - Setting database... Database Manager created
+8/28/2025 10:34:44 AM - 12 - Setting database... Event handlers set
+8/28/2025 10:34:44 AM - 12 - Setting database... Setting up database manager ready
+8/28/2025 10:34:44 AM - 12 - Setting database... Main database manager set
+8/28/2025 10:34:44 AM - 12 - Setting database... Database version 2.25
+8/28/2025 10:34:44 AM - 13 - Setting database... Set db operations
+8/28/2025 10:34:44 AM - 14 - Setting database... Set indirect proxy
+8/28/2025 10:34:44 AM - 15 - Setting database... Initializing load capacities
+8/28/2025 10:34:46 AM - 16 - Setting database... Initializing EraFileHandler
+8/28/2025 10:34:46 AM - 17 - Setting database... Alarms and errors initialized
+8/28/2025 10:34:46 AM - 18 - Setting database... Active directory authentication initialized
+8/28/2025 10:34:46 AM - 19 - Setting database... Reseting alarms
+8/28/2025 10:34:47 AM - 33 - Initializing resource manager...
+8/28/2025 10:34:47 AM - 34 - Initializing resource manager...
+8/28/2025 10:34:47 AM - 35 - Initializing resource manager...
+8/28/2025 10:34:47 AM - 36 - Initializing resource manager...
+8/28/2025 10:34:47 AM - 37 - Initializing resource manager...
+8/28/2025 10:34:47 AM - 38 - Initializing resource manager...
+8/28/2025 10:34:47 AM - 39 - Reading area files... Creating AreaManager
+8/28/2025 10:34:47 AM - 40 - Reading area files into memory...
+8/28/2025 10:34:51 AM - 41 - Reading area files... Area files read
+8/28/2025 10:34:51 AM - 42 - Reading area files... Areas updated
+8/28/2025 10:34:51 AM - 43 - Reading area files... Gate updated
+8/28/2025 10:34:51 AM - 44 - Reading area files... Creating route planner
+8/28/2025 10:34:51 AM - 45 - Reading area files... Creating scheduler
+8/28/2025 10:34:51 AM - 46 - Initializing services...
+8/28/2025 10:34:51 AM - 47 - Initializing services...
+8/28/2025 10:34:51 AM - 48 - Initializing services...
+8/28/2025 10:34:51 AM - 49 - Initializing services...
+8/28/2025 10:34:51 AM - 50 - Initializing services...
+8/28/2025 10:34:51 AM - 51 - Initializing services...
+8/28/2025 10:34:51 AM - 52 - Initializing services...
+8/28/2025 10:34:51 AM - 53 - Initializing services...
+8/28/2025 10:34:51 AM - 54 - Initializing fleet simulator if allowed
+8/28/2025 10:34:51 AM - 55 - Initializing services...
+8/28/2025 10:34:51 AM - 56 - Initializing services...
+8/28/2025 10:34:51 AM - 57 - Initializing services...
+8/28/2025 10:34:51 AM - 58 - Initializing services... AD disabled
+8/28/2025 10:34:51 AM - 59 - Initializing services... ServerData
+8/28/2025 10:34:51 AM - 60 - Initializing services...
+8/28/2025 10:34:51 AM - 61 - Initializing services...
+8/28/2025 10:34:51 AM - 62 - Initializing services...
+8/28/2025 10:34:51 AM - 63 - Initializing services... Service events subscribed
+8/28/2025 10:34:51 AM - 64 - Initializing services...
+8/28/2025 10:34:51 AM - 65 - Initializing services... Service Data
+8/28/2025 10:34:51 AM - 66 - Initializing services... Starting resource manager
+8/28/2025 10:34:51 AM - 67 - Initializing services... Starting traffic controller
+8/28/2025 10:34:51 AM - 68 - Initializing services complete
+8/28/2025 10:34:51 AM - 69 - Area manager okProductionAreaNotOperational
+8/28/2025 10:34:51 AM - 70 - Initializing MES, port: 8015
+8/28/2025 10:34:51 AM - 71 - MES ready. Initializing other comms.
+8/28/2025 10:34:51 AM - 72 - Initializing WebSocket comms
+8/28/2025 10:34:51 AM - 73 - WebSockets ready. Initializing other comms.
+8/28/2025 10:34:51 AM - 74 - MQ comms created. Linking events.
+8/28/2025 10:34:51 AM - 75 - Initializing comms complete. Updating machines.
+8/28/2025 10:34:52 AM - 76 - Setup Wait locations
+8/28/2025 10:34:53 AM - 77 - Machines loaded from database - 1 machines enabled, 2 machines total
+8/28/2025 10:34:53 AM - 78 - Initializing resource manager...
+8/28/2025 10:34:53 AM - 79 - Binding resources.
+8/28/2025 10:34:56 AM - 80 - Initializing orders
+8/28/2025 10:34:56 AM - 81 - Loading POL templates from DB
+8/28/2025 10:34:56 AM - 82 - Loading Active POL from DB
+8/28/2025 10:34:56 AM - 83 - Set TC Parameter observer
+8/28/2025 10:34:56 AM - 84 - Setup cluster
+8/28/2025 10:34:56 AM - 85 - Setup statistics
+8/28/2025 10:34:56 AM - 86 - Setup Visual replay
+8/28/2025 10:34:56 AM - 87 - Setup ChargeManager
+8/28/2025 10:34:56 AM - 88 - Setup Elevators
+8/28/2025 10:34:56 AM - 89 - Starting MES
+8/28/2025 10:34:57 AM - 90 - Initializing services... Trying to open Server service host
+8/28/2025 10:34:57 AM - 91 - Initializing services... Trying to open Server Stream host
+8/28/2025 10:34:57 AM - 92 - Initializing services... Web Server enabled
+8/28/2025 10:34:57 AM - 93 - Initializing services... Web server configuration started asynchronously.
+8/28/2025 10:34:57 AM - 100 - Complete
+8/28/2025 10:34:58 AM - 94 - Initializing services... Web server host sockets open, all files written.
+8/28/2025 10:34:58 AM - 95 - Initializing services... Web server configured on address: http://+:1234/
+8/28/2025 10:02:33 PM - 0 - Starting Navithor Server, please wait
+8/28/2025 10:02:33 PM - 1 - Validating Licence...
+8/28/2025 10:02:33 PM - 2 - Starting Navithor Server, please wait. Directory: c:\Navitec\Navithor\Navithor_2.52.15.0\NavithorServer
+8/28/2025 10:02:33 PM - 3 - Starting Navithor Server, please wait
+8/28/2025 10:02:33 PM - 4 - Starting Navithor Server, please wait
+8/28/2025 10:02:33 PM - 5 - Starting Navithor Server, please wait
+8/28/2025 10:02:33 PM - 6 - Starting Navithor Server, please wait. Initializing logger.
+8/28/2025 10:02:33 PM - 7 - Setting up database...
+8/28/2025 10:02:33 PM - 8 - Setting database... Reading config file
+8/28/2025 10:02:33 PM - 9 - Setting database... Setup database. File successfully read
+8/28/2025 10:02:33 PM - 10 - Setting database... Database connection configuration successfully read
+8/28/2025 10:02:33 PM - 11 - Setting up main database...
+8/28/2025 10:02:33 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:02:33 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:02:33 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:02:38 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:02:38 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:02:38 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:02:43 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:02:43 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:02:43 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:02:48 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:02:48 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:02:48 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:02:53 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:02:53 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:02:53 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:02:53 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:02:53 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:02:53 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:02:58 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:02:58 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:02:58 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:03:03 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:03:03 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:03:03 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:03:08 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:03:08 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:03:08 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:03:08 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:03:08 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:03:08 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:03:13 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:03:13 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:03:13 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:03:13 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:03:13 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:03:13 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:03:18 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:03:18 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:03:18 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:03:18 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:03:18 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:03:18 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:03:23 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:03:23 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:03:23 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:03:27 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:03:27 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:03:27 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:03:32 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:03:32 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:03:32 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:03:32 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:03:32 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:03:32 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:03:37 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:03:37 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:03:37 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:03:37 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:03:37 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:03:37 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:03:42 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:03:42 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:03:42 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:03:42 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:03:42 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:03:42 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:03:47 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:03:47 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:03:47 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:03:47 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:03:47 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:03:47 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:03:52 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:03:52 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:03:52 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:03:52 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:03:52 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:03:52 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:03:57 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:03:57 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:03:57 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:03:57 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:03:57 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:03:57 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:04:02 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:04:02 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:04:02 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:04:02 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:04:02 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:04:02 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:04:07 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:04:07 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:04:07 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:04:12 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:04:12 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:04:12 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:04:17 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:04:17 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:04:17 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:04:17 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:04:17 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:04:17 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:04:22 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:04:22 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:04:22 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:04:22 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:04:22 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:04:22 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:04:27 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:04:27 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:04:27 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:04:27 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:04:27 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:04:27 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:04:32 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:04:32 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:04:32 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:04:32 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:04:32 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:04:32 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:04:37 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:04:37 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:04:37 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:04:37 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:04:37 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:04:37 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:04:42 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:04:42 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:04:42 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:04:42 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:04:42 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:04:42 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:04:47 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:04:47 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:04:47 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:04:47 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:04:47 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:04:47 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:04:52 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:04:52 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:04:52 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:04:52 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:04:52 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:04:52 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:04:57 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:04:57 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:04:57 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:04:57 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:04:57 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:04:57 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:05:02 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:05:02 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:05:02 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:05:02 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:05:02 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:05:02 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:05:07 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:05:07 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:05:07 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:05:07 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+8/28/2025 10:05:07 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:05:07 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+8/28/2025 10:05:12 PM - 12 - Setting database... Main db name: NTDB_Production
+8/28/2025 10:05:12 PM - 12 - Setting database... Database Manager created
+8/28/2025 10:05:12 PM - 12 - Setting database... Event handlers set
+8/28/2025 10:05:12 PM - 12 - Setting database... Setting up database manager ready
+8/28/2025 10:05:12 PM - 12 - Setting database... Main database manager set
+8/28/2025 10:05:12 PM - 12 - Setting database... Database version 2.25
+8/28/2025 10:05:12 PM - 13 - Setting database... Set db operations
+8/28/2025 10:05:12 PM - 14 - Setting database... Set indirect proxy
+8/28/2025 10:05:12 PM - 15 - Setting database... Initializing load capacities
+8/28/2025 10:05:15 PM - 16 - Setting database... Initializing EraFileHandler
+8/28/2025 10:05:15 PM - 17 - Setting database... Alarms and errors initialized
+8/28/2025 10:05:15 PM - 18 - Setting database... Active directory authentication initialized
+8/28/2025 10:05:15 PM - 19 - Setting database... Reseting alarms
+8/28/2025 10:05:15 PM - 33 - Initializing resource manager...
+8/28/2025 10:05:15 PM - 34 - Initializing resource manager...
+8/28/2025 10:05:15 PM - 35 - Initializing resource manager...
+8/28/2025 10:05:15 PM - 36 - Initializing resource manager...
+8/28/2025 10:05:15 PM - 37 - Initializing resource manager...
+8/28/2025 10:05:15 PM - 38 - Initializing resource manager...
+8/28/2025 10:05:15 PM - 39 - Reading area files... Creating AreaManager
+8/28/2025 10:05:15 PM - 40 - Reading area files into memory...
+8/28/2025 10:05:19 PM - 41 - Reading area files... Area files read
+8/28/2025 10:05:19 PM - 42 - Reading area files... Areas updated
+8/28/2025 10:05:19 PM - 43 - Reading area files... Gate updated
+8/28/2025 10:05:19 PM - 44 - Reading area files... Creating route planner
+8/28/2025 10:05:19 PM - 45 - Reading area files... Creating scheduler
+8/28/2025 10:05:19 PM - 46 - Initializing services...
+8/28/2025 10:05:19 PM - 47 - Initializing services...
+8/28/2025 10:05:19 PM - 48 - Initializing services...
+8/28/2025 10:05:19 PM - 49 - Initializing services...
+8/28/2025 10:05:19 PM - 50 - Initializing services...
+8/28/2025 10:05:19 PM - 51 - Initializing services...
+8/28/2025 10:05:19 PM - 52 - Initializing services...
+8/28/2025 10:05:19 PM - 53 - Initializing services...
+8/28/2025 10:05:19 PM - 54 - Initializing fleet simulator if allowed
+8/28/2025 10:05:19 PM - 55 - Initializing services...
+8/28/2025 10:05:19 PM - 56 - Initializing services...
+8/28/2025 10:05:19 PM - 57 - Initializing services...
+8/28/2025 10:05:19 PM - 58 - Initializing services... AD disabled
+8/28/2025 10:05:19 PM - 59 - Initializing services... ServerData
+8/28/2025 10:05:19 PM - 60 - Initializing services...
+8/28/2025 10:05:19 PM - 61 - Initializing services...
+8/28/2025 10:05:19 PM - 62 - Initializing services...
+8/28/2025 10:05:19 PM - 63 - Initializing services... Service events subscribed
+8/28/2025 10:05:19 PM - 64 - Initializing services...
+8/28/2025 10:05:19 PM - 65 - Initializing services... Service Data
+8/28/2025 10:05:19 PM - 66 - Initializing services... Starting resource manager
+8/28/2025 10:05:19 PM - 67 - Initializing services... Starting traffic controller
+8/28/2025 10:05:19 PM - 68 - Initializing services complete
+8/28/2025 10:05:19 PM - 69 - Area manager okProductionAreaNotOperational
+8/28/2025 10:05:19 PM - 70 - Initializing MES, port: 8015
+8/28/2025 10:05:19 PM - 71 - MES ready. Initializing other comms.
+8/28/2025 10:05:19 PM - 72 - Initializing WebSocket comms
+8/28/2025 10:05:19 PM - 73 - WebSockets ready. Initializing other comms.
+8/28/2025 10:05:19 PM - 74 - MQ comms created. Linking events.
+8/28/2025 10:05:19 PM - 75 - Initializing comms complete. Updating machines.
+8/28/2025 10:05:20 PM - 76 - Setup Wait locations
+8/28/2025 10:05:21 PM - 77 - Machines loaded from database - 1 machines enabled, 2 machines total
+8/28/2025 10:05:21 PM - 78 - Initializing resource manager...
+8/28/2025 10:05:21 PM - 79 - Binding resources.
+8/28/2025 10:05:23 PM - 80 - Initializing orders
+8/28/2025 10:05:23 PM - 81 - Loading POL templates from DB
+8/28/2025 10:05:23 PM - 82 - Loading Active POL from DB
+8/28/2025 10:05:23 PM - 83 - Set TC Parameter observer
+8/28/2025 10:05:23 PM - 84 - Setup cluster
+8/28/2025 10:05:24 PM - 85 - Setup statistics
+8/28/2025 10:05:24 PM - 86 - Setup Visual replay
+8/28/2025 10:05:24 PM - 87 - Setup ChargeManager
+8/28/2025 10:05:24 PM - 88 - Setup Elevators
+8/28/2025 10:05:24 PM - 89 - Starting MES
+8/28/2025 10:05:24 PM - 90 - Initializing services... Trying to open Server service host
+8/28/2025 10:05:24 PM - 91 - Initializing services... Trying to open Server Stream host
+8/28/2025 10:05:24 PM - 92 - Initializing services... Web Server enabled
+8/28/2025 10:05:24 PM - 93 - Initializing services... Web server configuration started asynchronously.
+8/28/2025 10:05:24 PM - 100 - Complete
+8/28/2025 10:05:25 PM - 94 - Initializing services... Web server host sockets open, all files written.
+8/28/2025 10:05:26 PM - 95 - Initializing services... Web server configured on address: http://+:1234/
+9/10/2025 12:04:33 PM - 0 - Starting Navithor Server, please wait
+9/10/2025 12:04:33 PM - 1 - Validating Licence...
+9/10/2025 12:04:33 PM - 2 - Starting Navithor Server, please wait. Directory: c:\Navitec\Navithor\Navithor_2.52.15.0\NavithorServer
+9/10/2025 12:04:33 PM - 3 - Starting Navithor Server, please wait
+9/10/2025 12:04:33 PM - 4 - Starting Navithor Server, please wait
+9/10/2025 12:04:33 PM - 5 - Starting Navithor Server, please wait
+9/10/2025 12:04:33 PM - 6 - Starting Navithor Server, please wait. Initializing logger.
+9/10/2025 12:04:33 PM - 7 - Setting up database...
+9/10/2025 12:04:33 PM - 8 - Setting database... Reading config file
+9/10/2025 12:04:34 PM - 9 - Setting database... Setup database. File successfully read
+9/10/2025 12:04:34 PM - 10 - Setting database... Database connection configuration successfully read
+9/10/2025 12:04:34 PM - 11 - Setting up main database...
+9/10/2025 12:04:34 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:04:34 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:04:34 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:04:38 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:04:38 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:04:38 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:04:43 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:04:43 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:04:43 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:04:48 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:04:48 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:04:48 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:04:53 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:04:53 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:04:53 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:04:53 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:04:53 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:04:53 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:04:58 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:04:58 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:04:58 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:05:03 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:05:03 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:05:03 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:05:08 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:05:08 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:05:08 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:05:08 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:05:08 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:05:08 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:05:13 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:05:13 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:05:13 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:05:13 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:05:13 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:05:13 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:05:18 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:05:18 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:05:18 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:05:18 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:05:18 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:05:18 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:05:23 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:05:23 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:05:23 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:05:27 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:05:27 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:05:27 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:05:32 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:05:32 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:05:32 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:05:32 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:05:32 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:05:32 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:05:37 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:05:37 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:05:37 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:05:37 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:05:37 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:05:37 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:05:42 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:05:42 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:05:42 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:05:42 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:05:42 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:05:42 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:05:47 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:05:47 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:05:47 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:05:47 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:05:47 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:05:47 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:05:52 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:05:52 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:05:52 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:05:52 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:05:52 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:05:52 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:05:57 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:05:57 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:05:57 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:05:57 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:05:57 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:05:57 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:06:02 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:06:02 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:06:02 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:06:02 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:06:02 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:06:02 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:06:08 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:06:08 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:06:08 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:06:12 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:06:12 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:06:12 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:06:17 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:06:17 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:06:17 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:06:17 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:06:17 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:06:17 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:06:22 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:06:22 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:06:22 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:06:22 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:06:22 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:06:22 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:06:27 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:06:27 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:06:27 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:06:27 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:06:27 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:06:27 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:06:32 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:06:32 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:06:32 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:06:32 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:06:32 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:06:32 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:06:37 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:06:37 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:06:37 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:06:37 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:06:37 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:06:37 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:06:42 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:06:42 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:06:42 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:06:42 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:06:42 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:06:42 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:06:47 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:06:47 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:06:47 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:06:47 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:06:47 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:06:47 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:06:52 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:06:52 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:06:52 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:06:52 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:06:52 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:06:52 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:06:57 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:06:57 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:06:57 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:06:57 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:06:57 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:06:57 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:07:02 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:07:02 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:07:02 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:07:02 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:07:02 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:07:02 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:07:07 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:07:07 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:07:07 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:07:07 PM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/10/2025 12:07:07 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:07:07 PM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/10/2025 12:07:12 PM - 12 - Setting database... Main db name: NTDB_Production
+9/10/2025 12:07:12 PM - 12 - Setting database... Database Manager created
+9/10/2025 12:07:12 PM - 12 - Setting database... Event handlers set
+9/10/2025 12:07:12 PM - 12 - Setting database... Setting up database manager ready
+9/10/2025 12:07:12 PM - 12 - Setting database... Main database manager set
+9/10/2025 12:07:12 PM - 12 - Setting database... Database version 2.25
+9/10/2025 12:07:12 PM - 13 - Setting database... Set db operations
+9/10/2025 12:07:12 PM - 14 - Setting database... Set indirect proxy
+9/10/2025 12:07:12 PM - 15 - Setting database... Initializing load capacities
+9/10/2025 12:07:15 PM - 16 - Setting database... Initializing EraFileHandler
+9/10/2025 12:07:15 PM - 17 - Setting database... Alarms and errors initialized
+9/10/2025 12:07:15 PM - 18 - Setting database... Active directory authentication initialized
+9/10/2025 12:07:15 PM - 19 - Setting database... Reseting alarms
+9/10/2025 12:07:15 PM - 33 - Initializing resource manager...
+9/10/2025 12:07:15 PM - 34 - Initializing resource manager...
+9/10/2025 12:07:15 PM - 35 - Initializing resource manager...
+9/10/2025 12:07:15 PM - 36 - Initializing resource manager...
+9/10/2025 12:07:15 PM - 37 - Initializing resource manager...
+9/10/2025 12:07:15 PM - 38 - Initializing resource manager...
+9/10/2025 12:07:15 PM - 39 - Reading area files... Creating AreaManager
+9/10/2025 12:07:15 PM - 40 - Reading area files into memory...
+9/10/2025 12:07:19 PM - 41 - Reading area files... Area files read
+9/10/2025 12:07:19 PM - 42 - Reading area files... Areas updated
+9/10/2025 12:07:19 PM - 43 - Reading area files... Gate updated
+9/10/2025 12:07:19 PM - 44 - Reading area files... Creating route planner
+9/10/2025 12:07:19 PM - 45 - Reading area files... Creating scheduler
+9/10/2025 12:07:19 PM - 46 - Initializing services...
+9/10/2025 12:07:19 PM - 47 - Initializing services...
+9/10/2025 12:07:19 PM - 48 - Initializing services...
+9/10/2025 12:07:19 PM - 49 - Initializing services...
+9/10/2025 12:07:19 PM - 50 - Initializing services...
+9/10/2025 12:07:19 PM - 51 - Initializing services...
+9/10/2025 12:07:19 PM - 52 - Initializing services...
+9/10/2025 12:07:19 PM - 53 - Initializing services...
+9/10/2025 12:07:19 PM - 54 - Initializing fleet simulator if allowed
+9/10/2025 12:07:19 PM - 55 - Initializing services...
+9/10/2025 12:07:19 PM - 56 - Initializing services...
+9/10/2025 12:07:19 PM - 57 - Initializing services...
+9/10/2025 12:07:19 PM - 58 - Initializing services... AD disabled
+9/10/2025 12:07:19 PM - 59 - Initializing services... ServerData
+9/10/2025 12:07:19 PM - 60 - Initializing services...
+9/10/2025 12:07:19 PM - 61 - Initializing services...
+9/10/2025 12:07:19 PM - 62 - Initializing services...
+9/10/2025 12:07:19 PM - 63 - Initializing services... Service events subscribed
+9/10/2025 12:07:19 PM - 64 - Initializing services...
+9/10/2025 12:07:19 PM - 65 - Initializing services... Service Data
+9/10/2025 12:07:19 PM - 66 - Initializing services... Starting resource manager
+9/10/2025 12:07:19 PM - 67 - Initializing services... Starting traffic controller
+9/10/2025 12:07:20 PM - 68 - Initializing services complete
+9/10/2025 12:07:20 PM - 69 - Area manager okProductionAreaNotOperational
+9/10/2025 12:07:20 PM - 70 - Initializing MES, port: 8015
+9/10/2025 12:07:20 PM - 71 - MES ready. Initializing other comms.
+9/10/2025 12:07:20 PM - 72 - Initializing WebSocket comms
+9/10/2025 12:07:20 PM - 73 - WebSockets ready. Initializing other comms.
+9/10/2025 12:07:20 PM - 74 - MQ comms created. Linking events.
+9/10/2025 12:07:20 PM - 75 - Initializing comms complete. Updating machines.
+9/10/2025 12:07:20 PM - 76 - Setup Wait locations
+9/10/2025 12:07:22 PM - 77 - Machines loaded from database - 2 machines enabled, 2 machines total
+9/10/2025 12:07:22 PM - 78 - Initializing resource manager...
+9/10/2025 12:07:22 PM - 79 - Binding resources.
+9/10/2025 12:07:25 PM - 80 - Initializing orders
+9/10/2025 12:07:25 PM - 81 - Loading POL templates from DB
+9/10/2025 12:07:25 PM - 82 - Loading Active POL from DB
+9/10/2025 12:07:25 PM - 83 - Set TC Parameter observer
+9/10/2025 12:07:25 PM - 84 - Setup cluster
+9/10/2025 12:07:25 PM - 85 - Setup statistics
+9/10/2025 12:07:25 PM - 86 - Setup Visual replay
+9/10/2025 12:07:25 PM - 87 - Setup ChargeManager
+9/10/2025 12:07:25 PM - 88 - Setup Elevators
+9/10/2025 12:07:25 PM - 89 - Starting MES
+9/10/2025 12:07:25 PM - 90 - Initializing services... Trying to open Server service host
+9/10/2025 12:07:26 PM - 91 - Initializing services... Trying to open Server Stream host
+9/10/2025 12:07:26 PM - 92 - Initializing services... Web Server enabled
+9/10/2025 12:07:26 PM - 93 - Initializing services... Web server configuration started asynchronously.
+9/10/2025 12:07:26 PM - 100 - Complete
+9/10/2025 12:07:27 PM - 94 - Initializing services... Web server host sockets open, all files written.
+9/10/2025 12:07:27 PM - 95 - Initializing services... Web server configured on address: http://+:1234/
+9/12/2025 10:10:20 AM - 0 - Starting Navithor Server, please wait
+9/12/2025 10:10:20 AM - 1 - Validating Licence...
+9/12/2025 10:10:20 AM - 2 - Starting Navithor Server, please wait. Directory: c:\Navitec\Navithor\Navithor_2.52.15.0\NavithorServer
+9/12/2025 10:10:20 AM - 3 - Starting Navithor Server, please wait
+9/12/2025 10:10:20 AM - 4 - Starting Navithor Server, please wait
+9/12/2025 10:10:20 AM - 5 - Starting Navithor Server, please wait
+9/12/2025 10:10:20 AM - 6 - Starting Navithor Server, please wait. Initializing logger.
+9/12/2025 10:10:20 AM - 7 - Setting up database...
+9/12/2025 10:10:20 AM - 8 - Setting database... Reading config file
+9/12/2025 10:10:21 AM - 9 - Setting database... Setup database. File successfully read
+9/12/2025 10:10:21 AM - 10 - Setting database... Database connection configuration successfully read
+9/12/2025 10:10:21 AM - 11 - Setting up main database...
+9/12/2025 10:10:21 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:10:21 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:10:21 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:10:26 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:10:26 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:10:26 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:10:31 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:10:31 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:10:31 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:10:35 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:10:35 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:10:35 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:10:40 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:10:40 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:10:40 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:10:40 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:10:40 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:10:40 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:10:45 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:10:45 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:10:45 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:10:50 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:10:50 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:10:50 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:10:55 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:10:55 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:10:55 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:10:55 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:10:55 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:10:55 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:11:00 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:11:00 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:11:00 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:11:00 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:11:00 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:11:00 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:11:05 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:11:05 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:11:05 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:11:05 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:11:05 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:11:05 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:11:10 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:11:10 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:11:10 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:11:14 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:11:14 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:11:14 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:11:19 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:11:19 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:11:19 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:11:19 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:11:19 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:11:19 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:11:24 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:11:24 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:11:24 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:11:24 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:11:24 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:11:24 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:11:29 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:11:29 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:11:29 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:11:29 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:11:29 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:11:29 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:11:34 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:11:34 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:11:34 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:11:34 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:11:34 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:11:34 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:11:39 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:11:39 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:11:39 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:11:39 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:11:39 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:11:39 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:11:44 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:11:44 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:11:44 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:11:44 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:11:44 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:11:44 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:11:49 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:11:49 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:11:49 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:11:49 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:11:49 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:11:49 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:11:54 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:11:54 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:11:54 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:11:59 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:11:59 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:11:59 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:12:04 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:12:04 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:12:04 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:12:04 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:12:04 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:12:04 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:12:09 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:12:09 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:12:09 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:12:09 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:12:09 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:12:09 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:12:14 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:12:14 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:12:14 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:12:14 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:12:14 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:12:14 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:12:19 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:12:19 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:12:19 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:12:19 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:12:19 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:12:19 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:12:24 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:12:24 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:12:24 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:12:24 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:12:24 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:12:24 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:12:29 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:12:29 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:12:29 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:12:29 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:12:29 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:12:29 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:12:34 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:12:34 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:12:34 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:12:34 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:12:34 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:12:34 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:12:39 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:12:39 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:12:39 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:12:39 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:12:39 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:12:39 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:12:44 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:12:44 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:12:44 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:12:44 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:12:44 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:12:44 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:12:49 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:12:49 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:12:49 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:12:49 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:12:49 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:12:49 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:12:54 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:12:54 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:12:54 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:12:54 AM - 12 - Setting database... Connection to main database failed failed, retrying in 5 seconds...
+9/12/2025 10:12:54 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:12:54 AM - 12 - Failed to setup main database NTDB_Production. Retrying in 5 seconds.
+9/12/2025 10:12:59 AM - 12 - Setting database... Main db name: NTDB_Production
+9/12/2025 10:12:59 AM - 12 - Setting database... Database Manager created
+9/12/2025 10:12:59 AM - 12 - Setting database... Event handlers set
+9/12/2025 10:12:59 AM - 12 - Setting database... Setting up database manager ready
+9/12/2025 10:12:59 AM - 12 - Setting database... Main database manager set
+9/12/2025 10:12:59 AM - 12 - Setting database... Database version 2.25
+9/12/2025 10:12:59 AM - 13 - Setting database... Set db operations
+9/12/2025 10:12:59 AM - 14 - Setting database... Set indirect proxy
+9/12/2025 10:12:59 AM - 15 - Setting database... Initializing load capacities
+9/12/2025 10:13:01 AM - 16 - Setting database... Initializing EraFileHandler
+9/12/2025 10:13:01 AM - 17 - Setting database... Alarms and errors initialized
+9/12/2025 10:13:01 AM - 18 - Setting database... Active directory authentication initialized
+9/12/2025 10:13:01 AM - 19 - Setting database... Reseting alarms
+9/12/2025 10:13:02 AM - 33 - Initializing resource manager...
+9/12/2025 10:13:02 AM - 34 - Initializing resource manager...
+9/12/2025 10:13:02 AM - 35 - Initializing resource manager...
+9/12/2025 10:13:02 AM - 36 - Initializing resource manager...
+9/12/2025 10:13:02 AM - 37 - Initializing resource manager...
+9/12/2025 10:13:02 AM - 38 - Initializing resource manager...
+9/12/2025 10:13:02 AM - 39 - Reading area files... Creating AreaManager
+9/12/2025 10:13:02 AM - 40 - Reading area files into memory...
+9/12/2025 10:13:06 AM - 41 - Reading area files... Area files read
+9/12/2025 10:13:06 AM - 42 - Reading area files... Areas updated
+9/12/2025 10:13:06 AM - 43 - Reading area files... Gate updated
+9/12/2025 10:13:06 AM - 44 - Reading area files... Creating route planner
+9/12/2025 10:13:06 AM - 45 - Reading area files... Creating scheduler
+9/12/2025 10:13:06 AM - 46 - Initializing services...
+9/12/2025 10:13:06 AM - 47 - Initializing services...
+9/12/2025 10:13:06 AM - 48 - Initializing services...
+9/12/2025 10:13:06 AM - 49 - Initializing services...
+9/12/2025 10:13:06 AM - 50 - Initializing services...
+9/12/2025 10:13:06 AM - 51 - Initializing services...
+9/12/2025 10:13:06 AM - 52 - Initializing services...
+9/12/2025 10:13:06 AM - 53 - Initializing services...
+9/12/2025 10:13:06 AM - 54 - Initializing fleet simulator if allowed
+9/12/2025 10:13:06 AM - 55 - Initializing services...
+9/12/2025 10:13:06 AM - 56 - Initializing services...
+9/12/2025 10:13:06 AM - 57 - Initializing services...
+9/12/2025 10:13:06 AM - 58 - Initializing services... AD disabled
+9/12/2025 10:13:06 AM - 59 - Initializing services... ServerData
+9/12/2025 10:13:06 AM - 60 - Initializing services...
+9/12/2025 10:13:06 AM - 61 - Initializing services...
+9/12/2025 10:13:06 AM - 62 - Initializing services...
+9/12/2025 10:13:06 AM - 63 - Initializing services... Service events subscribed
+9/12/2025 10:13:06 AM - 64 - Initializing services...
+9/12/2025 10:13:06 AM - 65 - Initializing services... Service Data
+9/12/2025 10:13:06 AM - 66 - Initializing services... Starting resource manager
+9/12/2025 10:13:06 AM - 67 - Initializing services... Starting traffic controller
+9/12/2025 10:13:06 AM - 68 - Initializing services complete
+9/12/2025 10:13:06 AM - 69 - Area manager okProductionAreaNotOperational
+9/12/2025 10:13:06 AM - 70 - Initializing MES, port: 8015
+9/12/2025 10:13:06 AM - 71 - MES ready. Initializing other comms.
+9/12/2025 10:13:06 AM - 72 - Initializing WebSocket comms
+9/12/2025 10:13:06 AM - 73 - WebSockets ready. Initializing other comms.
+9/12/2025 10:13:06 AM - 74 - MQ comms created. Linking events.
+9/12/2025 10:13:06 AM - 75 - Initializing comms complete. Updating machines.
+9/12/2025 10:13:07 AM - 76 - Setup Wait locations
+9/12/2025 10:13:08 AM - 77 - Machines loaded from database - 2 machines enabled, 2 machines total
+9/12/2025 10:13:08 AM - 78 - Initializing resource manager...
+9/12/2025 10:13:08 AM - 79 - Binding resources.
+9/12/2025 10:13:11 AM - 80 - Initializing orders
+9/12/2025 10:13:11 AM - 81 - Loading POL templates from DB
+9/12/2025 10:13:11 AM - 82 - Loading Active POL from DB
+9/12/2025 10:13:11 AM - 83 - Set TC Parameter observer
+9/12/2025 10:13:11 AM - 84 - Setup cluster
+9/12/2025 10:13:11 AM - 85 - Setup statistics
+9/12/2025 10:13:11 AM - 86 - Setup Visual replay
+9/12/2025 10:13:11 AM - 87 - Setup ChargeManager
+9/12/2025 10:13:11 AM - 88 - Setup Elevators
+9/12/2025 10:13:12 AM - 89 - Starting MES
+9/12/2025 10:13:12 AM - 90 - Initializing services... Trying to open Server service host
+9/12/2025 10:13:12 AM - 91 - Initializing services... Trying to open Server Stream host
+9/12/2025 10:13:13 AM - 92 - Initializing services... Web Server enabled
+9/12/2025 10:13:13 AM - 93 - Initializing services... Web server configuration started asynchronously.
+9/12/2025 10:13:13 AM - 100 - Complete
+9/12/2025 10:13:14 AM - 94 - Initializing services... Web server host sockets open, all files written.
+9/12/2025 10:13:14 AM - 95 - Initializing services... Web server configured on address: http://+:1234/
+9/16/2025 3:46:08 PM - 0 - Starting Navithor Server, please wait
+9/16/2025 3:46:08 PM - 1 - Validating Licence...
+9/16/2025 3:46:08 PM - 2 - Starting Navithor Server, please wait. Directory: c:\Navitec\Navithor\Navithor_2.52.15.0\NavithorServer
+9/16/2025 3:46:08 PM - 3 - Starting Navithor Server, please wait
+9/16/2025 3:46:08 PM - 4 - Starting Navithor Server, please wait
+9/16/2025 3:46:08 PM - 5 - Starting Navithor Server, please wait
+9/16/2025 3:46:08 PM - 6 - Starting Navithor Server, please wait. Initializing logger.
+9/16/2025 3:46:08 PM - 7 - Setting up database...
+9/16/2025 3:46:08 PM - 8 - Setting database... Reading config file
+9/16/2025 3:46:09 PM - 9 - Setting database... Setup database. File successfully read
+9/16/2025 3:46:09 PM - 10 - Setting database... Database connection configuration successfully read
+9/16/2025 3:46:09 PM - 11 - Setting up main database...
+9/16/2025 3:46:09 PM - 12 - Setting database... Main db name: NTDB_Production
+9/16/2025 3:46:09 PM - 12 - Setting database... Database Manager created
+9/16/2025 3:46:09 PM - 12 - Setting database... Event handlers set
+9/16/2025 3:46:09 PM - 12 - Setting database... Setting up database manager ready
+9/16/2025 3:46:09 PM - 12 - Setting database... Main database manager set
+9/16/2025 3:46:09 PM - 12 - Setting database... Database version 2.25
+9/16/2025 3:46:09 PM - 13 - Setting database... Set db operations
+9/16/2025 3:46:09 PM - 14 - Setting database... Set indirect proxy
+9/16/2025 3:46:09 PM - 15 - Setting database... Initializing load capacities
+9/16/2025 3:46:11 PM - 16 - Setting database... Initializing EraFileHandler
+9/16/2025 3:46:11 PM - 17 - Setting database... Alarms and errors initialized
+9/16/2025 3:46:11 PM - 18 - Setting database... Active directory authentication initialized
+9/16/2025 3:46:11 PM - 19 - Setting database... Reseting alarms
+9/16/2025 3:46:12 PM - 33 - Initializing resource manager...
+9/16/2025 3:46:12 PM - 34 - Initializing resource manager...
+9/16/2025 3:46:12 PM - 35 - Initializing resource manager...
+9/16/2025 3:46:12 PM - 36 - Initializing resource manager...
+9/16/2025 3:46:12 PM - 37 - Initializing resource manager...
+9/16/2025 3:46:12 PM - 38 - Initializing resource manager...
+9/16/2025 3:46:12 PM - 39 - Reading area files... Creating AreaManager
+9/16/2025 3:46:12 PM - 40 - Reading area files into memory...
+9/16/2025 3:46:16 PM - 41 - Reading area files... Area files read
+9/16/2025 3:46:16 PM - 42 - Reading area files... Areas updated
+9/16/2025 3:46:16 PM - 43 - Reading area files... Gate updated
+9/16/2025 3:46:16 PM - 44 - Reading area files... Creating route planner
+9/16/2025 3:46:16 PM - 45 - Reading area files... Creating scheduler
+9/16/2025 3:46:16 PM - 46 - Initializing services...
+9/16/2025 3:46:16 PM - 47 - Initializing services...
+9/16/2025 3:46:16 PM - 48 - Initializing services...
+9/16/2025 3:46:16 PM - 49 - Initializing services...
+9/16/2025 3:46:16 PM - 50 - Initializing services...
+9/16/2025 3:46:16 PM - 51 - Initializing services...
+9/16/2025 3:46:16 PM - 52 - Initializing services...
+9/16/2025 3:46:16 PM - 53 - Initializing services...
+9/16/2025 3:46:16 PM - 54 - Initializing fleet simulator if allowed
+9/16/2025 3:46:16 PM - 55 - Initializing services...
+9/16/2025 3:46:16 PM - 56 - Initializing services...
+9/16/2025 3:46:16 PM - 57 - Initializing services...
+9/16/2025 3:46:16 PM - 58 - Initializing services... AD disabled
+9/16/2025 3:46:16 PM - 59 - Initializing services... ServerData
+9/16/2025 3:46:16 PM - 60 - Initializing services...
+9/16/2025 3:46:16 PM - 61 - Initializing services...
+9/16/2025 3:46:16 PM - 62 - Initializing services...
+9/16/2025 3:46:16 PM - 63 - Initializing services... Service events subscribed
+9/16/2025 3:46:16 PM - 64 - Initializing services...
+9/16/2025 3:46:16 PM - 65 - Initializing services... Service Data
+9/16/2025 3:46:16 PM - 66 - Initializing services... Starting resource manager
+9/16/2025 3:46:16 PM - 67 - Initializing services... Starting traffic controller
+9/16/2025 3:46:16 PM - 68 - Initializing services complete
+9/16/2025 3:46:16 PM - 69 - Area manager okProductionAreaNotOperational
+9/16/2025 3:46:16 PM - 70 - Initializing MES, port: 8015
+9/16/2025 3:46:16 PM - 71 - MES ready. Initializing other comms.
+9/16/2025 3:46:16 PM - 72 - Initializing WebSocket comms
+9/16/2025 3:46:16 PM - 73 - WebSockets ready. Initializing other comms.
+9/16/2025 3:46:16 PM - 74 - MQ comms created. Linking events.
+9/16/2025 3:46:16 PM - 75 - Initializing comms complete. Updating machines.
+9/16/2025 3:46:17 PM - 76 - Setup Wait locations
+9/16/2025 3:46:18 PM - 77 - Machines loaded from database - 2 machines enabled, 2 machines total
+9/16/2025 3:46:18 PM - 78 - Initializing resource manager...
+9/16/2025 3:46:18 PM - 79 - Binding resources.
+9/16/2025 3:46:21 PM - 80 - Initializing orders
+9/16/2025 3:46:22 PM - 81 - Loading POL templates from DB
+9/16/2025 3:46:22 PM - 82 - Loading Active POL from DB
+9/16/2025 3:46:22 PM - 83 - Set TC Parameter observer
+9/16/2025 3:46:22 PM - 84 - Setup cluster
+9/16/2025 3:46:22 PM - 85 - Setup statistics
+9/16/2025 3:46:22 PM - 86 - Setup Visual replay
+9/16/2025 3:46:22 PM - 87 - Setup ChargeManager
+9/16/2025 3:46:22 PM - 88 - Setup Elevators
+9/16/2025 3:46:22 PM - 89 - Starting MES
+9/16/2025 3:46:22 PM - 90 - Initializing services... Trying to open Server service host
+9/16/2025 3:46:22 PM - 91 - Initializing services... Trying to open Server Stream host
+9/16/2025 3:46:22 PM - 92 - Initializing services... Web Server enabled
+9/16/2025 3:46:22 PM - 93 - Initializing services... Web server configuration started asynchronously.
+9/16/2025 3:46:22 PM - 100 - Complete
+9/16/2025 3:46:24 PM - 94 - Initializing services... Web server host sockets open, all files written.
+9/16/2025 3:46:24 PM - 95 - Initializing services... Web server configured on address: http://+:1234/

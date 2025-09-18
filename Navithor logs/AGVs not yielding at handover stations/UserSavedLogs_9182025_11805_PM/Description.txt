@@ -1,0 +1,6 @@
+Server save time: 9/18/2025 1:18:06 PM
+Selected time:
+9/18/2025 10:17:18 AM
+Incidents: Deadlock
+AGVS: 
+AGVs do not yield when orders cross
