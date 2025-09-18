@@ -1,0 +1,4 @@
+# File for specifying resource verification data for different resource types.
+# Format: ResourceTypeID,ContainerTypeID
+# Example: 1001,1
+
